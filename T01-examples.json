@@ -1,0 +1,749 @@
+{
+  "examples_version": "topoadv-examples-0.2.0-draft",
+  "status": "draft-v2，与 T01-schema.json(v0.2.0) / T01-vocabulary.json(v0.1.0) 同版",
+  "note": "mechanistic 样例(银行复利/细菌增长/合成平方反例)取自任务书 sec:case-handoff，数值与 verify_cases.py 一致，functions 用 bindings 与 runtime.py 对齐；structural 样例来自真实 SCAR id=55、SCAN atom→solar system 组。答案隔离：原始映射/解释/背景只在 adaptations，标签/见证点只在 reference，object/task 均不含答案。",
+  "objects": [
+    {
+      "object_id": "obj_bank_compound_interest",
+      "object_kind": "mechanistic",
+      "label": "银行复利",
+      "domain": "Economy",
+      "nodes": [
+        {
+          "node_id": "A_t",
+          "label": "当前本金",
+          "type": "positive_scalar"
+        },
+        {
+          "node_id": "rate_t",
+          "label": "本期利率",
+          "type": "positive_scalar"
+        },
+        {
+          "node_id": "A_next",
+          "label": "下一期余额",
+          "type": "positive_scalar"
+        }
+      ],
+      "edges": [
+        {
+          "edge_id": "e_t",
+          "edge_type": "multiplicative_growth",
+          "input_nodes": [
+            "A_t",
+            "rate_t"
+          ],
+          "output_nodes": [
+            "A_next"
+          ],
+          "roles": {
+            "A_t": "current",
+            "rate_t": "ratio",
+            "A_next": "next"
+          }
+        }
+      ],
+      "functions": [
+        {
+          "function_id": "f_e_t",
+          "output_id": "A_next",
+          "expression": "n * (1 + r)",
+          "parameters": {},
+          "bindings": {
+            "n": "A_t",
+            "r": "rate_t"
+          },
+          "eval_order": [
+            "f_e_t"
+          ]
+        }
+      ],
+      "controllable_inputs": [
+        "A_t",
+        "rate_t"
+      ],
+      "designated_outputs": [
+        "A_next"
+      ],
+      "baseline": {
+        "A_t": 5000,
+        "rate_t": 0.1,
+        "A_next": 5500
+      },
+      "scales": {
+        "A_t": 5000,
+        "rate_t": 0.1,
+        "A_next": 5500
+      },
+      "legal_domain": {
+        "A_t": [
+          0,
+          null
+        ],
+        "rate_t": [
+          0,
+          1
+        ]
+      },
+      "intervention_bounds": {
+        "A_t": [
+          -0.2,
+          0.2
+        ],
+        "rate_t": [
+          -0.2,
+          0.2
+        ]
+      },
+      "provenance": {
+        "dataset": "mred",
+        "original_id": null,
+        "license": "self-built",
+        "version": "dev-0.1.0",
+        "commit": null,
+        "structure_source": "provided"
+      }
+    },
+    {
+      "object_id": "obj_bacteria_growth",
+      "object_kind": "mechanistic",
+      "label": "细菌增长",
+      "domain": "Biology",
+      "nodes": [
+        {
+          "node_id": "N_t",
+          "label": "当前细菌数量",
+          "type": "positive_scalar"
+        },
+        {
+          "node_id": "rate_s",
+          "label": "本步增长率",
+          "type": "positive_scalar"
+        },
+        {
+          "node_id": "N_next",
+          "label": "下一步数量",
+          "type": "positive_scalar"
+        }
+      ],
+      "edges": [
+        {
+          "edge_id": "e_s",
+          "edge_type": "multiplicative_growth",
+          "input_nodes": [
+            "N_t",
+            "rate_s"
+          ],
+          "output_nodes": [
+            "N_next"
+          ],
+          "roles": {
+            "N_t": "current",
+            "rate_s": "ratio",
+            "N_next": "next"
+          }
+        }
+      ],
+      "functions": [
+        {
+          "function_id": "f_e_s",
+          "output_id": "N_next",
+          "expression": "n * (1 + r)",
+          "parameters": {},
+          "bindings": {
+            "n": "N_t",
+            "r": "rate_s"
+          },
+          "eval_order": [
+            "f_e_s"
+          ]
+        }
+      ],
+      "controllable_inputs": [
+        "N_t",
+        "rate_s"
+      ],
+      "designated_outputs": [
+        "N_next"
+      ],
+      "baseline": {
+        "N_t": 1000,
+        "rate_s": 0.1,
+        "N_next": 1100
+      },
+      "scales": {
+        "N_t": 1000,
+        "rate_s": 0.1,
+        "N_next": 1100
+      },
+      "legal_domain": {
+        "N_t": [
+          0,
+          null
+        ],
+        "rate_s": [
+          0,
+          1
+        ]
+      },
+      "intervention_bounds": {
+        "N_t": [
+          -0.2,
+          0.2
+        ],
+        "rate_s": [
+          -0.2,
+          0.2
+        ]
+      },
+      "provenance": {
+        "dataset": "mred",
+        "original_id": null,
+        "license": "self-built",
+        "version": "dev-0.1.0",
+        "commit": null,
+        "structure_source": "provided"
+      }
+    },
+    {
+      "object_id": "obj_synthetic_square",
+      "object_kind": "mechanistic",
+      "label": "合成平方反例",
+      "domain": "synthetic",
+      "nodes": [
+        {
+          "node_id": "N_t",
+          "label": "当前量",
+          "type": "positive_scalar"
+        },
+        {
+          "node_id": "rate_s",
+          "label": "变化比例",
+          "type": "positive_scalar"
+        },
+        {
+          "node_id": "N_next",
+          "label": "下一步量",
+          "type": "positive_scalar"
+        }
+      ],
+      "edges": [
+        {
+          "edge_id": "e_sq",
+          "edge_type": "multiplicative_growth",
+          "input_nodes": [
+            "N_t",
+            "rate_s"
+          ],
+          "output_nodes": [
+            "N_next"
+          ],
+          "roles": {
+            "N_t": "current",
+            "rate_s": "ratio",
+            "N_next": "next"
+          }
+        }
+      ],
+      "functions": [
+        {
+          "function_id": "f_square",
+          "output_id": "N_next",
+          "expression": "n * n / K * (1 + r)",
+          "parameters": {
+            "K": 1000
+          },
+          "bindings": {
+            "n": "N_t",
+            "r": "rate_s"
+          },
+          "eval_order": [
+            "f_square"
+          ]
+        }
+      ],
+      "controllable_inputs": [
+        "N_t",
+        "rate_s"
+      ],
+      "designated_outputs": [
+        "N_next"
+      ],
+      "baseline": {
+        "N_t": 1000,
+        "rate_s": 0.1,
+        "N_next": 1100
+      },
+      "scales": {
+        "N_t": 1000,
+        "rate_s": 0.1,
+        "N_next": 1100
+      },
+      "legal_domain": {
+        "N_t": [
+          0,
+          null
+        ],
+        "rate_s": [
+          0,
+          1
+        ]
+      },
+      "intervention_bounds": {
+        "N_t": [
+          -0.2,
+          0.2
+        ],
+        "rate_s": [
+          -0.2,
+          0.2
+        ]
+      },
+      "provenance": {
+        "dataset": "mred",
+        "original_id": null,
+        "license": "self-built",
+        "version": "dev-0.1.0",
+        "commit": null,
+        "structure_source": "provided"
+      }
+    },
+    {
+      "object_id": "obj_atom",
+      "object_kind": "structural",
+      "label": "原子结构",
+      "domain": "Physics",
+      "nodes": [
+        {
+          "node_id": "nucleus",
+          "label": "原子核",
+          "type": "concept"
+        },
+        {
+          "node_id": "electron",
+          "label": "电子",
+          "type": "concept"
+        },
+        {
+          "node_id": "charge",
+          "label": "电荷",
+          "type": "concept"
+        },
+        {
+          "node_id": "attracts",
+          "label": "吸引",
+          "type": "concept"
+        },
+        {
+          "node_id": "revolves",
+          "label": "公转",
+          "type": "concept"
+        },
+        {
+          "node_id": "electromagnetism",
+          "label": "电磁力",
+          "type": "concept"
+        }
+      ],
+      "edges": [],
+      "provenance": {
+        "dataset": "scan",
+        "original_id": "atom->solar system",
+        "license": "MIT",
+        "version": "scan-2022",
+        "commit": null,
+        "structure_source": "inferred"
+      }
+    },
+    {
+      "object_id": "obj_solar_system",
+      "object_kind": "structural",
+      "label": "太阳系",
+      "domain": "Astronomy",
+      "nodes": [
+        {
+          "node_id": "sun",
+          "label": "太阳",
+          "type": "concept"
+        },
+        {
+          "node_id": "planet",
+          "label": "行星",
+          "type": "concept"
+        },
+        {
+          "node_id": "mass",
+          "label": "质量",
+          "type": "concept"
+        },
+        {
+          "node_id": "attracts",
+          "label": "吸引",
+          "type": "concept"
+        },
+        {
+          "node_id": "revolves",
+          "label": "公转",
+          "type": "concept"
+        },
+        {
+          "node_id": "gravity",
+          "label": "引力",
+          "type": "concept"
+        }
+      ],
+      "edges": [],
+      "provenance": {
+        "dataset": "scan",
+        "original_id": "atom->solar system",
+        "license": "MIT",
+        "version": "scan-2022",
+        "commit": null,
+        "structure_source": "inferred"
+      }
+    },
+    {
+      "object_id": "obj_cell",
+      "object_kind": "structural",
+      "label": "细胞",
+      "domain": "Biology",
+      "nodes": [
+        {
+          "node_id": "cell_membrane",
+          "label": "细胞膜",
+          "type": "concept"
+        },
+        {
+          "node_id": "nucleus",
+          "label": "细胞核",
+          "type": "concept"
+        },
+        {
+          "node_id": "cell_organelle",
+          "label": "细胞器",
+          "type": "concept"
+        },
+        {
+          "node_id": "metabolites",
+          "label": "代谢物",
+          "type": "concept"
+        },
+        {
+          "node_id": "molecular",
+          "label": "分子",
+          "type": "concept"
+        }
+      ],
+      "edges": [],
+      "provenance": {
+        "dataset": "scar",
+        "original_id": 55,
+        "license": "unconfirmed",
+        "version": "scar-2024",
+        "commit": "3dfc897",
+        "structure_source": "inferred"
+      }
+    },
+    {
+      "object_id": "obj_factory",
+      "object_kind": "structural",
+      "label": "工厂",
+      "domain": "Engineering",
+      "nodes": [
+        {
+          "node_id": "fence",
+          "label": "围墙",
+          "type": "concept"
+        },
+        {
+          "node_id": "headquarters",
+          "label": "总部",
+          "type": "concept"
+        },
+        {
+          "node_id": "machine",
+          "label": "机器",
+          "type": "concept"
+        },
+        {
+          "node_id": "raw_material",
+          "label": "原材料",
+          "type": "concept"
+        },
+        {
+          "node_id": "manufactures",
+          "label": "制成品",
+          "type": "concept"
+        }
+      ],
+      "edges": [],
+      "provenance": {
+        "dataset": "scar",
+        "original_id": 55,
+        "license": "unconfirmed",
+        "version": "scar-2024",
+        "commit": "3dfc897",
+        "structure_source": "inferred"
+      }
+    }
+  ],
+  "adaptations": [
+    {
+      "adaptation_id": "adapt_scar_0055",
+      "dataset": "scar",
+      "original_id": "55",
+      "source_object_id": "obj_cell",
+      "target_object_id": "obj_factory",
+      "faithful_mappings": [
+        [
+          "cell membrane",
+          "fence"
+        ],
+        [
+          "nucleus",
+          "headquarters"
+        ],
+        [
+          "cell organelle",
+          "machine"
+        ],
+        [
+          "metabolites",
+          "raw material"
+        ],
+        [
+          "molecular",
+          "manufactures"
+        ]
+      ],
+      "explanation": [
+        "The cell membrane corresponds to a fence: the cell membrane is the outer structure of the cell, playing a role in protecting and controlling the substances that enter and exit the cell; the fence of a factory is the outer structure of the factory, serving to protect and restrict access for personnel. In this analogy, both the cell membrane and the fence are boundaries and protective barriers for their respective systems.",
+        "The nucleus corresponds to headquarters: the nucleus is the center in the cell that controls gene expression and genetic information transfer; the headquarters of a factory is responsible for production planning and management. In this analogy, both the nucleus and the headquarters are the control and management centers of their respective systems.",
+        "Cell organelles correspond to machines: cell organelles are the structures responsible for performing specific functions in the cell; machines in a factory are responsible for performing various tasks in the production process. In this analogy, both cell organelles and machines are components that execute specific functions in their respective systems.",
+        "Metabolites correspond to raw materials: metabolites in the cell are substances involved in biochemical reactions, such as proteins, fats, and carbohydrates; raw materials in a factory are used for producing finished products. In this analogy, both metabolites and raw materials are substances that are necessary for production and reaction in their respective systems.",
+        "Molecules correspond to finished products: molecules such as ATP, produced by the cell through metabolic processes, are the energy source of the cell; finished products produced by a factory are the final products that can be sold and used. In this analogy, both molecules and finished products are the products of their respective systems."
+      ],
+      "background": {
+        "source": "\n\nA cell is the fundamental and basic unit of life. It refers to a small and microscopic unit that possesses all the essential characteristics of life, such as the ability to respond to stimuli, reproduce, and process energy. The cell has three principal components: the cell membrane, nucleus, and cytoplasm with cell organelles. The cell membrane constitutes a thin boundary that encloses and protects the cell’s contents. The nucleus is a large organelle that controls the cell's activities and contains its genetic material. The cytoplasm is the fluid that fills the cell, and cell organelles are specialized subunits that carry out specific metabolic functions in the cell. Cells are involved in metabolism, which involves the breakdown and synthesis of metabolites, substances required for cell growth, and energy production. Molecular aspects of the cell include the proteins, lipids, and DNA that make up its structure and perform its essential functions.",
+        "target": "A factory, also commonly known as a manufacturing or production plant, is a large industrial facility where workers operate machinery to manufacture items or process raw materials into other products. They are a significant component of modern economic production, responsible for creating and refining the majority of the world's goods. Factories have a complex structure consisting of multiple buildings filled with various machines and equipment for assembly line production. They may manufacture discrete products or continuously produced materials using heat or electricity to transform streams of raw materials. As a critical part of the production process, factories require large warehouses and transportation facilities for efficient operation. The term \"mill\" is often used to describe factories that manufacture specific goods, such as steel or paper. Factories may also have fences around them for security purposes and typically have headquarters located on site. Overall, factories play an essential role in economic production and are key players in the global manufacturing industry."
+      },
+      "raw": {
+        "id": 55,
+        "lang": "en",
+        "system_a": "cell",
+        "system_b": "factory",
+        "mappings": [
+          [
+            "cell membrane",
+            "fence"
+          ],
+          [
+            "nucleus",
+            "headquarters"
+          ],
+          [
+            "cell organelle",
+            "machine"
+          ],
+          [
+            "metabolites",
+            "raw material"
+          ],
+          [
+            "molecular",
+            "manufactures"
+          ]
+        ],
+        "system_a_domain": "Biology",
+        "system_b_domain": "Engineering",
+        "system_a_background": "\n\nA cell is the fundamental and basic unit of life. It refers to a small and microscopic unit that possesses all the essential characteristics of life, such as the ability to respond to stimuli, reproduce, and process energy. The cell has three principal components: the cell membrane, nucleus, and cytoplasm with cell organelles. The cell membrane constitutes a thin boundary that encloses and protects the cell’s contents. The nucleus is a large organelle that controls the cell's activities and contains its genetic material. The cytoplasm is the fluid that fills the cell, and cell organelles are specialized subunits that carry out specific metabolic functions in the cell. Cells are involved in metabolism, which involves the breakdown and synthesis of metabolites, substances required for cell growth, and energy production. Molecular aspects of the cell include the proteins, lipids, and DNA that make up its structure and perform its essential functions.",
+        "system_b_background": "A factory, also commonly known as a manufacturing or production plant, is a large industrial facility where workers operate machinery to manufacture items or process raw materials into other products. They are a significant component of modern economic production, responsible for creating and refining the majority of the world's goods. Factories have a complex structure consisting of multiple buildings filled with various machines and equipment for assembly line production. They may manufacture discrete products or continuously produced materials using heat or electricity to transform streams of raw materials. As a critical part of the production process, factories require large warehouses and transportation facilities for efficient operation. The term \"mill\" is often used to describe factories that manufacture specific goods, such as steel or paper. Factories may also have fences around them for security purposes and typically have headquarters located on site. Overall, factories play an essential role in economic production and are key players in the global manufacturing industry.",
+        "Explanation": [
+          "The cell membrane corresponds to a fence: the cell membrane is the outer structure of the cell, playing a role in protecting and controlling the substances that enter and exit the cell; the fence of a factory is the outer structure of the factory, serving to protect and restrict access for personnel. In this analogy, both the cell membrane and the fence are boundaries and protective barriers for their respective systems.",
+          "The nucleus corresponds to headquarters: the nucleus is the center in the cell that controls gene expression and genetic information transfer; the headquarters of a factory is responsible for production planning and management. In this analogy, both the nucleus and the headquarters are the control and management centers of their respective systems.",
+          "Cell organelles correspond to machines: cell organelles are the structures responsible for performing specific functions in the cell; machines in a factory are responsible for performing various tasks in the production process. In this analogy, both cell organelles and machines are components that execute specific functions in their respective systems.",
+          "Metabolites correspond to raw materials: metabolites in the cell are substances involved in biochemical reactions, such as proteins, fats, and carbohydrates; raw materials in a factory are used for producing finished products. In this analogy, both metabolites and raw materials are substances that are necessary for production and reaction in their respective systems.",
+          "Molecules correspond to finished products: molecules such as ATP, produced by the cell through metabolic processes, are the energy source of the cell; finished products produced by a factory are the final products that can be sold and used. In this analogy, both molecules and finished products are the products of their respective systems."
+        ]
+      },
+      "structure_source": "inferred",
+      "annotation_status": "to_review",
+      "valid_mappings": []
+    },
+    {
+      "adaptation_id": "adapt_scan_atom_solar",
+      "dataset": "scan",
+      "original_id": "atom->solar system",
+      "source_object_id": "obj_solar_system",
+      "target_object_id": "obj_atom",
+      "faithful_mappings": [
+        [
+          "sun",
+          "nucleus"
+        ],
+        [
+          "planet",
+          "electron"
+        ],
+        [
+          "mass",
+          "charge"
+        ],
+        [
+          "attracts",
+          "attracts"
+        ],
+        [
+          "revolves",
+          "revolves"
+        ],
+        [
+          "gravity",
+          "electromagnetism"
+        ]
+      ],
+      "explanation": null,
+      "background": null,
+      "raw": [
+        {
+          "target": "atom",
+          "source": "solar system",
+          "targ_word": "nucleus",
+          "src_word": "sun",
+          "alternatives": "",
+          "analogy_type": "science"
+        },
+        {
+          "target": "atom",
+          "source": "solar system",
+          "targ_word": "electron",
+          "src_word": "planet",
+          "alternatives": "",
+          "analogy_type": "science"
+        },
+        {
+          "target": "atom",
+          "source": "solar system",
+          "targ_word": "charge",
+          "src_word": "mass",
+          "alternatives": "",
+          "analogy_type": "science"
+        },
+        {
+          "target": "atom",
+          "source": "solar system",
+          "targ_word": "attracts",
+          "src_word": "attracts",
+          "alternatives": "",
+          "analogy_type": "science"
+        },
+        {
+          "target": "atom",
+          "source": "solar system",
+          "targ_word": "revolves",
+          "src_word": "revolves",
+          "alternatives": "",
+          "analogy_type": "science"
+        },
+        {
+          "target": "atom",
+          "source": "solar system",
+          "targ_word": "electromagnetism",
+          "src_word": "gravity",
+          "alternatives": "",
+          "analogy_type": "science"
+        }
+      ],
+      "structure_source": "inferred",
+      "annotation_status": "to_review",
+      "valid_mappings": []
+    }
+  ],
+  "task": {
+    "task_id": "task_dev_0001a",
+    "group_id": "group_dev_0001",
+    "target_id": "obj_bank_compound_interest",
+    "source_ids": [
+      "obj_bacteria_growth",
+      "obj_synthetic_square"
+    ],
+    "schema_version": "topoadv-schema-0.2.0-draft",
+    "vocab_version": "topoadv-vocab-0.1.0-draft",
+    "intervenable_inputs": [
+      "A_t",
+      "rate_t"
+    ],
+    "specified_outputs": [
+      "A_next"
+    ],
+    "intervention_range": {
+      "A_t": [
+        -0.2,
+        0.2
+      ],
+      "rate_t": [
+        -0.2,
+        0.2
+      ]
+    },
+    "_note": "方法输入不含标签、正确源域或见证点；task_id 不编码正负；正式库每任务 10 个源域，本例精简为 2 个"
+  },
+  "reference": {
+    "task_id": "task_dev_0001a",
+    "label": "positive",
+    "valid": [
+      {
+        "source_id": "obj_bacteria_growth",
+        "node_map": {
+          "N_t": "A_t",
+          "rate_s": "rate_t",
+          "N_next": "A_next"
+        },
+        "edge_map": {
+          "e_s": "e_t"
+        }
+      }
+    ],
+    "exclusions": [],
+    "reference_tolerance": {
+      "min_ctc": 0.95,
+      "max_error": 0.05
+    },
+    "status": "bijective_confirmed"
+  },
+  "negative_reference_example": {
+    "task_id": "task_dev_0001b",
+    "label": "negative",
+    "valid": [],
+    "exclusions": [
+      {
+        "source_id": "obj_synthetic_square",
+        "reason": "结构通过但响应误差超参考容差：u=(0.2,0) 时源响应 0.44 vs 目标 0.20，误差 0.0576 > 0.05",
+        "witness": {
+          "u": {
+            "A_t": 0.2,
+            "rate_t": 0.0
+          },
+          "target_output": {
+            "A_next": 6600
+          },
+          "source_output": {
+            "N_next": 1584
+          },
+          "r_target": {
+            "A_next": 0.2
+          },
+          "r_source": {
+            "N_next": 0.44
+          },
+          "error": 0.0576
+        }
+      }
+    ],
+    "reference_tolerance": {
+      "min_ctc": 0.95,
+      "max_error": 0.05
+    },
+    "status": "bijective_confirmed"
+  }
+}
