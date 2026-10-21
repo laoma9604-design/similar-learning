@@ -1,0 +1,16 @@
+# verify_cases.py 的生成物（每次运行覆盖）
+case-values.csv
+case-fixtures.json
+
+# 下载的公开数据集原始仓库（自带 .git，来源/许可记于 data/数据来源说明.md，不随本仓库分发）
+data/raw/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 系统杂项
+.DS_Store
+Thumbs.db

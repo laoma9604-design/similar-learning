@@ -1,7 +1,7 @@
 {
-  "schema_version": "topoadv-schema-0.2.0-draft",
-  "status": "draft-v2，待 B/C 复核冻结（已按复核意见修正：样例补全、求值器对齐、答案隔离、reference 细化）",
-  "source": "research-principles-experiment-taskbook.pdf sec:representation / sec:case-handoff / sec:data / tab:records；a_data/runtime.py 字段对齐",
+  "schema_version": "topoadv-schema-0.3.0-draft",
+  "status": "draft-v3，待 B/C 复核冻结（object 的 function/baseline/scales 已对齐 case-fixtures.json 写法）",
+  "source": "research-principles-experiment-taskbook.pdf sec:representation / sec:case-handoff / sec:data / tab:records；case-fixtures.json（verify_cases.py 生成）作为字段写法的基准",
   "conventions": {
     "mapping_direction": "node_map / edge_map 一律 source→target（源域键、目标域值）",
     "stable_id": "所有记录用稳定字符串 ID 关联，禁止依赖跨文件数组顺序对齐结果",
@@ -9,23 +9,26 @@
     "answer_isolation": "object / task 不含答案：原始概念对应(faithful_mappings)、Explanation、背景与结构标注证据只存 adaptation（封存复核材料），正确映射/标签/见证点只存 reference，二者都不进入方法输入",
     "neutral_task_id": "task_id 不编码正负标签（不用 _pos/_neg 后缀），正负只记在 reference.label",
     "direction_tokens": "edge 的 input_nodes 为 '-' 端，output_nodes 为 '+' 端",
-    "unbounded_domain": "legal_domain 用 null 表示无穷：[lo, null] 意为下界 lo 上界 +∞，[null, hi] 意为下界 -∞；求值器须按 ±∞ 处理 null"
+    "unbounded_domain": "legal_domain 用 null 表示无穷：[lo, null] 意为下界 lo 上界 +∞，[null, hi] 意为下界 -∞；求值器须按 ±∞ 处理 null",
+    "baseline_alignment": "baseline / input_scales 是列表，按 controllable_inputs 的顺序对齐；baseline_output / output_scale 是单输出标量（多输出留待扩展）"
   },
   "records": {
     "object": {
-      "desc": "知识对象 = 六元组 H=(V,E,τ_V,τ_E,ρ,Φ) + 基准/尺度。object_kind=structural 时无 functions/baseline/scales 等求值字段（SCAR/SCAN）；=mechanistic 时必须有求值字段（MRED）。不含答案，原始证据只放 adaptation。",
+      "desc": "知识对象 = 六元组 H=(V,E,τ_V,τ_E,ρ,Φ) + 基准/尺度。object_kind=structural 时无 function/baseline 等求值字段（SCAR/SCAN）；=mechanistic 时必须有求值字段（MRED）。function/baseline/scales 的写法对齐 case-fixtures.json。不含答案，原始证据只放 adaptation。",
       "fields": {
-        "object_id": {"type": "string", "required": true, "desc": "稳定 ID"},
+        "object_id": {"type": "string", "required": true, "desc": "稳定 ID（对应 case-fixtures 的 id）"},
         "object_kind": {"type": "enum[mechanistic,structural]", "required": true, "desc": "是否有可执行响应函数"},
         "label": {"type": "string", "required": true, "desc": "人类可读名，如“银行复利”"},
         "domain": {"type": "string", "required": false, "desc": "来源领域（SCAR/SCAN 的 domain 字段）"},
         "nodes": {"type": "array", "required": true, "desc": "节点列表，每项 {node_id,label,type}，type∈τ_V"},
         "edges": {"type": "array", "required": true, "desc": "超边列表，每项 {edge_id,edge_type,input_nodes[],output_nodes[],roles{node_id:role}}，edge_type∈τ_E，roles 为 ρ(v,e)"},
-        "functions": {"type": "array", "required": "mechanistic 时必填", "desc": "每项 {function_id,output_id,expression,parameters{},bindings{},eval_order}。expression 用符号名书写，bindings 把符号名映射到 node_id（如 {\"n\":\"A_t\",\"r\":\"rate_t\"}），parameters 放常量（如 {\"K\":1000}）；与 a_data/runtime.py 的 evaluate_object 对齐，eval_order 为无环求值顺序"},
-        "controllable_inputs": {"type": "array", "required": "mechanistic 时必填", "desc": "可干预输入节点 ID（对应 PDF 的 J）"},
-        "designated_outputs": {"type": "array", "required": "mechanistic 时必填", "desc": "指定输出节点 ID（对应 PDF 的 Y）"},
-        "baseline": {"type": "object", "required": "mechanistic 时必填", "desc": "基准输入/输出值，键 node_id"},
-        "scales": {"type": "object", "required": "mechanistic 时必填", "desc": "正参考尺度 a>0，键 node_id；输入尺度决定扰动幅度，输出尺度决定归一化响应"},
+        "function": {"type": "string", "required": "mechanistic 时必填", "desc": "响应函数表达式，用节点 ID 直接书写（如 \"A_t * (1 + rate_t)\"，常量内联如 \"N_t**2 / 1000 * (1 + rate_s)\"）。单个函数、单输出；多关系求值顺序留待扩展（首批无环单关系）。与 a_data/runtime.py 的 expression_value 对齐"},
+        "controllable_inputs": {"type": "array", "required": "mechanistic 时必填", "desc": "可干预输入节点 ID（对应 PDF 的 J），顺序即 baseline/input_scales 的对齐顺序"},
+        "designated_outputs": {"type": "array", "required": "mechanistic 时必填", "desc": "指定输出节点 ID（对应 PDF 的 Y），首批单输出"},
+        "baseline": {"type": "array", "required": "mechanistic 时必填", "desc": "基准输入值列表，按 controllable_inputs 顺序对齐（如 [5000, 0.1]）"},
+        "input_scales": {"type": "array", "required": "mechanistic 时必填", "desc": "输入参考尺度列表 a>0，按 controllable_inputs 顺序对齐"},
+        "baseline_output": {"type": "number", "required": "mechanistic 时必填", "desc": "基准输出值（单输出标量）"},
+        "output_scale": {"type": "number", "required": "mechanistic 时必填", "desc": "输出参考尺度（单输出标量）"},
         "legal_domain": {"type": "object", "required": "mechanistic 时必填", "desc": "合法输入范围（绝对值），键 node_id，值 [lo,hi]，null=无穷"},
         "intervention_bounds": {"type": "object", "required": "mechanistic 时必填", "desc": "无量纲扰动 u 的允许范围，键 node_id，值 [lo,hi]，通常 [-0.2,0.2]"},
         "provenance": {"type": "object", "required": true, "desc": "{dataset,original_id,license,version,commit,structure_source(provided|inferred)}，只记来源元数据，不含答案"}
