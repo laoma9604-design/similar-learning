@@ -64,3 +64,45 @@ cases/
 - structural / group_dev_0003：细胞 → 工厂（SCAR 55）
 
 详细规则看 cases/README.md。
+
+文件五：每个文件干什么 + 哪些固定、哪些还要讨论
+
+一、cases/ 里一个类比对（group 文件夹）的每个文件
+
+- manifest.json —— 公开元数据：group_id、数据集、relation_type、版本、split、这个组包含哪些对象和任务。
+- manifest.sealed.json —— 封存元数据：哪个 source 有效、哪个是反例（只给评价器看）。
+- relation/analogy.json —— 这条类比是谁对谁：source、target、relation_type、方向。
+- relation/node_map.json —— 节点映射（源→目标，N_t→A_t 这种）。
+- relation/edge_map.json —— 边映射（源→目标）。
+- relation/roles.json —— 角色三组对应（current/ratio/next，每个角色标它的源节点和目标节点）。
+- relation/formula.md —— 源/目标两条公式，给人看，机器读的是 objects 里的 function。
+- counterexamples/<source_id>/counterexample.json —— 反例描述（结构通过但响应不对）。
+- counterexamples/<source_id>/witness.json —— 见证点（哪个输入、两域输出差多少、误差超没超容差）。
+- counterexamples/expected.json —— 期望结果（应该拒绝，理由 no_candidate_passed_response_threshold）。
+- data/input/objects/*.json —— 每个对象一份（schema 的 object 记录），方法输入。
+- data/input/objects/index.json —— 对象索引（object_id → 文件名）。
+- data/input/tasks/positive.json / negative.json —— 正/负任务（方法输入，不含答案）。
+- sealed/reference.json —— 封存答案（正负任务的 valid/exclusions），仅 A/EVAL 读。
+
+二、已经固定的（不用再讨论）
+
+- 映射方向一律 source→target。
+- 稳定字符串 ID 关联，不靠文件顺序。
+- 答案隔离：task/object 不含答案，reference 封存。
+- object 字段已精简到 15 个。
+- 乘性增长方程 next = current × (1 + ratio)、角色 current/ratio/next（任务书确认）。
+- 数据划分 70/15/15、种子 20261007。
+- cases/ 命名规矩：概念层用 relation_type、类比对层用 group_id，不用数据名。
+
+三、仍需讨论（重点，高亮）
+
+- ❓ schema 要不要补 relation_type、split 两个字段——现在 cases/ 在用，schema 里没定义。
+- ❓ 节点类型：concept 占位要换成 6 类，3 个边界待拍板（water/food 归实体还是物质；force 单列否；disease/war/life tenure 就近归）。
+- ❓ linear_drive_resistance、saturation_response 的方程 + 角色（现在 pending，任务书只给了乘性增长）。
+- ❓ 角色是否每条边类型独立命名（避免 rate 既当类型又当角色）。
+- ❓ 结构类概念（中心-环绕 / 系统-子系统）T02 归纳。
+- ❓ cases/ 里 sealed 和 references 要不要分开（现在合并成 sealed/reference.json，待定）。
+- ❓ 数据规模 300 / 600 / 1200 三选一。
+- ❓ SCAR 许可（仓库无 LICENSE，待向作者确认）。
+
+（接口类的 pending——评价指标清单、audit.jsonl 格式、candidate.method 枚举等——统一记在 待定事项清单.txt 第 11~17 条，这里不重复。）
