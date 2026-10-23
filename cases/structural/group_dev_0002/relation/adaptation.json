@@ -1,0 +1,88 @@
+{
+  "adaptation_id": "adapt_scan_atom_solar",
+  "dataset": "scan",
+  "original_id": "atom->solar system",
+  "source_object_id": "obj_solar_system",
+  "target_object_id": "obj_atom",
+  "faithful_mappings": [
+    [
+      "sun",
+      "nucleus"
+    ],
+    [
+      "planet",
+      "electron"
+    ],
+    [
+      "mass",
+      "charge"
+    ],
+    [
+      "attracts",
+      "attracts"
+    ],
+    [
+      "revolves",
+      "revolves"
+    ],
+    [
+      "gravity",
+      "electromagnetism"
+    ]
+  ],
+  "explanation": null,
+  "background": null,
+  "raw": [
+    {
+      "target": "atom",
+      "source": "solar system",
+      "targ_word": "nucleus",
+      "src_word": "sun",
+      "alternatives": "",
+      "analogy_type": "science"
+    },
+    {
+      "target": "atom",
+      "source": "solar system",
+      "targ_word": "electron",
+      "src_word": "planet",
+      "alternatives": "",
+      "analogy_type": "science"
+    },
+    {
+      "target": "atom",
+      "source": "solar system",
+      "targ_word": "charge",
+      "src_word": "mass",
+      "alternatives": "",
+      "analogy_type": "science"
+    },
+    {
+      "target": "atom",
+      "source": "solar system",
+      "targ_word": "attracts",
+      "src_word": "attracts",
+      "alternatives": "",
+      "analogy_type": "science"
+    },
+    {
+      "target": "atom",
+      "source": "solar system",
+      "targ_word": "revolves",
+      "src_word": "revolves",
+      "alternatives": "",
+      "analogy_type": "science"
+    },
+    {
+      "target": "atom",
+      "source": "solar system",
+      "targ_word": "electromagnetism",
+      "src_word": "gravity",
+      "alternatives": "",
+      "analogy_type": "science"
+    }
+  ],
+  "structure_source": "inferred",
+  "annotation_status": "to_review",
+  "valid_mappings": []
+}

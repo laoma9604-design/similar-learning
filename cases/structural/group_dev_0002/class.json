@@ -1,0 +1,14 @@
+{
+  "group_id": "group_dev_0002",
+  "relation_type": null,
+  "kind": "structural",
+  "direction": "source → target",
+  "source": {"object_id": "obj_solar_system", "label": "太阳系"},
+  "target": {"object_id": "obj_atom", "label": "原子结构"},
+  "positive_sources": ["obj_solar_system"],
+  "negative_sources": [],
+  "dataset": "scan",
+  "original_id": "atom->solar system",
+  "annotation_status": "to_review",
+  "concept_note": "结构类概念（中心-环绕）T02 再定，暂挂 structural/ 下"
+}

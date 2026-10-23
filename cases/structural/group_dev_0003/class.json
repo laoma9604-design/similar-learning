@@ -1,0 +1,14 @@
+{
+  "group_id": "group_dev_0003",
+  "relation_type": null,
+  "kind": "structural",
+  "direction": "source → target",
+  "source": {"object_id": "obj_cell", "label": "细胞"},
+  "target": {"object_id": "obj_factory", "label": "工厂"},
+  "positive_sources": ["obj_cell"],
+  "negative_sources": [],
+  "dataset": "scar",
+  "original_id": "55",
+  "annotation_status": "to_review",
+  "concept_note": "结构类概念（系统-子系统）T02 再定，暂挂 structural/ 下"
+}

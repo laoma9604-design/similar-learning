@@ -1,0 +1,29 @@
+{
+  "task_id": "task_dev_0001a",
+  "group_id": "group_dev_0001",
+  "target_id": "obj_bank_compound_interest",
+  "source_ids": [
+    "obj_bacteria_growth",
+    "obj_synthetic_square"
+  ],
+  "schema_version": "topoadv-schema-0.3.0-draft",
+  "vocab_version": "topoadv-vocab-0.1.0-draft",
+  "intervenable_inputs": [
+    "A_t",
+    "rate_t"
+  ],
+  "specified_outputs": [
+    "A_next"
+  ],
+  "intervention_range": {
+    "A_t": [
+      -0.2,
+      0.2
+    ],
+    "rate_t": [
+      -0.2,
+      0.2
+    ]
+  },
+  "_note": "方法输入不含标签、正确源域或见证点；task_id 不编码正负；正式库每任务 10 个源域，本例精简为 2 个"
+}
