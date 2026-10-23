@@ -1,0 +1,9 @@
+[project]
+name = "topoadv"
+version = "0.1.0"
+description = "TopoAdv 类比学习对象生成与评价项目（统一环境声明，三人照此建环境）"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "numpy>=2.5.4",
+    "scipy>=1.18.1",
+]
