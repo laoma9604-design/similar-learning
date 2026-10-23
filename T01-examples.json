@@ -7,7 +7,6 @@
       "object_id": "obj_bank_compound_interest",
       "object_kind": "mechanistic",
       "label": "银行复利",
-      "domain": "Economy",
       "nodes": [
         {
           "node_id": "A_t",
@@ -84,9 +83,6 @@
       "provenance": {
         "dataset": "mred",
         "original_id": null,
-        "license": "self-built",
-        "version": "dev-0.1.0",
-        "commit": null,
         "structure_source": "provided"
       }
     },
@@ -94,7 +90,6 @@
       "object_id": "obj_bacteria_growth",
       "object_kind": "mechanistic",
       "label": "细菌增长",
-      "domain": "Biology",
       "nodes": [
         {
           "node_id": "N_t",
@@ -171,9 +166,6 @@
       "provenance": {
         "dataset": "mred",
         "original_id": null,
-        "license": "self-built",
-        "version": "dev-0.1.0",
-        "commit": null,
         "structure_source": "provided"
       }
     },
@@ -181,7 +173,6 @@
       "object_id": "obj_synthetic_square",
       "object_kind": "mechanistic",
       "label": "合成平方反例",
-      "domain": "synthetic",
       "nodes": [
         {
           "node_id": "N_t",
@@ -258,9 +249,6 @@
       "provenance": {
         "dataset": "mred",
         "original_id": null,
-        "license": "self-built",
-        "version": "dev-0.1.0",
-        "commit": null,
         "structure_source": "provided"
       }
     },
@@ -268,7 +256,6 @@
       "object_id": "obj_atom",
       "object_kind": "structural",
       "label": "原子结构",
-      "domain": "Physics",
       "nodes": [
         {
           "node_id": "nucleus",
@@ -305,9 +292,6 @@
       "provenance": {
         "dataset": "scan",
         "original_id": "atom->solar system",
-        "license": "MIT",
-        "version": "scan-2022",
-        "commit": null,
         "structure_source": "inferred"
       }
     },
@@ -315,7 +299,6 @@
       "object_id": "obj_solar_system",
       "object_kind": "structural",
       "label": "太阳系",
-      "domain": "Astronomy",
       "nodes": [
         {
           "node_id": "sun",
@@ -352,9 +335,6 @@
       "provenance": {
         "dataset": "scan",
         "original_id": "atom->solar system",
-        "license": "MIT",
-        "version": "scan-2022",
-        "commit": null,
         "structure_source": "inferred"
       }
     },
@@ -362,7 +342,6 @@
       "object_id": "obj_cell",
       "object_kind": "structural",
       "label": "细胞",
-      "domain": "Biology",
       "nodes": [
         {
           "node_id": "cell_membrane",
@@ -394,9 +373,6 @@
       "provenance": {
         "dataset": "scar",
         "original_id": 55,
-        "license": "unconfirmed",
-        "version": "scar-2024",
-        "commit": "3dfc897",
         "structure_source": "inferred"
       }
     },
@@ -404,7 +380,6 @@
       "object_id": "obj_factory",
       "object_kind": "structural",
       "label": "工厂",
-      "domain": "Engineering",
       "nodes": [
         {
           "node_id": "fence",
@@ -436,9 +411,6 @@
       "provenance": {
         "dataset": "scar",
         "original_id": 55,
-        "license": "unconfirmed",
-        "version": "scar-2024",
-        "commit": "3dfc897",
         "structure_source": "inferred"
       }
     }

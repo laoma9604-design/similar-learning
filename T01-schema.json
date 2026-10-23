@@ -19,7 +19,6 @@
         "object_id": {"type": "string", "required": true, "desc": "稳定 ID（对应 case-fixtures 的 id）"},
         "object_kind": {"type": "enum[mechanistic,structural]", "required": true, "desc": "是否有可执行响应函数"},
         "label": {"type": "string", "required": true, "desc": "人类可读名，如“银行复利”"},
-        "domain": {"type": "string", "required": false, "desc": "来源领域（SCAR/SCAN 的 domain 字段）"},
         "nodes": {"type": "array", "required": true, "desc": "节点列表，每项 {node_id,label,type}，type∈τ_V"},
         "edges": {"type": "array", "required": true, "desc": "超边列表，每项 {edge_id,edge_type,input_nodes[],output_nodes[],roles{node_id:role}}，edge_type∈τ_E，roles 为 ρ(v,e)"},
         "function": {"type": "string", "required": "mechanistic 时必填", "desc": "响应函数表达式，用节点 ID 直接书写（如 \"A_t * (1 + rate_t)\"，常量内联如 \"N_t**2 / 1000 * (1 + rate_s)\"）。单个函数、单输出；多关系求值顺序留待扩展（首批无环单关系）。与 a_data/runtime.py 的 expression_value 对齐"},
@@ -31,7 +30,7 @@
         "output_scale": {"type": "number", "required": "mechanistic 时必填", "desc": "输出参考尺度（单输出标量）"},
         "legal_domain": {"type": "object", "required": "mechanistic 时必填", "desc": "合法输入范围（绝对值），键 node_id，值 [lo,hi]，null=无穷"},
         "intervention_bounds": {"type": "object", "required": "mechanistic 时必填", "desc": "无量纲扰动 u 的允许范围，键 node_id，值 [lo,hi]，通常 [-0.2,0.2]"},
-        "provenance": {"type": "object", "required": true, "desc": "{dataset,original_id,license,version,commit,structure_source(provided|inferred)}，只记来源元数据，不含答案"}
+        "provenance": {"type": "object", "required": true, "desc": "{dataset,original_id,structure_source(provided|inferred)}；license/version/commit 统一记录在 data/数据来源说明.md，不逐对象重复"}
       }
     },
     "vocab": {
@@ -96,7 +95,6 @@
         "raw_score": {"type": "number", "required": true},
         "generation_order": {"type": "integer", "required": true},
         "method": {"type": "string", "required": true},
-        "stage": {"type": "enum[raw]", "required": true},
         "structure_check": {"type": "object", "required": true, "desc": "{passed, failed_items[], per_item[]}，失败项也保留供原始结构指标统计"}
       }
     },
