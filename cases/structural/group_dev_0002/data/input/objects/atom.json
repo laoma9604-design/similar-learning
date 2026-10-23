@@ -1,6 +1,8 @@
 {
   "object_id": "obj_atom",
   "object_kind": "structural",
+  "relation_type": null,
+  "split": "dev",
   "label": "原子结构",
   "nodes": [
     {

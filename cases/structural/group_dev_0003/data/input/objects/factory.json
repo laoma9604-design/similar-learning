@@ -1,6 +1,8 @@
 {
   "object_id": "obj_factory",
   "object_kind": "structural",
+  "relation_type": null,
+  "split": "dev",
   "label": "工厂",
   "nodes": [
     {

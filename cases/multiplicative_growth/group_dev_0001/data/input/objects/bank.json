@@ -1,6 +1,8 @@
 {
   "object_id": "obj_bank_compound_interest",
   "object_kind": "mechanistic",
+  "relation_type": "multiplicative_growth",
+  "split": "dev",
   "label": "银行复利",
   "nodes": [
     {

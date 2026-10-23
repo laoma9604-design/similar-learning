@@ -1,6 +1,8 @@
 {
   "object_id": "obj_synthetic_square",
   "object_kind": "mechanistic",
+  "relation_type": "multiplicative_growth",
+  "split": "dev",
   "label": "合成平方反例",
   "nodes": [
     {

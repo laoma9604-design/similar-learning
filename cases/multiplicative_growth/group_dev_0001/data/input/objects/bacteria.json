@@ -1,6 +1,8 @@
 {
   "object_id": "obj_bacteria_growth",
   "object_kind": "mechanistic",
+  "relation_type": "multiplicative_growth",
+  "split": "dev",
   "label": "细菌增长",
   "nodes": [
     {

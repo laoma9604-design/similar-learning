@@ -1,6 +1,8 @@
 {
   "object_id": "obj_cell",
   "object_kind": "structural",
+  "relation_type": null,
+  "split": "dev",
   "label": "细胞",
   "nodes": [
     {

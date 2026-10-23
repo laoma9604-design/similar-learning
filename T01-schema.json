@@ -1,6 +1,6 @@
 {
   "schema_version": "topoadv-schema-0.3.0-draft",
-  "status": "draft-v3，待 B/C 复核冻结（object 的 function/baseline/scales 已对齐 case-fixtures.json 写法）",
+  "status": "draft-v4，待 B/C 复核冻结（object 新增 relation_type / split 两个字段；function/baseline/scales 已对齐 case-fixtures.json 写法）",
   "source": "research-principles-experiment-taskbook.pdf sec:representation / sec:case-handoff / sec:data / tab:records；case-fixtures.json（verify_cases.py 生成）作为字段写法的基准",
   "conventions": {
     "mapping_direction": "node_map / edge_map 一律 source→target（源域键、目标域值）",
@@ -10,14 +10,17 @@
     "neutral_task_id": "task_id 不编码正负标签（不用 _pos/_neg 后缀），正负只记在 reference.label",
     "direction_tokens": "edge 的 input_nodes 为 '-' 端，output_nodes 为 '+' 端",
     "unbounded_domain": "legal_domain 用 null 表示无穷：[lo, null] 意为下界 lo 上界 +∞，[null, hi] 意为下界 -∞；求值器须按 ±∞ 处理 null",
-    "baseline_alignment": "baseline / input_scales 是列表，按 controllable_inputs 的顺序对齐；baseline_output / output_scale 是单输出标量（多输出留待扩展）"
+    "baseline_alignment": "baseline / input_scales 是列表，按 controllable_inputs 的顺序对齐；baseline_output / output_scale 是单输出标量（多输出留待扩展）",
+    "split_rule": "数据划分 70/15/15，种子 20261007，同对象派生/正负任务同组；split 取值 dev/train/val/test，dev 为开发验证样例，不进入正式评测"
   },
   "records": {
     "object": {
-      "desc": "知识对象 = 六元组 H=(V,E,τ_V,τ_E,ρ,Φ) + 基准/尺度。object_kind=structural 时无 function/baseline 等求值字段（SCAR/SCAN）；=mechanistic 时必须有求值字段（MRED）。function/baseline/scales 的写法对齐 case-fixtures.json。不含答案，原始证据只放 adaptation。",
+      "desc": "知识对象 = 六元组 H=(V,E,τ_V,τ_E,ρ,Φ) + 基准/尺度 + relation_type(类比关系类型) + split(数据划分)。object_kind=structural 时无 function/baseline 等求值字段（SCAR/SCAN）；=mechanistic 时必须有求值字段（MRED）。function/baseline/scales 的写法对齐 case-fixtures.json。不含答案，原始证据只放 adaptation。",
       "fields": {
         "object_id": {"type": "string", "required": true, "desc": "稳定 ID（对应 case-fixtures 的 id）"},
         "object_kind": {"type": "enum[mechanistic,structural]", "required": true, "desc": "是否有可执行响应函数"},
+        "relation_type": {"type": "string", "required": true, "desc": "类比关系类型：机制类=edge_type（multiplicative_growth / linear_drive_resistance / saturation_response）；结构类=类比概念（中心-环绕 / 系统-子系统等，T02 归纳定）"},
+        "split": {"type": "enum[dev,train,val,test]", "required": true, "desc": "数据划分：dev=开发验证样例（不进正式评测），train/val/test 按 70/15/15、种子 20261007"},
         "label": {"type": "string", "required": true, "desc": "人类可读名，如“银行复利”"},
         "nodes": {"type": "array", "required": true, "desc": "节点列表，每项 {node_id,label,type}，type∈τ_V"},
         "edges": {"type": "array", "required": true, "desc": "超边列表，每项 {edge_id,edge_type,input_nodes[],output_nodes[],roles{node_id:role}}，edge_type∈τ_E，roles 为 ρ(v,e)"},
