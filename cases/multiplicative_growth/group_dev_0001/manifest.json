@@ -1,0 +1,17 @@
+{
+  "group_id": "group_dev_0001",
+  "dataset": "mred",
+  "relation_type": "multiplicative_growth",
+  "schema_version": "topoadv-schema-0.3.0-draft",
+  "vocab_version": "topoadv-vocab-0.1.0-draft",
+  "split": "dev",
+  "object_ids": [
+    "obj_bank_compound_interest",
+    "obj_bacteria_growth",
+    "obj_synthetic_square"
+  ],
+  "task_ids": [
+    "task_dev_0001a",
+    "task_dev_0001b"
+  ]
+}

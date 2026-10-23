@@ -1,0 +1,12 @@
+{
+  "objects": [
+    {
+      "object_id": "obj_solar_system",
+      "file": "solar_system.json"
+    },
+    {
+      "object_id": "obj_atom",
+      "file": "atom.json"
+    }
+  ]
+}

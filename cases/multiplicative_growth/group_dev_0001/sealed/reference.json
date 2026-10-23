@@ -1,0 +1,60 @@
+{
+  "task_dev_0001a": {
+    "task_id": "task_dev_0001a",
+    "label": "positive",
+    "valid": [
+      {
+        "source_id": "obj_bacteria_growth",
+        "node_map": {
+          "N_t": "A_t",
+          "rate_s": "rate_t",
+          "N_next": "A_next"
+        },
+        "edge_map": {
+          "e_s": "e_t"
+        }
+      }
+    ],
+    "exclusions": [],
+    "reference_tolerance": {
+      "min_ctc": 0.95,
+      "max_error": 0.05
+    },
+    "status": "bijective_confirmed"
+  },
+  "task_dev_0001b": {
+    "task_id": "task_dev_0001b",
+    "label": "negative",
+    "valid": [],
+    "exclusions": [
+      {
+        "source_id": "obj_synthetic_square",
+        "reason": "结构通过但响应误差超参考容差：u=(0.2,0) 时源响应 0.44 vs 目标 0.20，误差 0.0576 > 0.05",
+        "witness": {
+          "u": {
+            "A_t": 0.2,
+            "rate_t": 0.0
+          },
+          "target_output": {
+            "A_next": 6600
+          },
+          "source_output": {
+            "N_next": 1584
+          },
+          "r_target": {
+            "A_next": 0.2
+          },
+          "r_source": {
+            "N_next": 0.44
+          },
+          "error": 0.0576
+        }
+      }
+    ],
+    "reference_tolerance": {
+      "min_ctc": 0.95,
+      "max_error": 0.05
+    },
+    "status": "bijective_confirmed"
+  }
+}

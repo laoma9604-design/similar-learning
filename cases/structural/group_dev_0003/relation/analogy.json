@@ -1,0 +1,13 @@
+{
+  "source": {
+    "object_id": "obj_cell",
+    "label": "细胞"
+  },
+  "target": {
+    "object_id": "obj_factory",
+    "label": "工厂"
+  },
+  "relation_type": null,
+  "direction": "source → target",
+  "concept_note": "结构类概念（系统-子系统）T02 再定"
+}

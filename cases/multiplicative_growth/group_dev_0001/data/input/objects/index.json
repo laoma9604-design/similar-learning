@@ -1,0 +1,16 @@
+{
+  "objects": [
+    {
+      "object_id": "obj_bank_compound_interest",
+      "file": "bank.json"
+    },
+    {
+      "object_id": "obj_bacteria_growth",
+      "file": "bacteria.json"
+    },
+    {
+      "object_id": "obj_synthetic_square",
+      "file": "square.json"
+    }
+  ]
+}

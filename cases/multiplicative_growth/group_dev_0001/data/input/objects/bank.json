@@ -1,0 +1,83 @@
+{
+  "object_id": "obj_bank_compound_interest",
+  "object_kind": "mechanistic",
+  "label": "银行复利",
+  "nodes": [
+    {
+      "node_id": "A_t",
+      "label": "当前本金",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "rate_t",
+      "label": "本期利率",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "A_next",
+      "label": "下一期余额",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e_t",
+      "edge_type": "multiplicative_growth",
+      "input_nodes": [
+        "A_t",
+        "rate_t"
+      ],
+      "output_nodes": [
+        "A_next"
+      ],
+      "roles": {
+        "A_t": "current",
+        "rate_t": "ratio",
+        "A_next": "next"
+      }
+    }
+  ],
+  "function": "A_t * (1 + rate_t)",
+  "controllable_inputs": [
+    "A_t",
+    "rate_t"
+  ],
+  "designated_outputs": [
+    "A_next"
+  ],
+  "baseline": [
+    5000,
+    0.1
+  ],
+  "input_scales": [
+    5000,
+    0.1
+  ],
+  "baseline_output": 5500,
+  "output_scale": 5500,
+  "legal_domain": {
+    "A_t": [
+      0,
+      null
+    ],
+    "rate_t": [
+      0,
+      1
+    ]
+  },
+  "intervention_bounds": {
+    "A_t": [
+      -0.2,
+      0.2
+    ],
+    "rate_t": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

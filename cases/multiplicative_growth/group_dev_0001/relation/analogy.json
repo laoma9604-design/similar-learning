@@ -1,0 +1,12 @@
+{
+  "source": {
+    "object_id": "obj_bacteria_growth",
+    "label": "细菌增长"
+  },
+  "target": {
+    "object_id": "obj_bank_compound_interest",
+    "label": "银行复利"
+  },
+  "relation_type": "multiplicative_growth",
+  "direction": "source → target"
+}

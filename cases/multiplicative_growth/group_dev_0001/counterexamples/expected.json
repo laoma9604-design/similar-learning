@@ -1,0 +1,4 @@
+{
+  "expectation": "reject",
+  "reason": "no_candidate_passed_response_threshold"
+}

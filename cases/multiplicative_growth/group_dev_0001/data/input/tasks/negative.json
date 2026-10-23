@@ -1,0 +1,28 @@
+{
+  "task_id": "task_dev_0001b",
+  "group_id": "group_dev_0001",
+  "target_id": "obj_bank_compound_interest",
+  "source_ids": [
+    "obj_synthetic_square"
+  ],
+  "schema_version": "topoadv-schema-0.3.0-draft",
+  "vocab_version": "topoadv-vocab-0.1.0-draft",
+  "intervenable_inputs": [
+    "A_t",
+    "rate_t"
+  ],
+  "specified_outputs": [
+    "A_next"
+  ],
+  "intervention_range": {
+    "A_t": [
+      -0.2,
+      0.2
+    ],
+    "rate_t": [
+      -0.2,
+      0.2
+    ]
+  },
+  "_note": "负任务：候选库只含反例源，无有效映射"
+}

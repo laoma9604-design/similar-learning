@@ -1,0 +1,38 @@
+{
+  "object_id": "obj_factory",
+  "object_kind": "structural",
+  "label": "工厂",
+  "nodes": [
+    {
+      "node_id": "fence",
+      "label": "围墙",
+      "type": "concept"
+    },
+    {
+      "node_id": "headquarters",
+      "label": "总部",
+      "type": "concept"
+    },
+    {
+      "node_id": "machine",
+      "label": "机器",
+      "type": "concept"
+    },
+    {
+      "node_id": "raw_material",
+      "label": "原材料",
+      "type": "concept"
+    },
+    {
+      "node_id": "manufactures",
+      "label": "制成品",
+      "type": "concept"
+    }
+  ],
+  "edges": [],
+  "provenance": {
+    "dataset": "scar",
+    "original_id": 55,
+    "structure_source": "inferred"
+  }
+}

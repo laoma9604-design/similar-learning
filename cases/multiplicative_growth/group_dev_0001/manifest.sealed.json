@@ -1,0 +1,9 @@
+{
+  "group_id": "group_dev_0001",
+  "valid_sources": [
+    "obj_bacteria_growth"
+  ],
+  "excluded_sources": [
+    "obj_synthetic_square"
+  ]
+}

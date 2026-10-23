@@ -1,0 +1,12 @@
+{
+  "objects": [
+    {
+      "object_id": "obj_cell",
+      "file": "cell.json"
+    },
+    {
+      "object_id": "obj_factory",
+      "file": "factory.json"
+    }
+  ]
+}

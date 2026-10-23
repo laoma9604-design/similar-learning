@@ -1,0 +1,10 @@
+{
+  "source_id": "obj_synthetic_square",
+  "target_id": "obj_bank_compound_interest",
+  "node_map": {
+    "N_t": "A_t",
+    "rate_s": "rate_t",
+    "N_next": "A_next"
+  },
+  "reason": "结构 11/11 通过，但响应超容差"
+}

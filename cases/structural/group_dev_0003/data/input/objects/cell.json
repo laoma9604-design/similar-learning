@@ -1,0 +1,38 @@
+{
+  "object_id": "obj_cell",
+  "object_kind": "structural",
+  "label": "细胞",
+  "nodes": [
+    {
+      "node_id": "cell_membrane",
+      "label": "细胞膜",
+      "type": "concept"
+    },
+    {
+      "node_id": "nucleus",
+      "label": "细胞核",
+      "type": "concept"
+    },
+    {
+      "node_id": "cell_organelle",
+      "label": "细胞器",
+      "type": "concept"
+    },
+    {
+      "node_id": "metabolites",
+      "label": "代谢物",
+      "type": "concept"
+    },
+    {
+      "node_id": "molecular",
+      "label": "分子",
+      "type": "concept"
+    }
+  ],
+  "edges": [],
+  "provenance": {
+    "dataset": "scar",
+    "original_id": 55,
+    "structure_source": "inferred"
+  }
+}

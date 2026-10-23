@@ -47,15 +47,16 @@ TopoAdv 项目的统一格式（三件套）：字段约定 + 取值约定 + 填
 ```
 cases/
   <概念>/          ← 机制类用 relation_type（乘性增长等）；结构类暂挂 structural/
-    <group_id>/    ← 一个类比对 = 一个数据点（正负任务同组）
-      class.json   ← 源/目标的 object_id + 名字 + relation_type + 方向
-      task.json    ← 方法输入（只有机制类有）
-      relation/    ← 正例：对象 + 封存答案
-      counterexamples/  ← 反例：对象 + 排除依据 + 见证点
-      data/        ← 原始来源证据
+    <group_id>/          ← 一个类比对 = 一个数据点（稳定 group_id）
+      manifest.json      ← 公开：ID、数据集、版本、split
+      manifest.sealed.json ← 封存：valid / excluded sources
+      relation/          ← 类比关系（封存）：analogy + node_map + edge_map + roles + formula
+      counterexamples/   ← 反例（封存）：每个反例一个子文件夹 + witness + expected
+      data/input/        ← 方法输入（公开）：objects 每对象一文件 + tasks 正负
+      sealed/            ← 封存答案（仅 A/EVAL）
 ```
 
-命名规矩：文件夹只用稳定 ID——概念层用 relation_type，类比对层用 group_id；人类可读名字（细菌增长/银行复利）只放 class.json 里，不拿数据名当文件夹名。这样改名字不动文件夹，加数据只加编号文件夹。
+命名规矩：文件夹只用稳定 ID——概念层用 relation_type，类比对层用 group_id；人类可读名字（细菌增长/银行复利）只放 manifest / analogy 的 label 字段，不拿数据名当文件夹名。这样改名字不动文件夹，加数据只加编号文件夹。
 
 现在有 3 个类比对：
 - multiplicative_growth / group_dev_0001：细菌增长 → 银行复利（机制类，带合成平方反例）

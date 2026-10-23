@@ -1,0 +1,14 @@
+{
+  "current": {
+    "source": "N_t",
+    "target": "A_t"
+  },
+  "ratio": {
+    "source": "rate_s",
+    "target": "rate_t"
+  },
+  "next": {
+    "source": "N_next",
+    "target": "A_next"
+  }
+}

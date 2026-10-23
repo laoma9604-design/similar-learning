@@ -1,0 +1,83 @@
+{
+  "object_id": "obj_synthetic_square",
+  "object_kind": "mechanistic",
+  "label": "合成平方反例",
+  "nodes": [
+    {
+      "node_id": "N_t",
+      "label": "当前量",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "rate_s",
+      "label": "变化比例",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "N_next",
+      "label": "下一步量",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e_sq",
+      "edge_type": "multiplicative_growth",
+      "input_nodes": [
+        "N_t",
+        "rate_s"
+      ],
+      "output_nodes": [
+        "N_next"
+      ],
+      "roles": {
+        "N_t": "current",
+        "rate_s": "ratio",
+        "N_next": "next"
+      }
+    }
+  ],
+  "function": "N_t**2 / 1000 * (1 + rate_s)",
+  "controllable_inputs": [
+    "N_t",
+    "rate_s"
+  ],
+  "designated_outputs": [
+    "N_next"
+  ],
+  "baseline": [
+    1000,
+    0.1
+  ],
+  "input_scales": [
+    1000,
+    0.1
+  ],
+  "baseline_output": 1100,
+  "output_scale": 1100,
+  "legal_domain": {
+    "N_t": [
+      0,
+      null
+    ],
+    "rate_s": [
+      0,
+      1
+    ]
+  },
+  "intervention_bounds": {
+    "N_t": [
+      -0.2,
+      0.2
+    ],
+    "rate_s": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

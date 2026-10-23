@@ -1,0 +1,13 @@
+{
+  "group_id": "group_dev_0003",
+  "dataset": "scar",
+  "relation_type": null,
+  "schema_version": "topoadv-schema-0.3.0-draft",
+  "vocab_version": "topoadv-vocab-0.1.0-draft",
+  "split": "dev",
+  "object_ids": [
+    "obj_cell",
+    "obj_factory"
+  ],
+  "original_id": "55"
+}
