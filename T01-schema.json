@@ -1,6 +1,6 @@
 {
   "schema_version": "topoadv-schema-0.3.0-draft",
-  "status": "draft-v4，待 B/C 复核冻结（object 新增 relation_type / split 两个字段；function/baseline/scales 已对齐 case-fixtures.json 写法）",
+  "status": "draft-v4，待 B/C 复核冻结（object 新增 relation_type / split 两个字段；function/baseline/scales 已对齐 case-fixtures.json 写法；audit 记录按 C 反馈：两域调用/缓存拆分、加 status、Ebar 移交 A 独立评价）",
   "source": "research-principles-experiment-taskbook.pdf sec:representation / sec:case-handoff / sec:data / tab:records；case-fixtures.json（verify_cases.py 生成）作为字段写法的基准",
   "conventions": {
     "mapping_direction": "node_map / edge_map 一律 source→target（源域键、目标域值）",
@@ -102,18 +102,18 @@
       }
     },
     "audit": {
-      "desc": "C 的统一求值接口输出。",
+      "desc": "C 的统一求值接口输出。Ebar（留出点平均误差）不在此记录，由 A 的独立评价(evaluate)在留出干预上计算。",
       "fields": {
         "candidate_id": {"type": "string", "required": true},
         "task_id": {"type": "string", "required": true},
-        "interventions": {"type": "array", "required": true, "desc": "每项 {u,target_input,source_input,target_output,source_output,r_target,r_source,error,new_calls,cache_hit}"},
-        "CTC": {"type": "number", "required": true},
-        "Ebar": {"type": "number", "required": true},
-        "Rhat": {"type": "number", "required": true},
+        "status": {"type": "enum[completed,incomplete,infeasible]", "required": true, "desc": "检验状态类别：completed=至少完成一个完整干预点；incomplete=预算耗尽/初始化未完成、零个完整干预点（此时 CTC/Rhat 无定义，记 null，不能按零误差通过）；infeasible=映射缺需要改变的变量、无法执行。termination_reason 写具体原因"},
+        "interventions": {"type": "array", "required": true, "desc": "每项 {u,target_input,source_input,target_output,source_output,r_target,r_source,error,target_new_calls,source_new_calls,target_cache_hit,source_cache_hit}；新增调用与缓存命中按目标域/源域分别记录，一个点的新增调用=两域之和(0/1/2)"},
+        "CTC": {"type": "number", "required": true, "desc": "已检查点方向一致率；status=incomplete 时无定义记 null"},
+        "Rhat": {"type": "number", "required": true, "desc": "已检查点的最大平均响应误差；status=incomplete 时无定义记 null"},
         "baseline_calls": {"type": "integer", "required": true, "desc": "单列，不占每候选干预预算"},
-        "total_new_calls": {"type": "integer", "required": true},
+        "total_new_calls": {"type": "integer", "required": true, "desc": "新增函数调用总数 = Σ(target_new_calls + source_new_calls)"},
         "completed_interventions": {"type": "integer", "required": true},
-        "termination_reason": {"type": "string", "required": true}
+        "termination_reason": {"type": "string", "required": true, "desc": "具体原因（如预算耗尽/缺映射变量），status 写原因所属的类别"}
       }
     },
     "prediction": {

@@ -78,21 +78,23 @@ class InterventionPoint(TypedDict, total=False):
     r_target: dict[str, float]
     r_source: dict[str, float]
     error: float
-    new_calls: int  # 本次新增调用 0/1/2
-    cache_hit: bool
+    target_new_calls: int  # 目标域本次新增调用 0/1
+    source_new_calls: int  # 源域本次新增调用 0/1
+    target_cache_hit: bool  # 目标域是否命中缓存
+    source_cache_hit: bool  # 源域是否命中缓存
 
 
 class Audit(TypedDict):
     candidate_id: str
     task_id: str
+    status: str  # completed | incomplete | infeasible
     interventions: list[InterventionPoint]
-    CTC: float  # 一致通过比例
-    Ebar: float  # 最大误差
-    Rhat: float
+    CTC: Optional[float]  # 一致通过比例；status=incomplete 时为 None
+    Rhat: Optional[float]  # 最大平均响应误差；status=incomplete 时为 None
     baseline_calls: int  # 单列，不占每候选干预预算
-    total_new_calls: int
+    total_new_calls: int  # = Σ(target_new_calls + source_new_calls)
     completed_interventions: int
-    termination_reason: str
+    termination_reason: str  # 具体原因；status 是类别
 
 
 class Prediction(TypedDict):
@@ -163,5 +165,7 @@ def evaluate(
     """A：方法运行结束后读封存参考，输出逐任务指标与汇总所需分母。
 
     评价器不向方法反馈测试答案。
+    留出点平均误差 Ebar 在这里算（A 用独立留出干预复算 CTC 与 Ebar），
+    不属 C 的 audit 记录。
     """
     raise NotImplementedError
