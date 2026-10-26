@@ -1,0 +1,16 @@
+{
+  "objects": [
+    {
+      "object_id": "obj_water_flow",
+      "file": "water_flow.json"
+    },
+    {
+      "object_id": "obj_circuit",
+      "file": "circuit.json"
+    },
+    {
+      "object_id": "obj_synthetic_inverse_square",
+      "file": "inverse_square.json"
+    }
+  ]
+}

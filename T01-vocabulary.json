@@ -38,27 +38,27 @@
       "edge_type_id": "linear_drive_resistance",
       "label": "线性驱动-阻力",
       "status": "pending_bc_review",
-      "equation_template": "response = k * driver / (1 + resistance_factor)  （具体形式待 A/C 按实际方程定）",
+      "equation_template": "response = driver / resistance",
       "roles": [
-        {"role_id": "driver", "label": "驱动量", "direction": "-", "status": "pending"},
-        {"role_id": "resistance", "label": "阻力量", "direction": "-", "status": "pending"},
-        {"role_id": "response", "label": "响应量", "direction": "+", "status": "pending"}
+        {"role_id": "driver", "label": "驱动量", "direction": "-", "status": "confirmed"},
+        {"role_id": "resistance", "label": "阻力量", "direction": "-", "status": "confirmed"},
+        {"role_id": "response", "label": "响应量", "direction": "+", "status": "confirmed"}
       ]
     },
     {
       "edge_type_id": "saturation_response",
       "label": "饱和响应",
       "status": "pending_bc_review",
-      "equation_template": "response = R_max * input / (K + input)  （具体形式待 A/C 按实际方程定）",
+      "equation_template": "response = R_max * input / (K + input)  （R_max、K 为内联常量，非节点）",
       "roles": [
-        {"role_id": "input", "label": "输入量", "direction": "-", "status": "pending"},
-        {"role_id": "response", "label": "响应量", "direction": "+", "status": "pending"}
+        {"role_id": "input", "label": "输入量", "direction": "-", "status": "confirmed"},
+        {"role_id": "response", "label": "响应量", "direction": "+", "status": "confirmed"}
       ]
     }
   ],
   "pending_questions": [
     "node_types 待补全：A 从 SCAR/SCAN 原始数据归纳概念型类型（rate/angle/voltage 等），草案仅确认 positive_scalar 一个",
-    "linear_drive_resistance 与 saturation_response 的角色名与方程形式是草案拟的，任务书只明确给了乘性增长的角色，A/C 须按实际方程定，B/C 复核",
+    "linear_drive_resistance 与 saturation_response 的方程形式已由 A 定稿（线性 response=driver/resistance、饱和 response=R_max*input/(K+input)），角色名已确认，仍待 B/C 复核冻结",
     "角色建议每条边类型独立命名，避免 rate 既是类型又是角色的冲突"
   ]
 }

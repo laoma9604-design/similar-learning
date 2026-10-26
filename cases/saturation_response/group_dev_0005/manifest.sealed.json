@@ -1,0 +1,9 @@
+{
+  "group_id": "group_dev_0005",
+  "valid_sources": [
+    "obj_enzyme"
+  ],
+  "excluded_sources": [
+    "obj_synthetic_hill2"
+  ]
+}

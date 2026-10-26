@@ -1,0 +1,16 @@
+{
+  "objects": [
+    {
+      "object_id": "obj_adsorption",
+      "file": "adsorption.json"
+    },
+    {
+      "object_id": "obj_enzyme",
+      "file": "enzyme.json"
+    },
+    {
+      "object_id": "obj_synthetic_hill2",
+      "file": "hill2.json"
+    }
+  ]
+}

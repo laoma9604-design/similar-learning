@@ -1,0 +1,9 @@
+{
+  "group_id": "group_dev_0004",
+  "valid_sources": [
+    "obj_circuit"
+  ],
+  "excluded_sources": [
+    "obj_synthetic_inverse_square"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "input": {
+    "source": "S",
+    "target": "C"
+  },
+  "response": {
+    "source": "v",
+    "target": "q"
+  }
+}

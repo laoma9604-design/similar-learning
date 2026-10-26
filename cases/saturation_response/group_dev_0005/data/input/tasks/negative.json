@@ -1,0 +1,23 @@
+{
+  "task_id": "task_dev_0005b",
+  "group_id": "group_dev_0005",
+  "target_id": "obj_adsorption",
+  "source_ids": [
+    "obj_synthetic_hill2"
+  ],
+  "schema_version": "topoadv-schema-0.3.0-draft",
+  "vocab_version": "topoadv-vocab-0.1.0-draft",
+  "intervenable_inputs": [
+    "C"
+  ],
+  "specified_outputs": [
+    "q"
+  ],
+  "intervention_range": {
+    "C": [
+      -0.8,
+      1.0
+    ]
+  },
+  "_note": "负任务：候选库只含反例源，无有效映射"
+}

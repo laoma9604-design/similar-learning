@@ -1,0 +1,12 @@
+{
+  "source": {
+    "object_id": "obj_circuit",
+    "label": "电路"
+  },
+  "target": {
+    "object_id": "obj_water_flow",
+    "label": "水流"
+  },
+  "relation_type": "linear_drive_resistance",
+  "direction": "source → target"
+}

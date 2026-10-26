@@ -1,0 +1,28 @@
+{
+  "task_id": "task_dev_0004b",
+  "group_id": "group_dev_0004",
+  "target_id": "obj_water_flow",
+  "source_ids": [
+    "obj_synthetic_inverse_square"
+  ],
+  "schema_version": "topoadv-schema-0.3.0-draft",
+  "vocab_version": "topoadv-vocab-0.1.0-draft",
+  "intervenable_inputs": [
+    "dP",
+    "Rf"
+  ],
+  "specified_outputs": [
+    "Q"
+  ],
+  "intervention_range": {
+    "dP": [
+      -0.2,
+      0.2
+    ],
+    "Rf": [
+      -0.2,
+      0.2
+    ]
+  },
+  "_note": "负任务：候选库只含反例源，无有效映射"
+}

@@ -1,0 +1,10 @@
+{
+  "source_id": "obj_synthetic_inverse_square",
+  "target_id": "obj_water_flow",
+  "node_map": {
+    "V": "dP",
+    "R": "Rf",
+    "I": "Q"
+  },
+  "reason": "结构通过但响应误差超参考容差"
+}

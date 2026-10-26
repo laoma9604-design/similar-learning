@@ -1,0 +1,24 @@
+{
+  "task_id": "task_dev_0005a",
+  "group_id": "group_dev_0005",
+  "target_id": "obj_adsorption",
+  "source_ids": [
+    "obj_enzyme",
+    "obj_synthetic_hill2"
+  ],
+  "schema_version": "topoadv-schema-0.3.0-draft",
+  "vocab_version": "topoadv-vocab-0.1.0-draft",
+  "intervenable_inputs": [
+    "C"
+  ],
+  "specified_outputs": [
+    "q"
+  ],
+  "intervention_range": {
+    "C": [
+      -0.8,
+      1.0
+    ]
+  },
+  "_note": "方法输入不含标签、正确源域或见证点；task_id 不编码正负；正式库每任务 10 个源域，本例精简为 2 个"
+}

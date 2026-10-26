@@ -1,0 +1,14 @@
+{
+  "driver": {
+    "source": "V",
+    "target": "dP"
+  },
+  "resistance": {
+    "source": "R",
+    "target": "Rf"
+  },
+  "response": {
+    "source": "I",
+    "target": "Q"
+  }
+}

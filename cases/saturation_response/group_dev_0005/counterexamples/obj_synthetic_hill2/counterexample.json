@@ -1,0 +1,9 @@
+{
+  "source_id": "obj_synthetic_hill2",
+  "target_id": "obj_adsorption",
+  "node_map": {
+    "S": "C",
+    "v": "q"
+  },
+  "reason": "结构通过但响应误差超参考容差"
+}

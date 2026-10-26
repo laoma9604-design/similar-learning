@@ -1,0 +1,18 @@
+{
+  "u": {
+    "C": 1.0
+  },
+  "target_output": {
+    "q": 13.3333
+  },
+  "source_output": {
+    "v": 8.0
+  },
+  "r_target": {
+    "q": 0.3333
+  },
+  "r_source": {
+    "v": 0.6
+  },
+  "error": 0.0711
+}

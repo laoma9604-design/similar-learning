@@ -1,0 +1,60 @@
+{
+  "task_dev_0004a": {
+    "task_id": "task_dev_0004a",
+    "label": "positive",
+    "valid": [
+      {
+        "source_id": "obj_circuit",
+        "node_map": {
+          "V": "dP",
+          "R": "Rf",
+          "I": "Q"
+        },
+        "edge_map": {
+          "e_s": "e_t"
+        }
+      }
+    ],
+    "exclusions": [],
+    "reference_tolerance": {
+      "min_ctc": 0.95,
+      "max_error": 0.05
+    },
+    "status": "bijective_confirmed"
+  },
+  "task_dev_0004b": {
+    "task_id": "task_dev_0004b",
+    "label": "negative",
+    "valid": [],
+    "exclusions": [
+      {
+        "source_id": "obj_synthetic_inverse_square",
+        "reason": "结构通过但响应误差超参考容差：u=(dP=0.0,Rf=-0.2) 时源响应 0.5625 vs 目标 0.2500，误差 0.0977 > 0.05",
+        "witness": {
+          "u": {
+            "dP": 0.0,
+            "Rf": -0.2
+          },
+          "target_output": {
+            "Q": 2.5
+          },
+          "source_output": {
+            "I": 7.8125
+          },
+          "r_target": {
+            "Q": 0.25
+          },
+          "r_source": {
+            "I": 0.5625
+          },
+          "error": 0.0977
+        }
+      }
+    ],
+    "reference_tolerance": {
+      "min_ctc": 0.95,
+      "max_error": 0.05
+    },
+    "status": "bijective_confirmed"
+  }
+}

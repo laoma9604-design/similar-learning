@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_synthetic_inverse_square",
+  "object_kind": "mechanistic",
+  "relation_type": "linear_drive_resistance",
+  "split": "dev",
+  "label": "合成反比平方反例",
+  "nodes": [
+    {
+      "node_id": "V",
+      "label": "驱动量",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "R",
+      "label": "阻力量",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "I",
+      "label": "响应量",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e_sq",
+      "edge_type": "linear_drive_resistance",
+      "input_nodes": [
+        "V",
+        "R"
+      ],
+      "output_nodes": [
+        "I"
+      ],
+      "roles": {
+        "V": "driver",
+        "R": "resistance",
+        "I": "response"
+      }
+    }
+  ],
+  "function": "V * 2.0 / (R ** 2.0)",
+  "controllable_inputs": [
+    "V",
+    "R"
+  ],
+  "designated_outputs": [
+    "I"
+  ],
+  "baseline": [
+    10,
+    2
+  ],
+  "input_scales": [
+    10,
+    2
+  ],
+  "baseline_output": 5,
+  "output_scale": 5,
+  "legal_domain": {
+    "V": [
+      1e-06,
+      null
+    ],
+    "R": [
+      1e-06,
+      null
+    ]
+  },
+  "intervention_bounds": {
+    "V": [
+      -0.2,
+      0.2
+    ],
+    "R": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

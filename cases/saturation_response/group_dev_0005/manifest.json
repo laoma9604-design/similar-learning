@@ -1,0 +1,17 @@
+{
+  "group_id": "group_dev_0005",
+  "dataset": "mred",
+  "relation_type": "saturation_response",
+  "schema_version": "topoadv-schema-0.3.0-draft",
+  "vocab_version": "topoadv-vocab-0.1.0-draft",
+  "split": "dev",
+  "object_ids": [
+    "obj_adsorption",
+    "obj_enzyme",
+    "obj_synthetic_hill2"
+  ],
+  "task_ids": [
+    "task_dev_0005a",
+    "task_dev_0005b"
+  ]
+}

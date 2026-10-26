@@ -27,8 +27,10 @@ cases/
 
 命名铁律：文件夹只用稳定 ID（概念=relation_type、类比对=group_id、反例=source_id），人类可读名字只放 label。
 
-现有 3 个类比对：
-- multiplicative_growth/group_dev_0001：细菌增长→银行复利（机制类）
+现有 5 个类比对：
+- multiplicative_growth/group_dev_0001：细菌增长→银行复利（机制类·乘性增长）
+- linear_drive_resistance/group_dev_0004：电路→水流（机制类·线性驱动-阻力）
+- saturation_response/group_dev_0005：酶反应→吸附（机制类·饱和响应）
 - structural/group_dev_0002：太阳系→原子（SCAN）
 - structural/group_dev_0003：细胞→工厂（SCAR 55）
 

@@ -1,0 +1,58 @@
+{
+  "task_dev_0005a": {
+    "task_id": "task_dev_0005a",
+    "label": "positive",
+    "valid": [
+      {
+        "source_id": "obj_enzyme",
+        "node_map": {
+          "S": "C",
+          "v": "q"
+        },
+        "edge_map": {
+          "e_s": "e_t"
+        }
+      }
+    ],
+    "exclusions": [],
+    "reference_tolerance": {
+      "min_ctc": 0.95,
+      "max_error": 0.05
+    },
+    "status": "bijective_confirmed"
+  },
+  "task_dev_0005b": {
+    "task_id": "task_dev_0005b",
+    "label": "negative",
+    "valid": [],
+    "exclusions": [
+      {
+        "source_id": "obj_synthetic_hill2",
+        "reason": "结构通过但响应误差超参考容差：u=(C=1.0) 时源响应 0.6000 vs 目标 0.3333，误差 0.0711 > 0.05",
+        "witness": {
+          "u": {
+            "C": 1.0
+          },
+          "target_output": {
+            "q": 13.3333
+          },
+          "source_output": {
+            "v": 8.0
+          },
+          "r_target": {
+            "q": 0.3333
+          },
+          "r_source": {
+            "v": 0.6
+          },
+          "error": 0.0711
+        }
+      }
+    ],
+    "reference_tolerance": {
+      "min_ctc": 0.95,
+      "max_error": 0.05
+    },
+    "status": "bijective_confirmed"
+  }
+}

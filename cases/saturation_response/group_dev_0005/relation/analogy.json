@@ -1,0 +1,12 @@
+{
+  "source": {
+    "object_id": "obj_enzyme",
+    "label": "酶反应"
+  },
+  "target": {
+    "object_id": "obj_adsorption",
+    "label": "吸附"
+  },
+  "relation_type": "saturation_response",
+  "direction": "source → target"
+}

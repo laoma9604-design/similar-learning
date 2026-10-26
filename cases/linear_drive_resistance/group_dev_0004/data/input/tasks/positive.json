@@ -1,0 +1,29 @@
+{
+  "task_id": "task_dev_0004a",
+  "group_id": "group_dev_0004",
+  "target_id": "obj_water_flow",
+  "source_ids": [
+    "obj_circuit",
+    "obj_synthetic_inverse_square"
+  ],
+  "schema_version": "topoadv-schema-0.3.0-draft",
+  "vocab_version": "topoadv-vocab-0.1.0-draft",
+  "intervenable_inputs": [
+    "dP",
+    "Rf"
+  ],
+  "specified_outputs": [
+    "Q"
+  ],
+  "intervention_range": {
+    "dP": [
+      -0.2,
+      0.2
+    ],
+    "Rf": [
+      -0.2,
+      0.2
+    ]
+  },
+  "_note": "方法输入不含标签、正确源域或见证点；task_id 不编码正负；正式库每任务 10 个源域，本例精简为 2 个"
+}

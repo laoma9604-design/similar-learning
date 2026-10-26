@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_water_flow",
+  "object_kind": "mechanistic",
+  "relation_type": "linear_drive_resistance",
+  "split": "dev",
+  "label": "水流",
+  "nodes": [
+    {
+      "node_id": "dP",
+      "label": "压差",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "Rf",
+      "label": "流阻",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "Q",
+      "label": "流量",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e_t",
+      "edge_type": "linear_drive_resistance",
+      "input_nodes": [
+        "dP",
+        "Rf"
+      ],
+      "output_nodes": [
+        "Q"
+      ],
+      "roles": {
+        "dP": "driver",
+        "Rf": "resistance",
+        "Q": "response"
+      }
+    }
+  ],
+  "function": "dP / Rf",
+  "controllable_inputs": [
+    "dP",
+    "Rf"
+  ],
+  "designated_outputs": [
+    "Q"
+  ],
+  "baseline": [
+    8,
+    4
+  ],
+  "input_scales": [
+    8,
+    4
+  ],
+  "baseline_output": 2,
+  "output_scale": 2,
+  "legal_domain": {
+    "dP": [
+      1e-06,
+      null
+    ],
+    "Rf": [
+      1e-06,
+      null
+    ]
+  },
+  "intervention_bounds": {
+    "dP": [
+      -0.2,
+      0.2
+    ],
+    "Rf": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}
