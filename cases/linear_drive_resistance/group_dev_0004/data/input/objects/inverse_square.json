@@ -3,7 +3,7 @@
   "object_kind": "mechanistic",
   "relation_type": "linear_drive_resistance",
   "split": "dev",
-  "label": "合成反比平方反例",
+  "label": "合成反比平方",
   "nodes": [
     {
       "node_id": "V",

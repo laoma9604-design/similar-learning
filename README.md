@@ -58,8 +58,10 @@ cases/
 
 命名规矩：文件夹只用稳定 ID——概念层用 relation_type，类比对层用 group_id；人类可读名字（细菌增长/银行复利）只放 manifest / analogy 的 label 字段，不拿数据名当文件夹名。这样改名字不动文件夹，加数据只加编号文件夹。
 
-现在有 3 个类比对：
-- multiplicative_growth / group_dev_0001：细菌增长 → 银行复利（机制类，带合成平方反例）
+现在有 5 个类比对：
+- multiplicative_growth / group_dev_0001：细菌增长 → 银行复利（机制类·乘性增长）
+- linear_drive_resistance / group_dev_0004：电路 → 水流（机制类·线性驱动-阻力）
+- saturation_response / group_dev_0005：酶反应 → 吸附（机制类·饱和响应）
 - structural / group_dev_0002：太阳系 → 原子（SCAN）
 - structural / group_dev_0003：细胞 → 工厂（SCAR 55）
 
@@ -93,12 +95,13 @@ cases/
 - 乘性增长方程 next = current × (1 + ratio)、角色 current/ratio/next（任务书确认）。
 - 数据划分 70/15/15、种子 20261007。
 - cases/ 命名规矩：概念层用 relation_type、类比对层用 group_id，不用数据名。
+- object 已补 relation_type、split 字段（schema draft-v4）。
+- 线性驱动-阻力 response=driver/resistance、饱和响应 response=R_max·input/(K+input)，角色已定稿（driver/resistance/response、input/response）。
+- 反例 label 不带「反例/错误」字样（任务书 L1006），受控合成标注放封存区 counterexample.json。
 
 三、仍需讨论（重点，高亮）
 
-- ❓ schema 要不要补 relation_type、split 两个字段——现在 cases/ 在用，schema 里没定义。
 - ❓ 节点类型：concept 占位要换成 6 类，3 个边界待拍板（water/food 归实体还是物质；force 单列否；disease/war/life tenure 就近归）。
-- ❓ linear_drive_resistance、saturation_response 的方程 + 角色（现在 pending，任务书只给了乘性增长）。
 - ❓ 角色是否每条边类型独立命名（避免 rate 既当类型又当角色）。
 - ❓ 结构类概念（中心-环绕 / 系统-子系统）T02 归纳。
 - ❓ cases/ 里 sealed 和 references 要不要分开（现在合并成 sealed/reference.json，待定）。

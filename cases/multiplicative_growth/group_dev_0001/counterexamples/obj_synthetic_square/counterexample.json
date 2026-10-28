@@ -6,5 +6,6 @@
     "rate_s": "rate_t",
     "N_next": "A_next"
   },
-  "reason": "结构 11/11 通过，但响应超容差"
+  "reason": "结构 11/11 通过，但响应超容差",
+  "controlled_synthetic": true
 }

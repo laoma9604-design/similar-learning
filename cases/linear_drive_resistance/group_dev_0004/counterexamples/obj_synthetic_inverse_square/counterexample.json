@@ -6,5 +6,6 @@
     "R": "Rf",
     "I": "Q"
   },
-  "reason": "结构通过但响应误差超参考容差"
+  "reason": "结构通过但响应误差超参考容差",
+  "controlled_synthetic": true
 }

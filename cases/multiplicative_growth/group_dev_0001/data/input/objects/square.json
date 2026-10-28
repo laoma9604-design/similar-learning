@@ -3,7 +3,7 @@
   "object_kind": "mechanistic",
   "relation_type": "multiplicative_growth",
   "split": "dev",
-  "label": "合成平方反例",
+  "label": "合成平方增长",
   "nodes": [
     {
       "node_id": "N_t",
