@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_group_tr_0060_src",
+  "object_kind": "mechanistic",
+  "relation_type": "multiplicative_growth",
+  "split": "train",
+  "label": "藻类繁殖",
+  "nodes": [
+    {
+      "node_id": "b4",
+      "label": "藻细胞数",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "b2",
+      "label": "增长率",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "b1",
+      "label": "下一代数量",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "multiplicative_growth",
+      "input_nodes": [
+        "b4",
+        "b2"
+      ],
+      "output_nodes": [
+        "b1"
+      ],
+      "roles": {
+        "b4": "current",
+        "b2": "ratio",
+        "b1": "next"
+      }
+    }
+  ],
+  "function": "b4 * (1 + b2)",
+  "controllable_inputs": [
+    "b4",
+    "b2"
+  ],
+  "designated_outputs": [
+    "b1"
+  ],
+  "baseline": [
+    20000.0,
+    0.03
+  ],
+  "input_scales": [
+    20000.0,
+    0.03
+  ],
+  "baseline_output": 20600.0,
+  "output_scale": 20600.0,
+  "legal_domain": {
+    "b4": [
+      0,
+      null
+    ],
+    "b2": [
+      0,
+      1
+    ]
+  },
+  "intervention_bounds": {
+    "b4": [
+      -0.2,
+      0.2
+    ],
+    "b2": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

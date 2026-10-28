@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_group_tr_0233_tgt",
+  "object_kind": "mechanistic",
+  "relation_type": "linear_drive_resistance",
+  "split": "val",
+  "label": "血流",
+  "nodes": [
+    {
+      "node_id": "driver",
+      "label": "血压差",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "resistance",
+      "label": "血管阻力",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "response",
+      "label": "血流量",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "linear_drive_resistance",
+      "input_nodes": [
+        "driver",
+        "resistance"
+      ],
+      "output_nodes": [
+        "response"
+      ],
+      "roles": {
+        "driver": "driver",
+        "resistance": "resistance",
+        "response": "response"
+      }
+    }
+  ],
+  "function": "driver / resistance",
+  "controllable_inputs": [
+    "driver",
+    "resistance"
+  ],
+  "designated_outputs": [
+    "response"
+  ],
+  "baseline": [
+    800.0,
+    25.0
+  ],
+  "input_scales": [
+    800.0,
+    25.0
+  ],
+  "baseline_output": 32.0,
+  "output_scale": 32.0,
+  "legal_domain": {
+    "driver": [
+      1e-06,
+      null
+    ],
+    "resistance": [
+      1e-06,
+      null
+    ]
+  },
+  "intervention_bounds": {
+    "driver": [
+      -0.2,
+      0.2
+    ],
+    "resistance": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

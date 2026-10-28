@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_group_tr_0090_src",
+  "object_kind": "mechanistic",
+  "relation_type": "multiplicative_growth",
+  "split": "test",
+  "label": "兔子种群",
+  "nodes": [
+    {
+      "node_id": "b1",
+      "label": "兔子数",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "a1",
+      "label": "繁殖增长率",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "a4",
+      "label": "下一代数量",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "multiplicative_growth",
+      "input_nodes": [
+        "b1",
+        "a1"
+      ],
+      "output_nodes": [
+        "a4"
+      ],
+      "roles": {
+        "b1": "current",
+        "a1": "ratio",
+        "a4": "next"
+      }
+    }
+  ],
+  "function": "b1 * (1 + a1)",
+  "controllable_inputs": [
+    "b1",
+    "a1"
+  ],
+  "designated_outputs": [
+    "a4"
+  ],
+  "baseline": [
+    500.0,
+    0.02
+  ],
+  "input_scales": [
+    500.0,
+    0.02
+  ],
+  "baseline_output": 510.0,
+  "output_scale": 510.0,
+  "legal_domain": {
+    "b1": [
+      0,
+      null
+    ],
+    "a1": [
+      0,
+      1
+    ]
+  },
+  "intervention_bounds": {
+    "b1": [
+      -0.2,
+      0.2
+    ],
+    "a1": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

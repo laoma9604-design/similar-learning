@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_group_tr_0048_src",
+  "object_kind": "mechanistic",
+  "relation_type": "multiplicative_growth",
+  "split": "train",
+  "label": "酵母发酵",
+  "nodes": [
+    {
+      "node_id": "a2",
+      "label": "酵母数量",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "b2",
+      "label": "每代增长率",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "a3",
+      "label": "下一代数量",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "multiplicative_growth",
+      "input_nodes": [
+        "a2",
+        "b2"
+      ],
+      "output_nodes": [
+        "a3"
+      ],
+      "roles": {
+        "a2": "current",
+        "b2": "ratio",
+        "a3": "next"
+      }
+    }
+  ],
+  "function": "a2 * (1 + b2)",
+  "controllable_inputs": [
+    "a2",
+    "b2"
+  ],
+  "designated_outputs": [
+    "a3"
+  ],
+  "baseline": [
+    500.0,
+    0.04
+  ],
+  "input_scales": [
+    500.0,
+    0.04
+  ],
+  "baseline_output": 520.0,
+  "output_scale": 520.0,
+  "legal_domain": {
+    "a2": [
+      0,
+      null
+    ],
+    "b2": [
+      0,
+      1
+    ]
+  },
+  "intervention_bounds": {
+    "a2": [
+      -0.2,
+      0.2
+    ],
+    "b2": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

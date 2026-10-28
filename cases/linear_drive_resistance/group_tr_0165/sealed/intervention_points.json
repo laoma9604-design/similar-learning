@@ -1,0 +1,811 @@
+{
+  "group_id": "group_tr_0165",
+  "seed": 20261007,
+  "points_per_task": 100,
+  "tasks": {
+    "task_group_tr_0165_a": [
+      {
+        "driver": 0.0887,
+        "resistance": 0.0582
+      },
+      {
+        "driver": -0.1512,
+        "resistance": 0.0252
+      },
+      {
+        "driver": 0.1377,
+        "resistance": 0.1767
+      },
+      {
+        "driver": -0.0636,
+        "resistance": 0.0186
+      },
+      {
+        "driver": -0.0532,
+        "resistance": -0.1996
+      },
+      {
+        "driver": 0.1481,
+        "resistance": -0.101
+      },
+      {
+        "driver": 0.0067,
+        "resistance": -0.1252
+      },
+      {
+        "driver": -0.1614,
+        "resistance": 0.0236
+      },
+      {
+        "driver": -0.1179,
+        "resistance": -0.0079
+      },
+      {
+        "driver": 0.1012,
+        "resistance": -0.1007
+      },
+      {
+        "driver": -0.154,
+        "resistance": 0.0014
+      },
+      {
+        "driver": -0.0488,
+        "resistance": 0.0362
+      },
+      {
+        "driver": 0.0415,
+        "resistance": -0.0485
+      },
+      {
+        "driver": 0.1076,
+        "resistance": 0.0042
+      },
+      {
+        "driver": -0.0127,
+        "resistance": -0.178
+      },
+      {
+        "driver": -0.0165,
+        "resistance": 0.1435
+      },
+      {
+        "driver": -0.0503,
+        "resistance": 0.1233
+      },
+      {
+        "driver": 0.0946,
+        "resistance": 0.0994
+      },
+      {
+        "driver": -0.0284,
+        "resistance": -0.0704
+      },
+      {
+        "driver": 0.0172,
+        "resistance": -0.1381
+      },
+      {
+        "driver": 0.1134,
+        "resistance": -0.0989
+      },
+      {
+        "driver": 0.1415,
+        "resistance": -0.0475
+      },
+      {
+        "driver": -0.1356,
+        "resistance": 0.1253
+      },
+      {
+        "driver": -0.0759,
+        "resistance": 0.1993
+      },
+      {
+        "driver": -0.1101,
+        "resistance": 0.0358
+      },
+      {
+        "driver": 0.0279,
+        "resistance": -0.1959
+      },
+      {
+        "driver": -0.1273,
+        "resistance": -0.0091
+      },
+      {
+        "driver": 0.1041,
+        "resistance": -0.161
+      },
+      {
+        "driver": -0.1639,
+        "resistance": -0.0363
+      },
+      {
+        "driver": -0.1413,
+        "resistance": 0.0603
+      },
+      {
+        "driver": -0.1349,
+        "resistance": -0.0957
+      },
+      {
+        "driver": -0.0835,
+        "resistance": 0.0999
+      },
+      {
+        "driver": 0.0454,
+        "resistance": 0.014
+      },
+      {
+        "driver": -0.0789,
+        "resistance": 0.0666
+      },
+      {
+        "driver": 0.1526,
+        "resistance": 0.1256
+      },
+      {
+        "driver": 0.0164,
+        "resistance": 0.0561
+      },
+      {
+        "driver": -0.0332,
+        "resistance": 0.1721
+      },
+      {
+        "driver": -0.073,
+        "resistance": -0.0518
+      },
+      {
+        "driver": -0.1851,
+        "resistance": 0.1129
+      },
+      {
+        "driver": 0.1577,
+        "resistance": -0.1255
+      },
+      {
+        "driver": 0.0908,
+        "resistance": -0.0455
+      },
+      {
+        "driver": 0.1859,
+        "resistance": -0.198
+      },
+      {
+        "driver": 0.1631,
+        "resistance": -0.1404
+      },
+      {
+        "driver": -0.17,
+        "resistance": -0.1144
+      },
+      {
+        "driver": 0.0261,
+        "resistance": -0.0932
+      },
+      {
+        "driver": 0.1828,
+        "resistance": 0.1402
+      },
+      {
+        "driver": 0.0839,
+        "resistance": -0.0107
+      },
+      {
+        "driver": -0.1007,
+        "resistance": 0.0227
+      },
+      {
+        "driver": -0.0802,
+        "resistance": -0.0584
+      },
+      {
+        "driver": -0.1654,
+        "resistance": 0.1598
+      },
+      {
+        "driver": -0.1597,
+        "resistance": -0.1457
+      },
+      {
+        "driver": -0.1866,
+        "resistance": -0.0832
+      },
+      {
+        "driver": 0.1269,
+        "resistance": -0.1548
+      },
+      {
+        "driver": 0.035,
+        "resistance": -0.0667
+      },
+      {
+        "driver": -0.0832,
+        "resistance": -0.1034
+      },
+      {
+        "driver": 0.0866,
+        "resistance": -0.168
+      },
+      {
+        "driver": 0.0424,
+        "resistance": 0.0537
+      },
+      {
+        "driver": 0.1155,
+        "resistance": 0.1904
+      },
+      {
+        "driver": -0.0064,
+        "resistance": -0.0346
+      },
+      {
+        "driver": -0.1568,
+        "resistance": -0.0484
+      },
+      {
+        "driver": -0.1909,
+        "resistance": 0.0949
+      },
+      {
+        "driver": 0.1927,
+        "resistance": 0.1205
+      },
+      {
+        "driver": 0.0726,
+        "resistance": -0.1274
+      },
+      {
+        "driver": -0.0451,
+        "resistance": 0.0718
+      },
+      {
+        "driver": -0.0993,
+        "resistance": -0.128
+      },
+      {
+        "driver": 0.1513,
+        "resistance": -0.1549
+      },
+      {
+        "driver": -0.0416,
+        "resistance": 0.1772
+      },
+      {
+        "driver": 0.1644,
+        "resistance": 0.0081
+      },
+      {
+        "driver": 0.0559,
+        "resistance": -0.1618
+      },
+      {
+        "driver": 0.0121,
+        "resistance": -0.0617
+      },
+      {
+        "driver": 0.0961,
+        "resistance": 0.0975
+      },
+      {
+        "driver": -0.1395,
+        "resistance": -0.0811
+      },
+      {
+        "driver": 0.1311,
+        "resistance": -0.171
+      },
+      {
+        "driver": -0.0307,
+        "resistance": 0.1289
+      },
+      {
+        "driver": 0.1347,
+        "resistance": 0.0248
+      },
+      {
+        "driver": 0.0316,
+        "resistance": -0.0819
+      },
+      {
+        "driver": 0.0542,
+        "resistance": -0.1066
+      },
+      {
+        "driver": -0.1888,
+        "resistance": 0.1105
+      },
+      {
+        "driver": -0.1026,
+        "resistance": -0.0354
+      },
+      {
+        "driver": -0.0658,
+        "resistance": -0.1224
+      },
+      {
+        "driver": 0.095,
+        "resistance": -0.1906
+      },
+      {
+        "driver": 0.0801,
+        "resistance": -0.0521
+      },
+      {
+        "driver": 0.1623,
+        "resistance": 0.0198
+      },
+      {
+        "driver": 0.0368,
+        "resistance": -0.1528
+      },
+      {
+        "driver": -0.0638,
+        "resistance": -0.1184
+      },
+      {
+        "driver": 0.1995,
+        "resistance": 0.0686
+      },
+      {
+        "driver": -0.0375,
+        "resistance": 0.1156
+      },
+      {
+        "driver": 0.0214,
+        "resistance": 0.1933
+      },
+      {
+        "driver": 0.002,
+        "resistance": -0.1211
+      },
+      {
+        "driver": 0.0026,
+        "resistance": -0.1587
+      },
+      {
+        "driver": 0.1144,
+        "resistance": 0.0711
+      },
+      {
+        "driver": 0.015,
+        "resistance": -0.0601
+      },
+      {
+        "driver": 0.1004,
+        "resistance": 0.1693
+      },
+      {
+        "driver": 0.0632,
+        "resistance": 0.0916
+      },
+      {
+        "driver": 0.0138,
+        "resistance": -0.0793
+      },
+      {
+        "driver": 0.0372,
+        "resistance": -0.077
+      },
+      {
+        "driver": 0.0564,
+        "resistance": -0.0764
+      },
+      {
+        "driver": -0.1784,
+        "resistance": 0.0489
+      },
+      {
+        "driver": 0.0759,
+        "resistance": -0.1956
+      },
+      {
+        "driver": 0.129,
+        "resistance": 0.1446
+      }
+    ],
+    "task_group_tr_0165_b": [
+      {
+        "driver": -0.0075,
+        "resistance": 0.1999
+      },
+      {
+        "driver": -0.0036,
+        "resistance": -0.0098
+      },
+      {
+        "driver": 0.074,
+        "resistance": 0.0289
+      },
+      {
+        "driver": 0.1342,
+        "resistance": -0.093
+      },
+      {
+        "driver": 0.1058,
+        "resistance": -0.0182
+      },
+      {
+        "driver": -0.0316,
+        "resistance": -0.0662
+      },
+      {
+        "driver": 0.1137,
+        "resistance": -0.1631
+      },
+      {
+        "driver": -0.0446,
+        "resistance": 0.0027
+      },
+      {
+        "driver": 0.0224,
+        "resistance": 0.173
+      },
+      {
+        "driver": -0.1788,
+        "resistance": -0.1584
+      },
+      {
+        "driver": -0.1764,
+        "resistance": 0.0544
+      },
+      {
+        "driver": -0.0146,
+        "resistance": 0.0068
+      },
+      {
+        "driver": 0.1635,
+        "resistance": 0.1518
+      },
+      {
+        "driver": -0.1015,
+        "resistance": -0.0029
+      },
+      {
+        "driver": -0.0788,
+        "resistance": -0.0553
+      },
+      {
+        "driver": -0.1102,
+        "resistance": 0.0373
+      },
+      {
+        "driver": 0.0362,
+        "resistance": 0.1384
+      },
+      {
+        "driver": 0.0761,
+        "resistance": 0.0409
+      },
+      {
+        "driver": 0.0368,
+        "resistance": 0.031
+      },
+      {
+        "driver": -0.0807,
+        "resistance": -0.0441
+      },
+      {
+        "driver": 0.1535,
+        "resistance": 0.0201
+      },
+      {
+        "driver": 0.1408,
+        "resistance": -0.0821
+      },
+      {
+        "driver": 0.1738,
+        "resistance": 0.1725
+      },
+      {
+        "driver": -0.07,
+        "resistance": -0.0726
+      },
+      {
+        "driver": 0.0043,
+        "resistance": -0.1677
+      },
+      {
+        "driver": -0.108,
+        "resistance": 0.0019
+      },
+      {
+        "driver": -0.1662,
+        "resistance": -0.0637
+      },
+      {
+        "driver": -0.1052,
+        "resistance": 0.1456
+      },
+      {
+        "driver": 0.1105,
+        "resistance": -0.0338
+      },
+      {
+        "driver": -0.1655,
+        "resistance": 0.0684
+      },
+      {
+        "driver": 0.0982,
+        "resistance": 0.1259
+      },
+      {
+        "driver": -0.1553,
+        "resistance": -0.0513
+      },
+      {
+        "driver": -0.0319,
+        "resistance": 0.0684
+      },
+      {
+        "driver": 0.1522,
+        "resistance": -0.0857
+      },
+      {
+        "driver": 0.1897,
+        "resistance": 0.065
+      },
+      {
+        "driver": 0.1706,
+        "resistance": -0.1589
+      },
+      {
+        "driver": 0.0975,
+        "resistance": 0.1729
+      },
+      {
+        "driver": 0.0928,
+        "resistance": 0.1951
+      },
+      {
+        "driver": -0.0716,
+        "resistance": 0.1877
+      },
+      {
+        "driver": 0.0709,
+        "resistance": 0.0683
+      },
+      {
+        "driver": -0.0867,
+        "resistance": 0.0921
+      },
+      {
+        "driver": -0.1538,
+        "resistance": -0.1199
+      },
+      {
+        "driver": 0.1901,
+        "resistance": 0.0797
+      },
+      {
+        "driver": -0.0721,
+        "resistance": -0.0999
+      },
+      {
+        "driver": -0.0841,
+        "resistance": -0.0456
+      },
+      {
+        "driver": -0.0552,
+        "resistance": 0.1108
+      },
+      {
+        "driver": 0.1708,
+        "resistance": 0.1812
+      },
+      {
+        "driver": 0.1867,
+        "resistance": -0.0201
+      },
+      {
+        "driver": 0.102,
+        "resistance": -0.0863
+      },
+      {
+        "driver": -0.125,
+        "resistance": -0.1871
+      },
+      {
+        "driver": -0.0817,
+        "resistance": 0.1259
+      },
+      {
+        "driver": 0.1286,
+        "resistance": -0.192
+      },
+      {
+        "driver": -0.1801,
+        "resistance": 0.1346
+      },
+      {
+        "driver": 0.0361,
+        "resistance": -0.0039
+      },
+      {
+        "driver": -0.1065,
+        "resistance": -0.0678
+      },
+      {
+        "driver": 0.0338,
+        "resistance": 0.0214
+      },
+      {
+        "driver": -0.1204,
+        "resistance": 0.11
+      },
+      {
+        "driver": -0.0333,
+        "resistance": 0.114
+      },
+      {
+        "driver": -0.0085,
+        "resistance": -0.0956
+      },
+      {
+        "driver": -0.1169,
+        "resistance": -0.1517
+      },
+      {
+        "driver": -0.047,
+        "resistance": 0.1254
+      },
+      {
+        "driver": -0.1395,
+        "resistance": 0.0735
+      },
+      {
+        "driver": -0.1944,
+        "resistance": -0.1309
+      },
+      {
+        "driver": -0.0472,
+        "resistance": 0.0297
+      },
+      {
+        "driver": 0.0809,
+        "resistance": -0.025
+      },
+      {
+        "driver": 0.1443,
+        "resistance": 0.0667
+      },
+      {
+        "driver": -0.1809,
+        "resistance": -0.1777
+      },
+      {
+        "driver": 0.0805,
+        "resistance": -0.1937
+      },
+      {
+        "driver": -0.1614,
+        "resistance": 0.14
+      },
+      {
+        "driver": -0.1748,
+        "resistance": 0.1109
+      },
+      {
+        "driver": -0.0352,
+        "resistance": 0.1409
+      },
+      {
+        "driver": 0.188,
+        "resistance": -0.0683
+      },
+      {
+        "driver": -0.0877,
+        "resistance": 0.0444
+      },
+      {
+        "driver": -0.0655,
+        "resistance": -0.059
+      },
+      {
+        "driver": 0.1222,
+        "resistance": 0.0087
+      },
+      {
+        "driver": -0.0179,
+        "resistance": -0.1072
+      },
+      {
+        "driver": 0.1727,
+        "resistance": -0.0532
+      },
+      {
+        "driver": 0.095,
+        "resistance": -0.0769
+      },
+      {
+        "driver": 0.0663,
+        "resistance": -0.1723
+      },
+      {
+        "driver": 0.0092,
+        "resistance": 0.1841
+      },
+      {
+        "driver": -0.0576,
+        "resistance": 0.0011
+      },
+      {
+        "driver": -0.1948,
+        "resistance": 0.0786
+      },
+      {
+        "driver": -0.1662,
+        "resistance": -0.1854
+      },
+      {
+        "driver": 0.1671,
+        "resistance": 0.0331
+      },
+      {
+        "driver": -0.1313,
+        "resistance": -0.0949
+      },
+      {
+        "driver": 0.1992,
+        "resistance": -0.0605
+      },
+      {
+        "driver": -0.0789,
+        "resistance": -0.181
+      },
+      {
+        "driver": -0.0214,
+        "resistance": -0.0162
+      },
+      {
+        "driver": 0.079,
+        "resistance": 0.1183
+      },
+      {
+        "driver": 0.1918,
+        "resistance": 0.0006
+      },
+      {
+        "driver": -0.0931,
+        "resistance": -0.0998
+      },
+      {
+        "driver": 0.0657,
+        "resistance": 0.1261
+      },
+      {
+        "driver": 0.1307,
+        "resistance": 0.1912
+      },
+      {
+        "driver": -0.1969,
+        "resistance": 0.1548
+      },
+      {
+        "driver": -0.1833,
+        "resistance": -0.1839
+      },
+      {
+        "driver": 0.1857,
+        "resistance": -0.074
+      },
+      {
+        "driver": 0.1844,
+        "resistance": -0.1902
+      },
+      {
+        "driver": -0.0694,
+        "resistance": -0.1537
+      },
+      {
+        "driver": -0.1255,
+        "resistance": 0.1289
+      },
+      {
+        "driver": 0.177,
+        "resistance": 0.1476
+      }
+    ]
+  }
+}

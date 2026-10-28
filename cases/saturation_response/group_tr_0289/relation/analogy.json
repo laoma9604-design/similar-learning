@@ -1,0 +1,15 @@
+{
+  "source": {
+    "object_id": "obj_group_tr_0289_src",
+    "label": "载体转运"
+  },
+  "target": {
+    "object_id": "obj_group_tr_0289_tgt",
+    "label": "葡萄糖重吸收"
+  },
+  "relation_type": "saturation_response",
+  "direction": "source → target",
+  "pair_id": "sat_05",
+  "domain_evidence": "源=载体介导饱和转运；目标=肾小管葡萄糖重吸收。跨域：同机制不同生理场景。",
+  "simplification_assumption": null
+}

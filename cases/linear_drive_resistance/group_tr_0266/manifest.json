@@ -1,0 +1,46 @@
+{
+  "group_id": "group_tr_0266",
+  "dataset": "mred",
+  "relation_type": "linear_drive_resistance",
+  "schema_version": "topoadv-schema-0.3.0-draft",
+  "vocab_version": "topoadv-vocab-0.1.0-draft",
+  "split": "train",
+  "pair_id": "lin_08",
+  "variant_index": 6,
+  "object_ids": [
+    "obj_group_tr_0266_tgt",
+    "obj_group_tr_0266_src",
+    "obj_group_tr_0266_i02",
+    "obj_group_tr_0266_i06",
+    "obj_group_tr_0266_i09",
+    "obj_group_tr_0266_i01",
+    "obj_group_tr_0266_i04",
+    "obj_group_tr_0266_i05",
+    "obj_group_tr_0266_i00",
+    "obj_group_tr_0266_i03",
+    "obj_group_tr_0266_i08",
+    "obj_group_tr_0266_i00",
+    "obj_group_tr_0266_i01",
+    "obj_group_tr_0266_i02",
+    "obj_group_tr_0266_i03",
+    "obj_group_tr_0266_i04",
+    "obj_group_tr_0266_i05",
+    "obj_group_tr_0266_i06",
+    "obj_group_tr_0266_i07",
+    "obj_group_tr_0266_i08",
+    "obj_group_tr_0266_i09"
+  ],
+  "task_ids": [
+    "task_group_tr_0266_a",
+    "task_group_tr_0266_b"
+  ],
+  "task_counts": {
+    "positive": 1,
+    "negative": 1,
+    "total": 2
+  },
+  "source_counts": {
+    "positive": 10,
+    "negative": 10
+  }
+}

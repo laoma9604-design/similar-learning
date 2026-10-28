@@ -1,0 +1,15 @@
+{
+  "source": {
+    "object_id": "obj_group_tr_0046_src",
+    "label": "酵母发酵"
+  },
+  "target": {
+    "object_id": "obj_group_tr_0046_tgt",
+    "label": "债券票息"
+  },
+  "relation_type": "multiplicative_growth",
+  "direction": "source → target",
+  "pair_id": "mult_03",
+  "domain_evidence": "源=酵母增殖；目标=债券票息复投。跨域：生物→金融。",
+  "simplification_assumption": null
+}

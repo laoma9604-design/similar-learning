@@ -1,0 +1,15 @@
+{
+  "source": {
+    "object_id": "obj_group_tr_0277_src",
+    "label": "酶催化"
+  },
+  "target": {
+    "object_id": "obj_group_tr_0277_tgt",
+    "label": "吸附"
+  },
+  "relation_type": "saturation_response",
+  "direction": "source → target",
+  "pair_id": "sat_01",
+  "domain_evidence": "源=Michaelis-Menten 酶动力学；目标=Langmuir 吸附等温线。跨域：生化→物理化学。",
+  "simplification_assumption": null
+}

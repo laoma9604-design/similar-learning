@@ -1,0 +1,811 @@
+{
+  "group_id": "group_tr_0013",
+  "seed": 20261007,
+  "points_per_task": 100,
+  "tasks": {
+    "task_group_tr_0013_a": [
+      {
+        "current": -0.1413,
+        "ratio": -0.0537
+      },
+      {
+        "current": -0.105,
+        "ratio": -0.0455
+      },
+      {
+        "current": -0.1783,
+        "ratio": -0.1448
+      },
+      {
+        "current": -0.0865,
+        "ratio": -0.0542
+      },
+      {
+        "current": 0.177,
+        "ratio": -0.1788
+      },
+      {
+        "current": 0.1116,
+        "ratio": -0.1751
+      },
+      {
+        "current": -0.1142,
+        "ratio": 0.171
+      },
+      {
+        "current": 0.1352,
+        "ratio": -0.1142
+      },
+      {
+        "current": 0.0426,
+        "ratio": -0.1812
+      },
+      {
+        "current": -0.1762,
+        "ratio": 0.0576
+      },
+      {
+        "current": -0.0693,
+        "ratio": 0.1863
+      },
+      {
+        "current": 0.148,
+        "ratio": -0.0945
+      },
+      {
+        "current": 0.0846,
+        "ratio": -0.1555
+      },
+      {
+        "current": -0.0117,
+        "ratio": -0.039
+      },
+      {
+        "current": -0.1883,
+        "ratio": -0.1356
+      },
+      {
+        "current": -0.1522,
+        "ratio": 0.1751
+      },
+      {
+        "current": 0.116,
+        "ratio": 0.0327
+      },
+      {
+        "current": -0.0413,
+        "ratio": -0.1347
+      },
+      {
+        "current": 0.0533,
+        "ratio": 0.1302
+      },
+      {
+        "current": -0.1612,
+        "ratio": -0.0098
+      },
+      {
+        "current": -0.0812,
+        "ratio": -0.1892
+      },
+      {
+        "current": 0.1312,
+        "ratio": 0.0029
+      },
+      {
+        "current": 0.0996,
+        "ratio": 0.0251
+      },
+      {
+        "current": -0.0404,
+        "ratio": 0.0143
+      },
+      {
+        "current": 0.1779,
+        "ratio": 0.1272
+      },
+      {
+        "current": -0.1043,
+        "ratio": 0.0002
+      },
+      {
+        "current": -0.019,
+        "ratio": 0.1691
+      },
+      {
+        "current": 0.0832,
+        "ratio": -0.063
+      },
+      {
+        "current": -0.0071,
+        "ratio": -0.113
+      },
+      {
+        "current": 0.0812,
+        "ratio": -0.046
+      },
+      {
+        "current": -0.115,
+        "ratio": -0.1233
+      },
+      {
+        "current": 0.1322,
+        "ratio": 0.1836
+      },
+      {
+        "current": 0.0705,
+        "ratio": 0.1722
+      },
+      {
+        "current": -0.146,
+        "ratio": 0.1803
+      },
+      {
+        "current": -0.1746,
+        "ratio": -0.1015
+      },
+      {
+        "current": 0.0481,
+        "ratio": -0.0946
+      },
+      {
+        "current": 0.136,
+        "ratio": -0.0003
+      },
+      {
+        "current": 0.1272,
+        "ratio": -0.0993
+      },
+      {
+        "current": -0.1153,
+        "ratio": -0.1117
+      },
+      {
+        "current": -0.1757,
+        "ratio": -0.0212
+      },
+      {
+        "current": 0.155,
+        "ratio": -0.0614
+      },
+      {
+        "current": -0.0795,
+        "ratio": 0.0298
+      },
+      {
+        "current": -0.0466,
+        "ratio": 0.023
+      },
+      {
+        "current": 0.0635,
+        "ratio": 0.0334
+      },
+      {
+        "current": -0.125,
+        "ratio": -0.0325
+      },
+      {
+        "current": 0.0213,
+        "ratio": 0.1761
+      },
+      {
+        "current": 0.0877,
+        "ratio": 0.0767
+      },
+      {
+        "current": -0.0107,
+        "ratio": 0.1402
+      },
+      {
+        "current": 0.1277,
+        "ratio": 0.109
+      },
+      {
+        "current": 0.0813,
+        "ratio": 0.0571
+      },
+      {
+        "current": -0.025,
+        "ratio": -0.0101
+      },
+      {
+        "current": -0.0276,
+        "ratio": -0.1938
+      },
+      {
+        "current": 0.01,
+        "ratio": -0.1897
+      },
+      {
+        "current": 0.1324,
+        "ratio": -0.0258
+      },
+      {
+        "current": 0.0428,
+        "ratio": -0.1716
+      },
+      {
+        "current": -0.178,
+        "ratio": 0.0451
+      },
+      {
+        "current": 0.1234,
+        "ratio": 0.1265
+      },
+      {
+        "current": 0.1556,
+        "ratio": -0.032
+      },
+      {
+        "current": -0.0934,
+        "ratio": 0.1598
+      },
+      {
+        "current": 0.0475,
+        "ratio": -0.0907
+      },
+      {
+        "current": -0.1699,
+        "ratio": -0.1536
+      },
+      {
+        "current": -0.1681,
+        "ratio": 0.0403
+      },
+      {
+        "current": -0.1255,
+        "ratio": -0.0139
+      },
+      {
+        "current": -0.1542,
+        "ratio": 0.1316
+      },
+      {
+        "current": 0.0245,
+        "ratio": -0.1136
+      },
+      {
+        "current": -0.0745,
+        "ratio": 0.0381
+      },
+      {
+        "current": -0.0525,
+        "ratio": 0.0699
+      },
+      {
+        "current": -0.0183,
+        "ratio": -0.1448
+      },
+      {
+        "current": 0.0538,
+        "ratio": 0.0706
+      },
+      {
+        "current": 0.1458,
+        "ratio": -0.0708
+      },
+      {
+        "current": 0.169,
+        "ratio": -0.1534
+      },
+      {
+        "current": -0.0486,
+        "ratio": 0.0433
+      },
+      {
+        "current": 0.0061,
+        "ratio": -0.0409
+      },
+      {
+        "current": -0.0567,
+        "ratio": -0.1676
+      },
+      {
+        "current": 0.1066,
+        "ratio": -0.1849
+      },
+      {
+        "current": 0.0597,
+        "ratio": 0.1954
+      },
+      {
+        "current": 0.0422,
+        "ratio": 0.0606
+      },
+      {
+        "current": -0.1586,
+        "ratio": 0.0149
+      },
+      {
+        "current": 0.0612,
+        "ratio": 0.1794
+      },
+      {
+        "current": 0.1882,
+        "ratio": 0.1856
+      },
+      {
+        "current": 0.0611,
+        "ratio": 0.0061
+      },
+      {
+        "current": -0.1435,
+        "ratio": -0.1443
+      },
+      {
+        "current": -0.0472,
+        "ratio": 0.1621
+      },
+      {
+        "current": -0.1168,
+        "ratio": 0.0565
+      },
+      {
+        "current": 0.0936,
+        "ratio": 0.1532
+      },
+      {
+        "current": 0.0627,
+        "ratio": -0.1741
+      },
+      {
+        "current": -0.1125,
+        "ratio": 0.1584
+      },
+      {
+        "current": 0.1636,
+        "ratio": -0.1847
+      },
+      {
+        "current": -0.1806,
+        "ratio": -0.1333
+      },
+      {
+        "current": 0.0742,
+        "ratio": 0.183
+      },
+      {
+        "current": 0.1427,
+        "ratio": 0.1028
+      },
+      {
+        "current": 0.1516,
+        "ratio": -0.0573
+      },
+      {
+        "current": -0.1569,
+        "ratio": -0.1561
+      },
+      {
+        "current": 0.1729,
+        "ratio": 0.0002
+      },
+      {
+        "current": -0.1871,
+        "ratio": -0.0983
+      },
+      {
+        "current": 0.1409,
+        "ratio": -0.1446
+      },
+      {
+        "current": 0.1681,
+        "ratio": -0.1428
+      },
+      {
+        "current": 0.1262,
+        "ratio": -0.0782
+      },
+      {
+        "current": -0.1532,
+        "ratio": 0.0154
+      },
+      {
+        "current": 0.1148,
+        "ratio": 0.1076
+      }
+    ],
+    "task_group_tr_0013_b": [
+      {
+        "current": 0.025,
+        "ratio": 0.0058
+      },
+      {
+        "current": 0.0952,
+        "ratio": 0.0754
+      },
+      {
+        "current": 0.0272,
+        "ratio": 0.1174
+      },
+      {
+        "current": -0.1938,
+        "ratio": 0.0552
+      },
+      {
+        "current": -0.1182,
+        "ratio": -0.1199
+      },
+      {
+        "current": -0.1819,
+        "ratio": -0.1802
+      },
+      {
+        "current": -0.1747,
+        "ratio": -0.0514
+      },
+      {
+        "current": 0.1377,
+        "ratio": 0.0983
+      },
+      {
+        "current": -0.1263,
+        "ratio": 0.0918
+      },
+      {
+        "current": 0.0413,
+        "ratio": -0.0525
+      },
+      {
+        "current": 0.0896,
+        "ratio": 0.1387
+      },
+      {
+        "current": -0.1948,
+        "ratio": -0.0156
+      },
+      {
+        "current": 0.0594,
+        "ratio": 0.0983
+      },
+      {
+        "current": -0.0989,
+        "ratio": -0.0688
+      },
+      {
+        "current": -0.1903,
+        "ratio": -0.1699
+      },
+      {
+        "current": -0.1555,
+        "ratio": -0.1493
+      },
+      {
+        "current": -0.0586,
+        "ratio": -0.0347
+      },
+      {
+        "current": -0.1986,
+        "ratio": 0.0933
+      },
+      {
+        "current": -0.0561,
+        "ratio": -0.1571
+      },
+      {
+        "current": 0.0216,
+        "ratio": -0.1413
+      },
+      {
+        "current": 0.1127,
+        "ratio": -0.1883
+      },
+      {
+        "current": -0.1235,
+        "ratio": -0.0531
+      },
+      {
+        "current": 0.083,
+        "ratio": 0.1469
+      },
+      {
+        "current": 0.1258,
+        "ratio": 0.1875
+      },
+      {
+        "current": 0.0996,
+        "ratio": -0.0248
+      },
+      {
+        "current": -0.1579,
+        "ratio": -0.1409
+      },
+      {
+        "current": -0.1588,
+        "ratio": 0.1927
+      },
+      {
+        "current": -0.0577,
+        "ratio": 0.1747
+      },
+      {
+        "current": 0.1453,
+        "ratio": 0.0742
+      },
+      {
+        "current": -0.1451,
+        "ratio": 0.0214
+      },
+      {
+        "current": 0.0003,
+        "ratio": -0.1054
+      },
+      {
+        "current": 0.0906,
+        "ratio": -0.011
+      },
+      {
+        "current": 0.101,
+        "ratio": -0.0651
+      },
+      {
+        "current": 0.0377,
+        "ratio": 0.0587
+      },
+      {
+        "current": -0.1006,
+        "ratio": -0.1465
+      },
+      {
+        "current": -0.01,
+        "ratio": -0.1576
+      },
+      {
+        "current": -0.0602,
+        "ratio": -0.0753
+      },
+      {
+        "current": 0.0991,
+        "ratio": 0.1575
+      },
+      {
+        "current": -0.1782,
+        "ratio": 0.1534
+      },
+      {
+        "current": -0.0673,
+        "ratio": 0.1012
+      },
+      {
+        "current": 0.159,
+        "ratio": -0.1532
+      },
+      {
+        "current": -0.0596,
+        "ratio": 0.0135
+      },
+      {
+        "current": 0.1941,
+        "ratio": 0.009
+      },
+      {
+        "current": 0.1055,
+        "ratio": 0.0839
+      },
+      {
+        "current": -0.1999,
+        "ratio": 0.087
+      },
+      {
+        "current": -0.018,
+        "ratio": -0.0524
+      },
+      {
+        "current": -0.1838,
+        "ratio": 0.1899
+      },
+      {
+        "current": -0.0755,
+        "ratio": -0.1714
+      },
+      {
+        "current": -0.1431,
+        "ratio": -0.0587
+      },
+      {
+        "current": -0.0187,
+        "ratio": 0.1684
+      },
+      {
+        "current": 0.0125,
+        "ratio": -0.0718
+      },
+      {
+        "current": -0.1776,
+        "ratio": -0.092
+      },
+      {
+        "current": 0.1332,
+        "ratio": -0.1134
+      },
+      {
+        "current": 0.0602,
+        "ratio": -0.1226
+      },
+      {
+        "current": -0.0983,
+        "ratio": -0.0803
+      },
+      {
+        "current": 0.0166,
+        "ratio": 0.1878
+      },
+      {
+        "current": -0.1525,
+        "ratio": 0.1473
+      },
+      {
+        "current": -0.0641,
+        "ratio": 0.1912
+      },
+      {
+        "current": 0.1296,
+        "ratio": -0.0659
+      },
+      {
+        "current": 0.0669,
+        "ratio": 0.1622
+      },
+      {
+        "current": 0.1231,
+        "ratio": -0.025
+      },
+      {
+        "current": -0.0745,
+        "ratio": -0.1461
+      },
+      {
+        "current": 0.1623,
+        "ratio": 0.1588
+      },
+      {
+        "current": 0.1893,
+        "ratio": -0.0734
+      },
+      {
+        "current": -0.0456,
+        "ratio": -0.1588
+      },
+      {
+        "current": 0.0814,
+        "ratio": 0.0937
+      },
+      {
+        "current": 0.1815,
+        "ratio": -0.0335
+      },
+      {
+        "current": -0.0706,
+        "ratio": 0.0501
+      },
+      {
+        "current": 0.1095,
+        "ratio": -0.0863
+      },
+      {
+        "current": -0.1024,
+        "ratio": -0.153
+      },
+      {
+        "current": 0.0093,
+        "ratio": -0.0765
+      },
+      {
+        "current": -0.002,
+        "ratio": 0.0898
+      },
+      {
+        "current": 0.1688,
+        "ratio": 0.1545
+      },
+      {
+        "current": 0.031,
+        "ratio": -0.1726
+      },
+      {
+        "current": 0.1434,
+        "ratio": 0.1602
+      },
+      {
+        "current": -0.0819,
+        "ratio": -0.0537
+      },
+      {
+        "current": 0.1287,
+        "ratio": 0.0895
+      },
+      {
+        "current": 0.1113,
+        "ratio": 0.1189
+      },
+      {
+        "current": 0.0146,
+        "ratio": 0.1559
+      },
+      {
+        "current": -0.1286,
+        "ratio": 0.038
+      },
+      {
+        "current": -0.1709,
+        "ratio": 0.0761
+      },
+      {
+        "current": -0.0623,
+        "ratio": -0.0703
+      },
+      {
+        "current": 0.0586,
+        "ratio": -0.1241
+      },
+      {
+        "current": 0.1634,
+        "ratio": -0.1846
+      },
+      {
+        "current": 0.0234,
+        "ratio": -0.0584
+      },
+      {
+        "current": -0.1062,
+        "ratio": -0.1847
+      },
+      {
+        "current": 0.1609,
+        "ratio": -0.1954
+      },
+      {
+        "current": 0.1384,
+        "ratio": -0.0782
+      },
+      {
+        "current": 0.1667,
+        "ratio": 0.1052
+      },
+      {
+        "current": 0.1816,
+        "ratio": 0.119
+      },
+      {
+        "current": -0.0083,
+        "ratio": -0.1876
+      },
+      {
+        "current": 0.1374,
+        "ratio": -0.1126
+      },
+      {
+        "current": 0.1129,
+        "ratio": -0.1439
+      },
+      {
+        "current": -0.0825,
+        "ratio": 0.1403
+      },
+      {
+        "current": -0.1014,
+        "ratio": -0.0966
+      },
+      {
+        "current": -0.0028,
+        "ratio": -0.1402
+      },
+      {
+        "current": 0.045,
+        "ratio": 0.0683
+      },
+      {
+        "current": 0.0638,
+        "ratio": 0.0693
+      },
+      {
+        "current": 0.1711,
+        "ratio": -0.0389
+      },
+      {
+        "current": 0.1092,
+        "ratio": 0.1918
+      }
+    ]
+  }
+}

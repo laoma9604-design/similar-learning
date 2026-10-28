@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_tr_0203_i02",
+  "object_kind": "mechanistic",
+  "relation_type": "linear_drive_resistance",
+  "split": null,
+  "label": "候选源域",
+  "nodes": [
+    {
+      "node_id": "n1",
+      "label": "输入量",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "n2",
+      "label": "响应量",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "linear_drive_resistance",
+      "input_nodes": [
+        "n1"
+      ],
+      "output_nodes": [
+        "n2"
+      ],
+      "roles": {
+        "n1": "driver",
+        "n2": "response"
+      }
+    }
+  ],
+  "function": "3.3600000000000003 * (2 - n1 / 16.8)",
+  "controllable_inputs": [
+    "n1"
+  ],
+  "designated_outputs": [
+    "n2"
+  ],
+  "baseline": [
+    16.8
+  ],
+  "input_scales": [
+    16.8
+  ],
+  "baseline_output": 3.3600000000000003,
+  "output_scale": 3.3600000000000003,
+  "legal_domain": {
+    "n1": [
+      1e-06,
+      null
+    ]
+  },
+  "intervention_bounds": {
+    "n1": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

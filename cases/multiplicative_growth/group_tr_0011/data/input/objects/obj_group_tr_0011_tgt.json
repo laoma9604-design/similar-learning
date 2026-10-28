@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_group_tr_0011_tgt",
+  "object_kind": "mechanistic",
+  "relation_type": "multiplicative_growth",
+  "split": "train",
+  "label": "银行复利",
+  "nodes": [
+    {
+      "node_id": "current",
+      "label": "当前本金",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "ratio",
+      "label": "本期利率",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "next",
+      "label": "下一期余额",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "multiplicative_growth",
+      "input_nodes": [
+        "current",
+        "ratio"
+      ],
+      "output_nodes": [
+        "next"
+      ],
+      "roles": {
+        "current": "current",
+        "ratio": "ratio",
+        "next": "next"
+      }
+    }
+  ],
+  "function": "current * (1 + ratio)",
+  "controllable_inputs": [
+    "current",
+    "ratio"
+  ],
+  "designated_outputs": [
+    "next"
+  ],
+  "baseline": [
+    2500.0,
+    0.1
+  ],
+  "input_scales": [
+    2500.0,
+    0.1
+  ],
+  "baseline_output": 2750.0,
+  "output_scale": 2750.0,
+  "legal_domain": {
+    "current": [
+      0,
+      null
+    ],
+    "ratio": [
+      0,
+      1
+    ]
+  },
+  "intervention_bounds": {
+    "current": [
+      -0.2,
+      0.2
+    ],
+    "ratio": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_group_tr_0112_src",
+  "object_kind": "mechanistic",
+  "relation_type": "multiplicative_growth",
+  "split": "val",
+  "label": "病毒复制",
+  "nodes": [
+    {
+      "node_id": "a5",
+      "label": "病毒数量",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "a2",
+      "label": "每代复制增长率",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "b2",
+      "label": "下一代数量",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "multiplicative_growth",
+      "input_nodes": [
+        "a5",
+        "a2"
+      ],
+      "output_nodes": [
+        "b2"
+      ],
+      "roles": {
+        "a5": "current",
+        "a2": "ratio",
+        "b2": "next"
+      }
+    }
+  ],
+  "function": "a5 * (1 + a2)",
+  "controllable_inputs": [
+    "a5",
+    "a2"
+  ],
+  "designated_outputs": [
+    "b2"
+  ],
+  "baseline": [
+    100.0,
+    0.08
+  ],
+  "input_scales": [
+    100.0,
+    0.08
+  ],
+  "baseline_output": 108.0,
+  "output_scale": 108.0,
+  "legal_domain": {
+    "a5": [
+      0,
+      null
+    ],
+    "a2": [
+      0,
+      1
+    ]
+  },
+  "intervention_bounds": {
+    "a5": [
+      -0.2,
+      0.2
+    ],
+    "a2": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

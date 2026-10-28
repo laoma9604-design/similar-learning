@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_group_tr_0193_src",
+  "object_kind": "mechanistic",
+  "relation_type": "linear_drive_resistance",
+  "split": "train",
+  "label": "电路",
+  "nodes": [
+    {
+      "node_id": "a2",
+      "label": "电压",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "a5",
+      "label": "电阻",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "a3",
+      "label": "电流",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "linear_drive_resistance",
+      "input_nodes": [
+        "a2",
+        "a5"
+      ],
+      "output_nodes": [
+        "a3"
+      ],
+      "roles": {
+        "a2": "driver",
+        "a5": "resistance",
+        "a3": "response"
+      }
+    }
+  ],
+  "function": "a2 / a5",
+  "controllable_inputs": [
+    "a2",
+    "a5"
+  ],
+  "designated_outputs": [
+    "a3"
+  ],
+  "baseline": [
+    90.0,
+    0.75
+  ],
+  "input_scales": [
+    90.0,
+    0.75
+  ],
+  "baseline_output": 120.0,
+  "output_scale": 120.0,
+  "legal_domain": {
+    "a2": [
+      1e-06,
+      null
+    ],
+    "a5": [
+      1e-06,
+      null
+    ]
+  },
+  "intervention_bounds": {
+    "a2": [
+      -0.2,
+      0.2
+    ],
+    "a5": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

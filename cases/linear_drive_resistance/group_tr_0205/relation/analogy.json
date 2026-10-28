@@ -1,0 +1,15 @@
+{
+  "source": {
+    "object_id": "obj_group_tr_0205_src",
+    "label": "电路"
+  },
+  "target": {
+    "object_id": "obj_group_tr_0205_tgt",
+    "label": "力学阻尼"
+  },
+  "relation_type": "linear_drive_resistance",
+  "direction": "source → target",
+  "pair_id": "lin_04",
+  "domain_evidence": "源=欧姆定律；目标=线性阻尼 v=F/c。跨域：电→力学。",
+  "simplification_assumption": null
+}

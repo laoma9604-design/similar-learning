@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_group_tr_0260_src",
+  "object_kind": "mechanistic",
+  "relation_type": "linear_drive_resistance",
+  "split": "train",
+  "label": "热传导",
+  "nodes": [
+    {
+      "node_id": "b2",
+      "label": "温差",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "a5",
+      "label": "热阻",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "a4",
+      "label": "热流",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "linear_drive_resistance",
+      "input_nodes": [
+        "b2",
+        "a5"
+      ],
+      "output_nodes": [
+        "a4"
+      ],
+      "roles": {
+        "b2": "driver",
+        "a5": "resistance",
+        "a4": "response"
+      }
+    }
+  ],
+  "function": "b2 / a5",
+  "controllable_inputs": [
+    "b2",
+    "a5"
+  ],
+  "designated_outputs": [
+    "a4"
+  ],
+  "baseline": [
+    3.0,
+    1.25
+  ],
+  "input_scales": [
+    3.0,
+    1.25
+  ],
+  "baseline_output": 2.4,
+  "output_scale": 2.4,
+  "legal_domain": {
+    "b2": [
+      1e-06,
+      null
+    ],
+    "a5": [
+      1e-06,
+      null
+    ]
+  },
+  "intervention_bounds": {
+    "b2": [
+      -0.2,
+      0.2
+    ],
+    "a5": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

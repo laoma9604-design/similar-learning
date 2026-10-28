@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_group_tr_0080_src",
+  "object_kind": "mechanistic",
+  "relation_type": "multiplicative_growth",
+  "split": "train",
+  "label": "人口增长",
+  "nodes": [
+    {
+      "node_id": "a1",
+      "label": "人口数",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "b1",
+      "label": "年增长率",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "b3",
+      "label": "次年人口",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "multiplicative_growth",
+      "input_nodes": [
+        "a1",
+        "b1"
+      ],
+      "output_nodes": [
+        "b3"
+      ],
+      "roles": {
+        "a1": "current",
+        "b1": "ratio",
+        "b3": "next"
+      }
+    }
+  ],
+  "function": "a1 * (1 + b1)",
+  "controllable_inputs": [
+    "a1",
+    "b1"
+  ],
+  "designated_outputs": [
+    "b3"
+  ],
+  "baseline": [
+    100000.0,
+    0.06
+  ],
+  "input_scales": [
+    100000.0,
+    0.06
+  ],
+  "baseline_output": 106000.0,
+  "output_scale": 106000.0,
+  "legal_domain": {
+    "a1": [
+      0,
+      null
+    ],
+    "b1": [
+      0,
+      1
+    ]
+  },
+  "intervention_bounds": {
+    "a1": [
+      -0.2,
+      0.2
+    ],
+    "b1": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

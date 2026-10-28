@@ -1,0 +1,18 @@
+{
+  "group_id": "group_tr_0090",
+  "valid_sources": [
+    "obj_group_tr_0090_src"
+  ],
+  "excluded_sources": [
+    "obj_group_tr_0090_i00",
+    "obj_group_tr_0090_i01",
+    "obj_group_tr_0090_i02",
+    "obj_group_tr_0090_i03",
+    "obj_group_tr_0090_i04",
+    "obj_group_tr_0090_i05",
+    "obj_group_tr_0090_i06",
+    "obj_group_tr_0090_i07",
+    "obj_group_tr_0090_i08",
+    "obj_group_tr_0090_i09"
+  ]
+}

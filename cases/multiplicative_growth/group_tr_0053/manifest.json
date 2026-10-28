@@ -1,0 +1,46 @@
+{
+  "group_id": "group_tr_0053",
+  "dataset": "mred",
+  "relation_type": "multiplicative_growth",
+  "schema_version": "topoadv-schema-0.3.0-draft",
+  "vocab_version": "topoadv-vocab-0.1.0-draft",
+  "split": "train",
+  "pair_id": "mult_04",
+  "variant_index": 3,
+  "object_ids": [
+    "obj_group_tr_0053_tgt",
+    "obj_group_tr_0053_src",
+    "obj_group_tr_0053_i00",
+    "obj_group_tr_0053_i04",
+    "obj_group_tr_0053_i08",
+    "obj_group_tr_0053_i02",
+    "obj_group_tr_0053_i03",
+    "obj_group_tr_0053_i05",
+    "obj_group_tr_0053_i01",
+    "obj_group_tr_0053_i07",
+    "obj_group_tr_0053_i09",
+    "obj_group_tr_0053_i00",
+    "obj_group_tr_0053_i01",
+    "obj_group_tr_0053_i02",
+    "obj_group_tr_0053_i03",
+    "obj_group_tr_0053_i04",
+    "obj_group_tr_0053_i05",
+    "obj_group_tr_0053_i06",
+    "obj_group_tr_0053_i07",
+    "obj_group_tr_0053_i08",
+    "obj_group_tr_0053_i09"
+  ],
+  "task_ids": [
+    "task_group_tr_0053_a",
+    "task_group_tr_0053_b"
+  ],
+  "task_counts": {
+    "positive": 1,
+    "negative": 1,
+    "total": 2
+  },
+  "source_counts": {
+    "positive": 10,
+    "negative": 10
+  }
+}

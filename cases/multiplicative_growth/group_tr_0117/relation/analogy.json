@@ -1,0 +1,15 @@
+{
+  "source": {
+    "object_id": "obj_group_tr_0117_src",
+    "label": "肿瘤细胞"
+  },
+  "target": {
+    "object_id": "obj_group_tr_0117_tgt",
+    "label": "信用卡债务"
+  },
+  "relation_type": "multiplicative_growth",
+  "direction": "source → target",
+  "pair_id": "mult_08",
+  "domain_evidence": "源=肿瘤细胞增殖；目标=信用卡复利债务。跨域：生物→金融。",
+  "simplification_assumption": null
+}

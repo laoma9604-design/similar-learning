@@ -1,0 +1,14 @@
+{
+  "current": {
+    "source": "b4",
+    "target": "current"
+  },
+  "ratio": {
+    "source": "a5",
+    "target": "ratio"
+  },
+  "next": {
+    "source": "a1",
+    "target": "next"
+  }
+}

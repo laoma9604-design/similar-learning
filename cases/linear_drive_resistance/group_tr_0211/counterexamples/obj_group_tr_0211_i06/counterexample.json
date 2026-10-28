@@ -1,0 +1,11 @@
+{
+  "source_id": "obj_group_tr_0211_i06",
+  "target_id": "obj_group_tr_0211_tgt",
+  "node_map": {
+    "n1": "driver",
+    "n2": "response"
+  },
+  "interference_kind": "local_perturbation",
+  "max_error": 0.08999999874053183,
+  "controlled_synthetic": true
+}

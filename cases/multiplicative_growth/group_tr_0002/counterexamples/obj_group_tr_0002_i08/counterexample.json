@@ -1,0 +1,11 @@
+{
+  "source_id": "obj_group_tr_0002_i08",
+  "target_id": "obj_group_tr_0002_tgt",
+  "node_map": {
+    "n1": "current",
+    "n2": "next"
+  },
+  "interference_kind": "response_error",
+  "max_error": 0.05759999999999996,
+  "controlled_synthetic": true
+}

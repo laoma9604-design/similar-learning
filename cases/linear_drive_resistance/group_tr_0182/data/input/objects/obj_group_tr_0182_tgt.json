@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_group_tr_0182_tgt",
+  "object_kind": "mechanistic",
+  "relation_type": "linear_drive_resistance",
+  "split": "train",
+  "label": "扩散",
+  "nodes": [
+    {
+      "node_id": "driver",
+      "label": "浓度差",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "resistance",
+      "label": "扩散阻力",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "response",
+      "label": "扩散通量",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "linear_drive_resistance",
+      "input_nodes": [
+        "driver",
+        "resistance"
+      ],
+      "output_nodes": [
+        "response"
+      ],
+      "roles": {
+        "driver": "driver",
+        "resistance": "resistance",
+        "response": "response"
+      }
+    }
+  ],
+  "function": "driver / resistance",
+  "controllable_inputs": [
+    "driver",
+    "resistance"
+  ],
+  "designated_outputs": [
+    "response"
+  ],
+  "baseline": [
+    18.0,
+    2.5
+  ],
+  "input_scales": [
+    18.0,
+    2.5
+  ],
+  "baseline_output": 7.2,
+  "output_scale": 7.2,
+  "legal_domain": {
+    "driver": [
+      1e-06,
+      null
+    ],
+    "resistance": [
+      1e-06,
+      null
+    ]
+  },
+  "intervention_bounds": {
+    "driver": [
+      -0.2,
+      0.2
+    ],
+    "resistance": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

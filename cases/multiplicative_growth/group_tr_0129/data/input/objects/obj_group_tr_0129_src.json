@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_group_tr_0129_src",
+  "object_kind": "mechanistic",
+  "relation_type": "multiplicative_growth",
+  "split": "val",
+  "label": "肿瘤细胞",
+  "nodes": [
+    {
+      "node_id": "b4",
+      "label": "肿瘤细胞数",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "a5",
+      "label": "增长率",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "a1",
+      "label": "下一代数量",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "multiplicative_growth",
+      "input_nodes": [
+        "b4",
+        "a5"
+      ],
+      "output_nodes": [
+        "a1"
+      ],
+      "roles": {
+        "b4": "current",
+        "a5": "ratio",
+        "a1": "next"
+      }
+    }
+  ],
+  "function": "b4 * (1 + a5)",
+  "controllable_inputs": [
+    "b4",
+    "a5"
+  ],
+  "designated_outputs": [
+    "a1"
+  ],
+  "baseline": [
+    200.0,
+    0.02
+  ],
+  "input_scales": [
+    200.0,
+    0.02
+  ],
+  "baseline_output": 204.0,
+  "output_scale": 204.0,
+  "legal_domain": {
+    "b4": [
+      0,
+      null
+    ],
+    "a5": [
+      0,
+      1
+    ]
+  },
+  "intervention_bounds": {
+    "b4": [
+      -0.2,
+      0.2
+    ],
+    "a5": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

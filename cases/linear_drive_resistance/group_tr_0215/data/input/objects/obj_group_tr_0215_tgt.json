@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_group_tr_0215_tgt",
+  "object_kind": "mechanistic",
+  "relation_type": "linear_drive_resistance",
+  "split": "train",
+  "label": "磁路",
+  "nodes": [
+    {
+      "node_id": "driver",
+      "label": "磁动势",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "resistance",
+      "label": "磁阻",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "response",
+      "label": "磁通",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "linear_drive_resistance",
+      "input_nodes": [
+        "driver",
+        "resistance"
+      ],
+      "output_nodes": [
+        "response"
+      ],
+      "roles": {
+        "driver": "driver",
+        "resistance": "resistance",
+        "response": "response"
+      }
+    }
+  ],
+  "function": "driver / resistance",
+  "controllable_inputs": [
+    "driver",
+    "resistance"
+  ],
+  "designated_outputs": [
+    "response"
+  ],
+  "baseline": [
+    64.0,
+    5.0
+  ],
+  "input_scales": [
+    64.0,
+    5.0
+  ],
+  "baseline_output": 12.8,
+  "output_scale": 12.8,
+  "legal_domain": {
+    "driver": [
+      1e-06,
+      null
+    ],
+    "resistance": [
+      1e-06,
+      null
+    ]
+  },
+  "intervention_bounds": {
+    "driver": [
+      -0.2,
+      0.2
+    ],
+    "resistance": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

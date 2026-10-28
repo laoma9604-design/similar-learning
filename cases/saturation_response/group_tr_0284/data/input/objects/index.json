@@ -1,0 +1,88 @@
+{
+  "objects": [
+    {
+      "object_id": "obj_group_tr_0284_tgt",
+      "file": "obj_group_tr_0284_tgt.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_src",
+      "file": "obj_group_tr_0284_src.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_i01",
+      "file": "obj_group_tr_0284_i01.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_i03",
+      "file": "obj_group_tr_0284_i03.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_i04",
+      "file": "obj_group_tr_0284_i04.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_i00",
+      "file": "obj_group_tr_0284_i00.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_i02",
+      "file": "obj_group_tr_0284_i02.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_i06",
+      "file": "obj_group_tr_0284_i06.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_i05",
+      "file": "obj_group_tr_0284_i05.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_i07",
+      "file": "obj_group_tr_0284_i07.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_i09",
+      "file": "obj_group_tr_0284_i09.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_i00",
+      "file": "obj_group_tr_0284_i00.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_i01",
+      "file": "obj_group_tr_0284_i01.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_i02",
+      "file": "obj_group_tr_0284_i02.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_i03",
+      "file": "obj_group_tr_0284_i03.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_i04",
+      "file": "obj_group_tr_0284_i04.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_i05",
+      "file": "obj_group_tr_0284_i05.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_i06",
+      "file": "obj_group_tr_0284_i06.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_i07",
+      "file": "obj_group_tr_0284_i07.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_i08",
+      "file": "obj_group_tr_0284_i08.json"
+    },
+    {
+      "object_id": "obj_group_tr_0284_i09",
+      "file": "obj_group_tr_0284_i09.json"
+    }
+  ]
+}

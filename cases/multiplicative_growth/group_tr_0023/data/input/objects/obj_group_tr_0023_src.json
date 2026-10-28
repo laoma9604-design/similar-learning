@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_group_tr_0023_src",
+  "object_kind": "mechanistic",
+  "relation_type": "multiplicative_growth",
+  "split": "train",
+  "label": "细胞培养",
+  "nodes": [
+    {
+      "node_id": "b5",
+      "label": "细胞数量",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "a4",
+      "label": "传代增长率",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "a3",
+      "label": "传代后数量",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "multiplicative_growth",
+      "input_nodes": [
+        "b5",
+        "a4"
+      ],
+      "output_nodes": [
+        "a3"
+      ],
+      "roles": {
+        "b5": "current",
+        "a4": "ratio",
+        "a3": "next"
+      }
+    }
+  ],
+  "function": "b5 * (1 + a4)",
+  "controllable_inputs": [
+    "b5",
+    "a4"
+  ],
+  "designated_outputs": [
+    "a3"
+  ],
+  "baseline": [
+    20000.0,
+    0.03
+  ],
+  "input_scales": [
+    20000.0,
+    0.03
+  ],
+  "baseline_output": 20600.0,
+  "output_scale": 20600.0,
+  "legal_domain": {
+    "b5": [
+      0,
+      null
+    ],
+    "a4": [
+      0,
+      1
+    ]
+  },
+  "intervention_bounds": {
+    "b5": [
+      -0.2,
+      0.2
+    ],
+    "a4": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

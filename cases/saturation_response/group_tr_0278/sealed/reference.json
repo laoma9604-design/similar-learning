@@ -1,0 +1,134 @@
+{
+  "task_group_tr_0278_a": {
+    "task_id": "task_group_tr_0278_a",
+    "label": "positive",
+    "valid": [
+      {
+        "source_id": "obj_group_tr_0278_src",
+        "node_map": {
+          "b4": "input",
+          "b5": "response"
+        },
+        "edge_map": {
+          "r1": "r1"
+        }
+      }
+    ],
+    "exclusions": [
+      {
+        "source_id": "obj_group_tr_0278_i01",
+        "kind": "structure_error",
+        "reason": "超出参考容差：最大响应误差 1.000000 > 0.05"
+      },
+      {
+        "source_id": "obj_group_tr_0278_i03",
+        "kind": "structure_error",
+        "reason": "超出参考容差：最大响应误差 1.000000 > 0.05"
+      },
+      {
+        "source_id": "obj_group_tr_0278_i04",
+        "kind": "structure_error",
+        "reason": "超出参考容差：最大响应误差 1.000000 > 0.05"
+      },
+      {
+        "source_id": "obj_group_tr_0278_i02",
+        "kind": "response_error",
+        "reason": "超出参考容差：最大响应误差 0.090153 > 0.05"
+      },
+      {
+        "source_id": "obj_group_tr_0278_i05",
+        "kind": "response_error",
+        "reason": "超出参考容差：最大响应误差 0.090153 > 0.05"
+      },
+      {
+        "source_id": "obj_group_tr_0278_i07",
+        "kind": "response_error",
+        "reason": "超出参考容差：最大响应误差 0.090153 > 0.05"
+      },
+      {
+        "source_id": "obj_group_tr_0278_i00",
+        "kind": "local_perturbation",
+        "reason": "超出参考容差：最大响应误差 0.090000 > 0.05"
+      },
+      {
+        "source_id": "obj_group_tr_0278_i06",
+        "kind": "local_perturbation",
+        "reason": "超出参考容差：最大响应误差 0.090000 > 0.05"
+      },
+      {
+        "source_id": "obj_group_tr_0278_i08",
+        "kind": "local_perturbation",
+        "reason": "超出参考容差：最大响应误差 0.090000 > 0.05"
+      }
+    ],
+    "reference_tolerance": {
+      "min_ctc": 0.95,
+      "max_error": 0.05
+    },
+    "positive_max_deviation": 0.0,
+    "status": "bijective_confirmed"
+  },
+  "task_group_tr_0278_b": {
+    "task_id": "task_group_tr_0278_b",
+    "label": "negative",
+    "valid": [],
+    "exclusions": [
+      {
+        "source_id": "obj_group_tr_0278_i00",
+        "kind": "local_perturbation",
+        "reason": "超出参考容差：最大响应误差 0.090000 > 0.05"
+      },
+      {
+        "source_id": "obj_group_tr_0278_i01",
+        "kind": "structure_error",
+        "reason": "超出参考容差：最大响应误差 1.000000 > 0.05"
+      },
+      {
+        "source_id": "obj_group_tr_0278_i02",
+        "kind": "response_error",
+        "reason": "超出参考容差：最大响应误差 0.090153 > 0.05"
+      },
+      {
+        "source_id": "obj_group_tr_0278_i03",
+        "kind": "structure_error",
+        "reason": "超出参考容差：最大响应误差 1.000000 > 0.05"
+      },
+      {
+        "source_id": "obj_group_tr_0278_i04",
+        "kind": "structure_error",
+        "reason": "超出参考容差：最大响应误差 1.000000 > 0.05"
+      },
+      {
+        "source_id": "obj_group_tr_0278_i05",
+        "kind": "response_error",
+        "reason": "超出参考容差：最大响应误差 0.090153 > 0.05"
+      },
+      {
+        "source_id": "obj_group_tr_0278_i06",
+        "kind": "local_perturbation",
+        "reason": "超出参考容差：最大响应误差 0.090000 > 0.05"
+      },
+      {
+        "source_id": "obj_group_tr_0278_i07",
+        "kind": "response_error",
+        "reason": "超出参考容差：最大响应误差 0.090153 > 0.05"
+      },
+      {
+        "source_id": "obj_group_tr_0278_i08",
+        "kind": "local_perturbation",
+        "reason": "超出参考容差：最大响应误差 0.090000 > 0.05"
+      },
+      {
+        "source_id": "obj_group_tr_0278_i09",
+        "kind": "response_error",
+        "reason": "超出参考容差：最大响应误差 0.090153 > 0.05"
+      }
+    ],
+    "reference_tolerance": {
+      "min_ctc": 0.95,
+      "max_error": 0.05
+    },
+    "status": "bijective_confirmed",
+    "full_library_verified": true
+  }
+}

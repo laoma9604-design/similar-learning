@@ -1,0 +1,15 @@
+{
+  "source": {
+    "object_id": "obj_group_tr_0113_src",
+    "label": "病毒复制"
+  },
+  "target": {
+    "object_id": "obj_group_tr_0113_tgt",
+    "label": "基金净值"
+  },
+  "relation_type": "multiplicative_growth",
+  "direction": "source → target",
+  "pair_id": "mult_07",
+  "domain_evidence": "源=病毒复制增殖；目标=基金净值复利。跨域：生物→金融。",
+  "simplification_assumption": null
+}

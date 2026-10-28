@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_group_tr_0138_src",
+  "object_kind": "mechanistic",
+  "relation_type": "multiplicative_growth",
+  "split": "train",
+  "label": "中子增殖",
+  "nodes": [
+    {
+      "node_id": "a1",
+      "label": "中子数",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "a2",
+      "label": "净增殖系数",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "a3",
+      "label": "下一代数量",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "multiplicative_growth",
+      "input_nodes": [
+        "a1",
+        "a2"
+      ],
+      "output_nodes": [
+        "a3"
+      ],
+      "roles": {
+        "a1": "current",
+        "a2": "ratio",
+        "a3": "next"
+      }
+    }
+  ],
+  "function": "a1 * (1 + a2)",
+  "controllable_inputs": [
+    "a1",
+    "a2"
+  ],
+  "designated_outputs": [
+    "a3"
+  ],
+  "baseline": [
+    500.0,
+    0.03
+  ],
+  "input_scales": [
+    500.0,
+    0.03
+  ],
+  "baseline_output": 515.0,
+  "output_scale": 515.0,
+  "legal_domain": {
+    "a1": [
+      0,
+      null
+    ],
+    "a2": [
+      0,
+      1
+    ]
+  },
+  "intervention_bounds": {
+    "a1": [
+      -0.2,
+      0.2
+    ],
+    "a2": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

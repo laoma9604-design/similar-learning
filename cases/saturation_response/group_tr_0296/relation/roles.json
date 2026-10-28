@@ -1,0 +1,10 @@
+{
+  "input": {
+    "source": "a5",
+    "target": "input"
+  },
+  "response": {
+    "source": "b2",
+    "target": "response"
+  }
+}

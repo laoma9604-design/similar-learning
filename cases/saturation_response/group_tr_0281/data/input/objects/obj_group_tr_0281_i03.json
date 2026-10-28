@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_tr_0281_i03",
+  "object_kind": "mechanistic",
+  "relation_type": "saturation_response",
+  "split": null,
+  "label": "候选源域",
+  "nodes": [
+    {
+      "node_id": "n1",
+      "label": "输入量",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "n2",
+      "label": "响应量",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "saturation_response",
+      "input_nodes": [
+        "n1"
+      ],
+      "output_nodes": [
+        "n2"
+      ],
+      "roles": {
+        "n1": "input",
+        "n2": "response"
+      }
+    }
+  ],
+  "function": "2.0 * n1 ** 2 / (0.5 ** 2 + n1 ** 2)",
+  "controllable_inputs": [
+    "n1"
+  ],
+  "designated_outputs": [
+    "n2"
+  ],
+  "baseline": [
+    0.5
+  ],
+  "input_scales": [
+    0.5
+  ],
+  "baseline_output": 1.0,
+  "output_scale": 1.0,
+  "legal_domain": {
+    "n1": [
+      1e-06,
+      null
+    ]
+  },
+  "intervention_bounds": {
+    "n1": [
+      -0.8,
+      1.0
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_group_tr_0008_src",
+  "object_kind": "mechanistic",
+  "relation_type": "multiplicative_growth",
+  "split": "test",
+  "label": "细菌二分裂",
+  "nodes": [
+    {
+      "node_id": "a3",
+      "label": "当前细菌数量",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "a5",
+      "label": "每代增长率",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "a2",
+      "label": "下一代数量",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "multiplicative_growth",
+      "input_nodes": [
+        "a3",
+        "a5"
+      ],
+      "output_nodes": [
+        "a2"
+      ],
+      "roles": {
+        "a3": "current",
+        "a5": "ratio",
+        "a2": "next"
+      }
+    }
+  ],
+  "function": "a3 * (1 + a5)",
+  "controllable_inputs": [
+    "a3",
+    "a5"
+  ],
+  "designated_outputs": [
+    "a2"
+  ],
+  "baseline": [
+    5000.0,
+    0.1
+  ],
+  "input_scales": [
+    5000.0,
+    0.1
+  ],
+  "baseline_output": 5500.0,
+  "output_scale": 5500.0,
+  "legal_domain": {
+    "a3": [
+      0,
+      null
+    ],
+    "a5": [
+      0,
+      1
+    ]
+  },
+  "intervention_bounds": {
+    "a3": [
+      -0.2,
+      0.2
+    ],
+    "a5": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

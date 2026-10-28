@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_tr_0040_i04",
+  "object_kind": "mechanistic",
+  "relation_type": "multiplicative_growth",
+  "split": null,
+  "label": "候选源域",
+  "nodes": [
+    {
+      "node_id": "n1",
+      "label": "输入量",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "n2",
+      "label": "响应量",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "multiplicative_growth",
+      "input_nodes": [
+        "n1"
+      ],
+      "output_nodes": [
+        "n2"
+      ],
+      "roles": {
+        "n1": "current",
+        "n2": "next"
+      }
+    }
+  ],
+  "function": "(n1 * (1 + 0.04) - 2080000.0) * (n1 * (1 + 0.04) - 2080000.0) / 2080000.0 + 2080000.0",
+  "controllable_inputs": [
+    "n1"
+  ],
+  "designated_outputs": [
+    "n2"
+  ],
+  "baseline": [
+    2000000.0
+  ],
+  "input_scales": [
+    2000000.0
+  ],
+  "baseline_output": 2080000.0,
+  "output_scale": 2080000.0,
+  "legal_domain": {
+    "n1": [
+      1e-06,
+      null
+    ]
+  },
+  "intervention_bounds": {
+    "n1": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}
