@@ -268,32 +268,32 @@
         {
           "node_id": "nucleus",
           "label": "原子核",
-          "type": "concept"
+          "type": "entity"
         },
         {
           "node_id": "electron",
           "label": "电子",
-          "type": "concept"
+          "type": "entity"
         },
         {
           "node_id": "charge",
           "label": "电荷",
-          "type": "concept"
+          "type": "property"
         },
         {
           "node_id": "attracts",
           "label": "吸引",
-          "type": "concept"
+          "type": "process"
         },
         {
           "node_id": "revolves",
           "label": "公转",
-          "type": "concept"
+          "type": "process"
         },
         {
           "node_id": "electromagnetism",
           "label": "电磁力",
-          "type": "concept"
+          "type": "force"
         }
       ],
       "edges": [],
@@ -313,32 +313,32 @@
         {
           "node_id": "sun",
           "label": "太阳",
-          "type": "concept"
+          "type": "entity"
         },
         {
           "node_id": "planet",
           "label": "行星",
-          "type": "concept"
+          "type": "entity"
         },
         {
           "node_id": "mass",
           "label": "质量",
-          "type": "concept"
+          "type": "property"
         },
         {
           "node_id": "attracts",
           "label": "吸引",
-          "type": "concept"
+          "type": "process"
         },
         {
           "node_id": "revolves",
           "label": "公转",
-          "type": "concept"
+          "type": "process"
         },
         {
           "node_id": "gravity",
           "label": "引力",
-          "type": "concept"
+          "type": "force"
         }
       ],
       "edges": [],
@@ -358,27 +358,27 @@
         {
           "node_id": "cell_membrane",
           "label": "细胞膜",
-          "type": "concept"
+          "type": "entity"
         },
         {
           "node_id": "nucleus",
           "label": "细胞核",
-          "type": "concept"
+          "type": "entity"
         },
         {
           "node_id": "cell_organelle",
           "label": "细胞器",
-          "type": "concept"
+          "type": "entity"
         },
         {
           "node_id": "metabolites",
           "label": "代谢物",
-          "type": "concept"
+          "type": "substance"
         },
         {
           "node_id": "molecular",
           "label": "分子",
-          "type": "concept"
+          "type": "substance"
         }
       ],
       "edges": [],
@@ -398,27 +398,27 @@
         {
           "node_id": "fence",
           "label": "围墙",
-          "type": "concept"
+          "type": "entity"
         },
         {
           "node_id": "headquarters",
           "label": "总部",
-          "type": "concept"
+          "type": "entity"
         },
         {
           "node_id": "machine",
           "label": "机器",
-          "type": "concept"
+          "type": "entity"
         },
         {
           "node_id": "raw_material",
           "label": "原材料",
-          "type": "concept"
+          "type": "substance"
         },
         {
           "node_id": "manufactures",
           "label": "制成品",
-          "type": "concept"
+          "type": "substance"
         }
       ],
       "edges": [],

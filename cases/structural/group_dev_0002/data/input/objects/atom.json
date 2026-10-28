@@ -8,32 +8,32 @@
     {
       "node_id": "nucleus",
       "label": "原子核",
-      "type": "concept"
+      "type": "entity"
     },
     {
       "node_id": "electron",
       "label": "电子",
-      "type": "concept"
+      "type": "entity"
     },
     {
       "node_id": "charge",
       "label": "电荷",
-      "type": "concept"
+      "type": "property"
     },
     {
       "node_id": "attracts",
       "label": "吸引",
-      "type": "concept"
+      "type": "process"
     },
     {
       "node_id": "revolves",
       "label": "公转",
-      "type": "concept"
+      "type": "process"
     },
     {
       "node_id": "electromagnetism",
       "label": "电磁力",
-      "type": "concept"
+      "type": "force"
     }
   ],
   "edges": [],

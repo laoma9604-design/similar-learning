@@ -8,27 +8,27 @@
     {
       "node_id": "fence",
       "label": "围墙",
-      "type": "concept"
+      "type": "entity"
     },
     {
       "node_id": "headquarters",
       "label": "总部",
-      "type": "concept"
+      "type": "entity"
     },
     {
       "node_id": "machine",
       "label": "机器",
-      "type": "concept"
+      "type": "entity"
     },
     {
       "node_id": "raw_material",
       "label": "原材料",
-      "type": "concept"
+      "type": "substance"
     },
     {
       "node_id": "manufactures",
       "label": "制成品",
-      "type": "concept"
+      "type": "substance"
     }
   ],
   "edges": [],

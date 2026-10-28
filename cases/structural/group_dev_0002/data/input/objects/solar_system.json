@@ -8,32 +8,32 @@
     {
       "node_id": "sun",
       "label": "太阳",
-      "type": "concept"
+      "type": "entity"
     },
     {
       "node_id": "planet",
       "label": "行星",
-      "type": "concept"
+      "type": "entity"
     },
     {
       "node_id": "mass",
       "label": "质量",
-      "type": "concept"
+      "type": "property"
     },
     {
       "node_id": "attracts",
       "label": "吸引",
-      "type": "concept"
+      "type": "process"
     },
     {
       "node_id": "revolves",
       "label": "公转",
-      "type": "concept"
+      "type": "process"
     },
     {
       "node_id": "gravity",
       "label": "引力",
-      "type": "concept"
+      "type": "force"
     }
   ],
   "edges": [],
