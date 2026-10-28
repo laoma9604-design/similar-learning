@@ -1,6 +1,6 @@
 {
   "vocab_version": "topoadv-vocab-0.1.0-draft",
-  "status": "draft-v1，待 B/C 复核冻结",
+  "status": "draft-v2，待 B/C 复核冻结（structural 节点类型 6 类已补全，3 边界已拍板）",
   "source": "research-principles-experiment-taskbook.pdf sec:representation（六元组 τ_V/τ_E/ρ）、sec:data（MRED 三类关系）",
   "direction": {
     "-": "输入端 input end",
@@ -13,15 +13,59 @@
       "type_id": "positive_scalar",
       "label": "正值标量",
       "status": "confirmed",
-      "note": "任务书确认：本金、利率、细菌数量、下一步量同属此粗类型，单位与角色另行记录"
+      "note": "mechanistic 对象的节点类型；任务书确认：本金、利率、细菌数量、下一步量同属此粗类型，单位与角色另行记录"
     },
     {
-      "type_id": "concept",
-      "label": "概念（占位）",
-      "status": "pending_placeholder",
-      "note": "SCAR/SCAN 概念型系统的节点类型占位；真实类型词表(实体/过程/属性/状态/力/材料/产物等)在 T02 由 A 从原始数据归纳，B/C 复核"
+      "type_id": "entity",
+      "label": "实体",
+      "status": "pending_bc_review",
+      "discriminator": "能指到/摸到的具体对象吗？",
+      "examples": "president / soldier / cell / computer / virus / atom / parliament / river / machine / fence",
+      "note": "专有名词、人名、地名一律归 entity"
+    },
+    {
+      "type_id": "substance",
+      "label": "物质",
+      "status": "pending_bc_review",
+      "discriminator": "是被消耗/转化的材料（原材料/产物/燃料/养料）吗？",
+      "examples": "reactant / product / fuel / raw material / ingredient / food / medicine / nutrient"
+    },
+    {
+      "type_id": "process",
+      "label": "过程",
+      "status": "pending_bc_review",
+      "discriminator": "是动作或正在发生的事吗？",
+      "examples": "reaction process / water flow / war / election / digestion / transportation"
+    },
+    {
+      "type_id": "property",
+      "label": "属性",
+      "status": "pending_bc_review",
+      "discriminator": "是特征/数值/状态吗？",
+      "examples": "temperature / mass / charge / speed / frequency / success / failure / anger / fate"
+    },
+    {
+      "type_id": "force",
+      "label": "力·机制",
+      "status": "pending_bc_review",
+      "discriminator": "是力或连接机制吗？",
+      "examples": "gravity / electromagnetism / attraction / electricity"
+    },
+    {
+      "type_id": "abstract_concept",
+      "label": "抽象概念",
+      "status": "pending_bc_review",
+      "discriminator": "不占空间、承载意义吗？",
+      "examples": "law / memory / knowledge / idea / word / data / policy / code / caste system / feudalism"
     }
   ],
+  "node_type_rules": {
+    "scope": "structural 对象（SCAR/SCAN）的节点分类规则；mechanistic 只用 positive_scalar",
+    "discriminator_first": "按各类判别问句先判；专有名词/人名/地名一律归 entity",
+    "water_food_rule": "既实体又可消耗的词（water/food/fuel）按类比语境判：被消耗/转化→substance，作固定对象→entity",
+    "force_rule": "force 单列一类，不与 process 合并（真实词太少时再并回）",
+    "ambiguous_words": "war→process、life tenure→abstract_concept；disease 状态义与过程义两可，建议标 to_review。拿不准一律标 to_review，不硬塞"
+  },
   "edge_types": [
     {
       "edge_type_id": "multiplicative_growth",
@@ -57,8 +101,8 @@
     }
   ],
   "pending_questions": [
-    "node_types 待补全：A 从 SCAR/SCAN 原始数据归纳概念型类型（rate/angle/voltage 等），草案仅确认 positive_scalar 一个",
     "linear_drive_resistance 与 saturation_response 的方程形式已由 A 定稿（线性 response=driver/resistance、饱和 response=R_max*input/(K+input)），角色名已确认，仍待 B/C 复核冻结",
-    "角色建议每条边类型独立命名，避免 rate 既是类型又是角色的冲突"
+    "角色建议每条边类型独立命名，避免 rate 既是类型又是角色的冲突",
+    "structural 节点类型 6 类已由 A 归纳、3 边界已拍板（见 node_type_rules），待 B/C 复核冻结"
   ]
 }
