@@ -14,3 +14,14 @@ venv/
 # 系统杂项
 .DS_Store
 Thumbs.db
+
+# 老师材料（不随仓库分发，本地保留）
+README.txt
+research-principles-experiment-taskbook.pdf
+research-principles-experiment-taskbook.tex
+
+# 组内沟通中间材料（不随仓库分发，本地保留）
+/关系公式初稿.md
+/给C复核-关系公式.md
+/给C二次确认-关系公式修订.md
+
