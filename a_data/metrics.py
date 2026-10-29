@@ -6,6 +6,10 @@
     统一检查清单包含：节点双射与超边双射各一项，每个节点的类型一项，
     每条超边的类型、输入集合和输出集合各一项，每个节点--超边关联的角色一项。
 
+项数 = 2 + |V_t| + 3|E_t| + Σ_e |participants(e)|，由目标域结构决定，不是常数：
+    三节点三元超边 -> 11（任务书 L1036 的例子）
+    二节点二元超边 -> 9（饱和响应）
+
 三项分类错误（任务书 L1327 要求"类型、端点、角色三类错误比例"）：
     type_error    节点类型 / 超边类型不匹配
     endpoint_error 节点双射 / 超边双射 / 超边输入集合 / 超边输出集合失败
@@ -268,6 +272,20 @@ def _synth_pair() -> tuple[dict, dict]:
     return tgt, src
 
 
+def _synth_binary_pair() -> tuple[dict, dict]:
+    """二节点一条二元关系（饱和响应形态），用于验证清单项数不是常数。"""
+    def mk(prefix: str, in_id: str, out_id: str, edge_id: str) -> dict:
+        return {
+            "object_id": prefix,
+            "_nodes": {in_id: {"node_id": in_id, "type": "positive_scalar"},
+                       out_id: {"node_id": out_id, "type": "positive_scalar"}},
+            "_edges": {edge_id: {"edge_id": edge_id, "edge_type": "saturation_response",
+                                 "input_nodes": [in_id], "output_nodes": [out_id],
+                                 "roles": {in_id: "input", out_id: "response"}}},
+        }
+    return mk("tgt", "input", "response", "r1"), mk("src", "in_s", "out_s", "e_s")
+
+
 def selftest() -> int:
     """断言任务书给出的已知答案。返回退出码。"""
     tgt, src = _synth_pair()
@@ -328,6 +346,16 @@ def selftest() -> int:
         failures.append(f"空映射时清单仍应为 11 项，实际 {r6['n_checks']}")
     if r6["n_passed"] != 0 or r6["sipr"] != 0:
         failures.append("空映射应 0 项通过")
+
+    # 7) 项数随目标结构变化：二节点二元超边应为 9 项（饱和响应），不是 11
+    tgt9, src9 = _synth_binary_pair()
+    r7 = score_prediction(tgt9, src9,
+                          {"node_map": {"in_s": "input", "out_s": "response"},
+                           "edge_map": {"e_s": "r1"}})
+    if r7["n_checks"] != 9:
+        failures.append(f"二节点二元超边清单应为 9 项，实际 {r7['n_checks']}")
+    if abs(r7["sf"] - 1.0) > 1e-12 or r7["sipr"] != 1:
+        failures.append(f"二节点正确映射应 SF=1，实际 SF={r7['sf']} SIPR={r7['sipr']}")
 
     if failures:
         print("SELFTEST FAILED")
