@@ -120,16 +120,30 @@ def build_checks(target: dict[str, Any], src: dict[str, Any],
     }
 
     # ---- 逐节点类型 ----
+    # 反查必须先建索引，不能逐个 next() 扫描：重复映射到同一目标时，
+    # next() 会静默取第一个源节点，把"重复占用"洗成通过（任务书 L341 禁止重复占用）。
+    # 这里保留全部反查候选，多于一个即判该目标节点被重复占用。
+    rev_nodes: dict[str, list[str]] = {}
+    for s_id, t_id in node_map.items():
+        rev_nodes.setdefault(t_id, []).append(s_id)
+
     for nid in sorted(tnodes):
         t_type = tnodes[nid].get("type")
-        # 反查：哪个源节点映射到了这个目标节点
-        src_nid = next((s for s, t in node_map.items() if t == nid), None)
-        if src_nid is None or src_nid not in snodes:
+        srcs = rev_nodes.get(nid) or []
+        if not srcs or any(s not in snodes for s in srcs):
             checks[f"node_type:{nid}"] = {
                 "kind": "type_error", "passed": False,
-                "detail": f"目标节点 {nid} 无源节点映射",
+                "detail": f"目标节点 {nid} 无有效源节点映射",
             }
             continue
+        if len(srcs) > 1:
+            # 重复占用（非双射），本节点无法确定唯一对应，判失败
+            checks[f"node_type:{nid}"] = {
+                "kind": "endpoint_error", "passed": False,
+                "detail": f"目标节点 {nid} 被 {len(srcs)} 个源节点重复占用 {srcs}",
+            }
+            continue
+        src_nid = srcs[0]
         s_type = snodes[src_nid].get("type")
         checks[f"node_type:{nid}"] = {
             "kind": "type_error", "passed": s_type == t_type,
@@ -137,9 +151,15 @@ def build_checks(target: dict[str, Any], src: dict[str, Any],
         }
 
     # ---- 逐超边：类型 / 输入集合 / 输出集合 ----
+    rev_edges: dict[str, list[str]] = {}
+    for s_id, t_id in edge_map.items():
+        rev_edges.setdefault(t_id, []).append(s_id)
+
     for tid in sorted(tedges):
         te = tedges[tid]
-        src_eid = next((s for s, t in edge_map.items() if t == tid), None)
+        srcs_e = rev_edges.get(tid) or []
+        # 唯一反查：多于一个即重复占用，按"无对应"处理（双射已单独判失败）
+        src_eid = srcs_e[0] if len(srcs_e) == 1 else None
         se = sedges.get(src_eid) if src_eid else None
 
         if se is None:
@@ -177,11 +197,12 @@ def build_checks(target: dict[str, Any], src: dict[str, Any],
         # 所以按目标侧参与者遍历，源侧没给出对应映射的记失败——分母不随候选变化。
         participants = set(te.get("input_nodes") or []) | set(te.get("output_nodes") or [])
         for t_nid in sorted(participants):
-            s_nid = next((s for s, t in node_map.items() if t == t_nid), None)
+            cand = rev_nodes.get(t_nid) or []
+            s_nid = cand[0] if len(cand) == 1 else None
             if s_nid is None or se is None:
                 checks[f"role:{t_nid}@{tid}"] = {
                     "kind": "role_error", "passed": False,
-                    "detail": f"目标节点 {t_nid} 无源节点映射到本关系",
+                    "detail": f"目标节点 {t_nid} 无唯一源节点映射到本关系",
                 }
                 continue
             s_role = (se.get("roles") or {}).get(s_nid)
@@ -357,12 +378,27 @@ def selftest() -> int:
     if abs(r7["sf"] - 1.0) > 1e-12 or r7["sipr"] != 1:
         failures.append(f"二节点正确映射应 SF=1，实际 SF={r7['sf']} SIPR={r7['sipr']}")
 
+    # 8) 重复占用（非双射）不得被洗成通过：两个源节点映射到同一目标
+    #    任务书 L341「不能遗漏或重复占用」。旧实现用 next() 反查会静默取第一个源节点。
+    dup = {"node_map": {"N_t": "A_t", "r_s": "A_t", "N_next": "A_next"},
+           "edge_map": {"e_s": "e_t"}}
+    r8 = score_prediction(tgt, src, dup)
+    if r8["n_checks"] != 11:
+        failures.append(f"重复占用时清单仍应为 11 项，实际 {r8['n_checks']}")
+    if r8["sipr"] != 0:
+        failures.append("重复占用不应满分")
+    if r8["checks"]["node_bijection"]["passed"]:
+        failures.append("重复占用时节点双射必须判失败")
+    if r8["checks"]["node_type:A_t"]["passed"]:
+        failures.append("被重复占用的目标节点不得判通过")
+
     if failures:
         print("SELFTEST FAILED")
         for f in failures:
             print("  -", f)
         return 1
-    print("SELFTEST PASSED  (11 项清单 / 正确映射 SF=1 SIPR=1 / 角色交换 SF=9/11 SIPR=0)")
+    print("SELFTEST PASSED  (8 组断言：11/9 项清单、正确映射 SF=1、角色交换 9/11、"
+          "缺/空/重复映射均不满分)")
     return 0
 
 
