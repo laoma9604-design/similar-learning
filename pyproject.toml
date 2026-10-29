@@ -7,3 +7,10 @@ dependencies = [
     "numpy>=2.5.4",
     "scipy>=1.18.1",
 ]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -4,12 +4,14 @@
 
 ```bash
 cd C:\Users\ASUS\Desktop\dabao
-python -m pytest tests/ -q
+python -m pytest
 ```
 
-预期输出：`20 passed`，约 1 秒。
+（`pyproject.toml` 里已配好 `testpaths = ["tests"]`，不用带路径和参数。）
 
-只需要 pytest（`pip install pytest`），不依赖其他额外包。
+预期输出：`20 passed`，约 0.6 秒。
+
+第一次用先装 pytest：`pip install pytest`，或 `pip install -e ".[dev]"`。
 
 ## 现在覆盖什么
 
