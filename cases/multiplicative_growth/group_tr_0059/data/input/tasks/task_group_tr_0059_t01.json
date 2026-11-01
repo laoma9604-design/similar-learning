@@ -1,0 +1,37 @@
+{
+  "task_id": "task_group_tr_0059_t01",
+  "group_id": "group_tr_0059",
+  "target_id": "obj_group_tr_0059_tgt",
+  "source_ids": [
+    "obj_group_tr_0059_i02",
+    "obj_group_tr_0059_i08",
+    "obj_group_tr_0059_i07",
+    "obj_group_tr_0059_i01",
+    "obj_group_tr_0059_i05",
+    "obj_group_tr_0059_i06",
+    "obj_group_tr_0059_i03",
+    "obj_group_tr_0059_src",
+    "obj_group_tr_0059_i04",
+    "obj_group_tr_0059_i00"
+  ],
+  "schema_version": "topoadv-schema-0.3.1",
+  "vocab_version": "topoadv-vocab-0.1.1",
+  "intervenable_inputs": [
+    "v9",
+    "v3"
+  ],
+  "specified_outputs": [
+    "v4"
+  ],
+  "intervention_range": {
+    "v9": [
+      -0.2,
+      0.2
+    ],
+    "v3": [
+      -0.2,
+      0.2
+    ]
+  },
+  "_note": "方法输入不含标签、正确源域或见证点"
+}

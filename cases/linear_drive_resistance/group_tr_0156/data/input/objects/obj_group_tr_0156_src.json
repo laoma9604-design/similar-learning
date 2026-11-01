@@ -2,22 +2,22 @@
   "object_id": "obj_group_tr_0156_src",
   "object_kind": "mechanistic",
   "relation_type": "linear_drive_resistance",
-  "split": "train",
-  "label": "电路",
+  "split": "val",
+  "label": "候选源域",
   "nodes": [
     {
-      "node_id": "b1",
-      "label": "电压",
+      "node_id": "v1",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "b5",
-      "label": "电阻",
+      "node_id": "v8",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "a5",
-      "label": "电流",
+      "node_id": "v4",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,26 +26,26 @@
       "edge_id": "r1",
       "edge_type": "linear_drive_resistance",
       "input_nodes": [
-        "b1",
-        "b5"
+        "v1",
+        "v8"
       ],
       "output_nodes": [
-        "a5"
+        "v4"
       ],
       "roles": {
-        "b1": "driver",
-        "b5": "resistance",
-        "a5": "response"
+        "v1": "driver",
+        "v8": "resistance",
+        "v4": "response"
       }
     }
   ],
-  "function": "b1 / b5",
+  "function": "v1 / v8",
   "controllable_inputs": [
-    "b1",
-    "b5"
+    "v1",
+    "v8"
   ],
   "designated_outputs": [
-    "a5"
+    "v4"
   ],
   "baseline": [
     40.0,
@@ -58,21 +58,21 @@
   "baseline_output": 80.0,
   "output_scale": 80.0,
   "legal_domain": {
-    "b1": [
+    "v1": [
       1e-06,
       null
     ],
-    "b5": [
+    "v8": [
       1e-06,
       null
     ]
   },
   "intervention_bounds": {
-    "b1": [
+    "v1": [
       -0.2,
       0.2
     ],
-    "b5": [
+    "v8": [
       -0.2,
       0.2
     ]

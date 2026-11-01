@@ -1,0 +1,36 @@
+{
+  "group_id": "group_dev_0003",
+  "dataset": "mred",
+  "relation_type": "multiplicative_growth",
+  "schema_version": "topoadv-schema-0.3.1",
+  "vocab_version": "topoadv-vocab-0.1.1",
+  "split": "dev",
+  "pair_id": "mult_04",
+  "variant_index": 3,
+  "object_ids": [
+    "obj_group_dev_0003_tgt",
+    "obj_group_dev_0003_i01",
+    "obj_group_dev_0003_i03",
+    "obj_group_dev_0003_i04",
+    "obj_group_dev_0003_i06",
+    "obj_group_dev_0003_i07",
+    "obj_group_dev_0003_i00",
+    "obj_group_dev_0003_i05",
+    "obj_group_dev_0003_i02",
+    "obj_group_dev_0003_i09",
+    "obj_group_dev_0003_src"
+  ],
+  "task_ids": [
+    "task_group_dev_0003_t01",
+    "task_group_dev_0003_t02"
+  ],
+  "task_counts": {
+    "positive": 1,
+    "negative": 1,
+    "total": 2
+  },
+  "source_counts": {
+    "positive": 10,
+    "negative": 10
+  }
+}

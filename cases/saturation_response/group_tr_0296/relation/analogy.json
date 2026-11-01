@@ -1,11 +1,19 @@
 {
   "source": {
     "object_id": "obj_group_tr_0296_src",
-    "label": "气体吸附"
+    "label": "气体吸附",
+    "node_labels": {
+      "v1": "气体分压",
+      "v3": "表面覆盖度"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0296_tgt",
-    "label": "血红蛋白结合"
+    "label": "血红蛋白结合",
+    "node_labels": {
+      "v1": "氧分压",
+      "v3": "氧饱和度"
+    }
   },
   "relation_type": "saturation_response",
   "direction": "source → target",

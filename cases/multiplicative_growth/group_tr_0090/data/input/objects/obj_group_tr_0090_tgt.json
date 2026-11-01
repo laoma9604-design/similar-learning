@@ -2,22 +2,22 @@
   "object_id": "obj_group_tr_0090_tgt",
   "object_kind": "mechanistic",
   "relation_type": "multiplicative_growth",
-  "split": "test",
-  "label": "分红再投",
+  "split": "train",
+  "label": "目标域",
   "nodes": [
     {
-      "node_id": "current",
-      "label": "持股数",
+      "node_id": "v4",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "ratio",
-      "label": "分红再投比例",
+      "node_id": "v7",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "next",
-      "label": "分红后持股",
+      "node_id": "v3",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,53 +26,53 @@
       "edge_id": "r1",
       "edge_type": "multiplicative_growth",
       "input_nodes": [
-        "current",
-        "ratio"
+        "v4",
+        "v7"
       ],
       "output_nodes": [
-        "next"
+        "v3"
       ],
       "roles": {
-        "current": "current",
-        "ratio": "ratio",
-        "next": "next"
+        "v4": "current",
+        "v7": "ratio",
+        "v3": "next"
       }
     }
   ],
-  "function": "current * (1 + ratio)",
+  "function": "v4 * (1 + v7)",
   "controllable_inputs": [
-    "current",
-    "ratio"
+    "v4",
+    "v7"
   ],
   "designated_outputs": [
-    "next"
+    "v3"
   ],
   "baseline": [
-    25.0,
-    0.02
+    150.0,
+    0.3
   ],
   "input_scales": [
-    25.0,
-    0.02
+    150.0,
+    0.3
   ],
-  "baseline_output": 25.5,
-  "output_scale": 25.5,
+  "baseline_output": 195.0,
+  "output_scale": 195.0,
   "legal_domain": {
-    "current": [
+    "v4": [
       0,
       null
     ],
-    "ratio": [
+    "v7": [
       0,
       1
     ]
   },
   "intervention_bounds": {
-    "current": [
+    "v4": [
       -0.2,
       0.2
     ],
-    "ratio": [
+    "v7": [
       -0.2,
       0.2
     ]

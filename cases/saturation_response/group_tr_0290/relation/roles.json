@@ -1,10 +1,10 @@
 {
   "input": {
-    "source": "a4",
-    "target": "input"
+    "source": "v9",
+    "target": "v9"
   },
   "response": {
-    "source": "a5",
-    "target": "response"
+    "source": "v8",
+    "target": "v8"
   }
 }

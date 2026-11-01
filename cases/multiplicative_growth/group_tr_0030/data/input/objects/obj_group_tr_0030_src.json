@@ -3,21 +3,21 @@
   "object_kind": "mechanistic",
   "relation_type": "multiplicative_growth",
   "split": "train",
-  "label": "细胞培养",
+  "label": "候选源域",
   "nodes": [
     {
-      "node_id": "b1",
-      "label": "细胞数量",
+      "node_id": "v2",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "b4",
-      "label": "传代增长率",
+      "node_id": "v6",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "a1",
-      "label": "传代后数量",
+      "node_id": "v3",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,53 +26,53 @@
       "edge_id": "r1",
       "edge_type": "multiplicative_growth",
       "input_nodes": [
-        "b1",
-        "b4"
+        "v2",
+        "v6"
       ],
       "output_nodes": [
-        "a1"
+        "v3"
       ],
       "roles": {
-        "b1": "current",
-        "b4": "ratio",
-        "a1": "next"
+        "v2": "current",
+        "v6": "ratio",
+        "v3": "next"
       }
     }
   ],
-  "function": "b1 * (1 + b4)",
+  "function": "v2 * (1 + v6)",
   "controllable_inputs": [
-    "b1",
-    "b4"
+    "v2",
+    "v6"
   ],
   "designated_outputs": [
-    "a1"
+    "v3"
   ],
   "baseline": [
-    500.0,
-    0.03
+    3000.0,
+    0.05
   ],
   "input_scales": [
-    500.0,
-    0.03
+    3000.0,
+    0.05
   ],
-  "baseline_output": 515.0,
-  "output_scale": 515.0,
+  "baseline_output": 3150.0,
+  "output_scale": 3150.0,
   "legal_domain": {
-    "b1": [
+    "v2": [
       0,
       null
     ],
-    "b4": [
+    "v6": [
       0,
       1
     ]
   },
   "intervention_bounds": {
-    "b1": [
+    "v2": [
       -0.2,
       0.2
     ],
-    "b4": [
+    "v6": [
       -0.2,
       0.2
     ]

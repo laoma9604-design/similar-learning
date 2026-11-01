@@ -2,22 +2,22 @@
   "object_id": "obj_group_tr_0022_tgt",
   "object_kind": "mechanistic",
   "relation_type": "multiplicative_growth",
-  "split": "val",
-  "label": "定期存款",
+  "split": "train",
+  "label": "目标域",
   "nodes": [
     {
-      "node_id": "current",
-      "label": "存款本金",
+      "node_id": "v3",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "ratio",
-      "label": "年利率",
+      "node_id": "v5",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "next",
-      "label": "到期本息",
+      "node_id": "v7",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,53 +26,53 @@
       "edge_id": "r1",
       "edge_type": "multiplicative_growth",
       "input_nodes": [
-        "current",
-        "ratio"
+        "v3",
+        "v5"
       ],
       "output_nodes": [
-        "next"
+        "v7"
       ],
       "roles": {
-        "current": "current",
-        "ratio": "ratio",
-        "next": "next"
+        "v3": "current",
+        "v5": "ratio",
+        "v7": "next"
       }
     }
   ],
-  "function": "current * (1 + ratio)",
+  "function": "v3 * (1 + v5)",
   "controllable_inputs": [
-    "current",
-    "ratio"
+    "v3",
+    "v5"
   ],
   "designated_outputs": [
-    "next"
+    "v7"
   ],
   "baseline": [
     200000.0,
-    0.03
+    0.05
   ],
   "input_scales": [
     200000.0,
-    0.03
+    0.05
   ],
-  "baseline_output": 206000.0,
-  "output_scale": 206000.0,
+  "baseline_output": 210000.0,
+  "output_scale": 210000.0,
   "legal_domain": {
-    "current": [
+    "v3": [
       0,
       null
     ],
-    "ratio": [
+    "v5": [
       0,
       1
     ]
   },
   "intervention_bounds": {
-    "current": [
+    "v3": [
       -0.2,
       0.2
     ],
-    "ratio": [
+    "v5": [
       -0.2,
       0.2
     ]

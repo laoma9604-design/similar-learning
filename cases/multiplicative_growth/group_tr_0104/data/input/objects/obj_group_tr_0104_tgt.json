@@ -2,22 +2,22 @@
   "object_id": "obj_group_tr_0104_tgt",
   "object_kind": "mechanistic",
   "relation_type": "multiplicative_growth",
-  "split": "val",
-  "label": "基金净值",
+  "split": "train",
+  "label": "目标域",
   "nodes": [
     {
-      "node_id": "current",
-      "label": "单位净值",
+      "node_id": "v1",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "ratio",
-      "label": "每期收益率",
+      "node_id": "v3",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "next",
-      "label": "下期净值",
+      "node_id": "v9",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,53 +26,53 @@
       "edge_id": "r1",
       "edge_type": "multiplicative_growth",
       "input_nodes": [
-        "current",
-        "ratio"
+        "v1",
+        "v3"
       ],
       "output_nodes": [
-        "next"
+        "v9"
       ],
       "roles": {
-        "current": "current",
-        "ratio": "ratio",
-        "next": "next"
+        "v1": "current",
+        "v3": "ratio",
+        "v9": "next"
       }
     }
   ],
-  "function": "current * (1 + ratio)",
+  "function": "v1 * (1 + v3)",
   "controllable_inputs": [
-    "current",
-    "ratio"
+    "v1",
+    "v3"
   ],
   "designated_outputs": [
-    "next"
+    "v9"
   ],
   "baseline": [
     20.0,
-    0.08
+    0.4
   ],
   "input_scales": [
     20.0,
-    0.08
+    0.4
   ],
-  "baseline_output": 21.6,
-  "output_scale": 21.6,
+  "baseline_output": 28.0,
+  "output_scale": 28.0,
   "legal_domain": {
-    "current": [
+    "v1": [
       0,
       null
     ],
-    "ratio": [
+    "v3": [
       0,
       1
     ]
   },
   "intervention_bounds": {
-    "current": [
+    "v1": [
       -0.2,
       0.2
     ],
-    "ratio": [
+    "v3": [
       -0.2,
       0.2
     ]

@@ -2,17 +2,17 @@
   "object_id": "obj_group_tr_0288_src",
   "object_kind": "mechanistic",
   "relation_type": "saturation_response",
-  "split": "test",
-  "label": "载体转运",
+  "split": "train",
+  "label": "候选源域",
   "nodes": [
     {
-      "node_id": "b5",
-      "label": "底物浓度",
+      "node_id": "v8",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "b3",
-      "label": "转运速率",
+      "node_id": "v2",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -21,23 +21,23 @@
       "edge_id": "r1",
       "edge_type": "saturation_response",
       "input_nodes": [
-        "b5"
+        "v8"
       ],
       "output_nodes": [
-        "b3"
+        "v2"
       ],
       "roles": {
-        "b5": "input",
-        "b3": "response"
+        "v8": "input",
+        "v2": "response"
       }
     }
   ],
-  "function": "50.0 * b5 / (5.0 + b5)",
+  "function": "50.0 * v8 / (5.0 + v8)",
   "controllable_inputs": [
-    "b5"
+    "v8"
   ],
   "designated_outputs": [
-    "b3"
+    "v2"
   ],
   "baseline": [
     5.0
@@ -48,13 +48,13 @@
   "baseline_output": 25.0,
   "output_scale": 25.0,
   "legal_domain": {
-    "b5": [
+    "v8": [
       1e-06,
       null
     ]
   },
   "intervention_bounds": {
-    "b5": [
+    "v8": [
       -0.8,
       1.0
     ]

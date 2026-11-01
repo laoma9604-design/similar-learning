@@ -1,4 +1,4 @@
-源域（电路）：b2 / a3
-目标域（热传导）：driver / resistance
+源域（电路）：v8 / v7
+目标域（热传导）：v8 / v7
 角色：driver / resistance / response
 领域依据：源=欧姆定律；目标=傅里叶热传导 q=ΔT/Rth。跨域：电→热。

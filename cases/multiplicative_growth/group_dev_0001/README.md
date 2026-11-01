@@ -1,3 +1,6 @@
-group_dev_0001 —— 细菌增长 → 银行复利（乘性增长，机制类）
+group_dev_0001 —— 细胞培养 → 定期存款（multiplicative_growth，dev）
 
-正例源=细菌增长，反例源=合成平方反例。映射方向 source→target。
+来源域对：mult_02，参数变体 #1
+领域依据：源=细胞传代增殖；目标=定期存款复利。跨域：生物→金融。
+正任务 task_group_dev_0001_t01（10 源域，1 有效 + 9 干扰）、负任务 task_group_dev_0001_t02（10 源域，全部无效）。映射方向 source→target。
+封存参考见 sealed/reference.json。

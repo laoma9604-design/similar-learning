@@ -1,0 +1,8 @@
+{
+  "source_id": "obj_group_dev_0026_i06",
+  "target_id": "obj_group_dev_0026_tgt",
+  "interference_kind": "local_perturbation",
+  "max_error": 0.07839999999999998,
+  "controlled_synthetic": true,
+  "excluded_because": "结构通过但响应误差超参考容差"
+}

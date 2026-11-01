@@ -2,22 +2,22 @@
   "object_id": "obj_group_tr_0065_src",
   "object_kind": "mechanistic",
   "relation_type": "multiplicative_growth",
-  "split": "test",
-  "label": "藻类繁殖",
+  "split": "val",
+  "label": "候选源域",
   "nodes": [
     {
-      "node_id": "a1",
-      "label": "藻细胞数",
+      "node_id": "v1",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "b3",
-      "label": "增长率",
+      "node_id": "v8",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "a4",
-      "label": "下一代数量",
+      "node_id": "v6",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,53 +26,53 @@
       "edge_id": "r1",
       "edge_type": "multiplicative_growth",
       "input_nodes": [
-        "a1",
-        "b3"
+        "v1",
+        "v8"
       ],
       "output_nodes": [
-        "a4"
+        "v6"
       ],
       "roles": {
-        "a1": "current",
-        "b3": "ratio",
-        "a4": "next"
+        "v1": "current",
+        "v8": "ratio",
+        "v6": "next"
       }
     }
   ],
-  "function": "a1 * (1 + b3)",
+  "function": "v1 * (1 + v8)",
   "controllable_inputs": [
-    "a1",
-    "b3"
+    "v1",
+    "v8"
   ],
   "designated_outputs": [
-    "a4"
+    "v6"
   ],
   "baseline": [
-    400.0,
-    0.03
+    8000.0,
+    0.15
   ],
   "input_scales": [
-    400.0,
-    0.03
+    8000.0,
+    0.15
   ],
-  "baseline_output": 412.0,
-  "output_scale": 412.0,
+  "baseline_output": 9200.0,
+  "output_scale": 9200.0,
   "legal_domain": {
-    "a1": [
+    "v1": [
       0,
       null
     ],
-    "b3": [
+    "v8": [
       0,
       1
     ]
   },
   "intervention_bounds": {
-    "a1": [
+    "v1": [
       -0.2,
       0.2
     ],
-    "b3": [
+    "v8": [
       -0.2,
       0.2
     ]

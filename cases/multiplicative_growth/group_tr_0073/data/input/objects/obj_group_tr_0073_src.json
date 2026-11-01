@@ -3,21 +3,21 @@
   "object_kind": "mechanistic",
   "relation_type": "multiplicative_growth",
   "split": "train",
-  "label": "人口增长",
+  "label": "候选源域",
   "nodes": [
     {
-      "node_id": "b3",
-      "label": "人口数",
+      "node_id": "v3",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "a4",
-      "label": "年增长率",
+      "node_id": "v8",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "b4",
-      "label": "次年人口",
+      "node_id": "v7",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,53 +26,53 @@
       "edge_id": "r1",
       "edge_type": "multiplicative_growth",
       "input_nodes": [
-        "b3",
-        "a4"
+        "v3",
+        "v8"
       ],
       "output_nodes": [
-        "b4"
+        "v7"
       ],
       "roles": {
-        "b3": "current",
-        "a4": "ratio",
-        "b4": "next"
+        "v3": "current",
+        "v8": "ratio",
+        "v7": "next"
       }
     }
   ],
-  "function": "b3 * (1 + a4)",
+  "function": "v3 * (1 + v8)",
   "controllable_inputs": [
-    "b3",
-    "a4"
+    "v3",
+    "v8"
   ],
   "designated_outputs": [
-    "b4"
+    "v7"
   ],
   "baseline": [
     3000000.0,
-    0.06
+    0.2
   ],
   "input_scales": [
     3000000.0,
-    0.06
+    0.2
   ],
-  "baseline_output": 3180000.0,
-  "output_scale": 3180000.0,
+  "baseline_output": 3600000.0,
+  "output_scale": 3600000.0,
   "legal_domain": {
-    "b3": [
+    "v3": [
       0,
       null
     ],
-    "a4": [
+    "v8": [
       0,
       1
     ]
   },
   "intervention_bounds": {
-    "b3": [
+    "v3": [
       -0.2,
       0.2
     ],
-    "a4": [
+    "v8": [
       -0.2,
       0.2
     ]

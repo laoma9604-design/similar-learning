@@ -2,22 +2,22 @@
   "object_id": "obj_group_tr_0075_tgt",
   "object_kind": "mechanistic",
   "relation_type": "multiplicative_growth",
-  "split": "val",
-  "label": "年金账户",
+  "split": "train",
+  "label": "目标域",
   "nodes": [
     {
-      "node_id": "current",
-      "label": "账户余额",
+      "node_id": "v3",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "ratio",
-      "label": "年利率",
+      "node_id": "v6",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "next",
-      "label": "年末余额",
+      "node_id": "v2",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,53 +26,53 @@
       "edge_id": "r1",
       "edge_type": "multiplicative_growth",
       "input_nodes": [
-        "current",
-        "ratio"
+        "v3",
+        "v6"
       ],
       "output_nodes": [
-        "next"
+        "v2"
       ],
       "roles": {
-        "current": "current",
-        "ratio": "ratio",
-        "next": "next"
+        "v3": "current",
+        "v6": "ratio",
+        "v2": "next"
       }
     }
   ],
-  "function": "current * (1 + ratio)",
+  "function": "v3 * (1 + v6)",
   "controllable_inputs": [
-    "current",
-    "ratio"
+    "v3",
+    "v6"
   ],
   "designated_outputs": [
-    "next"
+    "v2"
   ],
   "baseline": [
-    50000.0,
-    0.06
+    750000.0,
+    0.2
   ],
   "input_scales": [
-    50000.0,
-    0.06
+    750000.0,
+    0.2
   ],
-  "baseline_output": 53000.0,
-  "output_scale": 53000.0,
+  "baseline_output": 900000.0,
+  "output_scale": 900000.0,
   "legal_domain": {
-    "current": [
+    "v3": [
       0,
       null
     ],
-    "ratio": [
+    "v6": [
       0,
       1
     ]
   },
   "intervention_bounds": {
-    "current": [
+    "v3": [
       -0.2,
       0.2
     ],
-    "ratio": [
+    "v6": [
       -0.2,
       0.2
     ]

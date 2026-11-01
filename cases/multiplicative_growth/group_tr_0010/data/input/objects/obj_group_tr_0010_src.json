@@ -3,21 +3,21 @@
   "object_kind": "mechanistic",
   "relation_type": "multiplicative_growth",
   "split": "train",
-  "label": "细菌二分裂",
+  "label": "候选源域",
   "nodes": [
     {
-      "node_id": "a5",
-      "label": "当前细菌数量",
+      "node_id": "v7",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "b5",
-      "label": "每代增长率",
+      "node_id": "v9",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "a3",
-      "label": "下一代数量",
+      "node_id": "v1",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,53 +26,53 @@
       "edge_id": "r1",
       "edge_type": "multiplicative_growth",
       "input_nodes": [
-        "a5",
-        "b5"
+        "v7",
+        "v9"
       ],
       "output_nodes": [
-        "a3"
+        "v1"
       ],
       "roles": {
-        "a5": "current",
-        "b5": "ratio",
-        "a3": "next"
+        "v7": "current",
+        "v9": "ratio",
+        "v1": "next"
       }
     }
   ],
-  "function": "a5 * (1 + b5)",
+  "function": "v7 * (1 + v9)",
   "controllable_inputs": [
-    "a5",
-    "b5"
+    "v7",
+    "v9"
   ],
   "designated_outputs": [
-    "a3"
+    "v1"
   ],
   "baseline": [
     10000.0,
-    0.1
+    0.02
   ],
   "input_scales": [
     10000.0,
-    0.1
+    0.02
   ],
-  "baseline_output": 11000.0,
-  "output_scale": 11000.0,
+  "baseline_output": 10200.0,
+  "output_scale": 10200.0,
   "legal_domain": {
-    "a5": [
+    "v7": [
       0,
       null
     ],
-    "b5": [
+    "v9": [
       0,
       1
     ]
   },
   "intervention_bounds": {
-    "a5": [
+    "v7": [
       -0.2,
       0.2
     ],
-    "b5": [
+    "v9": [
       -0.2,
       0.2
     ]

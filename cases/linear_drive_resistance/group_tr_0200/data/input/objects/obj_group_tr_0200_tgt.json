@@ -2,22 +2,22 @@
   "object_id": "obj_group_tr_0200_tgt",
   "object_kind": "mechanistic",
   "relation_type": "linear_drive_resistance",
-  "split": "val",
-  "label": "力学阻尼",
+  "split": "train",
+  "label": "目标域",
   "nodes": [
     {
-      "node_id": "driver",
-      "label": "力",
+      "node_id": "v6",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "resistance",
-      "label": "阻尼系数",
+      "node_id": "v5",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "response",
-      "label": "速度",
+      "node_id": "v1",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,26 +26,26 @@
       "edge_id": "r1",
       "edge_type": "linear_drive_resistance",
       "input_nodes": [
-        "driver",
-        "resistance"
+        "v6",
+        "v5"
       ],
       "output_nodes": [
-        "response"
+        "v1"
       ],
       "roles": {
-        "driver": "driver",
-        "resistance": "resistance",
-        "response": "response"
+        "v6": "driver",
+        "v5": "resistance",
+        "v1": "response"
       }
     }
   ],
-  "function": "driver / resistance",
+  "function": "v6 / v5",
   "controllable_inputs": [
-    "driver",
-    "resistance"
+    "v6",
+    "v5"
   ],
   "designated_outputs": [
-    "response"
+    "v1"
   ],
   "baseline": [
     60.0,
@@ -58,21 +58,21 @@
   "baseline_output": 12.0,
   "output_scale": 12.0,
   "legal_domain": {
-    "driver": [
+    "v6": [
       1e-06,
       null
     ],
-    "resistance": [
+    "v5": [
       1e-06,
       null
     ]
   },
   "intervention_bounds": {
-    "driver": [
+    "v6": [
       -0.2,
       0.2
     ],
-    "resistance": [
+    "v5": [
       -0.2,
       0.2
     ]

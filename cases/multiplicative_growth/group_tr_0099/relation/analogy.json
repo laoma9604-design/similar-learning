@@ -1,11 +1,21 @@
 {
   "source": {
     "object_id": "obj_group_tr_0099_src",
-    "label": "病毒复制"
+    "label": "病毒复制",
+    "node_labels": {
+      "v3": "病毒数量",
+      "v9": "每代复制增长率",
+      "v8": "下一代数量"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0099_tgt",
-    "label": "基金净值"
+    "label": "基金净值",
+    "node_labels": {
+      "v3": "单位净值",
+      "v9": "每期收益率",
+      "v8": "下期净值"
+    }
   },
   "relation_type": "multiplicative_growth",
   "direction": "source → target",

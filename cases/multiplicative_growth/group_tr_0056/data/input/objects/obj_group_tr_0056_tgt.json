@@ -2,22 +2,22 @@
   "object_id": "obj_group_tr_0056_tgt",
   "object_kind": "mechanistic",
   "relation_type": "multiplicative_growth",
-  "split": "test",
-  "label": "教育储蓄",
+  "split": "val",
+  "label": "目标域",
   "nodes": [
     {
-      "node_id": "current",
-      "label": "储蓄本金",
+      "node_id": "v8",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "ratio",
-      "label": "年利率",
+      "node_id": "v4",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "next",
-      "label": "到期本息",
+      "node_id": "v2",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,53 +26,53 @@
       "edge_id": "r1",
       "edge_type": "multiplicative_growth",
       "input_nodes": [
-        "current",
-        "ratio"
+        "v8",
+        "v4"
       ],
       "output_nodes": [
-        "next"
+        "v2"
       ],
       "roles": {
-        "current": "current",
-        "ratio": "ratio",
-        "next": "next"
+        "v8": "current",
+        "v4": "ratio",
+        "v2": "next"
       }
     }
   ],
-  "function": "current * (1 + ratio)",
+  "function": "v8 * (1 + v4)",
   "controllable_inputs": [
-    "current",
-    "ratio"
+    "v8",
+    "v4"
   ],
   "designated_outputs": [
-    "next"
+    "v2"
   ],
   "baseline": [
     600000.0,
-    0.03
+    0.15
   ],
   "input_scales": [
     600000.0,
-    0.03
+    0.15
   ],
-  "baseline_output": 618000.0,
-  "output_scale": 618000.0,
+  "baseline_output": 690000.0,
+  "output_scale": 690000.0,
   "legal_domain": {
-    "current": [
+    "v8": [
       0,
       null
     ],
-    "ratio": [
+    "v4": [
       0,
       1
     ]
   },
   "intervention_bounds": {
-    "current": [
+    "v8": [
       -0.2,
       0.2
     ],
-    "ratio": [
+    "v4": [
       -0.2,
       0.2
     ]

@@ -6,13 +6,13 @@
   "label": "候选源域",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "输入量",
+      "node_id": "v9",
+      "label": "待判定变量",
       "type": "positive_scalar"
     },
     {
-      "node_id": "n2",
-      "label": "响应量",
+      "node_id": "v8",
+      "label": "待判定变量",
       "type": "positive_scalar"
     }
   ],
@@ -21,23 +21,23 @@
       "edge_id": "r1",
       "edge_type": "saturation_response",
       "input_nodes": [
-        "n1"
+        "v9"
       ],
       "output_nodes": [
-        "n2"
+        "v8"
       ],
       "roles": {
-        "n1": "input",
-        "n2": "response"
+        "v9": "input",
+        "v8": "response"
       }
     }
   ],
-  "function": "187.5 + ((375.0 * n1 / (150.0 + n1) - 187.5) / 187.5 + 0.3 * (exp(-(((n1 / 150.0 - 1) - 0.13) / 0.03) ** 2) - exp(-(0.13 / 0.03) ** 2))) * 187.5",
+  "function": "187.5 + ((375.0 * v9 / (150.0 + v9) - 187.5) / 187.5 + 0.34 * (exp(-((((((v9 / 150.0 - 1) ** 2)) / 1) ** 0.5 - 0.2) / 0.02) ** 2) - exp(-(0.2 / 0.02) ** 2))) * 187.5",
   "controllable_inputs": [
-    "n1"
+    "v9"
   ],
   "designated_outputs": [
-    "n2"
+    "v8"
   ],
   "baseline": [
     150.0
@@ -48,13 +48,13 @@
   "baseline_output": 187.5,
   "output_scale": 187.5,
   "legal_domain": {
-    "n1": [
+    "v9": [
       1e-06,
       null
     ]
   },
   "intervention_bounds": {
-    "n1": [
+    "v9": [
       -0.8,
       1.0
     ]
@@ -62,6 +62,6 @@
   "provenance": {
     "dataset": "mred",
     "original_id": null,
-    "structure_source": "provided"
+    "structure_source": "controlled_synthetic"
   }
 }

@@ -1,11 +1,19 @@
 {
   "source": {
     "object_id": "obj_group_tr_0277_src",
-    "label": "酶催化"
+    "label": "酶催化",
+    "node_labels": {
+      "v6": "底物浓度",
+      "v1": "反应速率"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0277_tgt",
-    "label": "吸附"
+    "label": "吸附",
+    "node_labels": {
+      "v6": "平衡浓度",
+      "v1": "吸附量"
+    }
   },
   "relation_type": "saturation_response",
   "direction": "source → target",

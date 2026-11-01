@@ -1,4 +1,4 @@
-源域（电路）：b1 / a2
-目标域（磁路）：driver / resistance
+源域（电路）：v1 / v4
+目标域（磁路）：v1 / v4
 角色：driver / resistance / response
 领域依据：源=欧姆定律；目标=磁路欧姆定律 Φ=Fm/Rm。跨域：电→磁。

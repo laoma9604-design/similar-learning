@@ -1,14 +1,14 @@
 {
   "current": {
-    "source": "b4",
-    "target": "current"
+    "source": "v9",
+    "target": "v9"
   },
   "ratio": {
-    "source": "a2",
-    "target": "ratio"
+    "source": "v5",
+    "target": "v5"
   },
   "next": {
-    "source": "b5",
-    "target": "next"
+    "source": "v1",
+    "target": "v1"
   }
 }

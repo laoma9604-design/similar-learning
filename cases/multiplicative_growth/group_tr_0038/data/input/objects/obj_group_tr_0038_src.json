@@ -2,22 +2,22 @@
   "object_id": "obj_group_tr_0038_src",
   "object_kind": "mechanistic",
   "relation_type": "multiplicative_growth",
-  "split": "train",
-  "label": "酵母发酵",
+  "split": "test",
+  "label": "候选源域",
   "nodes": [
     {
-      "node_id": "b3",
-      "label": "酵母数量",
+      "node_id": "v7",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "a4",
-      "label": "每代增长率",
+      "node_id": "v5",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "a3",
-      "label": "下一代数量",
+      "node_id": "v3",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,53 +26,53 @@
       "edge_id": "r1",
       "edge_type": "multiplicative_growth",
       "input_nodes": [
-        "b3",
-        "a4"
+        "v7",
+        "v5"
       ],
       "output_nodes": [
-        "a3"
+        "v3"
       ],
       "roles": {
-        "b3": "current",
-        "a4": "ratio",
-        "a3": "next"
+        "v7": "current",
+        "v5": "ratio",
+        "v3": "next"
       }
     }
   ],
-  "function": "b3 * (1 + a4)",
+  "function": "v7 * (1 + v5)",
   "controllable_inputs": [
-    "b3",
-    "a4"
+    "v7",
+    "v5"
   ],
   "designated_outputs": [
-    "a3"
+    "v3"
   ],
   "baseline": [
     2500.0,
-    0.04
+    0.1
   ],
   "input_scales": [
     2500.0,
-    0.04
+    0.1
   ],
-  "baseline_output": 2600.0,
-  "output_scale": 2600.0,
+  "baseline_output": 2750.0,
+  "output_scale": 2750.0,
   "legal_domain": {
-    "b3": [
+    "v7": [
       0,
       null
     ],
-    "a4": [
+    "v5": [
       0,
       1
     ]
   },
   "intervention_bounds": {
-    "b3": [
+    "v7": [
       -0.2,
       0.2
     ],
-    "a4": [
+    "v5": [
       -0.2,
       0.2
     ]

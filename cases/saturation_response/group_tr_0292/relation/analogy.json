@@ -1,11 +1,19 @@
 {
   "source": {
     "object_id": "obj_group_tr_0292_src",
-    "label": "离子通道"
+    "label": "离子通道",
+    "node_labels": {
+      "v7": "配体浓度",
+      "v1": "开放概率"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0292_tgt",
-    "label": "受体结合"
+    "label": "受体结合",
+    "node_labels": {
+      "v7": "配体浓度",
+      "v1": "结合量"
+    }
   },
   "relation_type": "saturation_response",
   "direction": "source → target",

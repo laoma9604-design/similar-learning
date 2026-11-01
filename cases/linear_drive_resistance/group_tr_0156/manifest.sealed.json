@@ -1,18 +1,36 @@
 {
   "group_id": "group_tr_0156",
-  "valid_sources": [
-    "obj_group_tr_0156_src"
-  ],
-  "excluded_sources": [
-    "obj_group_tr_0156_i00",
-    "obj_group_tr_0156_i01",
-    "obj_group_tr_0156_i02",
-    "obj_group_tr_0156_i03",
-    "obj_group_tr_0156_i04",
-    "obj_group_tr_0156_i05",
-    "obj_group_tr_0156_i06",
-    "obj_group_tr_0156_i07",
-    "obj_group_tr_0156_i08",
-    "obj_group_tr_0156_i09"
-  ]
+  "positive_task": {
+    "task_id": "task_group_tr_0156_t01",
+    "valid_sources": [
+      "obj_group_tr_0156_src"
+    ],
+    "excluded_sources": [
+      "obj_group_tr_0156_i01",
+      "obj_group_tr_0156_i02",
+      "obj_group_tr_0156_i05",
+      "obj_group_tr_0156_i03",
+      "obj_group_tr_0156_i04",
+      "obj_group_tr_0156_i06",
+      "obj_group_tr_0156_i00",
+      "obj_group_tr_0156_i07",
+      "obj_group_tr_0156_i09"
+    ]
+  },
+  "negative_task": {
+    "task_id": "task_group_tr_0156_t02",
+    "valid_sources": [],
+    "excluded_sources": [
+      "obj_group_tr_0156_i00",
+      "obj_group_tr_0156_i01",
+      "obj_group_tr_0156_i02",
+      "obj_group_tr_0156_i03",
+      "obj_group_tr_0156_i04",
+      "obj_group_tr_0156_i05",
+      "obj_group_tr_0156_i06",
+      "obj_group_tr_0156_i07",
+      "obj_group_tr_0156_i08",
+      "obj_group_tr_0156_i09"
+    ]
+  }
 }

@@ -1,0 +1,8 @@
+{
+  "source_id": "obj_group_dev_0001_i04",
+  "target_id": "obj_group_dev_0001_tgt",
+  "interference_kind": "response_error",
+  "max_error": 0.17100194104308417,
+  "controlled_synthetic": true,
+  "excluded_because": "结构通过但响应误差超参考容差"
+}

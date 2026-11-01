@@ -1,11 +1,21 @@
 {
   "source": {
     "object_id": "obj_group_tr_0077_src",
-    "label": "人口增长"
+    "label": "人口增长",
+    "node_labels": {
+      "v6": "人口数",
+      "v9": "年增长率",
+      "v7": "次年人口"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0077_tgt",
-    "label": "年金账户"
+    "label": "年金账户",
+    "node_labels": {
+      "v6": "账户余额",
+      "v9": "年利率",
+      "v7": "年末余额"
+    }
   },
   "relation_type": "multiplicative_growth",
   "direction": "source → target",

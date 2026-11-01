@@ -3,21 +3,21 @@
   "object_kind": "mechanistic",
   "relation_type": "multiplicative_growth",
   "split": "train",
-  "label": "中子增殖",
+  "label": "候选源域",
   "nodes": [
     {
-      "node_id": "b4",
-      "label": "中子数",
+      "node_id": "v8",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "a4",
-      "label": "净增殖系数",
+      "node_id": "v2",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "b1",
-      "label": "下一代数量",
+      "node_id": "v5",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,53 +26,53 @@
       "edge_id": "r1",
       "edge_type": "multiplicative_growth",
       "input_nodes": [
-        "b4",
-        "a4"
+        "v8",
+        "v2"
       ],
       "output_nodes": [
-        "b1"
+        "v5"
       ],
       "roles": {
-        "b4": "current",
-        "a4": "ratio",
-        "b1": "next"
+        "v8": "current",
+        "v2": "ratio",
+        "v5": "next"
       }
     }
   ],
-  "function": "b4 * (1 + a4)",
+  "function": "v8 * (1 + v2)",
   "controllable_inputs": [
-    "b4",
-    "a4"
+    "v8",
+    "v2"
   ],
   "designated_outputs": [
-    "b1"
+    "v5"
   ],
   "baseline": [
-    20.0,
-    0.03
+    400.0,
+    0.02
   ],
   "input_scales": [
-    20.0,
-    0.03
+    400.0,
+    0.02
   ],
-  "baseline_output": 20.6,
-  "output_scale": 20.6,
+  "baseline_output": 408.0,
+  "output_scale": 408.0,
   "legal_domain": {
-    "b4": [
+    "v8": [
       0,
       null
     ],
-    "a4": [
+    "v2": [
       0,
       1
     ]
   },
   "intervention_bounds": {
-    "b4": [
+    "v8": [
       -0.2,
       0.2
     ],
-    "a4": [
+    "v2": [
       -0.2,
       0.2
     ]

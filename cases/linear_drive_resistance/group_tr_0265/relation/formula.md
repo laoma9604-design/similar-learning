@@ -1,4 +1,4 @@
-源域（热传导）：a4 / a5
-目标域（扩散）：driver / resistance
+源域（热传导）：v5 / v8
+目标域（扩散）：v5 / v8
 角色：driver / resistance / response
 领域依据：源=傅里叶热传导；目标=菲克扩散。跨域：热→传质（同为梯度驱动输运）。

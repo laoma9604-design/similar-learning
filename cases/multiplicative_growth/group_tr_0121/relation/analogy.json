@@ -1,11 +1,21 @@
 {
   "source": {
     "object_id": "obj_group_tr_0121_src",
-    "label": "肿瘤细胞"
+    "label": "肿瘤细胞",
+    "node_labels": {
+      "v5": "肿瘤细胞数",
+      "v3": "增长率",
+      "v2": "下一代数量"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0121_tgt",
-    "label": "信用卡债务"
+    "label": "信用卡债务",
+    "node_labels": {
+      "v5": "欠款金额",
+      "v3": "月利率",
+      "v2": "滚存后欠款"
+    }
   },
   "relation_type": "multiplicative_growth",
   "direction": "source → target",

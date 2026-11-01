@@ -1,11 +1,21 @@
 {
   "source": {
     "object_id": "obj_group_tr_0086_src",
-    "label": "兔子种群"
+    "label": "兔子种群",
+    "node_labels": {
+      "v8": "兔子数",
+      "v3": "繁殖增长率",
+      "v1": "下一代数量"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0086_tgt",
-    "label": "分红再投"
+    "label": "分红再投",
+    "node_labels": {
+      "v8": "持股数",
+      "v3": "分红再投比例",
+      "v1": "分红后持股"
+    }
   },
   "relation_type": "multiplicative_growth",
   "direction": "source → target",

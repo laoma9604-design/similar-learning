@@ -1,11 +1,21 @@
 {
   "source": {
     "object_id": "obj_group_tr_0130_src",
-    "label": "中子增殖"
+    "label": "中子增殖",
+    "node_labels": {
+      "v1": "中子数",
+      "v4": "净增殖系数",
+      "v5": "下一代数量"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0130_tgt",
-    "label": "通胀物价"
+    "label": "通胀物价",
+    "node_labels": {
+      "v1": "物价指数",
+      "v4": "通胀率",
+      "v5": "下期物价"
+    }
   },
   "relation_type": "multiplicative_growth",
   "direction": "source → target",

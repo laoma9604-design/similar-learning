@@ -3,21 +3,21 @@
   "object_kind": "mechanistic",
   "relation_type": "multiplicative_growth",
   "split": "train",
-  "label": "病毒复制",
+  "label": "候选源域",
   "nodes": [
     {
-      "node_id": "b4",
-      "label": "病毒数量",
+      "node_id": "v2",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "a5",
-      "label": "每代复制增长率",
+      "node_id": "v8",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "a3",
-      "label": "下一代数量",
+      "node_id": "v3",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,53 +26,53 @@
       "edge_id": "r1",
       "edge_type": "multiplicative_growth",
       "input_nodes": [
-        "b4",
-        "a5"
+        "v2",
+        "v8"
       ],
       "output_nodes": [
-        "a3"
+        "v3"
       ],
       "roles": {
-        "b4": "current",
-        "a5": "ratio",
-        "a3": "next"
+        "v2": "current",
+        "v8": "ratio",
+        "v3": "next"
       }
     }
   ],
-  "function": "b4 * (1 + a5)",
+  "function": "v2 * (1 + v8)",
   "controllable_inputs": [
-    "b4",
-    "a5"
+    "v2",
+    "v8"
   ],
   "designated_outputs": [
-    "a3"
+    "v3"
   ],
   "baseline": [
     1000.0,
-    0.08
+    0.4
   ],
   "input_scales": [
     1000.0,
-    0.08
+    0.4
   ],
-  "baseline_output": 1080.0,
-  "output_scale": 1080.0,
+  "baseline_output": 1400.0,
+  "output_scale": 1400.0,
   "legal_domain": {
-    "b4": [
+    "v2": [
       0,
       null
     ],
-    "a5": [
+    "v8": [
       0,
       1
     ]
   },
   "intervention_bounds": {
-    "b4": [
+    "v2": [
       -0.2,
       0.2
     ],
-    "a5": [
+    "v8": [
       -0.2,
       0.2
     ]

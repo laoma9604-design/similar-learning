@@ -1,11 +1,21 @@
 {
   "source": {
     "object_id": "obj_group_tr_0059_src",
-    "label": "藻类繁殖"
+    "label": "藻类繁殖",
+    "node_labels": {
+      "v9": "藻细胞数",
+      "v3": "增长率",
+      "v4": "下一代数量"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0059_tgt",
-    "label": "教育储蓄"
+    "label": "教育储蓄",
+    "node_labels": {
+      "v9": "储蓄本金",
+      "v3": "年利率",
+      "v4": "到期本息"
+    }
   },
   "relation_type": "multiplicative_growth",
   "direction": "source → target",

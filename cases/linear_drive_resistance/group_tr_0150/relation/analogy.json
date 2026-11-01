@@ -1,11 +1,21 @@
 {
   "source": {
     "object_id": "obj_group_tr_0150_src",
-    "label": "电路"
+    "label": "电路",
+    "node_labels": {
+      "v1": "电压",
+      "v2": "电阻",
+      "v9": "电流"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0150_tgt",
-    "label": "水流"
+    "label": "水流",
+    "node_labels": {
+      "v1": "压差",
+      "v2": "流阻",
+      "v9": "流量"
+    }
   },
   "relation_type": "linear_drive_resistance",
   "direction": "source → target",

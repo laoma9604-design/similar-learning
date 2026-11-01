@@ -2,22 +2,22 @@
   "object_id": "obj_group_tr_0123_tgt",
   "object_kind": "mechanistic",
   "relation_type": "multiplicative_growth",
-  "split": "train",
-  "label": "信用卡债务",
+  "split": "test",
+  "label": "目标域",
   "nodes": [
     {
-      "node_id": "current",
-      "label": "欠款金额",
+      "node_id": "v8",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "ratio",
-      "label": "月利率",
+      "node_id": "v9",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "next",
-      "label": "滚存后欠款",
+      "node_id": "v2",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,53 +26,53 @@
       "edge_id": "r1",
       "edge_type": "multiplicative_growth",
       "input_nodes": [
-        "current",
-        "ratio"
+        "v8",
+        "v9"
       ],
       "output_nodes": [
-        "next"
+        "v2"
       ],
       "roles": {
-        "current": "current",
-        "ratio": "ratio",
-        "next": "next"
+        "v8": "current",
+        "v9": "ratio",
+        "v2": "next"
       }
     }
   ],
-  "function": "current * (1 + ratio)",
+  "function": "v8 * (1 + v9)",
   "controllable_inputs": [
-    "current",
-    "ratio"
+    "v8",
+    "v9"
   ],
   "designated_outputs": [
-    "next"
+    "v2"
   ],
   "baseline": [
-    500.0,
-    0.02
+    7500.0,
+    0.5
   ],
   "input_scales": [
-    500.0,
-    0.02
+    7500.0,
+    0.5
   ],
-  "baseline_output": 510.0,
-  "output_scale": 510.0,
+  "baseline_output": 11250.0,
+  "output_scale": 11250.0,
   "legal_domain": {
-    "current": [
+    "v8": [
       0,
       null
     ],
-    "ratio": [
+    "v9": [
       0,
       1
     ]
   },
   "intervention_bounds": {
-    "current": [
+    "v8": [
       -0.2,
       0.2
     ],
-    "ratio": [
+    "v9": [
       -0.2,
       0.2
     ]

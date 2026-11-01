@@ -2,22 +2,22 @@
   "object_id": "obj_group_tr_0233_tgt",
   "object_kind": "mechanistic",
   "relation_type": "linear_drive_resistance",
-  "split": "val",
-  "label": "血流",
+  "split": "train",
+  "label": "目标域",
   "nodes": [
     {
-      "node_id": "driver",
-      "label": "血压差",
+      "node_id": "v3",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "resistance",
-      "label": "血管阻力",
+      "node_id": "v1",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "response",
-      "label": "血流量",
+      "node_id": "v2",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,26 +26,26 @@
       "edge_id": "r1",
       "edge_type": "linear_drive_resistance",
       "input_nodes": [
-        "driver",
-        "resistance"
+        "v3",
+        "v1"
       ],
       "output_nodes": [
-        "response"
+        "v2"
       ],
       "roles": {
-        "driver": "driver",
-        "resistance": "resistance",
-        "response": "response"
+        "v3": "driver",
+        "v1": "resistance",
+        "v2": "response"
       }
     }
   ],
-  "function": "driver / resistance",
+  "function": "v3 / v1",
   "controllable_inputs": [
-    "driver",
-    "resistance"
+    "v3",
+    "v1"
   ],
   "designated_outputs": [
-    "response"
+    "v2"
   ],
   "baseline": [
     800.0,
@@ -58,21 +58,21 @@
   "baseline_output": 32.0,
   "output_scale": 32.0,
   "legal_domain": {
-    "driver": [
+    "v3": [
       1e-06,
       null
     ],
-    "resistance": [
+    "v1": [
       1e-06,
       null
     ]
   },
   "intervention_bounds": {
-    "driver": [
+    "v3": [
       -0.2,
       0.2
     ],
-    "resistance": [
+    "v1": [
       -0.2,
       0.2
     ]

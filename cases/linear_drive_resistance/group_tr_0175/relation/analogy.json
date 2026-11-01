@@ -1,11 +1,21 @@
 {
   "source": {
     "object_id": "obj_group_tr_0175_src",
-    "label": "电路"
+    "label": "电路",
+    "node_labels": {
+      "v6": "电压",
+      "v2": "电阻",
+      "v7": "电流"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0175_tgt",
-    "label": "热传导"
+    "label": "热传导",
+    "node_labels": {
+      "v6": "温差",
+      "v2": "热阻",
+      "v7": "热流"
+    }
   },
   "relation_type": "linear_drive_resistance",
   "direction": "source → target",

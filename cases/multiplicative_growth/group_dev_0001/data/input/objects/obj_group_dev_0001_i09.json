@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_group_dev_0001_i09",
+  "object_kind": "mechanistic",
+  "relation_type": "multiplicative_growth",
+  "split": null,
+  "label": "候选源域",
+  "nodes": [
+    {
+      "node_id": "v7",
+      "label": "待判定变量",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "v4",
+      "label": "待判定变量",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "v1",
+      "label": "待判定变量",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "multiplicative_growth",
+      "input_nodes": [
+        "v7",
+        "v4"
+      ],
+      "output_nodes": [
+        "v1"
+      ],
+      "roles": {
+        "v7": "current",
+        "v4": "ratio",
+        "v1": "next"
+      }
+    }
+  ],
+  "function": "42000.0 + ((v7 * (1 + v4) - 42000.0) / 42000.0 + 0.34 * (exp(-((((((v7 / 40000.0 - 1) ** 2) + ((v4 / 0.05 - 1) ** 2)) / 2) ** 0.5 - 0.2) / 0.02) ** 2) - exp(-(0.2 / 0.02) ** 2))) * 42000.0",
+  "controllable_inputs": [
+    "v7",
+    "v4"
+  ],
+  "designated_outputs": [
+    "v1"
+  ],
+  "baseline": [
+    40000.0,
+    0.05
+  ],
+  "input_scales": [
+    40000.0,
+    0.05
+  ],
+  "baseline_output": 42000.0,
+  "output_scale": 42000.0,
+  "legal_domain": {
+    "v7": [
+      0,
+      null
+    ],
+    "v4": [
+      0,
+      1
+    ]
+  },
+  "intervention_bounds": {
+    "v7": [
+      -0.2,
+      0.2
+    ],
+    "v4": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "controlled_synthetic"
+  }
+}

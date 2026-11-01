@@ -3,21 +3,21 @@
   "object_kind": "mechanistic",
   "relation_type": "linear_drive_resistance",
   "split": "train",
-  "label": "渗流",
+  "label": "目标域",
   "nodes": [
     {
-      "node_id": "driver",
-      "label": "压力梯度",
+      "node_id": "v2",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "resistance",
-      "label": "渗透阻力",
+      "node_id": "v1",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "response",
-      "label": "渗流速度",
+      "node_id": "v9",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,26 +26,26 @@
       "edge_id": "r1",
       "edge_type": "linear_drive_resistance",
       "input_nodes": [
-        "driver",
-        "resistance"
+        "v2",
+        "v1"
       ],
       "output_nodes": [
-        "response"
+        "v9"
       ],
       "roles": {
-        "driver": "driver",
-        "resistance": "resistance",
-        "response": "response"
+        "v2": "driver",
+        "v1": "resistance",
+        "v9": "response"
       }
     }
   ],
-  "function": "driver / resistance",
+  "function": "v2 / v1",
   "controllable_inputs": [
-    "driver",
-    "resistance"
+    "v2",
+    "v1"
   ],
   "designated_outputs": [
-    "response"
+    "v9"
   ],
   "baseline": [
     14.4,
@@ -58,21 +58,21 @@
   "baseline_output": 2.88,
   "output_scale": 2.88,
   "legal_domain": {
-    "driver": [
+    "v2": [
       1e-06,
       null
     ],
-    "resistance": [
+    "v1": [
       1e-06,
       null
     ]
   },
   "intervention_bounds": {
-    "driver": [
+    "v2": [
       -0.2,
       0.2
     ],
-    "resistance": [
+    "v1": [
       -0.2,
       0.2
     ]

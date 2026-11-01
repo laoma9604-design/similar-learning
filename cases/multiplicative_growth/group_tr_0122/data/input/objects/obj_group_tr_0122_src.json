@@ -2,22 +2,22 @@
   "object_id": "obj_group_tr_0122_src",
   "object_kind": "mechanistic",
   "relation_type": "multiplicative_growth",
-  "split": "train",
-  "label": "肿瘤细胞",
+  "split": "test",
+  "label": "候选源域",
   "nodes": [
     {
-      "node_id": "a4",
-      "label": "肿瘤细胞数",
+      "node_id": "v5",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "a3",
-      "label": "增长率",
+      "node_id": "v4",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "a2",
-      "label": "下一代数量",
+      "node_id": "v2",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,53 +26,53 @@
       "edge_id": "r1",
       "edge_type": "multiplicative_growth",
       "input_nodes": [
-        "a4",
-        "a3"
+        "v5",
+        "v4"
       ],
       "output_nodes": [
-        "a2"
+        "v2"
       ],
       "roles": {
-        "a4": "current",
-        "a3": "ratio",
-        "a2": "next"
+        "v5": "current",
+        "v4": "ratio",
+        "v2": "next"
       }
     }
   ],
-  "function": "a4 * (1 + a3)",
+  "function": "v5 * (1 + v4)",
   "controllable_inputs": [
-    "a4",
-    "a3"
+    "v5",
+    "v4"
   ],
   "designated_outputs": [
-    "a2"
+    "v2"
   ],
   "baseline": [
     5000.0,
-    0.02
+    0.5
   ],
   "input_scales": [
     5000.0,
-    0.02
+    0.5
   ],
-  "baseline_output": 5100.0,
-  "output_scale": 5100.0,
+  "baseline_output": 7500.0,
+  "output_scale": 7500.0,
   "legal_domain": {
-    "a4": [
+    "v5": [
       0,
       null
     ],
-    "a3": [
+    "v4": [
       0,
       1
     ]
   },
   "intervention_bounds": {
-    "a4": [
+    "v5": [
       -0.2,
       0.2
     ],
-    "a3": [
+    "v4": [
       -0.2,
       0.2
     ]

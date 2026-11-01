@@ -1,12 +1,20 @@
-"""MRED 正式库生成器 —— 对象构造与三类干扰源构造。
+"""MRED 对象构造（v2：公开输入去标识）。
 
 只负责「造对象」，不落盘。所有数值都经 runtime.py 实跑验算，验不过直接抛异常。
 
+v2 相对 v1 的改动（对应 2026-11-01 评审第 3 条「公开输入泄漏标签」）：
+1. 有效源与干扰源共用同一节点 ID 池（v1..v9），都由调用方随机分派，
+   不再出现「有效源 b*、干扰源 n1/n2」这种按前缀就能区分的情况。
+2. 所有候选源的 label 统一为「候选源域」，真实领域名只进封存参考
+   与 relation/analogy.json，不再出现在公开的 data/input/objects/*.json。
+3. 候选源列表顺序由组哈希打乱，有效源不再固定在首位。
+4. 目标域节点 ID 也对齐同一池（目标域不再是 role 名），
+   避免「目标用角色名、候选源用随机名」这种结构提示。
+
 关键约定（与 data/MRED域对规格.md、T01-schema.json 一致）：
-1. baseline / input_scales 是「按 controllable_inputs 顺序」的列表 —— 最容易错的地方
+1. baseline / input_scales 是按 controllable_inputs 顺序的列表
 2. 函数字符串用节点 ID；饱和类 R_max、K 是内联常量，不是节点
 3. 饱和类 input0 必须 = K（半饱和点约束），两域相对 K 位置相同
-4. 三类干扰：结构错误（换角色/换端点）、结构同响应错（改函数）、局部扰动（局部大偏差）
 """
 import math
 import random
@@ -18,9 +26,6 @@ sys.path.insert(0, str(ROOT / "a_data"))
 
 import runtime  # noqa: E402
 
-# ============================================================
-# 每类关系的角色与输入约定
-# ============================================================
 ROLE_SPEC = {
     "multiplicative_growth": dict(
         roles=["current", "ratio", "next"],
@@ -38,16 +43,29 @@ ROLE_SPEC = {
         roles=["input", "response"],
         input_roles=["input"],
         output_role="response",
-        bounds=[-0.8, 1.0],   # 放宽：饱和反例只在进入饱和区才暴露
+        bounds=[-0.8, 1.0],
     ),
 }
 
-NODE_ID_POOL = ["a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5"]
+# 与 mred_interference.NODE_ID_POOL 保持一致：有效源、干扰源、目标域共用
+NODE_ID_POOL = ["v1", "v2", "v3", "v4", "v5", "v6", "v7", "v8", "v9"]
+
+# 公开数据里所有候选源域统一的占位标签（真实领域名只在封存侧）
+PUBLIC_SOURCE_LABEL = "候选源域"
+PUBLIC_TARGET_LABEL = "目标域"
+
+# 节点标签：中性、只说明作用，不透露领域，也不透露「这是正确答案」
+NEUTRAL_NODE_LABEL = {
+    "current": "量 A",
+    "ratio": "量 B",
+    "next": "量 C",
+    "driver": "量 A",
+    "resistance": "量 B",
+    "response": "量 C",
+    "input": "量 A",
+}
 
 
-# ============================================================
-# 函数构造与求值
-# ============================================================
 def build_function(relation_type, role_to_node, constants=None):
     r = role_to_node
     if relation_type == "multiplicative_growth":
@@ -63,23 +81,24 @@ def _eval(function, values):
     return runtime.expression_value(function, values)
 
 
-# ============================================================
-# 真实域对象构造
-# ============================================================
-def make_object(object_id, relation_type, spec_domain, seed=None):
-    """spec_domain: mred_domains 里的源/目标域描述（含 baseline 与展示名）。
+def assign_node_ids(relation_type, seed, pool=None):
+    """从统一 ID 池随机分派「角色 -> 节点 ID」。"""
+    roles = ROLE_SPEC[relation_type]["roles"]
+    rng = random.Random(seed)
+    picked = rng.sample(pool or NODE_ID_POOL, len(roles))
+    return {role: picked[i] for i, role in enumerate(roles)}
 
-    seed=None -> 节点 ID 用角色名（模板/可读）；seed 给定 -> 随机 ID（打乱顺序）。
+
+def make_object(object_id, relation_type, spec_domain, role_to_node,
+                label=None, public_label=PUBLIC_SOURCE_LABEL):
+    """构造一个 mechanistic 对象。
+
+    role_to_node 必须由调用方给出（有效源、干扰源、目标域全部走同一 ID 池）。
+    label: 封存侧使用的真实领域名；public_label: 公开数据里写的占位标签。
+    返回的对象同时带 public_label 与 _sealed_label，落盘时由写盘函数选择。
     """
     s = ROLE_SPEC[relation_type]
     roles = s["roles"]
-
-    if seed is None:
-        role_to_node = {role: role for role in roles}
-    else:
-        rng = random.Random(seed)
-        picked = rng.sample(NODE_ID_POOL, len(roles))
-        role_to_node = {role: picked[i] for i, role in enumerate(roles)}
 
     baseline_by_role = dict(spec_domain["baseline"])
     constants = {k: spec_domain[k] for k in ("R_max", "K") if k in spec_domain}
@@ -103,15 +122,16 @@ def make_object(object_id, relation_type, spec_domain, seed=None):
             legal_domain[nid] = [1e-6, None]
         intervention_bounds[nid] = list(s["bounds"])
 
-    nodes = [dict(node_id=role_to_node[r], label=spec_domain["names"][r], type="positive_scalar")
-             for r in roles]
+    # 节点标签也去标识：不写「当前本金」这类领域词，只写中性角色描述
+    nodes = [dict(node_id=role_to_node[r], label=NEUTRAL_NODE_LABEL[r],
+                  type="positive_scalar") for r in roles]
 
     obj = {
         "object_id": object_id,
         "object_kind": "mechanistic",
         "relation_type": relation_type,
         "split": None,
-        "label": spec_domain["object_label"],
+        "label": public_label,
         "nodes": nodes,
         "edges": [dict(
             edge_id="r1",
@@ -124,25 +144,27 @@ def make_object(object_id, relation_type, spec_domain, seed=None):
         "controllable_inputs": input_nodes,
         "designated_outputs": output_nodes,
         "baseline": baseline_list,
-        "input_scales": list(baseline_list),  # 尺度规则：input_scales = baseline 本身
+        "input_scales": list(baseline_list),
         "baseline_output": baseline_output,
-        "output_scale": baseline_output,      # 尺度规则：output_scale = baseline_output
+        "output_scale": baseline_output,
         "legal_domain": legal_domain,
         "intervention_bounds": intervention_bounds,
-        "provenance": {"dataset": "mred", "original_id": None, "structure_source": "provided"},
+        "provenance": {"dataset": "mred", "original_id": None,
+                       "structure_source": "provided"},
     }
-    # 饱和类的内联常量记录下来，供干扰源构造重建函数用（不落盘，落盘前会剔除）
     if relation_type == "saturation_response":
         obj["_R_max"] = spec_domain["R_max"]
         obj["_K"] = spec_domain["K"]
+    # 封存用（落盘前剔除，只写进 sealed/ 与 relation/analogy.json）
+    if label is not None:
+        obj["_sealed_label"] = label
+        obj["_sealed_node_labels"] = {role_to_node[r]: spec_domain["names"][r]
+                                     for r in roles}
     return obj, role_to_node
 
 
-# ============================================================
-# 正例验证：两域归一化响应必须处处相等（L1010 解析正例响应等价依据）
-# ============================================================
-def positive_max_deviation(src_obj, tgt_obj, node_map, src_roles, tgt_roles):
-    """node_map: 源节点ID -> 目标节点ID。反向用它把目标干预翻回源域。"""
+def positive_max_deviation(src_obj, tgt_obj, node_map):
+    """正例响应等价性：二维 u 网格逐点比对，两域归一化响应必须相等。"""
     tgt_to_src = {v: k for k, v in node_map.items()}
     tgt_inputs = tgt_obj["controllable_inputs"]
     max_dev = 0.0
@@ -154,209 +176,152 @@ def positive_max_deviation(src_obj, tgt_obj, node_map, src_roles, tgt_roles):
         rs = runtime.normalized_response(src_obj, u_s)[src_obj["designated_outputs"][0]]
         return abs(rs - rt), rs, rt
 
-    if len(tgt_inputs) == 2:
-        lo = tgt_obj["intervention_bounds"][tgt_inputs[0]][0]
-        hi = tgt_obj["intervention_bounds"][tgt_inputs[0]][1]
-        grid = [lo, lo / 2, 0.0, hi / 2, hi]
-        for u1 in grid:
-            for u2 in grid:
-                u_t = {tgt_inputs[0]: u1, tgt_inputs[1]: u2}
-                d, rs, rt = dev_at(u_t)
-                if d > max_dev:
-                    max_dev, worst = d, (u_t, rs, rt)
-    else:
-        lo = tgt_obj["intervention_bounds"][tgt_inputs[0]][0]
-        hi = tgt_obj["intervention_bounds"][tgt_inputs[0]][1]
-        grid = [lo, lo / 2, 0.0, 0.5, 0.75, hi]
-        for u in grid:
-            u_t = {tgt_inputs[0]: u}
-            d, rs, rt = dev_at(u_t)
-            if d > max_dev:
-                max_dev, worst = d, (u_t, rs, rt)
+    grids = []
+    for nid in tgt_inputs:
+        lo, hi = tgt_obj["intervention_bounds"][nid]
+        grids.append([lo, lo / 2, 0.0, hi / 2, hi])
+
+    # 所有输入维度的笛卡尔积，一维和二维统一处理（第一版二维只做了 5x5 且漏了
+    # 非主输入维度的边界组合，这里显式覆盖全组合）
+    import itertools
+    for combo in itertools.product(*grids):
+        u_t = dict(zip(tgt_inputs, combo))
+        d, rs, rt = dev_at(u_t)
+        if d > max_dev:
+            max_dev, worst = d, (u_t, rs, rt)
     return max_dev, worst
 
 
-# ============================================================
-# 干扰源：统一用「单输入合成函数」表达，绕过双输入角色固定的复杂性
-# ============================================================
-def _pair_input_baseline(pair, relation_type):
-    """取该域对源域工作点上「主输入」的 baseline（乘性取 current、线性取 driver、饱和取 input）。"""
-    if relation_type == "multiplicative_growth":
-        return pair["source"]["baseline"]["current"]
-    if relation_type == "linear_drive_resistance":
-        return pair["source"]["baseline"]["driver"]
-    return pair["source"]["baseline"]["input"]
+def scan_error(src_obj, tgt_obj, u_grid):
+    """在给定 u 网格上算 max min(1,(rs-rt)^2) 与见证点。
 
-
-def _target_response_expr(pair, relation_type):
-    """给出目标域归一化响应对 u 的解析式，用输入节点 x 和 baseline 表达。
-
-    返回 (expr_of_x, baseline_in)，expr 已是「输出值」而非归一化值。
+    u_grid: list[dict(源节点ID -> u)]，调用方负责把目标维度映射到源维度。
     """
-    b = _pair_input_baseline(pair, relation_type)
-    if relation_type == "multiplicative_growth":
-        # next = current*(1+ratio)，仅扰动 current，ratio 固定
-        ratio = pair["source"]["baseline"]["ratio"]
-        return f"x1 * (1 + {ratio})", b
-    if relation_type == "linear_drive_resistance":
-        res = pair["source"]["baseline"]["resistance"]
-        return f"x1 / {res}", b
-    rmax, k = pair["source"]["R_max"], pair["source"]["K"]
-    return f"{rmax} * x1 / ({k} + x1)", b
-
-
-def make_structure_error(pair, relation_type, seed, kind="swap_roles"):
-    """结构错误：角色或端点错配，结构层面就不成立。
-
-    做法：源域把「主输入」与「输出」的对齐关系弄反 —— 即让源域的输出节点
-    实际由另一个量决定（把响应算成了另一个变量），类型/角色标注照抄目标域，
-    但实际函数与标注不符。这属于 tab:mred「交换角色 / 改变输入输出端」。
-    """
-    b = _pair_input_baseline(pair, relation_type)
-    if kind == "swap_roles":
-        # 交换：把输出算成「输入本身」（响应=输入，无关系结构）
-        func = "x1"
-        out_scale_val = b
-    elif kind == "swap_endpoints":
-        # 端点反接：把输入算成「响应被除回输入」，输出对输入的依赖方向反转
-        func = f"({b} * {b}) / (x1 + 1e-9)"
-        out_scale_val = _eval(func, {"x1": b})
-    else:
-        raise ValueError("unknown structure error kind: " + kind)
-
-    bout = _eval(func, {"x1": b})
-    return dict(
-        object_id=f"obj_inf_struct_{kind}_{seed}",
-        object_kind="mechanistic",
-        relation_type=relation_type,
-        split=None,
-        label="结构差异源",
-        nodes=[dict(node_id="x1", label="输入量", type="positive_scalar"),
-               dict(node_id="y1", label="响应量", type="positive_scalar")],
-        edges=[dict(edge_id="r1", edge_type=relation_type,
-                    input_nodes=["x1"], output_nodes=["y1"],
-                    roles={"x1": ROLE_SPEC[relation_type]["input_roles"][0],
-                           "y1": ROLE_SPEC[relation_type]["output_role"]})],
-        function=func,
-        controllable_inputs=["x1"],
-        designated_outputs=["y1"],
-        baseline=[b],
-        input_scales=[b],
-        baseline_output=bout,
-        output_scale=out_scale_val if out_scale_val != 0 else 1.0,
-        legal_domain={"x1": [1e-6, None]},
-        intervention_bounds={"x1": [-0.2, 0.2]},
-        provenance={"dataset": "mred", "original_id": None, "structure_source": "provided"},
-    ), "structure_error"
-
-
-def make_response_error(pair, relation_type, seed, kind="power_law"):
-    """结构同响应错：类型、角色、端点全对，只有函数形式不同。
-
-    kind: power_law（幂律）/ hill2（协同）/ inverse_square（反比平方）
-    """
-    expr, b = _target_response_expr(pair, relation_type)
-    if kind == "power_law":
-        # 目标若线性，改成二次；若乘性/饱和，改成幂次放大
-        func = f"(x1 * x1) / {b}"
-    elif kind == "hill2":
-        rmax = pair["source"].get("R_max") or b
-        k = pair["source"].get("K") or b
-        func = f"{rmax} * x1 ** 2 / ({k} ** 2 + x1 ** 2)"
-    elif kind == "inverse_square":
-        func = f"({b} * {b}) / (x1 + 1e-9)"
-    else:
-        raise ValueError("unknown response error kind: " + kind)
-
-    bout = _eval(func, {"x1": b})
-    if not math.isfinite(bout) or bout <= 0:
-        raise ValueError(f"响应错误源 baseline_output 非法: {bout}")
-    return dict(
-        object_id=f"obj_inf_response_{kind}_{seed}",
-        object_kind="mechanistic",
-        relation_type=relation_type,
-        split=None,
-        label="响应差异源",
-        nodes=[dict(node_id="x1", label="输入量", type="positive_scalar"),
-               dict(node_id="y1", label="响应量", type="positive_scalar")],
-        edges=[dict(edge_id="r1", edge_type=relation_type,
-                    input_nodes=["x1"], output_nodes=["y1"],
-                    roles={"x1": ROLE_SPEC[relation_type]["input_roles"][0],
-                           "y1": ROLE_SPEC[relation_type]["output_role"]})],
-        function=func,
-        controllable_inputs=["x1"],
-        designated_outputs=["y1"],
-        baseline=[b],
-        input_scales=[b],
-        baseline_output=bout,
-        output_scale=bout,
-        legal_domain={"x1": [1e-6, None]},
-        intervention_bounds={"x1": [-0.2, 0.2]},
-        provenance={"dataset": "mred", "original_id": None, "structure_source": "provided"},
-    ), "response_error"
-
-
-def make_local_error(pair, relation_type, seed, amplitude=0.3, center=0.13, width=0.03):
-    """局部扰动：结构、角色、端点全对，只在输入域子区间产生大偏差。
-
-    源输出 = 目标输出 + b(u)*output_scale，b 取任务书 L170 双高斯。
-    单输出误差 = b(u)^2；稀疏点最大 0.0122 < 0.05，u=0.09 附近超容差。
-    """
-    base_expr, b = _target_response_expr(pair, relation_type)
-    scale = _eval(base_expr, {"x1": b})
-    # u = x1/b - 1；把 b(u) 用 x1 表达
-    func = (f"{base_expr} + {scale * amplitude} * "
-            f"(exp(-(((x1 / {b} - 1) - {center}) / {width}) ** 2) "
-            f"- exp(-({center} / {width}) ** 2))")
-    bout = _eval(func, {"x1": b})
-    return dict(
-        object_id=f"obj_inf_local_{seed}",
-        object_kind="mechanistic",
-        relation_type=relation_type,
-        split=None,
-        label="局部差异源",
-        nodes=[dict(node_id="x1", label="输入量", type="positive_scalar"),
-               dict(node_id="y1", label="响应量", type="positive_scalar")],
-        edges=[dict(edge_id="r1", edge_type=relation_type,
-                    input_nodes=["x1"], output_nodes=["y1"],
-                    roles={"x1": ROLE_SPEC[relation_type]["input_roles"][0],
-                           "y1": ROLE_SPEC[relation_type]["output_role"]})],
-        function=func,
-        controllable_inputs=["x1"],
-        designated_outputs=["y1"],
-        baseline=[b],
-        input_scales=[b],
-        baseline_output=bout,
-        output_scale=scale,
-        legal_domain={"x1": [1e-6, None]},
-        intervention_bounds={"x1": [-0.2, 0.2]},
-        provenance={"dataset": "mred", "original_id": None, "structure_source": "provided"},
-    ), "local_perturbation"
-
-
-# ============================================================
-# 干扰定性验证
-# ============================================================
-def scan_error(src_obj, tgt_obj, relation_type):
-    """在单输入扫描点上算最大 min(1,(rs-rt)^2) 与见证点。"""
-    b_t = tgt_obj["baseline"][0]
-    b_s = src_obj["baseline"][0]
     best = (0.0, None)
-    grid = [i / 100 for i in range(-20, 21)]  # u ∈ [-0.2, 0.2] 步长 0.01
-    for u in grid:
+    for u_s, u_t in u_grid:
         try:
-            rt = runtime.normalized_response(tgt_obj, {tgt_obj["controllable_inputs"][0]: u})
-            rs = runtime.normalized_response(src_obj, {src_obj["controllable_inputs"][0]: u})
+            rt = list(runtime.normalized_response(tgt_obj, u_t).values())[0]
+            rs = list(runtime.normalized_response(src_obj, u_s).values())[0]
         except ValueError:
             continue
-        rtv = list(rt.values())[0]
-        rsv = list(rs.values())[0]
-        err = min(1.0, (rsv - rtv) ** 2)
+        err = min(1.0, (rs - rt) ** 2)
         if err > best[0]:
-            best = (err, (u, rsv, rtv))
+            best = (err, dict(u_target=u_t, u_source=u_s, r_target=rt, r_source=rs))
     return best
 
 
 def bump(u, amplitude=0.3, center=0.13, width=0.03):
-    """任务书 L170 局部扰动原型（与 verify_cases.py 一致）。"""
-    return amplitude * (math.exp(-((u - center) / width) ** 2) - math.exp(-(center / width) ** 2))
+    """任务书 L172 局部扰动原型（与 verify_cases.py 一致）。"""
+    return amplitude * (math.exp(-((u - center) / width) ** 2)
+                        - math.exp(-(center / width) ** 2))
+
+
+# ============================================================
+# 允许映射空间的枚举（任务书 L1008「小图可枚举类型兼容的一一映射」）
+# ============================================================
+def enumerate_allowed_mappings(src_obj, tgt_obj):
+    """枚举全部「类型兼容」的节点双射 × 超边双射（L1008 小图枚举）。
+
+    任务书 L1008 要求负任务核验整个候选库，且「不能只证明预期映射失败」。
+    本库规模下可以完全枚举：
+      - 节点映射：所有双射中满足 类型相等 的那些
+        （本库节点全是 positive_scalar，所以 3 节点 = 3! = 6 个，饱和类 2 节点 = 2 个）
+      - 超边映射：超边数相等，唯一
+
+    注意：这里只按「类型」过滤（与任务书 L1008 的「类型兼容的一一映射」一致），
+    角色/端点/双射等其余条件在 check_structure_condition 里逐项判定。
+    也就是说，枚举出来的是**待检候选**，不是「已知合法」的映射；
+    每个候选都必须真的跑一遍结构检查和响应检验，不能因为没有角色对齐就直接判失败
+    （v2 早期版本就是这么做的，会把「未验证」写成「已验证」）。
+    实测：本库所有源域的最优映射误差 ≥ 0.49，远超 0.05 容差，
+    因此不存在「非角色对齐但实际有效」的映射；这一探测见 data/MRED数据说明.md 第七节。
+
+    返回 list[(fV, fE)]，fV: 源节点->目标节点，fE: 源超边->目标超边。
+    """
+    import itertools
+    snodes = [n["node_id"] for n in src_obj["nodes"]]
+    tnodes = [n["node_id"] for n in tgt_obj["nodes"]]
+    stype = {n["node_id"]: n["type"] for n in src_obj["nodes"]}
+    ttype = {n["node_id"]: n["type"] for n in tgt_obj["nodes"]}
+    if len(snodes) != len(tnodes):
+        return []
+    out = []
+    for perm in itertools.permutations(tnodes):
+        fV = dict(zip(snodes, perm))
+        if any(stype[v] != ttype[fV[v]] for v in snodes):
+            continue
+        out.append((fV, {"r1": "r1"}))
+    return out
+
+
+def check_structure_condition(src_obj, tgt_obj, fV, fE):
+    """按式(eq:structure) 逐项检查一个具体映射。返回 (是否通过, 失败项列表)。
+
+    检查项与 L1034 的统一清单对应：
+      节点双射 / 超边双射 / 每节点类型 / 每超边类型 / 输入集合 / 输出集合 /
+      每节点-超边角色
+
+    另外加一项「端点标注与实际依赖一致」：任务书 L1000 把「改变输入输出端」
+    列为结构错误的构造方式，而纯标注比对看不出这种错（标注照抄目标域就能过），
+    所以用数值探测确认每个被标注为输入的节点确实影响输出。
+    """
+    fails = []
+    snodes = [n["node_id"] for n in src_obj["nodes"]]
+    tnodes = [n["node_id"] for n in tgt_obj["nodes"]]
+    if set(fV) != set(snodes) or set(fV.values()) != set(tnodes) \
+            or len(set(fV.values())) != len(fV):
+        fails.append("节点双射")
+    se_by_id = {e["edge_id"]: e for e in src_obj["edges"]}
+    te_by_id = {e["edge_id"]: e for e in tgt_obj["edges"]}
+    if set(fE) != set(se_by_id) or set(fE.values()) != set(te_by_id) \
+            or len(set(fE.values())) != len(fE):
+        fails.append("超边双射")
+    snode_t = {n["node_id"]: n["type"] for n in src_obj["nodes"]}
+    tnode_t = {n["node_id"]: n["type"] for n in tgt_obj["nodes"]}
+    for v in snodes:
+        w = fV.get(v)
+        if w is None or snode_t[v] != tnode_t[w]:
+            fails.append(f"节点类型:{v}")
+    for a, e_s in se_by_id.items():
+        e_t = te_by_id.get(fE.get(a))
+        if e_t is None:
+            fails.append(f"超边:{a}")
+            continue
+        if e_s["edge_type"] != e_t["edge_type"]:
+            fails.append(f"超边类型:{a}")
+        if [fV.get(v) for v in e_s["input_nodes"]] != e_t["input_nodes"]:
+            fails.append(f"输入集合:{a}")
+        if [fV.get(v) for v in e_s["output_nodes"]] != e_t["output_nodes"]:
+            fails.append(f"输出集合:{a}")
+        for v in snodes:
+            if v in e_s["roles"]:
+                if e_s["roles"][v] != e_t["roles"].get(fV.get(v)):
+                    fails.append(f"角色:{v}")
+    # 端点标注与实际依赖是否一致（L1000 的「改变输入输出端」）
+    ok_dep, dead = structural_claim_ok(src_obj)
+    if not ok_dep:
+        for v in dead:
+            fails.append(f"输入端点无效:{v}")
+    return (len(fails) == 0), fails
+
+
+def structural_claim_ok(obj, rel_tol=1e-9):
+    """数值探测「超边端点标注是否与函数实际依赖一致」。
+
+    对每个被标注为输入端的节点：把它的实际值从 baseline 改动 +10%，
+    输出必须随之变化。若输出完全不变，说明这个节点实际上不是输入，
+    端点/角色标注与函数不符 —— 这就是任务书 L1000 的「改变输入输出端」。
+
+    返回 (是否一致, 不被实际依赖的节点列表)
+    """
+    out_id = obj["designated_outputs"][0]
+    base = dict(zip(obj["controllable_inputs"], obj["baseline"]))
+    y0 = runtime.evaluate_object(obj, base)[out_id]
+    dead = []
+    for nid in obj["controllable_inputs"]:
+        probe = dict(base)
+        probe[nid] = base[nid] * 1.1
+        y1 = runtime.evaluate_object(obj, probe)[out_id]
+        if abs(y1 - y0) <= rel_tol * max(1.0, abs(y0)):
+            dead.append(nid)
+    return (len(dead) == 0), dead

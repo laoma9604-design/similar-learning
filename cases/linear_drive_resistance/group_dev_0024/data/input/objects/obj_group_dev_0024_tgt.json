@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_group_dev_0024_tgt",
+  "object_kind": "mechanistic",
+  "relation_type": "linear_drive_resistance",
+  "split": "dev",
+  "label": "目标域",
+  "nodes": [
+    {
+      "node_id": "v5",
+      "label": "量 A",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "v8",
+      "label": "量 B",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "v9",
+      "label": "量 C",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "linear_drive_resistance",
+      "input_nodes": [
+        "v5",
+        "v8"
+      ],
+      "output_nodes": [
+        "v9"
+      ],
+      "roles": {
+        "v5": "driver",
+        "v8": "resistance",
+        "v9": "response"
+      }
+    }
+  ],
+  "function": "v5 / v8",
+  "controllable_inputs": [
+    "v5",
+    "v8"
+  ],
+  "designated_outputs": [
+    "v9"
+  ],
+  "baseline": [
+    144.0,
+    7.5
+  ],
+  "input_scales": [
+    144.0,
+    7.5
+  ],
+  "baseline_output": 19.2,
+  "output_scale": 19.2,
+  "legal_domain": {
+    "v5": [
+      1e-06,
+      null
+    ],
+    "v8": [
+      1e-06,
+      null
+    ]
+  },
+  "intervention_bounds": {
+    "v5": [
+      -0.2,
+      0.2
+    ],
+    "v8": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "provided"
+  }
+}

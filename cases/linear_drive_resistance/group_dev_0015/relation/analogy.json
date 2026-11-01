@@ -1,0 +1,25 @@
+{
+  "source": {
+    "object_id": "obj_group_dev_0015_src",
+    "label": "电路",
+    "node_labels": {
+      "v4": "电压",
+      "v5": "电阻",
+      "v1": "电流"
+    }
+  },
+  "target": {
+    "object_id": "obj_group_dev_0015_tgt",
+    "label": "水流",
+    "node_labels": {
+      "v4": "压差",
+      "v5": "流阻",
+      "v1": "流量"
+    }
+  },
+  "relation_type": "linear_drive_resistance",
+  "direction": "source → target",
+  "pair_id": "lin_01",
+  "domain_evidence": "源=欧姆定律 I=V/R；目标=泊肃叶/达西定律 Q=ΔP/R。跨域：电→流体。",
+  "simplification_assumption": null
+}

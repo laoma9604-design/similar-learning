@@ -1,4 +1,4 @@
-源域（电路）：a3 / b4
-目标域（血流）：driver / resistance
+源域（电路）：v6 / v5
+目标域（血流）：v6 / v5
 角色：driver / resistance / response
 领域依据：源=欧姆定律；目标=血流阻力 Q=ΔP/Rv。跨域：电→生理。

@@ -1,11 +1,21 @@
 {
   "source": {
     "object_id": "obj_group_tr_0198_src",
-    "label": "电路"
+    "label": "电路",
+    "node_labels": {
+      "v6": "电压",
+      "v3": "电阻",
+      "v7": "电流"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0198_tgt",
-    "label": "力学阻尼"
+    "label": "力学阻尼",
+    "node_labels": {
+      "v6": "力",
+      "v3": "阻尼系数",
+      "v7": "速度"
+    }
   },
   "relation_type": "linear_drive_resistance",
   "direction": "source → target",

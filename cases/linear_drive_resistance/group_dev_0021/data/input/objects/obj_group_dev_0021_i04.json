@@ -1,0 +1,85 @@
+{
+  "object_id": "obj_group_dev_0021_i04",
+  "object_kind": "mechanistic",
+  "relation_type": "linear_drive_resistance",
+  "split": null,
+  "label": "候选源域",
+  "nodes": [
+    {
+      "node_id": "v4",
+      "label": "待判定变量",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "v7",
+      "label": "待判定变量",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "v2",
+      "label": "待判定变量",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "linear_drive_resistance",
+      "input_nodes": [
+        "v4",
+        "v7"
+      ],
+      "output_nodes": [
+        "v2"
+      ],
+      "roles": {
+        "v4": "driver",
+        "v7": "resistance",
+        "v2": "response"
+      }
+    }
+  ],
+  "function": "16.0 + ((v4 / v7 - 16.0) / 16.0 + 0.28 * (exp(-((((((v4 / 80.0 - 1) ** 2) + ((v7 / 5.0 - 1) ** 2)) / 2) ** 0.5 - 0.15) / 0.015) ** 2) - exp(-(0.15 / 0.015) ** 2))) * 16.0",
+  "controllable_inputs": [
+    "v4",
+    "v7"
+  ],
+  "designated_outputs": [
+    "v2"
+  ],
+  "baseline": [
+    80.0,
+    5.0
+  ],
+  "input_scales": [
+    80.0,
+    5.0
+  ],
+  "baseline_output": 16.0,
+  "output_scale": 16.0,
+  "legal_domain": {
+    "v4": [
+      1e-06,
+      null
+    ],
+    "v7": [
+      1e-06,
+      null
+    ]
+  },
+  "intervention_bounds": {
+    "v4": [
+      -0.2,
+      0.2
+    ],
+    "v7": [
+      -0.2,
+      0.2
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "controlled_synthetic"
+  }
+}

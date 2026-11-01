@@ -1,11 +1,21 @@
 {
   "source": {
     "object_id": "obj_group_tr_0232_src",
-    "label": "电路"
+    "label": "电路",
+    "node_labels": {
+      "v5": "电压",
+      "v9": "电阻",
+      "v7": "电流"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0232_tgt",
-    "label": "血流"
+    "label": "血流",
+    "node_labels": {
+      "v5": "血压差",
+      "v9": "血管阻力",
+      "v7": "血流量"
+    }
   },
   "relation_type": "linear_drive_resistance",
   "direction": "source → target",

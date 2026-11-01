@@ -1,14 +1,14 @@
 {
   "driver": {
-    "source": "b3",
-    "target": "driver"
+    "source": "v4",
+    "target": "v4"
   },
   "resistance": {
-    "source": "a1",
-    "target": "resistance"
+    "source": "v3",
+    "target": "v3"
   },
   "response": {
-    "source": "b2",
-    "target": "response"
+    "source": "v6",
+    "target": "v6"
   }
 }

@@ -2,16 +2,35 @@
   "group_id": "group_dev_0001",
   "dataset": "mred",
   "relation_type": "multiplicative_growth",
-  "schema_version": "topoadv-schema-0.3.0-draft",
-  "vocab_version": "topoadv-vocab-0.1.0-draft",
+  "schema_version": "topoadv-schema-0.3.1",
+  "vocab_version": "topoadv-vocab-0.1.1",
   "split": "dev",
+  "pair_id": "mult_02",
+  "variant_index": 1,
   "object_ids": [
-    "obj_bank_compound_interest",
-    "obj_bacteria_growth",
-    "obj_synthetic_square"
+    "obj_group_dev_0001_tgt",
+    "obj_group_dev_0001_i02",
+    "obj_group_dev_0001_i01",
+    "obj_group_dev_0001_i07",
+    "obj_group_dev_0001_i00",
+    "obj_group_dev_0001_src",
+    "obj_group_dev_0001_i06",
+    "obj_group_dev_0001_i04",
+    "obj_group_dev_0001_i05",
+    "obj_group_dev_0001_i09",
+    "obj_group_dev_0001_i03"
   ],
   "task_ids": [
-    "task_dev_0001a",
-    "task_dev_0001b"
-  ]
+    "task_group_dev_0001_t01",
+    "task_group_dev_0001_t02"
+  ],
+  "task_counts": {
+    "positive": 1,
+    "negative": 1,
+    "total": 2
+  },
+  "source_counts": {
+    "positive": 10,
+    "negative": 10
+  }
 }

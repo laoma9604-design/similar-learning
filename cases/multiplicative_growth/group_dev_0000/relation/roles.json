@@ -1,0 +1,14 @@
+{
+  "current": {
+    "source": "v5",
+    "target": "v5"
+  },
+  "ratio": {
+    "source": "v4",
+    "target": "v4"
+  },
+  "next": {
+    "source": "v3",
+    "target": "v3"
+  }
+}

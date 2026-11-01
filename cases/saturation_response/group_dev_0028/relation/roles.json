@@ -1,0 +1,10 @@
+{
+  "input": {
+    "source": "v6",
+    "target": "v6"
+  },
+  "response": {
+    "source": "v9",
+    "target": "v9"
+  }
+}

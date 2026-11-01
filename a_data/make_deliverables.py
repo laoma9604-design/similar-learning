@@ -5,6 +5,7 @@
 - L1530 A 提交「数据生成与适配代码、独立参考标注、划分清单」
 - L1197 独立参考标注单独存放，只供评价器读取
 
+v2 改动（2026-11-01）：列名不再含 positive/negative 字样（L1006 防泄露），
 只读 cases/，不改任何正式数据。
 """
 import csv
@@ -40,6 +41,8 @@ def main():
     for rel, g in groups:
         m = json.loads((g / "manifest.json").read_text(encoding="utf-8"))
         ms = json.loads((g / "manifest.sealed.json").read_text(encoding="utf-8"))
+        pos = ms["positive_task"]
+        neg = ms["negative_task"]
         split_rows.append(dict(
             group_id=m["group_id"],
             split=m["split"],
@@ -47,10 +50,10 @@ def main():
             pair_id=m["pair_id"],
             variant_index=m["variant_index"],
             object_count=len(m["object_ids"]),
-            positive_task=m["task_ids"][0],
-            negative_task=m["task_ids"][1],
-            valid_source=ms["valid_sources"][0],
-            excluded_source_count=len(ms["excluded_sources"]),
+            task_with_valid=pos["task_id"],
+            task_without_valid=neg["task_id"],
+            valid_source=pos["valid_sources"][0],
+            excluded_source_count=len(pos["excluded_sources"]),
             has_intervention_points="yes" if (g / "sealed/intervention_points.json").exists() else "no",
         ))
 
@@ -65,7 +68,6 @@ def main():
     print(f"  划分: {dict(cnt)}")
 
     # ---------------- 2) reference_all.jsonl 参考标注汇总 ----------------
-    # 每条一行，只含封存内容，供评价器流式读取，无需翻 300 个文件
     ref_path = DATA / "reference_all.jsonl"
     n = 0
     with ref_path.open("w", encoding="utf-8", newline="\n") as f:
@@ -83,6 +85,7 @@ def main():
                     valid=rec["valid"],
                     exclusions=rec["exclusions"],
                     reference_tolerance=rec["reference_tolerance"],
+                    allowed_mappings_total=rec.get("allowed_mappings_total"),
                     status=rec["status"],
                     positive_max_deviation=rec.get("positive_max_deviation"),
                     full_library_verified=rec.get("full_library_verified"),
@@ -98,12 +101,21 @@ def main():
     if len(split_rows) != 300:
         print(f"  FAIL splits.csv 行数 {len(split_rows)} != 300")
         ok = False
-    if cnt != Counter(dict(train=210, val=45, test=45)):
-        print(f"  FAIL 划分 {dict(cnt)}")
+    if sum(cnt.values()) != 300:
+        print(f"  FAIL 划分合计 {sum(cnt.values())} != 300")
         ok = False
     if n != 600:
         print(f"  FAIL reference_all.jsonl {n} 条 != 600")
         ok = False
+    # 同一域对不跨划分
+    pair_split = {}
+    for r in split_rows:
+        pair_split.setdefault((r["relation_type"], r["pair_id"]), set()).add(r["split"])
+    leak = [k for k, v in pair_split.items() if len(v) > 1]
+    if leak:
+        print(f"  FAIL {len(leak)} 个域对跨划分")
+        ok = False
+    print(f"  域对跨划分: {len(leak)}")
 
     labels = Counter()
     with ref_path.open(encoding="utf-8") as f:
@@ -114,18 +126,34 @@ def main():
         ok = False
     print(f"  正负任务: {dict(labels)}")
 
-    # 负任务必须全库核验
+    # 负任务必须全库核验，且带见证
     bad = []
     with ref_path.open(encoding="utf-8") as f:
         for line in f:
             r = json.loads(line)
-            if r["label"] == "negative":
-                if not r["full_library_verified"] or len(r["exclusions"]) != 10 or r["valid"]:
-                    bad.append(r["task_id"])
+            if r["label"] != "negative":
+                continue
+            if not r["full_library_verified"] or len(r["exclusions"]) != 10 or r["valid"]:
+                bad.append(r["task_id"])
+                continue
+            if not r.get("allowed_mappings_total"):
+                bad.append(r["task_id"])
+                continue
+            # 结构错误类靠「全部映射结构失败」排除（证据在 detail），
+            # 响应错误/局部扰动类必须有顶层见证——与生成器口径一致
+            for e in r["exclusions"]:
+                if e.get("kind") == "structure_error":
+                    if not e.get("detail") or not e.get("candidate_mappings"):
+                        bad.append(r["task_id"])
+                        break
+                else:
+                    if not e.get("witness") or not e.get("max_error"):
+                        bad.append(r["task_id"])
+                        break
     if bad:
         print(f"  FAIL 负任务全库核验不完整: {bad[:3]}")
         ok = False
-    print(f"  负任务全库核验: {'全部通过' if not bad else '有问题'}")
+    print(f"  负任务全库核验（含见证）: {'全部通过' if not bad else '有问题'}")
 
     print("\n" + ("完成。" if ok else "有问题，见上。"))
     return 0 if ok else 1

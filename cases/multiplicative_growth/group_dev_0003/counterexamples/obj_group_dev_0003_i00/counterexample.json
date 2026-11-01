@@ -1,0 +1,8 @@
+{
+  "source_id": "obj_group_dev_0003_i00",
+  "target_id": "obj_group_dev_0003_tgt",
+  "interference_kind": "local_perturbation",
+  "max_error": 0.09000000000000002,
+  "controlled_synthetic": true,
+  "excluded_because": "结构通过但响应误差超参考容差"
+}

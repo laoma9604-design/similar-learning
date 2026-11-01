@@ -1,11 +1,8 @@
 {
   "source_id": "obj_group_tr_0153_i06",
   "target_id": "obj_group_tr_0153_tgt",
-  "node_map": {
-    "n1": "driver",
-    "n2": "response"
-  },
   "interference_kind": "response_error",
-  "max_error": 0.05759999999999997,
-  "controlled_synthetic": true
+  "max_error": 0.18062500000000023,
+  "controlled_synthetic": true,
+  "excluded_because": "结构通过但响应误差超参考容差"
 }

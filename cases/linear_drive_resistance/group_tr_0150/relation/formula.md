@@ -1,4 +1,4 @@
-源域（电路）：a1 / a4
-目标域（水流）：driver / resistance
+源域（电路）：v1 / v2
+目标域（水流）：v1 / v2
 角色：driver / resistance / response
 领域依据：源=欧姆定律 I=V/R；目标=泊肃叶/达西定律 Q=ΔP/R。跨域：电→流体。

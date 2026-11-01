@@ -1,0 +1,8 @@
+{
+  "source_id": "obj_group_dev_0020_i09",
+  "target_id": "obj_group_dev_0020_tgt",
+  "interference_kind": "structure_error",
+  "max_error": 0.08999999999999993,
+  "controlled_synthetic": true,
+  "excluded_because": "结构不成立（角色/端点与函数实际依赖不符）"
+}

@@ -21,7 +21,9 @@ groups = sorted(ROOT.glob("cases/*/group_tr_*"))
 print(len(groups))                    # 300
 
 g = groups[0]
-task = json.loads((g / "data/input/tasks/positive.json").read_text(encoding="utf-8"))
+# 任务文件名不编码正负：一律 task_<组>_t01.json / _t02.json
+tasks = sorted((g / "data/input/tasks").glob("*.json"))
+task = json.loads(tasks[0].read_text(encoding="utf-8"))
 print(task["target_id"], len(task["source_ids"]))   # 目标 + 10 个候选源域
 ```
 
@@ -33,11 +35,11 @@ print(task["target_id"], len(task["source_ids"]))   # 目标 + 10 个候选源�
 group_tr_0000/
 ├── manifest.json                  ← 公开索引（split / task_ids / object_ids）
 ├── manifest.sealed.json          ← 封存：哪些源域有效 / 哪些该排除
-├── relation/                     ← 封存：正确映射、角色、领域依据
+├── relation/                     ← 封存：正确映射、角色、真实领域名与节点语义
 ├── counterexamples/              ← 封存：10 个干扰源的标注与见证点
 ├── data/input/                   ← ★ 方法输入，只有这里的东西能读
 │   ├── objects/                  ← 12 个对象（1 目标 + 1 有效源 + 10 干扰源）
-│   └── tasks/                    ← positive.json / negative.json
+│   └── tasks/                    ← task_<组>_t01.json / task_<组>_t02.json
 └── sealed/                       ← 封存答案（仅评价器）
     ├── reference.json
     └── intervention_points.json  ← 只有测试组有
@@ -52,19 +54,24 @@ group_tr_0000/
 
 ```json
 {
-  "task_id": "task_group_tr_0000_a",
+  "task_id": "task_group_tr_0000_t01",
   "group_id": "group_tr_0000",
   "target_id": "obj_group_tr_0000_tgt",
-  "source_ids": ["obj_group_tr_0000_src", "obj_group_tr_0000_i00", "...共 10 个"],
-  "intervenable_inputs": ["A_t", "rate_t"],
-  "specified_outputs": ["A_next"],
-  "intervention_range": {"A_t": [-0.2, 0.2], "rate_t": [-0.2, 0.2]}
+  "source_ids": ["obj_group_tr_0000_i03", "obj_group_tr_0000_src", "...共 10 个"],
+  "intervenable_inputs": ["v7", "v4"],
+  "specified_outputs": ["v3"],
+  "intervention_range": {"v7": [-0.2, 0.2], "v4": [-0.2, 0.2]}
 }
 ```
 
-- `task_id` **不编码正负**（不出现 `_pos`/`_neg`），正负只在 `sealed/reference.json` 的 `label` 里
+- `task_id` **不编码正负**（`t01`/`t02` 只是组内序号，不含 `_pos`/`_neg`），正负只在 `sealed/reference.json` 的 `label` 里
+- `source_ids` **顺序按组哈希打乱**，有效源不在固定位置（v1 曾固定在首位，等于白送答案）
 - 正任务 10 个源域里有 1 个是对的；负任务 10 个全是干扰源
 - 你要做的是：从 `source_ids` 里挑出与 `target_id` 同构的那个（可能是 0 个 → 返回拒绝）
+- **节点 ID 用 `v1..v9` 中性池**，同一组内目标域、有效源、全部干扰源的 ID 集合完全一致，无法按 ID 区分谁是答案
+- **节点 label 是「量 A / 量 B / 量 C」**，真实语义（当前本金 / 本期利率）只在封存的 `relation/analogy.json` 里
+- 三个类型的关系里，乘性与线性类有 3 个节点（2 输入 + 1 输出），饱和类 2 个节点（1 输入 + 1 输出）；
+  **所有候选源与目标域的节点数一定相同**（v1 曾出现 3 节点目标配 2 节点干扰源，那些候选走不到响应检验）
 
 ---
 
@@ -75,37 +82,41 @@ group_tr_0000/
   "object_id": "obj_group_tr_0000_tgt",
   "object_kind": "mechanistic",
   "relation_type": "multiplicative_growth",
-  "label": "银行复利",
-  "nodes": [{"node_id": "A_t", "label": "当前本金", "type": "positive_scalar"}, ...],
+  "label": "目标域",
+  "nodes": [{"node_id": "v7", "label": "量 A", "type": "positive_scalar"}, ...],
   "edges": [{"edge_id": "r1", "edge_type": "multiplicative_growth",
-             "input_nodes": ["A_t", "rate_t"], "output_nodes": ["A_next"],
-             "roles": {"A_t": "current", "rate_t": "ratio", "A_next": "next"}}],
-  "function": "A_t * (1 + rate_t)",
-  "controllable_inputs": ["A_t", "rate_t"],
-  "designated_outputs": ["A_next"],
+             "input_nodes": ["v7", "v4"], "output_nodes": ["v3"],
+             "roles": {"v7": "current", "v4": "ratio", "v3": "next"}}],
+  "function": "v7 * (1 + v4)",
+  "controllable_inputs": ["v7", "v4"],
+  "designated_outputs": ["v3"],
   "baseline": [5000, 0.1],
   "input_scales": [5000, 0.1],
-  "baseline_output": 5500,
-  "output_scale": 5500,
-  "legal_domain": {"A_t": [0, null], "rate_t": [0, 1]},
-  "intervention_bounds": {"A_t": [-0.2, 0.2], "rate_t": [-0.2, 0.2]},
+  "baseline_output": 5100,
+  "output_scale": 5100,
+  "legal_domain": {"v7": [0, null], "v4": [0, 1]},
+  "intervention_bounds": {"v7": [-0.2, 0.2], "v4": [-0.2, 0.2]},
   "provenance": {"dataset": "mred", "original_id": null, "structure_source": "provided"}
 }
 ```
+
+**注意 `label`**：公开对象里所有候选源的 label 都是「候选源域」、目标是「目标域」，节点 label 是「量 A / 量 B / 量 C」。
+真实领域名（细菌二分裂 / 银行复利）与节点语义（当前本金 / 本期利率）只写在封存的 `relation/analogy.json` 里——
+v1 曾在公开对象上直接写真实领域名，等于把答案印在题面上。
 
 ### 三个最容易搞错的地方
 
 **1. `baseline` / `input_scales` 是列表，按 `controllable_inputs` 的顺序对齐**
 
-不是按字母、不是按节点顺序。看 `controllable_inputs = ["A_t", "rate_t"]` → `baseline = [5000, 0.1]` 意思是 `A_t=5000, rate_t=0.1`。
+不是按字母、不是按节点顺序。看 `controllable_inputs = ["v7", "v4"]` → `baseline = [5000, 0.1]` 意思是 `v7=5000, v4=0.1`。
 
 **2. `function` 用的是 node_id 字符串，不是角色名**
 
-`A_t * (1 + rate_t)` —— 节点可能叫 `a3`、`n1` 这些随便起的名字。正确做法是原样把 `function` 丢给 `runtime.expression_value()`，不要自己解析。
+`v7 * (1 + v4)` —— 节点 ID 从 `v1..v9` 池里按组哈希随机分派，跨组不固定。正确做法是原样把 `function` 丢给 `runtime.expression_value()`，不要自己解析，也不要假设某个 ID 一定是某个角色。
 
 **3. 饱和类的 R_max、K 是写死在字符串里的常量，不是节点**
 
-`20.0 * n1 / (2.0 + n1)` —— `20.0` 和 `2.0` 不是 `controllable_inputs` 的成员，别去 `baseline` 里找它们。
+`20.0 * v1 / (2.0 + v1)` —— `20.0` 和 `2.0` 不是 `controllable_inputs` 的成员，别去 `baseline` 里找它们。
 
 ---
 
@@ -114,20 +125,21 @@ group_tr_0000/
 ```python
 import runtime
 
-obj = json.loads((g / "data/input/objects/obj_xxx.json").read_text(encoding="utf-8"))
+obj = json.loads((g / "data/input/objects/obj_group_tr_0000_tgt.json").read_text(encoding="utf-8"))
 
 # 1) 在 baseline 上求值（应该等于 baseline_output）
 inputs = dict(zip(obj["controllable_inputs"], obj["baseline"]))
-runtime.evaluate_object(obj, inputs)        # {'A_next': 5500.0}
+runtime.evaluate_object(obj, inputs)        # {'v3': 5100.0}
 
 # 2) 施加无量纲干预 u，得到实际输入值
-runtime.intervene(obj, {"A_t": 0.2, "rate_t": 0.0})   # {'A_t': 6000.0, 'rate_t': 0.1}
+runtime.intervene(obj, {"v7": 0.2, "v4": 0.0})   # {'v7': 6000.0, 'v4': 0.1}
 
 # 3) 一步到位拿归一化响应
-runtime.normalized_response(obj, {"A_t": 0.2, "rate_t": 0.0})   # {'A_next': 0.2}
+runtime.normalized_response(obj, {"v7": 0.2, "v4": 0.0})   # {'v3': 0.2}
 ```
 
 **干预必须给全部 `controllable_inputs`**，少一个就报 `Dimensionless intervention must specify every input ID`。这是最常见的报错。
+**节点 ID 不要写死**：不同组的 ID 从 `v1..v9` 池随机分派，上面这些 ID 只对 `group_tr_0000` 这个组有效，请从对象自己的 `controllable_inputs` 里读。
 
 ---
 
@@ -178,17 +190,25 @@ else:
 
 | 类型 | 每组几个 | 典型最大误差 | 特征 |
 |---|---|---|---|
-| 结构错误 | 3 | 0.16（乘性/线性）～1.00（饱和） | 结构层面就不对，最容易排除 |
-| 响应错误 | 3（负任务 4） | 0.0576（乘性/线性）～0.0902（饱和） | 结构全对，只有函数形式不同，稍难 |
-| 局部扰动 | 3 | 0.0900 @ u≈0.13 | 只在窄区间超容差，**只有密集搜索才抓得住** |
+| 结构错误 | 3 | 0.0000（响应与目标完全一致） | **结构层面不成立**：某个被标注为输入的节点实际不影响输出（端点标注与函数不符），靠结构检查排除，不是靠响应 |
+| 响应错误 | 3（负任务 4） | 0.0581 ~ 1.0000（均值 0.3080） | 结构全对，只有函数形式不同；4 个不同函数族，标准网格上必然超容差 |
+| 局部扰动 | 3 | 0.0784 ~ 0.1156（均值 0.0947） | 稀疏五点最大 0.0131（**低于**容差），标准网格上必超容差 |
 
-局部扰动的超容差区间：`u ∈ [0.114, 0.146]`，宽 0.032，占全区间 8.2%。
+局部扰动的鼓包加在**全部输入维无量纲扰动的均方根** `u_norm` 上（不是单维 u），中心 0.20、宽 0.02：
+
+```
+b(u_norm) = 0.30 × [ exp(−((u_norm−0.20)/0.020)²) − exp(−(0.20/0.020)²) ]
+```
+
+这样二维输入的每一维都真实影响输出（否则第二维「标注是输入却不影响输出」会被判成结构错误），
+同时稀疏五点（每维 −0.2/−0.1/0/0.1/0.2，其余维置 0，故 u_norm ∈ {0, 0.0707, 0.1414}）全部落在鼓包外，
+而 0.05 步长的标准网格能采到 u_norm≈0.20 ——「稀疏点容易通过、稠密检查必然失败」在固定网格上稳定成立。
 
 ---
 
 ## 九、测试任务的封存干预点
 
-只有 `split == "test"` 的 45 组有 `sealed/intervention_points.json`，共 90 个测试任务 × 100 点。
+只有 `split == "test"` 的 48 组有 `sealed/intervention_points.json`，共 96 个测试任务 × 100 点。
 
 ```json
 {
@@ -196,8 +216,8 @@ else:
   "seed": 20261007,
   "points_per_task": 100,
   "tasks": {
-    "task_group_tr_0012_a": [{"A_t": 0.0834, "rate_t": -0.1271}, ...100 条],
-    "task_group_tr_0012_b": [...]
+    "task_group_tr_0012_t01": [{"v7": 0.0834, "v4": -0.1271}, ...100 条],
+    "task_group_tr_0012_t02": [...]
   }
 }
 ```
@@ -254,14 +274,20 @@ for line in open(ROOT/"data/reference_all.jsonl", encoding="utf-8"):
     r = json.loads(line)
     ref[r["task_id"]] = r
 
-r = ref["task_group_tr_0000_a"]
+r = ref["task_group_tr_0000_t01"]
 r["label"]            # "positive"
 r["valid"]            # [{"source_id": "...", "node_map": {...}, "edge_map": {...}}]
 r["exclusions"]       # [...]
-r["reference_tolerance"]  # {"min_ctc": 0.95, "max_error": 0.05}
+r["allowed_mappings_total"]   # 60（10 个源域 × 6 个类型兼容双射，全部枚举过）
+r["reference_tolerance"]      # {"min_ctc": 0.95, "max_error": 0.05}
 ```
 
-负任务 `valid` 为空、`exclusions` 覆盖全部 10 个候选，`full_library_verified: true`。
+负任务 `valid` 为空、`exclusions` 覆盖全部 10 个候选、`full_library_verified` 为真，且每个 exclusion 都带：
+- `candidate_mappings`：该源域被枚举的映射数（6）
+- `detail`：逐映射的失败项（如 `["输入端点无效:v4"]`、`["输入集合:r1","角色:v7"]`）
+- `max_error` + `witness`（响应错误/局部扰动类）：`u_target`、`u_source`、`r_target`、`r_source`、`node_map`，只读这个文件就能复算
+
+**`full_library_verified` 是由枚举结果算出来的，不是常量**——正任务因为库里有有效映射，该字段必为 false。v1 曾把它写死成 true，且 `reference_all.jsonl` 里没有一条带见证。
 
 **这是封存答案，只有评价器（A）能读，方法与搜索器不许读。**
 

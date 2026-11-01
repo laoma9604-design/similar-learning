@@ -1,11 +1,19 @@
 {
   "source": {
     "object_id": "obj_group_tr_0282_src",
-    "label": "酶催化"
+    "label": "酶催化",
+    "node_labels": {
+      "v8": "底物浓度",
+      "v7": "反应速率"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0282_tgt",
-    "label": "受体结合"
+    "label": "受体结合",
+    "node_labels": {
+      "v8": "配体浓度",
+      "v7": "结合量"
+    }
   },
   "relation_type": "saturation_response",
   "direction": "source → target",

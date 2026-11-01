@@ -2,22 +2,22 @@
   "object_id": "obj_group_tr_0265_tgt",
   "object_kind": "mechanistic",
   "relation_type": "linear_drive_resistance",
-  "split": "val",
-  "label": "扩散",
+  "split": "train",
+  "label": "目标域",
   "nodes": [
     {
-      "node_id": "driver",
-      "label": "浓度差",
+      "node_id": "v5",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "resistance",
-      "label": "扩散阻力",
+      "node_id": "v8",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "response",
-      "label": "扩散通量",
+      "node_id": "v9",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,26 +26,26 @@
       "edge_id": "r1",
       "edge_type": "linear_drive_resistance",
       "input_nodes": [
-        "driver",
-        "resistance"
+        "v5",
+        "v8"
       ],
       "output_nodes": [
-        "response"
+        "v9"
       ],
       "roles": {
-        "driver": "driver",
-        "resistance": "resistance",
-        "response": "response"
+        "v5": "driver",
+        "v8": "resistance",
+        "v9": "response"
       }
     }
   ],
-  "function": "driver / resistance",
+  "function": "v5 / v8",
   "controllable_inputs": [
-    "driver",
-    "resistance"
+    "v5",
+    "v8"
   ],
   "designated_outputs": [
-    "response"
+    "v9"
   ],
   "baseline": [
     96.0,
@@ -58,21 +58,21 @@
   "baseline_output": 38.4,
   "output_scale": 38.4,
   "legal_domain": {
-    "driver": [
+    "v5": [
       1e-06,
       null
     ],
-    "resistance": [
+    "v8": [
       1e-06,
       null
     ]
   },
   "intervention_bounds": {
-    "driver": [
+    "v5": [
       -0.2,
       0.2
     ],
-    "resistance": [
+    "v8": [
       -0.2,
       0.2
     ]

@@ -1,11 +1,21 @@
 {
   "source": {
     "object_id": "obj_group_tr_0039_src",
-    "label": "酵母发酵"
+    "label": "酵母发酵",
+    "node_labels": {
+      "v9": "酵母数量",
+      "v6": "每代增长率",
+      "v1": "下一代数量"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0039_tgt",
-    "label": "债券票息"
+    "label": "债券票息",
+    "node_labels": {
+      "v9": "债券面值",
+      "v6": "票息率",
+      "v1": "复投后本金"
+    }
   },
   "relation_type": "multiplicative_growth",
   "direction": "source → target",

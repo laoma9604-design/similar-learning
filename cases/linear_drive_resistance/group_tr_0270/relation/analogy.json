@@ -1,11 +1,21 @@
 {
   "source": {
     "object_id": "obj_group_tr_0270_src",
-    "label": "热传导"
+    "label": "热传导",
+    "node_labels": {
+      "v6": "温差",
+      "v5": "热阻",
+      "v1": "热流"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0270_tgt",
-    "label": "扩散"
+    "label": "扩散",
+    "node_labels": {
+      "v6": "浓度差",
+      "v5": "扩散阻力",
+      "v1": "扩散通量"
+    }
   },
   "relation_type": "linear_drive_resistance",
   "direction": "source → target",

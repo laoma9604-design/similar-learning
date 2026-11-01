@@ -1,11 +1,19 @@
 {
   "source": {
     "object_id": "obj_group_tr_0298_src",
-    "label": "光合"
+    "label": "光合",
+    "node_labels": {
+      "v3": "光强",
+      "v7": "光合速率"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0298_tgt",
-    "label": "营养吸收"
+    "label": "营养吸收",
+    "node_labels": {
+      "v3": "营养浓度",
+      "v7": "吸收速率"
+    }
   },
   "relation_type": "saturation_response",
   "direction": "source → target",

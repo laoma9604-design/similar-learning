@@ -1,11 +1,21 @@
 {
   "source": {
     "object_id": "obj_group_tr_0192_src",
-    "label": "电路"
+    "label": "电路",
+    "node_labels": {
+      "v3": "电压",
+      "v6": "电阻",
+      "v1": "电流"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0192_tgt",
-    "label": "扩散"
+    "label": "扩散",
+    "node_labels": {
+      "v3": "浓度差",
+      "v6": "扩散阻力",
+      "v1": "扩散通量"
+    }
   },
   "relation_type": "linear_drive_resistance",
   "direction": "source → target",

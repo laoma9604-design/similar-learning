@@ -1,0 +1,25 @@
+{
+  "source": {
+    "object_id": "obj_group_dev_0017_src",
+    "label": "电路",
+    "node_labels": {
+      "v8": "电压",
+      "v4": "电阻",
+      "v3": "电流"
+    }
+  },
+  "target": {
+    "object_id": "obj_group_dev_0017_tgt",
+    "label": "扩散",
+    "node_labels": {
+      "v8": "浓度差",
+      "v4": "扩散阻力",
+      "v3": "扩散通量"
+    }
+  },
+  "relation_type": "linear_drive_resistance",
+  "direction": "source → target",
+  "pair_id": "lin_03",
+  "domain_evidence": "源=欧姆定律；目标=菲克扩散 J=ΔC/Rd。跨域：电→传质。",
+  "simplification_assumption": null
+}

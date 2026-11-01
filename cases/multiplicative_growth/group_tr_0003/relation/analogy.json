@@ -1,11 +1,21 @@
 {
   "source": {
     "object_id": "obj_group_tr_0003_src",
-    "label": "细菌二分裂"
+    "label": "细菌二分裂",
+    "node_labels": {
+      "v1": "当前细菌数量",
+      "v4": "每代增长率",
+      "v6": "下一代数量"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0003_tgt",
-    "label": "银行复利"
+    "label": "银行复利",
+    "node_labels": {
+      "v1": "当前本金",
+      "v4": "本期利率",
+      "v6": "下一期余额"
+    }
   },
   "relation_type": "multiplicative_growth",
   "direction": "source → target",

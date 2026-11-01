@@ -1,11 +1,21 @@
 {
   "source": {
     "object_id": "obj_group_tr_0225_src",
-    "label": "电路"
+    "label": "电路",
+    "node_labels": {
+      "v4": "电压",
+      "v1": "电阻",
+      "v8": "电流"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0225_tgt",
-    "label": "磁路"
+    "label": "磁路",
+    "node_labels": {
+      "v4": "磁动势",
+      "v1": "磁阻",
+      "v8": "磁通"
+    }
   },
   "relation_type": "linear_drive_resistance",
   "direction": "source → target",

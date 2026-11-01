@@ -1,11 +1,19 @@
 {
   "source": {
     "object_id": "obj_group_tr_0279_src",
-    "label": "酶催化"
+    "label": "酶催化",
+    "node_labels": {
+      "v6": "底物浓度",
+      "v3": "反应速率"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0279_tgt",
-    "label": "Monod生长"
+    "label": "Monod生长",
+    "node_labels": {
+      "v6": "底物浓度",
+      "v3": "比生长速率"
+    }
   },
   "relation_type": "saturation_response",
   "direction": "source → target",

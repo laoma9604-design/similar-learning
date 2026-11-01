@@ -1,4 +1,4 @@
-源域（电路）：b2 / a1
-目标域（力学阻尼）：driver / resistance
+源域（电路）：v5 / v2
+目标域（力学阻尼）：v5 / v2
 角色：driver / resistance / response
 领域依据：源=欧姆定律；目标=线性阻尼 v=F/c。跨域：电→力学。

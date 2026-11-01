@@ -1,14 +1,14 @@
 {
-  "task_group_tr_0050_a": {
-    "task_id": "task_group_tr_0050_a",
+  "task_group_tr_0050_t01": {
+    "task_id": "task_group_tr_0050_t01",
     "label": "positive",
     "valid": [
       {
         "source_id": "obj_group_tr_0050_src",
         "node_map": {
-          "b1": "current",
-          "a3": "ratio",
-          "b4": "next"
+          "v9": "v9",
+          "v1": "v1",
+          "v8": "v8"
         },
         "edge_map": {
           "r1": "r1"
@@ -19,116 +19,1224 @@
       {
         "source_id": "obj_group_tr_0050_i02",
         "kind": "structure_error",
-        "reason": "超出参考容差：最大响应误差 0.160000 > 0.05"
+        "reason": "结构不成立",
+        "witness": {
+          "u_target": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "u_source": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "r_target": 0.23130434782608697,
+          "r_source": 0.2
+        }
       },
       {
         "source_id": "obj_group_tr_0050_i08",
         "kind": "structure_error",
-        "reason": "超出参考容差：最大响应误差 0.160000 > 0.05"
+        "reason": "结构不成立",
+        "witness": {
+          "u_target": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "u_source": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "r_target": 0.23130434782608697,
+          "r_source": 0.2
+        }
       },
       {
         "source_id": "obj_group_tr_0050_i09",
         "kind": "structure_error",
-        "reason": "超出参考容差：最大响应误差 0.160000 > 0.05"
+        "reason": "结构不成立",
+        "witness": {
+          "u_target": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "u_source": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "r_target": 0.23130434782608697,
+          "r_source": 0.2
+        }
       },
       {
         "source_id": "obj_group_tr_0050_i01",
         "kind": "response_error",
-        "reason": "超出参考容差：最大响应误差 0.057600 > 0.05"
+        "reason": "响应超容差：0.293519 > 0.05",
+        "witness": {
+          "u_target": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "u_source": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "r_target": 0.23130434782608697,
+          "r_source": 0.7730782608695651
+        }
       },
       {
         "source_id": "obj_group_tr_0050_i03",
         "kind": "response_error",
-        "reason": "超出参考容差：最大响应误差 0.057600 > 0.05"
+        "reason": "响应超容差：0.149991 > 0.05",
+        "witness": {
+          "u_target": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "u_source": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "r_target": 0.23130434782608697,
+          "r_source": 0.6185915995004843
+        }
       },
       {
         "source_id": "obj_group_tr_0050_i04",
         "kind": "response_error",
-        "reason": "超出参考容差：最大响应误差 0.057600 > 0.05"
+        "reason": "响应超容差：0.161814 > 0.05",
+        "witness": {
+          "u_target": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "u_source": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "r_target": 0.23130434782608697,
+          "r_source": 0.6335652173913043
+        }
       },
       {
         "source_id": "obj_group_tr_0050_i00",
         "kind": "local_perturbation",
-        "reason": "超出参考容差：最大响应误差 0.090000 > 0.05"
+        "reason": "响应超容差：0.090000 > 0.05",
+        "witness": {
+          "u_target": {
+            "v9": -0.2,
+            "v1": 0.2
+          },
+          "u_source": {
+            "v9": -0.2,
+            "v1": 0.2
+          },
+          "r_target": -0.1791304347826087,
+          "r_source": 0.1208695652173913
+        }
       },
       {
         "source_id": "obj_group_tr_0050_i06",
         "kind": "local_perturbation",
-        "reason": "超出参考容差：最大响应误差 0.090000 > 0.05"
+        "reason": "响应超容差：0.078400 > 0.05",
+        "witness": {
+          "u_target": {
+            "v9": -0.15,
+            "v1": 0.15
+          },
+          "u_source": {
+            "v9": -0.15,
+            "v1": 0.15
+          },
+          "r_target": -0.1333695652173914,
+          "r_source": 0.1466304347826087
+        }
       },
       {
         "source_id": "obj_group_tr_0050_i07",
         "kind": "local_perturbation",
-        "reason": "超出参考容差：最大响应误差 0.090000 > 0.05"
+        "reason": "响应超容差：0.115600 > 0.05",
+        "witness": {
+          "u_target": {
+            "v9": -0.2,
+            "v1": -0.2
+          },
+          "u_source": {
+            "v9": -0.2,
+            "v1": -0.2
+          },
+          "r_target": -0.2208695652173912,
+          "r_source": 0.1191304347826089
+        }
       }
     ],
     "reference_tolerance": {
       "min_ctc": 0.95,
       "max_error": 0.05
     },
-    "positive_max_deviation": 2.498001805406602e-16,
-    "status": "bijective_confirmed"
+    "positive_max_deviation": 1.249000902703301e-16,
+    "allowed_mappings_total": 60,
+    "status": "bijective_confirmed",
+    "full_library_verified": false
   },
-  "task_group_tr_0050_b": {
-    "task_id": "task_group_tr_0050_b",
+  "task_group_tr_0050_t02": {
+    "task_id": "task_group_tr_0050_t02",
     "label": "negative",
     "valid": [],
     "exclusions": [
       {
         "source_id": "obj_group_tr_0050_i00",
         "kind": "local_perturbation",
-        "reason": "超出参考容差：最大响应误差 0.090000 > 0.05"
+        "reason": "全部类型兼容映射均失败",
+        "candidate_mappings": 6,
+        "max_error": 0.09,
+        "witness": {
+          "u_target": {
+            "v9": -0.2,
+            "v1": 0.2
+          },
+          "u_source": {
+            "v9": -0.2,
+            "v1": 0.2
+          },
+          "r_target": -0.1791304347826087,
+          "r_source": 0.1208695652173913,
+          "node_map": {
+            "v9": "v9",
+            "v1": "v1",
+            "v8": "v8"
+          }
+        },
+        "detail": [
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v1",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "响应超容差"
+            ],
+            "verdict": "响应失败"
+          },
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v8",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v9",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "角色:v9",
+              "角色:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v8",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v9",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v1",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          }
+        ]
       },
       {
         "source_id": "obj_group_tr_0050_i01",
         "kind": "response_error",
-        "reason": "超出参考容差：最大响应误差 0.057600 > 0.05"
+        "reason": "全部类型兼容映射均失败",
+        "candidate_mappings": 6,
+        "max_error": 0.2935189728544422,
+        "witness": {
+          "u_target": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "u_source": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "r_target": 0.23130434782608697,
+          "r_source": 0.7730782608695651,
+          "node_map": {
+            "v9": "v9",
+            "v1": "v1",
+            "v8": "v8"
+          }
+        },
+        "detail": [
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v1",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "响应超容差"
+            ],
+            "verdict": "响应失败"
+          },
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v8",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v9",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "角色:v9",
+              "角色:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v8",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v9",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v1",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          }
+        ]
       },
       {
         "source_id": "obj_group_tr_0050_i02",
         "kind": "structure_error",
-        "reason": "超出参考容差：最大响应误差 0.160000 > 0.05"
+        "reason": "全部类型兼容映射均失败",
+        "candidate_mappings": 6,
+        "max_error": 0.0,
+        "witness": null,
+        "detail": [
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v1",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "输入端点无效:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v8",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v1",
+              "角色:v8",
+              "输入端点无效:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v9",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "输入端点无效:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v8",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8",
+              "输入端点无效:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v9",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8",
+              "输入端点无效:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v1",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v8",
+              "输入端点无效:v1"
+            ],
+            "verdict": "结构失败"
+          }
+        ]
       },
       {
         "source_id": "obj_group_tr_0050_i03",
         "kind": "response_error",
-        "reason": "超出参考容差：最大响应误差 0.057600 > 0.05"
+        "reason": "全部类型兼容映射均失败",
+        "candidate_mappings": 6,
+        "max_error": 0.14999141530950794,
+        "witness": {
+          "u_target": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "u_source": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "r_target": 0.23130434782608697,
+          "r_source": 0.6185915995004843,
+          "node_map": {
+            "v9": "v9",
+            "v1": "v1",
+            "v8": "v8"
+          }
+        },
+        "detail": [
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v1",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "响应超容差"
+            ],
+            "verdict": "响应失败"
+          },
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v8",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v9",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "角色:v9",
+              "角色:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v8",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v9",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v1",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          }
+        ]
       },
       {
         "source_id": "obj_group_tr_0050_i04",
         "kind": "response_error",
-        "reason": "超出参考容差：最大响应误差 0.057600 > 0.05"
+        "reason": "全部类型兼容映射均失败",
+        "candidate_mappings": 6,
+        "max_error": 0.1618138071833648,
+        "witness": {
+          "u_target": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "u_source": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "r_target": 0.23130434782608697,
+          "r_source": 0.6335652173913043,
+          "node_map": {
+            "v9": "v9",
+            "v1": "v1",
+            "v8": "v8"
+          }
+        },
+        "detail": [
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v1",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "响应超容差"
+            ],
+            "verdict": "响应失败"
+          },
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v8",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v9",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "角色:v9",
+              "角色:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v8",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v9",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v1",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          }
+        ]
       },
       {
         "source_id": "obj_group_tr_0050_i05",
         "kind": "response_error",
-        "reason": "超出参考容差：最大响应误差 0.057600 > 0.05"
+        "reason": "全部类型兼容映射均失败",
+        "candidate_mappings": 6,
+        "max_error": 0.06064441587901701,
+        "witness": {
+          "u_target": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "u_source": {
+            "v9": 0.2,
+            "v1": 0.2
+          },
+          "r_target": 0.23130434782608697,
+          "r_source": 0.47756521739130436,
+          "node_map": {
+            "v9": "v9",
+            "v1": "v1",
+            "v8": "v8"
+          }
+        },
+        "detail": [
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v1",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "响应超容差"
+            ],
+            "verdict": "响应失败"
+          },
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v8",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v9",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "角色:v9",
+              "角色:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v8",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v9",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v1",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          }
+        ]
       },
       {
         "source_id": "obj_group_tr_0050_i06",
         "kind": "local_perturbation",
-        "reason": "超出参考容差：最大响应误差 0.090000 > 0.05"
+        "reason": "全部类型兼容映射均失败",
+        "candidate_mappings": 6,
+        "max_error": 0.07840000000000008,
+        "witness": {
+          "u_target": {
+            "v9": -0.15,
+            "v1": 0.15
+          },
+          "u_source": {
+            "v9": -0.15,
+            "v1": 0.15
+          },
+          "r_target": -0.1333695652173914,
+          "r_source": 0.1466304347826087,
+          "node_map": {
+            "v9": "v9",
+            "v1": "v1",
+            "v8": "v8"
+          }
+        },
+        "detail": [
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v1",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "响应超容差"
+            ],
+            "verdict": "响应失败"
+          },
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v8",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v9",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "角色:v9",
+              "角色:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v8",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v9",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v1",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          }
+        ]
       },
       {
         "source_id": "obj_group_tr_0050_i07",
         "kind": "local_perturbation",
-        "reason": "超出参考容差：最大响应误差 0.090000 > 0.05"
+        "reason": "全部类型兼容映射均失败",
+        "candidate_mappings": 6,
+        "max_error": 0.11560000000000005,
+        "witness": {
+          "u_target": {
+            "v9": -0.2,
+            "v1": -0.2
+          },
+          "u_source": {
+            "v9": -0.2,
+            "v1": -0.2
+          },
+          "r_target": -0.2208695652173912,
+          "r_source": 0.1191304347826089,
+          "node_map": {
+            "v9": "v9",
+            "v1": "v1",
+            "v8": "v8"
+          }
+        },
+        "detail": [
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v1",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "响应超容差"
+            ],
+            "verdict": "响应失败"
+          },
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v8",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v9",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "角色:v9",
+              "角色:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v8",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v9",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v1",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v8"
+            ],
+            "verdict": "结构失败"
+          }
+        ]
       },
       {
         "source_id": "obj_group_tr_0050_i08",
         "kind": "structure_error",
-        "reason": "超出参考容差：最大响应误差 0.160000 > 0.05"
+        "reason": "全部类型兼容映射均失败",
+        "candidate_mappings": 6,
+        "max_error": 0.0,
+        "witness": null,
+        "detail": [
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v1",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "输入端点无效:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v8",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v1",
+              "角色:v8",
+              "输入端点无效:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v9",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "输入端点无效:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v8",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8",
+              "输入端点无效:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v9",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8",
+              "输入端点无效:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v1",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v8",
+              "输入端点无效:v1"
+            ],
+            "verdict": "结构失败"
+          }
+        ]
       },
       {
         "source_id": "obj_group_tr_0050_i09",
         "kind": "structure_error",
-        "reason": "超出参考容差：最大响应误差 0.160000 > 0.05"
+        "reason": "全部类型兼容映射均失败",
+        "candidate_mappings": 6,
+        "max_error": 0.0,
+        "witness": null,
+        "detail": [
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v1",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "输入端点无效:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v9",
+              "v1": "v8",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v1",
+              "角色:v8",
+              "输入端点无效:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v9",
+              "v8": "v8"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "输入端点无效:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v1",
+              "v1": "v8",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8",
+              "输入端点无效:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v9",
+              "v8": "v1"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v1",
+              "角色:v8",
+              "输入端点无效:v1"
+            ],
+            "verdict": "结构失败"
+          },
+          {
+            "node_map": {
+              "v9": "v8",
+              "v1": "v1",
+              "v8": "v9"
+            },
+            "failed_checks": [
+              "输入集合:r1",
+              "输出集合:r1",
+              "角色:v9",
+              "角色:v8",
+              "输入端点无效:v1"
+            ],
+            "verdict": "结构失败"
+          }
+        ]
       }
     ],
     "reference_tolerance": {
       "min_ctc": 0.95,
       "max_error": 0.05
     },
+    "allowed_mappings_total": 60,
     "status": "bijective_confirmed",
     "full_library_verified": true
   }

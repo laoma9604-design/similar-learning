@@ -1,11 +1,21 @@
 {
   "source": {
     "object_id": "obj_group_tr_0025_src",
-    "label": "细胞培养"
+    "label": "细胞培养",
+    "node_labels": {
+      "v4": "细胞数量",
+      "v6": "传代增长率",
+      "v7": "传代后数量"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0025_tgt",
-    "label": "定期存款"
+    "label": "定期存款",
+    "node_labels": {
+      "v4": "存款本金",
+      "v6": "年利率",
+      "v7": "到期本息"
+    }
   },
   "relation_type": "multiplicative_growth",
   "direction": "source → target",

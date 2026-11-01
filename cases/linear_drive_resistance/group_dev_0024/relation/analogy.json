@@ -1,0 +1,25 @@
+{
+  "source": {
+    "object_id": "obj_group_dev_0024_src",
+    "label": "电路",
+    "node_labels": {
+      "v5": "电压",
+      "v8": "电阻",
+      "v9": "电流"
+    }
+  },
+  "target": {
+    "object_id": "obj_group_dev_0024_tgt",
+    "label": "热传导",
+    "node_labels": {
+      "v5": "温差",
+      "v8": "热阻",
+      "v9": "热流"
+    }
+  },
+  "relation_type": "linear_drive_resistance",
+  "direction": "source → target",
+  "pair_id": "lin_02",
+  "domain_evidence": "源=欧姆定律；目标=傅里叶热传导 q=ΔT/Rth。跨域：电→热。",
+  "simplification_assumption": null
+}

@@ -6,13 +6,18 @@
   "label": "候选源域",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "输入量",
+      "node_id": "v3",
+      "label": "待判定变量",
       "type": "positive_scalar"
     },
     {
-      "node_id": "n2",
-      "label": "响应量",
+      "node_id": "v1",
+      "label": "待判定变量",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "v8",
+      "label": "待判定变量",
       "type": "positive_scalar"
     }
   ],
@@ -21,40 +26,53 @@
       "edge_id": "r1",
       "edge_type": "multiplicative_growth",
       "input_nodes": [
-        "n1"
+        "v3",
+        "v1"
       ],
       "output_nodes": [
-        "n2"
+        "v8"
       ],
       "roles": {
-        "n1": "current",
-        "n2": "next"
+        "v3": "current",
+        "v1": "ratio",
+        "v8": "next"
       }
     }
   ],
-  "function": "(n1 * (1 + 0.03) - 20.6) * (n1 * (1 + 0.03) - 20.6) / 20.6 + 20.6",
+  "function": "v3 ** 3 / 400.0 ** 2 * (1 + v1)",
   "controllable_inputs": [
-    "n1"
+    "v3",
+    "v1"
   ],
   "designated_outputs": [
-    "n2"
+    "v8"
   ],
   "baseline": [
-    20.0
+    400.0,
+    0.02
   ],
   "input_scales": [
-    20.0
+    400.0,
+    0.02
   ],
-  "baseline_output": 20.6,
-  "output_scale": 20.6,
+  "baseline_output": 408.0,
+  "output_scale": 408.0,
   "legal_domain": {
-    "n1": [
-      1e-06,
+    "v3": [
+      0,
       null
+    ],
+    "v1": [
+      0,
+      1
     ]
   },
   "intervention_bounds": {
-    "n1": [
+    "v3": [
+      -0.2,
+      0.2
+    ],
+    "v1": [
       -0.2,
       0.2
     ]
@@ -62,6 +80,6 @@
   "provenance": {
     "dataset": "mred",
     "original_id": null,
-    "structure_source": "provided"
+    "structure_source": "controlled_synthetic"
   }
 }

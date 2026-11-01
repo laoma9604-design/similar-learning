@@ -1,11 +1,21 @@
 {
   "source": {
     "object_id": "obj_group_tr_0258_src",
-    "label": "电路"
+    "label": "电路",
+    "node_labels": {
+      "v2": "电压",
+      "v6": "电阻",
+      "v8": "电流"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0258_tgt",
-    "label": "渗流"
+    "label": "渗流",
+    "node_labels": {
+      "v2": "压力梯度",
+      "v6": "渗透阻力",
+      "v8": "渗流速度"
+    }
   },
   "relation_type": "linear_drive_resistance",
   "direction": "source → target",

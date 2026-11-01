@@ -2,22 +2,22 @@
   "object_id": "obj_group_tr_0089_src",
   "object_kind": "mechanistic",
   "relation_type": "multiplicative_growth",
-  "split": "val",
-  "label": "兔子种群",
+  "split": "train",
+  "label": "候选源域",
   "nodes": [
     {
-      "node_id": "b2",
-      "label": "兔子数",
+      "node_id": "v2",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "a1",
-      "label": "繁殖增长率",
+      "node_id": "v9",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "a4",
-      "label": "下一代数量",
+      "node_id": "v1",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,53 +26,53 @@
       "edge_id": "r1",
       "edge_type": "multiplicative_growth",
       "input_nodes": [
-        "b2",
-        "a1"
+        "v2",
+        "v9"
       ],
       "output_nodes": [
-        "a4"
+        "v1"
       ],
       "roles": {
-        "b2": "current",
-        "a1": "ratio",
-        "a4": "next"
+        "v2": "current",
+        "v9": "ratio",
+        "v1": "next"
       }
     }
   ],
-  "function": "b2 * (1 + a1)",
+  "function": "v2 * (1 + v9)",
   "controllable_inputs": [
-    "b2",
-    "a1"
+    "v2",
+    "v9"
   ],
   "designated_outputs": [
-    "a4"
+    "v1"
   ],
   "baseline": [
     300.0,
-    0.02
+    0.3
   ],
   "input_scales": [
     300.0,
-    0.02
+    0.3
   ],
-  "baseline_output": 306.0,
-  "output_scale": 306.0,
+  "baseline_output": 390.0,
+  "output_scale": 390.0,
   "legal_domain": {
-    "b2": [
+    "v2": [
       0,
       null
     ],
-    "a1": [
+    "v9": [
       0,
       1
     ]
   },
   "intervention_bounds": {
-    "b2": [
+    "v2": [
       -0.2,
       0.2
     ],
-    "a1": [
+    "v9": [
       -0.2,
       0.2
     ]

@@ -6,13 +6,18 @@
   "label": "候选源域",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "输入量",
+      "node_id": "v8",
+      "label": "待判定变量",
       "type": "positive_scalar"
     },
     {
-      "node_id": "n2",
-      "label": "响应量",
+      "node_id": "v5",
+      "label": "待判定变量",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "v3",
+      "label": "待判定变量",
       "type": "positive_scalar"
     }
   ],
@@ -21,40 +26,53 @@
       "edge_id": "r1",
       "edge_type": "linear_drive_resistance",
       "input_nodes": [
-        "n1"
+        "v8",
+        "v5"
       ],
       "output_nodes": [
-        "n2"
+        "v3"
       ],
       "roles": {
-        "n1": "driver",
-        "n2": "response"
+        "v8": "driver",
+        "v5": "resistance",
+        "v3": "response"
       }
     }
   ],
-  "function": "2.88 + ((n1 / 5.0 - 2.88) / 2.88 + 0.3 * (exp(-(((n1 / 14.4 - 1) - 0.13) / 0.03) ** 2) - exp(-(0.13 / 0.03) ** 2))) * 2.88",
+  "function": "2.88 + ((v8 / v5 - 2.88) / 2.88 + 0.34 * (exp(-((((((v8 / 14.4 - 1) ** 2) + ((v5 / 5.0 - 1) ** 2)) / 2) ** 0.5 - 0.2) / 0.02) ** 2) - exp(-(0.2 / 0.02) ** 2))) * 2.88",
   "controllable_inputs": [
-    "n1"
+    "v8",
+    "v5"
   ],
   "designated_outputs": [
-    "n2"
+    "v3"
   ],
   "baseline": [
-    14.4
+    14.4,
+    5.0
   ],
   "input_scales": [
-    14.4
+    14.4,
+    5.0
   ],
   "baseline_output": 2.88,
   "output_scale": 2.88,
   "legal_domain": {
-    "n1": [
+    "v8": [
+      1e-06,
+      null
+    ],
+    "v5": [
       1e-06,
       null
     ]
   },
   "intervention_bounds": {
-    "n1": [
+    "v8": [
+      -0.2,
+      0.2
+    ],
+    "v5": [
       -0.2,
       0.2
     ]
@@ -62,6 +80,6 @@
   "provenance": {
     "dataset": "mred",
     "original_id": null,
-    "structure_source": "provided"
+    "structure_source": "controlled_synthetic"
   }
 }

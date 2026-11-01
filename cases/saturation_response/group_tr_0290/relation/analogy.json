@@ -1,11 +1,19 @@
 {
   "source": {
     "object_id": "obj_group_tr_0290_src",
-    "label": "载体转运"
+    "label": "载体转运",
+    "node_labels": {
+      "v9": "底物浓度",
+      "v8": "转运速率"
+    }
   },
   "target": {
     "object_id": "obj_group_tr_0290_tgt",
-    "label": "葡萄糖重吸收"
+    "label": "葡萄糖重吸收",
+    "node_labels": {
+      "v9": "血糖浓度",
+      "v8": "重吸收速率"
+    }
   },
   "relation_type": "saturation_response",
   "direction": "source → target",

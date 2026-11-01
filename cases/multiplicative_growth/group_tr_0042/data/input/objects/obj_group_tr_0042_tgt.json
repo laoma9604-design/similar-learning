@@ -2,22 +2,22 @@
   "object_id": "obj_group_tr_0042_tgt",
   "object_kind": "mechanistic",
   "relation_type": "multiplicative_growth",
-  "split": "train",
-  "label": "债券票息",
+  "split": "test",
+  "label": "目标域",
   "nodes": [
     {
-      "node_id": "current",
-      "label": "债券面值",
+      "node_id": "v2",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "ratio",
-      "label": "票息率",
+      "node_id": "v1",
+      "label": "量 B",
       "type": "positive_scalar"
     },
     {
-      "node_id": "next",
-      "label": "复投后本金",
+      "node_id": "v6",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -26,53 +26,53 @@
       "edge_id": "r1",
       "edge_type": "multiplicative_growth",
       "input_nodes": [
-        "current",
-        "ratio"
+        "v2",
+        "v1"
       ],
       "output_nodes": [
-        "next"
+        "v6"
       ],
       "roles": {
-        "current": "current",
-        "ratio": "ratio",
-        "next": "next"
+        "v2": "current",
+        "v1": "ratio",
+        "v6": "next"
       }
     }
   ],
-  "function": "current * (1 + ratio)",
+  "function": "v2 * (1 + v1)",
   "controllable_inputs": [
-    "current",
-    "ratio"
+    "v2",
+    "v1"
   ],
   "designated_outputs": [
-    "next"
+    "v6"
   ],
   "baseline": [
-    5000.0,
-    0.04
+    30000.0,
+    0.1
   ],
   "input_scales": [
-    5000.0,
-    0.04
+    30000.0,
+    0.1
   ],
-  "baseline_output": 5200.0,
-  "output_scale": 5200.0,
+  "baseline_output": 33000.0,
+  "output_scale": 33000.0,
   "legal_domain": {
-    "current": [
+    "v2": [
       0,
       null
     ],
-    "ratio": [
+    "v1": [
       0,
       1
     ]
   },
   "intervention_bounds": {
-    "current": [
+    "v2": [
       -0.2,
       0.2
     ],
-    "ratio": [
+    "v1": [
       -0.2,
       0.2
     ]

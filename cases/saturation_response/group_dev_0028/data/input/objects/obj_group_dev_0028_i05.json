@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_dev_0028_i05",
+  "object_kind": "mechanistic",
+  "relation_type": "saturation_response",
+  "split": null,
+  "label": "候选源域",
+  "nodes": [
+    {
+      "node_id": "v6",
+      "label": "待判定变量",
+      "type": "positive_scalar"
+    },
+    {
+      "node_id": "v9",
+      "label": "待判定变量",
+      "type": "positive_scalar"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "r1",
+      "edge_type": "saturation_response",
+      "input_nodes": [
+        "v6"
+      ],
+      "output_nodes": [
+        "v9"
+      ],
+      "roles": {
+        "v6": "input",
+        "v9": "response"
+      }
+    }
+  ],
+  "function": "20.0 + ((40.0 * v6 / (2.0 + v6) - 20.0) / 20.0 + 0.28 * (exp(-((((((v6 / 2.0 - 1) ** 2)) / 1) ** 0.5 - 0.15) / 0.015) ** 2) - exp(-(0.15 / 0.015) ** 2))) * 20.0",
+  "controllable_inputs": [
+    "v6"
+  ],
+  "designated_outputs": [
+    "v9"
+  ],
+  "baseline": [
+    2.0
+  ],
+  "input_scales": [
+    2.0
+  ],
+  "baseline_output": 20.0,
+  "output_scale": 20.0,
+  "legal_domain": {
+    "v6": [
+      1e-06,
+      null
+    ]
+  },
+  "intervention_bounds": {
+    "v6": [
+      -0.8,
+      1.0
+    ]
+  },
+  "provenance": {
+    "dataset": "mred",
+    "original_id": null,
+    "structure_source": "controlled_synthetic"
+  }
+}

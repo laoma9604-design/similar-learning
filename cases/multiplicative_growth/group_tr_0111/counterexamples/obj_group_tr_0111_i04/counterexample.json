@@ -1,11 +1,8 @@
 {
   "source_id": "obj_group_tr_0111_i04",
   "target_id": "obj_group_tr_0111_tgt",
-  "node_map": {
-    "n1": "current",
-    "n2": "next"
-  },
   "interference_kind": "structure_error",
-  "max_error": 0.15999999999999992,
-  "controlled_synthetic": true
+  "max_error": 0.0047020408163265595,
+  "controlled_synthetic": true,
+  "excluded_because": "结构不成立（角色/端点与函数实际依赖不符）"
 }

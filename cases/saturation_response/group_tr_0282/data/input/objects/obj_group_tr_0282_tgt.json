@@ -2,17 +2,17 @@
   "object_id": "obj_group_tr_0282_tgt",
   "object_kind": "mechanistic",
   "relation_type": "saturation_response",
-  "split": "train",
-  "label": "受体结合",
+  "split": "val",
+  "label": "目标域",
   "nodes": [
     {
-      "node_id": "input",
-      "label": "配体浓度",
+      "node_id": "v8",
+      "label": "量 A",
       "type": "positive_scalar"
     },
     {
-      "node_id": "response",
-      "label": "结合量",
+      "node_id": "v7",
+      "label": "量 C",
       "type": "positive_scalar"
     }
   ],
@@ -21,23 +21,23 @@
       "edge_id": "r1",
       "edge_type": "saturation_response",
       "input_nodes": [
-        "input"
+        "v8"
       ],
       "output_nodes": [
-        "response"
+        "v7"
       ],
       "roles": {
-        "input": "input",
-        "response": "response"
+        "v8": "input",
+        "v7": "response"
       }
     }
   ],
-  "function": "200.0 * input / (10.0 + input)",
+  "function": "200.0 * v8 / (10.0 + v8)",
   "controllable_inputs": [
-    "input"
+    "v8"
   ],
   "designated_outputs": [
-    "response"
+    "v7"
   ],
   "baseline": [
     10.0
@@ -48,13 +48,13 @@
   "baseline_output": 100.0,
   "output_scale": 100.0,
   "legal_domain": {
-    "input": [
+    "v8": [
       1e-06,
       null
     ]
   },
   "intervention_bounds": {
-    "input": [
+    "v8": [
       -0.8,
       1.0
     ]
