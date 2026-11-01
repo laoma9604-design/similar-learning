@@ -19,6 +19,7 @@
 用法：python a_data/verify_scar.py      # 退出码 0 = 全部通过
 """
 import json
+import re
 import os
 import sys
 from collections import Counter, defaultdict
@@ -102,9 +103,30 @@ def main():
                 continue
             if not r.get("reason"):
                 fail("A4", f"排除项 {r['original_id']} 无原因")
-            # 复核原因：解释条数确实与映射对数不一致
-            if len(o.get("Explanation") or []) == len(o.get("mappings") or []):
-                fail("A4", f"排除项 {r['original_id']} 解释条数与映射对数实际一致，不该排除")
+            # 复核原因必须属实：按声明的规则重新验证一次
+            rule = r.get("rule", "")
+            expl = o.get("Explanation") or []
+            maps = o.get("mappings") or []
+            if rule == "S1":
+                if len(expl) == len(maps):
+                    fail("A4", f"排除项 {r['original_id']} 声明 S1，但解释条数实际一致")
+            elif rule == "S2":
+                if not any(re.match(
+                        r'^\s*(items?|explanation|translation|elements?|concepts?|'
+                        r'mapping|answer|lists?|terms?|pairs?)\s*[:：]',
+                        (e or "").strip(), re.I) for e in expl):
+                    fail("A4", f"排除项 {r['original_id']} 声明 S2，但未找到模板残留")
+            elif rule == "S3":
+                if not any(re.search(
+                        r"(may not be (appropriate|correct|suitable|accurate)|"
+                        r"(is|isn't) not (an? )?(appropriate|valid|suitable)|"
+                        r"not (a )?(good|proper|valid|accurate) (mapping|correspondence|match)|"
+                        r"does not (really )?(correspond|match|fit)|"
+                        r"weak (mapping|correspondence)|questionable)",
+                        e or "", re.I) for e in expl):
+                    fail("A4", f"排除项 {r['original_id']} 声明 S3，但未找到自我否定表述")
+            else:
+                fail("A4", f"排除项 {r['original_id']} 规则未知: {rule!r}")
 
     # ---------- B 完整流程 ----------
     split_cnt = Counter()

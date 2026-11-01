@@ -33,6 +33,7 @@
 import argparse
 import hashlib
 import json
+import re
 import shutil
 import sys
 from collections import Counter, defaultdict
@@ -64,37 +65,74 @@ def dump(path, value):
 
 
 # ============================================================
-# S04：纳入 / 排除判定
+# S04：纳入 / 排除判定（五条规则，按 PDF L978/L984/L986）
 # ============================================================
+# S1 解释完整性：解释条数 == 映射对数，逐对都能确认关系依据
+# S2 解释有效性：解释必须是实质内容，不能是 "Items:" / "Explanation:" 模板残留
+# S3 作者自证不成立：解释里出现 "may not be appropriate" 等自我否定
+#    → 作者本人认为这条映射不成立，必须排除（不是我们的判断，是原文自述）
+# S4 冗余对：真实对称结构（sperm/egg 都对 product）保留为映射集合；
+#    同义重复（同一词换单复数）才判质量不足。实测 30 条全属前者，无需排除
+# S5 多值结构：一源多目标原样保存，由 multiple_mapping_type 标注
+RESIDUE_LABEL_RE = re.compile(
+    r'^\s*(items?|explanation|translation|elements?|concepts?|mapping|answer|'
+    r'lists?|terms?|pairs?)\s*[:：]', re.I)
+SELF_NEGATIVE_RE = re.compile(
+    r"(may not be (appropriate|correct|suitable|accurate)|"
+    r"(is|isn't) not (an? )?(appropriate|valid|suitable)|"
+    r"not (a )?(good|proper|valid|accurate) (mapping|correspondence|match)|"
+    r"does not (really )?(correspond|match|fit)|"
+    r"weak (mapping|correspondence)|questionable)", re.I)
+
+
 def classify(rec):
-    """返回 (status, reason)。status ∈ {confirmed, non_bijective, excluded}"""
+    """返回 (status, detail)。status ∈ {confirmed, non_bijective, excluded}"""
     maps = rec.get("mappings") or []
     expl = rec.get("Explanation") or []
     norm = [(str(a).strip(), str(b).strip()) for a, b in maps]
 
     if not norm:
-        return "excluded", "无映射对"
+        return "excluded", dict(rule="S1", reason="无映射对")
     if len(norm) < 2:
-        return "excluded", "映射对少于 2，无法构成关系"
+        return "excluded", dict(rule="S1", reason="映射对少于 2，无法构成关系")
     if any(not a or not b for a, b in norm):
-        return "excluded", "存在空端点"
-    if not expl:
-        return "excluded", "无 Explanation，缺关系依据（禁止用词义相似度补）"
-    if len(expl) != len(norm):
-        return "excluded", (f"解释条数({len(expl)})与映射对数({len(norm)})不一致，"
-                            f"无法逐对确认关系依据")
+        return "excluded", dict(rule="S1", reason="存在空端点")
 
+    # S1 解释完整性
+    if not expl:
+        return "excluded", dict(rule="S1", reason="无 Explanation，缺关系依据（禁止用词义相似度补）")
+    if len(expl) != len(norm):
+        return "excluded", dict(
+            rule="S1",
+            reason=f"解释条数({len(expl)})与映射对数({len(norm)})不一致，无法逐对确认关系依据")
+
+    # S2 解释有效性（模板残留）
+    for i, e in enumerate(expl):
+        if RESIDUE_LABEL_RE.match((e or "").strip()):
+            return "excluded", dict(
+                rule="S2",
+                reason=f"第 {i+1} 条解释是模板残留（以列举标签开头）：{(e or '')[:60]!r}")
+
+    # S3 作者自证不成立
+    for i, e in enumerate(expl):
+        m = SELF_NEGATIVE_RE.search(e or "")
+        if m:
+            return "excluded", dict(
+                rule="S3",
+                reason=f"第 {i+1} 条解释自述该映射不成立（{m.group(0)!r}），作者自认无效")
+
+    # S4/S5 结构类型（重复端一律保留为映射集合）
     la = [a.lower() for a, _ in norm]
     lb = [b.lower() for _, b in norm]
     dup_a = sorted({x for x, c in Counter(la).items() if c > 1})
     dup_b = sorted({x for x, c in Counter(lb).items() if c > 1})
     if dup_a and dup_b:
-        return "non_bijective", "both"
+        return "non_bijective", dict(rule="S5", mtype="both", dup_a=dup_a, dup_b=dup_b)
     if dup_a:
-        return "non_bijective", "one_to_many"
+        return "non_bijective", dict(rule="S5", mtype="one_to_many", dup_a=dup_a)
     if dup_b:
-        return "non_bijective", "many_to_one"
-    return "confirmed", "none"
+        return "non_bijective", dict(rule="S5", mtype="many_to_one", dup_b=dup_b)
+    return "confirmed", dict(rule="", mtype="none")
 
 
 # ============================================================
@@ -110,8 +148,9 @@ def build_group(rec, pair_index, raw_original=None):
     raw_original: 原文的干净副本，用于 adaptation.raw 逐字留存；
     不传时用 rec 自身（调用方须保证 rec 未被写入任何内部字段）。
     """
-    status, mtype = classify(rec)
+    status, detail = classify(rec)
     gid = f"group_scar_{rec['id']:04d}"
+    mtype = detail.get("mtype", "none")
     pairs = [(str(a).strip(), str(b).strip()) for a, b in rec["mappings"]]
 
     # 节点 ID：用无意义编号 n1..nk，与 MRED 一致（不泄露语义、不依赖原文词形）
@@ -333,9 +372,11 @@ def main():
 
     groups, excluded = [], []
     for rec in records:
-        status, mtype = classify(rec)
+        status, detail = classify(rec)
         if status == "excluded":
-            excluded.append(dict(original_id=rec["id"], reason=mtype,
+            excluded.append(dict(original_id=rec["id"],
+                                 rule=detail.get("rule", ""),
+                                 reason=detail.get("reason", ""),
                                  system_a=rec.get("system_a"),
                                  system_b=rec.get("system_b"),
                                  n_pairs=len(rec.get("mappings") or []),

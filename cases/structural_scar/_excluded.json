@@ -2,12 +2,22 @@
   "dataset": "scar",
   "source": "data/raw/scar/release/system_analogy_en.json",
   "raw_count": 400,
-  "included": 387,
-  "excluded_count": 13,
+  "included": 380,
+  "excluded_count": 20,
   "rule": "规范1：不得用概念名称相似度代替关系标注；规范2：原始材料不足以确定关系时排除并记录原因。Explanation 条数与映射对数不一致即无法逐对确认关系依据，予以排除。",
   "records": [
     {
+      "original_id": 24,
+      "rule": "S3",
+      "reason": "第 2 条解释自述该映射不成立（'may not be appropriate'），作者自认无效",
+      "system_a": "Food Chain",
+      "system_b": "Information Flow",
+      "n_pairs": 3,
+      "n_expl": 3
+    },
+    {
       "original_id": 53,
+      "rule": "S1",
       "reason": "解释条数(5)与映射对数(3)不一致，无法逐对确认关系依据",
       "system_a": "blood circulation system",
       "system_b": "Water pipe system",
@@ -16,6 +26,7 @@
     },
     {
       "original_id": 85,
+      "rule": "S1",
       "reason": "解释条数(7)与映射对数(5)不一致，无法逐对确认关系依据",
       "system_a": "Limit Modification System",
       "system_b": "Firewall",
@@ -24,6 +35,7 @@
     },
     {
       "original_id": 146,
+      "rule": "S1",
       "reason": "解释条数(4)与映射对数(5)不一致，无法逐对确认关系依据",
       "system_a": "Feature Engineering",
       "system_b": "Miner",
@@ -32,6 +44,7 @@
     },
     {
       "original_id": 148,
+      "rule": "S1",
       "reason": "解释条数(4)与映射对数(2)不一致，无法逐对确认关系依据",
       "system_a": "Cross Validation",
       "system_b": "Fishing",
@@ -40,6 +53,7 @@
     },
     {
       "original_id": 170,
+      "rule": "S1",
       "reason": "解释条数(5)与映射对数(3)不一致，无法逐对确认关系依据",
       "system_a": "Option Pricing Model",
       "system_b": "Insurance Contract",
@@ -47,7 +61,26 @@
       "n_expl": 5
     },
     {
+      "original_id": 220,
+      "rule": "S3",
+      "reason": "第 2 条解释自述该映射不成立（'may not be appropriate'），作者自认无效",
+      "system_a": "Egypt",
+      "system_b": "India",
+      "n_pairs": 3,
+      "n_expl": 3
+    },
+    {
+      "original_id": 221,
+      "rule": "S3",
+      "reason": "第 2 条解释自述该映射不成立（'may not be appropriate'），作者自认无效",
+      "system_a": "Egypt",
+      "system_b": "Ancient Rome",
+      "n_pairs": 3,
+      "n_expl": 3
+    },
+    {
       "original_id": 239,
+      "rule": "S1",
       "reason": "解释条数(5)与映射对数(3)不一致，无法逐对确认关系依据",
       "system_a": "British Constitutional Monarchy",
       "system_b": "German Constitutional Monarchy",
@@ -56,6 +89,7 @@
     },
     {
       "original_id": 251,
+      "rule": "S1",
       "reason": "解释条数(5)与映射对数(4)不一致，无法逐对确认关系依据",
       "system_a": "The Three-Body Problem",
       "system_b": "Foundation Series",
@@ -63,7 +97,44 @@
       "n_expl": 5
     },
     {
+      "original_id": 256,
+      "rule": "S3",
+      "reason": "第 3 条解释自述该映射不成立（'may not be appropriate'），作者自认无效",
+      "system_a": "Gone with the Wind",
+      "system_b": "Peach Blossom Fan",
+      "n_pairs": 4,
+      "n_expl": 4
+    },
+    {
+      "original_id": 258,
+      "rule": "S3",
+      "reason": "第 2 条解释自述该映射不成立（'is not appropriate'），作者自认无效",
+      "system_a": "Thorn Birds",
+      "system_b": "Fortress Besieged",
+      "n_pairs": 3,
+      "n_expl": 3
+    },
+    {
+      "original_id": 277,
+      "rule": "S3",
+      "reason": "第 5 条解释自述该映射不成立（'may not be appropriate'），作者自认无效",
+      "system_a": "mountain",
+      "system_b": "career",
+      "n_pairs": 7,
+      "n_expl": 7
+    },
+    {
+      "original_id": 278,
+      "rule": "S3",
+      "reason": "第 5 条解释自述该映射不成立（'may not be appropriate'），作者自认无效",
+      "system_a": "hill",
+      "system_b": "career",
+      "n_pairs": 7,
+      "n_expl": 7
+    },
+    {
       "original_id": 287,
+      "rule": "S1",
       "reason": "解释条数(7)与映射对数(11)不一致，无法逐对确认关系依据",
       "system_a": "battle",
       "system_b": "debate",
@@ -72,6 +143,7 @@
     },
     {
       "original_id": 304,
+      "rule": "S1",
       "reason": "解释条数(8)与映射对数(11)不一致，无法逐对确认关系依据",
       "system_a": "journey",
       "system_b": "illness",
@@ -80,6 +152,7 @@
     },
     {
       "original_id": 311,
+      "rule": "S1",
       "reason": "解释条数(9)与映射对数(10)不一致，无法逐对确认关系依据",
       "system_a": "train",
       "system_b": "society",
@@ -88,6 +161,7 @@
     },
     {
       "original_id": 312,
+      "rule": "S1",
       "reason": "解释条数(9)与映射对数(11)不一致，无法逐对确认关系依据",
       "system_a": "journey",
       "system_b": "career",
@@ -96,6 +170,7 @@
     },
     {
       "original_id": 318,
+      "rule": "S1",
       "reason": "解释条数(8)与映射对数(13)不一致，无法逐对确认关系依据",
       "system_a": "war",
       "system_b": "business",
@@ -104,6 +179,7 @@
     },
     {
       "original_id": 379,
+      "rule": "S1",
       "reason": "解释条数(5)与映射对数(3)不一致，无法逐对确认关系依据",
       "system_a": "Two-dimensional Electron Gas",
       "system_b": "Checkers",

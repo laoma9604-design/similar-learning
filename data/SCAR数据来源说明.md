@@ -86,44 +86,70 @@
 
 ## 五、纳入与排除（S04 口径）
 
-按三条科研规范执行：
+严格按 PDF L978「可核验结构的样本做结构评价」、L984「不能用概念名称相似度替代缺失的关系标注」、L986「原材料不足以确定关系则排除并记录原因」执行。
 
-- **规范1** 不得用概念名称相似度代替缺失的关系标注 → 节点、超边、映射全部来自原文 `mappings`；SCAR 未标注类型/角色/方向，本适配不虚构，通过 `available_checks` 显式声明只有节点双射类可核验。
-- **规范2** 原始材料不足以确定关系时排除并记录原因 → 见下表。
-- **规范3** 一个任务可能存在多个合理映射 → 多对一/一对多原样保留，标注 `multiple_mapping_type`，`valid_mappings` 保存有效映射集合，不强行改成双射。
+**五条判定规则**（第一条到第三条为排除依据，第四条到第五条为保留规则）：
 
-**纳入 387 条，排除 13 条。**
+| 规则 | 内容 | 判定依据 |
+|---|---|---|
+| S1 解释完整性 | 解释条数 = 映射对数，逐对都能确认关系依据 | 原文 Explanation 与 mappings 对应关系 |
+| S2 解释有效性 | 解释必须是实质论证，不能是 `Items:` / `Explanation:` 模板残留 | 解释文本本身 |
+| S3 作者自证不成立 | 解释中出现「may not be appropriate」等自我否定 | 作者原话 |
+| S4 冗余对 | 真实对称结构保留为映射集合；同义重复才判质量不足 | 映射两端去单复数后比对 |
+| S5 多值结构 | 一源多目标/多源一目标原样保存，`multiple_mapping_type` 标注 | 映射两端重复检测 |
 
-排除原因全部为同一类：`Explanation` 条数与映射对数不一致，无法逐对确认关系依据。
+**结果：纳入 380 条，排除 20 条（95.0%）。**
 
-| 原始 id | 映射对 | 解释条 | 系统 |
-|---|---|---|---|
-| 53 | 3 | 5 | blood circulation system → Water pipe system |
-| 85 | 5 | 7 | Limit Modification System → Firewall |
-| 146 | 5 | 4 | Feature Engineering → Miner |
-| 148 | 2 | 4 | （见 _excluded.json） |
-| 170 | 3 | 5 | （见 _excluded.json） |
-| 239 | 3 | 5 | （见 _excluded.json） |
-| 251 | 4 | 5 | （见 _excluded.json） |
-| 287 | 11 | 7 | （见 _excluded.json） |
-| 304 | 11 | 8 | （见 _excluded.json） |
-| 311 | 10 | 9 | （见 _excluded.json） |
-| 312 | 11 | 9 | （见 _excluded.json） |
-| 318 | 13 | 8 | （见 _excluded.json） |
-| 379 | 3 | 5 | （见 _excluded.json） |
+| 规则 | 条数 | 说明 |
+|---|---|---|
+| S1 解释条数不符 | 13 | 无法逐对确认关系依据 |
+| S2 模板残留 | 6 | **全部含于 S1 之内**，无额外损失 |
+| S3 作者自认不成立 | 7 | **原先遗漏，本次新增排除** |
+| S4 冗余对 | 30 | 全为真实对称结构（如 sperm/egg 均对应 product），保留为映射集合，0 条排除 |
 
-完整记录见 `cases/structural_scar/_excluded.json`，含 system_a / system_b、映射对数、解释条数与判定依据。
+S3 新增的 7 条（作者在解释里明确写了该映射不成立）：
 
-## 六、适配产物
+| 原始 id | 系统 | 作者原话 |
+|---|---|---|
+| 24 | Food Chain → Information Flow | this mapping may not be appropriate |
+| 220 | Egypt → India | This mapping may not be appropriate because... |
+| 221 | Egypt → Ancient Rome | This analogy may not be appropriate because... |
+| 256 | Gone with the Wind → Peach Blossom Fan | This analogy may not be appropriate |
+| 258 | Thorn Birds → Fortress Besieged | This mapping is not appropriate |
+| 277 | mountain → career | This mapping may not be appropriate since... |
+| 278 | hill → career | This mapping may not be appropriate because... |
+
+完整记录见 `cases/structural_scar/_excluded.json`，每条含 `rule`（S1/S2/S3）、`reason`（含原文片段）、system 对、映射对数与解释条数。验收脚本与回归测试均会按声明的规则重新复核，防止为了排除而编造规则。
+
+**关于 S1 与 S2 的发现过程**：初版筛选只检查「解释条数 = 映射对数」，漏掉了 S2 与 S3 两类。S2 和 S3 是在人工阅读 20 条试点样本时发现的（见第六节的试点记录），随后扩展为全量规则。
+
+## 六、试点记录（20 条人工判定）
+
+按 PDF L984「先适配 20 个原始组」的要求，人工逐条阅读了 20 条代表性样本（覆盖 2/3/4/5/8/9/10/11/14 对、双射与非双射、含异常条目）。
+
+| 判定 | 条数 | id |
+|---|---|---|
+| 纳入 | 11 | 23, 1, 7, 29, 61, 62, 271, 144, 69, 77, 356 |
+| 排除 | 7 | 273, 287, 24, 53, 85, 146, 148 |
+| 存疑（待 B/C 复核） | 2 | 42, 283 |
+
+排除依据分类：
+- **作者自认不成立**：id=24，解释原文为 `this mapping may not be appropriate`
+- **解释是模板残留**：id=53（`Items: blood, water flow, ...`）、id=85（`Explanation:`）、id=148（`Item: data set, bait, ...`）——这三条解释条数完全对得上，躲过了初版筛选
+- **解释与映射错位**：id=287（映射 `ground ↔ stance`，解释却是 `Weapon corresponds to argument...`）、id=146、id=273
+
+试点暴露的问题直接转化为全量规则 S2 与 S3。
+
+## 七、适配产物
 
 | 项目 | 数量 |
 |---|---|
-| 适配组 | 387 |
+| 适配组 | 380 |
 | 节点规模 | 2~14，与映射对数一致（未压缩） |
-| 双射（唯一参考映射） | 362 |
-| 一对多（one_to_many） | 23 |
+| 双射（唯一参考映射） | 356 |
+| 一对多（one_to_many） | 22 |
 | 多对一（many_to_one） | 2 |
-| 划分 | train 271（70.03%）/ val 58（14.99%）/ test 58（14.99%） |
+| 划分 | train 266（70.0%）/ val 57（15.0%）/ test 57（15.0%） |
 | 结构模式 | 是（L957：无可靠响应函数，不执行响应检验） |
 | 可核验检查项 | `node_bijection`（其余五类无原始标注，不虚构） |
 

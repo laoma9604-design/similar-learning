@@ -39,17 +39,39 @@ def raw():
 
 
 def test_s03_counts_reconcile(scar, raw):
-    """S03：纳入 + 排除 = 原始数量，且排除清单存在、原因可复查。"""
+    """S03：纳入 + 排除 = 原始数量，且排除原因按声明的规则可复查。"""
+    import re
     ex = json.loads((SCAR / "_excluded.json").read_text(encoding="utf-8"))
     assert ex["raw_count"] == len(raw) == 400
     assert ex["included"] == len(scar)
     assert ex["included"] + ex["excluded_count"] == ex["raw_count"]
+
+    RESIDUE = re.compile(r'^\s*(items?|explanation|translation|elements?|concepts?|'
+                         r'mapping|answer|lists?|terms?|pairs?)\s*[:：]', re.I)
+    SELFNEG = re.compile(
+        r"(may not be (appropriate|correct|suitable|accurate)|"
+        r"(is|isn't) not (an? )?(appropriate|valid|suitable)|"
+        r"not (a )?(good|proper|valid|accurate) (mapping|correspondence|match)|"
+        r"does not (really )?(correspond|match|fit)|"
+        r"weak (mapping|correspondence)|questionable)", re.I)
+
     for r in ex["records"]:
         o = raw[int(r["original_id"])]
         assert r["reason"], f"排除项 {r['original_id']} 无原因"
-        # 原因必须属实：解释条数与映射对数确实不一致
-        assert len(o.get("Explanation") or []) != len(o.get("mappings") or []), \
-            f"排除项 {r['original_id']} 实际一致，不应排除"
+        rule = r.get("rule")
+        expl = o.get("Explanation") or []
+        maps = o.get("mappings") or []
+        # 声明的规则必须属实，不能为了排除而编规则
+        if rule == "S1":
+            assert len(expl) != len(maps), f"排除项 {r['original_id']} 声明 S1 但不符"
+        elif rule == "S2":
+            assert any(RESIDUE.match((e or "").strip()) for e in expl), \
+                f"排除项 {r['original_id']} 声明 S2 但无模板残留"
+        elif rule == "S3":
+            assert any(SELFNEG.search(e or "") for e in expl), \
+                f"排除项 {r['original_id']} 声明 S3 但无自我否定"
+        else:
+            pytest.fail(f"排除项 {r['original_id']} 规则未知 {rule!r}")
 
 
 def test_s04_no_guessed_relations(scar, raw):
