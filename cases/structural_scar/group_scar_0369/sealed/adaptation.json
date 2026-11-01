@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0369",
+  "dataset": "scar",
+  "original_id": "369",
+  "source_object_id": "obj_group_scar_0369_src",
+  "target_object_id": "obj_group_scar_0369_tgt",
+  "faithful_mappings": [
+    [
+      "water flow",
+      "wind"
+    ],
+    [
+      "water turbine",
+      "wind mill"
+    ],
+    [
+      "Paddle",
+      "fan blade"
+    ]
+  ],
+  "explanation": [
+    "Water flow corresponds to wind: in hydroelectric power generation, water flow is the source of energy that drives the water turbine rotation, while in wind power generation, wind is the source of energy that drives the windmill rotation. Both are energy sources in their respective systems.",
+    "Water turbine corresponds to windmill: the water turbine is the device in hydroelectric power generation that converts the energy of water flow into mechanical energy, while the windmill is the device in wind power generation that converts wind energy into mechanical energy. Both are energy conversion devices in their respective systems.",
+    "Paddle corresponds to fan blade: in a water turbine, the paddle is the component that receives the water flow and converts its energy into rotational power, while in a windmill, the fan blade is the component that receives the wind energy and converts it into rotational power. Both are energy receiving and converting components in their respective systems."
+  ],
+  "background": {
+    "source": "Hydropower is a method of converting the kinetic or potential energy from falling or fast-running water into electricity or machine power. This form of renewable energy production is achieved through the use of a water turbine which transforms the force of the water flow into an energy source. Hydropower has existed as a source of energy for centuries, and was used to power various mechanical devices such as textile mills and sawmills. Today, hydropower is mainly used for hydroelectric power generation and as one part of a system called pumped-storage hydroelectricity. This method of power generation is becoming an attractive alternative to fossil fuels due to its sustainability and lack of direct atmospheric pollutants. However, it does require a consistent source of water, such as a river or an elevated lake, and has various economic, sociological, and environmental challenges. Despite this, international institutions such as the World Bank recognize hydropower as a low-carbon means for economic development. Additionally, a trompe, which produces compressed air from falling water, can be used to power other machinery from a distance. Hydropower is a promising solution to the global demand for sustainable energy production.",
+    "target": "Wind power is a renewable and sustainable energy source that uses wind turbines to generate electricity. It has a lower impact on the environment compared to burning fossil fuels, making it a popular alternative. Wind power has historical roots in windmills and windpumps, however, it is now mostly used to create electricity. Wind farms consist of multiple turbines that are connected to the power transmission network, providing energy to communities. Though new wind farms are cheaper than coal or gas plants, their expansion is hindered by fossil fuel subsidies. Onshore wind farms have a greater visual impact on the landscape, but smaller onshore wind farms can feed energy into the grid or provide power to isolated communities. Offshore wind farms deliver more energy with less fluctuation and less visual impact. Power-management techniques are used to match the supply and demand for wind power, such as hydroelectric power or grid storage. Wind power has the potential to expand much faster in order to meet the Paris Agreement goals to limit climate change. Wind power is most effective in regions with higher northern and southern latitudes where wind power generation is higher in nighttime and winter months. A combination of wind and solar power has proven to be effective in many countries."
+  },
+  "raw": {
+    "id": 369,
+    "lang": "en",
+    "system_a": "Hydropower",
+    "system_b": "Wind Power",
+    "mappings": [
+      [
+        "water flow",
+        "wind"
+      ],
+      [
+        "water turbine",
+        "wind mill"
+      ],
+      [
+        "Paddle",
+        "fan blade"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Physics",
+    "system_a_background": "Hydropower is a method of converting the kinetic or potential energy from falling or fast-running water into electricity or machine power. This form of renewable energy production is achieved through the use of a water turbine which transforms the force of the water flow into an energy source. Hydropower has existed as a source of energy for centuries, and was used to power various mechanical devices such as textile mills and sawmills. Today, hydropower is mainly used for hydroelectric power generation and as one part of a system called pumped-storage hydroelectricity. This method of power generation is becoming an attractive alternative to fossil fuels due to its sustainability and lack of direct atmospheric pollutants. However, it does require a consistent source of water, such as a river or an elevated lake, and has various economic, sociological, and environmental challenges. Despite this, international institutions such as the World Bank recognize hydropower as a low-carbon means for economic development. Additionally, a trompe, which produces compressed air from falling water, can be used to power other machinery from a distance. Hydropower is a promising solution to the global demand for sustainable energy production.",
+    "system_b_background": "Wind power is a renewable and sustainable energy source that uses wind turbines to generate electricity. It has a lower impact on the environment compared to burning fossil fuels, making it a popular alternative. Wind power has historical roots in windmills and windpumps, however, it is now mostly used to create electricity. Wind farms consist of multiple turbines that are connected to the power transmission network, providing energy to communities. Though new wind farms are cheaper than coal or gas plants, their expansion is hindered by fossil fuel subsidies. Onshore wind farms have a greater visual impact on the landscape, but smaller onshore wind farms can feed energy into the grid or provide power to isolated communities. Offshore wind farms deliver more energy with less fluctuation and less visual impact. Power-management techniques are used to match the supply and demand for wind power, such as hydroelectric power or grid storage. Wind power has the potential to expand much faster in order to meet the Paris Agreement goals to limit climate change. Wind power is most effective in regions with higher northern and southern latitudes where wind power generation is higher in nighttime and winter months. A combination of wind and solar power has proven to be effective in many countries.",
+    "Explanation": [
+      "Water flow corresponds to wind: in hydroelectric power generation, water flow is the source of energy that drives the water turbine rotation, while in wind power generation, wind is the source of energy that drives the windmill rotation. Both are energy sources in their respective systems.",
+      "Water turbine corresponds to windmill: the water turbine is the device in hydroelectric power generation that converts the energy of water flow into mechanical energy, while the windmill is the device in wind power generation that converts wind energy into mechanical energy. Both are energy conversion devices in their respective systems.",
+      "Paddle corresponds to fan blade: in a water turbine, the paddle is the component that receives the water flow and converts its energy into rotational power, while in a windmill, the fan blade is the component that receives the wind energy and converts it into rotational power. Both are energy receiving and converting components in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Hydropower",
+    "target": "Wind Power"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

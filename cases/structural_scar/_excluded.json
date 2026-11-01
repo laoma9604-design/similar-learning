@@ -1,0 +1,114 @@
+{
+  "dataset": "scar",
+  "source": "data/raw/scar/release/system_analogy_en.json",
+  "raw_count": 400,
+  "included": 387,
+  "excluded_count": 13,
+  "rule": "规范1：不得用概念名称相似度代替关系标注；规范2：原始材料不足以确定关系时排除并记录原因。Explanation 条数与映射对数不一致即无法逐对确认关系依据，予以排除。",
+  "records": [
+    {
+      "original_id": 53,
+      "reason": "解释条数(5)与映射对数(3)不一致，无法逐对确认关系依据",
+      "system_a": "blood circulation system",
+      "system_b": "Water pipe system",
+      "n_pairs": 3,
+      "n_expl": 5
+    },
+    {
+      "original_id": 85,
+      "reason": "解释条数(7)与映射对数(5)不一致，无法逐对确认关系依据",
+      "system_a": "Limit Modification System",
+      "system_b": "Firewall",
+      "n_pairs": 5,
+      "n_expl": 7
+    },
+    {
+      "original_id": 146,
+      "reason": "解释条数(4)与映射对数(5)不一致，无法逐对确认关系依据",
+      "system_a": "Feature Engineering",
+      "system_b": "Miner",
+      "n_pairs": 5,
+      "n_expl": 4
+    },
+    {
+      "original_id": 148,
+      "reason": "解释条数(4)与映射对数(2)不一致，无法逐对确认关系依据",
+      "system_a": "Cross Validation",
+      "system_b": "Fishing",
+      "n_pairs": 2,
+      "n_expl": 4
+    },
+    {
+      "original_id": 170,
+      "reason": "解释条数(5)与映射对数(3)不一致，无法逐对确认关系依据",
+      "system_a": "Option Pricing Model",
+      "system_b": "Insurance Contract",
+      "n_pairs": 3,
+      "n_expl": 5
+    },
+    {
+      "original_id": 239,
+      "reason": "解释条数(5)与映射对数(3)不一致，无法逐对确认关系依据",
+      "system_a": "British Constitutional Monarchy",
+      "system_b": "German Constitutional Monarchy",
+      "n_pairs": 3,
+      "n_expl": 5
+    },
+    {
+      "original_id": 251,
+      "reason": "解释条数(5)与映射对数(4)不一致，无法逐对确认关系依据",
+      "system_a": "The Three-Body Problem",
+      "system_b": "Foundation Series",
+      "n_pairs": 4,
+      "n_expl": 5
+    },
+    {
+      "original_id": 287,
+      "reason": "解释条数(7)与映射对数(11)不一致，无法逐对确认关系依据",
+      "system_a": "battle",
+      "system_b": "debate",
+      "n_pairs": 11,
+      "n_expl": 7
+    },
+    {
+      "original_id": 304,
+      "reason": "解释条数(8)与映射对数(11)不一致，无法逐对确认关系依据",
+      "system_a": "journey",
+      "system_b": "illness",
+      "n_pairs": 11,
+      "n_expl": 8
+    },
+    {
+      "original_id": 311,
+      "reason": "解释条数(9)与映射对数(10)不一致，无法逐对确认关系依据",
+      "system_a": "train",
+      "system_b": "society",
+      "n_pairs": 10,
+      "n_expl": 9
+    },
+    {
+      "original_id": 312,
+      "reason": "解释条数(9)与映射对数(11)不一致，无法逐对确认关系依据",
+      "system_a": "journey",
+      "system_b": "career",
+      "n_pairs": 11,
+      "n_expl": 9
+    },
+    {
+      "original_id": 318,
+      "reason": "解释条数(8)与映射对数(13)不一致，无法逐对确认关系依据",
+      "system_a": "war",
+      "system_b": "business",
+      "n_pairs": 13,
+      "n_expl": 8
+    },
+    {
+      "original_id": 379,
+      "reason": "解释条数(5)与映射对数(3)不一致，无法逐对确认关系依据",
+      "system_a": "Two-dimensional Electron Gas",
+      "system_b": "Checkers",
+      "n_pairs": 3,
+      "n_expl": 5
+    }
+  ]
+}

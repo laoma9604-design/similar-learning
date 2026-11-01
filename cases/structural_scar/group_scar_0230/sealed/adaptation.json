@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0230",
+  "dataset": "scar",
+  "original_id": "230",
+  "source_object_id": "obj_group_scar_0230_src",
+  "target_object_id": "obj_group_scar_0230_tgt",
+  "faithful_mappings": [
+    [
+      "aegean sea",
+      "the mediterranean"
+    ],
+    [
+      "Greek alphabet",
+      "latin alphabet"
+    ],
+    [
+      "alexander empire",
+      "Roman Empire"
+    ],
+    [
+      "athens culture",
+      "Christianity"
+    ]
+  ],
+  "explanation": [
+    "The Aegean Sea corresponds to the Mediterranean: The Aegean Sea is the birthplace of ancient Greek civilization and has significant cultural and historical significance to ancient Greece. Similarly, the Mediterranean is the birthplace of ancient Roman civilization and has significant cultural and historical significance to ancient Rome. Here, both represent the geographical and historical backgrounds of their respective civilizations.",
+    "The Greek alphabet corresponds to the Latin alphabet: The Greek alphabet is the writing system of ancient Greek civilization, and the Latin alphabet is the writing system of ancient Roman civilization. In this correspondence, both the Greek alphabet and the Latin alphabet represent the writing and script systems of their respective civilizations.",
+    "The Alexander Empire corresponds to the Roman Empire: The Alexander Empire was a powerful empire during ancient Greek times that had far-reaching influence in the surrounding regions. Similarly, the Roman Empire was a powerful empire during ancient Roman times that also had far-reaching influence in the surrounding regions. Here, both represent the powerful empires of their respective civilizations in history.",
+    "Athenian culture corresponds to Christianity: Athenian culture is an important part of ancient Greek civilization, including philosophy, literature, art, and other aspects. Christianity is the main religious belief of late ancient Roman civilization and has had a profound influence on ancient Roman culture. Here, both represent the cultural and religious characteristics of their respective civilizations."
+  ],
+  "background": {
+    "source": "Ancient Greece was a civilization located in the northeastern Mediterranean. It existed from the Greek Dark Ages until the end of classical antiquity, encompassing a collection of culturally and linguistically related city-states and territories, including Athens culture. Classical Greece, from the Greco-Persian Wars to the 5th to 4th centuries BC, represented the Golden Age of Athens. Alexander the Great's empire, which lasted 13 years, had a significant impact on the region. Classical Greek culture, with its most remarkable contribution being philosophy, had a powerful influence on ancient Rome. Because of these numerous achievements, Classical Greece is regarded as the cradle of Western civilization from where the modern West derives many of its founding archetypes and ideas in politics, philosophy, science, and art.",
+    "target": "Ancient Rome was a vast civilisation that dominated much of the Mediterranean world from its founding in the 8th century BC until the collapse of the Western Roman Empire in the 5th century AD. Evolving from an Italic settlement to an Empire that at its height had an estimated 50 to 90 million inhabitants, the Roman state was characterised by conquest, cultural and linguistic assimilation. The Roman Empire's contribution to modern language, religion, society, technology, law, politics, government, warfare, art, literature, architecture, and engineering is immeasurable. The Roman Empire is also credited with professionalising and expanding its military and creating a system of government that inspired modern republics such as the United States and France. The Punic Wars with Carthage gave Rome supremacy in the Mediterranean, which allowed the Roman Empire to emerge with the principate of Augustus in 27 BC. The empire stretched from the Atlantic to Arabia and from the mouth of the Rhine to North Africa. Latin, one of the base languages of the modern Romance languages, evolved in Ancient Rome, and the Latin alphabet is still widely used today. Christianity also played a significant role in Ancient Rome and became its official religion under the rule of Emperor Constantine."
+  },
+  "raw": {
+    "id": 230,
+    "lang": "en",
+    "system_a": "Ancient Greece",
+    "system_b": "Ancient Rome",
+    "mappings": [
+      [
+        "aegean sea",
+        "the mediterranean"
+      ],
+      [
+        "Greek alphabet",
+        "latin alphabet"
+      ],
+      [
+        "alexander empire",
+        "Roman Empire"
+      ],
+      [
+        "athens culture",
+        "Christianity"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "Ancient Greece was a civilization located in the northeastern Mediterranean. It existed from the Greek Dark Ages until the end of classical antiquity, encompassing a collection of culturally and linguistically related city-states and territories, including Athens culture. Classical Greece, from the Greco-Persian Wars to the 5th to 4th centuries BC, represented the Golden Age of Athens. Alexander the Great's empire, which lasted 13 years, had a significant impact on the region. Classical Greek culture, with its most remarkable contribution being philosophy, had a powerful influence on ancient Rome. Because of these numerous achievements, Classical Greece is regarded as the cradle of Western civilization from where the modern West derives many of its founding archetypes and ideas in politics, philosophy, science, and art.",
+    "system_b_background": "Ancient Rome was a vast civilisation that dominated much of the Mediterranean world from its founding in the 8th century BC until the collapse of the Western Roman Empire in the 5th century AD. Evolving from an Italic settlement to an Empire that at its height had an estimated 50 to 90 million inhabitants, the Roman state was characterised by conquest, cultural and linguistic assimilation. The Roman Empire's contribution to modern language, religion, society, technology, law, politics, government, warfare, art, literature, architecture, and engineering is immeasurable. The Roman Empire is also credited with professionalising and expanding its military and creating a system of government that inspired modern republics such as the United States and France. The Punic Wars with Carthage gave Rome supremacy in the Mediterranean, which allowed the Roman Empire to emerge with the principate of Augustus in 27 BC. The empire stretched from the Atlantic to Arabia and from the mouth of the Rhine to North Africa. Latin, one of the base languages of the modern Romance languages, evolved in Ancient Rome, and the Latin alphabet is still widely used today. Christianity also played a significant role in Ancient Rome and became its official religion under the rule of Emperor Constantine.",
+    "Explanation": [
+      "The Aegean Sea corresponds to the Mediterranean: The Aegean Sea is the birthplace of ancient Greek civilization and has significant cultural and historical significance to ancient Greece. Similarly, the Mediterranean is the birthplace of ancient Roman civilization and has significant cultural and historical significance to ancient Rome. Here, both represent the geographical and historical backgrounds of their respective civilizations.",
+      "The Greek alphabet corresponds to the Latin alphabet: The Greek alphabet is the writing system of ancient Greek civilization, and the Latin alphabet is the writing system of ancient Roman civilization. In this correspondence, both the Greek alphabet and the Latin alphabet represent the writing and script systems of their respective civilizations.",
+      "The Alexander Empire corresponds to the Roman Empire: The Alexander Empire was a powerful empire during ancient Greek times that had far-reaching influence in the surrounding regions. Similarly, the Roman Empire was a powerful empire during ancient Roman times that also had far-reaching influence in the surrounding regions. Here, both represent the powerful empires of their respective civilizations in history.",
+      "Athenian culture corresponds to Christianity: Athenian culture is an important part of ancient Greek civilization, including philosophy, literature, art, and other aspects. Christianity is the main religious belief of late ancient Roman civilization and has had a profound influence on ancient Roman culture. Here, both represent the cultural and religious characteristics of their respective civilizations."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Ancient Greece",
+    "target": "Ancient Rome"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

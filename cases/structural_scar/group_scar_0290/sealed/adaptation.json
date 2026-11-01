@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0290",
+  "dataset": "scar",
+  "original_id": "290",
+  "source_object_id": "obj_group_scar_0290_src",
+  "target_object_id": "obj_group_scar_0290_tgt",
+  "faithful_mappings": [
+    [
+      "race",
+      "competition"
+    ],
+    [
+      "racer",
+      "competitor"
+    ],
+    [
+      "track",
+      "market"
+    ],
+    [
+      "speed",
+      "success"
+    ],
+    [
+      "setback",
+      "failure"
+    ]
+  ],
+  "explanation": [
+    "Race corresponds to competition: both represent a competitive activity.",
+    "Racer corresponds to competitor: here it refers to individuals who participate in the competition in their respective fields.",
+    "Track corresponds to market: it can be understood as the process of paying attention to development trends in their respective fields.",
+    "Speed corresponds to success: speed and success are both key factors in gaining an advantage in their respective fields.",
+    "Setback corresponds to failure: setbacks and failures both represent obstacles encountered in competition."
+  ],
+  "background": {
+    "source": "Race is an ultimate test of skill, speed, and endurance that has been a part of human history for centuries. It is a competition, typically involving several racers, to determine the fastest or most skilled racer. The race can be performed on different occasions and tracks, ranging from a short sprint to a long distance marathon. The racers compete with each other in terms of their technique, speed, and physical prowess to cross the finishing line first.\n\nThe race track is specifically designed for racers, providing them with an environment that maximizes their potential. The tracks can be oval, straight, uphill or downhill based on the type of race that is being held. Racers need to overcome several setbacks to win the race, such as crashes, injuries, or mechanical failures. It is essential to have quick reflexes and cognitive abilities to deal with any situation during the race.\n\nSpeed is one of the crucial factors in determining who wins the race. Racers aim to achieve maximum speed while maintaining their balance and control. They also need to maneuver their way through tight spaces, sharp corners, and other obstacles while maintaining their speed. The fastest racer with the most efficient technique typically gets ahead of others and crosses the finishing line first.\n\nIn conclusion, the race is a thrilling competition that tests the endurance and skill of racers. The race can be performed on different tracks and occasions, ranging from a short sprint to a long-distance marathon. The racers need to overcome multiple setbacks and deal with intense turns and obstacles to emerge victoriously. Speed is the key to win the race and requires a unique blend of technique, physical endurance, and cognitive abilities.",
+    "target": "Competition is a fundamental aspect of human nature that has been studied by various fields such as psychology, sociology, anthropology, and more. It refers to a rivalry where two or more parties strive for a common goal that cannot be shared, where one's gain is the other's loss. Competition occurs naturally in nature, between living organisms that co-exist in the same environment. Humans, too, usually compete over food, mates, wealth, power, prestige, and fame. In market economies, businesses are in competition with one another over the same group of customers. The rivalry inside a company is often stimulated with the larger purpose of meeting and reaching higher quality of services or improved products that the company may produce or develop. Optimal strategies to achieve goals are studied in the branch of mathematics known as game theory. The opposing nature of cooperation and competition co-exist in everyday life, where mixtures of both are the norm. While competition can be seen as the opposite of cooperation, both are essential to an economic system, as argued by the philosopher R.G. Collingwood, where parties to an economic action co-operate in competing, like two chess players. Social psychologists study the nature of competition and investigate its circumstances and dynamics on groups. Sociologists study the effects of competition on society as a whole, while anthropologists study the history and prehistory of competition in various cultures. They also investigate how competition manifested itself in various cultural settings in the past, and how competition has developed over time. Success or failure is the ultimate result of competition, which is why it is a crucial aspect of human interaction and marketplace performance."
+  },
+  "raw": {
+    "id": 290,
+    "lang": "en",
+    "system_a": "race",
+    "system_b": "competition",
+    "mappings": [
+      [
+        "race",
+        "competition"
+      ],
+      [
+        "racer",
+        "competitor"
+      ],
+      [
+        "track",
+        "market"
+      ],
+      [
+        "speed",
+        "success"
+      ],
+      [
+        "setback",
+        "failure"
+      ]
+    ],
+    "system_a_domain": "Philosophy",
+    "system_b_domain": "Sport",
+    "system_a_background": "Race is an ultimate test of skill, speed, and endurance that has been a part of human history for centuries. It is a competition, typically involving several racers, to determine the fastest or most skilled racer. The race can be performed on different occasions and tracks, ranging from a short sprint to a long distance marathon. The racers compete with each other in terms of their technique, speed, and physical prowess to cross the finishing line first.\n\nThe race track is specifically designed for racers, providing them with an environment that maximizes their potential. The tracks can be oval, straight, uphill or downhill based on the type of race that is being held. Racers need to overcome several setbacks to win the race, such as crashes, injuries, or mechanical failures. It is essential to have quick reflexes and cognitive abilities to deal with any situation during the race.\n\nSpeed is one of the crucial factors in determining who wins the race. Racers aim to achieve maximum speed while maintaining their balance and control. They also need to maneuver their way through tight spaces, sharp corners, and other obstacles while maintaining their speed. The fastest racer with the most efficient technique typically gets ahead of others and crosses the finishing line first.\n\nIn conclusion, the race is a thrilling competition that tests the endurance and skill of racers. The race can be performed on different tracks and occasions, ranging from a short sprint to a long-distance marathon. The racers need to overcome multiple setbacks and deal with intense turns and obstacles to emerge victoriously. Speed is the key to win the race and requires a unique blend of technique, physical endurance, and cognitive abilities.",
+    "system_b_background": "Competition is a fundamental aspect of human nature that has been studied by various fields such as psychology, sociology, anthropology, and more. It refers to a rivalry where two or more parties strive for a common goal that cannot be shared, where one's gain is the other's loss. Competition occurs naturally in nature, between living organisms that co-exist in the same environment. Humans, too, usually compete over food, mates, wealth, power, prestige, and fame. In market economies, businesses are in competition with one another over the same group of customers. The rivalry inside a company is often stimulated with the larger purpose of meeting and reaching higher quality of services or improved products that the company may produce or develop. Optimal strategies to achieve goals are studied in the branch of mathematics known as game theory. The opposing nature of cooperation and competition co-exist in everyday life, where mixtures of both are the norm. While competition can be seen as the opposite of cooperation, both are essential to an economic system, as argued by the philosopher R.G. Collingwood, where parties to an economic action co-operate in competing, like two chess players. Social psychologists study the nature of competition and investigate its circumstances and dynamics on groups. Sociologists study the effects of competition on society as a whole, while anthropologists study the history and prehistory of competition in various cultures. They also investigate how competition manifested itself in various cultural settings in the past, and how competition has developed over time. Success or failure is the ultimate result of competition, which is why it is a crucial aspect of human interaction and marketplace performance.",
+    "Explanation": [
+      "Race corresponds to competition: both represent a competitive activity.",
+      "Racer corresponds to competitor: here it refers to individuals who participate in the competition in their respective fields.",
+      "Track corresponds to market: it can be understood as the process of paying attention to development trends in their respective fields.",
+      "Speed corresponds to success: speed and success are both key factors in gaining an advantage in their respective fields.",
+      "Setback corresponds to failure: setbacks and failures both represent obstacles encountered in competition."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "race",
+    "target": "competition"
+  },
+  "domains": {
+    "source": "Philosophy",
+    "target": "Sport"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

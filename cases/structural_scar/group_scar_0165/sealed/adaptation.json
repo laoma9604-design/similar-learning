@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0165",
+  "dataset": "scar",
+  "original_id": "165",
+  "source_object_id": "obj_group_scar_0165_src",
+  "target_object_id": "obj_group_scar_0165_tgt",
+  "faithful_mappings": [
+    [
+      "source IP",
+      "From"
+    ],
+    [
+      "TCP protocol",
+      "mode of transport"
+    ],
+    [
+      "Destination IP",
+      "destination"
+    ],
+    [
+      "router",
+      "transfer station"
+    ]
+  ],
+  "explanation": [
+    "The source IP corresponds to the From address: In a network, the source IP refers to the IP address of the device that sends the data packet. In mailing, the From address refers to the address of the sender. Both indicate the starting point of information or the item.",
+    "The TCP protocol corresponds to the mode of transport: In a network, the TCP protocol is a reliable data transmission protocol used to ensure the integrity and order of data packets. In mailing, the mode of transport refers to the transportation used in the mailing process, such as cars, trains, or planes. Both indicate the handling method of information or items during transmission.",
+    "The Destination IP corresponds to the destination address: In a network, the destination IP refers to the IP address of the device that receives the data packet. In mailing, the destination address refers to the address of the recipient. Both indicate the destination of information or items.",
+    "The router corresponds to the transfer station: In a network, the router is responsible for transmitting data packets from the source IP to the destination IP. In mailing, the transfer station refers to the intermediate station in the mailing process, which is used to transfer mail from the From address to the destination address. Both indicate the intermediate nodes of information or items during transmission."
+  ],
+  "background": {
+    "source": "The Internet is a vast network of networks that connects private, public, academic, business, and government networks of various scopes worldwide through electronic, wireless, and optical networking technologies. It uses the Internet Protocol suite (TCP/IP) to communicate between networks and devices. The network carries a vast range of information resources and services, such as the interconnected hypertext documents and applications of the World Wide Web (WWW), electronic mail, telephony, and file sharing. The origins of the Internet can be traced back to the development of packet switching and research commissioned by the United States Department of Defense in the late 1960s. The Internet has given birth to new services like email, instant messaging, online shopping, and social networking services. The Internet has no single centralized governance in either technological implementation or policies for access and usage; each constituent network sets its policies. The technical underpinning and standardization of the core protocols are the activities of the Internet Engineering Task Force (IETF), a non-profit organization of loosely affiliated international participants that anyone may associate with by contributing technical expertise.",
+    "target": "Mail, also known as post, is a mode of transporting postcards, letters, and parcels from one destination to another. The postal service is often regulated by governments, with many establishing a government monopoly on the service. Payment for postal services is typically made by an adhesive postage stamp or postage meter, particularly for bulk mailing. Beyond transporting letters, postal authorities may also oversee telecommunications services, savings account management, and passport applications. The Universal Postal Union sets rules for international mail exchange and boasts membership from 192 countries. During the journey from the sender to the recipient, mail may pass through transfer stations en route to its final destination."
+  },
+  "raw": {
+    "id": 165,
+    "lang": "en",
+    "system_a": "Internet",
+    "system_b": "Mail",
+    "mappings": [
+      [
+        "source IP",
+        "From"
+      ],
+      [
+        "TCP protocol",
+        "mode of transport"
+      ],
+      [
+        "Destination IP",
+        "destination"
+      ],
+      [
+        "router",
+        "transfer station"
+      ]
+    ],
+    "system_a_domain": "Computer",
+    "system_b_domain": "Engineering",
+    "system_a_background": "The Internet is a vast network of networks that connects private, public, academic, business, and government networks of various scopes worldwide through electronic, wireless, and optical networking technologies. It uses the Internet Protocol suite (TCP/IP) to communicate between networks and devices. The network carries a vast range of information resources and services, such as the interconnected hypertext documents and applications of the World Wide Web (WWW), electronic mail, telephony, and file sharing. The origins of the Internet can be traced back to the development of packet switching and research commissioned by the United States Department of Defense in the late 1960s. The Internet has given birth to new services like email, instant messaging, online shopping, and social networking services. The Internet has no single centralized governance in either technological implementation or policies for access and usage; each constituent network sets its policies. The technical underpinning and standardization of the core protocols are the activities of the Internet Engineering Task Force (IETF), a non-profit organization of loosely affiliated international participants that anyone may associate with by contributing technical expertise.",
+    "system_b_background": "Mail, also known as post, is a mode of transporting postcards, letters, and parcels from one destination to another. The postal service is often regulated by governments, with many establishing a government monopoly on the service. Payment for postal services is typically made by an adhesive postage stamp or postage meter, particularly for bulk mailing. Beyond transporting letters, postal authorities may also oversee telecommunications services, savings account management, and passport applications. The Universal Postal Union sets rules for international mail exchange and boasts membership from 192 countries. During the journey from the sender to the recipient, mail may pass through transfer stations en route to its final destination.",
+    "Explanation": [
+      "The source IP corresponds to the From address: In a network, the source IP refers to the IP address of the device that sends the data packet. In mailing, the From address refers to the address of the sender. Both indicate the starting point of information or the item.",
+      "The TCP protocol corresponds to the mode of transport: In a network, the TCP protocol is a reliable data transmission protocol used to ensure the integrity and order of data packets. In mailing, the mode of transport refers to the transportation used in the mailing process, such as cars, trains, or planes. Both indicate the handling method of information or items during transmission.",
+      "The Destination IP corresponds to the destination address: In a network, the destination IP refers to the IP address of the device that receives the data packet. In mailing, the destination address refers to the address of the recipient. Both indicate the destination of information or items.",
+      "The router corresponds to the transfer station: In a network, the router is responsible for transmitting data packets from the source IP to the destination IP. In mailing, the transfer station refers to the intermediate station in the mailing process, which is used to transfer mail from the From address to the destination address. Both indicate the intermediate nodes of information or items during transmission."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Internet",
+    "target": "Mail"
+  },
+  "domains": {
+    "source": "Computer",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

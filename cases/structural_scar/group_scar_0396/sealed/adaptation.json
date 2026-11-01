@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0396",
+  "dataset": "scar",
+  "original_id": "396",
+  "source_object_id": "obj_group_scar_0396_src",
+  "target_object_id": "obj_group_scar_0396_tgt",
+  "faithful_mappings": [
+    [
+      "nuclear spin",
+      "musical instrument"
+    ],
+    [
+      "Applied magnetic field",
+      "command"
+    ],
+    [
+      "resonance",
+      "to play"
+    ]
+  ],
+  "explanation": [
+    "Nuclear spin corresponds to musical instruments: In nuclear magnetic resonance, nuclear spin is the fundamental property of atomic nuclei rotating in a magnetic field. In musical performance, instruments are the tools used to produce sound. Both are basic elements that produce specific effects in their respective fields.",
+    "Applied magnetic field corresponds to conducting: Nuclear magnetic resonance requires an applied magnetic field to change the spin state of atomic nuclei. Conducting in musical performance is responsible for coordinating the rhythm and tone of instruments and performers. Both are core elements used to regulate and coordinate various components.",
+    "Resonance corresponds to playing: In nuclear magnetic resonance, resonance refers to the phenomenon of atomic nuclei reaching an energy resonance state with radio frequency pulses under applied magnetic fields. In musical performance, playing refers to the instruments and performers creating harmonious music through collaborative efforts. Both represent the process of reaching resonance and coordination in their respective fields."
+  ],
+  "background": {
+    "source": "Magnetic resonance imaging (MRI) is an advanced medical imaging technique that uses nuclear spin, applied magnetic fields, and resonance to generate detailed images of the body's organs and physiological processes without the use of X-rays or ionizing radiation. By exciting the polarization of hydrogen atoms in the body, MRI creates high-resolution images of tissue contrast, making it a valuable tool for medical diagnosis, staging, and follow-up of disease. Although MRI is a versatile imaging technique, it can be perceived as less comfortable by patients due to the long and loud measurements with the subject in a long, confining tube. Additionally, patients with non-removable metal in their body may not be able to undergo an MRI examination safely. With increased demand for MRI within health systems, cost-effectiveness and overdiagnosis are areas of concern.",
+    "target": "A music performance is an incredible display of musical skills by a performer or an ensemble of musicians playing musical instruments. It can be a wide range of events, from a solo audition to a full-fledged concert featuring multiple pieces. A recital is an intimate performance designed to highlight a single performer, composer, or instrument, while a concerto is a musical composition that showcases the solo performance of an instrument accompanied by an orchestra.\n\nTo play a musical instrument with command is an essential aspect of music performance, along with various techniques for playing, phrasing the composition, and improvisation. A musician's ability to master all these aspects will determine the quality of the musical performance. Additionally, network musical performance, which is a real-time interaction over a computer network, enables musicians to perform together, even if they are in different locations.\n\nStreet performances or busking, on the other hand, are a more informal type of musical performance, which involves playing music on the street or in public spaces. These performances provide a great opportunity for musicians to showcase their talents to a broader audience.\n\nIn conclusion, music performance is a diverse and dynamic field that provides a platform for musicians to display their skills to audiences, whether it's through playing an instrument with command, mastering a specific musical technique or improvisation, or performing with an ensemble."
+  },
+  "raw": {
+    "id": 396,
+    "lang": "en",
+    "system_a": "MRI",
+    "system_b": "Music Performance",
+    "mappings": [
+      [
+        "nuclear spin",
+        "musical instrument"
+      ],
+      [
+        "Applied magnetic field",
+        "command"
+      ],
+      [
+        "resonance",
+        "to play"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Art",
+    "system_a_background": "Magnetic resonance imaging (MRI) is an advanced medical imaging technique that uses nuclear spin, applied magnetic fields, and resonance to generate detailed images of the body's organs and physiological processes without the use of X-rays or ionizing radiation. By exciting the polarization of hydrogen atoms in the body, MRI creates high-resolution images of tissue contrast, making it a valuable tool for medical diagnosis, staging, and follow-up of disease. Although MRI is a versatile imaging technique, it can be perceived as less comfortable by patients due to the long and loud measurements with the subject in a long, confining tube. Additionally, patients with non-removable metal in their body may not be able to undergo an MRI examination safely. With increased demand for MRI within health systems, cost-effectiveness and overdiagnosis are areas of concern.",
+    "system_b_background": "A music performance is an incredible display of musical skills by a performer or an ensemble of musicians playing musical instruments. It can be a wide range of events, from a solo audition to a full-fledged concert featuring multiple pieces. A recital is an intimate performance designed to highlight a single performer, composer, or instrument, while a concerto is a musical composition that showcases the solo performance of an instrument accompanied by an orchestra.\n\nTo play a musical instrument with command is an essential aspect of music performance, along with various techniques for playing, phrasing the composition, and improvisation. A musician's ability to master all these aspects will determine the quality of the musical performance. Additionally, network musical performance, which is a real-time interaction over a computer network, enables musicians to perform together, even if they are in different locations.\n\nStreet performances or busking, on the other hand, are a more informal type of musical performance, which involves playing music on the street or in public spaces. These performances provide a great opportunity for musicians to showcase their talents to a broader audience.\n\nIn conclusion, music performance is a diverse and dynamic field that provides a platform for musicians to display their skills to audiences, whether it's through playing an instrument with command, mastering a specific musical technique or improvisation, or performing with an ensemble.",
+    "Explanation": [
+      "Nuclear spin corresponds to musical instruments: In nuclear magnetic resonance, nuclear spin is the fundamental property of atomic nuclei rotating in a magnetic field. In musical performance, instruments are the tools used to produce sound. Both are basic elements that produce specific effects in their respective fields.",
+      "Applied magnetic field corresponds to conducting: Nuclear magnetic resonance requires an applied magnetic field to change the spin state of atomic nuclei. Conducting in musical performance is responsible for coordinating the rhythm and tone of instruments and performers. Both are core elements used to regulate and coordinate various components.",
+      "Resonance corresponds to playing: In nuclear magnetic resonance, resonance refers to the phenomenon of atomic nuclei reaching an energy resonance state with radio frequency pulses under applied magnetic fields. In musical performance, playing refers to the instruments and performers creating harmonious music through collaborative efforts. Both represent the process of reaching resonance and coordination in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "MRI",
+    "target": "Music Performance"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Art"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

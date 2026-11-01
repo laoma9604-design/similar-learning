@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0002",
+  "dataset": "scar",
+  "original_id": "2",
+  "source_object_id": "obj_group_scar_0002_src",
+  "target_object_id": "obj_group_scar_0002_tgt",
+  "faithful_mappings": [
+    [
+      "biology",
+      "books"
+    ],
+    [
+      "biodiversity",
+      "Book Type"
+    ],
+    [
+      "ecosystem",
+      "library room"
+    ]
+  ],
+  "explanation": [
+    "Biology corresponds to books: In the biosphere, organisms are the basic units that make up the ecosystem, and various organisms together form a complex biological network. Similarly, in a library, books are carriers of knowledge and collectively form the library's knowledge system. In this analogy, both biology and books are basic components of their respective systems.",
+    "Biodiversity corresponds to book types: Biodiversity refers to the richness of the variety of species in the biosphere, which helps maintain the balance and stability of the ecosystem. In a library, book types represent the various fields of knowledge collected in the library, which helps to meet the needs of different readers. In this analogy, biodiversity and book types both represent the richness and diversity of their respective systems.",
+    "Ecosystem corresponds to library rooms: The ecosystem in the biosphere is formed by the interaction of different organisms, and these ecosystems are interconnected, interdependent, and together maintain the balance of the biosphere. In a library, rooms are laid out according to different classifications and themes, which helps readers to better find and use relevant resources. In this analogy, the ecosystem and library rooms both represent interrelated subsystems in their respective fields."
+  ],
+  "background": {
+    "source": "The biosphere refers to the sum of all ecosystems on Earth, including the interactions between living organisms and their environment, such as the lithosphere, cryosphere, hydrosphere, and atmosphere. This spherical shell system is closed with regards to matter, with minimal inputs and outputs, yet open with regards to energy, as it captures solar energy through photosynthesis. The biosphere is postulated to have evolved through biopoiesis or biogenesis, and it encompasses all living beings and their relationships, including biodiversity. Biospheres can be both natural and artificial, including ones on other planets or moons. In essence, the biosphere is a global ecological system that integrates all living organisms and their various ecosystems.",
+    "target": "A library is much more than a building full of books. It is a collection of physical and digital resources accessible to the public for use and not just display. The materials found in a library can come in many forms, including books, DVDs, CDs and cassettes, and even bibliographic databases. Libraries can be organized and maintained by a variety of entities such as a government, school, museum, corporation or private individual. Libraries provide access to materials and information as well as the services of trained librarians who assist with finding, selecting, circulating and organizing information. They also offer a variety of spaces for studying, collaborating and accessing electronic resources like computers and the Internet. Libraries serve various types of communities, offering tailored services to fit their needs. Additionally, libraries are more than just buildings, they provide material that is accessible electronically, extending their services beyond the physical walls."
+  },
+  "raw": {
+    "id": 2,
+    "lang": "en",
+    "system_a": "Biosphere",
+    "system_b": "Library",
+    "mappings": [
+      [
+        "biology",
+        "books"
+      ],
+      [
+        "biodiversity",
+        "Book Type"
+      ],
+      [
+        "ecosystem",
+        "library room"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Art",
+    "system_a_background": "The biosphere refers to the sum of all ecosystems on Earth, including the interactions between living organisms and their environment, such as the lithosphere, cryosphere, hydrosphere, and atmosphere. This spherical shell system is closed with regards to matter, with minimal inputs and outputs, yet open with regards to energy, as it captures solar energy through photosynthesis. The biosphere is postulated to have evolved through biopoiesis or biogenesis, and it encompasses all living beings and their relationships, including biodiversity. Biospheres can be both natural and artificial, including ones on other planets or moons. In essence, the biosphere is a global ecological system that integrates all living organisms and their various ecosystems.",
+    "system_b_background": "A library is much more than a building full of books. It is a collection of physical and digital resources accessible to the public for use and not just display. The materials found in a library can come in many forms, including books, DVDs, CDs and cassettes, and even bibliographic databases. Libraries can be organized and maintained by a variety of entities such as a government, school, museum, corporation or private individual. Libraries provide access to materials and information as well as the services of trained librarians who assist with finding, selecting, circulating and organizing information. They also offer a variety of spaces for studying, collaborating and accessing electronic resources like computers and the Internet. Libraries serve various types of communities, offering tailored services to fit their needs. Additionally, libraries are more than just buildings, they provide material that is accessible electronically, extending their services beyond the physical walls.",
+    "Explanation": [
+      "Biology corresponds to books: In the biosphere, organisms are the basic units that make up the ecosystem, and various organisms together form a complex biological network. Similarly, in a library, books are carriers of knowledge and collectively form the library's knowledge system. In this analogy, both biology and books are basic components of their respective systems.",
+      "Biodiversity corresponds to book types: Biodiversity refers to the richness of the variety of species in the biosphere, which helps maintain the balance and stability of the ecosystem. In a library, book types represent the various fields of knowledge collected in the library, which helps to meet the needs of different readers. In this analogy, biodiversity and book types both represent the richness and diversity of their respective systems.",
+      "Ecosystem corresponds to library rooms: The ecosystem in the biosphere is formed by the interaction of different organisms, and these ecosystems are interconnected, interdependent, and together maintain the balance of the biosphere. In a library, rooms are laid out according to different classifications and themes, which helps readers to better find and use relevant resources. In this analogy, the ecosystem and library rooms both represent interrelated subsystems in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Biosphere",
+    "target": "Library"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Art"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

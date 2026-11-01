@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0005",
+  "dataset": "scar",
+  "original_id": "5",
+  "source_object_id": "obj_group_scar_0005_src",
+  "target_object_id": "obj_group_scar_0005_tgt",
+  "faithful_mappings": [
+    [
+      "Gene",
+      "raw material"
+    ],
+    [
+      "CRISPR-Cas9 Technology",
+      "Scissors"
+    ],
+    [
+      "edited gene",
+      "Paper-cut works"
+    ]
+  ],
+  "explanation": [
+    "Gene corresponds to raw materials: in gene editing, genes are the objects being edited and modified , and they contain the genetic information of organisms. In paper-cut works, raw materials (such as paper) are the substances being cut and shaped to make paper-cut works. In this analogy, genes and raw materials are both the core objects being manipulated and changed in their respective systems.",
+    "CRISPR-Cas9 technology corresponds to scissors: in gene editing, CRISPR-Cas9 technology is a tool used for precise editing of genes, which can achieve the addition, deletion or modification of specific gene fragments. In paper-cut works, scissors are used to cut paper and shape the form of paper-cut works. In this analogy, CRISPR-Cas9 technology and scissors are both the key tools used for implementation and change in their respective systems.",
+    "Edited genes correspond to paper-cut works: in gene editing process, edited genes are the products that have been changed, and they have new characteristics and functions that may affect the traits of organisms. While in paper-cut process, paper-cut works are the results of cutting and shaping, having unique shapes and beauty. In this analogy, edited genes and paper-cut works are both the final products after implementation and change in their respective systems."
+  ],
+  "background": {
+    "source": "Gene editing is a revolutionary technique in molecular biology that allows for specific targeted changes to an organism's DNA. Using tools such as CRISPR-Cas9 technology, zinc finger nucleases, and transcription activator-like effector nucleases, scientists can insert, delete, or substitute genetic material to achieve desired results. This technique holds great promise in developing new treatments for diseases through gene therapy. With the ability to edit genes, there is potential to correct genetic mutations that cause diseases, hereditary conditions, and even cancer. The CRISPR-Cas9 system, in particular, has opened up a new era of gene editing due to its efficiency and specificity, allowing scientists to create targeted mutations at precise locations in the genome. As gene editing technology continues to evolve, it holds the promise of revolutionizing the fields of medicine, agriculture, and environmental science.",
+    "target": "Kirigami is a fascinating art form that originated from Japan, derived from the traditional origami. Unlike origami, kirigami involves the use of scissors in addition to folding paper to create intricate 3D designs that rise from the page. The art form involves cutting and folding paper into various shapes and sizes to create beautiful and intricate paper-cut works. The raw material used in kirigami is simply paper, which can then be transformed into stunning pieces of art with just a few simple cuts and folds. From animals to buildings and even plants, kirigami can be used to create almost anything. Using just a pair of scissors and some paper, you can unleash your artistic side and create beautiful and intricate works of art through the fascinating art form of kirigami."
+  },
+  "raw": {
+    "id": 5,
+    "lang": "en",
+    "system_a": "Gene editing",
+    "system_b": "kirigami",
+    "mappings": [
+      [
+        "Gene",
+        "raw material"
+      ],
+      [
+        "CRISPR-Cas9 Technology",
+        "Scissors"
+      ],
+      [
+        "edited gene",
+        "Paper-cut works"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Art",
+    "system_a_background": "Gene editing is a revolutionary technique in molecular biology that allows for specific targeted changes to an organism's DNA. Using tools such as CRISPR-Cas9 technology, zinc finger nucleases, and transcription activator-like effector nucleases, scientists can insert, delete, or substitute genetic material to achieve desired results. This technique holds great promise in developing new treatments for diseases through gene therapy. With the ability to edit genes, there is potential to correct genetic mutations that cause diseases, hereditary conditions, and even cancer. The CRISPR-Cas9 system, in particular, has opened up a new era of gene editing due to its efficiency and specificity, allowing scientists to create targeted mutations at precise locations in the genome. As gene editing technology continues to evolve, it holds the promise of revolutionizing the fields of medicine, agriculture, and environmental science.",
+    "system_b_background": "Kirigami is a fascinating art form that originated from Japan, derived from the traditional origami. Unlike origami, kirigami involves the use of scissors in addition to folding paper to create intricate 3D designs that rise from the page. The art form involves cutting and folding paper into various shapes and sizes to create beautiful and intricate paper-cut works. The raw material used in kirigami is simply paper, which can then be transformed into stunning pieces of art with just a few simple cuts and folds. From animals to buildings and even plants, kirigami can be used to create almost anything. Using just a pair of scissors and some paper, you can unleash your artistic side and create beautiful and intricate works of art through the fascinating art form of kirigami.",
+    "Explanation": [
+      "Gene corresponds to raw materials: in gene editing, genes are the objects being edited and modified , and they contain the genetic information of organisms. In paper-cut works, raw materials (such as paper) are the substances being cut and shaped to make paper-cut works. In this analogy, genes and raw materials are both the core objects being manipulated and changed in their respective systems.",
+      "CRISPR-Cas9 technology corresponds to scissors: in gene editing, CRISPR-Cas9 technology is a tool used for precise editing of genes, which can achieve the addition, deletion or modification of specific gene fragments. In paper-cut works, scissors are used to cut paper and shape the form of paper-cut works. In this analogy, CRISPR-Cas9 technology and scissors are both the key tools used for implementation and change in their respective systems.",
+      "Edited genes correspond to paper-cut works: in gene editing process, edited genes are the products that have been changed, and they have new characteristics and functions that may affect the traits of organisms. While in paper-cut process, paper-cut works are the results of cutting and shaping, having unique shapes and beauty. In this analogy, edited genes and paper-cut works are both the final products after implementation and change in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Gene editing",
+    "target": "kirigami"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Art"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

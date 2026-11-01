@@ -1,0 +1,75 @@
+{
+  "adaptation_id": "adapt_scar_0077",
+  "dataset": "scar",
+  "original_id": "77",
+  "source_object_id": "obj_group_scar_0077_src",
+  "target_object_id": "obj_group_scar_0077_tgt",
+  "faithful_mappings": [
+    [
+      "devour",
+      "clean"
+    ],
+    [
+      "pathogen",
+      "Rubbish"
+    ]
+  ],
+  "explanation": [
+    "Devour corresponds to clean: Macrophages eliminate pathogens by phagocytosis, helping to keep the body healthy; cleaners eliminate rubbish by cleaning, maintaining a clean environment. Both play a role in removing harmful substances in their respective contexts.",
+    "Pathogens correspond to rubbish: Pathogens are harmful substances that macrophages need to eliminate; rubbish is waste that cleaners need to dispose of. Both are substances that need to be eliminated to maintain health and cleanliness."
+  ],
+  "background": {
+    "source": "Macrophages, or \"large eaters,\" are white blood cells that play a crucial role in the body's immune system by engulfing and digesting harmful pathogens, cancer cells, and foreign substances through the process of phagocytosis. They are present in all tissues and are part of the mononuclear phagocyte system, taking various forms and performing various functions. Beyond increasing inflammation and stimulating the immune system, macrophages also have an important anti-inflammatory role and can decrease immune reactions through the release of cytokines. They are classified as either M1 macrophages, which encourage inflammation, or M2 macrophages, which decrease inflammation and encourage tissue repair. The identification of macrophages can be through flow cytometry or immunohistochemical staining using specific proteins like CD14, CD40, CD11b, CD64, F4/80 (mice)/EMR1 (human), lysozyme M, MAC-1/MAC-3, and CD68. Élie Metchnikoff, a Russian zoologist, discovered and named macrophages in 1884.",
+    "target": "The cleaners are essential workers who are responsible for ensuring that spaces are clean, hygienic, and safe for the people who use them. Their duties may include sweeping, mopping, dusting, vacuuming, disinfecting surfaces, and disposing of rubbish. Cleaners work in a variety of settings, including homes, offices, hotels, hospitals, schools, and public spaces like parks and streets. Their work is often physically demanding and requires attention to detail to ensure that no spots are missed. \n\nIn addition to the people who clean, the term \"the cleaners\" can also refer to a range of products and services that help to keep spaces clean. These include cleaning supplies like mops, brooms, and disinfectants, as well as commercial cleaning services that provide professional cleaning for businesses and other organizations. \n\nRegardless of whether you're talking about the people who clean or the products and services they use, the cleaners are an important part of our daily lives. Without them, our homes, workplaces, and public spaces would quickly become dirty and unpleasant to be in. So whether you're doing your own cleaning at home or relying on a professional cleaning service, it's important to appreciate the hard work and dedication that goes into keeping our spaces clean and tidy."
+  },
+  "raw": {
+    "id": 77,
+    "lang": "en",
+    "system_a": "Macrophages",
+    "system_b": "the cleaners",
+    "mappings": [
+      [
+        "devour",
+        "clean"
+      ],
+      [
+        "pathogen",
+        "Rubbish"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "Macrophages, or \"large eaters,\" are white blood cells that play a crucial role in the body's immune system by engulfing and digesting harmful pathogens, cancer cells, and foreign substances through the process of phagocytosis. They are present in all tissues and are part of the mononuclear phagocyte system, taking various forms and performing various functions. Beyond increasing inflammation and stimulating the immune system, macrophages also have an important anti-inflammatory role and can decrease immune reactions through the release of cytokines. They are classified as either M1 macrophages, which encourage inflammation, or M2 macrophages, which decrease inflammation and encourage tissue repair. The identification of macrophages can be through flow cytometry or immunohistochemical staining using specific proteins like CD14, CD40, CD11b, CD64, F4/80 (mice)/EMR1 (human), lysozyme M, MAC-1/MAC-3, and CD68. Élie Metchnikoff, a Russian zoologist, discovered and named macrophages in 1884.",
+    "system_b_background": "The cleaners are essential workers who are responsible for ensuring that spaces are clean, hygienic, and safe for the people who use them. Their duties may include sweeping, mopping, dusting, vacuuming, disinfecting surfaces, and disposing of rubbish. Cleaners work in a variety of settings, including homes, offices, hotels, hospitals, schools, and public spaces like parks and streets. Their work is often physically demanding and requires attention to detail to ensure that no spots are missed. \n\nIn addition to the people who clean, the term \"the cleaners\" can also refer to a range of products and services that help to keep spaces clean. These include cleaning supplies like mops, brooms, and disinfectants, as well as commercial cleaning services that provide professional cleaning for businesses and other organizations. \n\nRegardless of whether you're talking about the people who clean or the products and services they use, the cleaners are an important part of our daily lives. Without them, our homes, workplaces, and public spaces would quickly become dirty and unpleasant to be in. So whether you're doing your own cleaning at home or relying on a professional cleaning service, it's important to appreciate the hard work and dedication that goes into keeping our spaces clean and tidy.",
+    "Explanation": [
+      "Devour corresponds to clean: Macrophages eliminate pathogens by phagocytosis, helping to keep the body healthy; cleaners eliminate rubbish by cleaning, maintaining a clean environment. Both play a role in removing harmful substances in their respective contexts.",
+      "Pathogens correspond to rubbish: Pathogens are harmful substances that macrophages need to eliminate; rubbish is waste that cleaners need to dispose of. Both are substances that need to be eliminated to maintain health and cleanliness."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Macrophages",
+    "target": "the cleaners"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

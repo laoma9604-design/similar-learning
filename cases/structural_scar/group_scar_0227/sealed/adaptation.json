@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0227",
+  "dataset": "scar",
+  "original_id": "227",
+  "source_object_id": "obj_group_scar_0227_src",
+  "target_object_id": "obj_group_scar_0227_tgt",
+  "faithful_mappings": [
+    [
+      "Indian River",
+      "the mediterranean"
+    ],
+    [
+      "Indus script",
+      "latin alphabet"
+    ],
+    [
+      "Buddhism",
+      "Christianity"
+    ]
+  ],
+  "explanation": [
+    "Indian River corresponds to the Mediterranean: The Indian River is one of the birthplaces of Indian civilization, and the Mediterranean is the birthplace of ancient Roman civilization. These two geographical regions are the core areas of their respective civilizations and have played a critical role in their development and prosperity.",
+    "Indus script corresponds to the Latin alphabet: The Indus script is a writing system in the Indian region, and the Latin alphabet is a writing system in ancient Roman regions. These two writing systems are important components of their respective regional civilizations and represent the development of human civilization.",
+    "Buddhism corresponds to Christianity: Buddhism is a religious belief in the Indian region that has had a profound impact on Indian culture. Christianity is a religious belief in ancient Roman regions that has had a profound impact on ancient Roman civilization. These two religions are important components of their respective regional civilizations and have played a critical role in the development of human spiritual civilization."
+  ],
+  "background": {
+    "source": "India is a South Asian country known for its cultural, linguistic, and biological diversity, ranking as the seventh largest and the second most populous country in the world. It shares land borders with Pakistan, China, Nepal, Bhutan, Bangladesh, and Myanmar while the Indian Ocean, Arabian Sea, and Bay of Bengal surround the country. The earliest human settlement in India occurred over 55,000 years ago, with isolated hunter-gatherers throughout the subcontinent. The western Indus River showed signs of a settled life as early as 9,000 years ago which evolved into the great Indus Valley Civilisation. The Rigveda, an ancient Sanskrit hymn, is evidence of the emergence of Hinduism in India. Buddhism and Jainism arose as alternative religions outside of Hinduism, while social order through caste slowly emerged. Political consolidation led to the Maurya and Gupta Empires, which were marked by creativity but also the subjugation of women and the inclusion of untouchability under an organized belief system. India saw the emerging of Christianity, Islam, Judaism, and Zoroastrianism on its coastal regions during the early medieval era. The Delhi Sultanate and the Mughal Empire ushered northern India into the cosmopolitan network of medieval Islamic culture, while the Vijayanagara Empire created a lasting Hindu culture in southern India. Christian missionaries arrived in India, but only saw limited success. By the time of British rule, technological progress and nationalist movements emerged while the Indian economy became less destitute. This resulted in the creation of the two independent dominions, the Dominion of India and Dominion of Pakistan. India, a federal republic since 1950, is currently the world's fastest-growing economy and serves as a major hub for information technology services. The country's challenges include poverty, gender inequality, child malnutrition, and air pollution. Despite this, India is home to a megadiverse array of plant and animal life while being a nuclear weapon state with an expansive space program.",
+    "target": "Ancient Rome refers to Roman civilisation from the founding of Rome in 753 BC to the collapse of the Western Roman Empire in 476 AD. At its height in AD 117, it was among the largest empires in the ancient world, covering around 5 million square kilometres and an estimated 20% of the world's population. The Roman state evolved from an elective monarchy to a democratic classical republic and then to an increasingly autocratic semi-elective military dictatorship during the Empire. Through conquest, cultural, and linguistic assimilation, it controlled much of Europe and the lands and peoples surrounding the Mediterranean Sea, including the North African coast, Egypt, Southern Europe, the Balkans, Crimea, and much of the Middle East. Ancient Roman civilisation has contributed to modern language, religion, society, technology, law, politics, government, warfare, art, literature, architecture, and engineering. The Latin alphabet, which stems from the Roman Empire, is still used today, and Rome's role in the spread of Christianity cannot be overemphasized."
+  },
+  "raw": {
+    "id": 227,
+    "lang": "en",
+    "system_a": "India",
+    "system_b": "Ancient Rome",
+    "mappings": [
+      [
+        "Indian River",
+        "the mediterranean"
+      ],
+      [
+        "Indus script",
+        "latin alphabet"
+      ],
+      [
+        "Buddhism",
+        "Christianity"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "India is a South Asian country known for its cultural, linguistic, and biological diversity, ranking as the seventh largest and the second most populous country in the world. It shares land borders with Pakistan, China, Nepal, Bhutan, Bangladesh, and Myanmar while the Indian Ocean, Arabian Sea, and Bay of Bengal surround the country. The earliest human settlement in India occurred over 55,000 years ago, with isolated hunter-gatherers throughout the subcontinent. The western Indus River showed signs of a settled life as early as 9,000 years ago which evolved into the great Indus Valley Civilisation. The Rigveda, an ancient Sanskrit hymn, is evidence of the emergence of Hinduism in India. Buddhism and Jainism arose as alternative religions outside of Hinduism, while social order through caste slowly emerged. Political consolidation led to the Maurya and Gupta Empires, which were marked by creativity but also the subjugation of women and the inclusion of untouchability under an organized belief system. India saw the emerging of Christianity, Islam, Judaism, and Zoroastrianism on its coastal regions during the early medieval era. The Delhi Sultanate and the Mughal Empire ushered northern India into the cosmopolitan network of medieval Islamic culture, while the Vijayanagara Empire created a lasting Hindu culture in southern India. Christian missionaries arrived in India, but only saw limited success. By the time of British rule, technological progress and nationalist movements emerged while the Indian economy became less destitute. This resulted in the creation of the two independent dominions, the Dominion of India and Dominion of Pakistan. India, a federal republic since 1950, is currently the world's fastest-growing economy and serves as a major hub for information technology services. The country's challenges include poverty, gender inequality, child malnutrition, and air pollution. Despite this, India is home to a megadiverse array of plant and animal life while being a nuclear weapon state with an expansive space program.",
+    "system_b_background": "Ancient Rome refers to Roman civilisation from the founding of Rome in 753 BC to the collapse of the Western Roman Empire in 476 AD. At its height in AD 117, it was among the largest empires in the ancient world, covering around 5 million square kilometres and an estimated 20% of the world's population. The Roman state evolved from an elective monarchy to a democratic classical republic and then to an increasingly autocratic semi-elective military dictatorship during the Empire. Through conquest, cultural, and linguistic assimilation, it controlled much of Europe and the lands and peoples surrounding the Mediterranean Sea, including the North African coast, Egypt, Southern Europe, the Balkans, Crimea, and much of the Middle East. Ancient Roman civilisation has contributed to modern language, religion, society, technology, law, politics, government, warfare, art, literature, architecture, and engineering. The Latin alphabet, which stems from the Roman Empire, is still used today, and Rome's role in the spread of Christianity cannot be overemphasized.",
+    "Explanation": [
+      "Indian River corresponds to the Mediterranean: The Indian River is one of the birthplaces of Indian civilization, and the Mediterranean is the birthplace of ancient Roman civilization. These two geographical regions are the core areas of their respective civilizations and have played a critical role in their development and prosperity.",
+      "Indus script corresponds to the Latin alphabet: The Indus script is a writing system in the Indian region, and the Latin alphabet is a writing system in ancient Roman regions. These two writing systems are important components of their respective regional civilizations and represent the development of human civilization.",
+      "Buddhism corresponds to Christianity: Buddhism is a religious belief in the Indian region that has had a profound impact on Indian culture. Christianity is a religious belief in ancient Roman regions that has had a profound impact on ancient Roman civilization. These two religions are important components of their respective regional civilizations and have played a critical role in the development of human spiritual civilization."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "India",
+    "target": "Ancient Rome"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

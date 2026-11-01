@@ -1,0 +1,75 @@
+{
+  "adaptation_id": "adapt_scar_0386",
+  "dataset": "scar",
+  "original_id": "386",
+  "source_object_id": "obj_group_scar_0386_src",
+  "target_object_id": "obj_group_scar_0386_tgt",
+  "faithful_mappings": [
+    [
+      "lattice point",
+      "magic square"
+    ],
+    [
+      "move",
+      "interaction"
+    ]
+  ],
+  "explanation": [
+    "Lattice points correspond to magic squares: In a lattice, lattice points are the basic units that make up the lattice structure. In a magic square, magic squares are the basic units that make up the magic square. In this mapping, lattice points and magic squares both represent the basic building elements of their respective structures.",
+    "Movement corresponds to interaction: In a lattice, movement represents changes and adjustments between lattice points. In a magic square, interaction represents rotations and adjustments between magic squares. In this mapping, both movement and interaction represent processes of change and adjustment within their respective structures."
+  ],
+  "background": {
+    "source": "Lattice is a term that is commonly used in mathematics and geometry. It refers to a regular arrangement of points or objects, which is known as a lattice point. These points are often arranged in a grid-like pattern, and they can be used to represent a variety of geometric shapes and objects. The lattice point system is often used in crystallography, where it is used to represent the atomic structure of a crystal. However, lattices are also used in other areas of mathematics, such as topology and algebraic geometry. \n\nIn addition to its use in mathematics, lattice can also refer to a move that is commonly used in fencing. This move involves quickly stepping back and then forward again, in order to avoid an opponent's attack and then launch one's own attack. The lattice move is an important technique in fencing, as it can be used to gain an advantage over one's opponent and ultimately win the match. \n\nOverall, lattice is a versatile term that can refer to a variety of different concepts and applications. Whether it is used to represent the atomic structure of a crystal or to launch an attack in fencing, the concept of lattice is an important one that is widely used in many different fields.",
+    "target": "The Rubik's Cube is an iconic 3-D combination puzzle created by Hungarian sculptor, Ernő Rubik. Originally invented as the Magic Cube, the puzzle quickly gained popularity, becoming one of the most recognized icons in popular culture. The aim of the puzzle is to arrange each of the cube's six faces to display only one colour. The Rubik's Cube was inducted into the US National Toy Hall of Fame in 2014, and as of January 2009, 350 million cubes have been sold worldwide, making it the world's bestselling puzzle game and toy. With its internal pivot mechanism, the Rubik's Cube provides an interactive and engaging way to challenge one's mind. Though it reached the height of mainstream popularity in the 1980s, the Rubik's Cube continues to be widely known and used, with speedcubers practising it and similar puzzles and competing for the fastest times in various categories."
+  },
+  "raw": {
+    "id": 386,
+    "lang": "en",
+    "system_a": "Lattice",
+    "system_b": "Rubik's Cube",
+    "mappings": [
+      [
+        "lattice point",
+        "magic square"
+      ],
+      [
+        "move",
+        "interaction"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Art",
+    "system_a_background": "Lattice is a term that is commonly used in mathematics and geometry. It refers to a regular arrangement of points or objects, which is known as a lattice point. These points are often arranged in a grid-like pattern, and they can be used to represent a variety of geometric shapes and objects. The lattice point system is often used in crystallography, where it is used to represent the atomic structure of a crystal. However, lattices are also used in other areas of mathematics, such as topology and algebraic geometry. \n\nIn addition to its use in mathematics, lattice can also refer to a move that is commonly used in fencing. This move involves quickly stepping back and then forward again, in order to avoid an opponent's attack and then launch one's own attack. The lattice move is an important technique in fencing, as it can be used to gain an advantage over one's opponent and ultimately win the match. \n\nOverall, lattice is a versatile term that can refer to a variety of different concepts and applications. Whether it is used to represent the atomic structure of a crystal or to launch an attack in fencing, the concept of lattice is an important one that is widely used in many different fields.",
+    "system_b_background": "The Rubik's Cube is an iconic 3-D combination puzzle created by Hungarian sculptor, Ernő Rubik. Originally invented as the Magic Cube, the puzzle quickly gained popularity, becoming one of the most recognized icons in popular culture. The aim of the puzzle is to arrange each of the cube's six faces to display only one colour. The Rubik's Cube was inducted into the US National Toy Hall of Fame in 2014, and as of January 2009, 350 million cubes have been sold worldwide, making it the world's bestselling puzzle game and toy. With its internal pivot mechanism, the Rubik's Cube provides an interactive and engaging way to challenge one's mind. Though it reached the height of mainstream popularity in the 1980s, the Rubik's Cube continues to be widely known and used, with speedcubers practising it and similar puzzles and competing for the fastest times in various categories.",
+    "Explanation": [
+      "Lattice points correspond to magic squares: In a lattice, lattice points are the basic units that make up the lattice structure. In a magic square, magic squares are the basic units that make up the magic square. In this mapping, lattice points and magic squares both represent the basic building elements of their respective structures.",
+      "Movement corresponds to interaction: In a lattice, movement represents changes and adjustments between lattice points. In a magic square, interaction represents rotations and adjustments between magic squares. In this mapping, both movement and interaction represent processes of change and adjustment within their respective structures."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Lattice",
+    "target": "Rubik's Cube"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Art"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

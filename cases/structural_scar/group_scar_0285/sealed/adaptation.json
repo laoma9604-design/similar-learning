@@ -1,0 +1,130 @@
+{
+  "adaptation_id": "adapt_scar_0285",
+  "dataset": "scar",
+  "original_id": "285",
+  "source_object_id": "obj_group_scar_0285_src",
+  "target_object_id": "obj_group_scar_0285_tgt",
+  "faithful_mappings": [
+    [
+      "building",
+      "theory"
+    ],
+    [
+      "construction",
+      "conjecture"
+    ],
+    [
+      "construction",
+      "idea"
+    ],
+    [
+      "foundation",
+      "data"
+    ],
+    [
+      "foundation",
+      "evidence"
+    ],
+    [
+      "cement",
+      "relation"
+    ],
+    [
+      "block",
+      "concept"
+    ]
+  ],
+  "explanation": [
+    "Building corresponds to theory: a building is a concrete entity, composed of various components and materials, with a certain structure and function. Theory, on the other hand, is an abstract concept, consisting of a series of viewpoints, assumptions, and principles, used to explain and predict phenomena. Here, both building and theory represent a whole, composed of various parts, with a certain structure and function.",
+    "Construction corresponds to conjecture: construction involves combining various components and materials to form a building with a specific structure and function. Conjecture, on the other hand, involves guessing and predicting unknown phenomena based on existing information and observations. In this mapping, construction and conjecture both represent a creative process, forming a new whole by combining existing elements.",
+    "Construction corresponds to idea: construction involves combining various components and materials to form a building with a specific structure and function. Idea, on the other hand, refers to a unique perspective and explanation of a problem or phenomenon. In this mapping, construction and idea both represent a creative process, forming a new whole by combining existing elements.",
+    "Foundation corresponds to data: the foundation of a building is an important part that supports the entire structure, determining its stability and bearing capacity. Data, on the other hand, serves as the foundation of theory, providing support and verification. Here, both foundation and data represent a supporting role, providing stability and reliability to the entire system.",
+    "Foundation corresponds to evidence: the foundation of a building is an important part that supports the entire structure, determining its stability and bearing capacity. Evidence, on the other hand, is a critical element that supports theory and provides evidence for its correctness. In this mapping, both foundation and evidence represent a supporting role, providing stability and reliability to the entire system.",
+    "Cement corresponds to relation: cement is a material used in a building to connect various components, making them tightly integrated and forming a whole. Relation in theory is used to describe the connections between different concepts, making various parts of the theory tightly integrated and forming a whole. Here, both cement and relation represent a connecting role, making various parts tightly integrated and forming a whole.",
+    "Block corresponds to concept: a block in a building refers to an object that obstructs passages or spaces, which may affect the normal use and function of the building. Concept, on the other hand, is the basic unit in theory, representing an abstract idea or concept. In this mapping, both block and concept represent a basic element that plays a key role in their respective systems."
+  ],
+  "background": {
+    "source": "A building is a permanent structure with walls and a roof that serves to provide shelter and comfort to its occupants. It is a physical division of the human habitat, separating the inside from the outside, protecting individuals from harsh weather conditions and other harmful elements. Buildings come in various sizes, shapes, and functions and are constructed using different materials depending on factors such as the availability of building materials, weather conditions, specific use, ground conditions, land prices, prestige, and aesthetic reasons. The construction process involves laying a foundation, putting up walls using materials such as cement and blocks and roofing. Enhancements in building practices have resulted in the emergence of sustainable planning and green buildings that are environmentally friendly.",
+    "target": "A theory is a body of rational and abstract thinking about a phenomenon or a set of phenomena. Theories may belong to scientific or non-scientific disciplines, and may be tested empirically or not. In modern science, a theory is an explanation of nature that is well-confirmed and consistent with the scientific method. Theories are distinguished from hypotheses, which are individual checkable conjectures, and from laws, which are prevalent accounts of how nature acts under particular conditions. Theories are a neutral guide for finding facts, and do not involve personal values or goals. Instead, theorizing is a process of developing knowledge and explanatory models. The word theory is often erroneously used to replace the term hypothesis or to explain something that has not been experienced or tested. In such instances, the credibility of the theory may be questioned by calling it \"just a theory\". This word is often contrasted to practice or doing, exemplified in the field of medicine where the theory involves understanding the causes of health and sickness, and practice deals with making people healthy. Theories can form the basis of conjecture, ideas, data, evidence, and many other concepts related to understanding the world around us."
+  },
+  "raw": {
+    "id": 285,
+    "lang": "en",
+    "system_a": "building",
+    "system_b": "theory",
+    "mappings": [
+      [
+        "building",
+        "theory"
+      ],
+      [
+        "construction",
+        "conjecture"
+      ],
+      [
+        "construction",
+        "idea"
+      ],
+      [
+        "foundation",
+        "data"
+      ],
+      [
+        "foundation",
+        "evidence"
+      ],
+      [
+        "cement",
+        "relation"
+      ],
+      [
+        "block",
+        "concept"
+      ]
+    ],
+    "system_a_domain": "Engineering",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "A building is a permanent structure with walls and a roof that serves to provide shelter and comfort to its occupants. It is a physical division of the human habitat, separating the inside from the outside, protecting individuals from harsh weather conditions and other harmful elements. Buildings come in various sizes, shapes, and functions and are constructed using different materials depending on factors such as the availability of building materials, weather conditions, specific use, ground conditions, land prices, prestige, and aesthetic reasons. The construction process involves laying a foundation, putting up walls using materials such as cement and blocks and roofing. Enhancements in building practices have resulted in the emergence of sustainable planning and green buildings that are environmentally friendly.",
+    "system_b_background": "A theory is a body of rational and abstract thinking about a phenomenon or a set of phenomena. Theories may belong to scientific or non-scientific disciplines, and may be tested empirically or not. In modern science, a theory is an explanation of nature that is well-confirmed and consistent with the scientific method. Theories are distinguished from hypotheses, which are individual checkable conjectures, and from laws, which are prevalent accounts of how nature acts under particular conditions. Theories are a neutral guide for finding facts, and do not involve personal values or goals. Instead, theorizing is a process of developing knowledge and explanatory models. The word theory is often erroneously used to replace the term hypothesis or to explain something that has not been experienced or tested. In such instances, the credibility of the theory may be questioned by calling it \"just a theory\". This word is often contrasted to practice or doing, exemplified in the field of medicine where the theory involves understanding the causes of health and sickness, and practice deals with making people healthy. Theories can form the basis of conjecture, ideas, data, evidence, and many other concepts related to understanding the world around us.",
+    "Explanation": [
+      "Building corresponds to theory: a building is a concrete entity, composed of various components and materials, with a certain structure and function. Theory, on the other hand, is an abstract concept, consisting of a series of viewpoints, assumptions, and principles, used to explain and predict phenomena. Here, both building and theory represent a whole, composed of various parts, with a certain structure and function.",
+      "Construction corresponds to conjecture: construction involves combining various components and materials to form a building with a specific structure and function. Conjecture, on the other hand, involves guessing and predicting unknown phenomena based on existing information and observations. In this mapping, construction and conjecture both represent a creative process, forming a new whole by combining existing elements.",
+      "Construction corresponds to idea: construction involves combining various components and materials to form a building with a specific structure and function. Idea, on the other hand, refers to a unique perspective and explanation of a problem or phenomenon. In this mapping, construction and idea both represent a creative process, forming a new whole by combining existing elements.",
+      "Foundation corresponds to data: the foundation of a building is an important part that supports the entire structure, determining its stability and bearing capacity. Data, on the other hand, serves as the foundation of theory, providing support and verification. Here, both foundation and data represent a supporting role, providing stability and reliability to the entire system.",
+      "Foundation corresponds to evidence: the foundation of a building is an important part that supports the entire structure, determining its stability and bearing capacity. Evidence, on the other hand, is a critical element that supports theory and provides evidence for its correctness. In this mapping, both foundation and evidence represent a supporting role, providing stability and reliability to the entire system.",
+      "Cement corresponds to relation: cement is a material used in a building to connect various components, making them tightly integrated and forming a whole. Relation in theory is used to describe the connections between different concepts, making various parts of the theory tightly integrated and forming a whole. Here, both cement and relation represent a connecting role, making various parts tightly integrated and forming a whole.",
+      "Block corresponds to concept: a block in a building refers to an object that obstructs passages or spaces, which may affect the normal use and function of the building. Concept, on the other hand, is the basic unit in theory, representing an abstract idea or concept. In this mapping, both block and concept represent a basic element that plays a key role in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "non_bijective",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6",
+        "n7": "n7"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "one_to_many",
+  "system": {
+    "source": "building",
+    "target": "theory"
+  },
+  "domains": {
+    "source": "Engineering",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

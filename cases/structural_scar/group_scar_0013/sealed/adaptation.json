@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0013",
+  "dataset": "scar",
+  "original_id": "13",
+  "source_object_id": "obj_group_scar_0013_src",
+  "target_object_id": "obj_group_scar_0013_tgt",
+  "faithful_mappings": [
+    [
+      "cell",
+      "City"
+    ],
+    [
+      "substances",
+      "people"
+    ],
+    [
+      "maintain",
+      "protect"
+    ]
+  ],
+  "explanation": [
+    "The cell corresponds to the city: In this mapping, the cell is viewed as a tiny \"city\", where various biochemical reactions and life activities take place. Similarly, the city is where people live, work, and communicate, and has various social activities and economic development inside. Here, both the cell and the city represent the basic units of their respective systems.",
+    "The substances entering and exiting the cell correspond to people and goods entering and exiting the city: In the cell, the cell membrane allows certain substances (such as oxygen, water, nutrients, etc.) to enter the cell and expel waste out of the cell. In the city, the city wall has gates that allow people and goods to enter and exit the city. In this mapping, the substances entering and exiting the cell and the people and goods entering and exiting the city both represent the communication and interaction of their respective systems.",
+    "Maintaining the internal and external balance of the cell corresponds to protecting the city from being affected: In the cell, the cell membrane has selective permeability, which can control the entry and exit of substances, thereby maintaining the internal and external balance of the cell and the constant environment necessary for the survival of the cell. In the city, the city wall serves a protective role, which can resist external invasion and ensure the safety and stability inside the city. In this mapping, maintaining the internal and external balance of the cell and protecting the city from being affected both represent the stability and protective function of their respective systems."
+  ],
+  "background": {
+    "source": "The cell membrane is a crucial component of any living cell, serving as a protective barrier that separates the interior from the outside environment. Composed of a lipid bilayer interspersed with cholesterols and a variety of proteins and glycolipids, the membrane is selectively permeable, controlling the movement of substances in and out of the cell. In addition, it plays a critical role in several cellular processes including cell adhesion, ion conductivity, and cell signaling. It is also responsible for maintaining appropriate membrane fluidity at various temperatures. Furthermore, in the field of synthetic biology, cell membranes can be artificially reassembled. Overall, the cell membrane is a complex and essential structure that is vital to the survival and function of all living cells.",
+    "target": "Walls are a crucial aspect of any city, serving as both a physical barrier and a symbol of protection for the people living within. Whether it's a medieval castle or a modern skyscraper, walls provide a sense of security and safety for those within their borders. In fact, walls have been utilized for centuries, dating back to ancient civilizations such as Babylon and Rome. The plural form of wall, \"walls,\" can also refer to a list of notable people with the surname, who may have played a role in the history of building such structures. Regardless of their history or purpose, walls continue to be a vital component of our built environment, creating boundaries and safeguarding the people who depend on them for protection."
+  },
+  "raw": {
+    "id": 13,
+    "lang": "en",
+    "system_a": "Cell Membranes",
+    "system_b": "Walls",
+    "mappings": [
+      [
+        "cell",
+        "City"
+      ],
+      [
+        "substances",
+        "people"
+      ],
+      [
+        "maintain",
+        "protect"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Geography",
+    "system_a_background": "The cell membrane is a crucial component of any living cell, serving as a protective barrier that separates the interior from the outside environment. Composed of a lipid bilayer interspersed with cholesterols and a variety of proteins and glycolipids, the membrane is selectively permeable, controlling the movement of substances in and out of the cell. In addition, it plays a critical role in several cellular processes including cell adhesion, ion conductivity, and cell signaling. It is also responsible for maintaining appropriate membrane fluidity at various temperatures. Furthermore, in the field of synthetic biology, cell membranes can be artificially reassembled. Overall, the cell membrane is a complex and essential structure that is vital to the survival and function of all living cells.",
+    "system_b_background": "Walls are a crucial aspect of any city, serving as both a physical barrier and a symbol of protection for the people living within. Whether it's a medieval castle or a modern skyscraper, walls provide a sense of security and safety for those within their borders. In fact, walls have been utilized for centuries, dating back to ancient civilizations such as Babylon and Rome. The plural form of wall, \"walls,\" can also refer to a list of notable people with the surname, who may have played a role in the history of building such structures. Regardless of their history or purpose, walls continue to be a vital component of our built environment, creating boundaries and safeguarding the people who depend on them for protection.",
+    "Explanation": [
+      "The cell corresponds to the city: In this mapping, the cell is viewed as a tiny \"city\", where various biochemical reactions and life activities take place. Similarly, the city is where people live, work, and communicate, and has various social activities and economic development inside. Here, both the cell and the city represent the basic units of their respective systems.",
+      "The substances entering and exiting the cell correspond to people and goods entering and exiting the city: In the cell, the cell membrane allows certain substances (such as oxygen, water, nutrients, etc.) to enter the cell and expel waste out of the cell. In the city, the city wall has gates that allow people and goods to enter and exit the city. In this mapping, the substances entering and exiting the cell and the people and goods entering and exiting the city both represent the communication and interaction of their respective systems.",
+      "Maintaining the internal and external balance of the cell corresponds to protecting the city from being affected: In the cell, the cell membrane has selective permeability, which can control the entry and exit of substances, thereby maintaining the internal and external balance of the cell and the constant environment necessary for the survival of the cell. In the city, the city wall serves a protective role, which can resist external invasion and ensure the safety and stability inside the city. In this mapping, maintaining the internal and external balance of the cell and protecting the city from being affected both represent the stability and protective function of their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Cell Membranes",
+    "target": "Walls"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Geography"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

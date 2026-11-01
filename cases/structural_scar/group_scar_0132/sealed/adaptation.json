@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0132",
+  "dataset": "scar",
+  "original_id": "132",
+  "source_object_id": "obj_group_scar_0132_src",
+  "target_object_id": "obj_group_scar_0132_tgt",
+  "faithful_mappings": [
+    [
+      "program data",
+      "goods"
+    ],
+    [
+      "CPU",
+      "forklift"
+    ],
+    [
+      "operating system",
+      "Warehouse Manager"
+    ]
+  ],
+  "explanation": [
+    "Program data corresponds to goods: The program data in memory is the information that the computer needs to process and store during operation. Goods in the warehouse, on the other hand, are items that need to be stored and managed. Here, both program data and goods are storage objects in the system.",
+    "CPU corresponds to forklift: The CPU in memory is responsible for processing and executing program data. The forklift in the warehouse is responsible for handling and transporting goods. Here, both the CPU and forklift are the executing and handling components in the system.",
+    "Operating system corresponds to Warehouse Manager: The operating system in memory is responsible for managing and coordinating the computer's hardware and software resources. The warehouse manager in the warehouse is responsible for managing and coordinating various affairs and resources in the warehouse. Here, both the operating system and warehouse manager are the managers and coordinators in the system."
+  ],
+  "background": {
+    "source": "Memory is a vital aspect of the human mind. It refers to the ability to encode, store, and retrieve information when required, and plays a significant role in the development of language, relationships, and personal identity. Memory can be understood as an information processing system, which comprises sensory processor, short-term (or working) memory, and long-term memory. The sensory processor senses information from the outside world and attends it at various levels of focus and intent. Working memory encodes and retrieves information, whereas long-term memory stores information through various categorical models or systems. Memory can be classified as declarative (explicit) and non-declarative (implicit). Declarative memory is conscious memory storage and recollection of data, while non-declarative memory is the unconscious storage and recollection of information. Memory is not a perfect processor, and it can be affected by various factors such as damage to the brain, pain, and decay over time. Memory plays a critical role in the functioning of the program data, CPU, and operating system of a device.",
+    "target": "A warehouse is a large building used by businesses for storing goods in. It serves as a centralized location for manufacturers, wholesalers, importers, exporters, and transport companies to keep their raw materials, components, spare parts, and finished goods in one place. Warehouses are located in industrial parks situated on the outskirts of cities, towns, or villages. They come equipped with loading docks to make loading and unloading goods from trucks a simple task. Some warehouses are also designed for unloading and loading of goods directly from various transportation methods such as railways, airports, or seaports. This is made possible through the availability of cranes and forklifts to move goods as required. Warehouses store their goods on ISO standard pallets, which are loaded into pallet racks. In India and Hong Kong, a warehouse can also be known as a \"godown\". In managing warehouses, the role of a Warehouse Manager is essential. They are responsible for effectively organizing the goods within the warehouse and the staff tasked with handling and transporting the stored goods using forklifts among other machinery."
+  },
+  "raw": {
+    "id": 132,
+    "lang": "en",
+    "system_a": "Memory",
+    "system_b": "Warehouse",
+    "mappings": [
+      [
+        "program data",
+        "goods"
+      ],
+      [
+        "CPU",
+        "forklift"
+      ],
+      [
+        "operating system",
+        "Warehouse Manager"
+      ]
+    ],
+    "system_a_domain": "Computer",
+    "system_b_domain": "Engineering",
+    "system_a_background": "Memory is a vital aspect of the human mind. It refers to the ability to encode, store, and retrieve information when required, and plays a significant role in the development of language, relationships, and personal identity. Memory can be understood as an information processing system, which comprises sensory processor, short-term (or working) memory, and long-term memory. The sensory processor senses information from the outside world and attends it at various levels of focus and intent. Working memory encodes and retrieves information, whereas long-term memory stores information through various categorical models or systems. Memory can be classified as declarative (explicit) and non-declarative (implicit). Declarative memory is conscious memory storage and recollection of data, while non-declarative memory is the unconscious storage and recollection of information. Memory is not a perfect processor, and it can be affected by various factors such as damage to the brain, pain, and decay over time. Memory plays a critical role in the functioning of the program data, CPU, and operating system of a device.",
+    "system_b_background": "A warehouse is a large building used by businesses for storing goods in. It serves as a centralized location for manufacturers, wholesalers, importers, exporters, and transport companies to keep their raw materials, components, spare parts, and finished goods in one place. Warehouses are located in industrial parks situated on the outskirts of cities, towns, or villages. They come equipped with loading docks to make loading and unloading goods from trucks a simple task. Some warehouses are also designed for unloading and loading of goods directly from various transportation methods such as railways, airports, or seaports. This is made possible through the availability of cranes and forklifts to move goods as required. Warehouses store their goods on ISO standard pallets, which are loaded into pallet racks. In India and Hong Kong, a warehouse can also be known as a \"godown\". In managing warehouses, the role of a Warehouse Manager is essential. They are responsible for effectively organizing the goods within the warehouse and the staff tasked with handling and transporting the stored goods using forklifts among other machinery.",
+    "Explanation": [
+      "Program data corresponds to goods: The program data in memory is the information that the computer needs to process and store during operation. Goods in the warehouse, on the other hand, are items that need to be stored and managed. Here, both program data and goods are storage objects in the system.",
+      "CPU corresponds to forklift: The CPU in memory is responsible for processing and executing program data. The forklift in the warehouse is responsible for handling and transporting goods. Here, both the CPU and forklift are the executing and handling components in the system.",
+      "Operating system corresponds to Warehouse Manager: The operating system in memory is responsible for managing and coordinating the computer's hardware and software resources. The warehouse manager in the warehouse is responsible for managing and coordinating various affairs and resources in the warehouse. Here, both the operating system and warehouse manager are the managers and coordinators in the system."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Memory",
+    "target": "Warehouse"
+  },
+  "domains": {
+    "source": "Computer",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

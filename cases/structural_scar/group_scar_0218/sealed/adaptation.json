@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0218",
+  "dataset": "scar",
+  "original_id": "218",
+  "source_object_id": "obj_group_scar_0218_src",
+  "target_object_id": "obj_group_scar_0218_tgt",
+  "faithful_mappings": [
+    [
+      "Mesopotamia",
+      "aegean sea"
+    ],
+    [
+      "Code of Hammurabi",
+      "Aegean Civilization"
+    ],
+    [
+      "cuneiform",
+      "Greek alphabet"
+    ],
+    [
+      "persian empire",
+      "alexander empire"
+    ],
+    [
+      "Judaism",
+      "athens culture"
+    ]
+  ],
+  "explanation": [
+    "The Mesopotamia corresponds to the Aegean Sea: Mesopotamia is the birthplace of the ancient Sumerian civilization, located between the Tigris and Euphrates rivers, while the Aegean Sea is the birthplace of the ancient Greek civilization, located in the northeast of the Mediterranean. Both of them are important geographic areas and the birthplaces of their own civilizations.",
+    "The Code of Hammurabi corresponds to the Aegean Civilization: The Code of Hammurabi is a legal code of the ancient Babylonian Kingdom, reflecting the legal system of the society at that time. The Aegean Civilization, on the other hand, is an early civilization in the Greek region. Although they are different in nature, both can be seen as important historical stages and development foundations of their own civilizations.",
+    "Cuneiform corresponds to the Greek alphabet: Cuneiform is a writing system of the ancient Sumerian civilization used to record history, culture, religion, and more. The Greek alphabet, on the other hand, is a writing system of the ancient Greek civilization. Both of them are writing tools of their own civilizations.",
+    "The Persian Empire corresponds to the Alexander Empire: The Persian Empire was a powerful country in ancient Persia, ruling over vast territories. The Alexander Empire was an empire established by Alexander the Great, the king of ancient Macedonia. Both represent the powerful countries and regional hegemony of their own civilizations.",
+    "Judaism corresponds to Athens culture: Judaism is a religious belief in ancient Persia that has had a significant impact on the local culture. Athens culture is an important part of ancient Greek civilization and has had a profound influence on Greek civilization. Both are important cultural achievements of their own civilizations."
+  ],
+  "background": {
+    "source": "Ancient Asia was the birthplace of several civilizations that developed around the fertile river valleys. These civilizations included Mesopotamia, India, and China, and they shared similarities and exchanged technologies and ideas such as mathematics and the wheel. Mesopotamia gave the world the Code of Hammurabi and the use of cuneiform, while the Persian Empire rose to a powerful position in the region. Judaism also has its roots in ancient Asia, developing in the Middle East. The spread of Islam in later centuries gave rise to the Islamic Golden Age and influenced the age of Islamic gunpowder empires. The history of Asia also includes major developments such as the trade of the Silk Road and the innovation of gunpowder, which not only affected Asia but also had a significant impact on other parts of the world.",
+    "target": "Ancient Greece was a civilization that existed from the Greek Dark Ages of the 12th-9th centuries BC until the end of classical antiquity. Comprising a loose collection of culturally and linguistically related city-states and other territories, Ancient Greece formed most of these regions officially only once, under Alexander the Great's empire. Western history saw the era of classical antiquity immediately followed by the Early Middle Ages and the Byzantine period. With the archaic and classical periods forming a significant time, Greek urban poleis began to form in the 8th century BC, ushering in the colonization of the Mediterranean Basin. The Golden Age of Athens followed the Greco-Persian Wars until the 5th to 4th centuries BC. Alexander the Great’s conquests spread Hellenistic civilization from the western Mediterranean to Central Asia. Classical Greek culture, especially philosophy, had a significant influence on ancient Rome, which carried a version of it throughout the Mediterranean and much of Europe. Thus, Classical Greece is generally considered the cradle of Western civilization, the seminal culture from which the modern West derives many founding archetypes and ideas in politics, philosophy, science, and art."
+  },
+  "raw": {
+    "id": 218,
+    "lang": "en",
+    "system_a": "Ancient Asia",
+    "system_b": "Ancient Greece",
+    "mappings": [
+      [
+        "Mesopotamia",
+        "aegean sea"
+      ],
+      [
+        "Code of Hammurabi",
+        "Aegean Civilization"
+      ],
+      [
+        "cuneiform",
+        "Greek alphabet"
+      ],
+      [
+        "persian empire",
+        "alexander empire"
+      ],
+      [
+        "Judaism",
+        "athens culture"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "Ancient Asia was the birthplace of several civilizations that developed around the fertile river valleys. These civilizations included Mesopotamia, India, and China, and they shared similarities and exchanged technologies and ideas such as mathematics and the wheel. Mesopotamia gave the world the Code of Hammurabi and the use of cuneiform, while the Persian Empire rose to a powerful position in the region. Judaism also has its roots in ancient Asia, developing in the Middle East. The spread of Islam in later centuries gave rise to the Islamic Golden Age and influenced the age of Islamic gunpowder empires. The history of Asia also includes major developments such as the trade of the Silk Road and the innovation of gunpowder, which not only affected Asia but also had a significant impact on other parts of the world.",
+    "system_b_background": "Ancient Greece was a civilization that existed from the Greek Dark Ages of the 12th-9th centuries BC until the end of classical antiquity. Comprising a loose collection of culturally and linguistically related city-states and other territories, Ancient Greece formed most of these regions officially only once, under Alexander the Great's empire. Western history saw the era of classical antiquity immediately followed by the Early Middle Ages and the Byzantine period. With the archaic and classical periods forming a significant time, Greek urban poleis began to form in the 8th century BC, ushering in the colonization of the Mediterranean Basin. The Golden Age of Athens followed the Greco-Persian Wars until the 5th to 4th centuries BC. Alexander the Great’s conquests spread Hellenistic civilization from the western Mediterranean to Central Asia. Classical Greek culture, especially philosophy, had a significant influence on ancient Rome, which carried a version of it throughout the Mediterranean and much of Europe. Thus, Classical Greece is generally considered the cradle of Western civilization, the seminal culture from which the modern West derives many founding archetypes and ideas in politics, philosophy, science, and art.",
+    "Explanation": [
+      "The Mesopotamia corresponds to the Aegean Sea: Mesopotamia is the birthplace of the ancient Sumerian civilization, located between the Tigris and Euphrates rivers, while the Aegean Sea is the birthplace of the ancient Greek civilization, located in the northeast of the Mediterranean. Both of them are important geographic areas and the birthplaces of their own civilizations.",
+      "The Code of Hammurabi corresponds to the Aegean Civilization: The Code of Hammurabi is a legal code of the ancient Babylonian Kingdom, reflecting the legal system of the society at that time. The Aegean Civilization, on the other hand, is an early civilization in the Greek region. Although they are different in nature, both can be seen as important historical stages and development foundations of their own civilizations.",
+      "Cuneiform corresponds to the Greek alphabet: Cuneiform is a writing system of the ancient Sumerian civilization used to record history, culture, religion, and more. The Greek alphabet, on the other hand, is a writing system of the ancient Greek civilization. Both of them are writing tools of their own civilizations.",
+      "The Persian Empire corresponds to the Alexander Empire: The Persian Empire was a powerful country in ancient Persia, ruling over vast territories. The Alexander Empire was an empire established by Alexander the Great, the king of ancient Macedonia. Both represent the powerful countries and regional hegemony of their own civilizations.",
+      "Judaism corresponds to Athens culture: Judaism is a religious belief in ancient Persia that has had a significant impact on the local culture. Athens culture is an important part of ancient Greek civilization and has had a profound influence on Greek civilization. Both are important cultural achievements of their own civilizations."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Ancient Asia",
+    "target": "Ancient Greece"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

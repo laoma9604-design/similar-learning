@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0238",
+  "dataset": "scar",
+  "original_id": "238",
+  "source_object_id": "obj_group_scar_0238_src",
+  "target_object_id": "obj_group_scar_0238_tgt",
+  "faithful_mappings": [
+    [
+      "king",
+      "president"
+    ],
+    [
+      "hereditary",
+      "election"
+    ],
+    [
+      "life tenure",
+      "seven years"
+    ]
+  ],
+  "explanation": [
+    "King corresponds to president: In the constitutional monarchy of the United Kingdom, the king is the head of state; while in the presidential system of France, the president is the head of state. Both play important leadership roles in their respective political systems.",
+    "Hereditary corresponds to election: In the constitutional monarchy of the United Kingdom, the position of king is hereditary, representing a traditional way of transferring political power; while in the presidential system of France, the president is elected, representing a democratic way of transferring political power.",
+    "Life tenure corresponds to seven years: In the constitutional monarchy of the United Kingdom, the king's term is life tenure, which means the king remains in office until death; while in the presidential system of France, the president serves a term of seven years and can be re-elected. This reflects the different characteristics of the terms of leaders in the two political systems."
+  ],
+  "background": {
+    "source": "A British constitutional monarchy is a form of government where the monarch exercises their authority in accordance with a constitution and is not the only decision-maker. The monarch is bound to exercise powers and authorities within the limits prescribed by an established legal framework. The United Kingdom and other Commonwealth realms are constitutional monarchies in the Westminster system of constitutional governance. The monarchy holds formal authority and the government may legally operate in the monarch's name, but the monarch no longer personally sets public policy or chooses political leaders. The British political theorist Walter Bagehot identified three main political rights which a constitutional monarch may freely exercise: the right to be consulted, the right to encourage, and the right to warn. The monarch retains the title for life but is hereditary.",
+    "target": "The French presidential system is a unique form of government that combines the features of both parliamentary republic and presidential systems. It operates on a system of dual executive republic, wherein the president and the prime minister share the executive power of the state. A popularly elected head of state is responsible for the country's foreign policy, national security, and overall governance of the state. In contrast, the prime minister and cabinet are accountable to the legislative body that can hold them accountable in case of any wrongdoing. The French presidential system has been in place since the establishment of the Fifth Republic in 1958, and the president's term lasts for seven years before the next election cycle."
+  },
+  "raw": {
+    "id": 238,
+    "lang": "en",
+    "system_a": "British constitutional monarchy",
+    "system_b": "French presidential system",
+    "mappings": [
+      [
+        "king",
+        "president"
+      ],
+      [
+        "hereditary",
+        "election"
+      ],
+      [
+        "life tenure",
+        "seven years"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "A British constitutional monarchy is a form of government where the monarch exercises their authority in accordance with a constitution and is not the only decision-maker. The monarch is bound to exercise powers and authorities within the limits prescribed by an established legal framework. The United Kingdom and other Commonwealth realms are constitutional monarchies in the Westminster system of constitutional governance. The monarchy holds formal authority and the government may legally operate in the monarch's name, but the monarch no longer personally sets public policy or chooses political leaders. The British political theorist Walter Bagehot identified three main political rights which a constitutional monarch may freely exercise: the right to be consulted, the right to encourage, and the right to warn. The monarch retains the title for life but is hereditary.",
+    "system_b_background": "The French presidential system is a unique form of government that combines the features of both parliamentary republic and presidential systems. It operates on a system of dual executive republic, wherein the president and the prime minister share the executive power of the state. A popularly elected head of state is responsible for the country's foreign policy, national security, and overall governance of the state. In contrast, the prime minister and cabinet are accountable to the legislative body that can hold them accountable in case of any wrongdoing. The French presidential system has been in place since the establishment of the Fifth Republic in 1958, and the president's term lasts for seven years before the next election cycle.",
+    "Explanation": [
+      "King corresponds to president: In the constitutional monarchy of the United Kingdom, the king is the head of state; while in the presidential system of France, the president is the head of state. Both play important leadership roles in their respective political systems.",
+      "Hereditary corresponds to election: In the constitutional monarchy of the United Kingdom, the position of king is hereditary, representing a traditional way of transferring political power; while in the presidential system of France, the president is elected, representing a democratic way of transferring political power.",
+      "Life tenure corresponds to seven years: In the constitutional monarchy of the United Kingdom, the king's term is life tenure, which means the king remains in office until death; while in the presidential system of France, the president serves a term of seven years and can be re-elected. This reflects the different characteristics of the terms of leaders in the two political systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "British constitutional monarchy",
+    "target": "French presidential system"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

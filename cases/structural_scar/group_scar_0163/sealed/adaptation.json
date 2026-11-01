@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0163",
+  "dataset": "scar",
+  "original_id": "163",
+  "source_object_id": "obj_group_scar_0163_src",
+  "target_object_id": "obj_group_scar_0163_tgt",
+  "faithful_mappings": [
+    [
+      "data",
+      "trade"
+    ],
+    [
+      "verify",
+      "verification"
+    ],
+    [
+      "confirm",
+      "into the account"
+    ],
+    [
+      "participant",
+      "Accounting"
+    ]
+  ],
+  "explanation": [
+    "Data corresponds to trade: In blockchain, data mainly refers to transaction information such as the transfer amount, sender and receiver. In the ledger, trade refers to the transfer of funds such as income and expenses. Here, both data and trade represent the recorded information content.",
+    "Verification corresponds to verification: In blockchain, verification refers to the checking of the authenticity and legitimacy of transactions to ensure the correctness of data. In the ledger, verification refers to the examination of the accuracy of transaction records. Both represent the process of reviewing and confirming information.",
+    "Confirmation corresponds to posting: In blockchain, confirmation refers to adding verified transactions to a block to make it an immutable record. In the ledger, posting refers to recording verified transaction records in the accounts. Both represent the final recording and storage process of information.",
+    "Participants correspond to accounting: In blockchain, participants refer to nodes participating in verifying and confirming transactions, such as miners. In the ledger, accounting refers to the personnel responsible for recording, verifying, and posting transactions. Here, both participants and accounting represent roles responsible for processing information."
+  ],
+  "background": {
+    "source": "Blockchain is a groundbreaking technology that utilizes a distributed ledger to store and verify data. It is a decentralized system where participants collectively adhere to a consensus algorithm protocol to add and validate new transaction blocks. Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data that cannot be altered retroactively without altering all subsequent blocks. This ensures that blockchain transactions are irreversible and secure by design. Blockchain was initially created as a public distributed ledger for bitcoin cryptocurrency transactions but has since been adopted by various other applications, including private blockchains for business use. As a result, Blockchain has become a reliable and widely used method to confirm and verify data in a decentralized environment where all participants have an equal say.",
+    "target": "A ledger is an essential tool that provides organizations with an accurate record and the ability to track their financial transactions. It is a collection of accounts where all business-related transactions are recorded. This tool is used by companies to keep track of financial movements and to verify and monitor trades within a company. Each account in a ledger has an opening or carry-forward balance, and every transaction is recorded as either a debit or credit in separate columns, which are then summed up to calculate the ending or closing balance. With the use of a ledger, companies can keep track of all transactions and ensure that everything is accounted for. Overall, a ledger is an important instrument for any accounting team to accurately record financial data and for the management team to have access to a summary of financial transactions."
+  },
+  "raw": {
+    "id": 163,
+    "lang": "en",
+    "system_a": "Blockchain",
+    "system_b": "Ledger",
+    "mappings": [
+      [
+        "data",
+        "trade"
+      ],
+      [
+        "verify",
+        "verification"
+      ],
+      [
+        "confirm",
+        "into the account"
+      ],
+      [
+        "participant",
+        "Accounting"
+      ]
+    ],
+    "system_a_domain": "Computer",
+    "system_b_domain": "Economy",
+    "system_a_background": "Blockchain is a groundbreaking technology that utilizes a distributed ledger to store and verify data. It is a decentralized system where participants collectively adhere to a consensus algorithm protocol to add and validate new transaction blocks. Each block contains a cryptographic hash of the previous block, a timestamp, and transaction data that cannot be altered retroactively without altering all subsequent blocks. This ensures that blockchain transactions are irreversible and secure by design. Blockchain was initially created as a public distributed ledger for bitcoin cryptocurrency transactions but has since been adopted by various other applications, including private blockchains for business use. As a result, Blockchain has become a reliable and widely used method to confirm and verify data in a decentralized environment where all participants have an equal say.",
+    "system_b_background": "A ledger is an essential tool that provides organizations with an accurate record and the ability to track their financial transactions. It is a collection of accounts where all business-related transactions are recorded. This tool is used by companies to keep track of financial movements and to verify and monitor trades within a company. Each account in a ledger has an opening or carry-forward balance, and every transaction is recorded as either a debit or credit in separate columns, which are then summed up to calculate the ending or closing balance. With the use of a ledger, companies can keep track of all transactions and ensure that everything is accounted for. Overall, a ledger is an important instrument for any accounting team to accurately record financial data and for the management team to have access to a summary of financial transactions.",
+    "Explanation": [
+      "Data corresponds to trade: In blockchain, data mainly refers to transaction information such as the transfer amount, sender and receiver. In the ledger, trade refers to the transfer of funds such as income and expenses. Here, both data and trade represent the recorded information content.",
+      "Verification corresponds to verification: In blockchain, verification refers to the checking of the authenticity and legitimacy of transactions to ensure the correctness of data. In the ledger, verification refers to the examination of the accuracy of transaction records. Both represent the process of reviewing and confirming information.",
+      "Confirmation corresponds to posting: In blockchain, confirmation refers to adding verified transactions to a block to make it an immutable record. In the ledger, posting refers to recording verified transaction records in the accounts. Both represent the final recording and storage process of information.",
+      "Participants correspond to accounting: In blockchain, participants refer to nodes participating in verifying and confirming transactions, such as miners. In the ledger, accounting refers to the personnel responsible for recording, verifying, and posting transactions. Here, both participants and accounting represent roles responsible for processing information."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Blockchain",
+    "target": "Ledger"
+  },
+  "domains": {
+    "source": "Computer",
+    "target": "Economy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

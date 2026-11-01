@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0203",
+  "dataset": "scar",
+  "original_id": "203",
+  "source_object_id": "obj_group_scar_0203_src",
+  "target_object_id": "obj_group_scar_0203_tgt",
+  "faithful_mappings": [
+    [
+      "Second Continental Congress",
+      "constitutional convention in philadelphia"
+    ],
+    [
+      "safeguard human rights",
+      "Separation of powers"
+    ],
+    [
+      "america was born",
+      "establish a federal system"
+    ]
+  ],
+  "explanation": [
+    "The Second Continental Congress corresponds to the Constitutional Convention in Philadelphia: In American history, the Second Continental Congress was the important meeting to draft the Declaration of Independence, which proclaimed the independence of the United States. The Constitutional Convention in Philadelphia in 1787 was also an important meeting to draft the Constitution, which established a federal system for the United States. Both meetings were significant events in American history and laid the foundation for American independence and Constitution.",
+    "Safeguarding human rights corresponds to the separation of powers: The Declaration of Independence emphasizes safeguarding human rights and advocating that people have the right to resist unjust rule. The separation of powers in the Constitution of 1787 was designed to protect people's rights by balancing legislative, executive, and judicial powers, preventing power from being overly centralized. Both elements embody the protection and respect for human rights.",
+    "The birth of America corresponds to the establishment of a federal system: The signing of the Declaration of Independence marked the birth of America, becoming an independent country. The drafting of the Constitution in 1787 established a federal system for the United States, enabling states to develop together in a unified political system. Both elements represent important stages in the national construction of the United States."
+  ],
+  "background": {
+    "source": "The Declaration of Independence is a seminal document that marks the birth of America. It was written by the Second Continental Congress and is a proclamation of independence that asserts the rights of the people to safeguard their human rights. It is usually issued when a polity in a defined territory declares itself independent and recognizes itself as a state. The document was signed by representatives from the 13 colonies that wished to be free from British rule. It clearly articulated the reasons for the separation and affirmed that all men are created equal, endowed with certain unalienable rights, and that governments are instituted to secure these rights. The Declaration of Independence is a critical piece of American history that speaks to the heart of what it means to be a free and independent nation.",
+    "target": "The Constitution of the United States is a fundamental document establishing the American federal system of government. It was drafted at the Constitutional Convention in Philadelphia in 1787 and was intended to replace the Articles of Confederation, which had proven inadequate for governing the new nation. The Constitution embodies the doctrine of the separation of powers, dividing the federal government into three branches: the legislative, executive, and judicial. In addition, it establishes a federal system, describing the rights and responsibilities of state governments and their relationships with the federal government. Ratified in 1789, it is the oldest and longest-standing written and codified national constitution in force in the world today. Amendments have since been added to the Constitution, with the first ten collectively known as the Bill of Rights. Overall, the Constitution has greatly influenced the constitutions of other nations and serves as a cornerstone for American government and society."
+  },
+  "raw": {
+    "id": 203,
+    "lang": "en",
+    "system_a": "Declaration of Independence",
+    "system_b": "Constitution of 1787",
+    "mappings": [
+      [
+        "Second Continental Congress",
+        "constitutional convention in philadelphia"
+      ],
+      [
+        "safeguard human rights",
+        "Separation of powers"
+      ],
+      [
+        "america was born",
+        "establish a federal system"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "The Declaration of Independence is a seminal document that marks the birth of America. It was written by the Second Continental Congress and is a proclamation of independence that asserts the rights of the people to safeguard their human rights. It is usually issued when a polity in a defined territory declares itself independent and recognizes itself as a state. The document was signed by representatives from the 13 colonies that wished to be free from British rule. It clearly articulated the reasons for the separation and affirmed that all men are created equal, endowed with certain unalienable rights, and that governments are instituted to secure these rights. The Declaration of Independence is a critical piece of American history that speaks to the heart of what it means to be a free and independent nation.",
+    "system_b_background": "The Constitution of the United States is a fundamental document establishing the American federal system of government. It was drafted at the Constitutional Convention in Philadelphia in 1787 and was intended to replace the Articles of Confederation, which had proven inadequate for governing the new nation. The Constitution embodies the doctrine of the separation of powers, dividing the federal government into three branches: the legislative, executive, and judicial. In addition, it establishes a federal system, describing the rights and responsibilities of state governments and their relationships with the federal government. Ratified in 1789, it is the oldest and longest-standing written and codified national constitution in force in the world today. Amendments have since been added to the Constitution, with the first ten collectively known as the Bill of Rights. Overall, the Constitution has greatly influenced the constitutions of other nations and serves as a cornerstone for American government and society.",
+    "Explanation": [
+      "The Second Continental Congress corresponds to the Constitutional Convention in Philadelphia: In American history, the Second Continental Congress was the important meeting to draft the Declaration of Independence, which proclaimed the independence of the United States. The Constitutional Convention in Philadelphia in 1787 was also an important meeting to draft the Constitution, which established a federal system for the United States. Both meetings were significant events in American history and laid the foundation for American independence and Constitution.",
+      "Safeguarding human rights corresponds to the separation of powers: The Declaration of Independence emphasizes safeguarding human rights and advocating that people have the right to resist unjust rule. The separation of powers in the Constitution of 1787 was designed to protect people's rights by balancing legislative, executive, and judicial powers, preventing power from being overly centralized. Both elements embody the protection and respect for human rights.",
+      "The birth of America corresponds to the establishment of a federal system: The signing of the Declaration of Independence marked the birth of America, becoming an independent country. The drafting of the Constitution in 1787 established a federal system for the United States, enabling states to develop together in a unified political system. Both elements represent important stages in the national construction of the United States."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Declaration of Independence",
+    "target": "Constitution of 1787"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

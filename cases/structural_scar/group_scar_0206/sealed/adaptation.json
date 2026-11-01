@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0206",
+  "dataset": "scar",
+  "original_id": "206",
+  "source_object_id": "obj_group_scar_0206_src",
+  "target_object_id": "obj_group_scar_0206_tgt",
+  "faithful_mappings": [
+    [
+      "national liberation movement",
+      "Bourgeois revolution"
+    ],
+    [
+      "british colonial rule",
+      "black slavery"
+    ],
+    [
+      "washington",
+      "lincoln"
+    ]
+  ],
+  "explanation": [
+    "The national liberation movement corresponds to the bourgeois revolution: these two elements represent the social changes behind their respective wars. The American War of Independence was a national liberation movement aimed at getting rid of British colonial rule; while the American Civil War was a bourgeois revolution that overthrew black slavery and laid the foundation for modern development in the United States.",
+    "British colonial rule corresponds to black slavery: these two elements represent the unjust systems that each war fought against. The American War of Independence fought against British colonial rule; while the American Civil War fought against the black slavery in the south.",
+    "Washington corresponds to Lincoln: these two elements represent the important leaders of their respective wars. Washington was the main leader of the American War of Independence and later became the first President of the United States; while Lincoln was the President during the American Civil War, and his leadership played a critical role in the victory of the war and the abolishment of slavery."
+  ],
+  "background": {
+    "source": "The American Revolutionary War, also known as the American War of Independence, was a national liberation movement against British colonial rule in the 18th century. The conflict began on April 19, 1775, with the Battles of Lexington and Concord and was formalized and intensified following the Lee Resolution on July 2, 1776, which declared the Thirteen Colonies to be \"free and independent states\", and the Declaration of Independence drafted by Thomas Jefferson, two days later. In the war, American patriot forces, led by George Washington, were supported by the Kingdom of France and the Kingdom of Spain, while the British received support from Hessian soldiers from present-day Germany, Native Americans, Loyalists, and freedmen. The conflict was fought in North America, the Caribbean, and the Atlantic Ocean. The war officially ended with the Treaty of Paris on September 3, 1783, with Britain accepting American independence. George Washington played a pivotal role in leading the Continental Army to victory and securing the independence of the United States.",
+    "target": "The American Civil War, also known as the War Between the States or the War of Northern Aggression, was a bloody and devastating conflict that lasted from 1861 to 1865. At its root was the question of slavery and its expansion into the western territories. Abraham Lincoln's election in 1860 and his opposition to the spread of slavery triggered the secession of seven southern states, which formed the Confederate States of America. The North and South went to war, with the goal of the Union being to maintain itself and the goal of the Confederacy being to gain independence and protect slavery. The conflict was fought with advanced weaponry and tactics, foreshadowing the technology and brutality of the World Wars to come. The war ultimately resulted in the emancipation of the slaves and the collapse of the Confederate States of America. However, the country was left devastated, with over 600,000 soldiers and countless civilians dead. The aftermath saw the beginning of the Reconstruction era, an attempt to rebuild the country and heal the wounds of the past. Despite its importance and extensive study, the American Civil War remains the subject of cultural and historiographical debate."
+  },
+  "raw": {
+    "id": 206,
+    "lang": "en",
+    "system_a": "American Revolutionary War",
+    "system_b": "American Civil War",
+    "mappings": [
+      [
+        "national liberation movement",
+        "Bourgeois revolution"
+      ],
+      [
+        "british colonial rule",
+        "black slavery"
+      ],
+      [
+        "washington",
+        "lincoln"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "The American Revolutionary War, also known as the American War of Independence, was a national liberation movement against British colonial rule in the 18th century. The conflict began on April 19, 1775, with the Battles of Lexington and Concord and was formalized and intensified following the Lee Resolution on July 2, 1776, which declared the Thirteen Colonies to be \"free and independent states\", and the Declaration of Independence drafted by Thomas Jefferson, two days later. In the war, American patriot forces, led by George Washington, were supported by the Kingdom of France and the Kingdom of Spain, while the British received support from Hessian soldiers from present-day Germany, Native Americans, Loyalists, and freedmen. The conflict was fought in North America, the Caribbean, and the Atlantic Ocean. The war officially ended with the Treaty of Paris on September 3, 1783, with Britain accepting American independence. George Washington played a pivotal role in leading the Continental Army to victory and securing the independence of the United States.",
+    "system_b_background": "The American Civil War, also known as the War Between the States or the War of Northern Aggression, was a bloody and devastating conflict that lasted from 1861 to 1865. At its root was the question of slavery and its expansion into the western territories. Abraham Lincoln's election in 1860 and his opposition to the spread of slavery triggered the secession of seven southern states, which formed the Confederate States of America. The North and South went to war, with the goal of the Union being to maintain itself and the goal of the Confederacy being to gain independence and protect slavery. The conflict was fought with advanced weaponry and tactics, foreshadowing the technology and brutality of the World Wars to come. The war ultimately resulted in the emancipation of the slaves and the collapse of the Confederate States of America. However, the country was left devastated, with over 600,000 soldiers and countless civilians dead. The aftermath saw the beginning of the Reconstruction era, an attempt to rebuild the country and heal the wounds of the past. Despite its importance and extensive study, the American Civil War remains the subject of cultural and historiographical debate.",
+    "Explanation": [
+      "The national liberation movement corresponds to the bourgeois revolution: these two elements represent the social changes behind their respective wars. The American War of Independence was a national liberation movement aimed at getting rid of British colonial rule; while the American Civil War was a bourgeois revolution that overthrew black slavery and laid the foundation for modern development in the United States.",
+      "British colonial rule corresponds to black slavery: these two elements represent the unjust systems that each war fought against. The American War of Independence fought against British colonial rule; while the American Civil War fought against the black slavery in the south.",
+      "Washington corresponds to Lincoln: these two elements represent the important leaders of their respective wars. Washington was the main leader of the American War of Independence and later became the first President of the United States; while Lincoln was the President during the American Civil War, and his leadership played a critical role in the victory of the war and the abolishment of slavery."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "American Revolutionary War",
+    "target": "American Civil War"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

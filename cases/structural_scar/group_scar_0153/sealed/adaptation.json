@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0153",
+  "dataset": "scar",
+  "original_id": "153",
+  "source_object_id": "obj_group_scar_0153_src",
+  "target_object_id": "obj_group_scar_0153_tgt",
+  "faithful_mappings": [
+    [
+      "probability information",
+      "Word"
+    ],
+    [
+      "probability of occurrence",
+      "word meaning"
+    ],
+    [
+      "relationship between prior probability and observed data",
+      "word relationship"
+    ]
+  ],
+  "explanation": [
+    "Probability information corresponds to words: In Bayesian algorithms, probability information is a measure of the likelihood of an event occurring; in a dictionary, words are symbols used to express information. Both are forms of representing information.",
+    "Probability of occurrence corresponds to word meaning: In Bayesian algorithms, probability of occurrence refers to the likelihood of an event occurring; in a dictionary, word meaning represents the specific meaning expressed by a word. Both are measures used to describe the characteristics of things.",
+    "The relationship between prior probability and observed data corresponds to word relationship: In Bayesian algorithms, the relationship between prior probability and observed data is the process of probability inference based on known conditions; in a dictionary, word relationship represents the connections and relationships between words. Both are methods used to describe the relationships between things."
+  ],
+  "background": {
+    "source": "Bayesian algorithms are a vital tool in statistical analysis and inference. These algorithms are based on Bayes' theorem, which is a mathematical formula used to update the probability of a hypothesis as new evidence or information becomes available. With Bayesian inference, the probability of occurrence of an event can be updated based on prior probability and observed data. This relationship between prior probability and observed data is an essential aspect of Bayesian algorithms, allowing for the dynamic analysis of a sequence of data. Bayesian inference has a wide range of applications across many fields, including science, engineering, medicine, sport, and law. In the philosophy of decision theory, Bayesian inference is closely related to subjective probability, also known as \"Bayesian probability\". As such, Bayesian algorithms are a powerful tool for understanding and predicting events and outcomes based on available information.",
+    "target": "A dictionary is a comprehensive list of words found in one or more specific languages, arranged alphabetically or by radical and stroke for ideographic languages. It is a valuable reference book that provides word meanings, relationships, definitions, usage, etymologies, pronunciations, translations, etc. The dictionary comes in different types: general and specialized, bilingual, dictionary of synonyms, and rhyming dictionary. Furthermore, dictionaries can be prescriptive-reflecting correct language use or descriptive-reflecting the actual use of the language. The first dictionaries were Sumerian in origin and have been dated back to around 2300 BCE, while the oldest surviving monolingual dictionaries are Chinese, circa 3rd century BCE. The systematic study of dictionaries began in the 20th century and has resulted in the emergence of the discipline of lexicography."
+  },
+  "raw": {
+    "id": 153,
+    "lang": "en",
+    "system_a": "Bayesian Algorithms",
+    "system_b": "Dictionary",
+    "mappings": [
+      [
+        "probability information",
+        "Word"
+      ],
+      [
+        "probability of occurrence",
+        "word meaning"
+      ],
+      [
+        "relationship between prior probability and observed data",
+        "word relationship"
+      ]
+    ],
+    "system_a_domain": "Computer",
+    "system_b_domain": "Art",
+    "system_a_background": "Bayesian algorithms are a vital tool in statistical analysis and inference. These algorithms are based on Bayes' theorem, which is a mathematical formula used to update the probability of a hypothesis as new evidence or information becomes available. With Bayesian inference, the probability of occurrence of an event can be updated based on prior probability and observed data. This relationship between prior probability and observed data is an essential aspect of Bayesian algorithms, allowing for the dynamic analysis of a sequence of data. Bayesian inference has a wide range of applications across many fields, including science, engineering, medicine, sport, and law. In the philosophy of decision theory, Bayesian inference is closely related to subjective probability, also known as \"Bayesian probability\". As such, Bayesian algorithms are a powerful tool for understanding and predicting events and outcomes based on available information.",
+    "system_b_background": "A dictionary is a comprehensive list of words found in one or more specific languages, arranged alphabetically or by radical and stroke for ideographic languages. It is a valuable reference book that provides word meanings, relationships, definitions, usage, etymologies, pronunciations, translations, etc. The dictionary comes in different types: general and specialized, bilingual, dictionary of synonyms, and rhyming dictionary. Furthermore, dictionaries can be prescriptive-reflecting correct language use or descriptive-reflecting the actual use of the language. The first dictionaries were Sumerian in origin and have been dated back to around 2300 BCE, while the oldest surviving monolingual dictionaries are Chinese, circa 3rd century BCE. The systematic study of dictionaries began in the 20th century and has resulted in the emergence of the discipline of lexicography.",
+    "Explanation": [
+      "Probability information corresponds to words: In Bayesian algorithms, probability information is a measure of the likelihood of an event occurring; in a dictionary, words are symbols used to express information. Both are forms of representing information.",
+      "Probability of occurrence corresponds to word meaning: In Bayesian algorithms, probability of occurrence refers to the likelihood of an event occurring; in a dictionary, word meaning represents the specific meaning expressed by a word. Both are measures used to describe the characteristics of things.",
+      "The relationship between prior probability and observed data corresponds to word relationship: In Bayesian algorithms, the relationship between prior probability and observed data is the process of probability inference based on known conditions; in a dictionary, word relationship represents the connections and relationships between words. Both are methods used to describe the relationships between things."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Bayesian Algorithms",
+    "target": "Dictionary"
+  },
+  "domains": {
+    "source": "Computer",
+    "target": "Art"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

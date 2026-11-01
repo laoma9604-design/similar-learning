@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0099",
+  "dataset": "scar",
+  "original_id": "99",
+  "source_object_id": "obj_group_scar_0099_src",
+  "target_object_id": "obj_group_scar_0099_tgt",
+  "faithful_mappings": [
+    [
+      "chemical reaction heat",
+      "Frictional heat"
+    ],
+    [
+      "Reactant",
+      "Friction"
+    ],
+    [
+      "atomic interaction",
+      "rub"
+    ]
+  ],
+  "explanation": [
+    "Chemical reaction heat corresponds to frictional heat: in a chemical reaction, the reaction heat is the heat released or absorbed during the chemical reaction process; in friction process, frictional heat is the heat generated due to the friction between objects. Both are forms of energy conversion.",
+    "Reactant corresponds to frictional object: the reactant in a chemical reaction is the substance involved in the chemical reaction; the frictional object in friction is the object that rubs against each other during the friction process. In their respective fields, both are the main bodies of interaction processes.",
+    "Atomic interaction corresponds to friction: the atomic interaction in a chemical reaction is the force and reaction that occurs between atoms, causing the atoms to rearrange and form new substances; friction is the resistance generated when objects come into contact with each other. Both describe the process of interaction between objects in their respective fields."
+  ],
+  "background": {
+    "source": "A chemical reaction is a process that involves the transformation of one set of chemical substances into another. This change occurs through the breaking and forming of chemical bonds between atoms, often resulting in different properties of the products compared to the reactants. Chemical reactions can be described by a chemical equation, and usually occur at a certain rate depending on temperature and chemical concentration. Reactants, or the substances initially involved, undergo a series of individual sub-steps until they reach completion or equilibrium in either the forward or reverse direction. Chemical reactions may be classified as redox or nonredox depending on whether oxidation and reduction occur, and different reactions are used in chemical synthesis to obtain desired products. In biochemistry, these reactions form metabolic pathways that are catalyzed by proteins enzymes. Chemical reactions are also extended to include reactions between entities smaller than atoms such as nuclear reactions, radioactive decays, and elementary particle interactions.",
+    "target": "Friction is a force that opposes the relative motion of solid surfaces, fluid layers, and material elements sliding against each other. When surfaces in contact move relative to each other, the friction between the two surfaces converts kinetic energy into thermal energy, known as frictional heat. Friction is a non-conservative force and it is not a fundamental force. There are several types of friction, such as dry friction which blocks the motion of two solid surfaces in contact, fluid friction which is the friction between layers of viscous fluids, and internal friction which is the force resisting the motion between the elements making up a solid material while it undergoes deformation. Rubbing two surfaces together create frictional heat, which is commonly used to start fires. Friction is a component of the science of tribology and is essential for supplying traction to facilitate motion on land. On the other hand, sudden reductions in traction can cause loss of control and accidents."
+  },
+  "raw": {
+    "id": 99,
+    "lang": "en",
+    "system_a": "Chemical Reaction",
+    "system_b": "Friction",
+    "mappings": [
+      [
+        "chemical reaction heat",
+        "Frictional heat"
+      ],
+      [
+        "Reactant",
+        "Friction"
+      ],
+      [
+        "atomic interaction",
+        "rub"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Physics",
+    "system_a_background": "A chemical reaction is a process that involves the transformation of one set of chemical substances into another. This change occurs through the breaking and forming of chemical bonds between atoms, often resulting in different properties of the products compared to the reactants. Chemical reactions can be described by a chemical equation, and usually occur at a certain rate depending on temperature and chemical concentration. Reactants, or the substances initially involved, undergo a series of individual sub-steps until they reach completion or equilibrium in either the forward or reverse direction. Chemical reactions may be classified as redox or nonredox depending on whether oxidation and reduction occur, and different reactions are used in chemical synthesis to obtain desired products. In biochemistry, these reactions form metabolic pathways that are catalyzed by proteins enzymes. Chemical reactions are also extended to include reactions between entities smaller than atoms such as nuclear reactions, radioactive decays, and elementary particle interactions.",
+    "system_b_background": "Friction is a force that opposes the relative motion of solid surfaces, fluid layers, and material elements sliding against each other. When surfaces in contact move relative to each other, the friction between the two surfaces converts kinetic energy into thermal energy, known as frictional heat. Friction is a non-conservative force and it is not a fundamental force. There are several types of friction, such as dry friction which blocks the motion of two solid surfaces in contact, fluid friction which is the friction between layers of viscous fluids, and internal friction which is the force resisting the motion between the elements making up a solid material while it undergoes deformation. Rubbing two surfaces together create frictional heat, which is commonly used to start fires. Friction is a component of the science of tribology and is essential for supplying traction to facilitate motion on land. On the other hand, sudden reductions in traction can cause loss of control and accidents.",
+    "Explanation": [
+      "Chemical reaction heat corresponds to frictional heat: in a chemical reaction, the reaction heat is the heat released or absorbed during the chemical reaction process; in friction process, frictional heat is the heat generated due to the friction between objects. Both are forms of energy conversion.",
+      "Reactant corresponds to frictional object: the reactant in a chemical reaction is the substance involved in the chemical reaction; the frictional object in friction is the object that rubs against each other during the friction process. In their respective fields, both are the main bodies of interaction processes.",
+      "Atomic interaction corresponds to friction: the atomic interaction in a chemical reaction is the force and reaction that occurs between atoms, causing the atoms to rearrange and form new substances; friction is the resistance generated when objects come into contact with each other. Both describe the process of interaction between objects in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Chemical Reaction",
+    "target": "Friction"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

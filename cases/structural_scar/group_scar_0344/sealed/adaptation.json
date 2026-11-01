@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0344",
+  "dataset": "scar",
+  "original_id": "344",
+  "source_object_id": "obj_group_scar_0344_src",
+  "target_object_id": "obj_group_scar_0344_tgt",
+  "faithful_mappings": [
+    [
+      "idea",
+      "recipe"
+    ],
+    [
+      "line draft",
+      "Embryo"
+    ],
+    [
+      "to color",
+      "icing"
+    ],
+    [
+      "finished product",
+      "cake"
+    ]
+  ],
+  "explanation": [
+    "Idea corresponds to recipe: In creative design, an idea is a designer's preliminary thoughts and concepts about a project. In baking, a recipe is a baker's choice of ingredients and methods for making a cake according to the desired type. Both serve as a starting point for subsequent steps.",
+    "Line draft corresponds to embryo: In creative design, a line draft is a preliminary sketch drawn by a designer based on an idea. In baking, an embryo is an undecorated cake base made by a baker according to a recipe. Both serve as a foundation stage for subsequent refinement and decoration.",
+    "To color corresponds to icing: In creative design, coloring involves adding color and details to a line draft to make it more vivid and complete. In baking, icing is added by a baker to decorate and beautify an embryo, making the cake more enticing and aesthetically pleasing. Both serve as a decoration and enhancement stage to add flair to the final product.",
+    "Finished product corresponds to cake: In creative design, a finished product is the final work resulting from a designer's idea, line draft, and coloring. In baking, a cake is the final culinary delight resulting from a baker's recipe, embryo, and icing. Both serve as the ultimate achievement of a project, showcasing the creator's skills and creativity."
+  ],
+  "background": {
+    "source": "Creative design is a highly important aspect of industries related to arts and entertainment. This creative process often involves a creative director who takes the lead in making high-level decisions and overseeing the creation of creative assets such as advertisements, products, events, or logos. This position is found in a range of industries including graphic design, film, music, video game, fashion, advertising, media, web development, and software development among others. The creative director assumes multiple roles including that of an art director, copywriter, or lead designer. Their primary responsibilities include guiding a team of employees with skills and experience related to graphic design, fine arts, motion graphics, and other creative fields towards creating unique and innovative designs for communication and interactive platforms. Throughout the creative process, the creative director is involved in all stages from the idea stage to line drafts, adding color, and bringing the finished product to life.",
+    "target": "Baking is a culinary method that has been used for centuries to prepare a wide range of delicious foods, including bread, pastries, cakes, and more. Using dry heat in an oven or on hot stones, bakers can transform doughs and batters into mouth-watering creations with a firm, dry crust and a soft, moist interior. Baking is considered a fundamental skill and is important for nutrition, as baked goods are a common and essential food in many cultures. A baker is someone who professionally prepares baked goods, while a pastry chef specializes in making cakes, pastries, desserts, and other baked items. Whether you are looking to whip up a cake for a special occasion or simply want to try out a new recipe, baking offers endless possibilities for delicious, satisfying treats. With a little practice and some creativity, anyone can learn to make mouth-watering cupcakes, bread, pies, and more. Whether you prefer a classic vanilla cake with buttercream icing or want to experiment with more adventurous flavors and ingredients, baking is a versatile and rewarding culinary art."
+  },
+  "raw": {
+    "id": 344,
+    "lang": "en",
+    "system_a": "Creative Design",
+    "system_b": "Baking",
+    "mappings": [
+      [
+        "idea",
+        "recipe"
+      ],
+      [
+        "line draft",
+        "Embryo"
+      ],
+      [
+        "to color",
+        "icing"
+      ],
+      [
+        "finished product",
+        "cake"
+      ]
+    ],
+    "system_a_domain": "Art",
+    "system_b_domain": "Art",
+    "system_a_background": "Creative design is a highly important aspect of industries related to arts and entertainment. This creative process often involves a creative director who takes the lead in making high-level decisions and overseeing the creation of creative assets such as advertisements, products, events, or logos. This position is found in a range of industries including graphic design, film, music, video game, fashion, advertising, media, web development, and software development among others. The creative director assumes multiple roles including that of an art director, copywriter, or lead designer. Their primary responsibilities include guiding a team of employees with skills and experience related to graphic design, fine arts, motion graphics, and other creative fields towards creating unique and innovative designs for communication and interactive platforms. Throughout the creative process, the creative director is involved in all stages from the idea stage to line drafts, adding color, and bringing the finished product to life.",
+    "system_b_background": "Baking is a culinary method that has been used for centuries to prepare a wide range of delicious foods, including bread, pastries, cakes, and more. Using dry heat in an oven or on hot stones, bakers can transform doughs and batters into mouth-watering creations with a firm, dry crust and a soft, moist interior. Baking is considered a fundamental skill and is important for nutrition, as baked goods are a common and essential food in many cultures. A baker is someone who professionally prepares baked goods, while a pastry chef specializes in making cakes, pastries, desserts, and other baked items. Whether you are looking to whip up a cake for a special occasion or simply want to try out a new recipe, baking offers endless possibilities for delicious, satisfying treats. With a little practice and some creativity, anyone can learn to make mouth-watering cupcakes, bread, pies, and more. Whether you prefer a classic vanilla cake with buttercream icing or want to experiment with more adventurous flavors and ingredients, baking is a versatile and rewarding culinary art.",
+    "Explanation": [
+      "Idea corresponds to recipe: In creative design, an idea is a designer's preliminary thoughts and concepts about a project. In baking, a recipe is a baker's choice of ingredients and methods for making a cake according to the desired type. Both serve as a starting point for subsequent steps.",
+      "Line draft corresponds to embryo: In creative design, a line draft is a preliminary sketch drawn by a designer based on an idea. In baking, an embryo is an undecorated cake base made by a baker according to a recipe. Both serve as a foundation stage for subsequent refinement and decoration.",
+      "To color corresponds to icing: In creative design, coloring involves adding color and details to a line draft to make it more vivid and complete. In baking, icing is added by a baker to decorate and beautify an embryo, making the cake more enticing and aesthetically pleasing. Both serve as a decoration and enhancement stage to add flair to the final product.",
+      "Finished product corresponds to cake: In creative design, a finished product is the final work resulting from a designer's idea, line draft, and coloring. In baking, a cake is the final culinary delight resulting from a baker's recipe, embryo, and icing. Both serve as the ultimate achievement of a project, showcasing the creator's skills and creativity."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Creative Design",
+    "target": "Baking"
+  },
+  "domains": {
+    "source": "Art",
+    "target": "Art"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

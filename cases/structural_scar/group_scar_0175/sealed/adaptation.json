@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0175",
+  "dataset": "scar",
+  "original_id": "175",
+  "source_object_id": "obj_group_scar_0175_src",
+  "target_object_id": "obj_group_scar_0175_tgt",
+  "faithful_mappings": [
+    [
+      "earth plate",
+      "puzzle pieces"
+    ],
+    [
+      "sports",
+      "stitching"
+    ],
+    [
+      "earthquakes and volcanic eruptions",
+      "unlock"
+    ]
+  ],
+  "explanation": [
+    "The earth plate corresponds to puzzle pieces: The earth plate is a structural unit that makes up the hard shell of the Earth's surface, while the puzzle pieces make up the various parts of the puzzle. In this analogy, the earth plate and puzzle pieces both represent the basic structural elements in their respective fields.",
+    "Sports correspond to stitching: The movement of Earth's plates involves the interaction between plates, including subduction and uplift. Similarly, stitching involves connecting puzzle pieces one by one to eventually form a complete pattern. Here, sports and stitching both represent the interaction and connection process within their respective fields.",
+    "Earthquakes and volcanic eruptions correspond to unlocking: Earthquakes and volcanic eruptions are natural occurrences resulting from the movement of Earth's plates, revealing the activity within the Earth. Similarly, unlocking reveals the meaning and story behind the completed puzzle. In this analogy, earthquakes and volcanic eruptions, as well as unlocking, represent the process of revealing internal information."
+  ],
+  "background": {
+    "source": "The Earth's lithosphere, which comprises the crust and upper mantle, is broken into several tectonic plates that have been slowly moving for billions of years. This theory of plate tectonics builds on the idea of continental drift, with seafloor spreading validating the model in the 1960s. There are seven or eight major plates, each determined by their relative motion, which can either converge, diverge, or transform. Earthquakes, volcanic activity, mountain-building, and oceanic trench formation occur along the plate boundaries. The movement of tectonic plates is driven by a combination of the motion of the seafloor, density changes in the crust, and other factors like convection and tidal drag. While plate movement can lead to natural disasters like earthquakes and volcanic eruptions, it also contributes to the geographical diversity of the planet, making it an important field of study in the geosciences.",
+    "target": "A puzzle is an interactive game that is designed to arouse mental abilities and challenge a person's reasoning and intelligence. It involves putting together different pieces of a larger image or an object in a logical way that unlocks the solution to the puzzle. Puzzles come in various genres, including crossword puzzles, word-search puzzles, and logic puzzles that require the player to use critical thinking to unlock the solution. Puzzles can also be used for educational purposes, as solving complex mathematical or logical problems can contribute to research in these areas. Whether you enjoy stitching together pieces of a jigsaw puzzle or unlocking the solution to a challenging logic problem, puzzles provide an excellent way to exercise your mind and have fun at the same time."
+  },
+  "raw": {
+    "id": 175,
+    "lang": "en",
+    "system_a": "Earth's Plate Movement",
+    "system_b": "A Puzzle",
+    "mappings": [
+      [
+        "earth plate",
+        "puzzle pieces"
+      ],
+      [
+        "sports",
+        "stitching"
+      ],
+      [
+        "earthquakes and volcanic eruptions",
+        "unlock"
+      ]
+    ],
+    "system_a_domain": "Geography",
+    "system_b_domain": "Engineering",
+    "system_a_background": "The Earth's lithosphere, which comprises the crust and upper mantle, is broken into several tectonic plates that have been slowly moving for billions of years. This theory of plate tectonics builds on the idea of continental drift, with seafloor spreading validating the model in the 1960s. There are seven or eight major plates, each determined by their relative motion, which can either converge, diverge, or transform. Earthquakes, volcanic activity, mountain-building, and oceanic trench formation occur along the plate boundaries. The movement of tectonic plates is driven by a combination of the motion of the seafloor, density changes in the crust, and other factors like convection and tidal drag. While plate movement can lead to natural disasters like earthquakes and volcanic eruptions, it also contributes to the geographical diversity of the planet, making it an important field of study in the geosciences.",
+    "system_b_background": "A puzzle is an interactive game that is designed to arouse mental abilities and challenge a person's reasoning and intelligence. It involves putting together different pieces of a larger image or an object in a logical way that unlocks the solution to the puzzle. Puzzles come in various genres, including crossword puzzles, word-search puzzles, and logic puzzles that require the player to use critical thinking to unlock the solution. Puzzles can also be used for educational purposes, as solving complex mathematical or logical problems can contribute to research in these areas. Whether you enjoy stitching together pieces of a jigsaw puzzle or unlocking the solution to a challenging logic problem, puzzles provide an excellent way to exercise your mind and have fun at the same time.",
+    "Explanation": [
+      "The earth plate corresponds to puzzle pieces: The earth plate is a structural unit that makes up the hard shell of the Earth's surface, while the puzzle pieces make up the various parts of the puzzle. In this analogy, the earth plate and puzzle pieces both represent the basic structural elements in their respective fields.",
+      "Sports correspond to stitching: The movement of Earth's plates involves the interaction between plates, including subduction and uplift. Similarly, stitching involves connecting puzzle pieces one by one to eventually form a complete pattern. Here, sports and stitching both represent the interaction and connection process within their respective fields.",
+      "Earthquakes and volcanic eruptions correspond to unlocking: Earthquakes and volcanic eruptions are natural occurrences resulting from the movement of Earth's plates, revealing the activity within the Earth. Similarly, unlocking reveals the meaning and story behind the completed puzzle. In this analogy, earthquakes and volcanic eruptions, as well as unlocking, represent the process of revealing internal information."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Earth's Plate Movement",
+    "target": "A Puzzle"
+  },
+  "domains": {
+    "source": "Geography",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

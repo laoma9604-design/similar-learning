@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0398",
+  "dataset": "scar",
+  "original_id": "398",
+  "source_object_id": "obj_group_scar_0398_src",
+  "target_object_id": "obj_group_scar_0398_tgt",
+  "faithful_mappings": [
+    [
+      "radiation",
+      "ultraviolet light"
+    ],
+    [
+      "shield",
+      "sunscreen"
+    ],
+    [
+      "dose",
+      "degree of exposure"
+    ]
+  ],
+  "explanation": [
+    "Radiation corresponds to ultraviolet light: In radiation protection, radiation refers to the energy produced by radioactive materials. In sunscreen, ultraviolet light refers to the harmful part of sunlight for the skin. Both of these are harmful energies that need to be protected against.",
+    "Shield corresponds to sunscreen: In radiation protection, shielding refers to preventing and reducing the impact of radiation on the human body. In sunscreen, sunscreen is a chemical substance used to protect the skin from UV damage. Both of these are substances or measures used to block harmful energies.",
+    "Dose corresponds to degree of exposure: In radiation protection, dose refers to the amount of radiation received by the human body. In sunscreen, the degree of exposure refers to the time and intensity that the skin is exposed to UV light. Both of these represent the degree of exposure to harmful energy."
+  ],
+  "background": {
+    "source": "Radiation protection is a crucial practice that aims to safeguard individuals from exposure to ionizing radiation that can cause microscopic damage to living tissues. The International Atomic Energy Agency (IAEA) defines radiation protection as a means to protect people from the harmful effects of ionizing radiation exposure. Ionizing radiation is commonly used in medicine and industry, which poses a significant health hazard. Exposure can occur through external or internal radiation contamination, resulting in either deterministic or stochastic effects, depending on the intensity of exposure. Therefore, radiation protection emphasizes the need to limit exposure duration, distance from the radiation source, and shielding. To measure the internal and external radiation dose uptake, personal dosimeters and bioassay techniques are applied. Additionally, International Commission on Radiation Protection (ICRP) and International Commission on Radiation Units and Measurements (ICRU) provide recommendations and data to calculate the biological effects of certain radiation levels on the human body, thus advising acceptable dose uptake limits. The implementation of effective radiation protection protocols is essential to ensure the well-being of individuals exposed to ionizing radiation, thereby reducing the occurrence of radiation-induced cancer or acute radiation syndrome.",
+    "target": "Sun protection is a crucial aspect of our lives as we spend a lot of time outdoors. Our skin is very sensitive to ultraviolet light which can cause damage and lead to skin cancer. To reduce the degree of exposure to harmful UV rays, a variety of sun protection options are available. \n\nOne of the most popular and effective solutions is sunscreen. Applying sunscreen with a high SPF (Sun Protection Factor) can help protect your skin from the harmful effects of ultraviolet light. Sunscreen comes in a variety of forms such as lotions, sprays, and creams. It is important to apply sunscreen to any exposed skin areas before heading outside, especially during peak sun hours.\n\nIn addition to sunscreen, sun protective clothing is another excellent way to reduce exposure to UV rays. Many clothing brands now offer garments with built-in sun protection. These garments are typically made from tightly woven fabrics that create a barrier between your skin and the sun. Wearing a hat, long-sleeved shirt, and pants made from sun protective material is a great way to reduce your skin's exposure.\n\nCar window sun protection glazing is another effective way to protect your skin from harmful UV rays while driving. These special glazing windows typically block out a significant percentage of UV rays, protecting the skin from damage during long commutes or road trips.\n\nIn conclusion, sun protection is an important aspect of maintaining healthy skin. Using sunscreen, wearing sun protective clothing, and installing car window sun protection glazing are all great ways to reduce your risk of skin damage from the sun's harmful UV rays."
+  },
+  "raw": {
+    "id": 398,
+    "lang": "en",
+    "system_a": "Radiation Protection",
+    "system_b": "Sun Protection",
+    "mappings": [
+      [
+        "radiation",
+        "ultraviolet light"
+      ],
+      [
+        "shield",
+        "sunscreen"
+      ],
+      [
+        "dose",
+        "degree of exposure"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Biology",
+    "system_a_background": "Radiation protection is a crucial practice that aims to safeguard individuals from exposure to ionizing radiation that can cause microscopic damage to living tissues. The International Atomic Energy Agency (IAEA) defines radiation protection as a means to protect people from the harmful effects of ionizing radiation exposure. Ionizing radiation is commonly used in medicine and industry, which poses a significant health hazard. Exposure can occur through external or internal radiation contamination, resulting in either deterministic or stochastic effects, depending on the intensity of exposure. Therefore, radiation protection emphasizes the need to limit exposure duration, distance from the radiation source, and shielding. To measure the internal and external radiation dose uptake, personal dosimeters and bioassay techniques are applied. Additionally, International Commission on Radiation Protection (ICRP) and International Commission on Radiation Units and Measurements (ICRU) provide recommendations and data to calculate the biological effects of certain radiation levels on the human body, thus advising acceptable dose uptake limits. The implementation of effective radiation protection protocols is essential to ensure the well-being of individuals exposed to ionizing radiation, thereby reducing the occurrence of radiation-induced cancer or acute radiation syndrome.",
+    "system_b_background": "Sun protection is a crucial aspect of our lives as we spend a lot of time outdoors. Our skin is very sensitive to ultraviolet light which can cause damage and lead to skin cancer. To reduce the degree of exposure to harmful UV rays, a variety of sun protection options are available. \n\nOne of the most popular and effective solutions is sunscreen. Applying sunscreen with a high SPF (Sun Protection Factor) can help protect your skin from the harmful effects of ultraviolet light. Sunscreen comes in a variety of forms such as lotions, sprays, and creams. It is important to apply sunscreen to any exposed skin areas before heading outside, especially during peak sun hours.\n\nIn addition to sunscreen, sun protective clothing is another excellent way to reduce exposure to UV rays. Many clothing brands now offer garments with built-in sun protection. These garments are typically made from tightly woven fabrics that create a barrier between your skin and the sun. Wearing a hat, long-sleeved shirt, and pants made from sun protective material is a great way to reduce your skin's exposure.\n\nCar window sun protection glazing is another effective way to protect your skin from harmful UV rays while driving. These special glazing windows typically block out a significant percentage of UV rays, protecting the skin from damage during long commutes or road trips.\n\nIn conclusion, sun protection is an important aspect of maintaining healthy skin. Using sunscreen, wearing sun protective clothing, and installing car window sun protection glazing are all great ways to reduce your risk of skin damage from the sun's harmful UV rays.",
+    "Explanation": [
+      "Radiation corresponds to ultraviolet light: In radiation protection, radiation refers to the energy produced by radioactive materials. In sunscreen, ultraviolet light refers to the harmful part of sunlight for the skin. Both of these are harmful energies that need to be protected against.",
+      "Shield corresponds to sunscreen: In radiation protection, shielding refers to preventing and reducing the impact of radiation on the human body. In sunscreen, sunscreen is a chemical substance used to protect the skin from UV damage. Both of these are substances or measures used to block harmful energies.",
+      "Dose corresponds to degree of exposure: In radiation protection, dose refers to the amount of radiation received by the human body. In sunscreen, the degree of exposure refers to the time and intensity that the skin is exposed to UV light. Both of these represent the degree of exposure to harmful energy."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Radiation Protection",
+    "target": "Sun Protection"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

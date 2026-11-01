@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0176",
+  "dataset": "scar",
+  "original_id": "176",
+  "source_object_id": "obj_group_scar_0176_src",
+  "target_object_id": "obj_group_scar_0176_tgt",
+  "faithful_mappings": [
+    [
+      "atmosphere",
+      "glass plate"
+    ],
+    [
+      "radiation",
+      "heat transfer"
+    ],
+    [
+      "protect earth life",
+      "protect plants"
+    ]
+  ],
+  "explanation": [
+    "Atmosphere corresponds to glass plate: Earth's atmosphere is a gas layer that surrounds the planet, serving to protect the Earth's life. Similarly, the glass plate of a greenhouse isolates plants from the outside environment, providing protection. Here, both the atmosphere and glass plate represent protective barriers in their respective fields.",
+    "Radiation corresponds to heat transfer: Earth's atmosphere filters and absorbs solar radiation, helping to maintain the surface temperature of the planet. Similarly, heat transfer within a greenhouse ensures that plants receive suitable temperature conditions. In this analogy, radiation and heat transfer are both energy conversion processes in their respective systems.",
+    "Protecting Earth's life corresponds to protecting plants: The Earth's atmosphere protects life from external radiation and other hazards through various mechanisms. Similarly, greenhouses provide a conducive environment for plants to grow. Here, protecting Earth's life and protecting plants both represent nurturing and safeguarding life within their respective fields."
+  ],
+  "background": {
+    "source": "The atmosphere of Earth is a crucial layer of gases that envelops our planet and plays a crucial role in creating and maintaining the conditions suitable for life to survive. It is responsible for creating pressure, regulating temperature, and shielding Earth from harmful radiation, thereby protecting all living organisms. The composition of the atmosphere is primarily nitrogen and oxygen, with trace amounts of argon, carbon dioxide, and other gases, while air also contains water vapor. The study of Earth's atmosphere, called atmospheric science, is a multi-disciplinary field that is vital to understanding our planet and how it works. In addition, the study of historic atmosphere, known as paleoclimatology, is also important in assessing climate change and the long-term patterns of the Earth's atmosphere.",
+    "target": "Greenhouses are structures that are primarily made up of transparent materials, such as glass plates, and facilitate the growth of plants. Also known as glasshouses or hothouses, these structures protect plants by providing regulated climatic conditions, shielding them from external factors that may hinder their growth. The interior of a greenhouse exposed to sunlight generally has a higher temperature than the external temperature, which protects its contents during cold weather. Greenhouses come in a vast range of sizes, from miniature cold frames to large industrial-sized buildings. Commercial glass greenhouses are specially designed with state-of-the-art equipment including heating, cooling, lighting, and screening installations. They are also integrated with computers that help to optimize the conditions for plant growth. Farmers use a variety of techniques to manage growing conditions, such as air temperature, relative humidity, and vapour-pressure deficit, to create the best environment for cultivating specific crops. In conclusion, greenhouses are essential in creating a controlled environment that is conducive to plant growth and help protect plants from harmful elements."
+  },
+  "raw": {
+    "id": 176,
+    "lang": "en",
+    "system_a": "Earth's Atmosphere",
+    "system_b": "Greenhouses",
+    "mappings": [
+      [
+        "atmosphere",
+        "glass plate"
+      ],
+      [
+        "radiation",
+        "heat transfer"
+      ],
+      [
+        "protect earth life",
+        "protect plants"
+      ]
+    ],
+    "system_a_domain": "Geography",
+    "system_b_domain": "Biology",
+    "system_a_background": "The atmosphere of Earth is a crucial layer of gases that envelops our planet and plays a crucial role in creating and maintaining the conditions suitable for life to survive. It is responsible for creating pressure, regulating temperature, and shielding Earth from harmful radiation, thereby protecting all living organisms. The composition of the atmosphere is primarily nitrogen and oxygen, with trace amounts of argon, carbon dioxide, and other gases, while air also contains water vapor. The study of Earth's atmosphere, called atmospheric science, is a multi-disciplinary field that is vital to understanding our planet and how it works. In addition, the study of historic atmosphere, known as paleoclimatology, is also important in assessing climate change and the long-term patterns of the Earth's atmosphere.",
+    "system_b_background": "Greenhouses are structures that are primarily made up of transparent materials, such as glass plates, and facilitate the growth of plants. Also known as glasshouses or hothouses, these structures protect plants by providing regulated climatic conditions, shielding them from external factors that may hinder their growth. The interior of a greenhouse exposed to sunlight generally has a higher temperature than the external temperature, which protects its contents during cold weather. Greenhouses come in a vast range of sizes, from miniature cold frames to large industrial-sized buildings. Commercial glass greenhouses are specially designed with state-of-the-art equipment including heating, cooling, lighting, and screening installations. They are also integrated with computers that help to optimize the conditions for plant growth. Farmers use a variety of techniques to manage growing conditions, such as air temperature, relative humidity, and vapour-pressure deficit, to create the best environment for cultivating specific crops. In conclusion, greenhouses are essential in creating a controlled environment that is conducive to plant growth and help protect plants from harmful elements.",
+    "Explanation": [
+      "Atmosphere corresponds to glass plate: Earth's atmosphere is a gas layer that surrounds the planet, serving to protect the Earth's life. Similarly, the glass plate of a greenhouse isolates plants from the outside environment, providing protection. Here, both the atmosphere and glass plate represent protective barriers in their respective fields.",
+      "Radiation corresponds to heat transfer: Earth's atmosphere filters and absorbs solar radiation, helping to maintain the surface temperature of the planet. Similarly, heat transfer within a greenhouse ensures that plants receive suitable temperature conditions. In this analogy, radiation and heat transfer are both energy conversion processes in their respective systems.",
+      "Protecting Earth's life corresponds to protecting plants: The Earth's atmosphere protects life from external radiation and other hazards through various mechanisms. Similarly, greenhouses provide a conducive environment for plants to grow. Here, protecting Earth's life and protecting plants both represent nurturing and safeguarding life within their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Earth's Atmosphere",
+    "target": "Greenhouses"
+  },
+  "domains": {
+    "source": "Geography",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

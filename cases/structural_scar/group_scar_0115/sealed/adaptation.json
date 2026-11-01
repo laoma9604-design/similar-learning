@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0115",
+  "dataset": "scar",
+  "original_id": "115",
+  "source_object_id": "obj_group_scar_0115_src",
+  "target_object_id": "obj_group_scar_0115_tgt",
+  "faithful_mappings": [
+    [
+      "molecular",
+      "the hands"
+    ],
+    [
+      "mirror symmetry",
+      "mirror symmetry"
+    ],
+    [
+      "nature",
+      "function"
+    ]
+  ],
+  "explanation": [
+    "Molecules correspond to hands: in chiral molecules, the molecule is the basic unit with chiral properties. In human hands, the hands are biological organs with mirror symmetry. Both are basic units with mirror symmetry in their respective fields.",
+    "Mirror symmetry has the same meaning in both concepts: chiral molecules and human hands both have mirror symmetry. In chiral molecules, this means that the structure of the molecule is symmetrical in the mirror plane; in human hands, this means that the left and right hands are mirror images of each other.",
+    "Property corresponds to function: in chiral molecules, properties refer to the characteristics of the molecule in chemical reactions, biological activity, and so on. In human hands, function refers to the tasks performed by the hands in daily life, such as gripping and touching. Both are major features in their respective fields."
+  ],
+  "background": {
+    "source": "Chiral molecules are a fascinating topic in both chemistry and biochemistry. These are molecules or ions that cannot be superposed on their mirror image by any combination of rotations, translations, and some conformational changes, in other words, they lack mirror symmetry. This property of chirality originates from a stereogenic element, such as a stereogenic center, axis, plane, or even inherent curvature. Chiral molecules exist in two mirror image forms called enantiomers, often distinguished as \"right-handed\" or \"left-handed\". They have the same chemical and physical properties, except when reacting with other chiral compounds, and often have opposite optical activities. Of particular interest to biochemistry, most substances relevant to biology, such as carbohydrates, amino acids, and nucleic acids, are chiral. Only one of the two enantiomers is typically found in living organisms, which can metabolize only one of its enantiomers. The study of chirality and its effects on molecules is important to understand the behavior of natural compounds and how they interact with biological systems.",
+    "target": "Human hands are remarkable appendages located at the end of our forearms. They are prehensile, multi-fingered, and possess mirror symmetry. The hands of primates like humans, chimpanzees, monkeys, and lemurs have evolved to have five digits each, four fingers and one opposable thumb. They consist of 27 bones, including the carpal and metacarpal bones that connect them to the wrist. Fingers are known to have the densest areas of nerve endings in the body and thus, are a rich source of tactile feedback. They also have the ability to perform intricate movements and have a great positioning capability within the body. Handedness, or the preference for the use of one hand over the other in single-handed activities, is an individual brain function. The hands are critical for communication through sign language and body language. Moreover, the ability to count and carry out calculations, owe their origin to the ten digits of two hands and twelve phalanges of four fingers."
+  },
+  "raw": {
+    "id": 115,
+    "lang": "en",
+    "system_a": "Chiral Molecules",
+    "system_b": "Human Hands",
+    "mappings": [
+      [
+        "molecular",
+        "the hands"
+      ],
+      [
+        "mirror symmetry",
+        "mirror symmetry"
+      ],
+      [
+        "nature",
+        "function"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Biology",
+    "system_a_background": "Chiral molecules are a fascinating topic in both chemistry and biochemistry. These are molecules or ions that cannot be superposed on their mirror image by any combination of rotations, translations, and some conformational changes, in other words, they lack mirror symmetry. This property of chirality originates from a stereogenic element, such as a stereogenic center, axis, plane, or even inherent curvature. Chiral molecules exist in two mirror image forms called enantiomers, often distinguished as \"right-handed\" or \"left-handed\". They have the same chemical and physical properties, except when reacting with other chiral compounds, and often have opposite optical activities. Of particular interest to biochemistry, most substances relevant to biology, such as carbohydrates, amino acids, and nucleic acids, are chiral. Only one of the two enantiomers is typically found in living organisms, which can metabolize only one of its enantiomers. The study of chirality and its effects on molecules is important to understand the behavior of natural compounds and how they interact with biological systems.",
+    "system_b_background": "Human hands are remarkable appendages located at the end of our forearms. They are prehensile, multi-fingered, and possess mirror symmetry. The hands of primates like humans, chimpanzees, monkeys, and lemurs have evolved to have five digits each, four fingers and one opposable thumb. They consist of 27 bones, including the carpal and metacarpal bones that connect them to the wrist. Fingers are known to have the densest areas of nerve endings in the body and thus, are a rich source of tactile feedback. They also have the ability to perform intricate movements and have a great positioning capability within the body. Handedness, or the preference for the use of one hand over the other in single-handed activities, is an individual brain function. The hands are critical for communication through sign language and body language. Moreover, the ability to count and carry out calculations, owe their origin to the ten digits of two hands and twelve phalanges of four fingers.",
+    "Explanation": [
+      "Molecules correspond to hands: in chiral molecules, the molecule is the basic unit with chiral properties. In human hands, the hands are biological organs with mirror symmetry. Both are basic units with mirror symmetry in their respective fields.",
+      "Mirror symmetry has the same meaning in both concepts: chiral molecules and human hands both have mirror symmetry. In chiral molecules, this means that the structure of the molecule is symmetrical in the mirror plane; in human hands, this means that the left and right hands are mirror images of each other.",
+      "Property corresponds to function: in chiral molecules, properties refer to the characteristics of the molecule in chemical reactions, biological activity, and so on. In human hands, function refers to the tasks performed by the hands in daily life, such as gripping and touching. Both are major features in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Chiral Molecules",
+    "target": "Human Hands"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

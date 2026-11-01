@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0046",
+  "dataset": "scar",
+  "original_id": "46",
+  "source_object_id": "obj_group_scar_0046_src",
+  "target_object_id": "obj_group_scar_0046_tgt",
+  "faithful_mappings": [
+    [
+      "insulin",
+      "key"
+    ],
+    [
+      "glucose",
+      "daily necessities"
+    ],
+    [
+      "cell membrane",
+      "wall"
+    ],
+    [
+      "glucose transporter",
+      "Door"
+    ]
+  ],
+  "explanation": [
+    "Insulin corresponds to a key: Insulin is a hormone that promotes the uptake of glucose by cells. Similarly, a key is used to unlock a door so that people can enter a house. Both play a role in opening a pathway.",
+    "Glucose corresponds to daily necessities: Glucose is the energy source for cells, and is crucial for their survival and function. Similarly, daily necessities are essential items for residents' living. Both are necessary for life and function.",
+    "Cell membrane corresponds to a wall: The cell membrane is the external structure of a cell, responsible for protecting the internal structures and functions of the cell. Similarly, the wall is the external structure of a house, responsible for protecting the internal space and items of the house. Both play a protective role.",
+    "Glucose transporter corresponds to a door: The glucose transporter is a protein on the cell membrane that transports glucose from outside the cell to the inside. Similarly, a door is a passage that connects the interior and exterior of a house. Both play a role in providing a pathway."
+  ],
+  "background": {
+    "source": "Cells are the basic unit of life, supporting every organism's physiological functions by regulating their internal environment. In biology, a cell is defined as the smallest structural and functional unit of an organism. They vary in shape, size, and function depending on the type of organism they belong to. \n\nAmong the various types of cells, a crucial one that plays a crucial role in our body is the insulin-producing cell. Discovered by Frederick Banting and Charles Best in the early 1920s, insulin-producing cells are responsible for regulating glucose levels in our body. Insulin is a hormone that is produced and secreted by these cells located in the pancreas. Insulin production is triggered by the presence of glucose in the bloodstream. \n\nTo understand the process of insulin production, we need to understand the role of the cell membrane and glucose transporter in the cell. The cell membrane is a thin, semi-permeable membrane protecting the cell from its environment. It is the cell membrane through which glucose enters the insulin-producing cell via glucose transporters. Once the glucose enters the cell, it goes through various chemical reactions to produce energy.\n\nHowever, if there is an excess amount of glucose in the bloodstream, it can damage the cell. In such cases, the insulin is not produced in adequate amounts, leading to high blood sugar levels. This condition can cause several health issues such as diabetes, nerve damage, and kidney failure.\n\nIn summary, the insulin-producing cell is a fundamental component of our body's functioning, contributing towards maintaining glucose levels in our bloodstream. The glucose transporter and cell membrane play an essential role in the proper functioning of these cells. Understanding how these processes work is crucial in the management of diabetes and other disorders associated with glucose regulation.",
+    "target": "A house is a structure that provides shelter and living space for families or other social groups. It is composed of different materials ranging from wood to concrete and is equipped with daily necessities such as plumbing, electrical systems, and heating, ventilation, and air conditioning. The walls of the houses are designed to ensure privacy and provide security to its inhabitants. Doors and locks are installed to prevent unauthorized entry into the living space. Most modern houses consist of multiple rooms such as bedrooms, bathrooms, kitchens, living rooms, and dining rooms. Domestic animals may also be accommodated within the premises of a house. Outbuildings such as garages and sheds are also part of the house to store vehicles and gardening equipment. The house might have a backyard or front yard, which provides additional space for relaxation or outdoor activities. The house is not just a physical structure; it is a place to call home, where families and friends create lasting memories."
+  },
+  "raw": {
+    "id": 46,
+    "lang": "en",
+    "system_a": "cell",
+    "system_b": "house",
+    "mappings": [
+      [
+        "insulin",
+        "key"
+      ],
+      [
+        "glucose",
+        "daily necessities"
+      ],
+      [
+        "cell membrane",
+        "wall"
+      ],
+      [
+        "glucose transporter",
+        "Door"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Engineering",
+    "system_a_background": "Cells are the basic unit of life, supporting every organism's physiological functions by regulating their internal environment. In biology, a cell is defined as the smallest structural and functional unit of an organism. They vary in shape, size, and function depending on the type of organism they belong to. \n\nAmong the various types of cells, a crucial one that plays a crucial role in our body is the insulin-producing cell. Discovered by Frederick Banting and Charles Best in the early 1920s, insulin-producing cells are responsible for regulating glucose levels in our body. Insulin is a hormone that is produced and secreted by these cells located in the pancreas. Insulin production is triggered by the presence of glucose in the bloodstream. \n\nTo understand the process of insulin production, we need to understand the role of the cell membrane and glucose transporter in the cell. The cell membrane is a thin, semi-permeable membrane protecting the cell from its environment. It is the cell membrane through which glucose enters the insulin-producing cell via glucose transporters. Once the glucose enters the cell, it goes through various chemical reactions to produce energy.\n\nHowever, if there is an excess amount of glucose in the bloodstream, it can damage the cell. In such cases, the insulin is not produced in adequate amounts, leading to high blood sugar levels. This condition can cause several health issues such as diabetes, nerve damage, and kidney failure.\n\nIn summary, the insulin-producing cell is a fundamental component of our body's functioning, contributing towards maintaining glucose levels in our bloodstream. The glucose transporter and cell membrane play an essential role in the proper functioning of these cells. Understanding how these processes work is crucial in the management of diabetes and other disorders associated with glucose regulation.",
+    "system_b_background": "A house is a structure that provides shelter and living space for families or other social groups. It is composed of different materials ranging from wood to concrete and is equipped with daily necessities such as plumbing, electrical systems, and heating, ventilation, and air conditioning. The walls of the houses are designed to ensure privacy and provide security to its inhabitants. Doors and locks are installed to prevent unauthorized entry into the living space. Most modern houses consist of multiple rooms such as bedrooms, bathrooms, kitchens, living rooms, and dining rooms. Domestic animals may also be accommodated within the premises of a house. Outbuildings such as garages and sheds are also part of the house to store vehicles and gardening equipment. The house might have a backyard or front yard, which provides additional space for relaxation or outdoor activities. The house is not just a physical structure; it is a place to call home, where families and friends create lasting memories.",
+    "Explanation": [
+      "Insulin corresponds to a key: Insulin is a hormone that promotes the uptake of glucose by cells. Similarly, a key is used to unlock a door so that people can enter a house. Both play a role in opening a pathway.",
+      "Glucose corresponds to daily necessities: Glucose is the energy source for cells, and is crucial for their survival and function. Similarly, daily necessities are essential items for residents' living. Both are necessary for life and function.",
+      "Cell membrane corresponds to a wall: The cell membrane is the external structure of a cell, responsible for protecting the internal structures and functions of the cell. Similarly, the wall is the external structure of a house, responsible for protecting the internal space and items of the house. Both play a protective role.",
+      "Glucose transporter corresponds to a door: The glucose transporter is a protein on the cell membrane that transports glucose from outside the cell to the inside. Similarly, a door is a passage that connects the interior and exterior of a house. Both play a role in providing a pathway."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "cell",
+    "target": "house"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

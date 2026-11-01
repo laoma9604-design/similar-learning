@@ -1,0 +1,141 @@
+{
+  "adaptation_id": "adapt_scar_0275",
+  "dataset": "scar",
+  "original_id": "275",
+  "source_object_id": "obj_group_scar_0275_src",
+  "target_object_id": "obj_group_scar_0275_tgt",
+  "faithful_mappings": [
+    [
+      "blossom",
+      "innovation"
+    ],
+    [
+      "water",
+      "funding"
+    ],
+    [
+      "stem",
+      "research"
+    ],
+    [
+      "soil",
+      "laboratory"
+    ],
+    [
+      "planting",
+      "experiment"
+    ],
+    [
+      "blossom",
+      "idea"
+    ],
+    [
+      "greenhouse",
+      "conference"
+    ],
+    [
+      "symbiosis",
+      "collaboration"
+    ]
+  ],
+  "explanation": [
+    "Blossom corresponds to innovation: Blossoming refers to the prospering and flourishing of the flowers of plants, representing vitality. Innovation refers to constantly trying new ideas and methods to promote development. Both represent a form of prosperity and development.",
+    "Water corresponds to funding: Water is an essential resource for plant growth. Funding is an important resource for supporting research and experiments during the innovation process. Here, water and funding are both important factors driving growth and development.",
+    "Stem corresponds to research: Plants need stems to support their growth. Innovation needs research to provide theoretical foundations and practical guidance. Both are critical parts that support and guide the entire process.",
+    "Soil corresponds to laboratory: Soil provides nutrients to plants and serves as the foundation of their growth. Laboratories provide experimental environments and facilities for innovation research, serving as the base for innovation. Here, soil and laboratory are both infrastructure for growth and development.",
+    "Planting corresponds to experiment: Planting is the process of plant growth, cultivating healthy plants through constant trial and adjustment. Experiments during the innovation process are the process of trying new methods and techniques. Both represent actions of exploration and experimentation.",
+    "Blossoming corresponds to idea: Blossoming is an important stage in the plant growth process, symbolizing success and achievement. In the innovation process, ideas are the key to achieving breakthroughs and success. Here, blossoming and ideas both represent the production of success and results.",
+    "Greenhouse corresponds to conference: A greenhouse provides a suitable environment for plant growth. A conference provides a platform for discussion and communication within an innovation team. Here, greenhouse and conference are both environments and places that promote growth and development.",
+    "Symbiosis corresponds to collaboration: Symbiosis refers to the interdependence and common development among organisms. Collaboration during the innovation process is the process of mutual support and progress among team members. Here, symbiosis and collaboration both represent a relationship of cooperation and mutual assistance."
+  ],
+  "background": {
+    "source": "Blossoms are the beautiful and vibrant flowers of stone fruit trees and certain other plants. These flowers are usually in full bloom during the spring season and come in various hues ranging from pink to white. Bees and other pollinators play a vital role in the pollination process, ensuring that the blossoms produce fruit. Blossoms can be grown in a greenhouse or planted directly in the soil with adequate water and nutrients to support their growth. They have a symbiotic relationship with the soil and stem, ultimately contributing to the overall health of the plant.",
+    "target": "Innovation is a crucial element for any business or industry to remain competitive in today's fast-paced world. It involves practical implementation of new or improved goods, services, technologies, or business models that deliver value to markets, governments, and society. Innovation is not limited to invention; rather, it requires a focus on newness, improvement and spread of ideas, and practical implementation of inventions to have a meaningful impact in the market or society. This is where funding for research, laboratory experiments, and collaboration with other stakeholders becomes crucial. Conferences also play an essential role in bringing together innovators to exchange ideas and explore new avenues for collaboration. Therefore, the implementation of innovative solutions to social and economic problems is key to sustaining growth and development of businesses and industries."
+  },
+  "raw": {
+    "id": 275,
+    "lang": "en",
+    "system_a": "blossom",
+    "system_b": "innovation",
+    "mappings": [
+      [
+        "blossom",
+        "innovation"
+      ],
+      [
+        "water",
+        "funding"
+      ],
+      [
+        "stem",
+        "research"
+      ],
+      [
+        "soil",
+        "laboratory"
+      ],
+      [
+        "planting",
+        "experiment"
+      ],
+      [
+        "blossom",
+        "idea"
+      ],
+      [
+        "greenhouse",
+        "conference"
+      ],
+      [
+        "symbiosis",
+        "collaboration"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "Blossoms are the beautiful and vibrant flowers of stone fruit trees and certain other plants. These flowers are usually in full bloom during the spring season and come in various hues ranging from pink to white. Bees and other pollinators play a vital role in the pollination process, ensuring that the blossoms produce fruit. Blossoms can be grown in a greenhouse or planted directly in the soil with adequate water and nutrients to support their growth. They have a symbiotic relationship with the soil and stem, ultimately contributing to the overall health of the plant.",
+    "system_b_background": "Innovation is a crucial element for any business or industry to remain competitive in today's fast-paced world. It involves practical implementation of new or improved goods, services, technologies, or business models that deliver value to markets, governments, and society. Innovation is not limited to invention; rather, it requires a focus on newness, improvement and spread of ideas, and practical implementation of inventions to have a meaningful impact in the market or society. This is where funding for research, laboratory experiments, and collaboration with other stakeholders becomes crucial. Conferences also play an essential role in bringing together innovators to exchange ideas and explore new avenues for collaboration. Therefore, the implementation of innovative solutions to social and economic problems is key to sustaining growth and development of businesses and industries.",
+    "Explanation": [
+      "Blossom corresponds to innovation: Blossoming refers to the prospering and flourishing of the flowers of plants, representing vitality. Innovation refers to constantly trying new ideas and methods to promote development. Both represent a form of prosperity and development.",
+      "Water corresponds to funding: Water is an essential resource for plant growth. Funding is an important resource for supporting research and experiments during the innovation process. Here, water and funding are both important factors driving growth and development.",
+      "Stem corresponds to research: Plants need stems to support their growth. Innovation needs research to provide theoretical foundations and practical guidance. Both are critical parts that support and guide the entire process.",
+      "Soil corresponds to laboratory: Soil provides nutrients to plants and serves as the foundation of their growth. Laboratories provide experimental environments and facilities for innovation research, serving as the base for innovation. Here, soil and laboratory are both infrastructure for growth and development.",
+      "Planting corresponds to experiment: Planting is the process of plant growth, cultivating healthy plants through constant trial and adjustment. Experiments during the innovation process are the process of trying new methods and techniques. Both represent actions of exploration and experimentation.",
+      "Blossoming corresponds to idea: Blossoming is an important stage in the plant growth process, symbolizing success and achievement. In the innovation process, ideas are the key to achieving breakthroughs and success. Here, blossoming and ideas both represent the production of success and results.",
+      "Greenhouse corresponds to conference: A greenhouse provides a suitable environment for plant growth. A conference provides a platform for discussion and communication within an innovation team. Here, greenhouse and conference are both environments and places that promote growth and development.",
+      "Symbiosis corresponds to collaboration: Symbiosis refers to the interdependence and common development among organisms. Collaboration during the innovation process is the process of mutual support and progress among team members. Here, symbiosis and collaboration both represent a relationship of cooperation and mutual assistance."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "non_bijective",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6",
+        "n7": "n7",
+        "n8": "n8"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "one_to_many",
+  "system": {
+    "source": "blossom",
+    "target": "innovation"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

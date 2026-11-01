@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0173",
+  "dataset": "scar",
+  "original_id": "173",
+  "source_object_id": "obj_group_scar_0173_src",
+  "target_object_id": "obj_group_scar_0173_tgt",
+  "faithful_mappings": [
+    [
+      "Economy",
+      "Boat"
+    ],
+    [
+      "market",
+      "ocean"
+    ],
+    [
+      "currency",
+      "fuel"
+    ],
+    [
+      "policy",
+      "route"
+    ]
+  ],
+  "explanation": [
+    "Economy corresponds to boat: Economy refers to the economic system of a country or region, while a boat is a means of transportation that sails on the ocean. In this analogy, the economy and the boat both represent an independent entity within their respective fields.",
+    "Market corresponds to ocean: The market is the carrier of economic activity, consisting of supply and demand relationships, and is influenced by multiple factors such as policies and society. The ocean, on the other hand, represents the vast space on which boats sail. Here, the market and the ocean both represent the vast space within their respective fields, filled with endless possibilities.",
+    "Currency corresponds to fuel: Currency is the circulating medium of economic activity, which can drive economic operation. Fuel, on the other hand, is the energy required for the sailing of boats. In this analogy, currency and fuel are both key elements required for the operation of their respective systems.",
+    "Policy corresponds to route: Policy is a means of managing and guiding economic activity, which influences the development direction of the economy. The route is the path on which boats sail, determining the destination they arrive at. Here, policy and route both represent the direction and goal within their respective fields."
+  ],
+  "background": {
+    "source": "Economics is a field of study that provides insights into the production, distribution, and consumption of goods and services. It is a social science that focuses on understanding the behavior and interactions of economic agents and how economies work. Microeconomics deals with the analysis of individual agents and markets, while macroeconomics investigates the interactions between production, consumption, saving, and investment in the economy. Currency inflation, economic growth, and public policies are some of the essential factors that macroeconomics evaluates. Additionally, economics can be classified into various categories, including positive and normative economics, rational and behavioral economics, and mainstream and heterodox economics. It provides an understanding of how businesses, governments, and policymakers can make informed decisions on different aspects of the economy. The analysis of economic theories can be applied to diverse fields such as finance, cybersecurity, health care, engineering, and government, and to topics such as crime, education, philosophy, politics, religion, social institutions, or the environment. Ultimately, economics serves as a framework for understanding how markets operate, how currency fluctuates, and how public policies impact the economy.",
+    "target": "Sailing is a method of propulsion that uses the power of the wind to navigate a boat, ship or any other vessel across the surface of water, on ice, or land. Throughout history, sailing was the primary means of transportation and maritime trade, with exploration relying solely on sail technology. However, as steam technology advanced in the latter part of the 19th century, sail slowly became obsolete, allowing ships to travel faster and compete better in commercial situations. In the 21st century, sailing predominantly represents a form of recreation or sport, with cruising and racing being the two most popular activities. The physics of sails utilizes both lift and drag to optimize wind power, with forces generated from the sail being opposed by the hull, keel and rudder. The true wind direction is referred to as the point of sail on the course plan, and sailing can be done both upwind and downwind, although an upwind course is not possible on a point of sail too close into the wind."
+  },
+  "raw": {
+    "id": 173,
+    "lang": "en",
+    "system_a": "Economics",
+    "system_b": "Sailing",
+    "mappings": [
+      [
+        "Economy",
+        "Boat"
+      ],
+      [
+        "market",
+        "ocean"
+      ],
+      [
+        "currency",
+        "fuel"
+      ],
+      [
+        "policy",
+        "route"
+      ]
+    ],
+    "system_a_domain": "Economy",
+    "system_b_domain": "Geography",
+    "system_a_background": "Economics is a field of study that provides insights into the production, distribution, and consumption of goods and services. It is a social science that focuses on understanding the behavior and interactions of economic agents and how economies work. Microeconomics deals with the analysis of individual agents and markets, while macroeconomics investigates the interactions between production, consumption, saving, and investment in the economy. Currency inflation, economic growth, and public policies are some of the essential factors that macroeconomics evaluates. Additionally, economics can be classified into various categories, including positive and normative economics, rational and behavioral economics, and mainstream and heterodox economics. It provides an understanding of how businesses, governments, and policymakers can make informed decisions on different aspects of the economy. The analysis of economic theories can be applied to diverse fields such as finance, cybersecurity, health care, engineering, and government, and to topics such as crime, education, philosophy, politics, religion, social institutions, or the environment. Ultimately, economics serves as a framework for understanding how markets operate, how currency fluctuates, and how public policies impact the economy.",
+    "system_b_background": "Sailing is a method of propulsion that uses the power of the wind to navigate a boat, ship or any other vessel across the surface of water, on ice, or land. Throughout history, sailing was the primary means of transportation and maritime trade, with exploration relying solely on sail technology. However, as steam technology advanced in the latter part of the 19th century, sail slowly became obsolete, allowing ships to travel faster and compete better in commercial situations. In the 21st century, sailing predominantly represents a form of recreation or sport, with cruising and racing being the two most popular activities. The physics of sails utilizes both lift and drag to optimize wind power, with forces generated from the sail being opposed by the hull, keel and rudder. The true wind direction is referred to as the point of sail on the course plan, and sailing can be done both upwind and downwind, although an upwind course is not possible on a point of sail too close into the wind.",
+    "Explanation": [
+      "Economy corresponds to boat: Economy refers to the economic system of a country or region, while a boat is a means of transportation that sails on the ocean. In this analogy, the economy and the boat both represent an independent entity within their respective fields.",
+      "Market corresponds to ocean: The market is the carrier of economic activity, consisting of supply and demand relationships, and is influenced by multiple factors such as policies and society. The ocean, on the other hand, represents the vast space on which boats sail. Here, the market and the ocean both represent the vast space within their respective fields, filled with endless possibilities.",
+      "Currency corresponds to fuel: Currency is the circulating medium of economic activity, which can drive economic operation. Fuel, on the other hand, is the energy required for the sailing of boats. In this analogy, currency and fuel are both key elements required for the operation of their respective systems.",
+      "Policy corresponds to route: Policy is a means of managing and guiding economic activity, which influences the development direction of the economy. The route is the path on which boats sail, determining the destination they arrive at. Here, policy and route both represent the direction and goal within their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Economics",
+    "target": "Sailing"
+  },
+  "domains": {
+    "source": "Economy",
+    "target": "Geography"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

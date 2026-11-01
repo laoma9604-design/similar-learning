@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0339",
+  "dataset": "scar",
+  "original_id": "339",
+  "source_object_id": "obj_group_scar_0339_src",
+  "target_object_id": "obj_group_scar_0339_tgt",
+  "faithful_mappings": [
+    [
+      "concept",
+      "building materials"
+    ],
+    [
+      "knowledge points",
+      "supporting structure"
+    ],
+    [
+      "theoretical framework",
+      "Design drawings"
+    ]
+  ],
+  "explanation": [
+    "Concept corresponds to building materials: in a knowledge system, concepts are the basic units that constitute knowledge, just as building materials are the basic units that constitute a building. Both concepts and building materials are the foundation for constructing the entire structure.",
+    "Knowledge points correspond to supporting structure: knowledge points are specific information and skills in a knowledge system that are interconnected and support the entire knowledge system. Similarly, the supporting structure is the part of a building that bears weight and maintains stability. Knowledge points and supporting structure are both critical in maintaining overall stability.",
+    "Theoretical framework corresponds to design drawings: theoretical framework provides a method for organizing and explaining knowledge in a knowledge system, just as design drawings provide architectural planning and guidance for a building. Theoretical framework and design drawings both serve as tools for guidance and planning during the construction process."
+  ],
+  "background": {
+    "source": "A body of knowledge (BoK) is a well-structured and comprehensive collection of concepts, theoretical frameworks, knowledge points, and activities that form the foundation of a particular professional domain. It defines the accepted standards, principles, and practices of that field. A BoK is more than a simple collection of terms or a library, it is a landscape of practice which consists of numerous related communities of practice (CoPs) working on a shared understanding of the profession. It represents the set of knowledge within a specific subject or profession that is considered essential and generally known. The development and upkeep of a BoK involve continuous discovery work, validation, and self-reflection by professionals, which enables growth and reproduction of the profession. Participation in a BoK-based Landscape of Practice involves Members of CoPs maintaining their knowledgeability by staying up to date on new developments and relevance to the LoP.",
+    "target": "A building is a permanent enclosed structure that provides shelter and comfort to people. It can be of various shapes, sizes, and materials depending on the needs and factors like weather, ground conditions, and specific use. Buildings are designed and constructed with supporting structures and design drawings to ensure safety and functionality. They serve a vital role in society by providing living and working spaces, security, privacy, and storage for personal belongings. Over the years, buildings have become more than just functional structures; they serve as a canvas for artistic expression and reflect the cultural heritage of a particular region. The recent trend in sustainable planning and building practices has also made buildings more environmentally friendly and energy-efficient."
+  },
+  "raw": {
+    "id": 339,
+    "lang": "en",
+    "system_a": "Body of Knowledge",
+    "system_b": "Building",
+    "mappings": [
+      [
+        "concept",
+        "building materials"
+      ],
+      [
+        "knowledge points",
+        "supporting structure"
+      ],
+      [
+        "theoretical framework",
+        "Design drawings"
+      ]
+    ],
+    "system_a_domain": "Philosophy",
+    "system_b_domain": "Engineering",
+    "system_a_background": "A body of knowledge (BoK) is a well-structured and comprehensive collection of concepts, theoretical frameworks, knowledge points, and activities that form the foundation of a particular professional domain. It defines the accepted standards, principles, and practices of that field. A BoK is more than a simple collection of terms or a library, it is a landscape of practice which consists of numerous related communities of practice (CoPs) working on a shared understanding of the profession. It represents the set of knowledge within a specific subject or profession that is considered essential and generally known. The development and upkeep of a BoK involve continuous discovery work, validation, and self-reflection by professionals, which enables growth and reproduction of the profession. Participation in a BoK-based Landscape of Practice involves Members of CoPs maintaining their knowledgeability by staying up to date on new developments and relevance to the LoP.",
+    "system_b_background": "A building is a permanent enclosed structure that provides shelter and comfort to people. It can be of various shapes, sizes, and materials depending on the needs and factors like weather, ground conditions, and specific use. Buildings are designed and constructed with supporting structures and design drawings to ensure safety and functionality. They serve a vital role in society by providing living and working spaces, security, privacy, and storage for personal belongings. Over the years, buildings have become more than just functional structures; they serve as a canvas for artistic expression and reflect the cultural heritage of a particular region. The recent trend in sustainable planning and building practices has also made buildings more environmentally friendly and energy-efficient.",
+    "Explanation": [
+      "Concept corresponds to building materials: in a knowledge system, concepts are the basic units that constitute knowledge, just as building materials are the basic units that constitute a building. Both concepts and building materials are the foundation for constructing the entire structure.",
+      "Knowledge points correspond to supporting structure: knowledge points are specific information and skills in a knowledge system that are interconnected and support the entire knowledge system. Similarly, the supporting structure is the part of a building that bears weight and maintains stability. Knowledge points and supporting structure are both critical in maintaining overall stability.",
+      "Theoretical framework corresponds to design drawings: theoretical framework provides a method for organizing and explaining knowledge in a knowledge system, just as design drawings provide architectural planning and guidance for a building. Theoretical framework and design drawings both serve as tools for guidance and planning during the construction process."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Body of Knowledge",
+    "target": "Building"
+  },
+  "domains": {
+    "source": "Philosophy",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

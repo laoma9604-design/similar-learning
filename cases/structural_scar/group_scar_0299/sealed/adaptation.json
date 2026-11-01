@@ -1,0 +1,119 @@
+{
+  "adaptation_id": "adapt_scar_0299",
+  "dataset": "scar",
+  "original_id": "299",
+  "source_object_id": "obj_group_scar_0299_src",
+  "target_object_id": "obj_group_scar_0299_tgt",
+  "faithful_mappings": [
+    [
+      "family",
+      "nation"
+    ],
+    [
+      "father",
+      "law"
+    ],
+    [
+      "children",
+      "public"
+    ],
+    [
+      "disobedience",
+      "crime"
+    ],
+    [
+      "punishment",
+      "imprisonment"
+    ],
+    [
+      "nurture",
+      "aid"
+    ]
+  ],
+  "explanation": [
+    "Family corresponds to nation: Family is a fundamental social unit made up of relatives, while a nation is a larger social unit made up of the people. Here, both the family and the nation represent a level of social structure.",
+    "Father corresponds to law: In the family, the father is usually the authority figure who sets rules, while in the nation, the law is the authoritative provision that regulates the behavior of the people. Here, both the father and the law represent authority and order.",
+    "Children correspond to people: In the family, children are the recipients of parents' care and education, while people in a nation are subject to legal constraints and protections. Both represent groups that need care and guidance.",
+    "Disobedience corresponds to crime: In a family, disobedience may refer to a child not listening to the parents or violating family rules. In a nation, crime refers to a violation of the law. Here, both disobedience and crime represent the destruction of rules and order.",
+    "Punishment corresponds to imprisonment: In a family, parents may punish disobedient children, while in a nation, criminals are sentenced and imprisoned. Both are sanctions and punishments for improper behavior.",
+    "Nurture corresponds to aid: In a family, parents nurture and educate their children to help them grow. In a nation, the government provides various forms of assistance to the people. Here, both nurturing and aiding represent acts of providing help and support."
+  ],
+  "background": {
+    "source": "Family is a fundamental social institution that has existed throughout human history. It is a group of people who are related by birth, marriage, or other forms of relationships. The purpose of the family is to provide a secure and nurturing environment for its members to grow, learn, and participate in the community. There are different types of family structures such as matrifocal, patrifocal, conjugal, avuncular, and extended families that have unique cultural and social characteristics.\n\nThe role of a father in a family is crucial as he is typically seen as the head of the household and provides for the family. However, fathers also play a vital role in the discipline and guidance of their children. Disobedience is a common issue in families, and it can be a challenging behavior to address. Often, parents resort to forms of punishment to correct this behavior, such as taking away privileges or time-outs. However, it's important to create a nurturing environment that uses positive reinforcement and communication to foster good behavior and strengthen the parent-child bond.\n\nIn conclusion, families are the essential building blocks of society, providing structure, predictability, and safety for its members. Fathers play a critical role in providing for the family and nurturing their children, helping them grow to become responsible members of society. While disobedience is a common issue in families, it's important to use positive reinforcement and communication to address behavioral problems and maintain a loving and nurturing family environment.",
+    "target": "A nation is an organized and political community that comprises one or more ethnicities and is usually formed based on shared features such as history, language, culture, society, and ethnicity. It possesses a more or less defined territory and government. The nation concept is usually more politically defined than an ethnic group. Scholars consider nations socially constructed and contingent in history. Nationalism became a dominant ideology in the 18th century, as a consequence of modernization, which made national consciousness possible. Nations are, therefore, \"imagined communities,\" as members of the nation are mostly strangers to each other, communicating only through shared sentiments, which provide a form of collective identity and bind individuals together in political solidarity. A nation's foundational \"story\" may be built around a combination of ethnic attributes, values, and principles, closely connected to narratives of belonging. Laws are created to govern nations and maintain social order, and the public is expected to obey. In the event of a crime, the criminal may face imprisonment, and it is the responsibility of the nation to provide aid to those in need."
+  },
+  "raw": {
+    "id": 299,
+    "lang": "en",
+    "system_a": "family",
+    "system_b": "nation",
+    "mappings": [
+      [
+        "family",
+        "nation"
+      ],
+      [
+        "father",
+        "law"
+      ],
+      [
+        "children",
+        "public "
+      ],
+      [
+        "disobedience",
+        "crime"
+      ],
+      [
+        "punishment",
+        "imprisonment"
+      ],
+      [
+        "nurture",
+        "aid"
+      ]
+    ],
+    "system_a_domain": "Philosophy",
+    "system_b_domain": "History",
+    "system_a_background": "Family is a fundamental social institution that has existed throughout human history. It is a group of people who are related by birth, marriage, or other forms of relationships. The purpose of the family is to provide a secure and nurturing environment for its members to grow, learn, and participate in the community. There are different types of family structures such as matrifocal, patrifocal, conjugal, avuncular, and extended families that have unique cultural and social characteristics.\n\nThe role of a father in a family is crucial as he is typically seen as the head of the household and provides for the family. However, fathers also play a vital role in the discipline and guidance of their children. Disobedience is a common issue in families, and it can be a challenging behavior to address. Often, parents resort to forms of punishment to correct this behavior, such as taking away privileges or time-outs. However, it's important to create a nurturing environment that uses positive reinforcement and communication to foster good behavior and strengthen the parent-child bond.\n\nIn conclusion, families are the essential building blocks of society, providing structure, predictability, and safety for its members. Fathers play a critical role in providing for the family and nurturing their children, helping them grow to become responsible members of society. While disobedience is a common issue in families, it's important to use positive reinforcement and communication to address behavioral problems and maintain a loving and nurturing family environment.",
+    "system_b_background": "A nation is an organized and political community that comprises one or more ethnicities and is usually formed based on shared features such as history, language, culture, society, and ethnicity. It possesses a more or less defined territory and government. The nation concept is usually more politically defined than an ethnic group. Scholars consider nations socially constructed and contingent in history. Nationalism became a dominant ideology in the 18th century, as a consequence of modernization, which made national consciousness possible. Nations are, therefore, \"imagined communities,\" as members of the nation are mostly strangers to each other, communicating only through shared sentiments, which provide a form of collective identity and bind individuals together in political solidarity. A nation's foundational \"story\" may be built around a combination of ethnic attributes, values, and principles, closely connected to narratives of belonging. Laws are created to govern nations and maintain social order, and the public is expected to obey. In the event of a crime, the criminal may face imprisonment, and it is the responsibility of the nation to provide aid to those in need.",
+    "Explanation": [
+      "Family corresponds to nation: Family is a fundamental social unit made up of relatives, while a nation is a larger social unit made up of the people. Here, both the family and the nation represent a level of social structure.",
+      "Father corresponds to law: In the family, the father is usually the authority figure who sets rules, while in the nation, the law is the authoritative provision that regulates the behavior of the people. Here, both the father and the law represent authority and order.",
+      "Children correspond to people: In the family, children are the recipients of parents' care and education, while people in a nation are subject to legal constraints and protections. Both represent groups that need care and guidance.",
+      "Disobedience corresponds to crime: In a family, disobedience may refer to a child not listening to the parents or violating family rules. In a nation, crime refers to a violation of the law. Here, both disobedience and crime represent the destruction of rules and order.",
+      "Punishment corresponds to imprisonment: In a family, parents may punish disobedient children, while in a nation, criminals are sentenced and imprisoned. Both are sanctions and punishments for improper behavior.",
+      "Nurture corresponds to aid: In a family, parents nurture and educate their children to help them grow. In a nation, the government provides various forms of assistance to the people. Here, both nurturing and aiding represent acts of providing help and support."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "family",
+    "target": "nation"
+  },
+  "domains": {
+    "source": "Philosophy",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

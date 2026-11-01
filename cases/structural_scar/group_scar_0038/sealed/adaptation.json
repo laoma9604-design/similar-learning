@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0038",
+  "dataset": "scar",
+  "original_id": "38",
+  "source_object_id": "obj_group_scar_0038_src",
+  "target_object_id": "obj_group_scar_0038_tgt",
+  "faithful_mappings": [
+    [
+      "desertification",
+      "dry skin"
+    ],
+    [
+      "Irrigation system",
+      "Moisture Cream"
+    ],
+    [
+      "plant",
+      "skin care products"
+    ],
+    [
+      "skin aging",
+      "soil erosion"
+    ]
+  ],
+  "explanation": [
+    "Desertification corresponds to dry skin: In the soil system, desertification is the process of land surface gradually becoming dry and barren. In the skin system, dry skin refers to the phenomenon of loss of water and oil on the surface of the skin, resulting in dryness. Here, desertification and dry skin are both deteriorating processes in their respective systems, resulting in dry and degraded surfaces.",
+    "Irrigation system corresponds to moisture cream: In the soil system, irrigation system is a facility to provide water to arid land. In the skin system, moisture cream is a skin care product used to provide moisture and nourishment to the skin. Here, irrigation system and moisture cream are both solutions in their respective systems to provide moisture and improve dryness.",
+    "Plants correspond to skin care products: In the soil system, plants are organic matter in the soil that help maintain soil fertility. In the skin system, skin care products are designed to protect, nourish, and improve the skin condition. Here, plants and skin care products are both elements in their respective systems that are beneficial in improving and maintaining a healthy state.",
+    "Skin aging corresponds to soil erosion: In the soil system, soil erosion refers to the phenomenon of water and soil nutrients being eroded and washed away from the land surface. In the skin system, skin aging refers to the gradual loss of elasticity and radiance, resulting in wrinkles and sagging. Here, skin aging and soil erosion are both deteriorating processes in their respective systems, resulting in degradation and decline."
+  ],
+  "background": {
+    "source": "The Land System manufactured by General Dynamics Land Systems (GDLS) is a critical piece of military machinery, designed for use in rugged and hostile terrain. Equipped with advanced technology and engineering, the Land System is capable of withstanding the toughest and most challenging environments.\n\nOne of the primary issues affecting many of the areas where the Land System is deployed is desertification. This process leads to the depletion of natural resources, making it increasingly difficult for plant life to survive. When plants die off, soil erosion and land degradation occur, amplifying the impact of desertification.\n\nTo combat this issue and protect the environment, an irrigation system is often incorporated into the Land System to help sustain plant growth. This system aids in the distribution of water and nutrients, promoting the growth and development of vegetation.\n\nIn addition to its application in military operations, the Land System can also be employed in other areas with desertification concerns, such as agriculture and forestry. The integration of an irrigation system can provide a cost-effective solution to combat land degradation and promote sustainable land management.\n\nMoreover, the Land System is equipped with advanced features and technologies that can be utilized in other areas such as cosmetics. The system is an efficient tool against skin aging, thanks to its state-of-the-art features that can heal, refresh and rejuvenate your skin, giving it a youthful glow.\n\nOverall, the Land System manufactured by General Dynamics Land Systems is an innovative and powerful military vehicle equipped with advanced technologies and features that can be utilized in various fields. From serving as a key tool in desertification combat to helping sustain plant growth, the Land System is capable of delivering efficient solutions, making it a crucial player in environmental preservation and sustainability. Its contribution to the fight against skin aging makes it even more relevant in the pursuit of a healthier and younger-looking skin.",
+    "target": "Skin System is a crucial fundamental part of the human body, which is designed to protect, regulate, and sense various external factors. It acts as a shield between the internal organs and the surrounding environment, playing an essential role in maintaining the overall health of the body. The Skin System is made up of multiple layers of ectodermal tissue that provide insulation, temperature regulation, sensation, and the production of vitamin D folates. It primarily safeguards the body from pathogens and excessive water loss, and its thickness varies from location to location in the organism. The skin is also susceptible to damage, leading to scar tissue formation that may cause discoloration and depigmentation. Fur, feathers, and scales are all part of the Skin System and augment insulations and serve as camouflage or as secondary sexual characteristics. Proper skincare products such as Moisture Cream can improve dry skin and work towards preventing soil erosion."
+  },
+  "raw": {
+    "id": 38,
+    "lang": "en",
+    "system_a": "Land System",
+    "system_b": "Skin System",
+    "mappings": [
+      [
+        "desertification",
+        "dry skin"
+      ],
+      [
+        "Irrigation system",
+        "Moisture Cream"
+      ],
+      [
+        "plant",
+        "skin care products"
+      ],
+      [
+        "skin aging",
+        "soil erosion"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Biology",
+    "system_a_background": "The Land System manufactured by General Dynamics Land Systems (GDLS) is a critical piece of military machinery, designed for use in rugged and hostile terrain. Equipped with advanced technology and engineering, the Land System is capable of withstanding the toughest and most challenging environments.\n\nOne of the primary issues affecting many of the areas where the Land System is deployed is desertification. This process leads to the depletion of natural resources, making it increasingly difficult for plant life to survive. When plants die off, soil erosion and land degradation occur, amplifying the impact of desertification.\n\nTo combat this issue and protect the environment, an irrigation system is often incorporated into the Land System to help sustain plant growth. This system aids in the distribution of water and nutrients, promoting the growth and development of vegetation.\n\nIn addition to its application in military operations, the Land System can also be employed in other areas with desertification concerns, such as agriculture and forestry. The integration of an irrigation system can provide a cost-effective solution to combat land degradation and promote sustainable land management.\n\nMoreover, the Land System is equipped with advanced features and technologies that can be utilized in other areas such as cosmetics. The system is an efficient tool against skin aging, thanks to its state-of-the-art features that can heal, refresh and rejuvenate your skin, giving it a youthful glow.\n\nOverall, the Land System manufactured by General Dynamics Land Systems is an innovative and powerful military vehicle equipped with advanced technologies and features that can be utilized in various fields. From serving as a key tool in desertification combat to helping sustain plant growth, the Land System is capable of delivering efficient solutions, making it a crucial player in environmental preservation and sustainability. Its contribution to the fight against skin aging makes it even more relevant in the pursuit of a healthier and younger-looking skin.",
+    "system_b_background": "Skin System is a crucial fundamental part of the human body, which is designed to protect, regulate, and sense various external factors. It acts as a shield between the internal organs and the surrounding environment, playing an essential role in maintaining the overall health of the body. The Skin System is made up of multiple layers of ectodermal tissue that provide insulation, temperature regulation, sensation, and the production of vitamin D folates. It primarily safeguards the body from pathogens and excessive water loss, and its thickness varies from location to location in the organism. The skin is also susceptible to damage, leading to scar tissue formation that may cause discoloration and depigmentation. Fur, feathers, and scales are all part of the Skin System and augment insulations and serve as camouflage or as secondary sexual characteristics. Proper skincare products such as Moisture Cream can improve dry skin and work towards preventing soil erosion.",
+    "Explanation": [
+      "Desertification corresponds to dry skin: In the soil system, desertification is the process of land surface gradually becoming dry and barren. In the skin system, dry skin refers to the phenomenon of loss of water and oil on the surface of the skin, resulting in dryness. Here, desertification and dry skin are both deteriorating processes in their respective systems, resulting in dry and degraded surfaces.",
+      "Irrigation system corresponds to moisture cream: In the soil system, irrigation system is a facility to provide water to arid land. In the skin system, moisture cream is a skin care product used to provide moisture and nourishment to the skin. Here, irrigation system and moisture cream are both solutions in their respective systems to provide moisture and improve dryness.",
+      "Plants correspond to skin care products: In the soil system, plants are organic matter in the soil that help maintain soil fertility. In the skin system, skin care products are designed to protect, nourish, and improve the skin condition. Here, plants and skin care products are both elements in their respective systems that are beneficial in improving and maintaining a healthy state.",
+      "Skin aging corresponds to soil erosion: In the soil system, soil erosion refers to the phenomenon of water and soil nutrients being eroded and washed away from the land surface. In the skin system, skin aging refers to the gradual loss of elasticity and radiance, resulting in wrinkles and sagging. Here, skin aging and soil erosion are both deteriorating processes in their respective systems, resulting in degradation and decline."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Land System",
+    "target": "Skin System"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

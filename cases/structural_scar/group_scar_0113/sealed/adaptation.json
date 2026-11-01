@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0113",
+  "dataset": "scar",
+  "original_id": "113",
+  "source_object_id": "obj_group_scar_0113_src",
+  "target_object_id": "obj_group_scar_0113_tgt",
+  "faithful_mappings": [
+    [
+      "Reactant",
+      "vehicle"
+    ],
+    [
+      "activation energy",
+      "obstacle"
+    ],
+    [
+      "catalyst",
+      "road worker"
+    ],
+    [
+      "product",
+      "destination"
+    ]
+  ],
+  "explanation": [
+    "Reactant corresponds to vehicle: In chemical reactions, reactants are the chemical substances that participate in the reaction. In vehicular traffic, vehicles are the main components that participate in traffic. Both of these are the main components in their respective fields.",
+    "Activation energy corresponds to obstacles: In chemical reactions, activation energy is the energy threshold required for the reaction to occur. In vehicular traffic, obstacles are factors that affect vehicle travel. Both of these represent the difficulties that need to be overcome in their respective fields.",
+    "Catalyst corresponds to road worker: In chemical reactions, a catalyst is a substance that can accelerate the rate of the reaction. In vehicular traffic, road workers can help improve traffic conditions and increase travel efficiency. Both of these are promoting factors in their respective fields.",
+    "Product corresponds to destination: In chemical reactions, a product is the final product of the reaction. In vehicular traffic, the destination is the ultimate goal of vehicle travel. Both of these represent the ultimate results of their respective fields."
+  ],
+  "background": {
+    "source": "A chemical reaction involves the transformation of reactants or reagents into one or more products, characterized by a chemical change. This process may be spontaneous or require an external energy input, with the reaction rate increasing at higher temperatures. The reaction mechanism is made up of individual sub-steps, and the sequence of action determines the end products. A catalyst may be used to increase the rate of a reaction by lowering the activation energy required to break bonds between atoms. In biochemistry, metabolic pathways involve a series of chemical reactions, often catalyzed by protein enzymes.",
+    "target": "Traffic collisions are a common occurrence on roads worldwide, with vehicles colliding with obstacles such as other vehicles, pedestrians, animals or road debris. These collisions can lead to severe injuries, disabilities, fatalities, and property damage, resulting in significant financial costs for both the society and individuals involved. The risks of such incidents are influenced by various factors such as vehicle design, road environments, driving skills, and behavior like speeding, aggressive driving, and distracted driving. While high-income countries have decreasing death rates, low-income countries have increasing death rates, and middle-income countries have the highest rate of fatalities.\n\nHowever, despite these risks, road transport remains the most practical way for people to reach their destinations."
+  },
+  "raw": {
+    "id": 113,
+    "lang": "en",
+    "system_a": "Chemical Reaction",
+    "system_b": "Vehicle Traffic",
+    "mappings": [
+      [
+        "Reactant",
+        "vehicle"
+      ],
+      [
+        "activation energy",
+        "obstacle"
+      ],
+      [
+        "catalyst",
+        "road worker"
+      ],
+      [
+        "product",
+        "destination"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Geography",
+    "system_a_background": "A chemical reaction involves the transformation of reactants or reagents into one or more products, characterized by a chemical change. This process may be spontaneous or require an external energy input, with the reaction rate increasing at higher temperatures. The reaction mechanism is made up of individual sub-steps, and the sequence of action determines the end products. A catalyst may be used to increase the rate of a reaction by lowering the activation energy required to break bonds between atoms. In biochemistry, metabolic pathways involve a series of chemical reactions, often catalyzed by protein enzymes.",
+    "system_b_background": "Traffic collisions are a common occurrence on roads worldwide, with vehicles colliding with obstacles such as other vehicles, pedestrians, animals or road debris. These collisions can lead to severe injuries, disabilities, fatalities, and property damage, resulting in significant financial costs for both the society and individuals involved. The risks of such incidents are influenced by various factors such as vehicle design, road environments, driving skills, and behavior like speeding, aggressive driving, and distracted driving. While high-income countries have decreasing death rates, low-income countries have increasing death rates, and middle-income countries have the highest rate of fatalities.\n\nHowever, despite these risks, road transport remains the most practical way for people to reach their destinations.",
+    "Explanation": [
+      "Reactant corresponds to vehicle: In chemical reactions, reactants are the chemical substances that participate in the reaction. In vehicular traffic, vehicles are the main components that participate in traffic. Both of these are the main components in their respective fields.",
+      "Activation energy corresponds to obstacles: In chemical reactions, activation energy is the energy threshold required for the reaction to occur. In vehicular traffic, obstacles are factors that affect vehicle travel. Both of these represent the difficulties that need to be overcome in their respective fields.",
+      "Catalyst corresponds to road worker: In chemical reactions, a catalyst is a substance that can accelerate the rate of the reaction. In vehicular traffic, road workers can help improve traffic conditions and increase travel efficiency. Both of these are promoting factors in their respective fields.",
+      "Product corresponds to destination: In chemical reactions, a product is the final product of the reaction. In vehicular traffic, the destination is the ultimate goal of vehicle travel. Both of these represent the ultimate results of their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Chemical Reaction",
+    "target": "Vehicle Traffic"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Geography"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

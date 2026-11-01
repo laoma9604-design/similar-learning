@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0202",
+  "dataset": "scar",
+  "original_id": "202",
+  "source_object_id": "obj_group_scar_0202_src",
+  "target_object_id": "obj_group_scar_0202_tgt",
+  "faithful_mappings": [
+    [
+      "british parliament",
+      "constitutional convention"
+    ],
+    [
+      "limit kingship",
+      "equal rights"
+    ],
+    [
+      "Create a constitutional monarchy",
+      "The French Revolution"
+    ]
+  ],
+  "explanation": [
+    "The British Parliament corresponds to the Constitutional Convention: The Bill of Rights was drafted by the British Parliament, while the Declaration of the Rights of Man was drafted by the French Constitutional Convention. Both are historically significant documents drafted by important political institutions.",
+    "Limiting kingship corresponds to equal rights: The Bill of Rights emphasizes the balance of power and protection of citizens' rights by limiting the power of the English king, while the Declaration of the Rights of Man promotes the principle of equal rights, advocating that all people have equal rights. Both focus on balancing power and protecting people's rights.",
+    "Creating a constitutional monarchy corresponds to the French Revolution: The Bill of Rights established the foundation for a constitutional monarchy in England by limiting the power of the king, while the Declaration of the Rights of Man was a product of the French Revolution, reflecting the revolution's impact on the political system of France. Both represent a transformation of the political system and the establishment of a new national order."
+  ],
+  "background": {
+    "source": "A bill of rights is a document that declares the rights of citizens in a particular country. In the case of the United Kingdom, the Declaration of Right delivered in 1689 declared the rights that all citizens of England should have, while the Bill of Rights 1689 passed by the British Parliament, as amended several times, sought to limit the powers of the monarchy and create a constitutional monarchy. The United States also has its own Bill of Rights, written in 1789 and ratified in 1791, which outlines the rights of citizens in the country. Similarly, the Declaration of the Rights of Man and of the Citizen, a French document written in 1789, established fundamental rights for French citizens. Other bills of rights exist around the world, such as the Canadian Bill of Rights, the New Zealand Bill of Rights Act, and the Hong Kong Bill of Rights Ordinance. Bills of rights serve as essential documents in creating and protecting the rights and freedoms of citizens in their respective countries.",
+    "target": "The Universal Declaration of Human Rights is an international document that lays out the fundamental rights and freedoms that every human being is entitled to. It was drafted by the United Nations General Assembly and adopted on 10 December 1948 in Paris, France. The declaration outlines an individual's basic rights and freedoms and asserts their inherent and inalienable nature. This \"milestone document\" has inspired the development of international human rights law and influenced legal, political, and social developments on both global and national levels. While not legally binding, its provisions have become part of customary international law, making it a significant contribution to the worldwide recognition of equal rights. Despite its broad support, the Declaration has a complex legal status, with courts in some nations taking a more restrictive view on its legal effect. Nevertheless, the UDHR remains a vital document with over 530 translations, making it the most translated document in history. Although not directly related to the French Revolution or constitutional conventions, it builds upon the principles of liberty, equality, and fraternity championed by such movements."
+  },
+  "raw": {
+    "id": 202,
+    "lang": "en",
+    "system_a": "Bill of Rights",
+    "system_b": "Declaration of Human Rights",
+    "mappings": [
+      [
+        "british parliament",
+        "constitutional convention"
+      ],
+      [
+        "limit kingship",
+        "equal rights"
+      ],
+      [
+        "Create a constitutional monarchy",
+        "The French Revolution"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "A bill of rights is a document that declares the rights of citizens in a particular country. In the case of the United Kingdom, the Declaration of Right delivered in 1689 declared the rights that all citizens of England should have, while the Bill of Rights 1689 passed by the British Parliament, as amended several times, sought to limit the powers of the monarchy and create a constitutional monarchy. The United States also has its own Bill of Rights, written in 1789 and ratified in 1791, which outlines the rights of citizens in the country. Similarly, the Declaration of the Rights of Man and of the Citizen, a French document written in 1789, established fundamental rights for French citizens. Other bills of rights exist around the world, such as the Canadian Bill of Rights, the New Zealand Bill of Rights Act, and the Hong Kong Bill of Rights Ordinance. Bills of rights serve as essential documents in creating and protecting the rights and freedoms of citizens in their respective countries.",
+    "system_b_background": "The Universal Declaration of Human Rights is an international document that lays out the fundamental rights and freedoms that every human being is entitled to. It was drafted by the United Nations General Assembly and adopted on 10 December 1948 in Paris, France. The declaration outlines an individual's basic rights and freedoms and asserts their inherent and inalienable nature. This \"milestone document\" has inspired the development of international human rights law and influenced legal, political, and social developments on both global and national levels. While not legally binding, its provisions have become part of customary international law, making it a significant contribution to the worldwide recognition of equal rights. Despite its broad support, the Declaration has a complex legal status, with courts in some nations taking a more restrictive view on its legal effect. Nevertheless, the UDHR remains a vital document with over 530 translations, making it the most translated document in history. Although not directly related to the French Revolution or constitutional conventions, it builds upon the principles of liberty, equality, and fraternity championed by such movements.",
+    "Explanation": [
+      "The British Parliament corresponds to the Constitutional Convention: The Bill of Rights was drafted by the British Parliament, while the Declaration of the Rights of Man was drafted by the French Constitutional Convention. Both are historically significant documents drafted by important political institutions.",
+      "Limiting kingship corresponds to equal rights: The Bill of Rights emphasizes the balance of power and protection of citizens' rights by limiting the power of the English king, while the Declaration of the Rights of Man promotes the principle of equal rights, advocating that all people have equal rights. Both focus on balancing power and protecting people's rights.",
+      "Creating a constitutional monarchy corresponds to the French Revolution: The Bill of Rights established the foundation for a constitutional monarchy in England by limiting the power of the king, while the Declaration of the Rights of Man was a product of the French Revolution, reflecting the revolution's impact on the political system of France. Both represent a transformation of the political system and the establishment of a new national order."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Bill of Rights",
+    "target": "Declaration of Human Rights"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

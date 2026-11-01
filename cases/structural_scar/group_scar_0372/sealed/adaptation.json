@@ -1,0 +1,75 @@
+{
+  "adaptation_id": "adapt_scar_0372",
+  "dataset": "scar",
+  "original_id": "372",
+  "source_object_id": "obj_group_scar_0372_src",
+  "target_object_id": "obj_group_scar_0372_tgt",
+  "faithful_mappings": [
+    [
+      "wavelength",
+      "pitch"
+    ],
+    [
+      "molecular",
+      "musical instrument"
+    ]
+  ],
+  "explanation": [
+    "Wavelength corresponds to pitch: the wavelength in the spectral lines determines the color of light; the pitch in musical notes determines the highness and lowness of sound. Both are fundamental characteristics in their respective systems.",
+    "Molecules correspond to musical instruments: the molecules in spectral lines are substances that produce light of a specific wavelength; musical instruments in musical notes are tools that produce sounds of specific pitches. Both are sources of the generating characteristics in their respective systems."
+  ],
+  "background": {
+    "source": "A spectral line is a distinctive feature in the continuous spectrum of light that encodes valuable information about the atomic or molecular structure of a material. These lines correspond to specific energy levels of atoms and molecules, which absorb or emit light at particular wavelengths. By analyzing the wavelengths and intensities of these spectral lines, scientists can determine the composition and properties of celestial objects such as stars and planets. Spectral lines act like fingerprints, allowing researchers to identify the presence of specific atoms and molecules within a sample. This makes them essential tools in fields such as astrophysics, chemistry, and materials science, enabling researchers to explore the fundamental building blocks of matter. By studying spectral lines, we are gaining a deeper understanding of the fundamental nature of the universe around us.",
+    "target": "Musical notes are the foundation of music and are represented by symbols that denote the pitch and duration of a sound. These notes are building blocks that facilitate performance, comprehension, and analysis of written music. Each note can represent a specific musical event or a class of events sharing the same pitch. In order to represent pitch classes, various countries use different naming conventions, such as solfège naming convention used in most European nations, including Italy, Spain, and Greece, while English- and Dutch-speaking regions represent pitch classes using the first seven letters of the Latin alphabet. To differentiate notes that share the same pitch class but fall into different octaves, the scientific pitch notation combines a letter name with an Arabic numeral designating a specific octave. Musical notes play a pivotal role in musical instruments, as each note denotes the pitch of the sound produced by them."
+  },
+  "raw": {
+    "id": 372,
+    "lang": "en",
+    "system_a": "Spectral Lines",
+    "system_b": "Musical Notes",
+    "mappings": [
+      [
+        "wavelength",
+        "pitch"
+      ],
+      [
+        "molecular",
+        "musical instrument"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Art",
+    "system_a_background": "A spectral line is a distinctive feature in the continuous spectrum of light that encodes valuable information about the atomic or molecular structure of a material. These lines correspond to specific energy levels of atoms and molecules, which absorb or emit light at particular wavelengths. By analyzing the wavelengths and intensities of these spectral lines, scientists can determine the composition and properties of celestial objects such as stars and planets. Spectral lines act like fingerprints, allowing researchers to identify the presence of specific atoms and molecules within a sample. This makes them essential tools in fields such as astrophysics, chemistry, and materials science, enabling researchers to explore the fundamental building blocks of matter. By studying spectral lines, we are gaining a deeper understanding of the fundamental nature of the universe around us.",
+    "system_b_background": "Musical notes are the foundation of music and are represented by symbols that denote the pitch and duration of a sound. These notes are building blocks that facilitate performance, comprehension, and analysis of written music. Each note can represent a specific musical event or a class of events sharing the same pitch. In order to represent pitch classes, various countries use different naming conventions, such as solfège naming convention used in most European nations, including Italy, Spain, and Greece, while English- and Dutch-speaking regions represent pitch classes using the first seven letters of the Latin alphabet. To differentiate notes that share the same pitch class but fall into different octaves, the scientific pitch notation combines a letter name with an Arabic numeral designating a specific octave. Musical notes play a pivotal role in musical instruments, as each note denotes the pitch of the sound produced by them.",
+    "Explanation": [
+      "Wavelength corresponds to pitch: the wavelength in the spectral lines determines the color of light; the pitch in musical notes determines the highness and lowness of sound. Both are fundamental characteristics in their respective systems.",
+      "Molecules correspond to musical instruments: the molecules in spectral lines are substances that produce light of a specific wavelength; musical instruments in musical notes are tools that produce sounds of specific pitches. Both are sources of the generating characteristics in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Spectral Lines",
+    "target": "Musical Notes"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Art"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

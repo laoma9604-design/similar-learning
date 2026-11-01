@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0068",
+  "dataset": "scar",
+  "original_id": "68",
+  "source_object_id": "obj_group_scar_0068_src",
+  "target_object_id": "obj_group_scar_0068_tgt",
+  "faithful_mappings": [
+    [
+      "blood sugar",
+      "weighing objects"
+    ],
+    [
+      "insulin",
+      "sensor"
+    ],
+    [
+      "glucose regulating hormone",
+      "circuit"
+    ]
+  ],
+  "explanation": [
+    "Blood sugar corresponds to weighing objects: blood sugar is the glucose content in the blood, which needs to be regulated by insulin and glucose regulating hormones; weighing objects are the weights that electronic scales need to measure. In this mapping, blood sugar and weighing objects are the objects that need to be regulated or measured in their respective systems.",
+    "Insulin corresponds to sensors: insulin is a hormone that is responsible for reducing blood sugar levels; sensors are devices used in electronic scales to detect the weight of objects. Here, insulin and sensors are both critical components used for regulation or detection in their respective systems.",
+    "Glucose regulating hormones correspond to circuits: glucose regulating hormones are hormones responsible for raising blood sugar levels; circuits are the parts of electronic scales that transmit signals and data, enabling the weight data detected by the sensor to be processed and displayed. In this mapping, glucose regulating hormones and circuits are both responsible for regulation and transmission in their respective systems."
+  ],
+  "background": {
+    "source": "Blood sugar regulation is an essential process for maintaining overall health and wellness. It refers to the body's ability to keep blood sugar levels within a narrow range to prevent complications related to either high or low blood sugar. This process is primarily achieved through the actions of two hormones, insulin and glucagon, which are secreted by the pancreas. Insulin helps to lower blood sugar levels by allowing glucose to enter cells where it can be used for energy or stored for future use. On the other hand, glucagon helps to raise blood sugar levels by stimulating the liver to release stored glucose into the bloodstream. In addition to insulin and glucagon, there are other hormones involved in glucose regulation, such as incretins, which stimulate insulin secretion and help to regulate blood sugar after meals. Maintaining healthy blood sugar levels is crucial for preventing complications such as diabetes, heart disease, and nerve damage. By understanding the role of insulin, glucose regulating hormones, and other factors involved in blood sugar regulation, individuals can make informed choices to promote optimal health and prevent these potentially serious conditions.",
+    "target": "An electronic scale is a device used for weighing objects with the help of a sensor and circuit. Calibration is an essential aspect of measurement technology and metrology, where the comparison of measurement values is made between the device under test and a calibration standard of known accuracy. The calibration standard is held by a metrology body and is traceable to a national or international standard. The outcome of this comparison can result in no significant error, a significant error but no adjustment, or an adjustment made to correct the error to an acceptable level. This particular electronic scale automatically adjusts based on the calibration standard, ensuring accurate and precise measurements every time."
+  },
+  "raw": {
+    "id": 68,
+    "lang": "en",
+    "system_a": "Blood sugar regulation",
+    "system_b": "electronic scale automatically adjusts",
+    "mappings": [
+      [
+        "blood sugar",
+        "weighing objects"
+      ],
+      [
+        "insulin",
+        "sensor"
+      ],
+      [
+        "glucose regulating hormone",
+        "circuit"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Physics",
+    "system_a_background": "Blood sugar regulation is an essential process for maintaining overall health and wellness. It refers to the body's ability to keep blood sugar levels within a narrow range to prevent complications related to either high or low blood sugar. This process is primarily achieved through the actions of two hormones, insulin and glucagon, which are secreted by the pancreas. Insulin helps to lower blood sugar levels by allowing glucose to enter cells where it can be used for energy or stored for future use. On the other hand, glucagon helps to raise blood sugar levels by stimulating the liver to release stored glucose into the bloodstream. In addition to insulin and glucagon, there are other hormones involved in glucose regulation, such as incretins, which stimulate insulin secretion and help to regulate blood sugar after meals. Maintaining healthy blood sugar levels is crucial for preventing complications such as diabetes, heart disease, and nerve damage. By understanding the role of insulin, glucose regulating hormones, and other factors involved in blood sugar regulation, individuals can make informed choices to promote optimal health and prevent these potentially serious conditions.",
+    "system_b_background": "An electronic scale is a device used for weighing objects with the help of a sensor and circuit. Calibration is an essential aspect of measurement technology and metrology, where the comparison of measurement values is made between the device under test and a calibration standard of known accuracy. The calibration standard is held by a metrology body and is traceable to a national or international standard. The outcome of this comparison can result in no significant error, a significant error but no adjustment, or an adjustment made to correct the error to an acceptable level. This particular electronic scale automatically adjusts based on the calibration standard, ensuring accurate and precise measurements every time.",
+    "Explanation": [
+      "Blood sugar corresponds to weighing objects: blood sugar is the glucose content in the blood, which needs to be regulated by insulin and glucose regulating hormones; weighing objects are the weights that electronic scales need to measure. In this mapping, blood sugar and weighing objects are the objects that need to be regulated or measured in their respective systems.",
+      "Insulin corresponds to sensors: insulin is a hormone that is responsible for reducing blood sugar levels; sensors are devices used in electronic scales to detect the weight of objects. Here, insulin and sensors are both critical components used for regulation or detection in their respective systems.",
+      "Glucose regulating hormones correspond to circuits: glucose regulating hormones are hormones responsible for raising blood sugar levels; circuits are the parts of electronic scales that transmit signals and data, enabling the weight data detected by the sensor to be processed and displayed. In this mapping, glucose regulating hormones and circuits are both responsible for regulation and transmission in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Blood sugar regulation",
+    "target": "electronic scale automatically adjusts"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0078",
+  "dataset": "scar",
+  "original_id": "78",
+  "source_object_id": "obj_group_scar_0078_src",
+  "target_object_id": "obj_group_scar_0078_tgt",
+  "faithful_mappings": [
+    [
+      "Lymphocytes",
+      "pain nerve"
+    ],
+    [
+      "immunity",
+      "skin sensitivity"
+    ],
+    [
+      "antigen",
+      "pain"
+    ],
+    [
+      "antigen tolerance",
+      "pain tolerance"
+    ]
+  ],
+  "explanation": [
+    "Lymphocytes correspond to pain nerves: Lymphocytes are cells in the immune system that can recognize and attack antigens; pain nerves transmit pain sensations in the skin. Both are responsible for recognizing and responding to specific signals in their respective systems.",
+    "Immunity corresponds to skin sensitivity: Immunity is the body's ability to resist disease; skin sensitivity is the degree of response of the skin to external stimuli. Both reflect sensitivity and response capacity to specific stimuli in their respective systems.",
+    "Antigen corresponds to pain: Antigen is a foreign substance that can activate the immune system; pain is the sensation produced when the skin is damaged or inflamed. Both are signals that stimulate the body to produce specific responses.",
+    "Antigen tolerance corresponds to pain tolerance: Antigen tolerance is the degree to which the immune system is tolerant of antigens; pain tolerance is an individual's ability to endure pain. Both reflect the ability to tolerate specific stimuli in their respective systems."
+  ],
+  "background": {
+    "source": "I'm sorry, but the keywords provided do not match the description of the item provided. Could you please provide a revised description and set of keywords?",
+    "target": "A cocoon can refer to various things, such as a silky pupal casing made by insect larvae and a science fiction-fantasy film. However, when it comes to pain, cocoon may be associated with pain nerve, skin sensitivity, pain, and pain tolerance. While some may find cocooning in a warm and comfortable place soothing to alleviate pain, it is important to understand the underlying causes and seek appropriate treatment to manage the symptoms effectively."
+  },
+  "raw": {
+    "id": 78,
+    "lang": "en",
+    "system_a": "Disability of the plant",
+    "system_b": "cocoon",
+    "mappings": [
+      [
+        "Lymphocytes",
+        "pain nerve"
+      ],
+      [
+        "immunity",
+        "skin sensitivity"
+      ],
+      [
+        "antigen",
+        "pain"
+      ],
+      [
+        "antigen tolerance",
+        "pain tolerance"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Biology",
+    "system_a_background": "I'm sorry, but the keywords provided do not match the description of the item provided. Could you please provide a revised description and set of keywords?",
+    "system_b_background": "A cocoon can refer to various things, such as a silky pupal casing made by insect larvae and a science fiction-fantasy film. However, when it comes to pain, cocoon may be associated with pain nerve, skin sensitivity, pain, and pain tolerance. While some may find cocooning in a warm and comfortable place soothing to alleviate pain, it is important to understand the underlying causes and seek appropriate treatment to manage the symptoms effectively.",
+    "Explanation": [
+      "Lymphocytes correspond to pain nerves: Lymphocytes are cells in the immune system that can recognize and attack antigens; pain nerves transmit pain sensations in the skin. Both are responsible for recognizing and responding to specific signals in their respective systems.",
+      "Immunity corresponds to skin sensitivity: Immunity is the body's ability to resist disease; skin sensitivity is the degree of response of the skin to external stimuli. Both reflect sensitivity and response capacity to specific stimuli in their respective systems.",
+      "Antigen corresponds to pain: Antigen is a foreign substance that can activate the immune system; pain is the sensation produced when the skin is damaged or inflamed. Both are signals that stimulate the body to produce specific responses.",
+      "Antigen tolerance corresponds to pain tolerance: Antigen tolerance is the degree to which the immune system is tolerant of antigens; pain tolerance is an individual's ability to endure pain. Both reflect the ability to tolerate specific stimuli in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Disability of the plant",
+    "target": "cocoon"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

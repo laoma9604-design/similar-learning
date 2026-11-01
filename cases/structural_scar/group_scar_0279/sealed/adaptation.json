@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0279",
+  "dataset": "scar",
+  "original_id": "279",
+  "source_object_id": "obj_group_scar_0279_src",
+  "target_object_id": "obj_group_scar_0279_tgt",
+  "faithful_mappings": [
+    [
+      "slope",
+      "career"
+    ],
+    [
+      "ascent",
+      "success"
+    ],
+    [
+      "descent",
+      "failure"
+    ],
+    [
+      "climb",
+      "work"
+    ],
+    [
+      "climber",
+      "worker"
+    ]
+  ],
+  "explanation": [
+    "The slope corresponds to career: a slope is a terrain feature that represents the degree of inclination of the ground. Career is the role a person plays in society, related to their job and responsibilities. Here, both slope and career represent a specific field or scenario.",
+    "Up corresponds to success: in the concept of slope, up represents climbing higher, usually associated with effort and progress. In the concept of career, success represents significant achievement in one's job. Here, both up and success indicate a development towards a better direction.",
+    "Down corresponds to failure: in the concept of slope, down denotes descending to a lower point, usually associated with setbacks and decline. In the concept of career, failure represents not achieving the expected goals in one's job. Here, both down and failure indicate a development towards an unfavorable direction.",
+    "Climbing corresponds to work: in the concept of slope, climbing represents the effort to ascend the slope. In the concept of career, work represents the effort put in to achieve the set goals. Here, climbing and work both indicate effort put in towards achieving a goal.",
+    "Climber corresponds to worker: in the concept of slope, a climber refers to those who climb slopes. In the concept of career, a worker refers to those who practice a certain profession. Here, both climber and worker represent people who work hard in a specific field."
+  ],
+  "background": {
+    "source": "The slope, also known as the gradient, of a line is a fundamental concept in mathematics that describes both the direction and steepness of a line. It is calculated by finding the ratio of the vertical change to the horizontal change between any two points on a line. A line that is increasing has a positive slope, while a line that is decreasing has a negative slope. The steepness of a line is measured by the absolute value of the slope. In geography and civil engineering, the concept of slope is used to describe the ascent, descent, or climb of a road, while in climbing, it is used to describe the difficulty level of a route. The generalization of the concept of slope allows for complex constructions and planning beyond simple horizontals and verticals, making it one of the main foundations of the modern world in terms of both technology and the built environment.",
+    "target": "A career can be defined as the series of jobs or professions that an individual undertakes throughout their lifetime, encompassing everything from their first part-time role to their ultimate retirement. It is not limited to a specific industry or type of work, but rather represents a person's entire journey of learning, growth, and experience. Success and failure are both inherent to a career, as they are a natural part of the process of discovering one's strengths and weaknesses and navigating one's way through the ups and downs of the job market. For a worker, a career is not just a means of earning a living, but also a way of finding fulfillment and purpose in life. Regardless of the specific path an individual chooses to take, the pursuit of a career entails a commitment to hard work, dedication to personal growth, and a willingness to take risks in order to achieve one's goals."
+  },
+  "raw": {
+    "id": 279,
+    "lang": "en",
+    "system_a": "slope",
+    "system_b": "career",
+    "mappings": [
+      [
+        "slope",
+        "career"
+      ],
+      [
+        "ascent",
+        "success"
+      ],
+      [
+        "descent",
+        "failure"
+      ],
+      [
+        "climb",
+        "work"
+      ],
+      [
+        "climber",
+        "worker"
+      ]
+    ],
+    "system_a_domain": "Philosophy",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "The slope, also known as the gradient, of a line is a fundamental concept in mathematics that describes both the direction and steepness of a line. It is calculated by finding the ratio of the vertical change to the horizontal change between any two points on a line. A line that is increasing has a positive slope, while a line that is decreasing has a negative slope. The steepness of a line is measured by the absolute value of the slope. In geography and civil engineering, the concept of slope is used to describe the ascent, descent, or climb of a road, while in climbing, it is used to describe the difficulty level of a route. The generalization of the concept of slope allows for complex constructions and planning beyond simple horizontals and verticals, making it one of the main foundations of the modern world in terms of both technology and the built environment.",
+    "system_b_background": "A career can be defined as the series of jobs or professions that an individual undertakes throughout their lifetime, encompassing everything from their first part-time role to their ultimate retirement. It is not limited to a specific industry or type of work, but rather represents a person's entire journey of learning, growth, and experience. Success and failure are both inherent to a career, as they are a natural part of the process of discovering one's strengths and weaknesses and navigating one's way through the ups and downs of the job market. For a worker, a career is not just a means of earning a living, but also a way of finding fulfillment and purpose in life. Regardless of the specific path an individual chooses to take, the pursuit of a career entails a commitment to hard work, dedication to personal growth, and a willingness to take risks in order to achieve one's goals.",
+    "Explanation": [
+      "The slope corresponds to career: a slope is a terrain feature that represents the degree of inclination of the ground. Career is the role a person plays in society, related to their job and responsibilities. Here, both slope and career represent a specific field or scenario.",
+      "Up corresponds to success: in the concept of slope, up represents climbing higher, usually associated with effort and progress. In the concept of career, success represents significant achievement in one's job. Here, both up and success indicate a development towards a better direction.",
+      "Down corresponds to failure: in the concept of slope, down denotes descending to a lower point, usually associated with setbacks and decline. In the concept of career, failure represents not achieving the expected goals in one's job. Here, both down and failure indicate a development towards an unfavorable direction.",
+      "Climbing corresponds to work: in the concept of slope, climbing represents the effort to ascend the slope. In the concept of career, work represents the effort put in to achieve the set goals. Here, climbing and work both indicate effort put in towards achieving a goal.",
+      "Climber corresponds to worker: in the concept of slope, a climber refers to those who climb slopes. In the concept of career, a worker refers to those who practice a certain profession. Here, both climber and worker represent people who work hard in a specific field."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "slope",
+    "target": "career"
+  },
+  "domains": {
+    "source": "Philosophy",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

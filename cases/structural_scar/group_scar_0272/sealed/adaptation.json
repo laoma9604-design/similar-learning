@@ -1,0 +1,119 @@
+{
+  "adaptation_id": "adapt_scar_0272",
+  "dataset": "scar",
+  "original_id": "272",
+  "source_object_id": "obj_group_scar_0272_src",
+  "target_object_id": "obj_group_scar_0272_tgt",
+  "faithful_mappings": [
+    [
+      "seeing",
+      "understanding"
+    ],
+    [
+      "light",
+      "knowledge"
+    ],
+    [
+      "illuminating",
+      "explaining"
+    ],
+    [
+      "darkness",
+      "confusion"
+    ],
+    [
+      "view",
+      "interpretation"
+    ],
+    [
+      "hidden",
+      "secret"
+    ]
+  ],
+  "explanation": [
+    "Seeing corresponds to understanding: seeing is perceiving objects through vision, while understanding is grasping viewpoints through thought. Both indicate the perception and knowledge of an object.",
+    "Light corresponds to knowledge: light enables us to see objects, while knowledge enables us to understand viewpoints. Both are the foundations that enable us to perceive and understand objects.",
+    "Illuminating corresponds to explaining: illuminating makes objects clear and visible in the light, while explaining makes viewpoints clear and understandable through thought. Both indicate the process of making an object easier to perceive and understand.",
+    "Darkness corresponds to confusion: darkness makes objects hard to see, while confusion makes viewpoints hard to understand. Both indicate the obstacles and difficulties in a certain process.",
+    "View corresponds to interpretation: view is the range of what we can see, while interpretation is the range of what we can understand. Both indicate the boundaries of perception and understanding of an object.",
+    "Hidden corresponds to secret: a hidden object cannot be seen, while a secret viewpoint cannot be easily understood. Both indicate the invisible and hard-to-understand parts of a certain process."
+  ],
+  "background": {
+    "source": "Seeing is the human ability to visually perceive the world and objects around us. The process of seeing involves the reception of light and the interpretation of that light by the brain to form a view of the world. However, astronomical seeing can refer to the blurring effects of air turbulence in the atmosphere, which can make objects in space appear distorted. In the occult, seeing refers to the ability to see auras or predict the future, making the unseen visible. The novel \"Seeing\" by José Saramago explores the implications of a sudden epidemic of blindness, which leaves citizens helpless in the face of an uncertain future. The song \"Seeing\" featured in Moby Grape's 1969 album \"Moby Grape '69\" may evoke a sense of illuminating the darkness, while Christopher Rouse's \"Seeing\" composition is a piano concerto which uses music to evoke hidden emotions and themes.",
+    "target": "\n\nUnderstanding is a crucial part of human psychology which allows individuals to grasp the essence of an abstract or physical object. Knowledge, explanation, interpretation, and inference are all closely related to the process of understanding. It enables a person to model an object in their mind, and make intelligent decisions with respect to it. The lack of understanding often leads to confusion, while a deep understanding can uncover secrets that were hidden before. Overall, understanding is a highly valuable tool that empowers human beings to make sense of the world around them."
+  },
+  "raw": {
+    "id": 272,
+    "lang": "en",
+    "system_a": "seeing",
+    "system_b": "understanding",
+    "mappings": [
+      [
+        "seeing",
+        "understanding"
+      ],
+      [
+        "light",
+        "knowledge"
+      ],
+      [
+        "illuminating",
+        "explaining"
+      ],
+      [
+        "darkness",
+        "confusion"
+      ],
+      [
+        "view",
+        "interpretation"
+      ],
+      [
+        "hidden",
+        "secret"
+      ]
+    ],
+    "system_a_domain": "Philosophy",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "Seeing is the human ability to visually perceive the world and objects around us. The process of seeing involves the reception of light and the interpretation of that light by the brain to form a view of the world. However, astronomical seeing can refer to the blurring effects of air turbulence in the atmosphere, which can make objects in space appear distorted. In the occult, seeing refers to the ability to see auras or predict the future, making the unseen visible. The novel \"Seeing\" by José Saramago explores the implications of a sudden epidemic of blindness, which leaves citizens helpless in the face of an uncertain future. The song \"Seeing\" featured in Moby Grape's 1969 album \"Moby Grape '69\" may evoke a sense of illuminating the darkness, while Christopher Rouse's \"Seeing\" composition is a piano concerto which uses music to evoke hidden emotions and themes.",
+    "system_b_background": "\n\nUnderstanding is a crucial part of human psychology which allows individuals to grasp the essence of an abstract or physical object. Knowledge, explanation, interpretation, and inference are all closely related to the process of understanding. It enables a person to model an object in their mind, and make intelligent decisions with respect to it. The lack of understanding often leads to confusion, while a deep understanding can uncover secrets that were hidden before. Overall, understanding is a highly valuable tool that empowers human beings to make sense of the world around them.",
+    "Explanation": [
+      "Seeing corresponds to understanding: seeing is perceiving objects through vision, while understanding is grasping viewpoints through thought. Both indicate the perception and knowledge of an object.",
+      "Light corresponds to knowledge: light enables us to see objects, while knowledge enables us to understand viewpoints. Both are the foundations that enable us to perceive and understand objects.",
+      "Illuminating corresponds to explaining: illuminating makes objects clear and visible in the light, while explaining makes viewpoints clear and understandable through thought. Both indicate the process of making an object easier to perceive and understand.",
+      "Darkness corresponds to confusion: darkness makes objects hard to see, while confusion makes viewpoints hard to understand. Both indicate the obstacles and difficulties in a certain process.",
+      "View corresponds to interpretation: view is the range of what we can see, while interpretation is the range of what we can understand. Both indicate the boundaries of perception and understanding of an object.",
+      "Hidden corresponds to secret: a hidden object cannot be seen, while a secret viewpoint cannot be easily understood. Both indicate the invisible and hard-to-understand parts of a certain process."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "seeing",
+    "target": "understanding"
+  },
+  "domains": {
+    "source": "Philosophy",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

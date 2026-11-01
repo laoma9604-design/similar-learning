@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0253",
+  "dataset": "scar",
+  "original_id": "253",
+  "source_object_id": "obj_group_scar_0253_src",
+  "target_object_id": "obj_group_scar_0253_tgt",
+  "faithful_mappings": [
+    [
+      "Stendhal",
+      "Dumas"
+    ],
+    [
+      "Julian Sorrell",
+      "Armand"
+    ],
+    [
+      "Mathilde",
+      "Margaret"
+    ],
+    [
+      "noble",
+      "civilian"
+    ]
+  ],
+  "explanation": [
+    "Stendhal corresponds to Dumas: This mapping is correct because Stendhal is the author of \"The Red and the Black\" and Dumas is the author of \"The Lady of the Camellias\".",
+    "Julian Sorrell corresponds to Armand: This mapping is correct because Julian Sorrell is the protagonist of \"The Red and the Black\" and Armand is the protagonist of \"The Lady of the Camellias\".",
+    "Mathilde corresponds to Margaret: This mapping is correct because Mathilde is the female lead in \"The Red and the Black\" and Margaret is the female lead in \"The Lady of the Camellias\".",
+    "Nobles correspond to commoners: This mapping is correct because in \"The Red and the Black\", nobility is an important theme, while in \"The Lady of the Camellias\", commoners are an important theme."
+  ],
+  "background": {
+    "source": "Red and black are a pair of colors that have been associated with various aspects of life. In literature, they are often used to symbolize different characters or themes. One notable example is the novel \"The Red and the Black\" by Stendhal, which centers around the life of a young man named Julian Sorrell. Julian seeks to advance in society by using his intelligence, but he is caught between two women, Mathilde and Madame de Rênal. Mathilde is a wealthy and manipulative woman who tempts Julian with promises of a bright future, while Madame de Rênal is a noblewoman who offers him pure love and a simpler life. Red and black feature prominently in the novel's themes of passion, ambition, and societal constraints, as Julian's decisions lead him down a path of both triumph and tragedy. Overall, 'Red and black' can be seen to represent the dualities of life, the struggle between passion and reason, and the societal norms that govern our choices.",
+    "target": "La Traviata is a beloved Italian opera composed by Giuseppe Verdi and based on Alexandre Dumas' novel La Dame aux camélias. The story follows Violetta, a courtesan, who falls in love with Armand, a civilian. However, their happiness proves to be short-lived as societal pressures and the disapproval of Armand's father lead to their separation. With its timeless themes of love, sacrifice, and societal norms, La Traviata continues to be one of the most frequently performed operas to this day."
+  },
+  "raw": {
+    "id": 253,
+    "lang": "en",
+    "system_a": "Red and Black",
+    "system_b": "La Traviata",
+    "mappings": [
+      [
+        "Stendhal",
+        "Dumas"
+      ],
+      [
+        "Julian Sorrell",
+        "Armand"
+      ],
+      [
+        "Mathilde",
+        "Margaret"
+      ],
+      [
+        "noble",
+        "civilian"
+      ]
+    ],
+    "system_a_domain": "Literature",
+    "system_b_domain": "Literature",
+    "system_a_background": "Red and black are a pair of colors that have been associated with various aspects of life. In literature, they are often used to symbolize different characters or themes. One notable example is the novel \"The Red and the Black\" by Stendhal, which centers around the life of a young man named Julian Sorrell. Julian seeks to advance in society by using his intelligence, but he is caught between two women, Mathilde and Madame de Rênal. Mathilde is a wealthy and manipulative woman who tempts Julian with promises of a bright future, while Madame de Rênal is a noblewoman who offers him pure love and a simpler life. Red and black feature prominently in the novel's themes of passion, ambition, and societal constraints, as Julian's decisions lead him down a path of both triumph and tragedy. Overall, 'Red and black' can be seen to represent the dualities of life, the struggle between passion and reason, and the societal norms that govern our choices.",
+    "system_b_background": "La Traviata is a beloved Italian opera composed by Giuseppe Verdi and based on Alexandre Dumas' novel La Dame aux camélias. The story follows Violetta, a courtesan, who falls in love with Armand, a civilian. However, their happiness proves to be short-lived as societal pressures and the disapproval of Armand's father lead to their separation. With its timeless themes of love, sacrifice, and societal norms, La Traviata continues to be one of the most frequently performed operas to this day.",
+    "Explanation": [
+      "Stendhal corresponds to Dumas: This mapping is correct because Stendhal is the author of \"The Red and the Black\" and Dumas is the author of \"The Lady of the Camellias\".",
+      "Julian Sorrell corresponds to Armand: This mapping is correct because Julian Sorrell is the protagonist of \"The Red and the Black\" and Armand is the protagonist of \"The Lady of the Camellias\".",
+      "Mathilde corresponds to Margaret: This mapping is correct because Mathilde is the female lead in \"The Red and the Black\" and Margaret is the female lead in \"The Lady of the Camellias\".",
+      "Nobles correspond to commoners: This mapping is correct because in \"The Red and the Black\", nobility is an important theme, while in \"The Lady of the Camellias\", commoners are an important theme."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Red and Black",
+    "target": "La Traviata"
+  },
+  "domains": {
+    "source": "Literature",
+    "target": "Literature"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

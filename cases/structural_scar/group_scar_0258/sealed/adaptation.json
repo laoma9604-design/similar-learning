@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0258",
+  "dataset": "scar",
+  "original_id": "258",
+  "source_object_id": "obj_group_scar_0258_src",
+  "target_object_id": "obj_group_scar_0258_tgt",
+  "faithful_mappings": [
+    [
+      "harper lee",
+      "Qian Zhongshu"
+    ],
+    [
+      "Scott Fitzgerald",
+      "Qian Zhongnan"
+    ],
+    [
+      "racism",
+      "Family concept"
+    ]
+  ],
+  "explanation": [
+    "Harper Lee corresponds to Qian Zhongshu: These two are literary giants, the authors of \"To Kill a Mockingbird\" and \"Fortress Besieged\" respectively. However, please note that the author of \"To Kill a Mockingbird\" is actually Nelle Harper Lee, not Harper Lee. The mapping here should be [Nelle Harper Lee, Qian Zhongshu].",
+    "Scott Fitzgerald corresponds to Qian Zhongnan: This mapping is not appropriate. Scott Fitzgerald is a famous American author, he is the author of \"The Great Gatsby\". The mapping here should be [Miss Caroline Fisher (the protagonist in \"To Kill a Mockingbird\"), Fang Hongjian (the protagonist in \"Fortress Besieged\")].",
+    "Racism corresponds to the concept of family: These two concepts respectively represent the problem of racism in \"To Kill a Mockingbird\" and the problem of family concept in \"Fortress Besieged\". Although these two concepts are different in content, they both reflect the phenomenon of injustice and discrimination in society, and become one of the main themes of their respective works. However, please note that \"To Kill a Mockingbird\" actually does not explicitly involve the issue of racism. The mapping here should be [Family conflicts and love entanglements (the themes of \"To Kill a Mockingbird\"), the concept of family (the theme of \"Fortress Besieged\")]."
+  ],
+  "background": {
+    "source": "The Thorn Birds is a critically acclaimed novel by Colleen McCullough that has become a cultural phenomenon. Set in the Australian Outback, the story follows the lives of the Cleary family spanning from 1915 to 1969. The novel has made history as the best-selling book in Australian history with over 33 million copies sold worldwide. The Thorn Birds was also adapted into a highly rated miniseries, becoming the second highest-rated miniseries in the United States behind Roots. McCullough’s work has inspired other adaptations such as a musical and has even garnered the attention of the \"Big Jubilee Read\" list of 70 books by Commonwealth authors in 2022. This novel tells a captivating and emotional tale, without the themes of racism present in other monumental works of literature such as Harper Lee’s \"To Kill a Mockingbird\" or Scott Fitzgerald’s \"The Great Gatsby.\"",
+    "target": "Fortress Besieged is a renowned satirical novel penned by the well-known Chinese writer Qian Zhongshu. The novel was initially published in 1947 and is considered to be a masterpiece of Chinese literature in the 20th century. The story is set in China during the late 1930s and is a witty representation of middle-class Chinese society of that era. The book gained immense popularity after its reprinting in the 1980s and was later adapted into a TV series in 1990. Qian Zhongshu's portrayal of family concepts in the novel has been appreciated worldwide."
+  },
+  "raw": {
+    "id": 258,
+    "lang": "en",
+    "system_a": "Thorn Birds",
+    "system_b": "Fortress Besieged",
+    "mappings": [
+      [
+        "harper lee",
+        "Qian Zhongshu"
+      ],
+      [
+        "Scott Fitzgerald",
+        "Qian Zhongnan"
+      ],
+      [
+        "racism",
+        "Family concept"
+      ]
+    ],
+    "system_a_domain": "Literature",
+    "system_b_domain": "Literature",
+    "system_a_background": "The Thorn Birds is a critically acclaimed novel by Colleen McCullough that has become a cultural phenomenon. Set in the Australian Outback, the story follows the lives of the Cleary family spanning from 1915 to 1969. The novel has made history as the best-selling book in Australian history with over 33 million copies sold worldwide. The Thorn Birds was also adapted into a highly rated miniseries, becoming the second highest-rated miniseries in the United States behind Roots. McCullough’s work has inspired other adaptations such as a musical and has even garnered the attention of the \"Big Jubilee Read\" list of 70 books by Commonwealth authors in 2022. This novel tells a captivating and emotional tale, without the themes of racism present in other monumental works of literature such as Harper Lee’s \"To Kill a Mockingbird\" or Scott Fitzgerald’s \"The Great Gatsby.\"",
+    "system_b_background": "Fortress Besieged is a renowned satirical novel penned by the well-known Chinese writer Qian Zhongshu. The novel was initially published in 1947 and is considered to be a masterpiece of Chinese literature in the 20th century. The story is set in China during the late 1930s and is a witty representation of middle-class Chinese society of that era. The book gained immense popularity after its reprinting in the 1980s and was later adapted into a TV series in 1990. Qian Zhongshu's portrayal of family concepts in the novel has been appreciated worldwide.",
+    "Explanation": [
+      "Harper Lee corresponds to Qian Zhongshu: These two are literary giants, the authors of \"To Kill a Mockingbird\" and \"Fortress Besieged\" respectively. However, please note that the author of \"To Kill a Mockingbird\" is actually Nelle Harper Lee, not Harper Lee. The mapping here should be [Nelle Harper Lee, Qian Zhongshu].",
+      "Scott Fitzgerald corresponds to Qian Zhongnan: This mapping is not appropriate. Scott Fitzgerald is a famous American author, he is the author of \"The Great Gatsby\". The mapping here should be [Miss Caroline Fisher (the protagonist in \"To Kill a Mockingbird\"), Fang Hongjian (the protagonist in \"Fortress Besieged\")].",
+      "Racism corresponds to the concept of family: These two concepts respectively represent the problem of racism in \"To Kill a Mockingbird\" and the problem of family concept in \"Fortress Besieged\". Although these two concepts are different in content, they both reflect the phenomenon of injustice and discrimination in society, and become one of the main themes of their respective works. However, please note that \"To Kill a Mockingbird\" actually does not explicitly involve the issue of racism. The mapping here should be [Family conflicts and love entanglements (the themes of \"To Kill a Mockingbird\"), the concept of family (the theme of \"Fortress Besieged\")]."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Thorn Birds",
+    "target": "Fortress Besieged"
+  },
+  "domains": {
+    "source": "Literature",
+    "target": "Literature"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

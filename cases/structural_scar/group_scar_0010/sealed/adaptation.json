@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0010",
+  "dataset": "scar",
+  "original_id": "10",
+  "source_object_id": "obj_group_scar_0010_src",
+  "target_object_id": "obj_group_scar_0010_tgt",
+  "faithful_mappings": [
+    [
+      "biology",
+      "Parts"
+    ],
+    [
+      "ecosystem",
+      "operating system"
+    ],
+    [
+      "Survive",
+      "run"
+    ],
+    [
+      "reproduce",
+      "Production"
+    ]
+  ],
+  "explanation": [
+    "Biology corresponds to parts: In an ecosystem, organisms are the basic units that make up the system. They depend on each other and work together to maintain the ecological balance. In a machine, parts are the basic components that make up the machine. They work together to achieve overall functionality. In this analogy, biology and parts both represent the basic building units in their respective systems.",
+    "Ecosystem corresponds to operating system: In an ecosystem, the environment provides the foundation for the survival and development of organisms. This includes the laws of interaction among various organisms. In a machine, the operating system is the core component that manages the machine's operation. It is responsible for scheduling and managing hardware resources to ensure that all parts work together. In this analogy, the ecosystem and the operating system both provide the basis for supporting and coordinating the components of their respective systems.",
+    "Survival corresponds to running: In an ecosystem, the survival of organisms refers to their ability to maintain vitality and vitality in a specific environment. In a machine, running refers to the normal working state of a machine under the coordinated action of the operating system and parts. In this analogy, survival and running both represent the normal functional state in their respective systems.",
+    "Reproduction corresponds to production: In an ecosystem, reproduction is the process by which organisms reproduce and expand populations in order to continue their species. In a machine, production refers to a machine completing specific tasks, such as manufacturing a product or providing a service during the running process. In this analogy, reproduction and production both represent activities that are carried out in their respective systems to achieve a certain purpose."
+  ],
+  "background": {
+    "source": "An ecosystem is a complex biological community made up of plants, animals, and microorganisms interacting with each other and their physical environment. It is a delicate balance that is maintained through the continuous cycling of nutrients and energy. The survival and reproduction of each species within an ecosystem are intertwined with one another. Each organism has its unique place in the food chain, and by consuming and being consumed, they play a crucial role in the movement of matter and energy through the system. However, ecosystems are not static, and they are continually changing through external and internal factors such as climate, decomposition, disturbance, and succession. Ecosystem services, such as clean water and air, pollination of crops, and aesthetic beauty, are essential to human survival and are heavily impacted by human activities such as pollution, habitat fragmentation, and deforestation. The collapse of an ecosystem can have devastating effects on all organisms within the system, including humans. Thus ecosystem restoration is crucial to maintaining the delicate balance of these biological communities, which in turn supports the sustainability of life on earth.",
+    "target": "Machines are physical systems designed to perform actions using power and mechanisms to apply forces and movements. They can be driven by animals and natural forces or by artificial sources such as engines or motors. These systems consist of different parts that work together to run the machine, including the operating system, sensors, and computers that monitor performance and plan movement. One of the primary functions of machines is to provide efficient production and increase productivity in various fields. Machines are used in transportation, appliances in homes and offices, farm machinery, machine tools, and factory automation systems and robots. Through the centuries, machines have evolved with the advancement of technology and are now complex systems that are user-friendly with convenient interfaces."
+  },
+  "raw": {
+    "id": 10,
+    "lang": "en",
+    "system_a": "Ecosystem",
+    "system_b": "Machines",
+    "mappings": [
+      [
+        "biology",
+        "Parts"
+      ],
+      [
+        "ecosystem",
+        "operating system"
+      ],
+      [
+        "Survive",
+        "run"
+      ],
+      [
+        "reproduce",
+        "Production"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Engineering",
+    "system_a_background": "An ecosystem is a complex biological community made up of plants, animals, and microorganisms interacting with each other and their physical environment. It is a delicate balance that is maintained through the continuous cycling of nutrients and energy. The survival and reproduction of each species within an ecosystem are intertwined with one another. Each organism has its unique place in the food chain, and by consuming and being consumed, they play a crucial role in the movement of matter and energy through the system. However, ecosystems are not static, and they are continually changing through external and internal factors such as climate, decomposition, disturbance, and succession. Ecosystem services, such as clean water and air, pollination of crops, and aesthetic beauty, are essential to human survival and are heavily impacted by human activities such as pollution, habitat fragmentation, and deforestation. The collapse of an ecosystem can have devastating effects on all organisms within the system, including humans. Thus ecosystem restoration is crucial to maintaining the delicate balance of these biological communities, which in turn supports the sustainability of life on earth.",
+    "system_b_background": "Machines are physical systems designed to perform actions using power and mechanisms to apply forces and movements. They can be driven by animals and natural forces or by artificial sources such as engines or motors. These systems consist of different parts that work together to run the machine, including the operating system, sensors, and computers that monitor performance and plan movement. One of the primary functions of machines is to provide efficient production and increase productivity in various fields. Machines are used in transportation, appliances in homes and offices, farm machinery, machine tools, and factory automation systems and robots. Through the centuries, machines have evolved with the advancement of technology and are now complex systems that are user-friendly with convenient interfaces.",
+    "Explanation": [
+      "Biology corresponds to parts: In an ecosystem, organisms are the basic units that make up the system. They depend on each other and work together to maintain the ecological balance. In a machine, parts are the basic components that make up the machine. They work together to achieve overall functionality. In this analogy, biology and parts both represent the basic building units in their respective systems.",
+      "Ecosystem corresponds to operating system: In an ecosystem, the environment provides the foundation for the survival and development of organisms. This includes the laws of interaction among various organisms. In a machine, the operating system is the core component that manages the machine's operation. It is responsible for scheduling and managing hardware resources to ensure that all parts work together. In this analogy, the ecosystem and the operating system both provide the basis for supporting and coordinating the components of their respective systems.",
+      "Survival corresponds to running: In an ecosystem, the survival of organisms refers to their ability to maintain vitality and vitality in a specific environment. In a machine, running refers to the normal working state of a machine under the coordinated action of the operating system and parts. In this analogy, survival and running both represent the normal functional state in their respective systems.",
+      "Reproduction corresponds to production: In an ecosystem, reproduction is the process by which organisms reproduce and expand populations in order to continue their species. In a machine, production refers to a machine completing specific tasks, such as manufacturing a product or providing a service during the running process. In this analogy, reproduction and production both represent activities that are carried out in their respective systems to achieve a certain purpose."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Ecosystem",
+    "target": "Machines"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

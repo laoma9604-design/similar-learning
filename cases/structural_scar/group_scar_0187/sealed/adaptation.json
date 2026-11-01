@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0187",
+  "dataset": "scar",
+  "original_id": "187",
+  "source_object_id": "obj_group_scar_0187_src",
+  "target_object_id": "obj_group_scar_0187_tgt",
+  "faithful_mappings": [
+    [
+      "crust",
+      "biscuit mold"
+    ],
+    [
+      "mineral",
+      "flour"
+    ],
+    [
+      "ore deposit",
+      "biscuit"
+    ]
+  ],
+  "explanation": [
+    "Crust corresponds to biscuit mold: the crust is the outer layer of the earth, and when mineral deposits form, minerals accumulate in the crust. Biscuit mold is a tool used to shape biscuits during the process of making them. In this analogy, both the crust and biscuit mold serve as the foundational shape and structure of their respective processes. However, this analogy may not be the most appropriate because the nature and function of the crust and biscuit mold are quite different.",
+    "Mineral corresponds to flour: minerals are the basic components of mineral deposits, and these minerals accumulate in the crust to form mineral deposits. Flour is the basic ingredient in the process of making biscuits. In this analogy, both minerals and flour serve as the main ingredients in their respective processes.",
+    "Ore deposit corresponds to biscuit: an ore deposit is a geological body formed by the accumulation of minerals in the earth's crust, containing a certain amount of mineable and utilizable mineral resources. Biscuits are made from flour that has been blended, shaped, and baked. In this analogy, both the ore deposit and biscuit represent the ultimate product of their respective processes."
+  ],
+  "background": {
+    "source": "Deposit formation, also known as fouling, refers to the unwanted accumulation of living or non-living substances on various surfaces. This phenomenon hinders the performance of components, systems, or plants that have specific functions. Deposit formation can take several forms, including encrustation, crudding, scaling, and sludge formation. Although it is a common issue in several industries, this article mainly focuses on the fouling of industrial heat exchangers. Micro fouling, which is more challenging to prevent, is particularly problematic. Deposit formation is a broad term that encompasses several aspects, from the fouling of ship hulls to plaque buildup on teeth. In this article, we explore the causes and effects of deposit formation and its impact on industrial heat exchangers. Furthermore, we will discuss the different types of deposit formations and how they can be prevented or minimized. With a particular emphasis on mineral and ore deposit formation, we aim to provide a comprehensive understanding of this phenomenon and its implications for various industries.",
+    "target": "Cookie making is a process of creating small blocks of data known as HTTP cookies while a user browses a website. These cookies are placed on the user's device by their web browser and they serve useful functions such as storing stateful information and tracking browsing activities. The process requires some basic ingredients such as flour and the use of a biscuit mold to create the delicious biscuits. Authentication cookies are used by web servers to authenticate a user’s login information, while tracking cookies are used to track a user’s browsing history. However, the use of tracking cookies has raised privacy concerns that have prompted lawmakers to take action. Overall, cookie making is a useful and simple process that has become an essential part of web browsing."
+  },
+  "raw": {
+    "id": 187,
+    "lang": "en",
+    "system_a": "Deposit Formation",
+    "system_b": "Cookie Making",
+    "mappings": [
+      [
+        "crust",
+        "biscuit mold"
+      ],
+      [
+        "mineral",
+        "flour"
+      ],
+      [
+        "ore deposit",
+        "biscuit"
+      ]
+    ],
+    "system_a_domain": "Geography",
+    "system_b_domain": "Art",
+    "system_a_background": "Deposit formation, also known as fouling, refers to the unwanted accumulation of living or non-living substances on various surfaces. This phenomenon hinders the performance of components, systems, or plants that have specific functions. Deposit formation can take several forms, including encrustation, crudding, scaling, and sludge formation. Although it is a common issue in several industries, this article mainly focuses on the fouling of industrial heat exchangers. Micro fouling, which is more challenging to prevent, is particularly problematic. Deposit formation is a broad term that encompasses several aspects, from the fouling of ship hulls to plaque buildup on teeth. In this article, we explore the causes and effects of deposit formation and its impact on industrial heat exchangers. Furthermore, we will discuss the different types of deposit formations and how they can be prevented or minimized. With a particular emphasis on mineral and ore deposit formation, we aim to provide a comprehensive understanding of this phenomenon and its implications for various industries.",
+    "system_b_background": "Cookie making is a process of creating small blocks of data known as HTTP cookies while a user browses a website. These cookies are placed on the user's device by their web browser and they serve useful functions such as storing stateful information and tracking browsing activities. The process requires some basic ingredients such as flour and the use of a biscuit mold to create the delicious biscuits. Authentication cookies are used by web servers to authenticate a user’s login information, while tracking cookies are used to track a user’s browsing history. However, the use of tracking cookies has raised privacy concerns that have prompted lawmakers to take action. Overall, cookie making is a useful and simple process that has become an essential part of web browsing.",
+    "Explanation": [
+      "Crust corresponds to biscuit mold: the crust is the outer layer of the earth, and when mineral deposits form, minerals accumulate in the crust. Biscuit mold is a tool used to shape biscuits during the process of making them. In this analogy, both the crust and biscuit mold serve as the foundational shape and structure of their respective processes. However, this analogy may not be the most appropriate because the nature and function of the crust and biscuit mold are quite different.",
+      "Mineral corresponds to flour: minerals are the basic components of mineral deposits, and these minerals accumulate in the crust to form mineral deposits. Flour is the basic ingredient in the process of making biscuits. In this analogy, both minerals and flour serve as the main ingredients in their respective processes.",
+      "Ore deposit corresponds to biscuit: an ore deposit is a geological body formed by the accumulation of minerals in the earth's crust, containing a certain amount of mineable and utilizable mineral resources. Biscuits are made from flour that has been blended, shaped, and baked. In this analogy, both the ore deposit and biscuit represent the ultimate product of their respective processes."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Deposit Formation",
+    "target": "Cookie Making"
+  },
+  "domains": {
+    "source": "Geography",
+    "target": "Art"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

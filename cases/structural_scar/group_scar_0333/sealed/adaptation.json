@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0333",
+  "dataset": "scar",
+  "original_id": "333",
+  "source_object_id": "obj_group_scar_0333_src",
+  "target_object_id": "obj_group_scar_0333_tgt",
+  "faithful_mappings": [
+    [
+      "paragraph",
+      "step"
+    ],
+    [
+      "title",
+      "dish name"
+    ],
+    [
+      "conclusion",
+      "finished product"
+    ],
+    [
+      "Revise",
+      "seasoning"
+    ]
+  ],
+  "explanation": [
+    "Paragraph corresponds to step: Paragraphs in an article are the organizational units that express ideas, while steps in a recipe are the organizational units of the cooking process. Both are organizational structures in their respective fields.",
+    "Title corresponds to dish name: The title of an article is a summary identifier of the content, while the dish name of a recipe is a summary identifier of the end product. Both are summary identifiers in their respective fields.",
+    "Conclusion corresponds to finished product: The conclusion of an article is a summary and generalization of the entire text, while the finished product of a recipe is the final result of the cooking process. Both are the final presentations in their respective fields.",
+    "Revision corresponds to seasoning: Revision in an article is optimizing and adjusting expression, while seasoning in a recipe is optimizing and adjusting taste. Both are optimization processes in their respective fields."
+  ],
+  "background": {
+    "source": "An article is a written piece of prose that can be categorized into various forms - news, opinion, feature, academic, informative or educational. It can be found in any publication like magazines, newspapers or even websites. It consists of a well-structured series of paragraphs that convey a particular message or idea. Every article comprises of an informative title, introduction, body, conclusion, and sometimes subheadings to separate the content. The title generally gives a clue about the subject matter and what the reader should expect, while the intro usually elaborates on the topic in a more detailed manner. The body of the article is where the writer provides information and arguments to support the topic, followed by a conclusion which serves as a summary of the work. After writing an article, it is important to revise it several times to ensure it is concise, engaging, accurate and free of grammatical errors.",
+    "target": "Recipes are detailed instructions that allow you to create a variety of delicious dishes. Each recipe outlines a series of steps that guide you in mixing and preparing ingredients to create a finished product that you can enjoy alone or share with others. Whether you are a beginner or an experienced cook, recipes help you to create dishes that are both tasty and healthy. Every recipe includes a dish name that gives you a clear idea of the type of food you'll be making. To make each dish unique, recipes also include instructions on how you can add a personal twist or seasoning that aligns with your particular taste profile. Additionally, you may come across sub-recipes or subrecipes that detail how to make an ingredient that will be required later on in the main recipe. With endless variations and combinations to explore, recipes offer an amazing opportunity for creativity and culinary experimentation in the kitchen. So, get ready to put on your chef's hat and try out new and exciting dishes with the help of simple yet detailed recipes!"
+  },
+  "raw": {
+    "id": 333,
+    "lang": "en",
+    "system_a": "Article",
+    "system_b": "Recipes",
+    "mappings": [
+      [
+        "paragraph",
+        "step"
+      ],
+      [
+        "title",
+        "dish name"
+      ],
+      [
+        "conclusion",
+        "finished product"
+      ],
+      [
+        "Revise",
+        "seasoning"
+      ]
+    ],
+    "system_a_domain": "Literature",
+    "system_b_domain": "Art",
+    "system_a_background": "An article is a written piece of prose that can be categorized into various forms - news, opinion, feature, academic, informative or educational. It can be found in any publication like magazines, newspapers or even websites. It consists of a well-structured series of paragraphs that convey a particular message or idea. Every article comprises of an informative title, introduction, body, conclusion, and sometimes subheadings to separate the content. The title generally gives a clue about the subject matter and what the reader should expect, while the intro usually elaborates on the topic in a more detailed manner. The body of the article is where the writer provides information and arguments to support the topic, followed by a conclusion which serves as a summary of the work. After writing an article, it is important to revise it several times to ensure it is concise, engaging, accurate and free of grammatical errors.",
+    "system_b_background": "Recipes are detailed instructions that allow you to create a variety of delicious dishes. Each recipe outlines a series of steps that guide you in mixing and preparing ingredients to create a finished product that you can enjoy alone or share with others. Whether you are a beginner or an experienced cook, recipes help you to create dishes that are both tasty and healthy. Every recipe includes a dish name that gives you a clear idea of the type of food you'll be making. To make each dish unique, recipes also include instructions on how you can add a personal twist or seasoning that aligns with your particular taste profile. Additionally, you may come across sub-recipes or subrecipes that detail how to make an ingredient that will be required later on in the main recipe. With endless variations and combinations to explore, recipes offer an amazing opportunity for creativity and culinary experimentation in the kitchen. So, get ready to put on your chef's hat and try out new and exciting dishes with the help of simple yet detailed recipes!",
+    "Explanation": [
+      "Paragraph corresponds to step: Paragraphs in an article are the organizational units that express ideas, while steps in a recipe are the organizational units of the cooking process. Both are organizational structures in their respective fields.",
+      "Title corresponds to dish name: The title of an article is a summary identifier of the content, while the dish name of a recipe is a summary identifier of the end product. Both are summary identifiers in their respective fields.",
+      "Conclusion corresponds to finished product: The conclusion of an article is a summary and generalization of the entire text, while the finished product of a recipe is the final result of the cooking process. Both are the final presentations in their respective fields.",
+      "Revision corresponds to seasoning: Revision in an article is optimizing and adjusting expression, while seasoning in a recipe is optimizing and adjusting taste. Both are optimization processes in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Article",
+    "target": "Recipes"
+  },
+  "domains": {
+    "source": "Literature",
+    "target": "Art"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

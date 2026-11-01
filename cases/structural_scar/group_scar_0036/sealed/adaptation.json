@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0036",
+  "dataset": "scar",
+  "original_id": "36",
+  "source_object_id": "obj_group_scar_0036_src",
+  "target_object_id": "obj_group_scar_0036_tgt",
+  "faithful_mappings": [
+    [
+      "Light",
+      "solar energy"
+    ],
+    [
+      "Chlorophyll",
+      "solar panels"
+    ],
+    [
+      "Chloroplast",
+      "bracket"
+    ]
+  ],
+  "explanation": [
+    "Light corresponds to solar energy: In photosynthesis, light is the energy source that plants use to convert energy. In solar panels, solar energy is the energy source that photovoltaic components use to convert light energy into electricity. Here, both light and solar energy are the sources of energy conversion in their respective systems.",
+    "Chlorophyll corresponds to solar panels: Chlorophyll in photosynthesis is the key substance that captures light energy and converts it into energy. Solar panels convert light energy into electricity, and photovoltaic panels are the core components that achieve this. Here, both chlorophyll and solar panels are the crucial components for energy conversion in their respective systems.",
+    "Chloroplast corresponds to brackets: Chloroplasts in photosynthesis are specialized structures within plant cells for conducting photosynthesis, containing chlorophyll. Brackets in solar panels are structures used to fix and support photovoltaic panels. Here, both chloroplasts and brackets are structural supports needed for functional implementation in their respective systems."
+  ],
+  "background": {
+    "source": "Photosynthesis is a process that plants, algae, and cyanobacteria use to convert light energy into chemical energy. It involves the absorption of light by proteins called reaction centers, which contain green chlorophyll pigments. Through a series of chemical reactions, carbon dioxide and water are converted into sugars and other organic compounds, with oxygen gas being released as a byproduct. The energy generated through photosynthesis is used by organisms to fuel their activities, and is largely responsible for producing and maintaining the oxygen content of the Earth's atmosphere. This process takes place within organelles called chloroplasts, which are most abundant in leaf cells in plants. The importance of photosynthesis for climate processes cannot be overstated, as it captures carbon dioxide from the air and binds it in plants and soils.",
+    "target": "Solar panels are an innovative solution to the world's increasing reliance on non-renewable energy sources. These panels, also known as photovoltaic (PV) modules or panels, harness solar energy to generate electricity in a sustainable manner. They are made up of multiple solar cells that are assembled and mounted on a rectangular frame. The cells trap energy from the sun and convert it into direct current (DC) electricity. This energy can be used to power electrical equipment directly or can be fed back into an alternate current (AC) grid through an inverter system.\nTo ensure that the solar panel has a stable and safe location, it is usually mounted on a sturdy bracket. With the continued use of solar panels, individuals and businesses alike can rely on solar energy as a sustainable source of electricity while reducing their carbon footprint."
+  },
+  "raw": {
+    "id": 36,
+    "lang": "en",
+    "system_a": "Photosynthesis",
+    "system_b": "Solar Panels",
+    "mappings": [
+      [
+        "Light",
+        "solar energy"
+      ],
+      [
+        "Chlorophyll",
+        "solar panels"
+      ],
+      [
+        "Chloroplast",
+        "bracket"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Physics",
+    "system_a_background": "Photosynthesis is a process that plants, algae, and cyanobacteria use to convert light energy into chemical energy. It involves the absorption of light by proteins called reaction centers, which contain green chlorophyll pigments. Through a series of chemical reactions, carbon dioxide and water are converted into sugars and other organic compounds, with oxygen gas being released as a byproduct. The energy generated through photosynthesis is used by organisms to fuel their activities, and is largely responsible for producing and maintaining the oxygen content of the Earth's atmosphere. This process takes place within organelles called chloroplasts, which are most abundant in leaf cells in plants. The importance of photosynthesis for climate processes cannot be overstated, as it captures carbon dioxide from the air and binds it in plants and soils.",
+    "system_b_background": "Solar panels are an innovative solution to the world's increasing reliance on non-renewable energy sources. These panels, also known as photovoltaic (PV) modules or panels, harness solar energy to generate electricity in a sustainable manner. They are made up of multiple solar cells that are assembled and mounted on a rectangular frame. The cells trap energy from the sun and convert it into direct current (DC) electricity. This energy can be used to power electrical equipment directly or can be fed back into an alternate current (AC) grid through an inverter system.\nTo ensure that the solar panel has a stable and safe location, it is usually mounted on a sturdy bracket. With the continued use of solar panels, individuals and businesses alike can rely on solar energy as a sustainable source of electricity while reducing their carbon footprint.",
+    "Explanation": [
+      "Light corresponds to solar energy: In photosynthesis, light is the energy source that plants use to convert energy. In solar panels, solar energy is the energy source that photovoltaic components use to convert light energy into electricity. Here, both light and solar energy are the sources of energy conversion in their respective systems.",
+      "Chlorophyll corresponds to solar panels: Chlorophyll in photosynthesis is the key substance that captures light energy and converts it into energy. Solar panels convert light energy into electricity, and photovoltaic panels are the core components that achieve this. Here, both chlorophyll and solar panels are the crucial components for energy conversion in their respective systems.",
+      "Chloroplast corresponds to brackets: Chloroplasts in photosynthesis are specialized structures within plant cells for conducting photosynthesis, containing chlorophyll. Brackets in solar panels are structures used to fix and support photovoltaic panels. Here, both chloroplasts and brackets are structural supports needed for functional implementation in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Photosynthesis",
+    "target": "Solar Panels"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

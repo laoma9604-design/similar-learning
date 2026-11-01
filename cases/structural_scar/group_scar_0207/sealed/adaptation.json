@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0207",
+  "dataset": "scar",
+  "original_id": "207",
+  "source_object_id": "obj_group_scar_0207_src",
+  "target_object_id": "obj_group_scar_0207_tgt",
+  "faithful_mappings": [
+    [
+      "Serfdom",
+      "western invasion"
+    ],
+    [
+      "Alexander II",
+      "emperor meiji"
+    ],
+    [
+      "bourgeois reform",
+      "bourgeois reform"
+    ]
+  ],
+  "explanation": [
+    "Serfdom corresponds to Western invasion: Both elements represent the pressure faced by each country before their respective reforms. Prior to the reform of 1861, serfdom seriously hindered the economic development of Russia, while the invasion of western powers left Japan in a serious national crisis before the Meiji Restoration.",
+    "Alexander II corresponds to Emperor Meiji: Both elements represent the leaders of their respective country's reforms. Alexander II was the driving force behind Russia's 1861 reform, he abolished serfdom and carried out a series of bourgeois reforms, while Emperor Meiji was the leader of Japan's modernization reform during the Meiji Restoration, liberating Japan from its isolationist stance.",
+    "Bourgeois reform corresponds to bourgeois reform: This mapping is exactly the same as both represent the bourgeois reforms carried out by their respective countries. These reforms aimed to promote modernization and develop the economy by breaking free from the constraints of the old system."
+  ],
+  "background": {
+    "source": "The year 1861 was a turning point in Russian history thanks to the efforts of Alexander II to end serfdom and bring about bourgeois reforms. This came at a time when other European states were also experiencing major changes, such as the newly formed Kingdom of Italy which had just emerged from a decades-long process of consolidation. rnrnDespite opposition from the nobility, Alexander II managed to push through reforms that freed millions of serfs and gave them more rights. These changes marked a significant step towards modernization and the development of a more industrialized society. The reforms also had broader implications for Europe as a whole, paving the way for further political and social changes in the continent. On the other hand, the Kingdom of Italy was consolidating its many states into a single state, a process influenced by the Savoy-led Kingdom of Sardinia. Despite initial disputes with Austria, Italy managed to gain Veneto following their alliance with Prussia. The country's role in World War I and later the fascist rule of Mussolini also had far-reaching consequences for European politics and society. Nonetheless, the events of 1861 marked a crucial moment in Russian history and the broader development of Europe.",
+    "target": "The Meiji Restoration refers to a significant political event in Japan's history that commenced in 1868, whereby practical imperial rule was restored under Emperor Meiji. The events ended the ruling Shogunate resulting in the consolidation of political power under the emperor's rule. This political transformation known as the Honorable Restoration or Meiji Renewal ushered in a new era of social and political reforms that aimed to modernize Japan by adopting Western ideas and production methods. The government's goals were highlighted in Emperor Meiji's Charter Oath, which further bolstered the scopes of the reforms within the Japanese society. As a result, the Meiji Restoration brought about significant changes to Japan's political and social structures in both the late Edo period and the Meiji era, leading to rapid industrialization and bourgeois reforms. The restoration was a response to the western invasion in Japan, and as such, it played a vital role in shaping Japan's identity as a major world power."
+  },
+  "raw": {
+    "id": 207,
+    "lang": "en",
+    "system_a": "Reformation in Russia in 1861",
+    "system_b": "Meiji Restoration in Japan",
+    "mappings": [
+      [
+        "Serfdom",
+        "western invasion"
+      ],
+      [
+        "Alexander II",
+        "emperor meiji"
+      ],
+      [
+        "bourgeois reform",
+        "bourgeois reform"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "The year 1861 was a turning point in Russian history thanks to the efforts of Alexander II to end serfdom and bring about bourgeois reforms. This came at a time when other European states were also experiencing major changes, such as the newly formed Kingdom of Italy which had just emerged from a decades-long process of consolidation. rnrnDespite opposition from the nobility, Alexander II managed to push through reforms that freed millions of serfs and gave them more rights. These changes marked a significant step towards modernization and the development of a more industrialized society. The reforms also had broader implications for Europe as a whole, paving the way for further political and social changes in the continent. On the other hand, the Kingdom of Italy was consolidating its many states into a single state, a process influenced by the Savoy-led Kingdom of Sardinia. Despite initial disputes with Austria, Italy managed to gain Veneto following their alliance with Prussia. The country's role in World War I and later the fascist rule of Mussolini also had far-reaching consequences for European politics and society. Nonetheless, the events of 1861 marked a crucial moment in Russian history and the broader development of Europe.",
+    "system_b_background": "The Meiji Restoration refers to a significant political event in Japan's history that commenced in 1868, whereby practical imperial rule was restored under Emperor Meiji. The events ended the ruling Shogunate resulting in the consolidation of political power under the emperor's rule. This political transformation known as the Honorable Restoration or Meiji Renewal ushered in a new era of social and political reforms that aimed to modernize Japan by adopting Western ideas and production methods. The government's goals were highlighted in Emperor Meiji's Charter Oath, which further bolstered the scopes of the reforms within the Japanese society. As a result, the Meiji Restoration brought about significant changes to Japan's political and social structures in both the late Edo period and the Meiji era, leading to rapid industrialization and bourgeois reforms. The restoration was a response to the western invasion in Japan, and as such, it played a vital role in shaping Japan's identity as a major world power.",
+    "Explanation": [
+      "Serfdom corresponds to Western invasion: Both elements represent the pressure faced by each country before their respective reforms. Prior to the reform of 1861, serfdom seriously hindered the economic development of Russia, while the invasion of western powers left Japan in a serious national crisis before the Meiji Restoration.",
+      "Alexander II corresponds to Emperor Meiji: Both elements represent the leaders of their respective country's reforms. Alexander II was the driving force behind Russia's 1861 reform, he abolished serfdom and carried out a series of bourgeois reforms, while Emperor Meiji was the leader of Japan's modernization reform during the Meiji Restoration, liberating Japan from its isolationist stance.",
+      "Bourgeois reform corresponds to bourgeois reform: This mapping is exactly the same as both represent the bourgeois reforms carried out by their respective countries. These reforms aimed to promote modernization and develop the economy by breaking free from the constraints of the old system."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Reformation in Russia in 1861",
+    "target": "Meiji Restoration in Japan"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

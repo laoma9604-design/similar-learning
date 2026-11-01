@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0063",
+  "dataset": "scar",
+  "original_id": "63",
+  "source_object_id": "obj_group_scar_0063_src",
+  "target_object_id": "obj_group_scar_0063_tgt",
+  "faithful_mappings": [
+    [
+      "slot machines",
+      "bacteria"
+    ],
+    [
+      "reels",
+      "genes"
+    ],
+    [
+      "spinning",
+      "mutating"
+    ],
+    [
+      "winning",
+      "reproducing"
+    ],
+    [
+      "losing",
+      "dying"
+    ]
+  ],
+  "explanation": [
+    "Slot machines correspond to bacteria: Slot machines are gambling devices, while bacteria are single-celled organisms. Both are entities with specific functions and characteristics.",
+    "Reels correspond to genes: The reels in a slot machine are components used to display patterns, while genes in bacteria are genetic information determining their characteristics. Both are basic units to perform specific functions.",
+    "Spinning corresponds to mutating: The spinning of reels in a slot machine is to generate different combinations of patterns, while mutations of genes in bacteria are to produce different biological traits. Both involve randomness and diversity.",
+    "Winning corresponds to reproducing: Winning in a slot machine means the player receives rewards, while reproducing in bacteria mutation means successful reproduction and adaptation to the environment. Both represent to some degree of success and advantage.",
+    "Losing corresponds to dying: Losing in a slot machine means players fail to win rewards, while dying in bacterial mutation means not successful reproduction or adaptation to the environment. Both represent to some extent failure and disadvantage."
+  ],
+  "background": {
+    "source": "A slot machine is a type of gambling machine that involves chance and luck. Its layout features a screen with three or more reels that spin when activated, with the ultimate aim of winning money by aligning symbols following the rules of the game. While it used to require a lever to be pulled to spin the reels, most machines today operate using buttons and touchscreens. Slot machines accept various forms of payment, including coins, cash, vouchers, or tokens. While winning is the ultimate goal, it's important to understand that the odds of losing are very high, hence the common phrase \"one-armed bandit\". Despite this, slot machines continue to be the most popular form of gambling in casinos, contributing an average of 70% of a casino's income. With the advent of digital technology, modern slot machines come with advanced bonus rounds, more interactive elements, graphics, and are designed to make gameplay more exciting.",
+    "target": "Bacteria are tiny, single-celled organisms that can be found everywhere on Earth, from the depths of the ocean to the insides of other living things. Their importance in nutrient cycling, biotechnology, and medicine makes them a fascinating subject of study. One of the ways bacteria can adapt to changing environments and defend against threats is through genetic mutations. As they reproduce and go through their life cycles, genetic copying errors can occur, leading to new traits that may be beneficial for the organism's survival. However, not all mutations are advantageous, and some bacteria may ultimately die out if they cannot adapt quickly enough to changing conditions. Understanding how bacteria mutate and evolve is crucial for developing new antibiotics and combating antibiotic resistance."
+  },
+  "raw": {
+    "id": 63,
+    "lang": "en",
+    "system_a": "slot machine",
+    "system_b": "bacterial mutation",
+    "mappings": [
+      [
+        "slot machines",
+        "bacteria"
+      ],
+      [
+        "reels",
+        "genes"
+      ],
+      [
+        "spinning",
+        "mutating"
+      ],
+      [
+        "winning",
+        "reproducing"
+      ],
+      [
+        "losing",
+        "dying"
+      ]
+    ],
+    "system_a_domain": "Art",
+    "system_b_domain": "Biology",
+    "system_a_background": "A slot machine is a type of gambling machine that involves chance and luck. Its layout features a screen with three or more reels that spin when activated, with the ultimate aim of winning money by aligning symbols following the rules of the game. While it used to require a lever to be pulled to spin the reels, most machines today operate using buttons and touchscreens. Slot machines accept various forms of payment, including coins, cash, vouchers, or tokens. While winning is the ultimate goal, it's important to understand that the odds of losing are very high, hence the common phrase \"one-armed bandit\". Despite this, slot machines continue to be the most popular form of gambling in casinos, contributing an average of 70% of a casino's income. With the advent of digital technology, modern slot machines come with advanced bonus rounds, more interactive elements, graphics, and are designed to make gameplay more exciting.",
+    "system_b_background": "Bacteria are tiny, single-celled organisms that can be found everywhere on Earth, from the depths of the ocean to the insides of other living things. Their importance in nutrient cycling, biotechnology, and medicine makes them a fascinating subject of study. One of the ways bacteria can adapt to changing environments and defend against threats is through genetic mutations. As they reproduce and go through their life cycles, genetic copying errors can occur, leading to new traits that may be beneficial for the organism's survival. However, not all mutations are advantageous, and some bacteria may ultimately die out if they cannot adapt quickly enough to changing conditions. Understanding how bacteria mutate and evolve is crucial for developing new antibiotics and combating antibiotic resistance.",
+    "Explanation": [
+      "Slot machines correspond to bacteria: Slot machines are gambling devices, while bacteria are single-celled organisms. Both are entities with specific functions and characteristics.",
+      "Reels correspond to genes: The reels in a slot machine are components used to display patterns, while genes in bacteria are genetic information determining their characteristics. Both are basic units to perform specific functions.",
+      "Spinning corresponds to mutating: The spinning of reels in a slot machine is to generate different combinations of patterns, while mutations of genes in bacteria are to produce different biological traits. Both involve randomness and diversity.",
+      "Winning corresponds to reproducing: Winning in a slot machine means the player receives rewards, while reproducing in bacteria mutation means successful reproduction and adaptation to the environment. Both represent to some degree of success and advantage.",
+      "Losing corresponds to dying: Losing in a slot machine means players fail to win rewards, while dying in bacterial mutation means not successful reproduction or adaptation to the environment. Both represent to some extent failure and disadvantage."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "slot machine",
+    "target": "bacterial mutation"
+  },
+  "domains": {
+    "source": "Art",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0194",
+  "dataset": "scar",
+  "original_id": "194",
+  "source_object_id": "obj_group_scar_0194_src",
+  "target_object_id": "obj_group_scar_0194_tgt",
+  "faithful_mappings": [
+    [
+      "pharaoh",
+      "emperor"
+    ],
+    [
+      "royal palace",
+      "palace"
+    ],
+    [
+      "sacrificial place",
+      "temple"
+    ],
+    [
+      "high priest",
+      "bureaucracy"
+    ],
+    [
+      "noble",
+      "noble"
+    ]
+  ],
+  "explanation": [
+    "Pharaoh corresponds to Emperor: Under the rule of the Pharaoh, who held a divine status, he was the highest ruler in ancient Egypt. Similarly, in feudal dynasties, the Emperor was also the highest ruler and held a supreme status. Both represent the highest power and status of the nation.",
+    "Royal palace corresponds to Palace: Under the rule of the Pharaoh, the royal palace was the place where the Pharaoh and members of the royal family lived and worked. Similarly, in feudal dynasties, the palace was the place where the Emperor and members of the royal family lived and worked. Both are symbols and centers of the highest power of the nation.",
+    "Sacrificial place corresponds to Temple: Under the rule of the Pharaoh, the sacrificial place was where religious ceremonies and sacrificial activities were held. Similarly, in feudal dynasties, the temple was also where religious ceremonies and sacrificial activities were held. Both are places of religious activities.",
+    "High priest corresponds to Bureaucracy: Under the rule of the Pharaoh, high priests were responsible for managing religious affairs and assisting the Pharaoh in governing the country. Similarly, in feudal dynasties, bureaucrats were responsible for managing national affairs and assisting the Emperor in governing the country. Both are important components of national management.",
+    "Noble corresponds to Noble: In both the rule of the Pharaoh and feudal dynasties, the nobility was the high social class with privileges and wealth. The analogy here represents the upper class in both systems."
+  ],
+  "background": {
+    "source": "Reign of the Pharaohs refers to the period of time when ancient Egypt was ruled by its native kings, also known as pharaohs. The title of Pharaoh was not in use until the New Kingdom's 18th Dynasty, and it remained relatively constant throughout the course of ancient Egyptian history. The pharaohs lived in grand royal palaces and oversaw important sites such as sacrificial places, with the aid of high priests and nobles. The rule of the pharaohs lasted for approximately 2500 years until Egypt was conquered by the Kingdom of Kush, who adopted the traditional pharaonic titulature for themselves. After the Kushite conquest, Egypt was ruled by Achaemenid Empire, whose rulers also took on the title of pharaoh. The reign of the pharaohs came to an end when Egypt became a province of Rome in 30 BC. This list of pharaohs features approximate dates based on the conventional chronology of Ancient Egypt, developed by the Petrie Museum of Egyptian Archaeology. The period of Reign of the Pharaohs is a fascinating time in the history of ancient Egypt and is steeped in rich cultural and historical significance.",
+    "target": "Feudal Dynasties were a way of structuring society in medieval Europe, where individuals received land in exchange for service or labor. The system was not conceived of as a formal political system, but a set of reciprocal legal and military obligations among the warrior nobility. However, a broader definition of feudalism includes obligations of all three estates of the realm: the nobility, the clergy, and the peasantry. This system of manorialism bound them all to a \"feudal society.\" The culture was marked by grand palaces and temples, a well-established bureaucracy, and a class of privileged nobles. The term feudalism has been debated by historians and it remains somewhat contested, but it continues to hold a prominent place in the study of medieval Europe's political, social, and economic structures."
+  },
+  "raw": {
+    "id": 194,
+    "lang": "en",
+    "system_a": "Reign of the Pharaohs",
+    "system_b": "Feudal Dynasties",
+    "mappings": [
+      [
+        "pharaoh",
+        "emperor"
+      ],
+      [
+        "royal palace",
+        "palace"
+      ],
+      [
+        "sacrificial place",
+        "temple"
+      ],
+      [
+        "high priest",
+        "bureaucracy"
+      ],
+      [
+        "noble",
+        "noble"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "Reign of the Pharaohs refers to the period of time when ancient Egypt was ruled by its native kings, also known as pharaohs. The title of Pharaoh was not in use until the New Kingdom's 18th Dynasty, and it remained relatively constant throughout the course of ancient Egyptian history. The pharaohs lived in grand royal palaces and oversaw important sites such as sacrificial places, with the aid of high priests and nobles. The rule of the pharaohs lasted for approximately 2500 years until Egypt was conquered by the Kingdom of Kush, who adopted the traditional pharaonic titulature for themselves. After the Kushite conquest, Egypt was ruled by Achaemenid Empire, whose rulers also took on the title of pharaoh. The reign of the pharaohs came to an end when Egypt became a province of Rome in 30 BC. This list of pharaohs features approximate dates based on the conventional chronology of Ancient Egypt, developed by the Petrie Museum of Egyptian Archaeology. The period of Reign of the Pharaohs is a fascinating time in the history of ancient Egypt and is steeped in rich cultural and historical significance.",
+    "system_b_background": "Feudal Dynasties were a way of structuring society in medieval Europe, where individuals received land in exchange for service or labor. The system was not conceived of as a formal political system, but a set of reciprocal legal and military obligations among the warrior nobility. However, a broader definition of feudalism includes obligations of all three estates of the realm: the nobility, the clergy, and the peasantry. This system of manorialism bound them all to a \"feudal society.\" The culture was marked by grand palaces and temples, a well-established bureaucracy, and a class of privileged nobles. The term feudalism has been debated by historians and it remains somewhat contested, but it continues to hold a prominent place in the study of medieval Europe's political, social, and economic structures.",
+    "Explanation": [
+      "Pharaoh corresponds to Emperor: Under the rule of the Pharaoh, who held a divine status, he was the highest ruler in ancient Egypt. Similarly, in feudal dynasties, the Emperor was also the highest ruler and held a supreme status. Both represent the highest power and status of the nation.",
+      "Royal palace corresponds to Palace: Under the rule of the Pharaoh, the royal palace was the place where the Pharaoh and members of the royal family lived and worked. Similarly, in feudal dynasties, the palace was the place where the Emperor and members of the royal family lived and worked. Both are symbols and centers of the highest power of the nation.",
+      "Sacrificial place corresponds to Temple: Under the rule of the Pharaoh, the sacrificial place was where religious ceremonies and sacrificial activities were held. Similarly, in feudal dynasties, the temple was also where religious ceremonies and sacrificial activities were held. Both are places of religious activities.",
+      "High priest corresponds to Bureaucracy: Under the rule of the Pharaoh, high priests were responsible for managing religious affairs and assisting the Pharaoh in governing the country. Similarly, in feudal dynasties, bureaucrats were responsible for managing national affairs and assisting the Emperor in governing the country. Both are important components of national management.",
+      "Noble corresponds to Noble: In both the rule of the Pharaoh and feudal dynasties, the nobility was the high social class with privileges and wealth. The analogy here represents the upper class in both systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Reign of the Pharaohs",
+    "target": "Feudal Dynasties"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

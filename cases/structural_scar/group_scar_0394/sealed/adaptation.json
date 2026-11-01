@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0394",
+  "dataset": "scar",
+  "original_id": "394",
+  "source_object_id": "obj_group_scar_0394_src",
+  "target_object_id": "obj_group_scar_0394_tgt",
+  "faithful_mappings": [
+    [
+      "hydrogen",
+      "energy"
+    ],
+    [
+      "temperature",
+      "lighter"
+    ],
+    [
+      "fusion reaction",
+      "combustion"
+    ]
+  ],
+  "explanation": [
+    "Hydrogen corresponds to energy: In nuclear fusion, hydrogen is the core element as fuel, which can produce a large amount of energy. In energy combustion, energy is the substance being burned, such as petroleum, coal, etc., which also can generate a large amount of energy. Both are sources of energy.",
+    "Temperature corresponds to lighter: Nuclear fusion reactions require extremely high temperatures to allow hydrogen atoms to overcome electrostatic repulsion and undergo fusion reactions. In energy combustion, a lighter is used to initiate the combustion reaction, providing sufficient initial energy. Both are key conditions for reactions to occur.",
+    "Fusion reaction corresponds to combustion: The fusion reaction in nuclear fusion is the process of hydrogen atoms bonding to generate energy. Energy combustion is the process of fuel burning to produce energy. Both represent the reaction that generates energy."
+  ],
+  "background": {
+    "source": "Nuclear fusion is a fascinating process that involves combining two or more atomic nuclei to create different atomic nuclei and subatomic particles such as neutrons or protons. This process is highly dependent on temperature and the elements used. Hydrogen, for example, is a highly fusible element and a common choice for nuclear fusion. Fusion of lighter elements than iron-56 or nickel-62 release energy, which occurs due to the difference in nuclear binding energy between the atomic nuclei before and after the reaction. Nuclear fusion is crucial in powering stars and other high-magnitude stars that release large amounts of energy. In contrast, fusing heavier nuclei is an endothermic process that retains energy by the product nucleons. Overall, nuclear fusion is a complex yet intriguing process that could hold the key to unlocking vast amounts of energy in the future.",
+    "target": "Burning energy is an essential part of sustaining life for all animals, including humans, and refers to the chemical energy that we derive from our food to fuel our metabolism and muscular activity. Aerobic respiration is the main process by which we extract energy from carbohydrates, fats, and proteins by combining them with oxygen. While other components of our diet, such as organic acids and polyols, may contribute to energy intake, some components such as water, minerals, vitamins, cholesterol, and fiber are also important for health and survival. The energy content of food is expressed in joules (J) or calories (cal), with fats and ethanol providing the greatest amount of food energy per unit mass. Carbohydrates and proteins have similar energy densities, and the energy content of a dish or meal can be estimated by adding the energy contents of its individual components. While burning energy may bring to mind images of fire and combustion, it is a complex process that powers our bodies and keeps us going."
+  },
+  "raw": {
+    "id": 394,
+    "lang": "en",
+    "system_a": "Nuclear Fusion",
+    "system_b": "Burning Energy",
+    "mappings": [
+      [
+        "hydrogen",
+        "energy"
+      ],
+      [
+        "temperature",
+        "lighter"
+      ],
+      [
+        "fusion reaction",
+        "combustion"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Physics",
+    "system_a_background": "Nuclear fusion is a fascinating process that involves combining two or more atomic nuclei to create different atomic nuclei and subatomic particles such as neutrons or protons. This process is highly dependent on temperature and the elements used. Hydrogen, for example, is a highly fusible element and a common choice for nuclear fusion. Fusion of lighter elements than iron-56 or nickel-62 release energy, which occurs due to the difference in nuclear binding energy between the atomic nuclei before and after the reaction. Nuclear fusion is crucial in powering stars and other high-magnitude stars that release large amounts of energy. In contrast, fusing heavier nuclei is an endothermic process that retains energy by the product nucleons. Overall, nuclear fusion is a complex yet intriguing process that could hold the key to unlocking vast amounts of energy in the future.",
+    "system_b_background": "Burning energy is an essential part of sustaining life for all animals, including humans, and refers to the chemical energy that we derive from our food to fuel our metabolism and muscular activity. Aerobic respiration is the main process by which we extract energy from carbohydrates, fats, and proteins by combining them with oxygen. While other components of our diet, such as organic acids and polyols, may contribute to energy intake, some components such as water, minerals, vitamins, cholesterol, and fiber are also important for health and survival. The energy content of food is expressed in joules (J) or calories (cal), with fats and ethanol providing the greatest amount of food energy per unit mass. Carbohydrates and proteins have similar energy densities, and the energy content of a dish or meal can be estimated by adding the energy contents of its individual components. While burning energy may bring to mind images of fire and combustion, it is a complex process that powers our bodies and keeps us going.",
+    "Explanation": [
+      "Hydrogen corresponds to energy: In nuclear fusion, hydrogen is the core element as fuel, which can produce a large amount of energy. In energy combustion, energy is the substance being burned, such as petroleum, coal, etc., which also can generate a large amount of energy. Both are sources of energy.",
+      "Temperature corresponds to lighter: Nuclear fusion reactions require extremely high temperatures to allow hydrogen atoms to overcome electrostatic repulsion and undergo fusion reactions. In energy combustion, a lighter is used to initiate the combustion reaction, providing sufficient initial energy. Both are key conditions for reactions to occur.",
+      "Fusion reaction corresponds to combustion: The fusion reaction in nuclear fusion is the process of hydrogen atoms bonding to generate energy. Energy combustion is the process of fuel burning to produce energy. Both represent the reaction that generates energy."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Nuclear Fusion",
+    "target": "Burning Energy"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

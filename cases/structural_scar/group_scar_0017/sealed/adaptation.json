@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0017",
+  "dataset": "scar",
+  "original_id": "17",
+  "source_object_id": "obj_group_scar_0017_src",
+  "target_object_id": "obj_group_scar_0017_tgt",
+  "faithful_mappings": [
+    [
+      "organism",
+      "computer"
+    ],
+    [
+      "Gene",
+      "software"
+    ],
+    [
+      "control",
+      "adjust"
+    ]
+  ],
+  "explanation": [
+    "Organism corresponds to computer: in this mapping, organism and computer respectively represent the workplace of the genome and the operating system. Organisms are the carriers of genome function, while computers are the hardware platform on which operating systems run.",
+    "Gene corresponds to software: genes are the basic unit of genetic information storage and transmission in organisms, which can be seen as \"programming code\" inside organisms. In the field of computer technology, software consists of programming code used to implement specific functions. In this mapping, genes and software both represent information carriers and function implementation in their respective systems.",
+    "Controlling gene expression corresponds to system calls: gene expression is the process that allows the functions of genes in organisms to be realized. Through regulating gene expression, organisms can adaptively adjust their physiological functions under different environmental conditions. In the field of computer technology, the operating system controls the operation of software through system calls, enabling software to perform different tasks according to user requirements and system states. In this mapping, controlling gene expression and system calls both represent functional regulation and management mechanisms in their respective systems."
+  ],
+  "background": {
+    "source": "A genome is a complete set of genetic information of an organism, consisting of DNA or RNA sequences. It includes various regions of the genome, such as regulatory sequences, non-coding DNA, and even junk DNA. Genomics is the study of genomes, and it has allowed scientists to sequence the genomes of many organisms, which has been a significant step forward in the fields of molecular biology and genetics. The genome contains important information for the organism's survival, such as protein-coding genes and control sequences. Despite the initial limitations to fully sequence the human genome, advances in sequencing technologies have made it possible to sequence the entire human genome in recent years, allowing for a better understanding of human genetics and disease.",
+    "target": "An operating system (OS) is a vital system software that manages the hardware and software resources of a computer system. It provides a common platform and various services for computer programs to run smoothly. OS helps in adjusting computer resources such as input, output, and memory allocation for efficient use of the system. It also includes accounting software for cost allocation of processor time and other resources used by the system. Operating systems act as an intermediary between programs and the computer hardware and control the flow of information between the two. OS can be found on various devices from cell phones to supercomputers, and it performs specific functions based on the device it operates. The market share of different operating systems varies depending on the device, with Microsoft Windows being the most popular among general-purpose personal computers. In the mobile sector, Android OS dominates with a 70.82% share in 2020. Operating systems come in different forms, such as those requiring installation or those that can run from external media. Specialized classes such as security and real-time operating systems are also available. The system requirements for an OS can vary from lightweight to high-end, depending on its purpose."
+  },
+  "raw": {
+    "id": 17,
+    "lang": "en",
+    "system_a": "Genome",
+    "system_b": "Operating System",
+    "mappings": [
+      [
+        "organism",
+        "computer"
+      ],
+      [
+        "Gene",
+        "software"
+      ],
+      [
+        "control",
+        "adjust"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Computer",
+    "system_a_background": "A genome is a complete set of genetic information of an organism, consisting of DNA or RNA sequences. It includes various regions of the genome, such as regulatory sequences, non-coding DNA, and even junk DNA. Genomics is the study of genomes, and it has allowed scientists to sequence the genomes of many organisms, which has been a significant step forward in the fields of molecular biology and genetics. The genome contains important information for the organism's survival, such as protein-coding genes and control sequences. Despite the initial limitations to fully sequence the human genome, advances in sequencing technologies have made it possible to sequence the entire human genome in recent years, allowing for a better understanding of human genetics and disease.",
+    "system_b_background": "An operating system (OS) is a vital system software that manages the hardware and software resources of a computer system. It provides a common platform and various services for computer programs to run smoothly. OS helps in adjusting computer resources such as input, output, and memory allocation for efficient use of the system. It also includes accounting software for cost allocation of processor time and other resources used by the system. Operating systems act as an intermediary between programs and the computer hardware and control the flow of information between the two. OS can be found on various devices from cell phones to supercomputers, and it performs specific functions based on the device it operates. The market share of different operating systems varies depending on the device, with Microsoft Windows being the most popular among general-purpose personal computers. In the mobile sector, Android OS dominates with a 70.82% share in 2020. Operating systems come in different forms, such as those requiring installation or those that can run from external media. Specialized classes such as security and real-time operating systems are also available. The system requirements for an OS can vary from lightweight to high-end, depending on its purpose.",
+    "Explanation": [
+      "Organism corresponds to computer: in this mapping, organism and computer respectively represent the workplace of the genome and the operating system. Organisms are the carriers of genome function, while computers are the hardware platform on which operating systems run.",
+      "Gene corresponds to software: genes are the basic unit of genetic information storage and transmission in organisms, which can be seen as \"programming code\" inside organisms. In the field of computer technology, software consists of programming code used to implement specific functions. In this mapping, genes and software both represent information carriers and function implementation in their respective systems.",
+      "Controlling gene expression corresponds to system calls: gene expression is the process that allows the functions of genes in organisms to be realized. Through regulating gene expression, organisms can adaptively adjust their physiological functions under different environmental conditions. In the field of computer technology, the operating system controls the operation of software through system calls, enabling software to perform different tasks according to user requirements and system states. In this mapping, controlling gene expression and system calls both represent functional regulation and management mechanisms in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Genome",
+    "target": "Operating System"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Computer"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

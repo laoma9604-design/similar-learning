@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0245",
+  "dataset": "scar",
+  "original_id": "245",
+  "source_object_id": "obj_group_scar_0245_src",
+  "target_object_id": "obj_group_scar_0245_tgt",
+  "faithful_mappings": [
+    [
+      "Jane Austin",
+      "Hemingway"
+    ],
+    [
+      "Elizabeth Bennett",
+      "san diego"
+    ],
+    [
+      "Frances Bennett",
+      "Manolo"
+    ],
+    [
+      "Mr Darcy",
+      "Hong Kong businessman"
+    ],
+    [
+      "human arrogance",
+      "unpredictable fate"
+    ]
+  ],
+  "explanation": [
+    "Jane Austin corresponds to Hemingway: Both are the authors of their respective works, representing English literature and American literature, respectively.",
+    "Elizabeth Bennett corresponds to San Diego: Both characters are the protagonists of their respective works, representing women in British social life and Cuban fishermen, respectively.",
+    "Frances Bennett corresponds to Manolo: Both characters are important supporting characters in their respective works, and their relationship with the protagonist reflects interpersonal relationships in their respective societies and cultural backgrounds.",
+    "Mr Darcy corresponds to a Hong Kong businessman: Both characters in their respective works represent high social status individuals, reflecting the upper-class society in England and the modern life of Hong Kong businessmen.",
+    "Human arrogance corresponds to unpredictable fate: These two themes represent the core concepts of the two works, one focusing on the pride and prejudice in social life and the other on the unpredictability of fate in life."
+  ],
+  "background": {
+    "source": "Pride and Prejudice, written by the renowned author Jane Austen, is a novel of manners that explores the character development of the dynamic protagonist, Elizabeth Bennet. The novel revolves around the lives of Mr Bennet and his five daughters, who face the possibility of becoming poor upon his death since their property is entailed and can only be passed to a male heir. This situation motivates the Bennet sisters to find wealthy husbands to support themselves and their family. The novel introduces the popular characters of Elizabeth Bennet and Mr Darcy, whose initial interactions are characterized by human arrogance and misunderstandings. Through the novel, Elizabeth Bennet learns about the repercussions of hasty judgments and discerns the difference between superficial goodness and actual goodness. Pride and Prejudice has become one of the most beloved books in English literature, with over 20 million copies sold and still counting, inspiring many derivatives in modern literature. This novel has remained relevant for over a century, with many dramatic adaptations, sequels, films, and TV versions portraying its memorable characters and themes, reaching mass audiences.",
+    "target": "The Old Man and the Sea is a classic novella by Ernest Hemingway that portrays the story of Santiago, a Cuban fisherman who struggles with an enormous marlin in the Gulf Stream. It was written during Hemingway's time spent in Cayo Blanco, Cuba and published in 1952 as one of his last major works of fiction. The story revolves around Santiago's unpredictable fate as he battles the giant marlin, and the themes of struggle and perseverance. Interestingly, it is also known to have caught the attention of a Hong Kong businessman named Manolo who ended up playing a significant role in the novella's legacy. The Old Man and the Sea showcases Hemingway's writing style and earned him several accolades, including the Pulitzer Prize for Fiction in 1953 and contributed to his winning of the Nobel Prize in Literature in 1954."
+  },
+  "raw": {
+    "id": 245,
+    "lang": "en",
+    "system_a": "Pride and Prejudice",
+    "system_b": "The Old Man and the Sea",
+    "mappings": [
+      [
+        "Jane Austin",
+        "Hemingway"
+      ],
+      [
+        "Elizabeth Bennett",
+        "san diego"
+      ],
+      [
+        "Frances Bennett",
+        "Manolo"
+      ],
+      [
+        "Mr Darcy",
+        "Hong Kong businessman"
+      ],
+      [
+        "human arrogance",
+        "unpredictable fate"
+      ]
+    ],
+    "system_a_domain": "Literature",
+    "system_b_domain": "Literature",
+    "system_a_background": "Pride and Prejudice, written by the renowned author Jane Austen, is a novel of manners that explores the character development of the dynamic protagonist, Elizabeth Bennet. The novel revolves around the lives of Mr Bennet and his five daughters, who face the possibility of becoming poor upon his death since their property is entailed and can only be passed to a male heir. This situation motivates the Bennet sisters to find wealthy husbands to support themselves and their family. The novel introduces the popular characters of Elizabeth Bennet and Mr Darcy, whose initial interactions are characterized by human arrogance and misunderstandings. Through the novel, Elizabeth Bennet learns about the repercussions of hasty judgments and discerns the difference between superficial goodness and actual goodness. Pride and Prejudice has become one of the most beloved books in English literature, with over 20 million copies sold and still counting, inspiring many derivatives in modern literature. This novel has remained relevant for over a century, with many dramatic adaptations, sequels, films, and TV versions portraying its memorable characters and themes, reaching mass audiences.",
+    "system_b_background": "The Old Man and the Sea is a classic novella by Ernest Hemingway that portrays the story of Santiago, a Cuban fisherman who struggles with an enormous marlin in the Gulf Stream. It was written during Hemingway's time spent in Cayo Blanco, Cuba and published in 1952 as one of his last major works of fiction. The story revolves around Santiago's unpredictable fate as he battles the giant marlin, and the themes of struggle and perseverance. Interestingly, it is also known to have caught the attention of a Hong Kong businessman named Manolo who ended up playing a significant role in the novella's legacy. The Old Man and the Sea showcases Hemingway's writing style and earned him several accolades, including the Pulitzer Prize for Fiction in 1953 and contributed to his winning of the Nobel Prize in Literature in 1954.",
+    "Explanation": [
+      "Jane Austin corresponds to Hemingway: Both are the authors of their respective works, representing English literature and American literature, respectively.",
+      "Elizabeth Bennett corresponds to San Diego: Both characters are the protagonists of their respective works, representing women in British social life and Cuban fishermen, respectively.",
+      "Frances Bennett corresponds to Manolo: Both characters are important supporting characters in their respective works, and their relationship with the protagonist reflects interpersonal relationships in their respective societies and cultural backgrounds.",
+      "Mr Darcy corresponds to a Hong Kong businessman: Both characters in their respective works represent high social status individuals, reflecting the upper-class society in England and the modern life of Hong Kong businessmen.",
+      "Human arrogance corresponds to unpredictable fate: These two themes represent the core concepts of the two works, one focusing on the pride and prejudice in social life and the other on the unpredictability of fate in life."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Pride and Prejudice",
+    "target": "The Old Man and the Sea"
+  },
+  "domains": {
+    "source": "Literature",
+    "target": "Literature"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

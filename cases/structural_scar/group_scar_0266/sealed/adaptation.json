@@ -1,0 +1,130 @@
+{
+  "adaptation_id": "adapt_scar_0266",
+  "dataset": "scar",
+  "original_id": "266",
+  "source_object_id": "obj_group_scar_0266_src",
+  "target_object_id": "obj_group_scar_0266_tgt",
+  "faithful_mappings": [
+    [
+      "obstructions",
+      "difficulties"
+    ],
+    [
+      "destination",
+      "goal"
+    ],
+    [
+      "route",
+      "plan"
+    ],
+    [
+      "traveller",
+      "person"
+    ],
+    [
+      "travelling",
+      "problem solving"
+    ],
+    [
+      "companion",
+      "partner"
+    ],
+    [
+      "arriving",
+      "succeeding"
+    ]
+  ],
+  "explanation": [
+    "Obstructions correspond to difficulties: obstructions are problems and obstacles that may be encountered during the travel process, while difficulties are problems and obstacles that may be encountered during the process of achieving a goal. Both need to be overcome when trying to achieve a purpose.",
+    "Destination corresponds to goal: a destination is the end point of a journey, while a goal is the end point of a plan. Both are the ultimate pursuit of something.",
+    "Route corresponds to plan: a route is the path a traveler chooses to reach their destination, while a plan is the strategy people use to achieve a goal. Both provide guidance and arrangement in the process of achieving a purpose.",
+    "Traveler corresponds to person: a traveler is a participant in the journey, while a person is a participant in achieving a goal. Both are the subject and executor of something.",
+    "Traveling corresponds to problem solving: traveling is the process that a traveler goes through to reach their destination, while problem solving is the process that people go through to achieve a goal. Both are activities carried out in order to achieve a purpose.",
+    "Companion corresponds to partner: a companion is a fellow traveler during the journey, while a partner is a fellow participant in achieving a goal. Both are partners who support and collaborate with each other in achieving a purpose.",
+    "Arriving corresponds to succeeding: arriving is the result of a traveler finally reaching their destination, while succeeding is the result of people achieving their goal. Both are the ultimate outcome of something."
+  ],
+  "background": {
+    "source": "Interstellar travel is a fascinating concept that has captured the imagination of humans for a long time. However, there are several obstructions to achieve this landmark event. The vast difference in the scale of distances involved in interstellar travel makes it much more difficult than interplanetary spaceflight. The distance between any two planets in the Solar System is less than 30 astronomical units (AU), whereas stars are typically separated by hundreds of thousands of AU, causing these distances to be expressed in light-years. Although five uncrewed spacecraft have achieved the escape velocity required to leave the Solar System, they will not approach another star for hundreds of thousands of years. \n\nEven with a hypothetically perfectly efficient propulsion system, the kinetic energy corresponding to the required speeds for interstellar travel is enormous by today's standards of energy development. Collisions by spacecraft with cosmic dust and gas at such speeds would also be very dangerous for both passengers and the spacecraft itself. Therefore, many different spacecraft propulsion systems have been proposed to give spacecraft the required speeds, including nuclear propulsion, beam-powered propulsion, and methods based on speculative physics.\n\nHumanity would need to overcome considerable technological and economic challenges to achieve either crewed and uncrewed interstellar travel. However, a wide range of scientific benefits is expected should interstellar travel become a reality. Most interstellar travel concepts require a developed space logistics system capable of moving millions of tons to a construction or operating location, and most would require gigawatt-scale power for construction or power. Such a system could grow organically if space-based solar power became a significant component of Earth's energy mix. \n\nIn conclusion, interstellar travel faces several obstacles, making it difficult to achieve with current propulsion technology. However, numerous propulsion system proposals exist, and with continued efforts and technological advancements, we may one day see interstellar travel as a reality.",
+    "target": "Difficulties are a common aspect of life that we may encounter along the way. They can be defined as obstacles or problems that hinder progress towards a particular goal or plan. Individuals who encounter difficulties may experience feelings of frustration, disappointment, or even hopelessness. However, these negative emotions are a natural reaction to the problem at hand, and they should not discourage a person from problem-solving and finding solutions to the difficulty they are facing.\n\nIndividuals who are able to overcome difficulties are often those who possess qualities such as resilience, determination, and perseverance. They understand that difficulties are a part of life, and they are willing to put in the hard work required to overcome these obstacles. Sometimes, finding a partner who can support and help during challenging times can be beneficial in terms of succeeding in the long run.\n\nWhen faced with difficulties, it is important to take a step back and analyze the situation objectively. This can help to identify any underlying issues and develop an effective plan to address the problem. By focusing on problem-solving, a person can break down the difficulty into smaller, manageable tasks, which can make the situation seem less overwhelming.\n\nUltimately, difficulties can be seen as an opportunity for growth and development. By learning how to navigate and overcome difficulties, individuals can build a set of problem-solving skills that can be applied to future challenges. It is important to remember that difficulties are a part of life and that they can be overcome with the right mindset and an effective plan."
+  },
+  "raw": {
+    "id": 266,
+    "lang": "en",
+    "system_a": "impediments to travel",
+    "system_b": "difficulties",
+    "mappings": [
+      [
+        "obstructions",
+        "difficulties"
+      ],
+      [
+        "destination",
+        "goal"
+      ],
+      [
+        "route",
+        "plan"
+      ],
+      [
+        "traveller",
+        "person"
+      ],
+      [
+        "travelling",
+        "problem solving"
+      ],
+      [
+        "companion",
+        "partner"
+      ],
+      [
+        "arriving",
+        "succeeding"
+      ]
+    ],
+    "system_a_domain": "Philosophy",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "Interstellar travel is a fascinating concept that has captured the imagination of humans for a long time. However, there are several obstructions to achieve this landmark event. The vast difference in the scale of distances involved in interstellar travel makes it much more difficult than interplanetary spaceflight. The distance between any two planets in the Solar System is less than 30 astronomical units (AU), whereas stars are typically separated by hundreds of thousands of AU, causing these distances to be expressed in light-years. Although five uncrewed spacecraft have achieved the escape velocity required to leave the Solar System, they will not approach another star for hundreds of thousands of years. \n\nEven with a hypothetically perfectly efficient propulsion system, the kinetic energy corresponding to the required speeds for interstellar travel is enormous by today's standards of energy development. Collisions by spacecraft with cosmic dust and gas at such speeds would also be very dangerous for both passengers and the spacecraft itself. Therefore, many different spacecraft propulsion systems have been proposed to give spacecraft the required speeds, including nuclear propulsion, beam-powered propulsion, and methods based on speculative physics.\n\nHumanity would need to overcome considerable technological and economic challenges to achieve either crewed and uncrewed interstellar travel. However, a wide range of scientific benefits is expected should interstellar travel become a reality. Most interstellar travel concepts require a developed space logistics system capable of moving millions of tons to a construction or operating location, and most would require gigawatt-scale power for construction or power. Such a system could grow organically if space-based solar power became a significant component of Earth's energy mix. \n\nIn conclusion, interstellar travel faces several obstacles, making it difficult to achieve with current propulsion technology. However, numerous propulsion system proposals exist, and with continued efforts and technological advancements, we may one day see interstellar travel as a reality.",
+    "system_b_background": "Difficulties are a common aspect of life that we may encounter along the way. They can be defined as obstacles or problems that hinder progress towards a particular goal or plan. Individuals who encounter difficulties may experience feelings of frustration, disappointment, or even hopelessness. However, these negative emotions are a natural reaction to the problem at hand, and they should not discourage a person from problem-solving and finding solutions to the difficulty they are facing.\n\nIndividuals who are able to overcome difficulties are often those who possess qualities such as resilience, determination, and perseverance. They understand that difficulties are a part of life, and they are willing to put in the hard work required to overcome these obstacles. Sometimes, finding a partner who can support and help during challenging times can be beneficial in terms of succeeding in the long run.\n\nWhen faced with difficulties, it is important to take a step back and analyze the situation objectively. This can help to identify any underlying issues and develop an effective plan to address the problem. By focusing on problem-solving, a person can break down the difficulty into smaller, manageable tasks, which can make the situation seem less overwhelming.\n\nUltimately, difficulties can be seen as an opportunity for growth and development. By learning how to navigate and overcome difficulties, individuals can build a set of problem-solving skills that can be applied to future challenges. It is important to remember that difficulties are a part of life and that they can be overcome with the right mindset and an effective plan.",
+    "Explanation": [
+      "Obstructions correspond to difficulties: obstructions are problems and obstacles that may be encountered during the travel process, while difficulties are problems and obstacles that may be encountered during the process of achieving a goal. Both need to be overcome when trying to achieve a purpose.",
+      "Destination corresponds to goal: a destination is the end point of a journey, while a goal is the end point of a plan. Both are the ultimate pursuit of something.",
+      "Route corresponds to plan: a route is the path a traveler chooses to reach their destination, while a plan is the strategy people use to achieve a goal. Both provide guidance and arrangement in the process of achieving a purpose.",
+      "Traveler corresponds to person: a traveler is a participant in the journey, while a person is a participant in achieving a goal. Both are the subject and executor of something.",
+      "Traveling corresponds to problem solving: traveling is the process that a traveler goes through to reach their destination, while problem solving is the process that people go through to achieve a goal. Both are activities carried out in order to achieve a purpose.",
+      "Companion corresponds to partner: a companion is a fellow traveler during the journey, while a partner is a fellow participant in achieving a goal. Both are partners who support and collaborate with each other in achieving a purpose.",
+      "Arriving corresponds to succeeding: arriving is the result of a traveler finally reaching their destination, while succeeding is the result of people achieving their goal. Both are the ultimate outcome of something."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6",
+        "n7": "n7"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "impediments to travel",
+    "target": "difficulties"
+  },
+  "domains": {
+    "source": "Philosophy",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

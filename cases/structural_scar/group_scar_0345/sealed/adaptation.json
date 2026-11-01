@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0345",
+  "dataset": "scar",
+  "original_id": "345",
+  "source_object_id": "obj_group_scar_0345_src",
+  "target_object_id": "obj_group_scar_0345_tgt",
+  "faithful_mappings": [
+    [
+      "Knowledge",
+      "fertilizer"
+    ],
+    [
+      "teacher",
+      "farmer"
+    ],
+    [
+      "student",
+      "plant"
+    ]
+  ],
+  "explanation": [
+    "Knowledge corresponds to fertilizer: In education, knowledge is the information and skills that teachers impart to students. In cultivation, fertilizer is the material that farmers provide to plants for their nutrition and growth. Both are necessary supports for promoting growth and development.",
+    "Teachers correspond to farmers: In education, teachers are the people who impart knowledge and guide students' growth. In cultivation, farmers are the people who care for plants and provide the necessary conditions. Both play a crucial role in the cultivation process.",
+    "Students correspond to plants: In education, students are the objects of receiving knowledge and education, and they grow and develop through learning. In cultivation, plants are the objects of cultivation and care, and they grow and develop by absorbing nutrients and sunlight. Both are the main participants in the cultivation process, ultimately demonstrating growth results."
+  ],
+  "background": {
+    "source": "Education is the fundamental process of transmitting knowledge and fostering skills and character traits to achieve certain aims. The process aims to develop critical thinking and understanding while also improving the student's mental states and dispositions. Education can be classified into three types - formal, non-formal, and informal education- with different settings, structures, and learning methodologies. Formal education usually takes place in education or training institutions, guided by teachers, and is compulsory for a certain age group. In contrast, non-formal education is flexible and community, workplace, or civil society-based, while informal education takes place in daily life experiences that impact one's way of thinking or acting. Regardless of the setting, teaching, training, storytelling, discussion, and directed research are among the methods used for education. Education is supported by various theories and philosophies, and reforms are constantly being proposed to improve its quality and efficiency. Governments and the United Nations recognize education as a fundamental right and global goal, aimed towards achieving sustainable development. Thus, education is an essential process and plays a vital role in every student's life, guided by dedicated teachers.",
+    "target": "Planting is a crucial process for farmers who seek to grow various crops. It involves the intricate process of sowing seeds in an area, whether large or small. Farmers who engage in planting require adequate knowledge of the different stages of plant growth, soil types, the appropriate season for specific crops, and various techniques for planting seeds.\n\nApart from the farmer's skills, using the right fertilizers is essential for the growth and success of the planted crops. Fertilizers provide essential nutrients required by the plants during their growth process, such as nitrogen, phosphorus, and potassium.\n\nThe journey of planting begins with selecting the right seeds to plant, preparing the soil adequately, and ensuring that the environment is conducive for growth. Once the foundation has been laid, the farmer can start seeding or sowing the area, which involves carefully placing the seeds according to the crop's recommended spacing and depth.\n\nAs the sowed or sown area progresses through its growth stages, proper care, watering and pest control are necessary to prevent damage to the plants. With patience, effort, and continuous care, the farmer can reap the rewards of the planting process, which may include a bountiful harvest or a thriving garden.\n\nIn conclusion, planting is an essential process for any farmer looking to grow crops. It requires careful consideration of the different aspects of plant growth, from selecting the right seeds to ensuring that the soil, fertilization, and weather conditions contribute to the growth process. Despite the challenges that may arise, planting remains a rewarding experience for anyone who will take the time to cultivate and care for their crops."
+  },
+  "raw": {
+    "id": 345,
+    "lang": "en",
+    "system_a": "Education",
+    "system_b": "Planting",
+    "mappings": [
+      [
+        "Knowledge",
+        "fertilizer"
+      ],
+      [
+        "teacher",
+        "farmer"
+      ],
+      [
+        "student",
+        "plant"
+      ]
+    ],
+    "system_a_domain": "Philosophy",
+    "system_b_domain": "Biology",
+    "system_a_background": "Education is the fundamental process of transmitting knowledge and fostering skills and character traits to achieve certain aims. The process aims to develop critical thinking and understanding while also improving the student's mental states and dispositions. Education can be classified into three types - formal, non-formal, and informal education- with different settings, structures, and learning methodologies. Formal education usually takes place in education or training institutions, guided by teachers, and is compulsory for a certain age group. In contrast, non-formal education is flexible and community, workplace, or civil society-based, while informal education takes place in daily life experiences that impact one's way of thinking or acting. Regardless of the setting, teaching, training, storytelling, discussion, and directed research are among the methods used for education. Education is supported by various theories and philosophies, and reforms are constantly being proposed to improve its quality and efficiency. Governments and the United Nations recognize education as a fundamental right and global goal, aimed towards achieving sustainable development. Thus, education is an essential process and plays a vital role in every student's life, guided by dedicated teachers.",
+    "system_b_background": "Planting is a crucial process for farmers who seek to grow various crops. It involves the intricate process of sowing seeds in an area, whether large or small. Farmers who engage in planting require adequate knowledge of the different stages of plant growth, soil types, the appropriate season for specific crops, and various techniques for planting seeds.\n\nApart from the farmer's skills, using the right fertilizers is essential for the growth and success of the planted crops. Fertilizers provide essential nutrients required by the plants during their growth process, such as nitrogen, phosphorus, and potassium.\n\nThe journey of planting begins with selecting the right seeds to plant, preparing the soil adequately, and ensuring that the environment is conducive for growth. Once the foundation has been laid, the farmer can start seeding or sowing the area, which involves carefully placing the seeds according to the crop's recommended spacing and depth.\n\nAs the sowed or sown area progresses through its growth stages, proper care, watering and pest control are necessary to prevent damage to the plants. With patience, effort, and continuous care, the farmer can reap the rewards of the planting process, which may include a bountiful harvest or a thriving garden.\n\nIn conclusion, planting is an essential process for any farmer looking to grow crops. It requires careful consideration of the different aspects of plant growth, from selecting the right seeds to ensuring that the soil, fertilization, and weather conditions contribute to the growth process. Despite the challenges that may arise, planting remains a rewarding experience for anyone who will take the time to cultivate and care for their crops.",
+    "Explanation": [
+      "Knowledge corresponds to fertilizer: In education, knowledge is the information and skills that teachers impart to students. In cultivation, fertilizer is the material that farmers provide to plants for their nutrition and growth. Both are necessary supports for promoting growth and development.",
+      "Teachers correspond to farmers: In education, teachers are the people who impart knowledge and guide students' growth. In cultivation, farmers are the people who care for plants and provide the necessary conditions. Both play a crucial role in the cultivation process.",
+      "Students correspond to plants: In education, students are the objects of receiving knowledge and education, and they grow and develop through learning. In cultivation, plants are the objects of cultivation and care, and they grow and develop by absorbing nutrients and sunlight. Both are the main participants in the cultivation process, ultimately demonstrating growth results."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Education",
+    "target": "Planting"
+  },
+  "domains": {
+    "source": "Philosophy",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

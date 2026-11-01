@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0338",
+  "dataset": "scar",
+  "original_id": "338",
+  "source_object_id": "obj_group_scar_0338_src",
+  "target_object_id": "obj_group_scar_0338_tgt",
+  "faithful_mappings": [
+    [
+      "people",
+      "Role"
+    ],
+    [
+      "Social system",
+      "script"
+    ],
+    [
+      "Historical events",
+      "plot"
+    ]
+  ],
+  "explanation": [
+    "People correspond to roles: People in human society are part of the social system and play various roles in it. The roles in a play are the characters played by actors, who play important parts in the plot. In this analogy, people and roles are both subjects in their respective domains.",
+    "Social system corresponds to script: The social system in human society consists of rules and systems that regulate people's behavior. The script in a play specifies the actions and dialogue of the characters. In this analogy, the social system and script are both norms and guidelines in their respective domains.",
+    "Historical events correspond to plot: Historical events in human society are important events that influence social development. The plot in a play is the development of the story, which unfolds through a series of events. In this analogy, historical events and plot are both important events and developments in their respective domains."
+  ],
+  "background": {
+    "source": "Human society refers to a group of individuals who share space, culture, and institutions and are subject to a common political authority. Within a society, relationships are marked by patterns of social interaction, and there exist societal norms that dictate acceptable behavior. Societies can benefit individuals both socially and individually, and they can be further divided into subcultures that share unique norms and values. From a structuralist perspective, society can be viewed as an economic, social, industrial or cultural infrastructure, with objective relationships that people have with the material world and with other people. Historical events have shaped societies over time, leading to changes in societal norms and patterns of behavior. As a social system, human society is complex and constantly evolving.",
+    "target": "Drama is a genre of fiction that is performed in theatre, on radio or television. It includes plays, operas, mimes, and ballets, and is characterized by a specific mode of storytelling through performance. The term \"drama\" comes from the Greek \"deed\" or \"act,\" which reflects the importance of role-playing and action in this type of fiction. Drama is characterized by a structured plot and a script that is designed to be performed by actors on a stage before an audience. The collaborative process of production and reception is crucial to the success of drama, and the structure of dramatic texts is directly influenced by this process. Drama can also be combined with music and dance, as in opera and ballet, and can be read or improvised. Overall, drama is a unique and dynamic form of storytelling that engages audiences through its emphasis on role, script, and plot."
+  },
+  "raw": {
+    "id": 338,
+    "lang": "en",
+    "system_a": "Human Society",
+    "system_b": "Drama",
+    "mappings": [
+      [
+        "people",
+        "Role"
+      ],
+      [
+        "Social system",
+        "script"
+      ],
+      [
+        "Historical events",
+        "plot"
+      ]
+    ],
+    "system_a_domain": "Philosophy",
+    "system_b_domain": "Art",
+    "system_a_background": "Human society refers to a group of individuals who share space, culture, and institutions and are subject to a common political authority. Within a society, relationships are marked by patterns of social interaction, and there exist societal norms that dictate acceptable behavior. Societies can benefit individuals both socially and individually, and they can be further divided into subcultures that share unique norms and values. From a structuralist perspective, society can be viewed as an economic, social, industrial or cultural infrastructure, with objective relationships that people have with the material world and with other people. Historical events have shaped societies over time, leading to changes in societal norms and patterns of behavior. As a social system, human society is complex and constantly evolving.",
+    "system_b_background": "Drama is a genre of fiction that is performed in theatre, on radio or television. It includes plays, operas, mimes, and ballets, and is characterized by a specific mode of storytelling through performance. The term \"drama\" comes from the Greek \"deed\" or \"act,\" which reflects the importance of role-playing and action in this type of fiction. Drama is characterized by a structured plot and a script that is designed to be performed by actors on a stage before an audience. The collaborative process of production and reception is crucial to the success of drama, and the structure of dramatic texts is directly influenced by this process. Drama can also be combined with music and dance, as in opera and ballet, and can be read or improvised. Overall, drama is a unique and dynamic form of storytelling that engages audiences through its emphasis on role, script, and plot.",
+    "Explanation": [
+      "People correspond to roles: People in human society are part of the social system and play various roles in it. The roles in a play are the characters played by actors, who play important parts in the plot. In this analogy, people and roles are both subjects in their respective domains.",
+      "Social system corresponds to script: The social system in human society consists of rules and systems that regulate people's behavior. The script in a play specifies the actions and dialogue of the characters. In this analogy, the social system and script are both norms and guidelines in their respective domains.",
+      "Historical events correspond to plot: Historical events in human society are important events that influence social development. The plot in a play is the development of the story, which unfolds through a series of events. In this analogy, historical events and plot are both important events and developments in their respective domains."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Human Society",
+    "target": "Drama"
+  },
+  "domains": {
+    "source": "Philosophy",
+    "target": "Art"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

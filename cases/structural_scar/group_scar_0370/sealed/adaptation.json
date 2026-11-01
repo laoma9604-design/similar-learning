@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0370",
+  "dataset": "scar",
+  "original_id": "370",
+  "source_object_id": "obj_group_scar_0370_src",
+  "target_object_id": "obj_group_scar_0370_tgt",
+  "faithful_mappings": [
+    [
+      "lens",
+      "lens"
+    ],
+    [
+      "retina",
+      "Photosensitive device"
+    ],
+    [
+      "eye socket",
+      "Viewfinder"
+    ],
+    [
+      "eyelid",
+      "shutter"
+    ],
+    [
+      "neural signal",
+      "photo"
+    ]
+  ],
+  "explanation": [
+    "Lens corresponds to the lens: In the eye, the lens is responsible for focusing light to form a clear image; in a camera, the lens is responsible for focusing light to form a clear photo. Both are the light-focusing parts of their respective systems.",
+    "Retina corresponds to the photosensitive device: The retina in the eye receives light and converts it into neural signals, while the photosensitive device in the camera receives light and converts it into a photo. Both are the light-receiving and converting parts of their respective systems.",
+    "Eye socket corresponds to the viewfinder: The eye socket is a structure in the eye that protects the eyeball and limits the field of vision; the viewfinder in the camera is a part that limits the shooting range. Both are the parts that limit the field of vision in their respective systems.",
+    "Eyelid corresponds to the shutter: The eyelid controls the time when light enters the eye, while the shutter controls the time when light enters the camera. Both are the light-controlling parts of their respective systems.",
+    "Neural signals correspond to photos: Neural signals in the eye are carriers of visual information, while photos in the camera are records of visual information. Both are the ways of expressing visual information in their respective systems."
+  ],
+  "background": {
+    "source": "The eyes are one of the most incredible organs in our body, responsible for providing us with sight and enabling us to process optical information. This complex system is made up of several parts, including the lens, retina, eye socket, eyelid, and neural signals. The lens is responsible for focusing light onto the retina, which acts as a sort of camera sensor, capturing images and sending neural signals to the brain. The eye socket and eyelid provide protection and help to keep the eye lubricated and clean. When light hits the retina, it triggers a cascade of neural signals that allow us to see the world around us. It's truly remarkable to consider the complexity of this system and the incredible benefits it provides us every single day.",
+    "target": "A camera is a sophisticated device that utilizes lenses and a photosensitive device to capture and reproduce still images. With a viewfinder to frame the subject, the camera's aperture controls the amount of light entering the camera, while the shutter determines the duration of the exposure. The resulting photo is a permanent capture of a fleeting moment in time. From Joseph Nicéphore Niépce's first permanent photograph in 1825 to the digital cameras of today, the camera has played a vital role in the art of photography."
+  },
+  "raw": {
+    "id": 370,
+    "lang": "en",
+    "system_a": "eyes",
+    "system_b": "camera",
+    "mappings": [
+      [
+        "lens",
+        "lens"
+      ],
+      [
+        "retina",
+        "Photosensitive device"
+      ],
+      [
+        "eye socket",
+        "Viewfinder"
+      ],
+      [
+        "eyelid",
+        "shutter"
+      ],
+      [
+        "neural signal",
+        "photo"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Physics",
+    "system_a_background": "The eyes are one of the most incredible organs in our body, responsible for providing us with sight and enabling us to process optical information. This complex system is made up of several parts, including the lens, retina, eye socket, eyelid, and neural signals. The lens is responsible for focusing light onto the retina, which acts as a sort of camera sensor, capturing images and sending neural signals to the brain. The eye socket and eyelid provide protection and help to keep the eye lubricated and clean. When light hits the retina, it triggers a cascade of neural signals that allow us to see the world around us. It's truly remarkable to consider the complexity of this system and the incredible benefits it provides us every single day.",
+    "system_b_background": "A camera is a sophisticated device that utilizes lenses and a photosensitive device to capture and reproduce still images. With a viewfinder to frame the subject, the camera's aperture controls the amount of light entering the camera, while the shutter determines the duration of the exposure. The resulting photo is a permanent capture of a fleeting moment in time. From Joseph Nicéphore Niépce's first permanent photograph in 1825 to the digital cameras of today, the camera has played a vital role in the art of photography.",
+    "Explanation": [
+      "Lens corresponds to the lens: In the eye, the lens is responsible for focusing light to form a clear image; in a camera, the lens is responsible for focusing light to form a clear photo. Both are the light-focusing parts of their respective systems.",
+      "Retina corresponds to the photosensitive device: The retina in the eye receives light and converts it into neural signals, while the photosensitive device in the camera receives light and converts it into a photo. Both are the light-receiving and converting parts of their respective systems.",
+      "Eye socket corresponds to the viewfinder: The eye socket is a structure in the eye that protects the eyeball and limits the field of vision; the viewfinder in the camera is a part that limits the shooting range. Both are the parts that limit the field of vision in their respective systems.",
+      "Eyelid corresponds to the shutter: The eyelid controls the time when light enters the eye, while the shutter controls the time when light enters the camera. Both are the light-controlling parts of their respective systems.",
+      "Neural signals correspond to photos: Neural signals in the eye are carriers of visual information, while photos in the camera are records of visual information. Both are the ways of expressing visual information in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "eyes",
+    "target": "camera"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

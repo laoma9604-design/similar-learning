@@ -1,0 +1,119 @@
+{
+  "adaptation_id": "adapt_scar_0301",
+  "dataset": "scar",
+  "original_id": "301",
+  "source_object_id": "obj_group_scar_0301_src",
+  "target_object_id": "obj_group_scar_0301_tgt",
+  "faithful_mappings": [
+    [
+      "beast",
+      "crime"
+    ],
+    [
+      "prey",
+      "victim"
+    ],
+    [
+      "capture",
+      "arrest"
+    ],
+    [
+      "cage",
+      "jail"
+    ],
+    [
+      "hunt",
+      "investigation"
+    ],
+    [
+      "killing",
+      "execution"
+    ]
+  ],
+  "explanation": [
+    "Beast corresponds to crime: Here, beast represents the concept of wild animals and crime represents illegal behavior. Both represent a potential threat to social order.",
+    "Prey corresponds to victim: In the wild, prey is the object of predation by predators, while in the realm of crime, victims are the object of criminal acts. Here, both prey and victims represent the party that is threatened and harmed.",
+    "Capture corresponds to arrest: In the process of hunting, capture is the act of catching prey, while in the realm of crime, arrest is the act of apprehending criminals. Here, both capture and arrest represent the process of confrontation and subjugation.",
+    "Cage corresponds to jail: In wildlife conservation, a cage is used to restrict the range of activity of an animal, while in the realm of crime, jail is used to incarcerate criminals. Here, both cage and jail represent restriction and punishment for unwelcome behavior.",
+    "Hunt corresponds to investigation: In wildlife conservation, hunting is the process of tracking and capturing animals, while in the realm of crime, investigation is the process of tracking and revealing criminal facts. Here, both hunting and investigation represent the act of pursuing truth and solving problems.",
+    "Killing corresponds to execution: In wildlife conservation, killing represents the fatal blow of a predator to its prey, while in the realm of crime, execution represents the process of legal punishment of criminals. Here, both killing and execution represent the termination and punishment of a certain behavior."
+  ],
+  "background": {
+    "source": "A beast is a term frequently used to describe wild, non-human animals that are often associated with being dangerous or ferocious. In some contexts, the word can also refer to monsters or mythical creatures that are larger, more powerful, and more fearsome than any regular animal. \n\nThe instinctual behavior of beasts often revolves around finding prey, capturing it, and eventually killing it to sustain their survival. This is where the term \"hunt\" comes in, as predatory animals such as tigers, lions, and wolves often chase down and attack their prey in order to satisfy their hunger. Sometimes, beasts are captured and put in cages for protection or entertainment, such as in a zoo or on safari. \n\nWhile some animals can be trained to be domesticated, beasts are generally untamed creatures that remain wild and unpredictable. This makes them a fascinating subject to study and observe from a distance, but also a potentially deadly threat if they are provoked or cornered. Overall, beasts are an intriguing and integral part of the animal kingdom that have captured our imagination for centuries through myths, folktales, and folklore.",
+    "target": "Crime is an act that violates the law and is punishable by the state or other authorities. It is a public wrong that can harm a community or society. In some cases, crimes can lead to severe consequences such as imprisonment, community sentence, or even execution. The criminal law of each jurisdiction defines what constitutes a criminal offense. Investigations and trials must adhere to procedures in modern societies. The act of committing a crime (actus reus) must be accompanied by the intention to do so (mens rea) in most cases. Not all violations of the law are considered crimes; breaches of private law can be enforced through civil procedures. Victimization is a common outcome of a crime, which can lead to arrest and imprisonment, among other things."
+  },
+  "raw": {
+    "id": 301,
+    "lang": "en",
+    "system_a": "beast",
+    "system_b": "crime",
+    "mappings": [
+      [
+        "beast",
+        "crime"
+      ],
+      [
+        "prey",
+        "victim"
+      ],
+      [
+        "capture",
+        "arrest"
+      ],
+      [
+        "cage",
+        "jail"
+      ],
+      [
+        "hunt",
+        "investigation"
+      ],
+      [
+        "killing",
+        "execution"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "A beast is a term frequently used to describe wild, non-human animals that are often associated with being dangerous or ferocious. In some contexts, the word can also refer to monsters or mythical creatures that are larger, more powerful, and more fearsome than any regular animal. \n\nThe instinctual behavior of beasts often revolves around finding prey, capturing it, and eventually killing it to sustain their survival. This is where the term \"hunt\" comes in, as predatory animals such as tigers, lions, and wolves often chase down and attack their prey in order to satisfy their hunger. Sometimes, beasts are captured and put in cages for protection or entertainment, such as in a zoo or on safari. \n\nWhile some animals can be trained to be domesticated, beasts are generally untamed creatures that remain wild and unpredictable. This makes them a fascinating subject to study and observe from a distance, but also a potentially deadly threat if they are provoked or cornered. Overall, beasts are an intriguing and integral part of the animal kingdom that have captured our imagination for centuries through myths, folktales, and folklore.",
+    "system_b_background": "Crime is an act that violates the law and is punishable by the state or other authorities. It is a public wrong that can harm a community or society. In some cases, crimes can lead to severe consequences such as imprisonment, community sentence, or even execution. The criminal law of each jurisdiction defines what constitutes a criminal offense. Investigations and trials must adhere to procedures in modern societies. The act of committing a crime (actus reus) must be accompanied by the intention to do so (mens rea) in most cases. Not all violations of the law are considered crimes; breaches of private law can be enforced through civil procedures. Victimization is a common outcome of a crime, which can lead to arrest and imprisonment, among other things.",
+    "Explanation": [
+      "Beast corresponds to crime: Here, beast represents the concept of wild animals and crime represents illegal behavior. Both represent a potential threat to social order.",
+      "Prey corresponds to victim: In the wild, prey is the object of predation by predators, while in the realm of crime, victims are the object of criminal acts. Here, both prey and victims represent the party that is threatened and harmed.",
+      "Capture corresponds to arrest: In the process of hunting, capture is the act of catching prey, while in the realm of crime, arrest is the act of apprehending criminals. Here, both capture and arrest represent the process of confrontation and subjugation.",
+      "Cage corresponds to jail: In wildlife conservation, a cage is used to restrict the range of activity of an animal, while in the realm of crime, jail is used to incarcerate criminals. Here, both cage and jail represent restriction and punishment for unwelcome behavior.",
+      "Hunt corresponds to investigation: In wildlife conservation, hunting is the process of tracking and capturing animals, while in the realm of crime, investigation is the process of tracking and revealing criminal facts. Here, both hunting and investigation represent the act of pursuing truth and solving problems.",
+      "Killing corresponds to execution: In wildlife conservation, killing represents the fatal blow of a predator to its prey, while in the realm of crime, execution represents the process of legal punishment of criminals. Here, both killing and execution represent the termination and punishment of a certain behavior."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "beast",
+    "target": "crime"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

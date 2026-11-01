@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0119",
+  "dataset": "scar",
+  "original_id": "119",
+  "source_object_id": "obj_group_scar_0119_src",
+  "target_object_id": "obj_group_scar_0119_tgt",
+  "faithful_mappings": [
+    [
+      "monomer",
+      "Ingredients"
+    ],
+    [
+      "Polymerization",
+      "cooking process"
+    ],
+    [
+      "Polymer",
+      "dishes"
+    ]
+  ],
+  "explanation": [
+    "Monomer corresponds to ingredients: In polymer synthesis, a monomer is a basic unit that forms a polymer. In cooking, ingredients are the basic materials used to make dishes. Both are fundamental elements in their respective fields.",
+    "Polymerization corresponds to the cooking process: Polymerization in polymer synthesis is the process of linking monomers into a polymer. The cooking process in cooking is the process of processing ingredients into dishes. Here, polymerization and the cooking process are both processes that transform basic elements into final products.",
+    "Polymer corresponds to dishes: The final product of polymer synthesis is a polymer, which has specific properties and applications. The final product of cooking is a dish, which has specific taste and nutritional value. In this mapping, polymers and dishes both represent the final products in their respective fields."
+  ],
+  "background": {
+    "source": "Polymer synthesis is a chemical process that involves the reaction of monomer molecules to form large and complex polymer chains. The process, also known as polymerization, can occur in different ways depending on the functional groups present in the reactants. Alkenes, for instance, can polymerize through simple radical reactions to form homopolymers such as polyethylene and polyvinyl chloride (PVC), which are widely used in commercial products due to their usefulness in manufacturing processes. Other monomer units such as formaldehyde hydrates can also polymerize to form oligomers that can further react to form more complex polymeric compounds. However, polymerization that is not properly controlled and moderated can be hazardous and lead to autoacceleration, which can cause fires and explosions.",
+    "target": "Cooking is an art, science, and craft that involves using heat to prepare food for consumption. The cooking process and ingredients used vary widely, ranging from traditional grilling over an open fire to modern electric stoves and high-end ovens. Different cooking techniques reflect local cuisines, cooking traditions, and the skill level and training of the cooks.\n\nCooking is a universal activity that people perform in their own dwellings and by professional cooks and chefs in restaurants and other food establishments. With the expansion of agriculture, commerce, trade, and transportation between civilizations in different regions, cooks have gained access to new ingredients and cooking techniques.\n\nThe invention of pottery for holding and boiling water has revolutionized cooking techniques, and some modern cooks apply advanced scientific techniques to food preparation to further enhance the flavor of the dishes they serve. From farm-to-table dishes to haute cuisine, cooking is a broad and multifaceted field with endless possibilities to explore."
+  },
+  "raw": {
+    "id": 119,
+    "lang": "en",
+    "system_a": "Polymer Synthesis",
+    "system_b": "Cooking",
+    "mappings": [
+      [
+        "monomer",
+        "Ingredients"
+      ],
+      [
+        "Polymerization",
+        "cooking process"
+      ],
+      [
+        "Polymer",
+        "dishes"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Art",
+    "system_a_background": "Polymer synthesis is a chemical process that involves the reaction of monomer molecules to form large and complex polymer chains. The process, also known as polymerization, can occur in different ways depending on the functional groups present in the reactants. Alkenes, for instance, can polymerize through simple radical reactions to form homopolymers such as polyethylene and polyvinyl chloride (PVC), which are widely used in commercial products due to their usefulness in manufacturing processes. Other monomer units such as formaldehyde hydrates can also polymerize to form oligomers that can further react to form more complex polymeric compounds. However, polymerization that is not properly controlled and moderated can be hazardous and lead to autoacceleration, which can cause fires and explosions.",
+    "system_b_background": "Cooking is an art, science, and craft that involves using heat to prepare food for consumption. The cooking process and ingredients used vary widely, ranging from traditional grilling over an open fire to modern electric stoves and high-end ovens. Different cooking techniques reflect local cuisines, cooking traditions, and the skill level and training of the cooks.\n\nCooking is a universal activity that people perform in their own dwellings and by professional cooks and chefs in restaurants and other food establishments. With the expansion of agriculture, commerce, trade, and transportation between civilizations in different regions, cooks have gained access to new ingredients and cooking techniques.\n\nThe invention of pottery for holding and boiling water has revolutionized cooking techniques, and some modern cooks apply advanced scientific techniques to food preparation to further enhance the flavor of the dishes they serve. From farm-to-table dishes to haute cuisine, cooking is a broad and multifaceted field with endless possibilities to explore.",
+    "Explanation": [
+      "Monomer corresponds to ingredients: In polymer synthesis, a monomer is a basic unit that forms a polymer. In cooking, ingredients are the basic materials used to make dishes. Both are fundamental elements in their respective fields.",
+      "Polymerization corresponds to the cooking process: Polymerization in polymer synthesis is the process of linking monomers into a polymer. The cooking process in cooking is the process of processing ingredients into dishes. Here, polymerization and the cooking process are both processes that transform basic elements into final products.",
+      "Polymer corresponds to dishes: The final product of polymer synthesis is a polymer, which has specific properties and applications. The final product of cooking is a dish, which has specific taste and nutritional value. In this mapping, polymers and dishes both represent the final products in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Polymer Synthesis",
+    "target": "Cooking"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Art"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

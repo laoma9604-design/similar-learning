@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0095",
+  "dataset": "scar",
+  "original_id": "95",
+  "source_object_id": "obj_group_scar_0095_src",
+  "target_object_id": "obj_group_scar_0095_tgt",
+  "faithful_mappings": [
+    [
+      "atom",
+      "brick"
+    ],
+    [
+      "atomic arrangement",
+      "building structure"
+    ],
+    [
+      "chemical bond",
+      "rebar"
+    ],
+    [
+      "Crystal structure",
+      "building frame"
+    ]
+  ],
+  "explanation": [
+    "Atom corresponds to brick: The atom is the basic unit that makes up the crystal structure, while the brick is the basic unit that makes up the building structure. In their respective fields, they are both fundamental building blocks.",
+    "Atomic arrangement corresponds to building construction: The arrangement of atoms in a crystal determines its structure and properties, while the construction of a building determines its structure and performance. In their respective fields, they are both key factors that determine performance and structure.",
+    "Chemical bond corresponds to rebars: The chemical bond in a crystal is the force that connects atoms together, while the rebar in a building is a material that enhances its structural stability. In their respective fields, they are both key factors that provide structural stability.",
+    "Crystal structure corresponds to building frame: The crystal structure is the basic framework of a crystal composed of the arrangement of atoms and chemical bonds, while the building frame is the basic framework of a building composed of construction and rebars. In their respective fields, they are both the fundamental support of the overall structure."
+  ],
+  "background": {
+    "source": "Crystals are solid materials that exhibit a highly ordered microscopic structure, formed by the arrangement of its atomic constituents in a crystal lattice. This lattice extends in all directions and imparts a specific geometrical shape to macroscopic single crystals. The study of crystals and their formation is known as crystallography, and it involves understanding chemical bonds and atomic arrangements that sustain the crystalline solid. Examples of commonly known crystals include diamonds, snowflakes, and table salt. Inorganic solids are mainly polycrystals, which consist of several microscopic crystals fused together into a single solid. On the contrary, amorphous solids are those that have atoms without a periodic structure. Examples of amorphous solids include glass, wax, and plastic. Although they may be called crystals, lead crystal and crystal glass are types of glass, which is another type of amorphous solid. Despite their scientific importance, crystals are also sometimes used in pseudoscientific practices like crystal therapy, associated with Wiccan beliefs and other religious movements that embrace spellwork.",
+    "target": "Architecture is the process of conceiving, planning, designing, and constructing buildings or other structures using various materials such as brick, steel, and concrete, among others. The structure of a building is essential to its design, and this is achieved through the use of rebar and building frames. It is a form of art that has evolved over time and includes various styles such as Romanesque, Gothic, and Classical, among others. The field has expanded to include a wide range of applications, from ship design to interior decorating. The practice of architecture is often associated with cultural symbols and as works of art, and its earliest surviving text can be traced back to the 1st century AD. The idea of sustainable architecture was introduced in the late 20th century, highlighting the need for buildings that are not only durable and functional but also environmentally friendly."
+  },
+  "raw": {
+    "id": 95,
+    "lang": "en",
+    "system_a": "Crystals",
+    "system_b": "Architecture",
+    "mappings": [
+      [
+        "atom",
+        "brick"
+      ],
+      [
+        "atomic arrangement",
+        "building structure"
+      ],
+      [
+        "chemical bond",
+        "rebar"
+      ],
+      [
+        "Crystal structure",
+        "building frame"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Engineering",
+    "system_a_background": "Crystals are solid materials that exhibit a highly ordered microscopic structure, formed by the arrangement of its atomic constituents in a crystal lattice. This lattice extends in all directions and imparts a specific geometrical shape to macroscopic single crystals. The study of crystals and their formation is known as crystallography, and it involves understanding chemical bonds and atomic arrangements that sustain the crystalline solid. Examples of commonly known crystals include diamonds, snowflakes, and table salt. Inorganic solids are mainly polycrystals, which consist of several microscopic crystals fused together into a single solid. On the contrary, amorphous solids are those that have atoms without a periodic structure. Examples of amorphous solids include glass, wax, and plastic. Although they may be called crystals, lead crystal and crystal glass are types of glass, which is another type of amorphous solid. Despite their scientific importance, crystals are also sometimes used in pseudoscientific practices like crystal therapy, associated with Wiccan beliefs and other religious movements that embrace spellwork.",
+    "system_b_background": "Architecture is the process of conceiving, planning, designing, and constructing buildings or other structures using various materials such as brick, steel, and concrete, among others. The structure of a building is essential to its design, and this is achieved through the use of rebar and building frames. It is a form of art that has evolved over time and includes various styles such as Romanesque, Gothic, and Classical, among others. The field has expanded to include a wide range of applications, from ship design to interior decorating. The practice of architecture is often associated with cultural symbols and as works of art, and its earliest surviving text can be traced back to the 1st century AD. The idea of sustainable architecture was introduced in the late 20th century, highlighting the need for buildings that are not only durable and functional but also environmentally friendly.",
+    "Explanation": [
+      "Atom corresponds to brick: The atom is the basic unit that makes up the crystal structure, while the brick is the basic unit that makes up the building structure. In their respective fields, they are both fundamental building blocks.",
+      "Atomic arrangement corresponds to building construction: The arrangement of atoms in a crystal determines its structure and properties, while the construction of a building determines its structure and performance. In their respective fields, they are both key factors that determine performance and structure.",
+      "Chemical bond corresponds to rebars: The chemical bond in a crystal is the force that connects atoms together, while the rebar in a building is a material that enhances its structural stability. In their respective fields, they are both key factors that provide structural stability.",
+      "Crystal structure corresponds to building frame: The crystal structure is the basic framework of a crystal composed of the arrangement of atoms and chemical bonds, while the building frame is the basic framework of a building composed of construction and rebars. In their respective fields, they are both the fundamental support of the overall structure."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Crystals",
+    "target": "Architecture"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0137",
+  "dataset": "scar",
+  "original_id": "137",
+  "source_object_id": "obj_group_scar_0137_src",
+  "target_object_id": "obj_group_scar_0137_tgt",
+  "faithful_mappings": [
+    [
+      "Raw data",
+      "locked object"
+    ],
+    [
+      "Encryption Algorithm",
+      "password"
+    ],
+    [
+      "encrypted data",
+      "password box"
+    ]
+  ],
+  "explanation": [
+    "Raw data corresponds to a locked object: in encryption, raw data is the information that needs protection; in a combination lock, a locked object is the item that needs protection. Both are objects that require safeguarding.",
+    "An encryption algorithm corresponds to a password: in encryption, an encryption algorithm is the rule used to transform raw data into encrypted data; in a combination lock, a password is the secret combination of numbers or characters used to lock and unlock the item. Both are security mechanisms used to protect information or objects.",
+    "Encrypted data corresponds to a password box: in encryption, encrypted data is the result of raw data being processed by an encryption algorithm, and can only be decrypted by those with the key; in a combination lock, a password box is a secure container protected by a password, and can only be opened by those who know the password. Both are the result of security measures and require specific conditions for access."
+  ],
+  "background": {
+    "source": "Encryption is a crucial process of encoding raw data into an alternative form known as encrypted data, ensuring the security and privacy of sensitive information from unauthorized personnel. It is a process that converts the original form of the data, known as plaintext, into ciphertext, which is only decipherable by those with authorized access. This process is typically achieved using a powerful encryption algorithm that generates a pseudo-random encryption key, making it difficult for unauthorized users to decrypt or access the original information. While it is technically possible to decrypt the message without the key, it requires considerable computational resources and skills, making it virtually impossible to accomplish without the necessary authorization. Historically, encryption was predominantly used in military messaging, but today, modern encryption techniques have become commonplace in all areas of modern computing, utilizing both public-key and symmetric-key encryption concepts. These techniques ensure the security and privacy of sensitive information as modern computers are inefficient at cracking the encryption, keeping the information safe from prying eyes.",
+    "target": "A password lock, also commonly known as a password box, is a locked object that requires a secret code (password) to gain access to its contents. This code can be a sequence of arbitrary characters, including letters, digits, and other symbols. The primary function of a password lock is to confirm the user's identity and allow them access to the protected contents after successful verification. Traditionally, users were expected to memorize these codes or passwords, but with the increasing number of password-protected services or objects, memorization of unique passwords for each service or object becomes impractical. A personal identification number (PIN) is sometimes used instead of a password, but this is constrained to be numeric. Passphrases, consisting of a sequence of words, are sometimes used as they provide added security due to their length."
+  },
+  "raw": {
+    "id": 137,
+    "lang": "en",
+    "system_a": "Encryption",
+    "system_b": "password lock",
+    "mappings": [
+      [
+        "Raw data",
+        "locked object"
+      ],
+      [
+        "Encryption Algorithm",
+        "password"
+      ],
+      [
+        "encrypted data",
+        "password box"
+      ]
+    ],
+    "system_a_domain": "Computer",
+    "system_b_domain": "Engineering",
+    "system_a_background": "Encryption is a crucial process of encoding raw data into an alternative form known as encrypted data, ensuring the security and privacy of sensitive information from unauthorized personnel. It is a process that converts the original form of the data, known as plaintext, into ciphertext, which is only decipherable by those with authorized access. This process is typically achieved using a powerful encryption algorithm that generates a pseudo-random encryption key, making it difficult for unauthorized users to decrypt or access the original information. While it is technically possible to decrypt the message without the key, it requires considerable computational resources and skills, making it virtually impossible to accomplish without the necessary authorization. Historically, encryption was predominantly used in military messaging, but today, modern encryption techniques have become commonplace in all areas of modern computing, utilizing both public-key and symmetric-key encryption concepts. These techniques ensure the security and privacy of sensitive information as modern computers are inefficient at cracking the encryption, keeping the information safe from prying eyes.",
+    "system_b_background": "A password lock, also commonly known as a password box, is a locked object that requires a secret code (password) to gain access to its contents. This code can be a sequence of arbitrary characters, including letters, digits, and other symbols. The primary function of a password lock is to confirm the user's identity and allow them access to the protected contents after successful verification. Traditionally, users were expected to memorize these codes or passwords, but with the increasing number of password-protected services or objects, memorization of unique passwords for each service or object becomes impractical. A personal identification number (PIN) is sometimes used instead of a password, but this is constrained to be numeric. Passphrases, consisting of a sequence of words, are sometimes used as they provide added security due to their length.",
+    "Explanation": [
+      "Raw data corresponds to a locked object: in encryption, raw data is the information that needs protection; in a combination lock, a locked object is the item that needs protection. Both are objects that require safeguarding.",
+      "An encryption algorithm corresponds to a password: in encryption, an encryption algorithm is the rule used to transform raw data into encrypted data; in a combination lock, a password is the secret combination of numbers or characters used to lock and unlock the item. Both are security mechanisms used to protect information or objects.",
+      "Encrypted data corresponds to a password box: in encryption, encrypted data is the result of raw data being processed by an encryption algorithm, and can only be decrypted by those with the key; in a combination lock, a password box is a secure container protected by a password, and can only be opened by those who know the password. Both are the result of security measures and require specific conditions for access."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Encryption",
+    "target": "password lock"
+  },
+  "domains": {
+    "source": "Computer",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

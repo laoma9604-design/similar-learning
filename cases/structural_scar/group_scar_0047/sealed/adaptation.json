@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0047",
+  "dataset": "scar",
+  "original_id": "47",
+  "source_object_id": "obj_group_scar_0047_src",
+  "target_object_id": "obj_group_scar_0047_tgt",
+  "faithful_mappings": [
+    [
+      "apoptosis",
+      "self-destruct program"
+    ],
+    [
+      "Cell division",
+      "process creator"
+    ],
+    [
+      "Cell Differentiation",
+      "Branch Execution"
+    ]
+  ],
+  "explanation": [
+    "Apoptosis corresponds to self-destruct program: Apoptosis is a cellular self-destruction process to maintain the balance of cell numbers in organisms. In a program, a self-destruct program is a function that can automatically terminate the program. Both involve a process of self-destruction.",
+    "Cell division corresponds to process creator: Cell division is the process of cell reproduction, producing new cells through division. In a program, a process creator program is used to create new processes. Both involve a process of creating new entities.",
+    "Cell differentiation corresponds to branch execution program: Cell differentiation is the process by which cells develop into cells with specific functions from an undifferentiated state. In a program, a branch execution program selects and executes different program paths based on conditions. Both involve a process of development or execution based on specific conditions."
+  ],
+  "background": {
+    "source": "A cell is the smallest unit of life that carries out all the necessary functions required for an organism's survival. It is a biological entity that forms the building block of living systems. The life cycle of a cell is marked by various events like apoptosis, cell division, and cell differentiation. Apoptosis refers to the programmed cell death, which is a crucial process for removing damaged or unwanted cells, thus preventing the spread of infections or cancer. Cell division is the process by which a single cell divides into two or more daughter cells, which can grow into new tissues, organs, or whole organisms. Cell differentiation is the process of transforming unspecialized cells into specialized cells with specific functions, which are crucial for the proper functioning of tissues and organs. Despite their small size, cells play a vital role in maintaining the complex structure and function of organisms, making them a fundamental unit of life.",
+    "target": "A program, in computer science, refers to a set of instructions or code designed to perform a specific task or solve a particular problem. It can be created by a programmer, using a programming language, to automate tasks, process data, or execute algorithms. However, not all programs are designed for positive purposes as some can be harmful, such as the self-destruct program which is designed to destroy a system or information on it. On the other hand, a process creator is a program designed to manage processes and create new processes in a computer system. It's important for these programs to be executed accurately and precisely to prevent any harm to the system. Additionally, Branch Execution refers to a programming technique that allows the program to follow different paths, depending on certain conditions that are met within the program, giving it a more streamlined and efficient operation. Overall, a program can be a powerful tool in computing when used properly, but it's important to exercise caution and ensure its accuracy to prevent any negative impacts."
+  },
+  "raw": {
+    "id": 47,
+    "lang": "en",
+    "system_a": "cell",
+    "system_b": "program",
+    "mappings": [
+      [
+        "apoptosis",
+        "self-destruct program"
+      ],
+      [
+        "Cell division",
+        "process creator"
+      ],
+      [
+        "Cell Differentiation",
+        "Branch Execution"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Computer",
+    "system_a_background": "A cell is the smallest unit of life that carries out all the necessary functions required for an organism's survival. It is a biological entity that forms the building block of living systems. The life cycle of a cell is marked by various events like apoptosis, cell division, and cell differentiation. Apoptosis refers to the programmed cell death, which is a crucial process for removing damaged or unwanted cells, thus preventing the spread of infections or cancer. Cell division is the process by which a single cell divides into two or more daughter cells, which can grow into new tissues, organs, or whole organisms. Cell differentiation is the process of transforming unspecialized cells into specialized cells with specific functions, which are crucial for the proper functioning of tissues and organs. Despite their small size, cells play a vital role in maintaining the complex structure and function of organisms, making them a fundamental unit of life.",
+    "system_b_background": "A program, in computer science, refers to a set of instructions or code designed to perform a specific task or solve a particular problem. It can be created by a programmer, using a programming language, to automate tasks, process data, or execute algorithms. However, not all programs are designed for positive purposes as some can be harmful, such as the self-destruct program which is designed to destroy a system or information on it. On the other hand, a process creator is a program designed to manage processes and create new processes in a computer system. It's important for these programs to be executed accurately and precisely to prevent any harm to the system. Additionally, Branch Execution refers to a programming technique that allows the program to follow different paths, depending on certain conditions that are met within the program, giving it a more streamlined and efficient operation. Overall, a program can be a powerful tool in computing when used properly, but it's important to exercise caution and ensure its accuracy to prevent any negative impacts.",
+    "Explanation": [
+      "Apoptosis corresponds to self-destruct program: Apoptosis is a cellular self-destruction process to maintain the balance of cell numbers in organisms. In a program, a self-destruct program is a function that can automatically terminate the program. Both involve a process of self-destruction.",
+      "Cell division corresponds to process creator: Cell division is the process of cell reproduction, producing new cells through division. In a program, a process creator program is used to create new processes. Both involve a process of creating new entities.",
+      "Cell differentiation corresponds to branch execution program: Cell differentiation is the process by which cells develop into cells with specific functions from an undifferentiated state. In a program, a branch execution program selects and executes different program paths based on conditions. Both involve a process of development or execution based on specific conditions."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "cell",
+    "target": "program"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Computer"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

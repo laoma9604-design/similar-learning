@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0331",
+  "dataset": "scar",
+  "original_id": "331",
+  "source_object_id": "obj_group_scar_0331_src",
+  "target_object_id": "obj_group_scar_0331_tgt",
+  "faithful_mappings": [
+    [
+      "plot",
+      "framework"
+    ],
+    [
+      "theme",
+      "decoration style"
+    ],
+    [
+      "character",
+      "occupant"
+    ],
+    [
+      "language use",
+      "Decoration details"
+    ],
+    [
+      "Emotional expression",
+      "atmosphere"
+    ]
+  ],
+  "explanation": [
+    "Plot corresponds to framework: the plot in a novel is the skeleton of the story's development, and the framework in a building is the skeleton of the structure. Both are the basic structures in their respective fields.",
+    "Theme corresponds to decoration style: the theme of a novel is the core idea of the story, and the decoration style of a building is the design concept of the structure. Both are the core elements in their respective fields.",
+    "Character corresponds to occupant: the characters in a novel are participants in the story, while the occupants in a building are users of the structure. Both are the main subjects in their respective fields.",
+    "Language use corresponds to decoration details: the language use in a novel is the way the story is expressed, and the decoration details in a building are the way the design concept is realized. Both are the expressive techniques in their respective fields.",
+    "Emotional expression corresponds to atmosphere: the emotional expression in a novel is the emotion conveyed by the story, and the atmosphere in a building is the emotion created by the structure. Both are the emotional experiences in their respective fields."
+  ],
+  "background": {
+    "source": "Fiction is a form of literature that primarily consists of imaginative and made-up stories, events, and characters that may or may not be plausible or historically accurate. It encompasses a broad range of works, including novels, novellas, short stories, plays, movies, television shows, and even video games. In essence, fiction aims to captivate the reader's or viewer's imagination and take them on a journey to a world they have never been to before. To achieve this goal, authors and creators pay close attention to various aspects of fiction, such as plot, theme, character, language use, and emotional expression. These elements work together to create a rich and immersive experience for the audience, inviting them to become fully invested in the story and to care about the characters and their journey. In this way, fiction provides a means of escape while also helping us to explore and understand the world around us in new and exciting ways.",
+    "target": "A house is a basic structure that serves as a residential building. It provides shelter and protects its inhabitants from the outside elements. It is typically made of a framework of wood, masonry, or concrete and may contain plumbing, electrical, and heating, ventilation, and air conditioning systems. There are many different types of houses that vary in their decoration style and decoration details. The atmosphere of a house is important and can be influenced by the occupant's personal style and preferences. A house is home to a household, which may consist of a family or other social groups. The features of a house can be enhanced with additional outbuildings, such as a garage or a shed, and a backyard or front yard can add an area for relaxation and outdoor activities."
+  },
+  "raw": {
+    "id": 331,
+    "lang": "en",
+    "system_a": "Fiction Structure",
+    "system_b": "Houses",
+    "mappings": [
+      [
+        "plot",
+        "framework"
+      ],
+      [
+        "theme",
+        "decoration style"
+      ],
+      [
+        "character",
+        "occupant"
+      ],
+      [
+        "language use",
+        "Decoration details"
+      ],
+      [
+        "Emotional expression",
+        "atmosphere"
+      ]
+    ],
+    "system_a_domain": "Literature",
+    "system_b_domain": "Engineering",
+    "system_a_background": "Fiction is a form of literature that primarily consists of imaginative and made-up stories, events, and characters that may or may not be plausible or historically accurate. It encompasses a broad range of works, including novels, novellas, short stories, plays, movies, television shows, and even video games. In essence, fiction aims to captivate the reader's or viewer's imagination and take them on a journey to a world they have never been to before. To achieve this goal, authors and creators pay close attention to various aspects of fiction, such as plot, theme, character, language use, and emotional expression. These elements work together to create a rich and immersive experience for the audience, inviting them to become fully invested in the story and to care about the characters and their journey. In this way, fiction provides a means of escape while also helping us to explore and understand the world around us in new and exciting ways.",
+    "system_b_background": "A house is a basic structure that serves as a residential building. It provides shelter and protects its inhabitants from the outside elements. It is typically made of a framework of wood, masonry, or concrete and may contain plumbing, electrical, and heating, ventilation, and air conditioning systems. There are many different types of houses that vary in their decoration style and decoration details. The atmosphere of a house is important and can be influenced by the occupant's personal style and preferences. A house is home to a household, which may consist of a family or other social groups. The features of a house can be enhanced with additional outbuildings, such as a garage or a shed, and a backyard or front yard can add an area for relaxation and outdoor activities.",
+    "Explanation": [
+      "Plot corresponds to framework: the plot in a novel is the skeleton of the story's development, and the framework in a building is the skeleton of the structure. Both are the basic structures in their respective fields.",
+      "Theme corresponds to decoration style: the theme of a novel is the core idea of the story, and the decoration style of a building is the design concept of the structure. Both are the core elements in their respective fields.",
+      "Character corresponds to occupant: the characters in a novel are participants in the story, while the occupants in a building are users of the structure. Both are the main subjects in their respective fields.",
+      "Language use corresponds to decoration details: the language use in a novel is the way the story is expressed, and the decoration details in a building are the way the design concept is realized. Both are the expressive techniques in their respective fields.",
+      "Emotional expression corresponds to atmosphere: the emotional expression in a novel is the emotion conveyed by the story, and the atmosphere in a building is the emotion created by the structure. Both are the emotional experiences in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Fiction Structure",
+    "target": "Houses"
+  },
+  "domains": {
+    "source": "Literature",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

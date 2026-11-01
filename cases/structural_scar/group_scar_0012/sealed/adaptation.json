@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0012",
+  "dataset": "scar",
+  "original_id": "12",
+  "source_object_id": "obj_group_scar_0012_src",
+  "target_object_id": "obj_group_scar_0012_tgt",
+  "faithful_mappings": [
+    [
+      "Immune Cells",
+      "Soldier"
+    ],
+    [
+      "Antibody",
+      "Weaponry"
+    ],
+    [
+      "lymphoid tissue",
+      "base"
+    ],
+    [
+      "regulatory organs",
+      "headquarters"
+    ]
+  ],
+  "explanation": [
+    "Immune cells correspond to soldiers: In the immune system, immune cells (such as white blood cells) are the \"soldiers\" responsible for identifying and eliminating pathogens. They can quickly recognize, attack, and clear invading pathogens. In the military, soldiers are the basic force for executing tasks and defending national security. In this mapping, immune cells and soldiers both represent the executors of their respective systems.",
+    "Antibodies correspond to weaponry: In the immune system, antibodies are specific proteins produced by immune cells. They can recognize and bind to pathogens, helping the immune system clear them. In the military, weaponry is the tool soldiers use to execute tasks. In this mapping, antibodies and weaponry both represent specific tools used to accomplish tasks.",
+    "Lymphoid tissue corresponds to bases: In the immune system, lymphoid tissue (such as the spleen and lymph nodes) is where immune cells are produced, stored, and exchanged. In the military, bases are where soldiers live, train, and organize tasks. In this mapping, lymphoid tissue and bases are both support facilities for their respective systems.",
+    "Regulatory organs correspond to headquarters: In the immune system, regulatory organs (such as the thymus and bone marrow) are responsible for coordinating the production, development, and function of immune cells, ensuring the normal operation of the immune system. In the military, headquarters are responsible for organizing, commanding, and coordinating military actions. In this mapping, regulatory organs and headquarters both represent the management and coordination organizations of their respective systems."
+  ],
+  "background": {
+    "source": "The immune system is a complex network of biological processes that protect us from a wide range of pathogens, including viruses, bacteria, parasites, and cancer cells. It consists of two major subsystems: innate and adaptive immunity. The innate immune system provides a preconfigured response to broad groups of situations and stimuli, while the adaptive immune system provides a tailored response to each stimulus by learning to recognize molecules it has previously encountered. The adaptive immunity also creates an immunological memory leading to an enhanced response to subsequent encounters with that same pathogen, which is the basis of vaccination. The immune system involves different immune cells and regulatory organs and tissues, such as lymphoid tissue. Dysfunction of the immune system can lead to autoimmune diseases, inflammatory diseases, and cancer, while immunodeficiency can result in recurring and life-threatening infections. Immunology encompasses the study of all aspects of the immune system, including antibodies and their functions.",
+    "target": "An army is a specialized fighting force that is primarily focused on land-based operations. This military branch is responsible for safeguarding a nation's borders and providing protection to its citizens. The army may possess aviation assets and may work in conjunction with other branches of the military to carry out its mission. In some countries, the term \"army\" may have a broader meaning and refer to the entire armed forces. The army is made up of soldiers who are trained to use various types of weaponry to defend their country. The army is often based in designated army bases, where soldiers receive training, and headquarters where military operations are planned and executed."
+  },
+  "raw": {
+    "id": 12,
+    "lang": "en",
+    "system_a": "Immune System",
+    "system_b": "Army",
+    "mappings": [
+      [
+        "Immune Cells",
+        "Soldier"
+      ],
+      [
+        "Antibody",
+        "Weaponry"
+      ],
+      [
+        "lymphoid tissue",
+        "base"
+      ],
+      [
+        "regulatory organs",
+        "headquarters"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "History",
+    "system_a_background": "The immune system is a complex network of biological processes that protect us from a wide range of pathogens, including viruses, bacteria, parasites, and cancer cells. It consists of two major subsystems: innate and adaptive immunity. The innate immune system provides a preconfigured response to broad groups of situations and stimuli, while the adaptive immune system provides a tailored response to each stimulus by learning to recognize molecules it has previously encountered. The adaptive immunity also creates an immunological memory leading to an enhanced response to subsequent encounters with that same pathogen, which is the basis of vaccination. The immune system involves different immune cells and regulatory organs and tissues, such as lymphoid tissue. Dysfunction of the immune system can lead to autoimmune diseases, inflammatory diseases, and cancer, while immunodeficiency can result in recurring and life-threatening infections. Immunology encompasses the study of all aspects of the immune system, including antibodies and their functions.",
+    "system_b_background": "An army is a specialized fighting force that is primarily focused on land-based operations. This military branch is responsible for safeguarding a nation's borders and providing protection to its citizens. The army may possess aviation assets and may work in conjunction with other branches of the military to carry out its mission. In some countries, the term \"army\" may have a broader meaning and refer to the entire armed forces. The army is made up of soldiers who are trained to use various types of weaponry to defend their country. The army is often based in designated army bases, where soldiers receive training, and headquarters where military operations are planned and executed.",
+    "Explanation": [
+      "Immune cells correspond to soldiers: In the immune system, immune cells (such as white blood cells) are the \"soldiers\" responsible for identifying and eliminating pathogens. They can quickly recognize, attack, and clear invading pathogens. In the military, soldiers are the basic force for executing tasks and defending national security. In this mapping, immune cells and soldiers both represent the executors of their respective systems.",
+      "Antibodies correspond to weaponry: In the immune system, antibodies are specific proteins produced by immune cells. They can recognize and bind to pathogens, helping the immune system clear them. In the military, weaponry is the tool soldiers use to execute tasks. In this mapping, antibodies and weaponry both represent specific tools used to accomplish tasks.",
+      "Lymphoid tissue corresponds to bases: In the immune system, lymphoid tissue (such as the spleen and lymph nodes) is where immune cells are produced, stored, and exchanged. In the military, bases are where soldiers live, train, and organize tasks. In this mapping, lymphoid tissue and bases are both support facilities for their respective systems.",
+      "Regulatory organs correspond to headquarters: In the immune system, regulatory organs (such as the thymus and bone marrow) are responsible for coordinating the production, development, and function of immune cells, ensuring the normal operation of the immune system. In the military, headquarters are responsible for organizing, commanding, and coordinating military actions. In this mapping, regulatory organs and headquarters both represent the management and coordination organizations of their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Immune System",
+    "target": "Army"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,119 @@
+{
+  "adaptation_id": "adapt_scar_0069",
+  "dataset": "scar",
+  "original_id": "69",
+  "source_object_id": "obj_group_scar_0069_src",
+  "target_object_id": "obj_group_scar_0069_tgt",
+  "faithful_mappings": [
+    [
+      "sperm",
+      "product"
+    ],
+    [
+      "egg",
+      "product"
+    ],
+    [
+      "testis",
+      "factory"
+    ],
+    [
+      "ovaries",
+      "factory"
+    ],
+    [
+      "vas deferens",
+      "transmission line"
+    ],
+    [
+      "oviduct",
+      "transmission line"
+    ]
+  ],
+  "explanation": [
+    "Sperm corresponds to product: In the reproductive system, sperm are reproductive cells produced by the testes for the purpose of combining with eggs to form new life. In the factory system, products are items produced by factories to meet consumer demand. Here, both sperm and products represent the outputs produced by the system.",
+    "Egg corresponds to product: In the reproductive system, an egg is a reproductive cell produced by the ovaries for the purpose of combining with sperm to form new life. In the factory system, products are likewise items produced by factories. Here, both eggs and products represent the outputs produced by the system.",
+    "Testis corresponds to factory: In the reproductive system, the testes are the organs that produce sperm. In the factory system, factories are the places that produce products. Here, both the testes and factories represent the starting point of the production process.",
+    "Ovaries correspond to factory: In the reproductive system, the ovaries are the organs that produce eggs. In the factory system, factories likewise are the places that produce products. Here, both the ovaries and factories represent the starting point of the production process.",
+    "Vas deferens corresponds to transmission line: In the reproductive system, the vas deferens is responsible for transporting sperm from the testes to the location where they combine with eggs. In the factory system, transmission lines are responsible for transporting products from the production site to where they will be consumed. Here, both the vas deferens and transmission lines represent the process of transporting the output from the starting point to the endpoint.",
+    "Oviduct corresponds to transmission line: In the reproductive system, the oviduct is responsible for transporting eggs from the ovaries to the location where they will combine with sperm. In the factory system, transmission lines likewise are responsible for transporting products from the production site to where they will be consumed. Here, both the oviduct and transmission lines represent the process of transporting the output from the starting point to the endpoint."
+  ],
+  "background": {
+    "source": "The reproductive system of an organism is an intricate biological system that comprises of various organs that play a significant role in sexual reproduction. The system involves the production and transportation of gametes or sex cells, such as sperm in males and eggs in females. The organs of the reproductive system include the testes in males and ovaries in females, which produce the gametes. The sperm travel through the vas deferens in males, while the eggs travel through the oviduct in females. Both the egg and the sperm meet during fertilization, which results in the formation of a zygote. The reproductive system is designed to allow for a combination of genetic material between two individuals, which enables the offspring to have a higher genetic fitness. Overall, the reproductive system is crucial for the continuation of a species and allows for the creation of new life.",
+    "target": "The factory system is a revolutionary method of manufacturing that completely transformed traditional production methods. With the use of machinery and division of labor, factories are now equipped with high capital cost machinery and are typically privately owned by wealthy individuals or corporations who employ laborers to operate the machines. This innovative system increased the output per worker while reducing the required skill level of workers. Initially adopted in Britain during the Industrial Revolution, the factory system replaced the old putting-out system or domestic system, and gradually spread across the globe. The use of machinery, powered by water or steam and later by electricity, is the main characteristic of the factory system. The centralization of factories, standardization of interchangeable parts, and economies of scale are other key features that make this system a game-changer in the production industry. With these advancements, product development and transmission lines have significantly improved, making it easier to manufacture and distribute products worldwide."
+  },
+  "raw": {
+    "id": 69,
+    "lang": "en",
+    "system_a": "Reproductive System",
+    "system_b": "Factory System",
+    "mappings": [
+      [
+        "sperm",
+        "product"
+      ],
+      [
+        "egg",
+        "product"
+      ],
+      [
+        "testis",
+        "factory"
+      ],
+      [
+        "ovaries",
+        "factory"
+      ],
+      [
+        "vas deferens",
+        "transmission line"
+      ],
+      [
+        "oviduct",
+        "transmission line"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Engineering",
+    "system_a_background": "The reproductive system of an organism is an intricate biological system that comprises of various organs that play a significant role in sexual reproduction. The system involves the production and transportation of gametes or sex cells, such as sperm in males and eggs in females. The organs of the reproductive system include the testes in males and ovaries in females, which produce the gametes. The sperm travel through the vas deferens in males, while the eggs travel through the oviduct in females. Both the egg and the sperm meet during fertilization, which results in the formation of a zygote. The reproductive system is designed to allow for a combination of genetic material between two individuals, which enables the offspring to have a higher genetic fitness. Overall, the reproductive system is crucial for the continuation of a species and allows for the creation of new life.",
+    "system_b_background": "The factory system is a revolutionary method of manufacturing that completely transformed traditional production methods. With the use of machinery and division of labor, factories are now equipped with high capital cost machinery and are typically privately owned by wealthy individuals or corporations who employ laborers to operate the machines. This innovative system increased the output per worker while reducing the required skill level of workers. Initially adopted in Britain during the Industrial Revolution, the factory system replaced the old putting-out system or domestic system, and gradually spread across the globe. The use of machinery, powered by water or steam and later by electricity, is the main characteristic of the factory system. The centralization of factories, standardization of interchangeable parts, and economies of scale are other key features that make this system a game-changer in the production industry. With these advancements, product development and transmission lines have significantly improved, making it easier to manufacture and distribute products worldwide.",
+    "Explanation": [
+      "Sperm corresponds to product: In the reproductive system, sperm are reproductive cells produced by the testes for the purpose of combining with eggs to form new life. In the factory system, products are items produced by factories to meet consumer demand. Here, both sperm and products represent the outputs produced by the system.",
+      "Egg corresponds to product: In the reproductive system, an egg is a reproductive cell produced by the ovaries for the purpose of combining with sperm to form new life. In the factory system, products are likewise items produced by factories. Here, both eggs and products represent the outputs produced by the system.",
+      "Testis corresponds to factory: In the reproductive system, the testes are the organs that produce sperm. In the factory system, factories are the places that produce products. Here, both the testes and factories represent the starting point of the production process.",
+      "Ovaries correspond to factory: In the reproductive system, the ovaries are the organs that produce eggs. In the factory system, factories likewise are the places that produce products. Here, both the ovaries and factories represent the starting point of the production process.",
+      "Vas deferens corresponds to transmission line: In the reproductive system, the vas deferens is responsible for transporting sperm from the testes to the location where they combine with eggs. In the factory system, transmission lines are responsible for transporting products from the production site to where they will be consumed. Here, both the vas deferens and transmission lines represent the process of transporting the output from the starting point to the endpoint.",
+      "Oviduct corresponds to transmission line: In the reproductive system, the oviduct is responsible for transporting eggs from the ovaries to the location where they will combine with sperm. In the factory system, transmission lines likewise are responsible for transporting products from the production site to where they will be consumed. Here, both the oviduct and transmission lines represent the process of transporting the output from the starting point to the endpoint."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "non_bijective",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "many_to_one",
+  "system": {
+    "source": "Reproductive System",
+    "target": "Factory System"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

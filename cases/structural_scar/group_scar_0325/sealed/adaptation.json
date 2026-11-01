@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0325",
+  "dataset": "scar",
+  "original_id": "325",
+  "source_object_id": "obj_group_scar_0325_src",
+  "target_object_id": "obj_group_scar_0325_tgt",
+  "faithful_mappings": [
+    [
+      "goal",
+      "basket"
+    ],
+    [
+      "soccer",
+      "basketball"
+    ],
+    [
+      "grass",
+      "hardwood"
+    ],
+    [
+      "feet",
+      "hands"
+    ]
+  ],
+  "explanation": [
+    "Goal corresponds to basket: In soccer, the goal is the ultimate objective of the game, i.e. to score by shooting the ball into the opposing team's net. In basketball, the basket is the ultimate objective of the game, i.e. to score by shooting the ball through the hoop. In this analogy, goal and basket both represent the ultimate goal of the game.",
+    "Soccer corresponds to basketball: In soccer, the ball is the primary prop. In basketball, the ball is also the primary prop. Here, soccer and basketball both represent the core prop of their respective sports.",
+    "Grass corresponds to hardwood: In soccer, grass is the primary material of the playing field. In basketball, hardwood is the primary material of the playing surface. In this analogy, grass and hardwood both represent the fundamental material of the playing field of their respective sports.",
+    "Feet correspond to hands: In soccer, the feet are the primary body part used by the players. In basketball, the hands are the primary body part used by the players. Here, feet and hands both represent the primary body part used by the players in their respective sports."
+  ],
+  "background": {
+    "source": "Football is a team sport that involves kicking a ball with the feet in order to score a goal. It is commonly referred to as soccer in North America, Ireland and Australia. The game is played on grass and involves teamwork, strategy, and athleticism. Football has a rich history and has been played in various forms and codes around the world. It has become one of the most popular team sports globally, with millions of fans and players worldwide. In football, the ultimate objective is to score a goal by directing the ball into the opposing team’s net, while also defending against the opposing team doing the same. The game of football provides a thrilling and entertaining experience for players and spectators alike.",
+    "target": "Basketball is a thrilling team sport often played on a hardwood court with two opposing teams of five players each. The objective of the game is to shoot a basketball through the opponent's basket, while simultaneously preventing the opposite team from doing the same. The players can achieve a field goal that is worth two points or three, depending on the position from where they shoot. The game is full of action, requiring a skillful combination of dribbling and passing to move the ball. On the offense, players display their talent with layups, jump shots, or dunks, while on the defense, players try to block or steal the ball. The five players on each side fall into five playing positions, with the center being the tallest and the point guard the shortest. Basketball is considered a popular sport all over the world and known for its exciting and intense matches."
+  },
+  "raw": {
+    "id": 325,
+    "lang": "en",
+    "system_a": "football",
+    "system_b": "basketball",
+    "mappings": [
+      [
+        "goal",
+        "basket"
+      ],
+      [
+        "soccer",
+        "basketball"
+      ],
+      [
+        "grass",
+        "hardwood"
+      ],
+      [
+        "feet",
+        "hands"
+      ]
+    ],
+    "system_a_domain": "Sport",
+    "system_b_domain": "Sport",
+    "system_a_background": "Football is a team sport that involves kicking a ball with the feet in order to score a goal. It is commonly referred to as soccer in North America, Ireland and Australia. The game is played on grass and involves teamwork, strategy, and athleticism. Football has a rich history and has been played in various forms and codes around the world. It has become one of the most popular team sports globally, with millions of fans and players worldwide. In football, the ultimate objective is to score a goal by directing the ball into the opposing team’s net, while also defending against the opposing team doing the same. The game of football provides a thrilling and entertaining experience for players and spectators alike.",
+    "system_b_background": "Basketball is a thrilling team sport often played on a hardwood court with two opposing teams of five players each. The objective of the game is to shoot a basketball through the opponent's basket, while simultaneously preventing the opposite team from doing the same. The players can achieve a field goal that is worth two points or three, depending on the position from where they shoot. The game is full of action, requiring a skillful combination of dribbling and passing to move the ball. On the offense, players display their talent with layups, jump shots, or dunks, while on the defense, players try to block or steal the ball. The five players on each side fall into five playing positions, with the center being the tallest and the point guard the shortest. Basketball is considered a popular sport all over the world and known for its exciting and intense matches.",
+    "Explanation": [
+      "Goal corresponds to basket: In soccer, the goal is the ultimate objective of the game, i.e. to score by shooting the ball into the opposing team's net. In basketball, the basket is the ultimate objective of the game, i.e. to score by shooting the ball through the hoop. In this analogy, goal and basket both represent the ultimate goal of the game.",
+      "Soccer corresponds to basketball: In soccer, the ball is the primary prop. In basketball, the ball is also the primary prop. Here, soccer and basketball both represent the core prop of their respective sports.",
+      "Grass corresponds to hardwood: In soccer, grass is the primary material of the playing field. In basketball, hardwood is the primary material of the playing surface. In this analogy, grass and hardwood both represent the fundamental material of the playing field of their respective sports.",
+      "Feet correspond to hands: In soccer, the feet are the primary body part used by the players. In basketball, the hands are the primary body part used by the players. Here, feet and hands both represent the primary body part used by the players in their respective sports."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "football",
+    "target": "basketball"
+  },
+  "domains": {
+    "source": "Sport",
+    "target": "Sport"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

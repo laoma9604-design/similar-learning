@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0008",
+  "dataset": "scar",
+  "original_id": "8",
+  "source_object_id": "obj_group_scar_0008_src",
+  "target_object_id": "obj_group_scar_0008_tgt",
+  "faithful_mappings": [
+    [
+      "cell",
+      "molecular"
+    ],
+    [
+      "evolution",
+      "reaction process"
+    ],
+    [
+      "natural selection",
+      "Reaction conditions"
+    ]
+  ],
+  "explanation": [
+    "The cell corresponds to the molecule: in the origin of life, the cell is the basic unit of organisms, composed of molecules. In chemical reactions, the molecule is the basic chemical unit composed of atoms. In this analogy, the cell and the molecule both represent the basic building units in their respective systems.",
+    "Evolution corresponds to the reaction process: in the origin of life, evolution is the series of changes that organisms have undergone in the Earth's history, from single-celled to complex multi-cellular organisms. In chemical reactions, the reaction process is the interaction between molecules that leads to the formation of new compounds. In this analogy, evolution and the reaction process describe the developments and changes in their respective systems.",
+    "Natural selection corresponds to reaction conditions: in the origin of life, natural selection is one of the driving forces of evolution, it makes the organisms that can adapt to the environment more likely to survive and reproduce. In chemical reactions, reaction conditions such as temperature, pressure and concentration determine the progress of the reaction and the formation of products. In this analogy, natural selection and reaction conditions are both crucial factors influencing the developments and changes in their respective systems."
+  ],
+  "background": {
+    "source": "The origin of life is a fascinating and complex topic in biology. Abiogenesis, or the process of life arising from non-living matter, is thought to involve various stages including the formation of a habitable planet, prebiotic synthesis of organic molecules, molecular self-replication, self-assembly, and the emergence of cell membranes. Many theories propose different stages in this process. Life is based on the chemistry of carbon and water, with four main key families of chemicals that include lipids, carbohydrates, amino acids, and nucleic acids. Researchers believe that current life descends from an RNA world, although other self-replicating molecules may have preceded RNA. Various external sources of energy such as lightning, radiation, and atmospheric entries of micro-meteorites may have triggered chemical reactions. In addition, a genomics approach has sought to characterise the last universal common ancestor (LUCA) of modern organisms to better understand the origins of life, identifying 355 genes that appear to be common to all life. Finally, fossil evidence from the Earth informs most studies of abiogenesis, with the earliest undisputed evidence of life on Earth dating back to at least 3.5 billion years ago. The study of abiogenesis remains essential to understanding the evolution of life on our planet and the natural selection that has occurred.",
+    "target": "Chemical reactions are the molecular processes that transform one set of chemical substances into another. These encompass changes that occur due to the positions of electrons in chemical bonds between atoms, which can be represented by chemical equations. Chemical reactions are characterized by the change that occurs and give one or more products that differ from the reactants. These reactions proceed at a characteristic rate dependent on chemical concentration and temperature. Reactions may occur spontaneously or require an input of energy, and in some cases, they can be catalyzed by protein enzymes. Understanding reactions and reaction conditions is essential in chemical synthesis, biochemistry, nuclear chemistry, and quantum field theory."
+  },
+  "raw": {
+    "id": 8,
+    "lang": "en",
+    "system_a": "Origin of Life",
+    "system_b": "Chemical Reactions",
+    "mappings": [
+      [
+        "cell",
+        "molecular"
+      ],
+      [
+        "evolution",
+        "reaction process"
+      ],
+      [
+        "natural selection",
+        "Reaction conditions"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Chemical",
+    "system_a_background": "The origin of life is a fascinating and complex topic in biology. Abiogenesis, or the process of life arising from non-living matter, is thought to involve various stages including the formation of a habitable planet, prebiotic synthesis of organic molecules, molecular self-replication, self-assembly, and the emergence of cell membranes. Many theories propose different stages in this process. Life is based on the chemistry of carbon and water, with four main key families of chemicals that include lipids, carbohydrates, amino acids, and nucleic acids. Researchers believe that current life descends from an RNA world, although other self-replicating molecules may have preceded RNA. Various external sources of energy such as lightning, radiation, and atmospheric entries of micro-meteorites may have triggered chemical reactions. In addition, a genomics approach has sought to characterise the last universal common ancestor (LUCA) of modern organisms to better understand the origins of life, identifying 355 genes that appear to be common to all life. Finally, fossil evidence from the Earth informs most studies of abiogenesis, with the earliest undisputed evidence of life on Earth dating back to at least 3.5 billion years ago. The study of abiogenesis remains essential to understanding the evolution of life on our planet and the natural selection that has occurred.",
+    "system_b_background": "Chemical reactions are the molecular processes that transform one set of chemical substances into another. These encompass changes that occur due to the positions of electrons in chemical bonds between atoms, which can be represented by chemical equations. Chemical reactions are characterized by the change that occurs and give one or more products that differ from the reactants. These reactions proceed at a characteristic rate dependent on chemical concentration and temperature. Reactions may occur spontaneously or require an input of energy, and in some cases, they can be catalyzed by protein enzymes. Understanding reactions and reaction conditions is essential in chemical synthesis, biochemistry, nuclear chemistry, and quantum field theory.",
+    "Explanation": [
+      "The cell corresponds to the molecule: in the origin of life, the cell is the basic unit of organisms, composed of molecules. In chemical reactions, the molecule is the basic chemical unit composed of atoms. In this analogy, the cell and the molecule both represent the basic building units in their respective systems.",
+      "Evolution corresponds to the reaction process: in the origin of life, evolution is the series of changes that organisms have undergone in the Earth's history, from single-celled to complex multi-cellular organisms. In chemical reactions, the reaction process is the interaction between molecules that leads to the formation of new compounds. In this analogy, evolution and the reaction process describe the developments and changes in their respective systems.",
+      "Natural selection corresponds to reaction conditions: in the origin of life, natural selection is one of the driving forces of evolution, it makes the organisms that can adapt to the environment more likely to survive and reproduce. In chemical reactions, reaction conditions such as temperature, pressure and concentration determine the progress of the reaction and the formation of products. In this analogy, natural selection and reaction conditions are both crucial factors influencing the developments and changes in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Origin of Life",
+    "target": "Chemical Reactions"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Chemical"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,75 @@
+{
+  "adaptation_id": "adapt_scar_0334",
+  "dataset": "scar",
+  "original_id": "334",
+  "source_object_id": "obj_group_scar_0334_src",
+  "target_object_id": "obj_group_scar_0334_tgt",
+  "faithful_mappings": [
+    [
+      "poet",
+      "pedestrian"
+    ],
+    [
+      "poetry",
+      "bridge"
+    ]
+  ],
+  "explanation": [
+    "Poet corresponds to pedestrian: Poets are people who create poetry, expressing emotions and thoughts through their works. Pedestrians are people who walk on bridges to reach their destination. Here, both poets and pedestrians are the subjects in their respective fields, playing important roles.",
+    "Poetry corresponds to bridge: Poetry is the work created by poets, carrying their emotions and thoughts, leading readers into the world the poets want to express. Bridges connect two places, allowing pedestrians to pass through smoothly. In this analogy, poetry and bridges are both carriers that connect two worlds."
+  ],
+  "background": {
+    "source": "Poetry is a form of literature that uses the aesthetic and rhythmic qualities of language to evoke multiple meanings, often beyond the surface level. It has a long and varied history, dating back to prehistoric times and evolving differently across the globe. Poetry employs various literary devices such as assonance, alliteration, and rhythm to convey musical or incantatory effects, leaving it open to multiple interpretations. Device usage creates connections not previously perceived, establishing resonance between individual verses, patterns of rhyme or rhythm. While some poetry types are unique to particular cultures and languages that use other means to create rhythm and euphony. With modern internationalism, poets adapt techniques from diverse cultures and languages. The Western cultural tradition associates poetry's formulation with inspiration attributed to a Muse. In poems, the lyrics are spoken by the speaker, differentiating the character from the author, a crucial distinction in interpretation.",
+    "target": "A bridge is a vital piece of engineering that allows us to cross obstacles that would otherwise be impossible to traverse. From the earliest days of human civilization, we have used bridges to cross rivers, valleys, and even marshlands. Bridges come in all shapes and sizes, from simple boardwalks to complex suspension structures, each designed to handle different loads and serve a variety of functions. Pedestrian bridges are a popular type of bridge, designed to cross areas where people need to walk or cycle. These bridges are typically lightweight and easy to build, making them a popular choice for urban areas where space is limited. With the right design, pedestrian bridges can become an iconic part of a cityscape, providing both a practical and aesthetic solution to the problem of crossing busy roads and waterways. Whether it's a simple footbridge or a complex engineering feat, bridges are an essential part of our daily lives, connecting us to the world around us and opening up new opportunities for exploration and adventure."
+  },
+  "raw": {
+    "id": 334,
+    "lang": "en",
+    "system_a": "Poetry",
+    "system_b": "Bridge",
+    "mappings": [
+      [
+        "poet",
+        "pedestrian"
+      ],
+      [
+        "poetry",
+        "bridge"
+      ]
+    ],
+    "system_a_domain": "Literature",
+    "system_b_domain": "Engineering",
+    "system_a_background": "Poetry is a form of literature that uses the aesthetic and rhythmic qualities of language to evoke multiple meanings, often beyond the surface level. It has a long and varied history, dating back to prehistoric times and evolving differently across the globe. Poetry employs various literary devices such as assonance, alliteration, and rhythm to convey musical or incantatory effects, leaving it open to multiple interpretations. Device usage creates connections not previously perceived, establishing resonance between individual verses, patterns of rhyme or rhythm. While some poetry types are unique to particular cultures and languages that use other means to create rhythm and euphony. With modern internationalism, poets adapt techniques from diverse cultures and languages. The Western cultural tradition associates poetry's formulation with inspiration attributed to a Muse. In poems, the lyrics are spoken by the speaker, differentiating the character from the author, a crucial distinction in interpretation.",
+    "system_b_background": "A bridge is a vital piece of engineering that allows us to cross obstacles that would otherwise be impossible to traverse. From the earliest days of human civilization, we have used bridges to cross rivers, valleys, and even marshlands. Bridges come in all shapes and sizes, from simple boardwalks to complex suspension structures, each designed to handle different loads and serve a variety of functions. Pedestrian bridges are a popular type of bridge, designed to cross areas where people need to walk or cycle. These bridges are typically lightweight and easy to build, making them a popular choice for urban areas where space is limited. With the right design, pedestrian bridges can become an iconic part of a cityscape, providing both a practical and aesthetic solution to the problem of crossing busy roads and waterways. Whether it's a simple footbridge or a complex engineering feat, bridges are an essential part of our daily lives, connecting us to the world around us and opening up new opportunities for exploration and adventure.",
+    "Explanation": [
+      "Poet corresponds to pedestrian: Poets are people who create poetry, expressing emotions and thoughts through their works. Pedestrians are people who walk on bridges to reach their destination. Here, both poets and pedestrians are the subjects in their respective fields, playing important roles.",
+      "Poetry corresponds to bridge: Poetry is the work created by poets, carrying their emotions and thoughts, leading readers into the world the poets want to express. Bridges connect two places, allowing pedestrians to pass through smoothly. In this analogy, poetry and bridges are both carriers that connect two worlds."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Poetry",
+    "target": "Bridge"
+  },
+  "domains": {
+    "source": "Literature",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

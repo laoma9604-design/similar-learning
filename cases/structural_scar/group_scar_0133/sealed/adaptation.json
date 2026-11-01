@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0133",
+  "dataset": "scar",
+  "original_id": "133",
+  "source_object_id": "obj_group_scar_0133_src",
+  "target_object_id": "obj_group_scar_0133_tgt",
+  "faithful_mappings": [
+    [
+      "Storing data",
+      "Word"
+    ],
+    [
+      "read/write head",
+      "reader"
+    ],
+    [
+      "interface",
+      "Table of contents"
+    ]
+  ],
+  "explanation": [
+    "Storing data corresponds to words: In a hard drive, storing data refers to electronic information stored on the disk; in a book, words are the carrier for recording information. Both are forms of information representation.",
+    "Read/write head corresponds to a reader: In a hard drive, the read/write head is the device used for reading and writing data; in a book, the reader is the person who reads and understands the words. Both are the main entities that interact with information.",
+    "Interface corresponds to a table of contents: In a hard drive, the interface is the channel that connects the hard drive to the computer, providing data transmission functions; in a book, the table of contents provides tools for organizing and quickly locating the content of the book. Both are ways of connecting and organizing information."
+  ],
+  "background": {
+    "source": "A hard drive, also known as a hard disk drive (HDD) or fixed disk, is a non-volatile data storage device. It works through an electro-mechanical process and stores digital data using magnetic storage. The drive has one or more spinning platters coated with magnetic material, with data being accessed randomly through read/write heads that move on a rotating actuator arm. Modern hard drives come in a rectangular box and are available in two form factors, namely 3.5-inch for desktop computers and 2.5-inch for laptops. The device is connected to a computer via standard interface cables such as PATA, SATA, USB or SAS cables, depending on the interface required. Despite being overshadowed by solid-state drives (SSDs) in recent years, HDDs remain dominant in the volume of storage produced, primarily for servers due to their high capacity and performance, making them an important technology for data-driven operations.",
+    "target": "A book is a timeless form of intellectual object that has been used to record vast amounts of information for centuries. Typically, it is composed of many pages bound together and protected by a cover, with a technical term for this physical arrangement being 'codex'. Each part of a lengthy composition is called a book, with the pages being sheets called leaves. Although books are usually composed of writings or images, they can also consist of drawings, photographs, or puzzles. Readers often use table of contents to navigate through the book, and audiobooks are rapidly gaining popularity. Despite the rise of ebooks, printed books are still preferred by many, and avid readers or collectors of books are referred to as bibliophiles or bookworms."
+  },
+  "raw": {
+    "id": 133,
+    "lang": "en",
+    "system_a": "hard drive",
+    "system_b": "book",
+    "mappings": [
+      [
+        "Storing data",
+        "Word"
+      ],
+      [
+        "read/write head",
+        "reader"
+      ],
+      [
+        "interface",
+        "Table of contents"
+      ]
+    ],
+    "system_a_domain": "Computer",
+    "system_b_domain": "Art",
+    "system_a_background": "A hard drive, also known as a hard disk drive (HDD) or fixed disk, is a non-volatile data storage device. It works through an electro-mechanical process and stores digital data using magnetic storage. The drive has one or more spinning platters coated with magnetic material, with data being accessed randomly through read/write heads that move on a rotating actuator arm. Modern hard drives come in a rectangular box and are available in two form factors, namely 3.5-inch for desktop computers and 2.5-inch for laptops. The device is connected to a computer via standard interface cables such as PATA, SATA, USB or SAS cables, depending on the interface required. Despite being overshadowed by solid-state drives (SSDs) in recent years, HDDs remain dominant in the volume of storage produced, primarily for servers due to their high capacity and performance, making them an important technology for data-driven operations.",
+    "system_b_background": "A book is a timeless form of intellectual object that has been used to record vast amounts of information for centuries. Typically, it is composed of many pages bound together and protected by a cover, with a technical term for this physical arrangement being 'codex'. Each part of a lengthy composition is called a book, with the pages being sheets called leaves. Although books are usually composed of writings or images, they can also consist of drawings, photographs, or puzzles. Readers often use table of contents to navigate through the book, and audiobooks are rapidly gaining popularity. Despite the rise of ebooks, printed books are still preferred by many, and avid readers or collectors of books are referred to as bibliophiles or bookworms.",
+    "Explanation": [
+      "Storing data corresponds to words: In a hard drive, storing data refers to electronic information stored on the disk; in a book, words are the carrier for recording information. Both are forms of information representation.",
+      "Read/write head corresponds to a reader: In a hard drive, the read/write head is the device used for reading and writing data; in a book, the reader is the person who reads and understands the words. Both are the main entities that interact with information.",
+      "Interface corresponds to a table of contents: In a hard drive, the interface is the channel that connects the hard drive to the computer, providing data transmission functions; in a book, the table of contents provides tools for organizing and quickly locating the content of the book. Both are ways of connecting and organizing information."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "hard drive",
+    "target": "book"
+  },
+  "domains": {
+    "source": "Computer",
+    "target": "Art"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

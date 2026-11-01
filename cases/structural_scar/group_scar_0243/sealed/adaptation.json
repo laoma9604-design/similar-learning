@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0243",
+  "dataset": "scar",
+  "original_id": "243",
+  "source_object_id": "obj_group_scar_0243_src",
+  "target_object_id": "obj_group_scar_0243_tgt",
+  "faithful_mappings": [
+    [
+      "facts",
+      "original"
+    ],
+    [
+      "background",
+      "Encryption"
+    ],
+    [
+      "historical data",
+      "ciphertext"
+    ],
+    [
+      "analyze",
+      "to decipher"
+    ]
+  ],
+  "explanation": [
+    "Facts correspond to the original: In historical research, facts refer to things that actually happened in history and are the basis of research. In deciphering codes, the original refers to unencrypted information and is the goal of decryption. Here, facts and original both represent the basis of research and decryption.",
+    "Historical background corresponds to encryption method: In historical research, historical background refers to the social, political, and economic environment when an event occurred, which is important for understanding the facts. In deciphering codes, encryption method refers to the method used to convert the original into ciphertext and is crucial for decrypting the message. Here, historical background and encryption method both represent the key factors for understanding and decryption.",
+    "Historical data corresponds to the ciphertext: In historical research, historical data refers to various written or non-written materials used to prove the facts. In deciphering codes, ciphertext refers to the encrypted information that needs to be decrypted to restore the original message. Here, historical data and ciphertext both represent the objects of research and decryption.",
+    "Analysis corresponds to decryption: In historical research, analysis refers to a deep study of facts, historical background, and historical data to reveal the internal connections and laws of historical events. In deciphering codes, decryption refers to the process of restoring the original message by analyzing the ciphertext and encryption method. Here, analysis and decryption both represent the methods and processes of research and decryption."
+  ],
+  "background": {
+    "source": "Historical research is an important field that involves the collection and analysis of historical data to uncover the facts and background of past events. The Institute of Historical Research (IHR) is a respected organisation in the United Kingdom, providing researchers with the resources and training they need to excel in this field. Founded in 1921 by A. F. Pollard, the IHR is a part of the School of Advanced Study at the University of London and is located at Senate House. With access to an extensive collection of primary sources and historical documents, researchers at the IHR are well-equipped to analyze and interpret historical data, uncovering new insights into the past. By conducting rigorous research and applying critical thinking skills, these researchers can shed light on events that have shaped the world we live in today.",
+    "target": "Deciphering the code is an intriguing puzzle that scientists, cryptographers, and philologists have been trying to solve for centuries. The original text, be it an ancient script, a genetic code or a cryptographic message, is often encrypted into ciphertext, making it nearly impossible to decode without the proper techniques and tools. However, the challenge of encryption has also triggered an intricate game of cat and mouse between those who create codes and those who seek to decipher them. Despite the difficulties, the ability to decipher a code is an essential skill to gain access to otherwise inaccessible information. In the context of philology, decryption is about uncovering the meaning of written records that have been lost to time, in ancient or obscure languages. In the realm of cryptography, decipherment refers to the process of breaking encryption codes, which can range from simple substitution ciphers to complex mathematical algorithms. Decipherment is especially valuable for government agencies, military forces, and intelligence services to gain insight into their adversaries' plans and operations. Finally, in genetics, decipherment is used metaphorically to refer to the analysis of DNA sequencing, which can reveal critical information about an organism's traits and functions. In summary, decipherment plays a crucial role in unlocking the secrets hidden in various fields of science and human knowledge, allowing researchers and enthusiasts to uncover the original meaning behind encrypted texts and codes."
+  },
+  "raw": {
+    "id": 243,
+    "lang": "en",
+    "system_a": "Historical Research",
+    "system_b": "Deciphering the Code",
+    "mappings": [
+      [
+        "facts",
+        "original"
+      ],
+      [
+        "background",
+        "Encryption"
+      ],
+      [
+        "historical data",
+        "ciphertext"
+      ],
+      [
+        "analyze",
+        "to decipher"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "Historical research is an important field that involves the collection and analysis of historical data to uncover the facts and background of past events. The Institute of Historical Research (IHR) is a respected organisation in the United Kingdom, providing researchers with the resources and training they need to excel in this field. Founded in 1921 by A. F. Pollard, the IHR is a part of the School of Advanced Study at the University of London and is located at Senate House. With access to an extensive collection of primary sources and historical documents, researchers at the IHR are well-equipped to analyze and interpret historical data, uncovering new insights into the past. By conducting rigorous research and applying critical thinking skills, these researchers can shed light on events that have shaped the world we live in today.",
+    "system_b_background": "Deciphering the code is an intriguing puzzle that scientists, cryptographers, and philologists have been trying to solve for centuries. The original text, be it an ancient script, a genetic code or a cryptographic message, is often encrypted into ciphertext, making it nearly impossible to decode without the proper techniques and tools. However, the challenge of encryption has also triggered an intricate game of cat and mouse between those who create codes and those who seek to decipher them. Despite the difficulties, the ability to decipher a code is an essential skill to gain access to otherwise inaccessible information. In the context of philology, decryption is about uncovering the meaning of written records that have been lost to time, in ancient or obscure languages. In the realm of cryptography, decipherment refers to the process of breaking encryption codes, which can range from simple substitution ciphers to complex mathematical algorithms. Decipherment is especially valuable for government agencies, military forces, and intelligence services to gain insight into their adversaries' plans and operations. Finally, in genetics, decipherment is used metaphorically to refer to the analysis of DNA sequencing, which can reveal critical information about an organism's traits and functions. In summary, decipherment plays a crucial role in unlocking the secrets hidden in various fields of science and human knowledge, allowing researchers and enthusiasts to uncover the original meaning behind encrypted texts and codes.",
+    "Explanation": [
+      "Facts correspond to the original: In historical research, facts refer to things that actually happened in history and are the basis of research. In deciphering codes, the original refers to unencrypted information and is the goal of decryption. Here, facts and original both represent the basis of research and decryption.",
+      "Historical background corresponds to encryption method: In historical research, historical background refers to the social, political, and economic environment when an event occurred, which is important for understanding the facts. In deciphering codes, encryption method refers to the method used to convert the original into ciphertext and is crucial for decrypting the message. Here, historical background and encryption method both represent the key factors for understanding and decryption.",
+      "Historical data corresponds to the ciphertext: In historical research, historical data refers to various written or non-written materials used to prove the facts. In deciphering codes, ciphertext refers to the encrypted information that needs to be decrypted to restore the original message. Here, historical data and ciphertext both represent the objects of research and decryption.",
+      "Analysis corresponds to decryption: In historical research, analysis refers to a deep study of facts, historical background, and historical data to reveal the internal connections and laws of historical events. In deciphering codes, decryption refers to the process of restoring the original message by analyzing the ciphertext and encryption method. Here, analysis and decryption both represent the methods and processes of research and decryption."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Historical Research",
+    "target": "Deciphering the Code"
+  },
+  "domains": {
+    "source": "History",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

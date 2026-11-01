@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0358",
+  "dataset": "scar",
+  "original_id": "358",
+  "source_object_id": "obj_group_scar_0358_src",
+  "target_object_id": "obj_group_scar_0358_tgt",
+  "faithful_mappings": [
+    [
+      "Eye",
+      "lens"
+    ],
+    [
+      "cornea",
+      "Transparent glass"
+    ],
+    [
+      "Crystalline Lens",
+      "focal length"
+    ],
+    [
+      "retina",
+      "Photosensitive equipment"
+    ],
+    [
+      "optic nerve",
+      "data line"
+    ]
+  ],
+  "explanation": [
+    "Eye corresponds to lens: both eye and lens are structures that receive light, they can focus light and convert it into other forms of energy or information.",
+    "Cornea corresponds to transparent glass: both cornea and transparent glass are transparent media for light passing through, they can protect internal structures and adjust the direction of light propagation.",
+    "Crystalline lens corresponds to focal length: both crystalline lens and focal length are structures or parameters that adjust the focusing of light, they can affect the clarity and scope of imaging.",
+    "Retina corresponds to photosensitive equipment: both retina and photosensitive equipment are structures that convert light into electrical signals, they can convert light information into processable data.",
+    "Optic nerve corresponds to data line: both optic nerve and data line are channels for transmitting electrical signals, they can transmit information from receiving structures to processing structures."
+  ],
+  "background": {
+    "source": "A vision system is a technological advancement that has been designed to mimic the human eye and its processing abilities. The human eye comprises several parts such as the cornea, crystalline lens, retina, and optic nerve, all of which work together to enable a living being to see. Similarly, a vision system relies on machine vision and computer vision to perform tasks that simulate human sight. \n\nMachine vision involves the use of software that operates like the human eye, with the aim of performing tasks such as quality assurance and defect detection in industrial settings. A vision system can also utilize computer vision to interpret digital images or videos, providing high-level understanding through advanced algorithms and computer processing. \n\nOverall, a vision system can be thought of as a technological assimilation of the human eye and brain, which provides a wide range of advantages over traditional approaches.",
+    "target": "A camera is an optical instrument that captures images by allowing light to pass through a small hole and onto a light-sensitive surface. It has a lens that focuses the light and a shutter that controls the amount of exposure time. The captured images can be reproduced through digital imaging or photographic printing. The camera has come a long way from its origins as a camera obscura, and now boasts advanced features such as varying focal lengths and transparent glass materials. Additionally, photosensitive equipment and data lines enable a seamless transfer and storage of images."
+  },
+  "raw": {
+    "id": 358,
+    "lang": "en",
+    "system_a": "Vision System",
+    "system_b": "Camera",
+    "mappings": [
+      [
+        "Eye",
+        "lens"
+      ],
+      [
+        "cornea",
+        "Transparent glass"
+      ],
+      [
+        "Crystalline Lens",
+        "focal length"
+      ],
+      [
+        "retina",
+        "Photosensitive equipment"
+      ],
+      [
+        "optic nerve",
+        "data line"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Physics",
+    "system_a_background": "A vision system is a technological advancement that has been designed to mimic the human eye and its processing abilities. The human eye comprises several parts such as the cornea, crystalline lens, retina, and optic nerve, all of which work together to enable a living being to see. Similarly, a vision system relies on machine vision and computer vision to perform tasks that simulate human sight. \n\nMachine vision involves the use of software that operates like the human eye, with the aim of performing tasks such as quality assurance and defect detection in industrial settings. A vision system can also utilize computer vision to interpret digital images or videos, providing high-level understanding through advanced algorithms and computer processing. \n\nOverall, a vision system can be thought of as a technological assimilation of the human eye and brain, which provides a wide range of advantages over traditional approaches.",
+    "system_b_background": "A camera is an optical instrument that captures images by allowing light to pass through a small hole and onto a light-sensitive surface. It has a lens that focuses the light and a shutter that controls the amount of exposure time. The captured images can be reproduced through digital imaging or photographic printing. The camera has come a long way from its origins as a camera obscura, and now boasts advanced features such as varying focal lengths and transparent glass materials. Additionally, photosensitive equipment and data lines enable a seamless transfer and storage of images.",
+    "Explanation": [
+      "Eye corresponds to lens: both eye and lens are structures that receive light, they can focus light and convert it into other forms of energy or information.",
+      "Cornea corresponds to transparent glass: both cornea and transparent glass are transparent media for light passing through, they can protect internal structures and adjust the direction of light propagation.",
+      "Crystalline lens corresponds to focal length: both crystalline lens and focal length are structures or parameters that adjust the focusing of light, they can affect the clarity and scope of imaging.",
+      "Retina corresponds to photosensitive equipment: both retina and photosensitive equipment are structures that convert light into electrical signals, they can convert light information into processable data.",
+      "Optic nerve corresponds to data line: both optic nerve and data line are channels for transmitting electrical signals, they can transmit information from receiving structures to processing structures."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Vision System",
+    "target": "Camera"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

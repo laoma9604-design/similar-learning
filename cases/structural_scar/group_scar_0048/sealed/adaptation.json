@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0048",
+  "dataset": "scar",
+  "original_id": "48",
+  "source_object_id": "obj_group_scar_0048_src",
+  "target_object_id": "obj_group_scar_0048_tgt",
+  "faithful_mappings": [
+    [
+      "oxygen",
+      "fuel"
+    ],
+    [
+      "Life Events",
+      "driving"
+    ],
+    [
+      "heart",
+      "engine"
+    ]
+  ],
+  "explanation": [
+    "Oxygen corresponds to fuel: Oxygen is an essential element of human life activities, participating in the production of energy. In a car, fuel is the energy source required for the car to operate. Both are substances that provide energy.",
+    "Life events correspond to driving: Life events are the processes by which the human body performs various physiological functions. In a car, driving is the process by which the car moves on the road. Both are activities that enable functionality.",
+    "The heart corresponds to the engine: The heart is the human body's blood-pumping organ responsible for circulating blood throughout the body. In a car, the engine is the power source responsible for driving the car. Both are the core components that provide power."
+  ],
+  "background": {
+    "source": "The human body is a complex and remarkable structure that encompasses various cells, tissues, and organ systems. From the head to the feet, every part of the body plays a crucial role in maintaining homeostasis and keeping the body functional. The body is made up of different organs such as the heart, lungs, liver, brain, and kidneys, each with its unique function to ensure the body's overall well-being. The heart, for instance, plays a vital role in maintaining cardiorespiratory function by pumping oxygenated blood to various parts of the body. Studying the body involves a combination of scientific fields such as anatomy, physiology, histology, and embryology. Professionals from different fields, including health practitioners, physiologists, anatomists, and artists, use their expertise to explore and understand the human body's intricacies. Whether it's for medical purposes or artistic expression, the human body remains an intriguing subject that continues to fascinate us through every stage of life events.",
+    "target": "Cars, also known as automobiles or motor vehicles, are vehicles with wheels primarily used for transportation. They have a variety of features and controls including driving and parking controls, passenger comfort, and lights. The majority of cars rely on an internal combustion engine fueled by fossil fuels, but electric cars have become commercially available since the 2000s. The costs and benefits associated with car use are numerous, including personal costs such as fuel and maintenance, as well as societal costs like road congestion and air pollution. Despite their drawbacks, cars have become an essential part of modern society, with around one billion in use worldwide."
+  },
+  "raw": {
+    "id": 48,
+    "lang": "en",
+    "system_a": "Human body",
+    "system_b": "car",
+    "mappings": [
+      [
+        "oxygen",
+        "fuel"
+      ],
+      [
+        "Life Events",
+        "driving"
+      ],
+      [
+        "heart",
+        "engine"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Physics",
+    "system_a_background": "The human body is a complex and remarkable structure that encompasses various cells, tissues, and organ systems. From the head to the feet, every part of the body plays a crucial role in maintaining homeostasis and keeping the body functional. The body is made up of different organs such as the heart, lungs, liver, brain, and kidneys, each with its unique function to ensure the body's overall well-being. The heart, for instance, plays a vital role in maintaining cardiorespiratory function by pumping oxygenated blood to various parts of the body. Studying the body involves a combination of scientific fields such as anatomy, physiology, histology, and embryology. Professionals from different fields, including health practitioners, physiologists, anatomists, and artists, use their expertise to explore and understand the human body's intricacies. Whether it's for medical purposes or artistic expression, the human body remains an intriguing subject that continues to fascinate us through every stage of life events.",
+    "system_b_background": "Cars, also known as automobiles or motor vehicles, are vehicles with wheels primarily used for transportation. They have a variety of features and controls including driving and parking controls, passenger comfort, and lights. The majority of cars rely on an internal combustion engine fueled by fossil fuels, but electric cars have become commercially available since the 2000s. The costs and benefits associated with car use are numerous, including personal costs such as fuel and maintenance, as well as societal costs like road congestion and air pollution. Despite their drawbacks, cars have become an essential part of modern society, with around one billion in use worldwide.",
+    "Explanation": [
+      "Oxygen corresponds to fuel: Oxygen is an essential element of human life activities, participating in the production of energy. In a car, fuel is the energy source required for the car to operate. Both are substances that provide energy.",
+      "Life events correspond to driving: Life events are the processes by which the human body performs various physiological functions. In a car, driving is the process by which the car moves on the road. Both are activities that enable functionality.",
+      "The heart corresponds to the engine: The heart is the human body's blood-pumping organ responsible for circulating blood throughout the body. In a car, the engine is the power source responsible for driving the car. Both are the core components that provide power."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Human body",
+    "target": "car"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,152 @@
+{
+  "adaptation_id": "adapt_scar_0144",
+  "dataset": "scar",
+  "original_id": "144",
+  "source_object_id": "obj_group_scar_0144_src",
+  "target_object_id": "obj_group_scar_0144_tgt",
+  "faithful_mappings": [
+    [
+      "computer",
+      "mind"
+    ],
+    [
+      "processing",
+      "thinking"
+    ],
+    [
+      "erasing",
+      "forgetting"
+    ],
+    [
+      "write",
+      "memorize"
+    ],
+    [
+      "read",
+      "remember"
+    ],
+    [
+      "memory",
+      "memory"
+    ],
+    [
+      "outputs",
+      "muscles"
+    ],
+    [
+      "inputs",
+      "senses"
+    ],
+    [
+      "bug",
+      "mistake"
+    ]
+  ],
+  "explanation": [
+    "Computer corresponds to the mind: Both computer and mind are carriers for processing information, with computer dealing with numerical information and mind processing human thinking information.",
+    "Processing corresponds to thinking: Computer processes data, while mind processes information via thinking. Both are processes of dealing with incoming information.",
+    "Erasing corresponds to forgetting: Computer can erase stored data, and information in the mind may also be forgotten. Both represent information loss.",
+    "Write corresponds to memorize: Computer writes information onto storage devices, and the process of memory in the mind can also be seen as \"writing.\" Both are processes of information storage.",
+    "Read corresponds to remember: Computer reads information from storage devices, while mind retrieves information stored in memory. Both are processes of obtaining stored information.",
+    "Memory corresponds to memory: Both computer and mind have the ability to store and recall information, thus their memory functions are similar.",
+    "Outputs correspond to muscles: Computer produces practical effects via peripherals, while mind achieves specific actions by commanding muscles. Both are processes of transforming processed information into actual actions.",
+    "Inputs correspond to senses: Computer receives information through input devices, while mind receives external information through sensory organs. Both are ways of acquiring external information.",
+    "Bugs correspond to mistakes: Computer may have bugs resulting in mistakes, and mind may also make mistakes. Both represent potential problems that may arise during information processing."
+  ],
+  "background": {
+    "source": "A computer is a powerful machine that automates arithmetic and logical operations, enabling it to perform a wide range of tasks with great efficiency. It has various components, including a central processing unit (CPU), computer memory, inputs, and outputs. Memory chips provide a space where information can be stored for later use, and peripherals allow information to be retrieved and saved. Despite their power, computers can still be susceptible to bugs or errors, which can affect their performance. The ability to write, read, and erase data from memory is a crucial aspect of computer function, making it possible to store and retrieve information quickly and efficiently.",
+    "target": "The mind is a complex set of faculties responsible for all mental phenomena, including thought, imagination, memory, will, and sensation. It can be viewed as both a substance and a set of properties or capacities possessed by humans and higher animals. The nature of the mind is not easily defined, with various epistemic, consciousness-based, and intentionality-based approaches proposed. The mind is often contrasted with the body and the question of the relation between mind and brain is a central issue in the mind-body problem. Philosophical and religious beliefs have influenced concepts of mind, with different traditions offering competing theories. Psychologists and computer scientists have developed influential theories concerning the mind, and the possibility of nonbiological minds is explored in artificial intelligence. The mind is commonly viewed as the stream of consciousness, encompassing sense impressions and mental phenomena that are constantly changing. Remembering, forgetting, and making mistakes are all integral parts of the workings of the mind, with memory playing a crucial role in the retention and retrieval of information. The mind is also responsible for the coordination of muscles and the interpretation of the senses, making it an essential aspect of human functioning."
+  },
+  "raw": {
+    "id": 144,
+    "lang": "en",
+    "system_a": "computer",
+    "system_b": "mind",
+    "mappings": [
+      [
+        "computer",
+        "mind"
+      ],
+      [
+        "processing",
+        "thinking"
+      ],
+      [
+        "erasing",
+        "forgetting"
+      ],
+      [
+        "write",
+        "memorize"
+      ],
+      [
+        "read",
+        "remember"
+      ],
+      [
+        "memory",
+        "memory"
+      ],
+      [
+        "outputs",
+        "muscles"
+      ],
+      [
+        "inputs",
+        "senses"
+      ],
+      [
+        "bug",
+        "mistake"
+      ]
+    ],
+    "system_a_domain": "Computer",
+    "system_b_domain": "Biology",
+    "system_a_background": "A computer is a powerful machine that automates arithmetic and logical operations, enabling it to perform a wide range of tasks with great efficiency. It has various components, including a central processing unit (CPU), computer memory, inputs, and outputs. Memory chips provide a space where information can be stored for later use, and peripherals allow information to be retrieved and saved. Despite their power, computers can still be susceptible to bugs or errors, which can affect their performance. The ability to write, read, and erase data from memory is a crucial aspect of computer function, making it possible to store and retrieve information quickly and efficiently.",
+    "system_b_background": "The mind is a complex set of faculties responsible for all mental phenomena, including thought, imagination, memory, will, and sensation. It can be viewed as both a substance and a set of properties or capacities possessed by humans and higher animals. The nature of the mind is not easily defined, with various epistemic, consciousness-based, and intentionality-based approaches proposed. The mind is often contrasted with the body and the question of the relation between mind and brain is a central issue in the mind-body problem. Philosophical and religious beliefs have influenced concepts of mind, with different traditions offering competing theories. Psychologists and computer scientists have developed influential theories concerning the mind, and the possibility of nonbiological minds is explored in artificial intelligence. The mind is commonly viewed as the stream of consciousness, encompassing sense impressions and mental phenomena that are constantly changing. Remembering, forgetting, and making mistakes are all integral parts of the workings of the mind, with memory playing a crucial role in the retention and retrieval of information. The mind is also responsible for the coordination of muscles and the interpretation of the senses, making it an essential aspect of human functioning.",
+    "Explanation": [
+      "Computer corresponds to the mind: Both computer and mind are carriers for processing information, with computer dealing with numerical information and mind processing human thinking information.",
+      "Processing corresponds to thinking: Computer processes data, while mind processes information via thinking. Both are processes of dealing with incoming information.",
+      "Erasing corresponds to forgetting: Computer can erase stored data, and information in the mind may also be forgotten. Both represent information loss.",
+      "Write corresponds to memorize: Computer writes information onto storage devices, and the process of memory in the mind can also be seen as \"writing.\" Both are processes of information storage.",
+      "Read corresponds to remember: Computer reads information from storage devices, while mind retrieves information stored in memory. Both are processes of obtaining stored information.",
+      "Memory corresponds to memory: Both computer and mind have the ability to store and recall information, thus their memory functions are similar.",
+      "Outputs correspond to muscles: Computer produces practical effects via peripherals, while mind achieves specific actions by commanding muscles. Both are processes of transforming processed information into actual actions.",
+      "Inputs correspond to senses: Computer receives information through input devices, while mind receives external information through sensory organs. Both are ways of acquiring external information.",
+      "Bugs correspond to mistakes: Computer may have bugs resulting in mistakes, and mind may also make mistakes. Both represent potential problems that may arise during information processing."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6",
+        "n7": "n7",
+        "n8": "n8",
+        "n9": "n9"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "computer",
+    "target": "mind"
+  },
+  "domains": {
+    "source": "Computer",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

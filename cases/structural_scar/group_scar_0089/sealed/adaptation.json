@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0089",
+  "dataset": "scar",
+  "original_id": "89",
+  "source_object_id": "obj_group_scar_0089_src",
+  "target_object_id": "obj_group_scar_0089_tgt",
+  "faithful_mappings": [
+    [
+      "element",
+      "Note"
+    ],
+    [
+      "atomic number",
+      "frequency"
+    ],
+    [
+      "chemical reaction",
+      "harmony"
+    ]
+  ],
+  "explanation": [
+    "Element corresponds to note: Elements in the periodic table are the basic building units of chemistry, while notes in the tuning system of music are the fundamental units in music.",
+    "Atomic number corresponds to frequency: The atomic number determines the arrangement of elements in the periodic table, while frequency is the characteristic parameter of notes in the tuning system of music. Both determine the basic properties of units in their respective systems.",
+    "Chemical reaction corresponds to harmony: Chemical reaction is the process of producing new substances by the interaction of elements, while harmony is the phenomenon of producing harmonious sound effects by combining different notes in the tuning system of music. Both involve the interaction between basic units."
+  ],
+  "background": {
+    "source": "The periodic table is a fundamental tool in the study of chemistry. It is a tabular arrangement of the chemical elements in order of their increasing atomic numbers. This arrangement groups the elements with similar properties and allows scientists to predict the properties of new and undiscovered elements. Each element is represented by its symbol, atomic number, and atomic weight. The table can be used to examine the behavior of elements in chemical reactions and to predict the products of those reactions. The periodic table has many applications beyond chemistry, including in physics, biology, and materials science. Although it is a simple concept, the periodic table is one of the most important tools in modern science. This importance is reflected in the many variations of the periodic table, such as those that focus on crystal structure or electron configurations. Whether you are a student of science, a researcher, or simply interested in learning more about the elements that make up our world, the periodic table is an indispensable resource.",
+    "target": "A tuning system for music is an essential tool for achieving a harmonious and balanced sound in any musical performance. It involves adjusting the pitch of individual notes to a specific frequency to create a perfect blend of sound that is pleasing to the ear. Tuning practice is the art of adjusting an instrument or voice to produce the desired note or frequency, while tuning systems refer to the different tuning systems used to tune a musical instrument.\n\nIn the world of music, tuning is a critical aspect of creating a harmonious and balanced sound. Pitches are adjusted to different frequencies to create various styles of music. For instance, a guitar can be tuned to produce sounds for blues, country, rock, classical, or other genres. The tuning systems used are based on theoretical principles that determine the relationships between the notes.\n\nThe frequency of a note determines the pitch of the sound. Higher frequencies correspond to higher pitch notes, while lower frequencies correspond to lower pitch notes. In a tuning system, notes are arranged in a specific order to create a harmonic and balanced sound.\n\nHarmony is achieved when all the notes in a musical piece are in tune with each other, and they complement each other. It is the result of careful tuning and practice using a tuning system. It is said that tuning is the foundation of any good musical performance. It makes the music sound more enjoyable and pleasing to the listener's ear.\n\nIn conclusion, a tuning system for music is an essential tool for achieving a harmonious and balanced sound in any musical performance. The tuning practice involves adjusting an instrument or voice to produce the desired note or frequency, while tuning systems are based on theoretical principles that determine the relationships between the notes. Harmony is achieved when all the notes in a piece of music complement each other, and they are in tune with each other. With this system, musicians can make a beautiful and harmonious music composition that can move and inspire the audience."
+  },
+  "raw": {
+    "id": 89,
+    "lang": "en",
+    "system_a": "The Periodic Table",
+    "system_b": "A Tuning System for Music",
+    "mappings": [
+      [
+        "element",
+        "Note"
+      ],
+      [
+        "atomic number",
+        "frequency"
+      ],
+      [
+        "chemical reaction",
+        "harmony"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Art",
+    "system_a_background": "The periodic table is a fundamental tool in the study of chemistry. It is a tabular arrangement of the chemical elements in order of their increasing atomic numbers. This arrangement groups the elements with similar properties and allows scientists to predict the properties of new and undiscovered elements. Each element is represented by its symbol, atomic number, and atomic weight. The table can be used to examine the behavior of elements in chemical reactions and to predict the products of those reactions. The periodic table has many applications beyond chemistry, including in physics, biology, and materials science. Although it is a simple concept, the periodic table is one of the most important tools in modern science. This importance is reflected in the many variations of the periodic table, such as those that focus on crystal structure or electron configurations. Whether you are a student of science, a researcher, or simply interested in learning more about the elements that make up our world, the periodic table is an indispensable resource.",
+    "system_b_background": "A tuning system for music is an essential tool for achieving a harmonious and balanced sound in any musical performance. It involves adjusting the pitch of individual notes to a specific frequency to create a perfect blend of sound that is pleasing to the ear. Tuning practice is the art of adjusting an instrument or voice to produce the desired note or frequency, while tuning systems refer to the different tuning systems used to tune a musical instrument.\n\nIn the world of music, tuning is a critical aspect of creating a harmonious and balanced sound. Pitches are adjusted to different frequencies to create various styles of music. For instance, a guitar can be tuned to produce sounds for blues, country, rock, classical, or other genres. The tuning systems used are based on theoretical principles that determine the relationships between the notes.\n\nThe frequency of a note determines the pitch of the sound. Higher frequencies correspond to higher pitch notes, while lower frequencies correspond to lower pitch notes. In a tuning system, notes are arranged in a specific order to create a harmonic and balanced sound.\n\nHarmony is achieved when all the notes in a musical piece are in tune with each other, and they complement each other. It is the result of careful tuning and practice using a tuning system. It is said that tuning is the foundation of any good musical performance. It makes the music sound more enjoyable and pleasing to the listener's ear.\n\nIn conclusion, a tuning system for music is an essential tool for achieving a harmonious and balanced sound in any musical performance. The tuning practice involves adjusting an instrument or voice to produce the desired note or frequency, while tuning systems are based on theoretical principles that determine the relationships between the notes. Harmony is achieved when all the notes in a piece of music complement each other, and they are in tune with each other. With this system, musicians can make a beautiful and harmonious music composition that can move and inspire the audience.",
+    "Explanation": [
+      "Element corresponds to note: Elements in the periodic table are the basic building units of chemistry, while notes in the tuning system of music are the fundamental units in music.",
+      "Atomic number corresponds to frequency: The atomic number determines the arrangement of elements in the periodic table, while frequency is the characteristic parameter of notes in the tuning system of music. Both determine the basic properties of units in their respective systems.",
+      "Chemical reaction corresponds to harmony: Chemical reaction is the process of producing new substances by the interaction of elements, while harmony is the phenomenon of producing harmonious sound effects by combining different notes in the tuning system of music. Both involve the interaction between basic units."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "The Periodic Table",
+    "target": "A Tuning System for Music"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Art"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0214",
+  "dataset": "scar",
+  "original_id": "214",
+  "source_object_id": "obj_group_scar_0214_src",
+  "target_object_id": "obj_group_scar_0214_tgt",
+  "faithful_mappings": [
+    [
+      "politics",
+      "Thought and Culture"
+    ],
+    [
+      "reform",
+      "democratic science"
+    ],
+    [
+      "Kang Youwei",
+      "Chen Duxiu"
+    ],
+    [
+      "bourgeois reformers",
+      "democrats"
+    ],
+    [
+      "bourgeois reform movement",
+      "ideological liberation movement"
+    ]
+  ],
+  "explanation": [
+    "The system corresponds to thought and culture: The Wuxu Reform focused mainly on the reform of the state system, while the New Culture Movement aimed at the liberation of thought and culture. Both attempted to achieve the modernization and progress of the country through changing existing systems or thought and culture.",
+    "Reform and renewal correspond to democratic science: The Wuxu Reform attempted to achieve national reform through reform and renewal, while the New Culture Movement aimed at achieving national reform through advocating democratic science. Both sought to change the country's political system or ideological concepts.",
+    "Kang Youwei corresponds to Chen Duxiu: Kang Youwei was one of the main leaders of the Wuxu Reform, advocating reform and renewal to rejuvenate China. Chen Duxiu was the leader of the New Culture Movement, advocating democratic science and achieving national reform through ideological liberation. Both were leaders and representatives of their respective movements.",
+    "Bourgeois reformers correspond to democrats: Bourgeois reformers were the main driving force behind the Wuxu Reform, attempting to achieve the modernization of the country through reform. Democrats were the main driving force behind the New Culture Movement, achieving national reform through advocating democratic science. Both were the main forces behind their respective movements.",
+    "Bourgeois reform movement corresponds to the ideological liberation movement: The Wuxu Reform was a bourgeois reform movement that aimed to achieve national modernization through reform. The New Culture Movement was an ideological liberation movement, achieving national reform through advocating democratic science. Both aimed to change the country's political system and status quo."
+  ],
+  "background": {
+    "source": "The Hundred Days' Reform or Wuxu Reform was a major political, cultural, and educational movement that took place in China during the late Qing dynasty. Led by the young Guangxu Emperor and supported by reformists such as Kang Youwei, the movement aimed to modernize and reform the Qing dynasty to keep up with the rapidly changing world. However, the reformative edicts faced opposition from powerful conservative opponents, who eventually carried out a coup d'état led by Empress Dowager Cixi. This event is often considered as the beginning of the bourgeois reform movement in China, and Kang Youwei and other bourgeois reformers became important figures in the country's history.",
+    "target": "The New Culture Movement was a thought and culture revolution that began in China in the early 20th century. The movement aimed to critique classical Chinese ideas and promote a new Chinese culture based upon progressive, modern ideals such as democracy, science and individualism. Chen Duxiu, a democrat, was one of the key figures of the movement, challenging Confucianism and traditional Chinese values. The movement gained momentum with the launch of the New Youth magazine, where like-minded intellectuals shared their ideas and aspirations for a new society. The movement evolved into a political one on 4 May 1919, when students in Beijing aligned with the movement protested the transfer of German rights over Jiaozhou Bay to Imperial Japan rather than China at the Paris Peace Conference. The New Culture Movement paved the way for the May Fourth Movement and is considered an ideological liberation movement in China."
+  },
+  "raw": {
+    "id": 214,
+    "lang": "en",
+    "system_a": "Reform Movement of 1898",
+    "system_b": "New Culture Movement",
+    "mappings": [
+      [
+        "politics",
+        "Thought and Culture"
+      ],
+      [
+        "reform",
+        "democratic science"
+      ],
+      [
+        "Kang Youwei",
+        "Chen Duxiu"
+      ],
+      [
+        "bourgeois reformers",
+        "democrats"
+      ],
+      [
+        "bourgeois reform movement",
+        "ideological liberation movement"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "The Hundred Days' Reform or Wuxu Reform was a major political, cultural, and educational movement that took place in China during the late Qing dynasty. Led by the young Guangxu Emperor and supported by reformists such as Kang Youwei, the movement aimed to modernize and reform the Qing dynasty to keep up with the rapidly changing world. However, the reformative edicts faced opposition from powerful conservative opponents, who eventually carried out a coup d'état led by Empress Dowager Cixi. This event is often considered as the beginning of the bourgeois reform movement in China, and Kang Youwei and other bourgeois reformers became important figures in the country's history.",
+    "system_b_background": "The New Culture Movement was a thought and culture revolution that began in China in the early 20th century. The movement aimed to critique classical Chinese ideas and promote a new Chinese culture based upon progressive, modern ideals such as democracy, science and individualism. Chen Duxiu, a democrat, was one of the key figures of the movement, challenging Confucianism and traditional Chinese values. The movement gained momentum with the launch of the New Youth magazine, where like-minded intellectuals shared their ideas and aspirations for a new society. The movement evolved into a political one on 4 May 1919, when students in Beijing aligned with the movement protested the transfer of German rights over Jiaozhou Bay to Imperial Japan rather than China at the Paris Peace Conference. The New Culture Movement paved the way for the May Fourth Movement and is considered an ideological liberation movement in China.",
+    "Explanation": [
+      "The system corresponds to thought and culture: The Wuxu Reform focused mainly on the reform of the state system, while the New Culture Movement aimed at the liberation of thought and culture. Both attempted to achieve the modernization and progress of the country through changing existing systems or thought and culture.",
+      "Reform and renewal correspond to democratic science: The Wuxu Reform attempted to achieve national reform through reform and renewal, while the New Culture Movement aimed at achieving national reform through advocating democratic science. Both sought to change the country's political system or ideological concepts.",
+      "Kang Youwei corresponds to Chen Duxiu: Kang Youwei was one of the main leaders of the Wuxu Reform, advocating reform and renewal to rejuvenate China. Chen Duxiu was the leader of the New Culture Movement, advocating democratic science and achieving national reform through ideological liberation. Both were leaders and representatives of their respective movements.",
+      "Bourgeois reformers correspond to democrats: Bourgeois reformers were the main driving force behind the Wuxu Reform, attempting to achieve the modernization of the country through reform. Democrats were the main driving force behind the New Culture Movement, achieving national reform through advocating democratic science. Both were the main forces behind their respective movements.",
+      "Bourgeois reform movement corresponds to the ideological liberation movement: The Wuxu Reform was a bourgeois reform movement that aimed to achieve national modernization through reform. The New Culture Movement was an ideological liberation movement, achieving national reform through advocating democratic science. Both aimed to change the country's political system and status quo."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Reform Movement of 1898",
+    "target": "New Culture Movement"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0124",
+  "dataset": "scar",
+  "original_id": "124",
+  "source_object_id": "obj_group_scar_0124_src",
+  "target_object_id": "obj_group_scar_0124_tgt",
+  "faithful_mappings": [
+    [
+      "bee",
+      "node"
+    ],
+    [
+      "honeycomb",
+      "center"
+    ],
+    [
+      "Information transfer",
+      "Telecommunication"
+    ]
+  ],
+  "explanation": [
+    "The bee corresponds to the computing node: in a bee colony, the bee is the individual that performs tasks and collects information; in a distributed computing system, the computing node is the computing device that executes tasks and processes data.",
+    "The honeycomb corresponds to the computing center: in a bee colony, the honeycomb is the habitat and information exchange center of the bees; in a distributed computing system, the computing center is the device that manages and schedules the computing nodes.",
+    "Information transfer corresponds to network communication: in a bee colony, information transfer is the process in which bees communicate with each other through dances and other means; in a distributed computing system, network communication is the process of transmitting data between computing nodes over a network."
+  ],
+  "background": {
+    "source": "The Swarm is a fascinating phenomenon that can refer to various forms of group behavior in the natural world. In particular, one of the most well-known examples of the Swarm is the behavior of bees, which is often characterized by their ability to work together in unison to achieve a common goal. This behavior is often seen in the formation of honeycombs, which are intricate structures made of hexagonal cells that serve as a home for bees and their young. \n\nOne of the most remarkable aspects of the Swarm is the way in which it facilitates the efficient transfer of information between individuals within the group. Bees, for example, are able to communicate their movements and intentions to one another using a variety of signals, such as pheromones and dances. This allows the Swarm to adjust and adapt its behavior in response to changes in the environment or to new information. \n\nThe Swarm is not limited to the behavior of bees, however. It can also be seen in other examples of group behavior in the natural world, such as the migrations of birds and the movements of schools of fish. In each case, the Swarm represents a powerful example of the collective power of individuals working together towards a common goal. \n\nOverall, the Swarm is a fascinating phenomenon that has captured the imaginations of scientists and enthusiasts alike for years. Whether studying the behavior of bees or the movements of larger groups, the Swarm remains one of the most impressive examples of coordinated behavior in the natural world.",
+    "target": "A distributed computing system consists of components located on different networked computers, communicating and coordinating their actions by passing messages to achieve a common goal. The challenge lies in maintaining concurrency of components, overcoming the lack of a global clock, and managing the independent failure of components. From SOA-based systems to massively multiplayer online games to peer-to-peer applications, a wide range of systems are distributed. Distributed programming is the process of creating computer programs that run within the distributed system. Various implementations of message passing mechanisms exist, including pure HTTP, RPC-like connectors, and message queues. Additionally, distributed computing refers to solving computational problems by dividing the problem into many tasks, which are solved by one or more computers communicating via message passing. The distributed computing system is a vital part of the telecommunication network, providing a node to the center communication ensuring the smooth execution of different processes."
+  },
+  "raw": {
+    "id": 124,
+    "lang": "en",
+    "system_a": "The Swarm",
+    "system_b": "A Distributed Computing System",
+    "mappings": [
+      [
+        "bee",
+        "node"
+      ],
+      [
+        "honeycomb",
+        "center"
+      ],
+      [
+        "Information transfer",
+        "Telecommunication"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Computer",
+    "system_a_background": "The Swarm is a fascinating phenomenon that can refer to various forms of group behavior in the natural world. In particular, one of the most well-known examples of the Swarm is the behavior of bees, which is often characterized by their ability to work together in unison to achieve a common goal. This behavior is often seen in the formation of honeycombs, which are intricate structures made of hexagonal cells that serve as a home for bees and their young. \n\nOne of the most remarkable aspects of the Swarm is the way in which it facilitates the efficient transfer of information between individuals within the group. Bees, for example, are able to communicate their movements and intentions to one another using a variety of signals, such as pheromones and dances. This allows the Swarm to adjust and adapt its behavior in response to changes in the environment or to new information. \n\nThe Swarm is not limited to the behavior of bees, however. It can also be seen in other examples of group behavior in the natural world, such as the migrations of birds and the movements of schools of fish. In each case, the Swarm represents a powerful example of the collective power of individuals working together towards a common goal. \n\nOverall, the Swarm is a fascinating phenomenon that has captured the imaginations of scientists and enthusiasts alike for years. Whether studying the behavior of bees or the movements of larger groups, the Swarm remains one of the most impressive examples of coordinated behavior in the natural world.",
+    "system_b_background": "A distributed computing system consists of components located on different networked computers, communicating and coordinating their actions by passing messages to achieve a common goal. The challenge lies in maintaining concurrency of components, overcoming the lack of a global clock, and managing the independent failure of components. From SOA-based systems to massively multiplayer online games to peer-to-peer applications, a wide range of systems are distributed. Distributed programming is the process of creating computer programs that run within the distributed system. Various implementations of message passing mechanisms exist, including pure HTTP, RPC-like connectors, and message queues. Additionally, distributed computing refers to solving computational problems by dividing the problem into many tasks, which are solved by one or more computers communicating via message passing. The distributed computing system is a vital part of the telecommunication network, providing a node to the center communication ensuring the smooth execution of different processes.",
+    "Explanation": [
+      "The bee corresponds to the computing node: in a bee colony, the bee is the individual that performs tasks and collects information; in a distributed computing system, the computing node is the computing device that executes tasks and processes data.",
+      "The honeycomb corresponds to the computing center: in a bee colony, the honeycomb is the habitat and information exchange center of the bees; in a distributed computing system, the computing center is the device that manages and schedules the computing nodes.",
+      "Information transfer corresponds to network communication: in a bee colony, information transfer is the process in which bees communicate with each other through dances and other means; in a distributed computing system, network communication is the process of transmitting data between computing nodes over a network."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "The Swarm",
+    "target": "A Distributed Computing System"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Computer"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

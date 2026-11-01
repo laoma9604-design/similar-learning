@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0310",
+  "dataset": "scar",
+  "original_id": "310",
+  "source_object_id": "obj_group_scar_0310_src",
+  "target_object_id": "obj_group_scar_0310_tgt",
+  "faithful_mappings": [
+    [
+      "commerce",
+      "love"
+    ],
+    [
+      "buyer",
+      "person"
+    ],
+    [
+      "goods",
+      "attributes"
+    ],
+    [
+      "terms",
+      "commitment"
+    ]
+  ],
+  "explanation": [
+    "Commerce corresponds to love: Both commerce and love involve relationships between people. In commerce, buyers and sellers engage in transactions, while in love, two individuals give care and support to each other.",
+    "Buyer corresponds to person: In commercial transactions, the buyer is the party that purchases goods, while in love, the person is the one who participates in the romantic relationship.",
+    "Goods correspond to attributes: In commerce, goods have attractive characteristics and attributes that appeal to buyers, while in love, an individual's attributes and qualities make them an ideal partner in the eyes of others.",
+    "Terms correspond to commitment: In commercial transactions, terms are the agreements that define the rights and obligations of both parties, while in love, commitment is the promise and assurance that both parties make to each other."
+  ],
+  "background": {
+    "source": "Commerce is a complex system of activities and functions that enable the transfer of goods and services from producers to consumers on a large scale across different economies. Unlike business, which focuses on selling manufactured goods and services for profit, commerce is solely focused on the movement and distribution of finished or intermediate goods and services. It encompasses trade, which involves buying and selling goods and services to fulfill the needs of buyers and generate profits for sellers. Commerce also includes various auxiliary services such as transportation, communication, insurance, and financial markets, which facilitate trade. Over time, commerce has expanded from local markets to international trade with the improvement of transportation systems and technological advancements such as the internet. Legislative bodies and regulatory organizations at both domestic and international levels manage and promote commercial activities. The terms of commerce are highly complex, with multilateral agreements and bilateral treaties playing a crucial role in regulating global commerce.",
+    "target": "Love is a complex and multifaceted emotion that encompasses a range of strong and positive mental and emotional states. It can be expressed in many different forms, from familial love to romantic love, and can be directed towards other humans, animals, and even oneself. Love is often depicted as a virtue, representing human kindness, compassion, and affection. However, it can also have negative connotations, such as egoism and selfishness, leading people into destructive tendencies. \n\nOne of the most important attributes of love is its ability to act as a major facilitator of interpersonal relationships. Love plays a crucial role in keeping human beings together and in promoting the continuation of the species. This notion of commitment is especially important in romantic love, which involves a deep emotional and physical bond between two people. \n\nIn addition to its social and psychological importance, love has also been the subject of scientific research. The color wheel theory of love and the triangular theory of love are examples of such research, which seek to define and categorize love based on different criteria. \n\nOverall, love is a complex and multifaceted emotion that is difficult to consistently define due to its many uses and meanings. Nevertheless, it remains a fundamental aspect of human nature and is continuously studied and explored by individuals, cultures, and scientists alike."
+  },
+  "raw": {
+    "id": 310,
+    "lang": "en",
+    "system_a": "commerce",
+    "system_b": "love",
+    "mappings": [
+      [
+        "commerce",
+        "love"
+      ],
+      [
+        "buyer",
+        "person"
+      ],
+      [
+        "goods",
+        "attributes"
+      ],
+      [
+        "terms",
+        "commitment"
+      ]
+    ],
+    "system_a_domain": "Economy",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "Commerce is a complex system of activities and functions that enable the transfer of goods and services from producers to consumers on a large scale across different economies. Unlike business, which focuses on selling manufactured goods and services for profit, commerce is solely focused on the movement and distribution of finished or intermediate goods and services. It encompasses trade, which involves buying and selling goods and services to fulfill the needs of buyers and generate profits for sellers. Commerce also includes various auxiliary services such as transportation, communication, insurance, and financial markets, which facilitate trade. Over time, commerce has expanded from local markets to international trade with the improvement of transportation systems and technological advancements such as the internet. Legislative bodies and regulatory organizations at both domestic and international levels manage and promote commercial activities. The terms of commerce are highly complex, with multilateral agreements and bilateral treaties playing a crucial role in regulating global commerce.",
+    "system_b_background": "Love is a complex and multifaceted emotion that encompasses a range of strong and positive mental and emotional states. It can be expressed in many different forms, from familial love to romantic love, and can be directed towards other humans, animals, and even oneself. Love is often depicted as a virtue, representing human kindness, compassion, and affection. However, it can also have negative connotations, such as egoism and selfishness, leading people into destructive tendencies. \n\nOne of the most important attributes of love is its ability to act as a major facilitator of interpersonal relationships. Love plays a crucial role in keeping human beings together and in promoting the continuation of the species. This notion of commitment is especially important in romantic love, which involves a deep emotional and physical bond between two people. \n\nIn addition to its social and psychological importance, love has also been the subject of scientific research. The color wheel theory of love and the triangular theory of love are examples of such research, which seek to define and categorize love based on different criteria. \n\nOverall, love is a complex and multifaceted emotion that is difficult to consistently define due to its many uses and meanings. Nevertheless, it remains a fundamental aspect of human nature and is continuously studied and explored by individuals, cultures, and scientists alike.",
+    "Explanation": [
+      "Commerce corresponds to love: Both commerce and love involve relationships between people. In commerce, buyers and sellers engage in transactions, while in love, two individuals give care and support to each other.",
+      "Buyer corresponds to person: In commercial transactions, the buyer is the party that purchases goods, while in love, the person is the one who participates in the romantic relationship.",
+      "Goods correspond to attributes: In commerce, goods have attractive characteristics and attributes that appeal to buyers, while in love, an individual's attributes and qualities make them an ideal partner in the eyes of others.",
+      "Terms correspond to commitment: In commercial transactions, terms are the agreements that define the rights and obligations of both parties, while in love, commitment is the promise and assurance that both parties make to each other."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "commerce",
+    "target": "love"
+  },
+  "domains": {
+    "source": "Economy",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

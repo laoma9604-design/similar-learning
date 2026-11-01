@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0231",
+  "dataset": "scar",
+  "original_id": "231",
+  "source_object_id": "obj_group_scar_0231_src",
+  "target_object_id": "obj_group_scar_0231_tgt",
+  "faithful_mappings": [
+    [
+      "Gautama Siddhartha",
+      "Jesus"
+    ],
+    [
+      "Ancient India",
+      "Palestine"
+    ],
+    [
+      "Diamond Sutra",
+      "Bible"
+    ]
+  ],
+  "explanation": [
+    "Gautama Siddhartha corresponds to Jesus: Gautama Siddhartha is the founder of Buddhism, known as Shakyamuni Buddha. Jesus is the founder of Christianity, known as Jesus Christ. In this analogy, both represent the founders and key figures of their respective religions.",
+    "Ancient India corresponds to Palestine: Ancient India is the birthplace of Buddhism and had a profound influence on its development and spread. Palestine is the birthplace of Christianity and also had a profound influence on its development and spread. Here, both represent the birthplaces and historical backgrounds of their respective religions.",
+    "Diamond Sutra corresponds to the Bible: The Diamond Sutra is an important Buddhist scripture that is vital for the explanation and spread of Buddhist doctrine. The Bible is an important Christian scripture that is significant for the explanation and spread of Christian doctrine. In this analogy, both represent the core texts and doctrines of their respective religions."
+  ],
+  "background": {
+    "source": "Buddhism is a religion and philosophical tradition that had its origins in ancient India and is based on the teachings of Gautama Siddhartha, also known as Buddha. It is a path of spiritual development that emphasizes the attainment of liberation from attachment or clinging to existence. The Buddha's central teachings emphasize the Middle Way, which is a path of spiritual development that avoids both extreme asceticism and hedonism. Buddhism spread throughout much of Asia via the Silk Road and is now the world's fourth-largest religion, with over 520 million followers. There are two major branches of Buddhism, Theravāda and Mahāyāna, with different interpretations of the paths to liberation. The Diamond Sutra is one of the most important and influential scriptures in Buddhism, widely studied and practiced throughout Asia.",
+    "target": "Christianity is a religion centered around the life and teachings of Jesus of Nazareth, who is believed to be the Son of God by its followers, known as Christians. With around 2.4 billion followers worldwide, it is the world's largest and most widespread religion. Christianity originated in Palestine as a sect of Second Temple Judaism, but spread throughout the world after Jesus' apostles and their followers began preaching and teaching his message. The religion is built around the beliefs and teachings found within the Bible, which is made up of the Old Testament and New Testament. The New Testament, in particular, chronicles Jesus' life, teachings, and death, as well as his resurrection and the events that followed. Despite being rooted in the same basic beliefs, Christianity has diverse branches, with differences in doctrine, ecclesiology, and Christology. These differences have led to major schisms throughout history, including the split between the Catholic Church and the Eastern Orthodox Church, as well as Protestantism's split from the Catholic Church during the Reformation era. Despite ongoing persecution in certain regions of the world, Christianity continues to grow in Africa and Asia, while remaining a dominant religion in the West."
+  },
+  "raw": {
+    "id": 231,
+    "lang": "en",
+    "system_a": "Buddhism",
+    "system_b": "Christianity",
+    "mappings": [
+      [
+        "Gautama Siddhartha",
+        "Jesus"
+      ],
+      [
+        "Ancient India",
+        "Palestine"
+      ],
+      [
+        "Diamond Sutra",
+        "Bible"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "Buddhism is a religion and philosophical tradition that had its origins in ancient India and is based on the teachings of Gautama Siddhartha, also known as Buddha. It is a path of spiritual development that emphasizes the attainment of liberation from attachment or clinging to existence. The Buddha's central teachings emphasize the Middle Way, which is a path of spiritual development that avoids both extreme asceticism and hedonism. Buddhism spread throughout much of Asia via the Silk Road and is now the world's fourth-largest religion, with over 520 million followers. There are two major branches of Buddhism, Theravāda and Mahāyāna, with different interpretations of the paths to liberation. The Diamond Sutra is one of the most important and influential scriptures in Buddhism, widely studied and practiced throughout Asia.",
+    "system_b_background": "Christianity is a religion centered around the life and teachings of Jesus of Nazareth, who is believed to be the Son of God by its followers, known as Christians. With around 2.4 billion followers worldwide, it is the world's largest and most widespread religion. Christianity originated in Palestine as a sect of Second Temple Judaism, but spread throughout the world after Jesus' apostles and their followers began preaching and teaching his message. The religion is built around the beliefs and teachings found within the Bible, which is made up of the Old Testament and New Testament. The New Testament, in particular, chronicles Jesus' life, teachings, and death, as well as his resurrection and the events that followed. Despite being rooted in the same basic beliefs, Christianity has diverse branches, with differences in doctrine, ecclesiology, and Christology. These differences have led to major schisms throughout history, including the split between the Catholic Church and the Eastern Orthodox Church, as well as Protestantism's split from the Catholic Church during the Reformation era. Despite ongoing persecution in certain regions of the world, Christianity continues to grow in Africa and Asia, while remaining a dominant religion in the West.",
+    "Explanation": [
+      "Gautama Siddhartha corresponds to Jesus: Gautama Siddhartha is the founder of Buddhism, known as Shakyamuni Buddha. Jesus is the founder of Christianity, known as Jesus Christ. In this analogy, both represent the founders and key figures of their respective religions.",
+      "Ancient India corresponds to Palestine: Ancient India is the birthplace of Buddhism and had a profound influence on its development and spread. Palestine is the birthplace of Christianity and also had a profound influence on its development and spread. Here, both represent the birthplaces and historical backgrounds of their respective religions.",
+      "Diamond Sutra corresponds to the Bible: The Diamond Sutra is an important Buddhist scripture that is vital for the explanation and spread of Buddhist doctrine. The Bible is an important Christian scripture that is significant for the explanation and spread of Christian doctrine. In this analogy, both represent the core texts and doctrines of their respective religions."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Buddhism",
+    "target": "Christianity"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

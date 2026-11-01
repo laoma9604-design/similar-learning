@@ -1,0 +1,75 @@
+{
+  "adaptation_id": "adapt_scar_0162",
+  "dataset": "scar",
+  "original_id": "162",
+  "source_object_id": "obj_group_scar_0162_src",
+  "target_object_id": "obj_group_scar_0162_tgt",
+  "faithful_mappings": [
+    [
+      "data point",
+      "species"
+    ],
+    [
+      "kinship",
+      "similarity"
+    ]
+  ],
+  "explanation": [
+    "Data points correspond to species: In hierarchical clustering algorithms, the similarity and kinship between data points determine their clustering; in phylogenetic trees, the similarity and kinship between species determine their position in the tree. Both processes involve evaluating similarity and kinship to partition and organize data.",
+    "Kinship corresponds to similarity: In hierarchical clustering algorithms, kinship is a measure of similarity between data points; in phylogenetic trees, similarity is a measure of the relationship between species. Both are methods used to measure the relationships between data."
+  ],
+  "background": {
+    "source": "Hierarchical clustering algorithms are an important method used in data mining and statistics. They work by building a hierarchy of clusters from data points, with two main approaches: agglomerative and divisive. Agglomerative clustering starts at the bottom and merges pairs of clusters as they move up in the hierarchy, while divisive clustering starts at the top and splits clusters recursively as they move down the hierarchy. While the standard algorithm for hierarchical clustering can be slow for medium to large datasets, various efficient algorithms are available for special cases. One of the main advantages of hierarchical clustering is that any measure of distance can be used in the process. With the help of these algorithms, researchers can gain insights into complex data structures and relationships, such as kinship.",
+    "target": "Pedigree trees are an excellent way to represent family relationships, especially when it comes to genealogy or the study of ancestry. These charts are designed in the form of a tree structure, with each branch representing members of the family and their connections to one another. The pedigree trees can be used to identify patterns of inheritance and to trace the lineage of certain traits or characteristics, such as a predisposition to a disease or a unique physical feature. Additionally, pedigree trees can be used in fields such as medicine and social work where a more detailed representation of the family's relationships is necessary. By using pedigree trees, researchers can gain insight into the similarity between species and human beings, and thereby develop a deeper understanding of the genetic and social contributions to our health and well-being."
+  },
+  "raw": {
+    "id": 162,
+    "lang": "en",
+    "system_a": "Hierarchical Clustering Algorithms",
+    "system_b": "Pedigree Trees",
+    "mappings": [
+      [
+        "data point",
+        "species"
+      ],
+      [
+        "kinship",
+        "similarity"
+      ]
+    ],
+    "system_a_domain": "Computer",
+    "system_b_domain": "Physics",
+    "system_a_background": "Hierarchical clustering algorithms are an important method used in data mining and statistics. They work by building a hierarchy of clusters from data points, with two main approaches: agglomerative and divisive. Agglomerative clustering starts at the bottom and merges pairs of clusters as they move up in the hierarchy, while divisive clustering starts at the top and splits clusters recursively as they move down the hierarchy. While the standard algorithm for hierarchical clustering can be slow for medium to large datasets, various efficient algorithms are available for special cases. One of the main advantages of hierarchical clustering is that any measure of distance can be used in the process. With the help of these algorithms, researchers can gain insights into complex data structures and relationships, such as kinship.",
+    "system_b_background": "Pedigree trees are an excellent way to represent family relationships, especially when it comes to genealogy or the study of ancestry. These charts are designed in the form of a tree structure, with each branch representing members of the family and their connections to one another. The pedigree trees can be used to identify patterns of inheritance and to trace the lineage of certain traits or characteristics, such as a predisposition to a disease or a unique physical feature. Additionally, pedigree trees can be used in fields such as medicine and social work where a more detailed representation of the family's relationships is necessary. By using pedigree trees, researchers can gain insight into the similarity between species and human beings, and thereby develop a deeper understanding of the genetic and social contributions to our health and well-being.",
+    "Explanation": [
+      "Data points correspond to species: In hierarchical clustering algorithms, the similarity and kinship between data points determine their clustering; in phylogenetic trees, the similarity and kinship between species determine their position in the tree. Both processes involve evaluating similarity and kinship to partition and organize data.",
+      "Kinship corresponds to similarity: In hierarchical clustering algorithms, kinship is a measure of similarity between data points; in phylogenetic trees, similarity is a measure of the relationship between species. Both are methods used to measure the relationships between data."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Hierarchical Clustering Algorithms",
+    "target": "Pedigree Trees"
+  },
+  "domains": {
+    "source": "Computer",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

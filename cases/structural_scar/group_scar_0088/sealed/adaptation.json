@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0088",
+  "dataset": "scar",
+  "original_id": "88",
+  "source_object_id": "obj_group_scar_0088_src",
+  "target_object_id": "obj_group_scar_0088_tgt",
+  "faithful_mappings": [
+    [
+      "governance",
+      "the medical"
+    ],
+    [
+      "pollution source",
+      "Germs"
+    ],
+    [
+      "environment",
+      "patient"
+    ]
+  ],
+  "explanation": [
+    "Governance corresponds to medical care: Governance refers to measures taken to reduce air pollution and improve air quality. Medical care refers to measures taken to treat diseases and improve patient health. In this mapping, governance and medical care are both aimed at solving problems and improving the current situation. ",
+    "Pollution sources correspond to germs: Pollution sources are the root cause of air pollution and need to be reduced through governance. Germs are microorganisms that cause diseases and need to be eliminated through medical care. In this mapping, pollution sources and germs are both fundamental problems that need to be addressed. ",
+    "Environment corresponds to patient: Environment refers to the ecological system and human living environment affected by air pollution. Patient refers to individuals affected by diseases. In this mapping, environment and patient are both objects negatively impacted and require measures to improve their condition."
+  ],
+  "background": {
+    "source": "Air pollution is a global crisis that is harming both human health and the environment. It can be caused by both human activities and natural phenomena, with different types of pollutants such as gases, particulates and biological molecules. The effects of air pollution are far-reaching, causing diseases, allergies and even death to humans, animals and crops. Furthermore, it can damage the natural and built environment, such as causing climate change or habitat degradation. The main sources of air pollution are governance and pollution sources. Although several international and national legislation and regulations have been developed to limit the negative effects of air pollution, it is still considered largely haphazard or neglected. The problem of air pollution affects 90% of the world's population to some degree, causing $5 trillion in productivity losses and degraded quality of life each year. It is a significant risk factor for a number of pollution-related diseases and is the world's largest single environmental health risk, causing the deaths of around 7 million people worldwide each year. Nevertheless, several pollution control technologies and strategies are available to reduce air pollution, and local rules, when properly executed, have resulted in significant advances in public health.",
+    "target": "A disease is an abnormal condition that affects the structure or function of an organism, causing certain signs and symptoms. It can be caused by germs or internal dysfunctions, affecting people both physically and mentally. The study of disease is called pathology, and it includes the study of the cause. Understanding diseases is important for healthcare professionals to identify and treat diseases to provide relief to the patient effectively."
+  },
+  "raw": {
+    "id": 88,
+    "lang": "en",
+    "system_a": "Air Pollution",
+    "system_b": "Disease",
+    "mappings": [
+      [
+        "governance",
+        "the medical"
+      ],
+      [
+        "pollution source",
+        "Germs"
+      ],
+      [
+        "environment",
+        "patient"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Biology",
+    "system_a_background": "Air pollution is a global crisis that is harming both human health and the environment. It can be caused by both human activities and natural phenomena, with different types of pollutants such as gases, particulates and biological molecules. The effects of air pollution are far-reaching, causing diseases, allergies and even death to humans, animals and crops. Furthermore, it can damage the natural and built environment, such as causing climate change or habitat degradation. The main sources of air pollution are governance and pollution sources. Although several international and national legislation and regulations have been developed to limit the negative effects of air pollution, it is still considered largely haphazard or neglected. The problem of air pollution affects 90% of the world's population to some degree, causing $5 trillion in productivity losses and degraded quality of life each year. It is a significant risk factor for a number of pollution-related diseases and is the world's largest single environmental health risk, causing the deaths of around 7 million people worldwide each year. Nevertheless, several pollution control technologies and strategies are available to reduce air pollution, and local rules, when properly executed, have resulted in significant advances in public health.",
+    "system_b_background": "A disease is an abnormal condition that affects the structure or function of an organism, causing certain signs and symptoms. It can be caused by germs or internal dysfunctions, affecting people both physically and mentally. The study of disease is called pathology, and it includes the study of the cause. Understanding diseases is important for healthcare professionals to identify and treat diseases to provide relief to the patient effectively.",
+    "Explanation": [
+      "Governance corresponds to medical care: Governance refers to measures taken to reduce air pollution and improve air quality. Medical care refers to measures taken to treat diseases and improve patient health. In this mapping, governance and medical care are both aimed at solving problems and improving the current situation. ",
+      "Pollution sources correspond to germs: Pollution sources are the root cause of air pollution and need to be reduced through governance. Germs are microorganisms that cause diseases and need to be eliminated through medical care. In this mapping, pollution sources and germs are both fundamental problems that need to be addressed. ",
+      "Environment corresponds to patient: Environment refers to the ecological system and human living environment affected by air pollution. Patient refers to individuals affected by diseases. In this mapping, environment and patient are both objects negatively impacted and require measures to improve their condition."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Air Pollution",
+    "target": "Disease"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

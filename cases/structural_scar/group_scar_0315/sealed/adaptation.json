@@ -1,0 +1,130 @@
+{
+  "adaptation_id": "adapt_scar_0315",
+  "dataset": "scar",
+  "original_id": "315",
+  "source_object_id": "obj_group_scar_0315_src",
+  "target_object_id": "obj_group_scar_0315_tgt",
+  "faithful_mappings": [
+    [
+      "theatre",
+      "politics"
+    ],
+    [
+      "actor",
+      "politician"
+    ],
+    [
+      "performance",
+      "campaign"
+    ],
+    [
+      "stage",
+      "parliament"
+    ],
+    [
+      "critic",
+      "press"
+    ],
+    [
+      "audience",
+      "people"
+    ],
+    [
+      "audience",
+      "citizens"
+    ]
+  ],
+  "explanation": [
+    "Theatre corresponds to politics: Theatre is the place where actors perform dramas, usually containing themes about human society and life. Politics is the activity concerning the governance of the state and the distribution of power. Both involve various aspects of human society and life.",
+    "Actor corresponds to politician: In the theatre, the actor is the one who performs the drama and conveys the theme and emotion through acting. In politics, the politician is the one who engages in political activities to achieve governance and power distribution. Both are participants in their respective fields.",
+    "Performance corresponds to campaign: In the theatre, performance is the process that actors use to showcase the drama through acting. In politics, a campaign is a variety of actions by politicians to achieve political goals. Both are behaviors and processes in their respective fields.",
+    "Stage corresponds to parliament: In the theatre, the stage is the place where actors perform drama. In politics, parliament is the place where politicians engage in political activities. Both are the activity venues in their respective fields.",
+    "Critic corresponds to press: In the theatre, the critic is the one who evaluates and reviews the drama. In politics, the news media (press) is the institution that reports and comments on political activities. Both are roles that evaluate and comment on activities in their respective fields.",
+    "Audience corresponds to people: In the theatre, the audience is the one who watches the drama performance. In politics, the people are the public who pay attention to political activities. Both are observers and recipients in their respective fields.",
+    "Audience corresponds to citizens: This mapping is similar to the previous one. In the theatre, the audience is the one who watches the drama performance. In politics, citizens are the ones who pay attention to political activities and participate in them. Both are observers and participants in their respective fields."
+  ],
+  "background": {
+    "source": "Theatre is a dynamic and collaborative performing art that brings a real or imagined event to life through live performers such as actors and actresses on a stage. The experience is communicated to the audience through various elements such as gesture, speech, song, music, and dance along with painted scenery and lighting effects to create an immersive environment. The word \"theatre\" derives from Greek, meaning \"a place for viewing\" and has evolved over time with borrowed themes and terminology from ancient Greek theatre. Theatrical language, stage writing, and theatricality altogether make theatre unique from other performing arts. A theatre company produces theatrical performances with a group of theatrical performers working together. Modern theatre encompasses plays and musicals, as well as the art forms of ballet and opera. Critiques and reactions from the audience play a vital role in shaping the success of a performance. Overall, theatre remains a powerful form of art that reflects the complex emotions and experiences of the human condition.",
+    "target": "Politics can be defined as the art or science of government and the activities involved in making decisions and power relations among individuals or groups. Political science is the branch of social science that studies politics and government. It is exercised on different social levels, from traditional societies to sovereign states and the international level. In the modern world, people often form political parties to represent their ideas and participate in elections. A political system provides a framework for acceptable political methods within society, and the history of political thought goes back to early antiquity. In the political arena, politicians engage in campaigns and work in parliament, while the press plays a significant role in reporting political news to the people or citizens."
+  },
+  "raw": {
+    "id": 315,
+    "lang": "en",
+    "system_a": "theatre",
+    "system_b": "politics",
+    "mappings": [
+      [
+        "theatre",
+        "politics"
+      ],
+      [
+        "actor",
+        "politician"
+      ],
+      [
+        "performance",
+        "campaign"
+      ],
+      [
+        "stage",
+        "parliament"
+      ],
+      [
+        "critic",
+        "press"
+      ],
+      [
+        "audience",
+        "people"
+      ],
+      [
+        "audience",
+        "citizens"
+      ]
+    ],
+    "system_a_domain": "Art",
+    "system_b_domain": "History",
+    "system_a_background": "Theatre is a dynamic and collaborative performing art that brings a real or imagined event to life through live performers such as actors and actresses on a stage. The experience is communicated to the audience through various elements such as gesture, speech, song, music, and dance along with painted scenery and lighting effects to create an immersive environment. The word \"theatre\" derives from Greek, meaning \"a place for viewing\" and has evolved over time with borrowed themes and terminology from ancient Greek theatre. Theatrical language, stage writing, and theatricality altogether make theatre unique from other performing arts. A theatre company produces theatrical performances with a group of theatrical performers working together. Modern theatre encompasses plays and musicals, as well as the art forms of ballet and opera. Critiques and reactions from the audience play a vital role in shaping the success of a performance. Overall, theatre remains a powerful form of art that reflects the complex emotions and experiences of the human condition.",
+    "system_b_background": "Politics can be defined as the art or science of government and the activities involved in making decisions and power relations among individuals or groups. Political science is the branch of social science that studies politics and government. It is exercised on different social levels, from traditional societies to sovereign states and the international level. In the modern world, people often form political parties to represent their ideas and participate in elections. A political system provides a framework for acceptable political methods within society, and the history of political thought goes back to early antiquity. In the political arena, politicians engage in campaigns and work in parliament, while the press plays a significant role in reporting political news to the people or citizens.",
+    "Explanation": [
+      "Theatre corresponds to politics: Theatre is the place where actors perform dramas, usually containing themes about human society and life. Politics is the activity concerning the governance of the state and the distribution of power. Both involve various aspects of human society and life.",
+      "Actor corresponds to politician: In the theatre, the actor is the one who performs the drama and conveys the theme and emotion through acting. In politics, the politician is the one who engages in political activities to achieve governance and power distribution. Both are participants in their respective fields.",
+      "Performance corresponds to campaign: In the theatre, performance is the process that actors use to showcase the drama through acting. In politics, a campaign is a variety of actions by politicians to achieve political goals. Both are behaviors and processes in their respective fields.",
+      "Stage corresponds to parliament: In the theatre, the stage is the place where actors perform drama. In politics, parliament is the place where politicians engage in political activities. Both are the activity venues in their respective fields.",
+      "Critic corresponds to press: In the theatre, the critic is the one who evaluates and reviews the drama. In politics, the news media (press) is the institution that reports and comments on political activities. Both are roles that evaluate and comment on activities in their respective fields.",
+      "Audience corresponds to people: In the theatre, the audience is the one who watches the drama performance. In politics, the people are the public who pay attention to political activities. Both are observers and recipients in their respective fields.",
+      "Audience corresponds to citizens: This mapping is similar to the previous one. In the theatre, the audience is the one who watches the drama performance. In politics, citizens are the ones who pay attention to political activities and participate in them. Both are observers and participants in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "non_bijective",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6",
+        "n7": "n7"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "one_to_many",
+  "system": {
+    "source": "theatre",
+    "target": "politics"
+  },
+  "domains": {
+    "source": "Art",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

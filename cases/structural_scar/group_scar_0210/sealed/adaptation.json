@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0210",
+  "dataset": "scar",
+  "original_id": "210",
+  "source_object_id": "obj_group_scar_0210_src",
+  "target_object_id": "obj_group_scar_0210_tgt",
+  "faithful_mappings": [
+    [
+      "technology",
+      "politics"
+    ],
+    [
+      "self-improvement",
+      "reform"
+    ],
+    [
+      "Li Hongzhang",
+      "Kang Youwei"
+    ],
+    [
+      "Landlord Class Westernization School",
+      "bourgeois reformers"
+    ],
+    [
+      "feudal ruler self-help movement",
+      "bourgeois reform movement"
+    ]
+  ],
+  "explanation": [
+    "Technology corresponds to system: the Self-Strengthening Movement mainly focuses on introducing technology to enhance the country's strength, while the Hundred Days' Reform focuses on reforming the country's system to promote modernization. Both are for the development and progress of the country, but with different focuses.",
+    "Self-improvement and seeking wealth correspond to reform and innovation: the Self-Strengthening Movement advocates self-improvement and seeking wealth by learning Western technology to enhance the country's strength, while the Hundred Days’ Reform advocates reform and innovation to achieve national development by reforming the system. Both are for the progress of the country, but with different methods and means.",
+    "Li Hongzhang corresponds to Kang Youwei: Li Hongzhang, the representative figure of the Self-Strengthening Movement, promoted the implementation of the movement, while Kang Youwei, the representative figure of the Hundred Days’ Reform, advocated and promoted the reform. Both are leaders and representatives of their respective movements.",
+    "Landlord Class Westernization School corresponds to bourgeois reformers: the supporters of the Self-Strengthening Movement are mainly the landlord class Westernization School, who hope to maintain their own interests through technological reform, while the supporters of the Hundred Days' Reform are mainly bourgeois reformers who hope to achieve national modernization through institutional reform. Both are supporters and promoters of their respective movements but with different class foundations and interest demands.",
+    "The feudal ruler self-help movement corresponds to the bourgeois reform movement: the Self-Strengthening Movement is regarded as a self-help movement by feudal rulers to seek survival, while the Hundred Days' Reform is seen as a reform movement by the bourgeoisie to achieve national modernization. Both are social changes of their respective eras, but with different motivations and goals."
+  ],
+  "background": {
+    "source": "The Westernization Movement, or the introduction of Western culture and values to non-Western societies, has had a significant impact on the feminist movement. Throughout the past few centuries, this movement has gone through several waves, each focused on different aspects of gender equality, from suffrage to reproductive rights to combating social and cultural inequalities. While the movement initially involved primarily middle-class white women, subsequent waves made an effort to include women of different social classes, women of color, and women from developing nations seeking solidarity. This movement has also had to combat political activism by maintaining focus on reproductive rights, such as the right to abortion. With the fourth wave of feminism, attention is being paid to the power systems that contribute to the social stratification of traditionally marginalized groups. Despite the many challenges, the feminist movement has made significant strides towards gender equality thanks to self-improvement and the tireless work of advocates like Li Hongzhang and the Landlord Class Westernization School.",
+    "target": "The Reform Movement of 1898, also known as the Hundred Days' Reform or Wuxu Reform, was a significant political and cultural event in late Qing dynasty China. Led by the young Guangxu Emperor and supported by a group of bourgeois reformers, the reform movement aimed to modernize and strengthen the Chinese state through progressive, reformative policies. This movement was a response to the escalating social and economic crisis, as well as the fear of foreign powers, which threatened the nation. The bourgeois reformers, including the prominent Kang Youwei, envisioned a China with a constitutional monarchy, strengthened industry and commerce, and a reformed education system. However, the reform movement was short-lived, lasting only 103 days, and was met with opposition from powerful conservative forces, led by Empress Dowager Cixi, resulting in a coup d'état. Despite its failure, the Reform Movement of 1898 remains an important event in Chinese history, as it laid the groundwork for further revolutionary change in the years to come."
+  },
+  "raw": {
+    "id": 210,
+    "lang": "en",
+    "system_a": "Westernization Movement",
+    "system_b": "Reform Movement of 1898",
+    "mappings": [
+      [
+        "technology",
+        "politics"
+      ],
+      [
+        "self-improvement",
+        "reform"
+      ],
+      [
+        "Li Hongzhang",
+        "Kang Youwei"
+      ],
+      [
+        "Landlord Class Westernization School",
+        "bourgeois reformers"
+      ],
+      [
+        "feudal ruler self-help movement",
+        "bourgeois reform movement"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "The Westernization Movement, or the introduction of Western culture and values to non-Western societies, has had a significant impact on the feminist movement. Throughout the past few centuries, this movement has gone through several waves, each focused on different aspects of gender equality, from suffrage to reproductive rights to combating social and cultural inequalities. While the movement initially involved primarily middle-class white women, subsequent waves made an effort to include women of different social classes, women of color, and women from developing nations seeking solidarity. This movement has also had to combat political activism by maintaining focus on reproductive rights, such as the right to abortion. With the fourth wave of feminism, attention is being paid to the power systems that contribute to the social stratification of traditionally marginalized groups. Despite the many challenges, the feminist movement has made significant strides towards gender equality thanks to self-improvement and the tireless work of advocates like Li Hongzhang and the Landlord Class Westernization School.",
+    "system_b_background": "The Reform Movement of 1898, also known as the Hundred Days' Reform or Wuxu Reform, was a significant political and cultural event in late Qing dynasty China. Led by the young Guangxu Emperor and supported by a group of bourgeois reformers, the reform movement aimed to modernize and strengthen the Chinese state through progressive, reformative policies. This movement was a response to the escalating social and economic crisis, as well as the fear of foreign powers, which threatened the nation. The bourgeois reformers, including the prominent Kang Youwei, envisioned a China with a constitutional monarchy, strengthened industry and commerce, and a reformed education system. However, the reform movement was short-lived, lasting only 103 days, and was met with opposition from powerful conservative forces, led by Empress Dowager Cixi, resulting in a coup d'état. Despite its failure, the Reform Movement of 1898 remains an important event in Chinese history, as it laid the groundwork for further revolutionary change in the years to come.",
+    "Explanation": [
+      "Technology corresponds to system: the Self-Strengthening Movement mainly focuses on introducing technology to enhance the country's strength, while the Hundred Days' Reform focuses on reforming the country's system to promote modernization. Both are for the development and progress of the country, but with different focuses.",
+      "Self-improvement and seeking wealth correspond to reform and innovation: the Self-Strengthening Movement advocates self-improvement and seeking wealth by learning Western technology to enhance the country's strength, while the Hundred Days’ Reform advocates reform and innovation to achieve national development by reforming the system. Both are for the progress of the country, but with different methods and means.",
+      "Li Hongzhang corresponds to Kang Youwei: Li Hongzhang, the representative figure of the Self-Strengthening Movement, promoted the implementation of the movement, while Kang Youwei, the representative figure of the Hundred Days’ Reform, advocated and promoted the reform. Both are leaders and representatives of their respective movements.",
+      "Landlord Class Westernization School corresponds to bourgeois reformers: the supporters of the Self-Strengthening Movement are mainly the landlord class Westernization School, who hope to maintain their own interests through technological reform, while the supporters of the Hundred Days' Reform are mainly bourgeois reformers who hope to achieve national modernization through institutional reform. Both are supporters and promoters of their respective movements but with different class foundations and interest demands.",
+      "The feudal ruler self-help movement corresponds to the bourgeois reform movement: the Self-Strengthening Movement is regarded as a self-help movement by feudal rulers to seek survival, while the Hundred Days' Reform is seen as a reform movement by the bourgeoisie to achieve national modernization. Both are social changes of their respective eras, but with different motivations and goals."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Westernization Movement",
+    "target": "Reform Movement of 1898"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

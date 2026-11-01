@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0346",
+  "dataset": "scar",
+  "original_id": "346",
+  "source_object_id": "obj_group_scar_0346_src",
+  "target_object_id": "obj_group_scar_0346_tgt",
+  "faithful_mappings": [
+    [
+      "athlete",
+      "chef"
+    ],
+    [
+      "train",
+      "Prepare materials"
+    ],
+    [
+      "Contest",
+      "cooking"
+    ],
+    [
+      "score",
+      "evaluate"
+    ],
+    [
+      "referee",
+      "diners"
+    ]
+  ],
+  "explanation": [
+    "An athlete corresponds to a chef: In sports, athletes are people who participate in training and competitions, demonstrating their performance through their own efforts and skills. In cooking, chefs are responsible for preparing ingredients and cooking, using their skills and creativity to create delicious food. Both are performers in their respective fields, achieving goals through their own efforts.",
+    "Training corresponds to preparing ingredients: In sports, training is the exercise that athletes undertake to improve their skills and fitness. In cooking, preparing ingredients is the process of preparing ingredients and tools for the cooking process. Both are preparatory work done for better performance.",
+    "Competition corresponds to cooking: In sports, competition is the occasion for athletes to show their skills and level. In cooking, cooking is the process for chefs to display their skills and creativity. Both are crucial steps in their respective fields that directly affect the final outcome.",
+    "Score corresponds to evaluation: In sports, the score is the standard for measuring an athlete's performance in the competition. In cooking, evaluation is the standard for measuring a chef's cooking skills and the quality of food. Both are evaluations and feedback on performance in their respective fields.",
+    "Referee corresponds to diners: In sports, the referee is the person who judges and adjudicates an athlete's performance in the competition. In cooking, diners are the people who taste and evaluate the chef's cooking results. Both are roles that provide evaluation and feedback on performance in their respective fields."
+  ],
+  "background": {
+    "source": "Sports refer to a wide range of competitive physical activities that aim to maintain or improve an individual's physical abilities and skills while providing enjoyment to participants and spectators alike. These activities can be played individually or in teams, and they range from simple contests to more elaborate tournaments with hundreds of participants. To ensure fair competition, sports are governed by a set of rules or customs, with referees responsible for ensuring that the rules are followed and that the scoring is correct. Athletes train intensively to improve their skills and achieve higher scores, and their performances are often tracked and celebrated by fans and media. Although most sports are physical in nature, some, such as chess and bridge, are recognized as sports by international governing bodies despite their lack of physical activity. The global sporting industry is worth billions, and millions of people participate in or watch sports as a form of entertainment. Running is the most accessible sport, while association football is the most popular spectator sport around the world.",
+    "target": "Cooking is an art, a science, and a craft that has been perfected by humans over millions of years. It involves using heat and fire to prepare food for consumption and includes a vast range of techniques and ingredients. From grilling food over an open fire to baking in various types of ovens, cooking techniques reflect local conditions and the skill levels of the cooks. Today, cooking is done not only by people in their own homes, but also by professional chefs and cooks in restaurants and other food establishments. The role of the chef involves not only preparing materials, but also evaluating the finished product and considering the diners' tastes and preferences. As technology advances, modern cooks are applying advanced scientific techniques to food preparation to further enhance the flavor of the dish served."
+  },
+  "raw": {
+    "id": 346,
+    "lang": "en",
+    "system_a": "Sports",
+    "system_b": "Cooking",
+    "mappings": [
+      [
+        "athlete",
+        "chef"
+      ],
+      [
+        "train",
+        "Prepare materials"
+      ],
+      [
+        "Contest",
+        "cooking"
+      ],
+      [
+        "score",
+        "evaluate"
+      ],
+      [
+        "referee",
+        "diners"
+      ]
+    ],
+    "system_a_domain": "Sport",
+    "system_b_domain": "Art",
+    "system_a_background": "Sports refer to a wide range of competitive physical activities that aim to maintain or improve an individual's physical abilities and skills while providing enjoyment to participants and spectators alike. These activities can be played individually or in teams, and they range from simple contests to more elaborate tournaments with hundreds of participants. To ensure fair competition, sports are governed by a set of rules or customs, with referees responsible for ensuring that the rules are followed and that the scoring is correct. Athletes train intensively to improve their skills and achieve higher scores, and their performances are often tracked and celebrated by fans and media. Although most sports are physical in nature, some, such as chess and bridge, are recognized as sports by international governing bodies despite their lack of physical activity. The global sporting industry is worth billions, and millions of people participate in or watch sports as a form of entertainment. Running is the most accessible sport, while association football is the most popular spectator sport around the world.",
+    "system_b_background": "Cooking is an art, a science, and a craft that has been perfected by humans over millions of years. It involves using heat and fire to prepare food for consumption and includes a vast range of techniques and ingredients. From grilling food over an open fire to baking in various types of ovens, cooking techniques reflect local conditions and the skill levels of the cooks. Today, cooking is done not only by people in their own homes, but also by professional chefs and cooks in restaurants and other food establishments. The role of the chef involves not only preparing materials, but also evaluating the finished product and considering the diners' tastes and preferences. As technology advances, modern cooks are applying advanced scientific techniques to food preparation to further enhance the flavor of the dish served.",
+    "Explanation": [
+      "An athlete corresponds to a chef: In sports, athletes are people who participate in training and competitions, demonstrating their performance through their own efforts and skills. In cooking, chefs are responsible for preparing ingredients and cooking, using their skills and creativity to create delicious food. Both are performers in their respective fields, achieving goals through their own efforts.",
+      "Training corresponds to preparing ingredients: In sports, training is the exercise that athletes undertake to improve their skills and fitness. In cooking, preparing ingredients is the process of preparing ingredients and tools for the cooking process. Both are preparatory work done for better performance.",
+      "Competition corresponds to cooking: In sports, competition is the occasion for athletes to show their skills and level. In cooking, cooking is the process for chefs to display their skills and creativity. Both are crucial steps in their respective fields that directly affect the final outcome.",
+      "Score corresponds to evaluation: In sports, the score is the standard for measuring an athlete's performance in the competition. In cooking, evaluation is the standard for measuring a chef's cooking skills and the quality of food. Both are evaluations and feedback on performance in their respective fields.",
+      "Referee corresponds to diners: In sports, the referee is the person who judges and adjudicates an athlete's performance in the competition. In cooking, diners are the people who taste and evaluate the chef's cooking results. Both are roles that provide evaluation and feedback on performance in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Sports",
+    "target": "Cooking"
+  },
+  "domains": {
+    "source": "Sport",
+    "target": "Art"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,75 @@
+{
+  "adaptation_id": "adapt_scar_0044",
+  "dataset": "scar",
+  "original_id": "44",
+  "source_object_id": "obj_group_scar_0044_src",
+  "target_object_id": "obj_group_scar_0044_tgt",
+  "faithful_mappings": [
+    [
+      "endocrine organs",
+      "controller"
+    ],
+    [
+      "hormone",
+      "Regulator"
+    ]
+  ],
+  "explanation": [
+    "Endocrine organs correspond to controllers: Endocrine organs in the endocrine system are responsible for producing and releasing hormones to regulate the physiological functions of the body. In a regulator, the controller receives input signals and produces corresponding output signals to regulate the behavior of the system. Both play a regulatory role.",
+    "Hormones correspond to regulators: Hormones in the endocrine system are biologically active substances that regulate the physiological functions of the body by acting on specific target cells. In a regulator, the regulator is a device used to adjust system behavior. Here, both hormones and regulators are used to regulate and control the function of the system."
+  ],
+  "background": {
+    "source": "The endocrine system is one of the most important systems in the human body that is responsible for maintaining the overall balance of the body by secreting hormones into the circulatory system. It is made up of various endocrine organs, including the thyroid gland, pituitary gland, adrenal glands, ovaries (in females), and testes (in males), which work together in a series of feedback loops to regulate the functions of distant target organs. The hypothalamus is the key neural control center for all endocrine systems in vertebrates. The endocrine system plays a significant role in regulating growth and development, metabolism, reproduction, and other bodily functions. Endocrinologists are specialists in the field of internal medicine who diagnose and treat hormonal imbalances and associated disorders.",
+    "target": "A regulator is a controller device that is used to regulate the flow or pressure of a fluid. It is an essential component in many industrial processes where the accurate control of flow or pressure is critical. A regulator can be used in various applications to control variables such as temperature, pressure, and fluid flow. It is designed to maintain a certain output value against changes in input or environmental conditions. A regulator can be operated manually or automatically and is equipped with sensors that detect changes in the system and adjust the output accordingly. Regulators are used in various fields such as oil and gas industry, chemical production, HVAC (heating, ventilation, and air conditioning), and water management systems. The term \"regulator\" can be used interexchangeably with the term \"controller\" as both devices perform the same function of controlling a system."
+  },
+  "raw": {
+    "id": 44,
+    "lang": "en",
+    "system_a": "Endocrine System",
+    "system_b": "Regulator",
+    "mappings": [
+      [
+        "endocrine organs",
+        "controller"
+      ],
+      [
+        "hormone",
+        "Regulator"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Engineering",
+    "system_a_background": "The endocrine system is one of the most important systems in the human body that is responsible for maintaining the overall balance of the body by secreting hormones into the circulatory system. It is made up of various endocrine organs, including the thyroid gland, pituitary gland, adrenal glands, ovaries (in females), and testes (in males), which work together in a series of feedback loops to regulate the functions of distant target organs. The hypothalamus is the key neural control center for all endocrine systems in vertebrates. The endocrine system plays a significant role in regulating growth and development, metabolism, reproduction, and other bodily functions. Endocrinologists are specialists in the field of internal medicine who diagnose and treat hormonal imbalances and associated disorders.",
+    "system_b_background": "A regulator is a controller device that is used to regulate the flow or pressure of a fluid. It is an essential component in many industrial processes where the accurate control of flow or pressure is critical. A regulator can be used in various applications to control variables such as temperature, pressure, and fluid flow. It is designed to maintain a certain output value against changes in input or environmental conditions. A regulator can be operated manually or automatically and is equipped with sensors that detect changes in the system and adjust the output accordingly. Regulators are used in various fields such as oil and gas industry, chemical production, HVAC (heating, ventilation, and air conditioning), and water management systems. The term \"regulator\" can be used interexchangeably with the term \"controller\" as both devices perform the same function of controlling a system.",
+    "Explanation": [
+      "Endocrine organs correspond to controllers: Endocrine organs in the endocrine system are responsible for producing and releasing hormones to regulate the physiological functions of the body. In a regulator, the controller receives input signals and produces corresponding output signals to regulate the behavior of the system. Both play a regulatory role.",
+      "Hormones correspond to regulators: Hormones in the endocrine system are biologically active substances that regulate the physiological functions of the body by acting on specific target cells. In a regulator, the regulator is a device used to adjust system behavior. Here, both hormones and regulators are used to regulate and control the function of the system."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Endocrine System",
+    "target": "Regulator"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

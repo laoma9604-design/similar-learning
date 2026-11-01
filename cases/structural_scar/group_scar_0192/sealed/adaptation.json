@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0192",
+  "dataset": "scar",
+  "original_id": "192",
+  "source_object_id": "obj_group_scar_0192_src",
+  "target_object_id": "obj_group_scar_0192_tgt",
+  "faithful_mappings": [
+    [
+      "king",
+      "president"
+    ],
+    [
+      "parliament",
+      "Congress"
+    ],
+    [
+      "House of Commons",
+      "House of Representatives"
+    ],
+    [
+      "senate",
+      "senate"
+    ]
+  ],
+  "explanation": [
+    "King corresponds to president: In the political system of Spain, the king is the highest authority of the state. In the political system of Mexico, the president is also the highest authority of the state. This mapping represents the highest leaders in two political systems.",
+    "Parliament corresponds to Congress: In the political system of Spain, the parliament is the highest legislative body. In the political system of Mexico, the congress is also the highest legislative body. This mapping represents the highest legislative bodies in two political systems.",
+    "House of Commons corresponds to House of Representatives: In the political system of Spain, the House of Commons is a component of the parliament, representing the people of various constituencies in Spain. In the political system of Mexico, the House of Representatives is also a component of the congress, representing the people of various constituencies in Mexico. This mapping represents the representative bodies of the people in two political systems.",
+    "Senate corresponds to Senate: In the political system of Spain, the Senate is another component of the parliament responsible for reviewing and passing laws. In the political system of Mexico, the Senate is also another component of the congress responsible for reviewing and passing laws. This mapping represents the legislative bodies in two political systems."
+  ],
+  "background": {
+    "source": "The Spanish Political System is a parliamentary monarchy, wherein the national sovereignty is vested in the people. It is a social representative democratic constitutional monarchy, where the monarch is the head of state, while the prime minister is the head of government. The Cortes Generales is the bicameral parliament, with a Congress of Deputies and a Senate, where legislative power is vested. The judiciary is independent of the executive and the legislature, administering justice on behalf of the King by judges and magistrates. Spain's political system also features a state of autonomies, which is a highly decentralized system of administration. While there are concerns about judicial independence, the Spanish Political System continues to be a multi-party system, where regional parties play a key role in politics.",
+    "target": "The Mexican political system is a federal presidential representative democratic republic where the President of Mexico is both head of state and government. It is based on a multi-party congressional system, divided into three branches: executive, legislative, and judicial, and is established by the Political Constitution of the United Mexican States. The executive branch is headed by the President and advised by a cabinet of secretaries. The legislative power is vested upon the Congress of the Union, a two-chamber legislature comprising the Senate of the Republic and the Chamber of Deputies. Judicial power is exercised by the judiciary, consisting of the Supreme Court of Justice of the Nation, the Council of the Federal Judiciary, and the collegiate, unitary, and district tribunals. The dominant political parties in Mexico are the Institutional Revolutionary Party (PRI), National Action Party (PAN), Democratic Revolution Party (PRD), and the National Regeneration Movement (MORENA). While popular belief in free and fair elections has increased, there is still a significant amount of distrust in the electoral system among Mexicans."
+  },
+  "raw": {
+    "id": 192,
+    "lang": "en",
+    "system_a": "Spanish Political System",
+    "system_b": "Mexican Political System",
+    "mappings": [
+      [
+        "king",
+        "president"
+      ],
+      [
+        "parliament",
+        "Congress"
+      ],
+      [
+        "House of Commons",
+        "House of Representatives"
+      ],
+      [
+        "senate",
+        "senate"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "The Spanish Political System is a parliamentary monarchy, wherein the national sovereignty is vested in the people. It is a social representative democratic constitutional monarchy, where the monarch is the head of state, while the prime minister is the head of government. The Cortes Generales is the bicameral parliament, with a Congress of Deputies and a Senate, where legislative power is vested. The judiciary is independent of the executive and the legislature, administering justice on behalf of the King by judges and magistrates. Spain's political system also features a state of autonomies, which is a highly decentralized system of administration. While there are concerns about judicial independence, the Spanish Political System continues to be a multi-party system, where regional parties play a key role in politics.",
+    "system_b_background": "The Mexican political system is a federal presidential representative democratic republic where the President of Mexico is both head of state and government. It is based on a multi-party congressional system, divided into three branches: executive, legislative, and judicial, and is established by the Political Constitution of the United Mexican States. The executive branch is headed by the President and advised by a cabinet of secretaries. The legislative power is vested upon the Congress of the Union, a two-chamber legislature comprising the Senate of the Republic and the Chamber of Deputies. Judicial power is exercised by the judiciary, consisting of the Supreme Court of Justice of the Nation, the Council of the Federal Judiciary, and the collegiate, unitary, and district tribunals. The dominant political parties in Mexico are the Institutional Revolutionary Party (PRI), National Action Party (PAN), Democratic Revolution Party (PRD), and the National Regeneration Movement (MORENA). While popular belief in free and fair elections has increased, there is still a significant amount of distrust in the electoral system among Mexicans.",
+    "Explanation": [
+      "King corresponds to president: In the political system of Spain, the king is the highest authority of the state. In the political system of Mexico, the president is also the highest authority of the state. This mapping represents the highest leaders in two political systems.",
+      "Parliament corresponds to Congress: In the political system of Spain, the parliament is the highest legislative body. In the political system of Mexico, the congress is also the highest legislative body. This mapping represents the highest legislative bodies in two political systems.",
+      "House of Commons corresponds to House of Representatives: In the political system of Spain, the House of Commons is a component of the parliament, representing the people of various constituencies in Spain. In the political system of Mexico, the House of Representatives is also a component of the congress, representing the people of various constituencies in Mexico. This mapping represents the representative bodies of the people in two political systems.",
+      "Senate corresponds to Senate: In the political system of Spain, the Senate is another component of the parliament responsible for reviewing and passing laws. In the political system of Mexico, the Senate is also another component of the congress responsible for reviewing and passing laws. This mapping represents the legislative bodies in two political systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Spanish Political System",
+    "target": "Mexican Political System"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

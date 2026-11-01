@@ -1,0 +1,119 @@
+{
+  "adaptation_id": "adapt_scar_0265",
+  "dataset": "scar",
+  "original_id": "265",
+  "source_object_id": "obj_group_scar_0265_src",
+  "target_object_id": "obj_group_scar_0265_tgt",
+  "faithful_mappings": [
+    [
+      "foundations",
+      "reasons"
+    ],
+    [
+      "buildings",
+      "theories"
+    ],
+    [
+      "supporting",
+      "confirming"
+    ],
+    [
+      "solid",
+      "rational"
+    ],
+    [
+      "weak",
+      "dubious"
+    ],
+    [
+      "crack",
+      "flaw"
+    ]
+  ],
+  "explanation": [
+    "Foundations correspond to reasons: foundations are the basis and support of a building, while reasons are the basis and support of a theory. Both are the foundation of something.",
+    "Buildings correspond to theories: buildings are physical entities built on foundations, while theories are concepts built on reasons. Both are developed on some kind of foundation.",
+    "Supporting corresponds to confirming: supporting refers to the stable support of the building by the foundation, while confirming refers to the rational support of the theory by reasons. Both are necessary for the support and maintenance of something.",
+    "Solid corresponds to rational: a solid foundation is a reliable and sturdy building foundation, while a rational reason is a reasonable and credible theoretical foundation. Both are things with solid properties.",
+    "Weak corresponds to dubious: a weak foundation is an unstable building foundation, while a dubious reason is an unreliable theoretical foundation. Both are things with unstable properties.",
+    "Crack corresponds to flaw: cracks are defects and unstable factors in a foundation, while flaws are errors and imperfections in a theory. Both represent problems and deficiencies in something."
+  ],
+  "background": {
+    "source": "Buildings and Grounds is a third studio album by Papas Fritas that was released in 2000. The title of this album seems fitting as it is an essential part of a building's construction. Just like how foundations are essential to a building, the songs in this album serve as the supporting pillars of Papas Fritas' musical career. With solid rhythms and catchy melodies, this album proves the band's ability to create a sound that is both unique and enjoyable. However, even the strongest of foundations can still crack and weaken over time, and unfortunately, this was the final studio album released by Papas Fritas. So, if you are a fan of indie pop and appreciate a good foundation, be sure to check out Buildings and Grounds by Papas Fritas.",
+    "target": "The Sam Vimes \"Boots\" theory of socioeconomic unfairness is a thought-provoking economic theory that examines the impact of poverty on basic expenses. Rationalized by Sam Vimes, the protagonist in Terry Pratchett's popular novel Men at Arms, the theory highlights how poverty imposes greater expenses on the poor than those who are richer. As a result, this theory has received widespread attention and has been used to confirm the flaws of dubious economic policies that aggravate poverty rather than solve it. While some may question the theory's validity, its underlying principles remain relevant and offer valuable insights into socioeconomic inequality."
+  },
+  "raw": {
+    "id": 265,
+    "lang": "en",
+    "system_a": "grounds for a building",
+    "system_b": "reasons for a theory",
+    "mappings": [
+      [
+        "foundations",
+        "reasons"
+      ],
+      [
+        "buildings",
+        "theories"
+      ],
+      [
+        "supporting",
+        "confirming"
+      ],
+      [
+        "solid",
+        "rational"
+      ],
+      [
+        "weak",
+        "dubious"
+      ],
+      [
+        "crack",
+        "flaw"
+      ]
+    ],
+    "system_a_domain": "Engineering",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "Buildings and Grounds is a third studio album by Papas Fritas that was released in 2000. The title of this album seems fitting as it is an essential part of a building's construction. Just like how foundations are essential to a building, the songs in this album serve as the supporting pillars of Papas Fritas' musical career. With solid rhythms and catchy melodies, this album proves the band's ability to create a sound that is both unique and enjoyable. However, even the strongest of foundations can still crack and weaken over time, and unfortunately, this was the final studio album released by Papas Fritas. So, if you are a fan of indie pop and appreciate a good foundation, be sure to check out Buildings and Grounds by Papas Fritas.",
+    "system_b_background": "The Sam Vimes \"Boots\" theory of socioeconomic unfairness is a thought-provoking economic theory that examines the impact of poverty on basic expenses. Rationalized by Sam Vimes, the protagonist in Terry Pratchett's popular novel Men at Arms, the theory highlights how poverty imposes greater expenses on the poor than those who are richer. As a result, this theory has received widespread attention and has been used to confirm the flaws of dubious economic policies that aggravate poverty rather than solve it. While some may question the theory's validity, its underlying principles remain relevant and offer valuable insights into socioeconomic inequality.",
+    "Explanation": [
+      "Foundations correspond to reasons: foundations are the basis and support of a building, while reasons are the basis and support of a theory. Both are the foundation of something.",
+      "Buildings correspond to theories: buildings are physical entities built on foundations, while theories are concepts built on reasons. Both are developed on some kind of foundation.",
+      "Supporting corresponds to confirming: supporting refers to the stable support of the building by the foundation, while confirming refers to the rational support of the theory by reasons. Both are necessary for the support and maintenance of something.",
+      "Solid corresponds to rational: a solid foundation is a reliable and sturdy building foundation, while a rational reason is a reasonable and credible theoretical foundation. Both are things with solid properties.",
+      "Weak corresponds to dubious: a weak foundation is an unstable building foundation, while a dubious reason is an unreliable theoretical foundation. Both are things with unstable properties.",
+      "Crack corresponds to flaw: cracks are defects and unstable factors in a foundation, while flaws are errors and imperfections in a theory. Both represent problems and deficiencies in something."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "grounds for a building",
+    "target": "reasons for a theory"
+  },
+  "domains": {
+    "source": "Engineering",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

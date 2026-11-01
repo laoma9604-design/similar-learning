@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0079",
+  "dataset": "scar",
+  "original_id": "79",
+  "source_object_id": "obj_group_scar_0079_src",
+  "target_object_id": "obj_group_scar_0079_tgt",
+  "faithful_mappings": [
+    [
+      "immune system",
+      "brain"
+    ],
+    [
+      "identify",
+      "Lenovo"
+    ],
+    [
+      "previous antigen",
+      "review exercises"
+    ],
+    [
+      "immune response",
+      "take an exam"
+    ]
+  ],
+  "explanation": [
+    "The immune system corresponds to the brain: the immune system protects the body from pathogenic invasion, while the brain serves as the central hub for human thought and memory. Both play a pivotal role in their respective systems.",
+    "Identification corresponds to Lenovo: immune memory allows the immune system to recognize previously encountered antigens, and during final exams, the brain recalls previously learned knowledge by associating and connecting concepts. Both are responsible for identification and recollection in their respective scenarios.",
+    "The previous antigen corresponds to review exercises: the immune system combats disease by memorizing previous antigens, and prior to final exams, students review practice problems to review previous knowledge. Both involve reviewing past information in their respective scenarios.",
+    "Immune response corresponds to taking an exam: immune memory allows the immune system to respond quickly to pathogenic invasion, and final exams serve as an evaluation of a student's learning progress. Both involve responding to and evaluating specific situations in their respective scenarios."
+  ],
+  "background": {
+    "source": "Immunological memory refers to the immune system's ability to quickly and accurately recognize an antigen that the body has previously encountered, resulting in the initiation of a corresponding immune response. The adaptive immune system, through the generation of antigen-specific receptors (TCR, antibodies), plays a major role in adaptive immune memory. Following the initial immune response to a danger-associated antigen, some of the antigen-specific T and B cells persist in the body as long-living memory cells. This memory allows for a faster and more robust secondary response to the same antigen. This process is the basis of vaccination. Exciting new research suggests that even the innate immune system can initiate a more efficient immune response after previous exposure to a pathogen or PAMPs/DAMPs, respectively. Innate immune memory (trained immunity) is neither antigen-specific nor dependent on gene rearrangement but is instead caused by changes in epigenetic programming and shifts in cellular metabolism. Innate immune memory has been observed in both invertebrates and vertebrates.",
+    "target": "A final exam is a comprehensive assessment given to students at the end of a course of study or training. It aims to evaluate the knowledge and understanding gained throughout the duration of the program. Students are required to review their coursework and participate in review exercises to prepare for the final exam. Lenovo, one of the leading technology brands in the market, has developed brain training apps that can assist students in enhancing their learning abilities and maintaining focus during exam preparation. Additionally, the term \"Final Exam\" is not exclusively used in the education industry but also refers to a range of pop culture concepts such as movies, albums, and TV shows."
+  },
+  "raw": {
+    "id": 79,
+    "lang": "en",
+    "system_a": "Immunological Memory",
+    "system_b": "Final Exam",
+    "mappings": [
+      [
+        "immune system",
+        "brain"
+      ],
+      [
+        "identify",
+        "Lenovo"
+      ],
+      [
+        "previous antigen",
+        "review exercises"
+      ],
+      [
+        "immune response",
+        "take an exam"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Sport",
+    "system_a_background": "Immunological memory refers to the immune system's ability to quickly and accurately recognize an antigen that the body has previously encountered, resulting in the initiation of a corresponding immune response. The adaptive immune system, through the generation of antigen-specific receptors (TCR, antibodies), plays a major role in adaptive immune memory. Following the initial immune response to a danger-associated antigen, some of the antigen-specific T and B cells persist in the body as long-living memory cells. This memory allows for a faster and more robust secondary response to the same antigen. This process is the basis of vaccination. Exciting new research suggests that even the innate immune system can initiate a more efficient immune response after previous exposure to a pathogen or PAMPs/DAMPs, respectively. Innate immune memory (trained immunity) is neither antigen-specific nor dependent on gene rearrangement but is instead caused by changes in epigenetic programming and shifts in cellular metabolism. Innate immune memory has been observed in both invertebrates and vertebrates.",
+    "system_b_background": "A final exam is a comprehensive assessment given to students at the end of a course of study or training. It aims to evaluate the knowledge and understanding gained throughout the duration of the program. Students are required to review their coursework and participate in review exercises to prepare for the final exam. Lenovo, one of the leading technology brands in the market, has developed brain training apps that can assist students in enhancing their learning abilities and maintaining focus during exam preparation. Additionally, the term \"Final Exam\" is not exclusively used in the education industry but also refers to a range of pop culture concepts such as movies, albums, and TV shows.",
+    "Explanation": [
+      "The immune system corresponds to the brain: the immune system protects the body from pathogenic invasion, while the brain serves as the central hub for human thought and memory. Both play a pivotal role in their respective systems.",
+      "Identification corresponds to Lenovo: immune memory allows the immune system to recognize previously encountered antigens, and during final exams, the brain recalls previously learned knowledge by associating and connecting concepts. Both are responsible for identification and recollection in their respective scenarios.",
+      "The previous antigen corresponds to review exercises: the immune system combats disease by memorizing previous antigens, and prior to final exams, students review practice problems to review previous knowledge. Both involve reviewing past information in their respective scenarios.",
+      "Immune response corresponds to taking an exam: immune memory allows the immune system to respond quickly to pathogenic invasion, and final exams serve as an evaluation of a student's learning progress. Both involve responding to and evaluating specific situations in their respective scenarios."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Immunological Memory",
+    "target": "Final Exam"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Sport"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

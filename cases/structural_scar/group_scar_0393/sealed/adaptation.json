@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0393",
+  "dataset": "scar",
+  "original_id": "393",
+  "source_object_id": "obj_group_scar_0393_src",
+  "target_object_id": "obj_group_scar_0393_tgt",
+  "faithful_mappings": [
+    [
+      "fission",
+      "push dominoes"
+    ],
+    [
+      "neutron",
+      "dominoes"
+    ],
+    [
+      "energy",
+      "power"
+    ]
+  ],
+  "explanation": [
+    "Fission corresponds to pushing dominoes: In nuclear fission, fission refers to the process of the nucleus of an atom splitting into two or more smaller nuclei. In dominoes, pushing dominoes refers to toppling one domino and triggering a chain reaction of falling dominoes. Both represent a kind of chain reaction to some extent.",
+    "Neutron corresponds to dominoes: In nuclear fission, neutron refers to the particle that can trigger a fission reaction. In dominoes, dominoes refer to the objects that can be knocked down and trigger a chain reaction. Both are key elements in their respective phenomena and play a role in triggering and transmitting.",
+    "Energy corresponds to power: In nuclear fission, energy refers to the energy released during the fission process. In dominoes, power refers to the force that pushes the dominoes down. Both represent a kind of energy or force to some extent and play a role in driving and transmitting."
+  ],
+  "background": {
+    "source": "Nuclear fission is a process where the nucleus of an atom splits into two or more smaller nuclei, releasing a large amount of energy in the process. This phenomenon was first discovered in 1938 by Otto Hahn and Fritz Strassmann in Berlin, and the existence of additional neutrons during the fission process was predicted shortly after, opening up the possibility of a nuclear chain reaction. The energy produced by fission can be harnessed for both nuclear power and nuclear weapons. However, the resulting fragments are highly radioactive and pose a significant waste problem. Despite these concerns, fission remains a very dense source of energy, with nuclear fuel containing millions of times more energy than chemical fuel.",
+    "target": "Dominoes is a classic tile-based game that is enjoyed by all ages. It consists of rectangular tiles, generally featuring two square ends with varying numbers of dots or pips. These tiles make up a domino set, with the traditional European set comprising 28 pieces featuring combinations of spot counts ranging from zero to six. Dominoes can be used to play a wide variety of games and enjoys immense popularity across the globe. The game has an interesting history, with the earliest mention of dominoes dating back to China in the Song dynasty. In modern times, European dominoes differ from Chinese dominoes, and there is no confirmed link between the two. The word \"domino\" likely derives from the Venetian Carnival costume, and despite the coinage of the word \"polyomino,\" there is no connection between \"domino\" and the number 2. Popular domino games include Domino Whist, Matador, and Muggins (All Fives), while Texas 42, Chicken Foot, Concentration, Double Fives, and Mexican Train are also well-liked. Some cultures, such as China and certain African diaspora, have also used dominoes for divination. Whether you want to push dominoes or experience their power, this classic game is sure to provide you with hours of entertainment."
+  },
+  "raw": {
+    "id": 393,
+    "lang": "en",
+    "system_a": "Nuclear Fission",
+    "system_b": "Dominoes",
+    "mappings": [
+      [
+        "fission",
+        "push dominoes"
+      ],
+      [
+        "neutron",
+        "dominoes"
+      ],
+      [
+        "energy",
+        "power"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Art",
+    "system_a_background": "Nuclear fission is a process where the nucleus of an atom splits into two or more smaller nuclei, releasing a large amount of energy in the process. This phenomenon was first discovered in 1938 by Otto Hahn and Fritz Strassmann in Berlin, and the existence of additional neutrons during the fission process was predicted shortly after, opening up the possibility of a nuclear chain reaction. The energy produced by fission can be harnessed for both nuclear power and nuclear weapons. However, the resulting fragments are highly radioactive and pose a significant waste problem. Despite these concerns, fission remains a very dense source of energy, with nuclear fuel containing millions of times more energy than chemical fuel.",
+    "system_b_background": "Dominoes is a classic tile-based game that is enjoyed by all ages. It consists of rectangular tiles, generally featuring two square ends with varying numbers of dots or pips. These tiles make up a domino set, with the traditional European set comprising 28 pieces featuring combinations of spot counts ranging from zero to six. Dominoes can be used to play a wide variety of games and enjoys immense popularity across the globe. The game has an interesting history, with the earliest mention of dominoes dating back to China in the Song dynasty. In modern times, European dominoes differ from Chinese dominoes, and there is no confirmed link between the two. The word \"domino\" likely derives from the Venetian Carnival costume, and despite the coinage of the word \"polyomino,\" there is no connection between \"domino\" and the number 2. Popular domino games include Domino Whist, Matador, and Muggins (All Fives), while Texas 42, Chicken Foot, Concentration, Double Fives, and Mexican Train are also well-liked. Some cultures, such as China and certain African diaspora, have also used dominoes for divination. Whether you want to push dominoes or experience their power, this classic game is sure to provide you with hours of entertainment.",
+    "Explanation": [
+      "Fission corresponds to pushing dominoes: In nuclear fission, fission refers to the process of the nucleus of an atom splitting into two or more smaller nuclei. In dominoes, pushing dominoes refers to toppling one domino and triggering a chain reaction of falling dominoes. Both represent a kind of chain reaction to some extent.",
+      "Neutron corresponds to dominoes: In nuclear fission, neutron refers to the particle that can trigger a fission reaction. In dominoes, dominoes refer to the objects that can be knocked down and trigger a chain reaction. Both are key elements in their respective phenomena and play a role in triggering and transmitting.",
+      "Energy corresponds to power: In nuclear fission, energy refers to the energy released during the fission process. In dominoes, power refers to the force that pushes the dominoes down. Both represent a kind of energy or force to some extent and play a role in driving and transmitting."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Nuclear Fission",
+    "target": "Dominoes"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Art"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

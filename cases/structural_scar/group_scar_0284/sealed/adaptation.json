@@ -1,0 +1,130 @@
+{
+  "adaptation_id": "adapt_scar_0284",
+  "dataset": "scar",
+  "original_id": "284",
+  "source_object_id": "obj_group_scar_0284_src",
+  "target_object_id": "obj_group_scar_0284_tgt",
+  "faithful_mappings": [
+    [
+      "food",
+      "idea"
+    ],
+    [
+      "eating",
+      "understanding"
+    ],
+    [
+      "digestion",
+      "comprehension"
+    ],
+    [
+      "feeding",
+      "teaching"
+    ],
+    [
+      "feeding",
+      "persuading"
+    ],
+    [
+      "food",
+      "theory"
+    ],
+    [
+      "cooking",
+      "creativity"
+    ]
+  ],
+  "explanation": [
+    "Food corresponds to idea: Food is the substance that organisms consume to obtain energy and nutrients. Ideas, on the other hand, are the foundation of human thinking and communication, providing us with new perspectives and methods for problem-solving. In this analogy, both food and ideas are inputs generated to fulfill certain needs. ",
+    "Eating corresponds to understanding: Eating refers to the process of consuming food by organisms. Understanding is the process by which humans digest and absorb new information. In this mapping, eating and understanding both represent a form of digestion and absorption.",
+    "Digestion corresponds to comprehension: Digestion is the process by which organisms break down food into absorbable nutrients. Similarly, comprehension involves breaking down new information into knowledge that can be absorbed and utilized. Both concepts involve processing and transforming inputs for ease of use.",
+    "Feeding corresponds to teaching: Feeding is providing food to others so they can obtain the nourishment they need. Teaching is the process of imparting knowledge to others, assisting them in understanding and mastering new concepts. Feeding and teaching here represent providing resources for others. ",
+    "Feeding corresponds to persuading: Feeding is giving food to someone to fulfill their physiological need. Persuading is influencing someone's views and ideas so that they accept new perspectives. In this analogy, feeding and persuading both involve influencing the behavior and needs of others.",
+    "Food corresponds to theory: Food is the foundation for satisfying the biological needs of organisms. Theory is an explanation and understanding of the real world, providing us with a framework to comprehend the world. Both food and theory represent a supporting and nourishing foundation.",
+    "Cooking corresponds to creativity: Cooking is the process of transforming ingredients into delicious meals using techniques and creativity. Creativity is the ability to combine raw ideas and materials to create new solutions and works. Cooking and creativity emphasize the importance of skills, innovation, and practice."
+  ],
+  "background": {
+    "source": "Food is a vital substance consumed by living organisms to support nutritional needs. It is available in various forms, such as plants, animals, and fungi, and is rich in essential nutrients needed for proper growth and sustenance. While different species of animals have specific feeding behaviours, humans are highly adaptable and can acquire food from various ecosystems. However, the food industry, through intensive agriculture and complex food processing and distribution systems, is responsible for supplying most of the food energy needed. Unfortunately, such conventional agriculture practices also heavily rely on fossil fuels and contribute significantly to climate change. Hence, various issues, such as sustainability, biodiversity, economics, population growth, water supply, and food security, are linked to the food system. Notably, international organizations like the Food and Agriculture Organization and World Food Programme monitor food safety and security issues. Finally, food can be cooked or consumed raw in different ways depending on one's preference or cultural background.",
+    "target": "An idea is a fundamental concept of being, defining the capacity to create and understand meaning. Ideas are the result of thought and can take on the form of mental representational images of an object. The ability to generate original ideas is an essential feature of humans and can lead to innovation. Ideas can arise spontaneously, without deep reflection or thought, such as when we consider the idea of a person or a place. Understanding and comprehension of ideas are key aspects of teaching and persuading, while theory and creativity play important roles in developing and refining ideas. In essence, an idea is the foundation of thought and innovation, and a crucial component of human existence."
+  },
+  "raw": {
+    "id": 284,
+    "lang": "en",
+    "system_a": "food",
+    "system_b": "idea",
+    "mappings": [
+      [
+        "food",
+        "idea"
+      ],
+      [
+        "eating",
+        "understanding"
+      ],
+      [
+        "digestion",
+        "comprehension"
+      ],
+      [
+        "feeding",
+        "teaching"
+      ],
+      [
+        "feeding",
+        "persuading"
+      ],
+      [
+        "food",
+        "theory"
+      ],
+      [
+        "cooking",
+        "creativity"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "Food is a vital substance consumed by living organisms to support nutritional needs. It is available in various forms, such as plants, animals, and fungi, and is rich in essential nutrients needed for proper growth and sustenance. While different species of animals have specific feeding behaviours, humans are highly adaptable and can acquire food from various ecosystems. However, the food industry, through intensive agriculture and complex food processing and distribution systems, is responsible for supplying most of the food energy needed. Unfortunately, such conventional agriculture practices also heavily rely on fossil fuels and contribute significantly to climate change. Hence, various issues, such as sustainability, biodiversity, economics, population growth, water supply, and food security, are linked to the food system. Notably, international organizations like the Food and Agriculture Organization and World Food Programme monitor food safety and security issues. Finally, food can be cooked or consumed raw in different ways depending on one's preference or cultural background.",
+    "system_b_background": "An idea is a fundamental concept of being, defining the capacity to create and understand meaning. Ideas are the result of thought and can take on the form of mental representational images of an object. The ability to generate original ideas is an essential feature of humans and can lead to innovation. Ideas can arise spontaneously, without deep reflection or thought, such as when we consider the idea of a person or a place. Understanding and comprehension of ideas are key aspects of teaching and persuading, while theory and creativity play important roles in developing and refining ideas. In essence, an idea is the foundation of thought and innovation, and a crucial component of human existence.",
+    "Explanation": [
+      "Food corresponds to idea: Food is the substance that organisms consume to obtain energy and nutrients. Ideas, on the other hand, are the foundation of human thinking and communication, providing us with new perspectives and methods for problem-solving. In this analogy, both food and ideas are inputs generated to fulfill certain needs. ",
+      "Eating corresponds to understanding: Eating refers to the process of consuming food by organisms. Understanding is the process by which humans digest and absorb new information. In this mapping, eating and understanding both represent a form of digestion and absorption.",
+      "Digestion corresponds to comprehension: Digestion is the process by which organisms break down food into absorbable nutrients. Similarly, comprehension involves breaking down new information into knowledge that can be absorbed and utilized. Both concepts involve processing and transforming inputs for ease of use.",
+      "Feeding corresponds to teaching: Feeding is providing food to others so they can obtain the nourishment they need. Teaching is the process of imparting knowledge to others, assisting them in understanding and mastering new concepts. Feeding and teaching here represent providing resources for others. ",
+      "Feeding corresponds to persuading: Feeding is giving food to someone to fulfill their physiological need. Persuading is influencing someone's views and ideas so that they accept new perspectives. In this analogy, feeding and persuading both involve influencing the behavior and needs of others.",
+      "Food corresponds to theory: Food is the foundation for satisfying the biological needs of organisms. Theory is an explanation and understanding of the real world, providing us with a framework to comprehend the world. Both food and theory represent a supporting and nourishing foundation.",
+      "Cooking corresponds to creativity: Cooking is the process of transforming ingredients into delicious meals using techniques and creativity. Creativity is the ability to combine raw ideas and materials to create new solutions and works. Cooking and creativity emphasize the importance of skills, innovation, and practice."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "non_bijective",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6",
+        "n7": "n7"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "one_to_many",
+  "system": {
+    "source": "food",
+    "target": "idea"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

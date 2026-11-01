@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0392",
+  "dataset": "scar",
+  "original_id": "392",
+  "source_object_id": "obj_group_scar_0392_src",
+  "target_object_id": "obj_group_scar_0392_tgt",
+  "faithful_mappings": [
+    [
+      "turbine blade",
+      "heart valve"
+    ],
+    [
+      "turbine disk",
+      "heart wall"
+    ],
+    [
+      "combustion chamber",
+      "heart muscle"
+    ]
+  ],
+  "explanation": [
+    "The turbine blade corresponds to the heart valve: In a turbine engine, the turbine blade is a crucial component used to drive the engine. In the heart, the heart valve is a crucial component used to control the direction of blood flow. Both are essential parts of their respective systems and play a role in control and propulsion.",
+    "The turbine disk corresponds to the heart wall: In a turbine engine, the turbine disk is the supporting structure for the turbine blades. In the heart, the heart wall is the supporting structure for the heart valve and heart muscle. Both are support structures in their respective systems and play a role in support and protection.",
+    "The combustion chamber corresponds to the heart muscle: In a turbine engine, the combustion chamber is the component that provides energy. In the heart, the heart muscle is the component that provides power. Both are energy sources in their respective systems and play a role in propulsion and energy supply."
+  ],
+  "background": {
+    "source": "A turbine engine, also known as a gas turbine or combustion turbine, is a continuous flow internal combustion engine that is used to power a variety of vehicles and equipment. The engine is comprised of several key components, including a rotating gas compressor, a combustor, and a compressor-driving turbine. Other components may be added depending on the application, such as a propelling nozzle for flight or an additional turbine for driving a propeller or generator. The engine operates on a Brayton cycle with atmospheric air flowing through the compressor, fuel being added and combusted, and the resulting high-temperature pressurized gas entering the turbine to produce shaft work output. Turbine blades and disks, as well as a combustion chamber, are essential to the functioning of the engine. Gas turbines have a wide range of uses, including powering aircraft, trains, ships, generators, and compressors.",
+    "target": "The heart is a powerful and essential organ responsible for pumping blood throughout the body in most animals. It features four chambers in humans, which are the upper left and right atria, and the lower left and right ventricles. The heart is encased in the pericardium, which is a protective sac that contains a small amount of fluid. The heart wall is made up of three layers, namely myocardium, endocardium, and epicardium, while the heart valve proves vital in preventing backflow of blood. The heart muscle generates a rhythmic beat that determines its contracting and pumping abilities. While a healthy heart operates at a resting rate of 72 beats per minute, exercise can increase it temporarily, resulting in better heart health. However, factors like smoking, high cholesterol, and high blood pressure can affect the heart's functioning, leading to severe conditions like heart diseases. Diagnosis of heart conditions often entails taking a medical history and using various imaging techniques like ECG, echocardiogram, and ultrasound. Specialists who focus on heart diseases are called cardiologists."
+  },
+  "raw": {
+    "id": 392,
+    "lang": "en",
+    "system_a": "Turbine Engine",
+    "system_b": "Heart",
+    "mappings": [
+      [
+        "turbine blade",
+        "heart valve"
+      ],
+      [
+        "turbine disk",
+        "heart wall"
+      ],
+      [
+        "combustion chamber",
+        "heart muscle"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Biology",
+    "system_a_background": "A turbine engine, also known as a gas turbine or combustion turbine, is a continuous flow internal combustion engine that is used to power a variety of vehicles and equipment. The engine is comprised of several key components, including a rotating gas compressor, a combustor, and a compressor-driving turbine. Other components may be added depending on the application, such as a propelling nozzle for flight or an additional turbine for driving a propeller or generator. The engine operates on a Brayton cycle with atmospheric air flowing through the compressor, fuel being added and combusted, and the resulting high-temperature pressurized gas entering the turbine to produce shaft work output. Turbine blades and disks, as well as a combustion chamber, are essential to the functioning of the engine. Gas turbines have a wide range of uses, including powering aircraft, trains, ships, generators, and compressors.",
+    "system_b_background": "The heart is a powerful and essential organ responsible for pumping blood throughout the body in most animals. It features four chambers in humans, which are the upper left and right atria, and the lower left and right ventricles. The heart is encased in the pericardium, which is a protective sac that contains a small amount of fluid. The heart wall is made up of three layers, namely myocardium, endocardium, and epicardium, while the heart valve proves vital in preventing backflow of blood. The heart muscle generates a rhythmic beat that determines its contracting and pumping abilities. While a healthy heart operates at a resting rate of 72 beats per minute, exercise can increase it temporarily, resulting in better heart health. However, factors like smoking, high cholesterol, and high blood pressure can affect the heart's functioning, leading to severe conditions like heart diseases. Diagnosis of heart conditions often entails taking a medical history and using various imaging techniques like ECG, echocardiogram, and ultrasound. Specialists who focus on heart diseases are called cardiologists.",
+    "Explanation": [
+      "The turbine blade corresponds to the heart valve: In a turbine engine, the turbine blade is a crucial component used to drive the engine. In the heart, the heart valve is a crucial component used to control the direction of blood flow. Both are essential parts of their respective systems and play a role in control and propulsion.",
+      "The turbine disk corresponds to the heart wall: In a turbine engine, the turbine disk is the supporting structure for the turbine blades. In the heart, the heart wall is the supporting structure for the heart valve and heart muscle. Both are support structures in their respective systems and play a role in support and protection.",
+      "The combustion chamber corresponds to the heart muscle: In a turbine engine, the combustion chamber is the component that provides energy. In the heart, the heart muscle is the component that provides power. Both are energy sources in their respective systems and play a role in propulsion and energy supply."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Turbine Engine",
+    "target": "Heart"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

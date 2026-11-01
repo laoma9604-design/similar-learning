@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0200",
+  "dataset": "scar",
+  "original_id": "200",
+  "source_object_id": "obj_group_scar_0200_src",
+  "target_object_id": "obj_group_scar_0200_tgt",
+  "faithful_mappings": [
+    [
+      "british parliament",
+      "Second Continental Congress"
+    ],
+    [
+      "limit kingship",
+      "safeguard human rights"
+    ],
+    [
+      "Create a constitutional monarchy",
+      "america was born"
+    ]
+  ],
+  "explanation": [
+    "The British Parliament corresponds to the Second Continental Congress: the Bill of Rights was drafted by the British Parliament, while the Declaration of Independence was drafted by the Second Continental Congress. Both are significant documents drafted by political institutions.",
+    "Limiting kingship corresponds to safeguarding human rights: the Bill of Rights aimed to limit the power of the British king and safeguard citizens' rights, while the Declaration of Independence promoted the importance of protecting human rights and emphasized that people have non-negotiable rights. Both focus on balancing power and protecting the people's interests.",
+    "Creating a constitutional monarchy corresponds to the birth of America: by limiting kingship through the Bill of Rights, the foundation for Britain's constitutional monarchy was laid, while the Declaration of Independence announced America's independence, establishing a new national order. Both mark a transformation in political systems and the establishment of a new national order."
+  ],
+  "background": {
+    "source": "A bill of rights is a crucial document that outlines the fundamental rights that a citizenry possesses. It serves as a cornerstone of a democratic society and a limitation on the powers of the ruling authority. The concept of a bill of rights can be traced back to various historical documents, such as the 1689 Declaration of Right in England that aimed to limit the powers of the crown and create a constitutional monarchy. The 1789 United States Bill of Rights, ratified two years after it was written, became the first ten amendments to the US Constitution and established several recognized freedoms, such as freedom of speech, religion, and the press. Other countries and organizations have created their unique bills of rights over time, such as the French Declaration of the Rights of Man and of the Citizen, the Canadian Bill of Rights, and the Universal Declaration of Human Rights by the United Nations. The significance of a bill of rights lies in the fact that it ensures the protection of the basic human rights and freedoms that every individual should enjoy, regardless of their background or beliefs.",
+    "target": "The Declaration of Independence is an extremely important document in American history, as it was created by the Second Continental Congress in 1776, marking a key moment in the country's history. Its primary purpose was to assert the independence of the United States from Great Britain, and to establish the country as a sovereign nation. This document was also meant to safeguard human rights, as the founding fathers believed that everyone was entitled to certain inalienable rights. With the signing of this document, America was born, and it has been an inspiration to countless people and countries around the world ever since."
+  },
+  "raw": {
+    "id": 200,
+    "lang": "en",
+    "system_a": "Bill of Rights",
+    "system_b": "Declaration of Independence",
+    "mappings": [
+      [
+        "british parliament",
+        "Second Continental Congress"
+      ],
+      [
+        "limit kingship",
+        "safeguard human rights"
+      ],
+      [
+        "Create a constitutional monarchy",
+        "america was born"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "A bill of rights is a crucial document that outlines the fundamental rights that a citizenry possesses. It serves as a cornerstone of a democratic society and a limitation on the powers of the ruling authority. The concept of a bill of rights can be traced back to various historical documents, such as the 1689 Declaration of Right in England that aimed to limit the powers of the crown and create a constitutional monarchy. The 1789 United States Bill of Rights, ratified two years after it was written, became the first ten amendments to the US Constitution and established several recognized freedoms, such as freedom of speech, religion, and the press. Other countries and organizations have created their unique bills of rights over time, such as the French Declaration of the Rights of Man and of the Citizen, the Canadian Bill of Rights, and the Universal Declaration of Human Rights by the United Nations. The significance of a bill of rights lies in the fact that it ensures the protection of the basic human rights and freedoms that every individual should enjoy, regardless of their background or beliefs.",
+    "system_b_background": "The Declaration of Independence is an extremely important document in American history, as it was created by the Second Continental Congress in 1776, marking a key moment in the country's history. Its primary purpose was to assert the independence of the United States from Great Britain, and to establish the country as a sovereign nation. This document was also meant to safeguard human rights, as the founding fathers believed that everyone was entitled to certain inalienable rights. With the signing of this document, America was born, and it has been an inspiration to countless people and countries around the world ever since.",
+    "Explanation": [
+      "The British Parliament corresponds to the Second Continental Congress: the Bill of Rights was drafted by the British Parliament, while the Declaration of Independence was drafted by the Second Continental Congress. Both are significant documents drafted by political institutions.",
+      "Limiting kingship corresponds to safeguarding human rights: the Bill of Rights aimed to limit the power of the British king and safeguard citizens' rights, while the Declaration of Independence promoted the importance of protecting human rights and emphasized that people have non-negotiable rights. Both focus on balancing power and protecting the people's interests.",
+      "Creating a constitutional monarchy corresponds to the birth of America: by limiting kingship through the Bill of Rights, the foundation for Britain's constitutional monarchy was laid, while the Declaration of Independence announced America's independence, establishing a new national order. Both mark a transformation in political systems and the establishment of a new national order."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Bill of Rights",
+    "target": "Declaration of Independence"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

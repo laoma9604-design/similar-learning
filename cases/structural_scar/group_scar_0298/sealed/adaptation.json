@@ -1,0 +1,119 @@
+{
+  "adaptation_id": "adapt_scar_0298",
+  "dataset": "scar",
+  "original_id": "298",
+  "source_object_id": "obj_group_scar_0298_src",
+  "target_object_id": "obj_group_scar_0298_tgt",
+  "faithful_mappings": [
+    [
+      "ship",
+      "nation"
+    ],
+    [
+      "captain",
+      "president"
+    ],
+    [
+      "crew",
+      "congress"
+    ],
+    [
+      "passenger",
+      "citizen"
+    ],
+    [
+      "storm",
+      "problem"
+    ],
+    [
+      "forecast",
+      "outlook"
+    ]
+  ],
+  "explanation": [
+    "Ship corresponds to nation: A ship is a mode of transport that carries passengers, while a nation is a political entity that carries citizens. Both are carriers of certain values. ",
+    "Captain corresponds to president: A captain is the leader on a ship, while a president is the leader of a nation. Both are the highest-ranking officials of their respective organizations. ",
+    "Crew corresponds to congress: The crew are the workers on a ship, while the congress is the legislative body of a nation. Both are important members of their respective organizations. ",
+    "Passenger corresponds to citizen: A passenger is a traveler on a ship, while a citizen is a resident of a nation. Both are the basic units of their respective organizations. ",
+    "Storm corresponds to problem: A storm is a difficulty that a ship may encounter during its journey, while a problem is a difficulty that a nation may encounter during its development. Both are challenges in the process. ",
+    "Forecast corresponds to outlook: A forecast predicts the storms that a ship may encounter during its journey, while an outlook predicts the future development of a nation. Both are expectations for the future."
+  ],
+  "background": {
+    "source": "A ship is a large watercraft that travels on deep water, carrying cargo or passengers to various destinations. A captain and crew are responsible for operating and maintaining the ship, ensuring the safety of all onboard despite any challenges such as storms or unfavorable weather forecasts. Ships have played a significant role in the development of world commerce, supporting exploration, trade, warfare, migration, colonization, and science. Whether it’s a cargo ship carrying goods across the ocean or a cruise ship carrying passengers on vacation, ships continue to provide essential transportation services around the world.",
+    "target": "A nation can be defined as a community of people who share a common history, ethnicity, language, culture, and/or society, and are governed by a central authority. This authority is usually established in a defined territory and may comprise a civic or multicultural constitution. A nation's development can be viewed through the lens of three perspectives: primordialism, which suggests that nations have always existed and nationalism is a natural process; ethnosymbolism, which sees nationalism as a dynamic phenomenon, stressing on the importance of symbols, myths, and traditions; and modernization theory, which considers nationalism as a product of modernity, emphasizing industrialization, urbanization, and mass education. Nationalism is an imagined community, and its members remain strangers to one another, although they experience a subjective sense of unity. The foundation of a nation's story may rest on ethnic attributes, values, and principles and connect to narratives of belonging. The leader of a nation is usually known as the president, and their work is supported by the congress, which comprises citizens of the nation. A nation's development presents many challenges, and their resolution depends on an outlook that is shaped by the nation's history, culture, and political landscape."
+  },
+  "raw": {
+    "id": 298,
+    "lang": "en",
+    "system_a": "ship",
+    "system_b": "nation",
+    "mappings": [
+      [
+        "ship",
+        "nation"
+      ],
+      [
+        "captain",
+        "president"
+      ],
+      [
+        "crew",
+        "congress"
+      ],
+      [
+        "passenger",
+        "citizen"
+      ],
+      [
+        "storm",
+        "problem"
+      ],
+      [
+        "forecast",
+        "outlook"
+      ]
+    ],
+    "system_a_domain": "Engineering",
+    "system_b_domain": "History",
+    "system_a_background": "A ship is a large watercraft that travels on deep water, carrying cargo or passengers to various destinations. A captain and crew are responsible for operating and maintaining the ship, ensuring the safety of all onboard despite any challenges such as storms or unfavorable weather forecasts. Ships have played a significant role in the development of world commerce, supporting exploration, trade, warfare, migration, colonization, and science. Whether it’s a cargo ship carrying goods across the ocean or a cruise ship carrying passengers on vacation, ships continue to provide essential transportation services around the world.",
+    "system_b_background": "A nation can be defined as a community of people who share a common history, ethnicity, language, culture, and/or society, and are governed by a central authority. This authority is usually established in a defined territory and may comprise a civic or multicultural constitution. A nation's development can be viewed through the lens of three perspectives: primordialism, which suggests that nations have always existed and nationalism is a natural process; ethnosymbolism, which sees nationalism as a dynamic phenomenon, stressing on the importance of symbols, myths, and traditions; and modernization theory, which considers nationalism as a product of modernity, emphasizing industrialization, urbanization, and mass education. Nationalism is an imagined community, and its members remain strangers to one another, although they experience a subjective sense of unity. The foundation of a nation's story may rest on ethnic attributes, values, and principles and connect to narratives of belonging. The leader of a nation is usually known as the president, and their work is supported by the congress, which comprises citizens of the nation. A nation's development presents many challenges, and their resolution depends on an outlook that is shaped by the nation's history, culture, and political landscape.",
+    "Explanation": [
+      "Ship corresponds to nation: A ship is a mode of transport that carries passengers, while a nation is a political entity that carries citizens. Both are carriers of certain values. ",
+      "Captain corresponds to president: A captain is the leader on a ship, while a president is the leader of a nation. Both are the highest-ranking officials of their respective organizations. ",
+      "Crew corresponds to congress: The crew are the workers on a ship, while the congress is the legislative body of a nation. Both are important members of their respective organizations. ",
+      "Passenger corresponds to citizen: A passenger is a traveler on a ship, while a citizen is a resident of a nation. Both are the basic units of their respective organizations. ",
+      "Storm corresponds to problem: A storm is a difficulty that a ship may encounter during its journey, while a problem is a difficulty that a nation may encounter during its development. Both are challenges in the process. ",
+      "Forecast corresponds to outlook: A forecast predicts the storms that a ship may encounter during its journey, while an outlook predicts the future development of a nation. Both are expectations for the future."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "ship",
+    "target": "nation"
+  },
+  "domains": {
+    "source": "Engineering",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

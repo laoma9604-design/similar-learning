@@ -1,0 +1,130 @@
+{
+  "adaptation_id": "adapt_scar_0341",
+  "dataset": "scar",
+  "original_id": "341",
+  "source_object_id": "obj_group_scar_0341_src",
+  "target_object_id": "obj_group_scar_0341_tgt",
+  "faithful_mappings": [
+    [
+      "bud",
+      "seed"
+    ],
+    [
+      "experience",
+      "Sunlight"
+    ],
+    [
+      "Knowledge",
+      "moisture"
+    ],
+    [
+      "develop",
+      "stem"
+    ],
+    [
+      "emotional basis",
+      "root system"
+    ],
+    [
+      "Achievement",
+      "the flowers"
+    ],
+    [
+      "achievement",
+      "fruit"
+    ]
+  ],
+  "explanation": [
+    "Bud corresponds to seed: In self-development, bud refers to the stage where a person begins to explore and discover their potential. In plant growth, the seed is the starting point. Both bud and seed are the starting points for growth and development.",
+    "Experience corresponds to sunlight: In self-development, experience refers to the knowledge and skills a person accumulates through practice and learning. In plant growth, sunlight is a necessary condition for photosynthesis and growth. Experience and sunlight are both important factors that support growth and development.",
+    "Knowledge corresponds to moisture: In self-development, knowledge refers to the information and theories that a person masters. In plant growth, moisture is the nutrient that plants need to grow. Knowledge and moisture are both elements that nourish and promote growth.",
+    "Develop corresponds to stem: In self-development, development refers to a person's overall growth and progress. In plants, the stem is the main part of the plant's growth, supporting the plant's upward growth. Develop and stem are both the core parts of the growth process.",
+    "Emotional basis corresponds to root system: In self-development, emotional basis refers to a person's emotional stability and inner support. In plants, the root system is the part that absorbs water and nutrients and is also the foundation for the plant's stability. Emotional basis and root system are both the support and foundation for stability.",
+    "Achievement corresponds to flowers: In self-development, achievement refers to a person's outstanding accomplishments in a certain field. In plants, flowers are the beautiful results of the plant's growth process. Achievement and flowers are both highlights and symbols of the growth process.",
+    "Fruit corresponds to achievement: In self-development, achievement refers to the knowledge, skills, and accomplishments a person accumulates in the growth process. In plants, fruit is the final product of plant growth. Achievement and fruit are both the ultimate goals and products of the growth process."
+  ],
+  "background": {
+    "source": "Self-development, also known as self-help or self-improvement, is a process in which an individual takes the initiative to improve various aspects of their life. This can include economic, intellectual, or emotional improvement, often with a substantial psychological basis. It involves using publicly available information or support groups, both online and in-person, where people in similar situations come together. Through this process, individuals develop a better understanding of themselves, their strengths, and their limitations, ultimately leading to personal growth and achievement. The concepts and terms originating in self-help culture and Twelve-Step culture have become firmly integrated with mainstream language and practices. By learning and identifying health problems and seeking support from others, individuals can exemplify self-help and achieve personal goals through peer-to-peer or mutual-support groups.",
+    "target": "Plants are multicellular eukaryotic organisms that form the basis of most of Earth's ecosystems. They obtain most of their energy from sunlight using chloroplasts and play a vital role in producing molecular oxygen. With about 320,000 known species, the majority of them, some 260,000, produce seeds. The stem, root system, and flowers are crucial components of various types of plants, and some of them also bear fruits. Some plants can survive in arid lands with scarce moisture, while others require plenty of water to grow. Humans have domesticated grains, fruits, and vegetables to meet their dietary needs for millennia. Plants are versatile and have multiple uses, including building materials, writing material, ornaments, and medicines. The scientific study of plants is known as botany, and it is a branch of biology."
+  },
+  "raw": {
+    "id": 341,
+    "lang": "en",
+    "system_a": "Self Development",
+    "system_b": "Plants",
+    "mappings": [
+      [
+        "bud",
+        "seed"
+      ],
+      [
+        "experience",
+        "Sunlight"
+      ],
+      [
+        "Knowledge",
+        "moisture"
+      ],
+      [
+        "develop",
+        "stem"
+      ],
+      [
+        "emotional basis",
+        "root system"
+      ],
+      [
+        "Achievement",
+        "the flowers"
+      ],
+      [
+        "achievement",
+        "fruit"
+      ]
+    ],
+    "system_a_domain": "Philosophy",
+    "system_b_domain": "Biology",
+    "system_a_background": "Self-development, also known as self-help or self-improvement, is a process in which an individual takes the initiative to improve various aspects of their life. This can include economic, intellectual, or emotional improvement, often with a substantial psychological basis. It involves using publicly available information or support groups, both online and in-person, where people in similar situations come together. Through this process, individuals develop a better understanding of themselves, their strengths, and their limitations, ultimately leading to personal growth and achievement. The concepts and terms originating in self-help culture and Twelve-Step culture have become firmly integrated with mainstream language and practices. By learning and identifying health problems and seeking support from others, individuals can exemplify self-help and achieve personal goals through peer-to-peer or mutual-support groups.",
+    "system_b_background": "Plants are multicellular eukaryotic organisms that form the basis of most of Earth's ecosystems. They obtain most of their energy from sunlight using chloroplasts and play a vital role in producing molecular oxygen. With about 320,000 known species, the majority of them, some 260,000, produce seeds. The stem, root system, and flowers are crucial components of various types of plants, and some of them also bear fruits. Some plants can survive in arid lands with scarce moisture, while others require plenty of water to grow. Humans have domesticated grains, fruits, and vegetables to meet their dietary needs for millennia. Plants are versatile and have multiple uses, including building materials, writing material, ornaments, and medicines. The scientific study of plants is known as botany, and it is a branch of biology.",
+    "Explanation": [
+      "Bud corresponds to seed: In self-development, bud refers to the stage where a person begins to explore and discover their potential. In plant growth, the seed is the starting point. Both bud and seed are the starting points for growth and development.",
+      "Experience corresponds to sunlight: In self-development, experience refers to the knowledge and skills a person accumulates through practice and learning. In plant growth, sunlight is a necessary condition for photosynthesis and growth. Experience and sunlight are both important factors that support growth and development.",
+      "Knowledge corresponds to moisture: In self-development, knowledge refers to the information and theories that a person masters. In plant growth, moisture is the nutrient that plants need to grow. Knowledge and moisture are both elements that nourish and promote growth.",
+      "Develop corresponds to stem: In self-development, development refers to a person's overall growth and progress. In plants, the stem is the main part of the plant's growth, supporting the plant's upward growth. Develop and stem are both the core parts of the growth process.",
+      "Emotional basis corresponds to root system: In self-development, emotional basis refers to a person's emotional stability and inner support. In plants, the root system is the part that absorbs water and nutrients and is also the foundation for the plant's stability. Emotional basis and root system are both the support and foundation for stability.",
+      "Achievement corresponds to flowers: In self-development, achievement refers to a person's outstanding accomplishments in a certain field. In plants, flowers are the beautiful results of the plant's growth process. Achievement and flowers are both highlights and symbols of the growth process.",
+      "Fruit corresponds to achievement: In self-development, achievement refers to the knowledge, skills, and accomplishments a person accumulates in the growth process. In plants, fruit is the final product of plant growth. Achievement and fruit are both the ultimate goals and products of the growth process."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "non_bijective",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6",
+        "n7": "n7"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "one_to_many",
+  "system": {
+    "source": "Self Development",
+    "target": "Plants"
+  },
+  "domains": {
+    "source": "Philosophy",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

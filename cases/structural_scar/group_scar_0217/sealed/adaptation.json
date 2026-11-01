@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0217",
+  "dataset": "scar",
+  "original_id": "217",
+  "source_object_id": "obj_group_scar_0217_src",
+  "target_object_id": "obj_group_scar_0217_tgt",
+  "faithful_mappings": [
+    [
+      "the nile",
+      "aegean sea"
+    ],
+    [
+      "pyramid",
+      "Aegean Civilization"
+    ],
+    [
+      "hieroglyphs",
+      "Greek alphabet"
+    ],
+    [
+      "pharaoh",
+      "alexander empire"
+    ]
+  ],
+  "explanation": [
+    "The Nile corresponds to the Aegean Sea: The Nile is the cradle of Egyptian civilization, while the Aegean Sea is the cradle of ancient Greek civilization. Both were the geographic foundation of their respective civilizations.",
+    "Pyramids correspond to the Aegean Civilization: Pyramids are iconic structures of Egyptian civilization, while the Aegean Civilization was an important stage in ancient Greek civilization. Both were significant symbols of their respective civilizations.",
+    "Hieroglyphs correspond to the Greek alphabet: Hieroglyphs were the written language of Egyptian civilization, while the Greek alphabet was the written language of ancient Greek civilization. Both were modes of written expression for their respective civilizations.",
+    "Pharaohs correspond to the Alexander Empire: Pharaohs were the highest rulers of Egyptian civilization, while the Alexander Empire was an important empire of ancient Greek civilization. Both were political representatives of their respective civilizations."
+  ],
+  "background": {
+    "source": "Egypt is a transcontinental country located in the northeast corner of Africa and southwest corner of Asia, famous for its rich cultural heritage and iconic monuments. It is known as the cradle of civilization with a history dating back to the 6th–4th millennia BCE. The country is home to the Nile River, the pyramid, hieroglyphs and pharaohs which reflect its unique transcontinental location being simultaneously Mediterranean, Middle Eastern and North African. With over 100 million inhabitants, Egypt is the most populous country in North Africa, the Middle East, and the Arab world, the third-most populous in Africa, and the fourteenth-most populous in the world. The country is a regional power in North Africa, the Middle East, and the Muslim world, and a middle power worldwide. It has a diversified economy, which is the third-largest in Africa and the 20th-largest globally by PPP.",
+    "target": "Ancient Greece was a civilization that existed in the northeastern Mediterranean, comprising a collection of culturally and linguistically related city-states and territories. The Greek Dark Ages saw the collapse of the Aegean Civilization, which was followed by the Archaic period and the colonization of the Mediterranean Basin. The age of Classical Greece witnessed the Golden Age of Athens and the Greco-Persian Wars. Alexander the Great's empire spread Hellenistic civilization from the western Mediterranean to Central Asia. The Classical Greek culture, especially philosophy, left a profound impact on ancient Rome, and is recognized as the cradle of Western civilization. The ancient Greeks are also known for their invention of the Greek alphabet, and the 13-year-long Alexander Empire."
+  },
+  "raw": {
+    "id": 217,
+    "lang": "en",
+    "system_a": "Egypt",
+    "system_b": "Ancient Greece",
+    "mappings": [
+      [
+        "the nile",
+        "aegean sea"
+      ],
+      [
+        "pyramid",
+        "Aegean Civilization"
+      ],
+      [
+        "hieroglyphs",
+        "Greek alphabet"
+      ],
+      [
+        "pharaoh",
+        "alexander empire"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "Egypt is a transcontinental country located in the northeast corner of Africa and southwest corner of Asia, famous for its rich cultural heritage and iconic monuments. It is known as the cradle of civilization with a history dating back to the 6th–4th millennia BCE. The country is home to the Nile River, the pyramid, hieroglyphs and pharaohs which reflect its unique transcontinental location being simultaneously Mediterranean, Middle Eastern and North African. With over 100 million inhabitants, Egypt is the most populous country in North Africa, the Middle East, and the Arab world, the third-most populous in Africa, and the fourteenth-most populous in the world. The country is a regional power in North Africa, the Middle East, and the Muslim world, and a middle power worldwide. It has a diversified economy, which is the third-largest in Africa and the 20th-largest globally by PPP.",
+    "system_b_background": "Ancient Greece was a civilization that existed in the northeastern Mediterranean, comprising a collection of culturally and linguistically related city-states and territories. The Greek Dark Ages saw the collapse of the Aegean Civilization, which was followed by the Archaic period and the colonization of the Mediterranean Basin. The age of Classical Greece witnessed the Golden Age of Athens and the Greco-Persian Wars. Alexander the Great's empire spread Hellenistic civilization from the western Mediterranean to Central Asia. The Classical Greek culture, especially philosophy, left a profound impact on ancient Rome, and is recognized as the cradle of Western civilization. The ancient Greeks are also known for their invention of the Greek alphabet, and the 13-year-long Alexander Empire.",
+    "Explanation": [
+      "The Nile corresponds to the Aegean Sea: The Nile is the cradle of Egyptian civilization, while the Aegean Sea is the cradle of ancient Greek civilization. Both were the geographic foundation of their respective civilizations.",
+      "Pyramids correspond to the Aegean Civilization: Pyramids are iconic structures of Egyptian civilization, while the Aegean Civilization was an important stage in ancient Greek civilization. Both were significant symbols of their respective civilizations.",
+      "Hieroglyphs correspond to the Greek alphabet: Hieroglyphs were the written language of Egyptian civilization, while the Greek alphabet was the written language of ancient Greek civilization. Both were modes of written expression for their respective civilizations.",
+      "Pharaohs correspond to the Alexander Empire: Pharaohs were the highest rulers of Egyptian civilization, while the Alexander Empire was an important empire of ancient Greek civilization. Both were political representatives of their respective civilizations."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Egypt",
+    "target": "Ancient Greece"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

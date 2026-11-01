@@ -1,0 +1,75 @@
+{
+  "adaptation_id": "adapt_scar_0390",
+  "dataset": "scar",
+  "original_id": "390",
+  "source_object_id": "obj_group_scar_0390_src",
+  "target_object_id": "obj_group_scar_0390_tgt",
+  "faithful_mappings": [
+    [
+      "particle",
+      "bullet"
+    ],
+    [
+      "track",
+      "the wall"
+    ]
+  ],
+  "explanation": [
+    "Particle corresponds to the bullet: in the quantum tunneling phenomenon, a particle refers to a microscopic particle that can penetrate a potential barrier. In wall-shooting, a bullet refers to an object that can pass through the wall. Both are the main bodies that penetrate obstacles in their respective phenomena.",
+    "Track corresponds to the wall: In the quantum tunneling phenomenon, the track refers to the path that the particle undergoes when passing through the potential barrier. In wall-shooting, the wall refers to the obstacle that the bullet passes through. Both represent the obstacles or paths in their respective phenomena."
+  ],
+  "background": {
+    "source": "Quantum tunneling is a fascinating quantum mechanical phenomenon where particles such as electrons or atoms pass through a potential energy barrier that classical mechanics would dictate is impossible to cross. This happens due to the wave nature of matter, where the quantum wave function explains the behavior of physical systems like particles. The probability of transmission depends on the barrier height, width, and the tunneling particle's mass, with low-mass particles like electrons tunneling most readily through microscopically narrow barriers, and heavier particles like protons needing thinner barriers. Tunneling has significant implications for a range of fields, including nuclear fusion, quantum computing, and microelectronics, where it limits the minimum size of devices. Although tunneling phenomena have been acknowledged since the early 20th century, their acceptance as general physical phenomena came much later.",
+    "target": "\"On Through the Night\" is the first album by the iconic English rock group Def Leppard, released in 1980. With Tom Allom at the helm, the album comprises re-recorded versions of \"Rocks Off\" and \"Overture\" from their independently released EP, while some of the tracks were reworked demos that later surfaced on their 2020 box set \"The Early Years 79-81\". Though not their most successful album, it charted at No. 15 on the UK Albums Chart and No. 51 on the Billboard 200, and the singles \"Wasted\", \"Hello America\", and \"Rock Brigade\" were released from it. Notably, the spoken word opening to the song \"When the Walls Came Tumbling Down\" was performed by Dave Cousins of Strawbs, whereas Joe Elliott had done the intro in earlier live performances and demo recordings. The history of this album provides a fascinating insight into Def Leppard's beginnings and their signature mix of hard rock and metal.  While the album cover emphasizes the bullet, \"the wall\" is something the band metaphorically breaks with this powerful debut."
+  },
+  "raw": {
+    "id": 390,
+    "lang": "en",
+    "system_a": "Quantum Tunneling",
+    "system_b": "Shooting Through Walls",
+    "mappings": [
+      [
+        "particle",
+        "bullet"
+      ],
+      [
+        "track",
+        "the wall"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Engineering",
+    "system_a_background": "Quantum tunneling is a fascinating quantum mechanical phenomenon where particles such as electrons or atoms pass through a potential energy barrier that classical mechanics would dictate is impossible to cross. This happens due to the wave nature of matter, where the quantum wave function explains the behavior of physical systems like particles. The probability of transmission depends on the barrier height, width, and the tunneling particle's mass, with low-mass particles like electrons tunneling most readily through microscopically narrow barriers, and heavier particles like protons needing thinner barriers. Tunneling has significant implications for a range of fields, including nuclear fusion, quantum computing, and microelectronics, where it limits the minimum size of devices. Although tunneling phenomena have been acknowledged since the early 20th century, their acceptance as general physical phenomena came much later.",
+    "system_b_background": "\"On Through the Night\" is the first album by the iconic English rock group Def Leppard, released in 1980. With Tom Allom at the helm, the album comprises re-recorded versions of \"Rocks Off\" and \"Overture\" from their independently released EP, while some of the tracks were reworked demos that later surfaced on their 2020 box set \"The Early Years 79-81\". Though not their most successful album, it charted at No. 15 on the UK Albums Chart and No. 51 on the Billboard 200, and the singles \"Wasted\", \"Hello America\", and \"Rock Brigade\" were released from it. Notably, the spoken word opening to the song \"When the Walls Came Tumbling Down\" was performed by Dave Cousins of Strawbs, whereas Joe Elliott had done the intro in earlier live performances and demo recordings. The history of this album provides a fascinating insight into Def Leppard's beginnings and their signature mix of hard rock and metal.  While the album cover emphasizes the bullet, \"the wall\" is something the band metaphorically breaks with this powerful debut.",
+    "Explanation": [
+      "Particle corresponds to the bullet: in the quantum tunneling phenomenon, a particle refers to a microscopic particle that can penetrate a potential barrier. In wall-shooting, a bullet refers to an object that can pass through the wall. Both are the main bodies that penetrate obstacles in their respective phenomena.",
+      "Track corresponds to the wall: In the quantum tunneling phenomenon, the track refers to the path that the particle undergoes when passing through the potential barrier. In wall-shooting, the wall refers to the obstacle that the bullet passes through. Both represent the obstacles or paths in their respective phenomena."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Quantum Tunneling",
+    "target": "Shooting Through Walls"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

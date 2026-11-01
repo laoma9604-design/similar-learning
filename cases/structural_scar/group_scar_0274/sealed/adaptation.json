@@ -1,0 +1,141 @@
+{
+  "adaptation_id": "adapt_scar_0274",
+  "dataset": "scar",
+  "original_id": "274",
+  "source_object_id": "obj_group_scar_0274_src",
+  "target_object_id": "obj_group_scar_0274_tgt",
+  "faithful_mappings": [
+    [
+      "bloom",
+      "innovation"
+    ],
+    [
+      "water",
+      "funding"
+    ],
+    [
+      "stem",
+      "research"
+    ],
+    [
+      "soil",
+      "laboratory"
+    ],
+    [
+      "planting",
+      "experiment"
+    ],
+    [
+      "blossom",
+      "idea"
+    ],
+    [
+      "greenhouse",
+      "conference"
+    ],
+    [
+      "symbiosis",
+      "collaboration"
+    ]
+  ],
+  "explanation": [
+    "Bloom corresponds to innovation: Bloom refers to the lush and prosperous flowers of plants, demonstrating vitality. Innovation refers to constantly trying new ideas and methods to promote development. Both represent a form of prosperity and development.",
+    "Water corresponds to funding: In the process of plant growth, water is an essential resource. In the innovation process, funding is an important resource to support research and experimentation. Here, water and funding are both important factors driving growth and development.",
+    "Stem corresponds to research: Plants need stem to support their growth. Research provides theoretical basis and practical guidance for innovation. Both are crucial parts supporting and guiding the entire process.",
+    "Soil corresponds to laboratory: Soil provides nutrients for plant growth and is the foundation of plant growth. The laboratory provides experimental environment and facilities for innovation research and is the base of innovative research. Here, soil and laboratory are both the infrastructure of growth and development.",
+    "Planting corresponds to experiment: Planting is the process of plant growth, cultivating healthy plants through continuous experimentation and adjustment. Experimentation in the innovation process is the process of trying new methods and technologies. Both represent the action of exploration and experimentation.",
+    "Blossom corresponds to idea: Blossoming is an important stage in the process of plant growth, symbolizing success and results. In the innovation process, ideas are the key to breakthroughs and success. Here, blossom and idea both represent the generation of success and results.",
+    "Greenhouse corresponds to conference: The greenhouse provides a suitable growth environment for plants. A conference provides a platform for innovation teams to discuss and exchange ideas. Here, the greenhouse and the conference are both environments and places that promote growth and development.",
+    "Symbiosis corresponds to collaboration: Symbiosis refers to the relationship between organisms that depend on and develop with each other. Collaboration in the innovation process is the process of mutual support and progress among team members. Here, symbiosis and collaboration both represent the relationship of synergy and mutual assistance."
+  ],
+  "background": {
+    "source": "Bloom is a term that can refer to a range of different aspects of plant growth and development. At its most basic level, bloom refers to the process by which a plant goes from a seed or a cutting to a fully developed flowering plant. This process involves a number of different factors, including water, soil, and sunlight, all of which work together to help the plant grow and blossom.\n\nOne important aspect of bloom is the need for water. Without water, plants are not able to take in the nutrients that they need to grow and develop properly. This is especially true during the early stages of growth, when the plant is still developing its roots and establishing itself in the soil. Proper watering is essential during this time to help the plant establish a strong foundation and set the stage for healthy growth in the future.\n\nAnother key factor in bloom is the stem. The stem is responsible for transporting water, nutrients, and other essential materials throughout the plant. It is also responsible for providing support and structure to the plant, helping it to stand upright and resist wind and other external forces.\n\nSoil is another important aspect of bloom. Different plants require different types of soil to grow and prosper, and it is important to choose the right soil for the particular plant that you are trying to grow. A good soil will provide the plant with the necessary nutrients and moisture to help it grow and thrive, while also providing good drainage to prevent the soil from becoming waterlogged.\n\nPlanting is another key aspect of bloom. Whether you are planting from seed or transplanting a cutting, it is important to choose the right time of year and the right location for your plant. Plants that are planted too early or in the wrong location may struggle to establish themselves, while plants that are planted at the right time and in the right place will have a much better chance of thriving.\n\nFinally, there is the concept of symbiosis. Symbiosis refers to the relationship between different organisms that live together in close proximity. In the case of plants, symbiosis often involves the relationship between the plant and certain types of bacteria or fungi that live in the soil. These organisms help to break down organic matter in the soil, making important nutrients available to the plant. In turn, the plant provides the bacteria and fungi with the energy that they need to survive. This relationship is essential for healthy plant growth and is a key aspect of bloom in many different plant species.\n\nOverall, bloom is a complex and multifaceted concept that encompasses many different aspects of plant growth and development. From the need for water and soil to the importance of symbiosis and proper planting techniques, there are many different factors that come together to create healthy, thriving plants. Whether you are an experienced gardener or just starting out, understanding the concept of bloom is essential for achieving success in your gardening endeavors.",
+    "target": "Innovation refers to the implementation of new ideas or improvements that create value for society, governments, and markets. It can take the form of products, services, processes, technologies, art, or business models. While related to invention, it involves the practical implementation of an idea to make a meaningful impact. Collaboration between individuals, laboratories, and organizations is essential to allow for continued research and experimentation, and conferences can provide a space for discussion and sharing of ideas. Additionally, funding is often necessary to support innovation efforts and bring new ideas to market."
+  },
+  "raw": {
+    "id": 274,
+    "lang": "en",
+    "system_a": "bloom",
+    "system_b": "innovation",
+    "mappings": [
+      [
+        "bloom",
+        "innovation"
+      ],
+      [
+        "water",
+        "funding"
+      ],
+      [
+        "stem",
+        "research"
+      ],
+      [
+        "soil",
+        "laboratory"
+      ],
+      [
+        "planting",
+        "experiment"
+      ],
+      [
+        "blossom",
+        "idea"
+      ],
+      [
+        "greenhouse",
+        "conference"
+      ],
+      [
+        "symbiosis",
+        "collaboration"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "Bloom is a term that can refer to a range of different aspects of plant growth and development. At its most basic level, bloom refers to the process by which a plant goes from a seed or a cutting to a fully developed flowering plant. This process involves a number of different factors, including water, soil, and sunlight, all of which work together to help the plant grow and blossom.\n\nOne important aspect of bloom is the need for water. Without water, plants are not able to take in the nutrients that they need to grow and develop properly. This is especially true during the early stages of growth, when the plant is still developing its roots and establishing itself in the soil. Proper watering is essential during this time to help the plant establish a strong foundation and set the stage for healthy growth in the future.\n\nAnother key factor in bloom is the stem. The stem is responsible for transporting water, nutrients, and other essential materials throughout the plant. It is also responsible for providing support and structure to the plant, helping it to stand upright and resist wind and other external forces.\n\nSoil is another important aspect of bloom. Different plants require different types of soil to grow and prosper, and it is important to choose the right soil for the particular plant that you are trying to grow. A good soil will provide the plant with the necessary nutrients and moisture to help it grow and thrive, while also providing good drainage to prevent the soil from becoming waterlogged.\n\nPlanting is another key aspect of bloom. Whether you are planting from seed or transplanting a cutting, it is important to choose the right time of year and the right location for your plant. Plants that are planted too early or in the wrong location may struggle to establish themselves, while plants that are planted at the right time and in the right place will have a much better chance of thriving.\n\nFinally, there is the concept of symbiosis. Symbiosis refers to the relationship between different organisms that live together in close proximity. In the case of plants, symbiosis often involves the relationship between the plant and certain types of bacteria or fungi that live in the soil. These organisms help to break down organic matter in the soil, making important nutrients available to the plant. In turn, the plant provides the bacteria and fungi with the energy that they need to survive. This relationship is essential for healthy plant growth and is a key aspect of bloom in many different plant species.\n\nOverall, bloom is a complex and multifaceted concept that encompasses many different aspects of plant growth and development. From the need for water and soil to the importance of symbiosis and proper planting techniques, there are many different factors that come together to create healthy, thriving plants. Whether you are an experienced gardener or just starting out, understanding the concept of bloom is essential for achieving success in your gardening endeavors.",
+    "system_b_background": "Innovation refers to the implementation of new ideas or improvements that create value for society, governments, and markets. It can take the form of products, services, processes, technologies, art, or business models. While related to invention, it involves the practical implementation of an idea to make a meaningful impact. Collaboration between individuals, laboratories, and organizations is essential to allow for continued research and experimentation, and conferences can provide a space for discussion and sharing of ideas. Additionally, funding is often necessary to support innovation efforts and bring new ideas to market.",
+    "Explanation": [
+      "Bloom corresponds to innovation: Bloom refers to the lush and prosperous flowers of plants, demonstrating vitality. Innovation refers to constantly trying new ideas and methods to promote development. Both represent a form of prosperity and development.",
+      "Water corresponds to funding: In the process of plant growth, water is an essential resource. In the innovation process, funding is an important resource to support research and experimentation. Here, water and funding are both important factors driving growth and development.",
+      "Stem corresponds to research: Plants need stem to support their growth. Research provides theoretical basis and practical guidance for innovation. Both are crucial parts supporting and guiding the entire process.",
+      "Soil corresponds to laboratory: Soil provides nutrients for plant growth and is the foundation of plant growth. The laboratory provides experimental environment and facilities for innovation research and is the base of innovative research. Here, soil and laboratory are both the infrastructure of growth and development.",
+      "Planting corresponds to experiment: Planting is the process of plant growth, cultivating healthy plants through continuous experimentation and adjustment. Experimentation in the innovation process is the process of trying new methods and technologies. Both represent the action of exploration and experimentation.",
+      "Blossom corresponds to idea: Blossoming is an important stage in the process of plant growth, symbolizing success and results. In the innovation process, ideas are the key to breakthroughs and success. Here, blossom and idea both represent the generation of success and results.",
+      "Greenhouse corresponds to conference: The greenhouse provides a suitable growth environment for plants. A conference provides a platform for innovation teams to discuss and exchange ideas. Here, the greenhouse and the conference are both environments and places that promote growth and development.",
+      "Symbiosis corresponds to collaboration: Symbiosis refers to the relationship between organisms that depend on and develop with each other. Collaboration in the innovation process is the process of mutual support and progress among team members. Here, symbiosis and collaboration both represent the relationship of synergy and mutual assistance."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6",
+        "n7": "n7",
+        "n8": "n8"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "bloom",
+    "target": "innovation"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

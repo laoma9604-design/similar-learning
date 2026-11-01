@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0380",
+  "dataset": "scar",
+  "original_id": "380",
+  "source_object_id": "obj_group_scar_0380_src",
+  "target_object_id": "obj_group_scar_0380_tgt",
+  "faithful_mappings": [
+    [
+      "charge",
+      "water"
+    ],
+    [
+      "circuit",
+      "water pipe"
+    ],
+    [
+      "microscopic",
+      "the macro"
+    ],
+    [
+      "resistance",
+      "pipe width"
+    ]
+  ],
+  "explanation": [
+    "Charge corresponds to water: In the law of conservation of charge, charge is the substance that flows and its flow is constrained by circuits and resistance. In the law of conservation of water, water is the substance that flows and its flow is constrained by water pipes and pipe diameter. Both are substances that flow in their respective systems.",
+    "Circuits correspond to water pipes: In the law of conservation of charge, circuits are the channels through which charges flow. In the law of conservation of water, water pipes are the channels through which water flows. Both are channels for the flow of substances in their respective systems.",
+    "Microscopic corresponds to macroscopic: The law of conservation of charge describes the laws of charge flow from a microscopic perspective, while the law of conservation of water describes the laws of water flow from a macroscopic perspective. Both describe the laws of flowing substances but on different scales.",
+    "Resistance corresponds to pipe width: In the law of conservation of charge, resistance is a factor that affects charge flow. In the law of conservation of water, pipe width is a factor that affects water flow. Both are factors that affect the flow of substances in their respective systems."
+  ],
+  "background": {
+    "source": "The concept of charge conservation is a fundamental principle in physics, which asserts that the total electric charge in a closed system never changes. This means that any change in the amount of charge in any given region can be fully accounted for by the flow of charges into and out of that region. The continuity equation links the charge density and current density in a given space, which further helps in understanding the relationship between the two. While charged particles can be created and destroyed, the total amount of charge in the universe remains constant, as supported by empirical observations. The concept of charge conservation is essential in understanding the behavior of electrical circuits and the microscopic behavior of subatomic particles. Additionally, resistance plays a crucial role in limiting the flow of charge in circuits, thus affecting the overall behavior of the system.",
+    "target": "Water conservation is an essential component of sustainable development. It involves the responsible management of our natural resources to meet the needs of human populations while ensuring that water scarcity is avoided. The conservation of water flow is achieved through the implementation of policies and strategies that reduce water loss, prevent any damage to water quality, and enhance the efficient use of water in households, commercial and agricultural sectors. This is especially important in the face of climate change and population growth that have increased pressures on natural water resources, leading to water scarcity. The macro perspective of water conservation involves the implementation of policies at both the local and regional levels that encourage the responsible use of water resources. This can be achieved through public outreach campaigns, tiered water rates, and restrictions on outdoor water use. Water pipe and pipe width play an important role in the conservation of water flow. Technology solutions exist for leak detection and repair, as well as reducing water waste through more efficient irrigation systems. Through the concerted effort of governments, households, and businesses, we can conserve water flow and ensure the sustainable management of our natural resources for future generations."
+  },
+  "raw": {
+    "id": 380,
+    "lang": "en",
+    "system_a": "Conservation of Charge Flow",
+    "system_b": "Conservation of Water Flow",
+    "mappings": [
+      [
+        "charge",
+        "water"
+      ],
+      [
+        "circuit",
+        "water pipe"
+      ],
+      [
+        "microscopic",
+        "the macro"
+      ],
+      [
+        "resistance",
+        "pipe width"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Physics",
+    "system_a_background": "The concept of charge conservation is a fundamental principle in physics, which asserts that the total electric charge in a closed system never changes. This means that any change in the amount of charge in any given region can be fully accounted for by the flow of charges into and out of that region. The continuity equation links the charge density and current density in a given space, which further helps in understanding the relationship between the two. While charged particles can be created and destroyed, the total amount of charge in the universe remains constant, as supported by empirical observations. The concept of charge conservation is essential in understanding the behavior of electrical circuits and the microscopic behavior of subatomic particles. Additionally, resistance plays a crucial role in limiting the flow of charge in circuits, thus affecting the overall behavior of the system.",
+    "system_b_background": "Water conservation is an essential component of sustainable development. It involves the responsible management of our natural resources to meet the needs of human populations while ensuring that water scarcity is avoided. The conservation of water flow is achieved through the implementation of policies and strategies that reduce water loss, prevent any damage to water quality, and enhance the efficient use of water in households, commercial and agricultural sectors. This is especially important in the face of climate change and population growth that have increased pressures on natural water resources, leading to water scarcity. The macro perspective of water conservation involves the implementation of policies at both the local and regional levels that encourage the responsible use of water resources. This can be achieved through public outreach campaigns, tiered water rates, and restrictions on outdoor water use. Water pipe and pipe width play an important role in the conservation of water flow. Technology solutions exist for leak detection and repair, as well as reducing water waste through more efficient irrigation systems. Through the concerted effort of governments, households, and businesses, we can conserve water flow and ensure the sustainable management of our natural resources for future generations.",
+    "Explanation": [
+      "Charge corresponds to water: In the law of conservation of charge, charge is the substance that flows and its flow is constrained by circuits and resistance. In the law of conservation of water, water is the substance that flows and its flow is constrained by water pipes and pipe diameter. Both are substances that flow in their respective systems.",
+      "Circuits correspond to water pipes: In the law of conservation of charge, circuits are the channels through which charges flow. In the law of conservation of water, water pipes are the channels through which water flows. Both are channels for the flow of substances in their respective systems.",
+      "Microscopic corresponds to macroscopic: The law of conservation of charge describes the laws of charge flow from a microscopic perspective, while the law of conservation of water describes the laws of water flow from a macroscopic perspective. Both describe the laws of flowing substances but on different scales.",
+      "Resistance corresponds to pipe width: In the law of conservation of charge, resistance is a factor that affects charge flow. In the law of conservation of water, pipe width is a factor that affects water flow. Both are factors that affect the flow of substances in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Conservation of Charge Flow",
+    "target": "Conservation of Water Flow"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

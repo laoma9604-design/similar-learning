@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0101",
+  "dataset": "scar",
+  "original_id": "101",
+  "source_object_id": "obj_group_scar_0101_src",
+  "target_object_id": "obj_group_scar_0101_tgt",
+  "faithful_mappings": [
+    [
+      "analysis object",
+      "original language"
+    ],
+    [
+      "Analytical method",
+      "Translation tools"
+    ],
+    [
+      "Analysis process",
+      "translation process"
+    ],
+    [
+      "analysis results",
+      "Translation results"
+    ]
+  ],
+  "explanation": [
+    "The analysis object corresponds to the original language: In chemical analysis, the analysis object refers to the chemical substance that needs to be studied and analyzed. In translation, the original language refers to the text or language material that needs to be translated into another language. Both are the core objects that need to be processed and studied in their respective fields.",
+    "The analytical method corresponds to translation tools: In chemical analysis, the analytical method refers to various techniques and methods used to study chemical substances. In translation, translation tools can be human translation, translation software, or other translation aids. Both are methods and tools used to solve problems or complete tasks.",
+    "The analysis process corresponds to the translation process: In chemical analysis, the analysis process refers to the process of conducting experiments and research on chemical substances. The translation process refers to the process of converting one language into another. Both represent the process of change from the initial state to the final outcome.",
+    "The analysis results correspond to the translation results: In chemical analysis, the analysis results refer to the information about the chemical substance obtained through experiments and research. In translation, the translation results refer to the text in the target language successfully obtained by translating the original language. Both are the final products in their respective fields."
+  ],
+  "background": {
+    "source": "Chemical analysis is a field of analytical chemistry that involves using various instruments and methods to separate, identify, and quantify matter. The process of analysis may involve separation, identification or quantification either alone or in combination. An analysis object can be identified through qualitative analysis which provides information about differences in color, odor, melting point etc. On the other hand, quantitative analysis determines the numerical amount or concentration. There are classical qualitative and quantitative methods that utilize precipitation, extraction, and distillation, while modern instrumental methods use techniques such as chromatography, electrophoresis or field flow fractionation. The analysis process involves the use of various instruments that can separate, identify and quantify analytes using light, heat, electric and magnetic fields. With the same instrument, an analyte can be isolated, identified and quantified in one step. With a focus on experimental design, chemometrics, and creating new measurement tools, chemical analysis has applications in medicine, science, and engineering. Overall, chemical analysis plays an important role in understanding the composition and behavior of materials, and the development of new products and technologies.",
+    "target": "Translation is the art of conveying the meaning of a text written in one language to another language using equivalent words and phrases. The process of translation involves the conversion of the content from the original language to the target language, with the aim of maintaining the essence and contextual meaning of the original. While the process can be aided by modern translation tools, the human touch remains key as automated translations may miss the nuances and cultural implications that are unique to each language. The resulting translated text is a reflection of both the source language and the target language, with the translator's skills and experience determining the quality of the final output. As the world becomes increasingly interconnected, translation services have become essential in facilitating communication between different cultures and communities, and are now readily available on a global scale thanks to the power of the Internet."
+  },
+  "raw": {
+    "id": 101,
+    "lang": "en",
+    "system_a": "Chemical Analysis",
+    "system_b": "Translation",
+    "mappings": [
+      [
+        "analysis object",
+        "original language"
+      ],
+      [
+        "Analytical method",
+        "Translation tools"
+      ],
+      [
+        "Analysis process",
+        "translation process"
+      ],
+      [
+        "analysis results",
+        "Translation results"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Literature",
+    "system_a_background": "Chemical analysis is a field of analytical chemistry that involves using various instruments and methods to separate, identify, and quantify matter. The process of analysis may involve separation, identification or quantification either alone or in combination. An analysis object can be identified through qualitative analysis which provides information about differences in color, odor, melting point etc. On the other hand, quantitative analysis determines the numerical amount or concentration. There are classical qualitative and quantitative methods that utilize precipitation, extraction, and distillation, while modern instrumental methods use techniques such as chromatography, electrophoresis or field flow fractionation. The analysis process involves the use of various instruments that can separate, identify and quantify analytes using light, heat, electric and magnetic fields. With the same instrument, an analyte can be isolated, identified and quantified in one step. With a focus on experimental design, chemometrics, and creating new measurement tools, chemical analysis has applications in medicine, science, and engineering. Overall, chemical analysis plays an important role in understanding the composition and behavior of materials, and the development of new products and technologies.",
+    "system_b_background": "Translation is the art of conveying the meaning of a text written in one language to another language using equivalent words and phrases. The process of translation involves the conversion of the content from the original language to the target language, with the aim of maintaining the essence and contextual meaning of the original. While the process can be aided by modern translation tools, the human touch remains key as automated translations may miss the nuances and cultural implications that are unique to each language. The resulting translated text is a reflection of both the source language and the target language, with the translator's skills and experience determining the quality of the final output. As the world becomes increasingly interconnected, translation services have become essential in facilitating communication between different cultures and communities, and are now readily available on a global scale thanks to the power of the Internet.",
+    "Explanation": [
+      "The analysis object corresponds to the original language: In chemical analysis, the analysis object refers to the chemical substance that needs to be studied and analyzed. In translation, the original language refers to the text or language material that needs to be translated into another language. Both are the core objects that need to be processed and studied in their respective fields.",
+      "The analytical method corresponds to translation tools: In chemical analysis, the analytical method refers to various techniques and methods used to study chemical substances. In translation, translation tools can be human translation, translation software, or other translation aids. Both are methods and tools used to solve problems or complete tasks.",
+      "The analysis process corresponds to the translation process: In chemical analysis, the analysis process refers to the process of conducting experiments and research on chemical substances. The translation process refers to the process of converting one language into another. Both represent the process of change from the initial state to the final outcome.",
+      "The analysis results correspond to the translation results: In chemical analysis, the analysis results refer to the information about the chemical substance obtained through experiments and research. In translation, the translation results refer to the text in the target language successfully obtained by translating the original language. Both are the final products in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Chemical Analysis",
+    "target": "Translation"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Literature"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

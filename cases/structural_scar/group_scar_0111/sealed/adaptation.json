@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0111",
+  "dataset": "scar",
+  "original_id": "111",
+  "source_object_id": "obj_group_scar_0111_src",
+  "target_object_id": "obj_group_scar_0111_tgt",
+  "faithful_mappings": [
+    [
+      "stoichiometry",
+      "coefficient"
+    ],
+    [
+      "Reaction equation",
+      "Mathematical formula"
+    ],
+    [
+      "Reactant",
+      "Raw data"
+    ],
+    [
+      "reaction process",
+      "calculation process"
+    ],
+    [
+      "product",
+      "Calculation results"
+    ]
+  ],
+  "explanation": [
+    "Stoichiometry corresponds to coefficient: In a chemical reaction, stoichiometry refers to the molar ratio of reactants and products in the reaction. In mathematical calculations, coefficients are the factors that multiply a constant or variable in a mathematical equation. Both are proportion factors used to describe quantitative relationships in their respective fields.",
+    "Reaction equation corresponds to mathematical formula: In a chemical reaction, the reaction equation is a chemical formula used to express the relationship between reactants and products. In mathematical calculations, a mathematical formula is an expression used to represent mathematical relationships and patterns. Both are ways of expressing relationships and patterns in their respective fields.",
+    "Reactant corresponds to raw data: In a chemical reaction, reactants are the substances participating in the chemical reaction. In mathematical calculations, raw data are the basic data used in mathematical calculations. Both are objects that need to be processed and transformed in their respective fields.",
+    "Reaction process corresponds to calculation process: In a chemical reaction, the reaction process refers to the process of conversion of reactants to products. In mathematical calculations, the calculation process is the process of processing and calculating raw data. Both describe the transformation and processing processes in their respective fields.",
+    "Product corresponds to calculation results: In a chemical reaction, products are the new substances formed after the chemical reaction. In mathematical calculations, calculation results are the results obtained after mathematical calculations. Both are the final products in their respective fields."
+  ],
+  "background": {
+    "source": "Chemical reactions are fundamental processes that result in the transformation of one set of chemical substances to another. The reaction process typically involves changes in the positions of electrons in the forming and breaking of chemical bonds between atoms. The substances involved in a chemical reaction are called reactants or reagents, while the resulting substances are called products. Chemical equations are used to describe the reaction process, presenting the starting materials, end products, and sometimes intermediate reaction products and conditions. The stoichiometry or balance of the reaction equation provides information about the relative amounts of reactants and products involved in the reaction. The characteristics of a chemical reaction are affected by factors such as temperature, concentration, and the presence of catalysts. Chemical reactions may proceed in either the forward or reverse direction until they reach completion or equilibrium. In biological systems, chemical reactions occur within metabolic pathways, which are frequently catalyzed by protein enzymes.",
+    "target": "Mathematical Calculations involve the deliberate process of transforming one or more inputs into one or more outputs through the use of algorithms or mathematical models. Whether it's multiplication, statistical estimations, or solving abstract problems through logic and deductive reasoning, the calculation process is a vital prerequisite for computation. A mathematical formula or equation is utilized in calculating values from raw data, and the coefficient is often used to express the relationships between variables in the formulas. Ultimately, the calculation process leads to the generation of accurate calculation results that have potential applications in various fields."
+  },
+  "raw": {
+    "id": 111,
+    "lang": "en",
+    "system_a": "Chemical Reactions",
+    "system_b": "Mathematical Calculations",
+    "mappings": [
+      [
+        "stoichiometry",
+        "coefficient"
+      ],
+      [
+        "Reaction equation",
+        "Mathematical formula"
+      ],
+      [
+        "Reactant",
+        "Raw data"
+      ],
+      [
+        "reaction process",
+        "calculation process"
+      ],
+      [
+        "product",
+        "Calculation results"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Mathematics",
+    "system_a_background": "Chemical reactions are fundamental processes that result in the transformation of one set of chemical substances to another. The reaction process typically involves changes in the positions of electrons in the forming and breaking of chemical bonds between atoms. The substances involved in a chemical reaction are called reactants or reagents, while the resulting substances are called products. Chemical equations are used to describe the reaction process, presenting the starting materials, end products, and sometimes intermediate reaction products and conditions. The stoichiometry or balance of the reaction equation provides information about the relative amounts of reactants and products involved in the reaction. The characteristics of a chemical reaction are affected by factors such as temperature, concentration, and the presence of catalysts. Chemical reactions may proceed in either the forward or reverse direction until they reach completion or equilibrium. In biological systems, chemical reactions occur within metabolic pathways, which are frequently catalyzed by protein enzymes.",
+    "system_b_background": "Mathematical Calculations involve the deliberate process of transforming one or more inputs into one or more outputs through the use of algorithms or mathematical models. Whether it's multiplication, statistical estimations, or solving abstract problems through logic and deductive reasoning, the calculation process is a vital prerequisite for computation. A mathematical formula or equation is utilized in calculating values from raw data, and the coefficient is often used to express the relationships between variables in the formulas. Ultimately, the calculation process leads to the generation of accurate calculation results that have potential applications in various fields.",
+    "Explanation": [
+      "Stoichiometry corresponds to coefficient: In a chemical reaction, stoichiometry refers to the molar ratio of reactants and products in the reaction. In mathematical calculations, coefficients are the factors that multiply a constant or variable in a mathematical equation. Both are proportion factors used to describe quantitative relationships in their respective fields.",
+      "Reaction equation corresponds to mathematical formula: In a chemical reaction, the reaction equation is a chemical formula used to express the relationship between reactants and products. In mathematical calculations, a mathematical formula is an expression used to represent mathematical relationships and patterns. Both are ways of expressing relationships and patterns in their respective fields.",
+      "Reactant corresponds to raw data: In a chemical reaction, reactants are the substances participating in the chemical reaction. In mathematical calculations, raw data are the basic data used in mathematical calculations. Both are objects that need to be processed and transformed in their respective fields.",
+      "Reaction process corresponds to calculation process: In a chemical reaction, the reaction process refers to the process of conversion of reactants to products. In mathematical calculations, the calculation process is the process of processing and calculating raw data. Both describe the transformation and processing processes in their respective fields.",
+      "Product corresponds to calculation results: In a chemical reaction, products are the new substances formed after the chemical reaction. In mathematical calculations, calculation results are the results obtained after mathematical calculations. Both are the final products in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Chemical Reactions",
+    "target": "Mathematical Calculations"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Mathematics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

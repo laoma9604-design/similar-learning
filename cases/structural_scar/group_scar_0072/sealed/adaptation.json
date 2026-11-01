@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0072",
+  "dataset": "scar",
+  "original_id": "72",
+  "source_object_id": "obj_group_scar_0072_src",
+  "target_object_id": "obj_group_scar_0072_tgt",
+  "faithful_mappings": [
+    [
+      "cell",
+      "dust"
+    ],
+    [
+      "organ",
+      "building"
+    ],
+    [
+      "damage",
+      "destroy"
+    ]
+  ],
+  "explanation": [
+    "Cell corresponds to dust: in a cytokine storm, cells are the source of a large amount of cytokines. In a dust storm, dust is the material basis for the formation of the storm. Here, both cells and dust represent the basic units of the phenomenon.",
+    "Organs correspond to buildings: in a cytokine storm, organs are the biological structures that are damaged. In a dust storm, buildings are the artificially-constructed structures that are destroyed. Here, both organs and buildings represent the structures that are affected.",
+    "Damage corresponds to destruction: in a cytokine storm, damage refers to organ dysfunction caused by excessive cytokines. In a dust storm, destruction refers to the damage caused by dust to the buildings. Here, both damage and destruction represent the negative impact on some structures."
+  ],
+  "background": {
+    "source": "Cytokine Storm is an overreaction of the immune system, which can lead to excessive cell damage in various organs of the body, particularly in the lungs. Cytokines are usually released by the immune system to fight off infections, but in the case of a cytokine storm, the levels of cytokines become dangerously high, causing more harm than good. This physiological reaction occurs due to a variety of infectious and non-infectious causes and affects different populations, including those with familial hemophagocytic lymphohistiocytosis or systemic juvenile idiopathic arthritis. There are several types of cytokine storm syndromes, including sepsis and cytokine release syndrome, which can cause a range of symptoms and organ damage if left untreated. In this article, we will explore the details of cytokine storm syndrome and its effects on the body.",
+    "target": "A dust storm or sandstorm is a common meteorological phenomenon in arid and semi-arid regions. Due to strong winds, loose dirt and sand particles are blown from a dry surface, causing poor visibility and a hazardous environment. These storms often originate from the deserts of North Africa, the Arabian peninsula, Central Asia, and China. Dust storms have been known to cause damage to buildings and infrastructure, and can even destroy homes in extreme cases. While poor management of Earth's drylands has been linked to the increasing size and frequency of dust storms, they also have a significant impact on both local and global climates, and can have negative effects on local economies. When fine particles are blown long distances, especially in urban areas, they are commonly referred to as dust storms, whereas the term sandstorm is used in places where sand is the predominant soil type and larger sand particles are blown closer to the surface, obscuring visibility and causing destruction."
+  },
+  "raw": {
+    "id": 72,
+    "lang": "en",
+    "system_a": "Cytokine Storm",
+    "system_b": "Dust Storm",
+    "mappings": [
+      [
+        "cell",
+        "dust"
+      ],
+      [
+        "organ",
+        "building"
+      ],
+      [
+        "damage",
+        "destroy"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Geography",
+    "system_a_background": "Cytokine Storm is an overreaction of the immune system, which can lead to excessive cell damage in various organs of the body, particularly in the lungs. Cytokines are usually released by the immune system to fight off infections, but in the case of a cytokine storm, the levels of cytokines become dangerously high, causing more harm than good. This physiological reaction occurs due to a variety of infectious and non-infectious causes and affects different populations, including those with familial hemophagocytic lymphohistiocytosis or systemic juvenile idiopathic arthritis. There are several types of cytokine storm syndromes, including sepsis and cytokine release syndrome, which can cause a range of symptoms and organ damage if left untreated. In this article, we will explore the details of cytokine storm syndrome and its effects on the body.",
+    "system_b_background": "A dust storm or sandstorm is a common meteorological phenomenon in arid and semi-arid regions. Due to strong winds, loose dirt and sand particles are blown from a dry surface, causing poor visibility and a hazardous environment. These storms often originate from the deserts of North Africa, the Arabian peninsula, Central Asia, and China. Dust storms have been known to cause damage to buildings and infrastructure, and can even destroy homes in extreme cases. While poor management of Earth's drylands has been linked to the increasing size and frequency of dust storms, they also have a significant impact on both local and global climates, and can have negative effects on local economies. When fine particles are blown long distances, especially in urban areas, they are commonly referred to as dust storms, whereas the term sandstorm is used in places where sand is the predominant soil type and larger sand particles are blown closer to the surface, obscuring visibility and causing destruction.",
+    "Explanation": [
+      "Cell corresponds to dust: in a cytokine storm, cells are the source of a large amount of cytokines. In a dust storm, dust is the material basis for the formation of the storm. Here, both cells and dust represent the basic units of the phenomenon.",
+      "Organs correspond to buildings: in a cytokine storm, organs are the biological structures that are damaged. In a dust storm, buildings are the artificially-constructed structures that are destroyed. Here, both organs and buildings represent the structures that are affected.",
+      "Damage corresponds to destruction: in a cytokine storm, damage refers to organ dysfunction caused by excessive cytokines. In a dust storm, destruction refers to the damage caused by dust to the buildings. Here, both damage and destruction represent the negative impact on some structures."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Cytokine Storm",
+    "target": "Dust Storm"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Geography"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0007",
+  "dataset": "scar",
+  "original_id": "7",
+  "source_object_id": "obj_group_scar_0007_src",
+  "target_object_id": "obj_group_scar_0007_tgt",
+  "faithful_mappings": [
+    [
+      "cell",
+      "Worker"
+    ],
+    [
+      "dna",
+      "raw material"
+    ],
+    [
+      "cell organelle",
+      "mechanical equipment"
+    ],
+    [
+      "cytoplasm",
+      "Material warehouse"
+    ]
+  ],
+  "explanation": [
+    "Cell corresponds to worker: In the process of cell division, the cell is the basic biological unit responsible for various life activities in the organism. In the production line of a factory, workers operate machinery and equipment to complete production tasks. In this analogy, both cells and workers are the basic units that perform tasks in their respective systems.",
+    "DNA corresponds to raw material: In cell division, DNA carries genetic information of the organism and is the basic material of its genes. In a factory production line, raw materials are the basic material in the production process and used to manufacture various products. In this analogy, DNA and raw materials are the basic materials in their respective systems that determine the characteristics of the final products.",
+    "Cell organelle corresponds to mechanical equipment: In the process of cell division, organelles are responsible for executing specific functions such as energy conversion and material transport. In a factory production line, mechanical equipment processes raw materials to manufacture products to meet production needs. In this analogy, organelles and mechanical equipment are components that perform specific functions in their respective systems.",
+    "Cytoplasm corresponds to material warehouse: In the process of cell division, cytoplasm is the matrix inside the cell that contains organelles, solutes, and other biological molecules, providing living conditions for the organelles. In a factory production line, the material warehouse stores raw materials, semi-finished products, and finished products to provide material support for the production process. In this analogy, both cytoplasm and material warehouse are environments that store and support other components in their respective systems."
+  ],
+  "background": {
+    "source": "Cell division is a complex process that plays a critical role in maintaining the proper functioning of an organism. It involves the replication and separation of DNA, as well as the splitting of cell organelles and cytoplasm, and ultimately results in the creation of daughter cells. In eukaryotes, cell division occurs through two distinct mechanisms - mitosis, which produces genetically identical daughter cells, and meiosis, which results in haploid gametes for sexual reproduction. Prokaryotes undergo a simpler type of division called binary fission, in which their genetic material is equally divided into two daughter cells. Whether in unicellular microorganisms like amoeba or multicellular organisms like the human body, cell division is a fundamental process that allows for growth, repair, and reproduction. At its core, the primary concern of cell division is the maintenance of the original cell's genome, ensuring consistency of genetic information from one generation to the next.",
+    "target": "The factory's production line is a complex network of workers, raw materials, and mechanical equipment arranged in a specific sequential pattern to create a finished product. Raw materials such as metal ores and plant sources are processed through a series of treatments and refining processes to produce an end-product that meets market specifications. The production line relies on a well-organized system of material warehouses to ensure a steady supply of raw materials and to store finished products before distribution. Workers play a vital role in ensuring the smooth and efficient operation of the production line. With the help of various types of mechanical equipment, they work together to transform raw materials into useful materials that benefit society."
+  },
+  "raw": {
+    "id": 7,
+    "lang": "en",
+    "system_a": "Cell division",
+    "system_b": "the factory's production line",
+    "mappings": [
+      [
+        "cell",
+        "Worker"
+      ],
+      [
+        "dna",
+        "raw material"
+      ],
+      [
+        "cell organelle",
+        "mechanical equipment"
+      ],
+      [
+        "cytoplasm",
+        "Material warehouse"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Engineering",
+    "system_a_background": "Cell division is a complex process that plays a critical role in maintaining the proper functioning of an organism. It involves the replication and separation of DNA, as well as the splitting of cell organelles and cytoplasm, and ultimately results in the creation of daughter cells. In eukaryotes, cell division occurs through two distinct mechanisms - mitosis, which produces genetically identical daughter cells, and meiosis, which results in haploid gametes for sexual reproduction. Prokaryotes undergo a simpler type of division called binary fission, in which their genetic material is equally divided into two daughter cells. Whether in unicellular microorganisms like amoeba or multicellular organisms like the human body, cell division is a fundamental process that allows for growth, repair, and reproduction. At its core, the primary concern of cell division is the maintenance of the original cell's genome, ensuring consistency of genetic information from one generation to the next.",
+    "system_b_background": "The factory's production line is a complex network of workers, raw materials, and mechanical equipment arranged in a specific sequential pattern to create a finished product. Raw materials such as metal ores and plant sources are processed through a series of treatments and refining processes to produce an end-product that meets market specifications. The production line relies on a well-organized system of material warehouses to ensure a steady supply of raw materials and to store finished products before distribution. Workers play a vital role in ensuring the smooth and efficient operation of the production line. With the help of various types of mechanical equipment, they work together to transform raw materials into useful materials that benefit society.",
+    "Explanation": [
+      "Cell corresponds to worker: In the process of cell division, the cell is the basic biological unit responsible for various life activities in the organism. In the production line of a factory, workers operate machinery and equipment to complete production tasks. In this analogy, both cells and workers are the basic units that perform tasks in their respective systems.",
+      "DNA corresponds to raw material: In cell division, DNA carries genetic information of the organism and is the basic material of its genes. In a factory production line, raw materials are the basic material in the production process and used to manufacture various products. In this analogy, DNA and raw materials are the basic materials in their respective systems that determine the characteristics of the final products.",
+      "Cell organelle corresponds to mechanical equipment: In the process of cell division, organelles are responsible for executing specific functions such as energy conversion and material transport. In a factory production line, mechanical equipment processes raw materials to manufacture products to meet production needs. In this analogy, organelles and mechanical equipment are components that perform specific functions in their respective systems.",
+      "Cytoplasm corresponds to material warehouse: In the process of cell division, cytoplasm is the matrix inside the cell that contains organelles, solutes, and other biological molecules, providing living conditions for the organelles. In a factory production line, the material warehouse stores raw materials, semi-finished products, and finished products to provide material support for the production process. In this analogy, both cytoplasm and material warehouse are environments that store and support other components in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Cell division",
+    "target": "the factory's production line"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

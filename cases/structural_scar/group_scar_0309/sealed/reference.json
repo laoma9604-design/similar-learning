@@ -1,0 +1,44 @@
+{
+  "task_group_scar_0309_t01": {
+    "task_id": "task_group_scar_0309_t01",
+    "label": "positive",
+    "valid": [
+      {
+        "source_id": "obj_group_scar_0309_src",
+        "node_map": {
+          "n1": "n1",
+          "n2": "n2",
+          "n3": "n3",
+          "n4": "n4",
+          "n5": "n5"
+        },
+        "edge_map": {
+          "e1": "e1"
+        }
+      }
+    ],
+    "valid_mappings": [
+      {
+        "node_map": {
+          "n1": "n1",
+          "n2": "n2",
+          "n3": "n3",
+          "n4": "n4",
+          "n5": "n5"
+        },
+        "edge_map": {
+          "e1": "e1"
+        }
+      }
+    ],
+    "exclusions": [],
+    "reference_tolerance": null,
+    "allowed_mappings_total": null,
+    "status": "structural_only",
+    "multiple_mapping_type": "none",
+    "available_checks": [
+      "node_bijection"
+    ],
+    "full_library_verified": true
+  }
+}

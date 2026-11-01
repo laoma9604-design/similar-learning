@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0011",
+  "dataset": "scar",
+  "original_id": "11",
+  "source_object_id": "obj_group_scar_0011_src",
+  "target_object_id": "obj_group_scar_0011_tgt",
+  "faithful_mappings": [
+    [
+      "Neurons",
+      "Electronic component"
+    ],
+    [
+      "nerve fiber",
+      "electric wire"
+    ],
+    [
+      "Ganglion",
+      "switch"
+    ],
+    [
+      "information",
+      "electric signal"
+    ]
+  ],
+  "explanation": [
+    "Neurons correspond to electronic components: In the nervous system, neurons are the basic functional units that are responsible for receiving, processing, and transmitting information. In a circuit, electronic components such as resistors, capacitors, and diodes are the basic building blocks that are interconnected to achieve specific functions. In this mapping, neurons and electronic components both represent the fundamental functional components of their respective systems.",
+    "Nerve fibers correspond to electric wires: In the nervous system, nerve fibers are the channels through which information is transmitted between neurons, including axons and dendrites. In a circuit, electric wires are conductors that connect electronic components and are responsible for transmitting electrical current and signals. In this mapping, nerve fibers and electric wires are channels in their respective systems for the transmission of information or signals.",
+    "Ganglia correspond to switches: In the nervous system, ganglia are regions where neurons converge and can partially regulate or integrate nervous signals. In a circuit, switches are devices that control the flow of electrical current and can turn circuits on or off to achieve specific functions. In this mapping, ganglia and switches both represent control and regulation of signals or electrical current.",
+    "Information corresponds to electric signals: In the nervous system, information is the signal transmitted through neurons and nerve fibers, including electrical and chemical signals. In a circuit, electric signals are changes in electric current or voltage transmitted between wires and electronic components to achieve electronic device functions. In this mapping, information and electric signals both represent the signals transmitted and processed in their respective systems."
+  ],
+  "background": {
+    "source": "The nervous system is a highly complex part of an animal that coordinates its actions and sensory information by transmitting signals to and from different parts of its body. It consists of two main parts, the central nervous system (CNS) and the peripheral nervous system (PNS), which are composed of neurons and other specialized cells called glial cells. Neurons have special structures that allow them to send signals rapidly and precisely to other cells through nerve fibers, while glial cells provide structural and metabolic support. The nervous system also contains ganglia where neuron cell bodies are located. The system functions to receive information, process it, and send appropriate signals to different parts of the body. Malfunction of the nervous system can result in various disorders, many of which are studied by neurology, a medical specialty. Neuroscience is the field of science that focuses on the study of the nervous system, including neurons, nerve fibers, and ganglia to gain insight into how information is processed and transmitted in the nervous system.",
+    "target": "\n\nCircuits are essential components of modern-day electronics. A circuit can be defined as an arrangement of electronic components like resistors, capacitors, transistors, etc., which are interconnected by electric wires. These components and wires, when combined together, can create a complete circuit that allows the flow of electricity within it. One of the key features of circuits is the ability to turn signals on and off through the use of switches. Electronic signals travel along the circuit and are affected by the components within the circuit, producing a variety of effects such as amplification, filtering, or modulation. Overall, circuits are a fundamental building block of modern electronics and are found in virtually all electronic devices, from simple toys to advanced computer systems."
+  },
+  "raw": {
+    "id": 11,
+    "lang": "en",
+    "system_a": "Nervous System",
+    "system_b": "Circuits",
+    "mappings": [
+      [
+        "Neurons",
+        "Electronic component"
+      ],
+      [
+        "nerve fiber",
+        "electric wire"
+      ],
+      [
+        "Ganglion",
+        "switch"
+      ],
+      [
+        "information",
+        "electric signal"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Physics",
+    "system_a_background": "The nervous system is a highly complex part of an animal that coordinates its actions and sensory information by transmitting signals to and from different parts of its body. It consists of two main parts, the central nervous system (CNS) and the peripheral nervous system (PNS), which are composed of neurons and other specialized cells called glial cells. Neurons have special structures that allow them to send signals rapidly and precisely to other cells through nerve fibers, while glial cells provide structural and metabolic support. The nervous system also contains ganglia where neuron cell bodies are located. The system functions to receive information, process it, and send appropriate signals to different parts of the body. Malfunction of the nervous system can result in various disorders, many of which are studied by neurology, a medical specialty. Neuroscience is the field of science that focuses on the study of the nervous system, including neurons, nerve fibers, and ganglia to gain insight into how information is processed and transmitted in the nervous system.",
+    "system_b_background": "\n\nCircuits are essential components of modern-day electronics. A circuit can be defined as an arrangement of electronic components like resistors, capacitors, transistors, etc., which are interconnected by electric wires. These components and wires, when combined together, can create a complete circuit that allows the flow of electricity within it. One of the key features of circuits is the ability to turn signals on and off through the use of switches. Electronic signals travel along the circuit and are affected by the components within the circuit, producing a variety of effects such as amplification, filtering, or modulation. Overall, circuits are a fundamental building block of modern electronics and are found in virtually all electronic devices, from simple toys to advanced computer systems.",
+    "Explanation": [
+      "Neurons correspond to electronic components: In the nervous system, neurons are the basic functional units that are responsible for receiving, processing, and transmitting information. In a circuit, electronic components such as resistors, capacitors, and diodes are the basic building blocks that are interconnected to achieve specific functions. In this mapping, neurons and electronic components both represent the fundamental functional components of their respective systems.",
+      "Nerve fibers correspond to electric wires: In the nervous system, nerve fibers are the channels through which information is transmitted between neurons, including axons and dendrites. In a circuit, electric wires are conductors that connect electronic components and are responsible for transmitting electrical current and signals. In this mapping, nerve fibers and electric wires are channels in their respective systems for the transmission of information or signals.",
+      "Ganglia correspond to switches: In the nervous system, ganglia are regions where neurons converge and can partially regulate or integrate nervous signals. In a circuit, switches are devices that control the flow of electrical current and can turn circuits on or off to achieve specific functions. In this mapping, ganglia and switches both represent control and regulation of signals or electrical current.",
+      "Information corresponds to electric signals: In the nervous system, information is the signal transmitted through neurons and nerve fibers, including electrical and chemical signals. In a circuit, electric signals are changes in electric current or voltage transmitted between wires and electronic components to achieve electronic device functions. In this mapping, information and electric signals both represent the signals transmitted and processed in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Nervous System",
+    "target": "Circuits"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

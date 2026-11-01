@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0201",
+  "dataset": "scar",
+  "original_id": "201",
+  "source_object_id": "obj_group_scar_0201_src",
+  "target_object_id": "obj_group_scar_0201_tgt",
+  "faithful_mappings": [
+    [
+      "british parliament",
+      "constitutional convention in philadelphia"
+    ],
+    [
+      "limit kingship",
+      "Separation of powers"
+    ],
+    [
+      "Create a constitutional monarchy",
+      "establish a federal system"
+    ]
+  ],
+  "explanation": [
+    "The British parliament corresponds to the Constitutional Convention in Philadelphia: the Bill of Rights was drafted by the British parliament, and the 1787 Constitution was drafted at the Constitutional Convention in Philadelphia. Both are historic documents drafted by important political institutions.",
+    "Limiting kingship corresponds to the separation of powers: the Bill of Rights achieved a balance of political power by limiting the power of the British king, while the separation of powers in the 1787 Constitution also embodies the principle of power balance. Both focus on balancing political power to ensure a sound democratic system.",
+    "Creating a constitutional monarchy corresponds to establishing a federal system: the Bill of Rights laid the foundation for establishing a constitutional monarchy in the UK by limiting royal power, while the 1787 Constitution established a federal system in the US. Both represent changes to the political system and the establishment of a new national order."
+  ],
+  "background": {
+    "source": "The Bill of Rights is a crucial document that outlines the most important rights of a country's citizens which must be respected and protected. It is sometimes known as a declaration or charter of rights and can be entrenched or unentrenched, depending on the country's legislative process. This document was first introduced in the British Parliament in the late 17th century, and its purpose was to limit the power of the monarchy and create a constitutional monarchy. The Bill of Rights is a foundational document in the formation of modern democracies, as it protects individual liberties and guarantees basic human rights to all citizens. Its provisions have been adopted and adapted by many other nations around the world, demonstrating its enduring importance and relevance even today.",
+    "target": "The Constitution of 1787 is the supreme law of the United States, replacing the ineffective Articles of Confederation. It was drafted during the Constitutional Convention in Philadelphia in 1787 by delegates appointed by 12 states. It establishes a federal system that delineates the national frame and constraints of government. The Constitution embodies the doctrine of the separation of powers, dividing the federal government into three branches: the legislative, executive, and judicial. The Constitution's first three articles are focused on this separation of powers. The remaining articles embody concepts of federalism, describing the rights and responsibilities of state governments, the states' relationship to the federal government, and the process of constitutional amendment. The Constitution is the oldest and longest-standing national constitution in the world. Since its ratification, it has been amended 27 times, with the first 10 amendments collectively known as the Bill of Rights. The Constitution has influenced the constitutions of other nations and is interpreted, supplemented, and implemented by a large body of federal constitutional law."
+  },
+  "raw": {
+    "id": 201,
+    "lang": "en",
+    "system_a": "The Bill of Rights",
+    "system_b": "The Constitution of 1787",
+    "mappings": [
+      [
+        "british parliament",
+        "constitutional convention in philadelphia"
+      ],
+      [
+        "limit kingship",
+        "Separation of powers"
+      ],
+      [
+        "Create a constitutional monarchy",
+        "establish a federal system"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "The Bill of Rights is a crucial document that outlines the most important rights of a country's citizens which must be respected and protected. It is sometimes known as a declaration or charter of rights and can be entrenched or unentrenched, depending on the country's legislative process. This document was first introduced in the British Parliament in the late 17th century, and its purpose was to limit the power of the monarchy and create a constitutional monarchy. The Bill of Rights is a foundational document in the formation of modern democracies, as it protects individual liberties and guarantees basic human rights to all citizens. Its provisions have been adopted and adapted by many other nations around the world, demonstrating its enduring importance and relevance even today.",
+    "system_b_background": "The Constitution of 1787 is the supreme law of the United States, replacing the ineffective Articles of Confederation. It was drafted during the Constitutional Convention in Philadelphia in 1787 by delegates appointed by 12 states. It establishes a federal system that delineates the national frame and constraints of government. The Constitution embodies the doctrine of the separation of powers, dividing the federal government into three branches: the legislative, executive, and judicial. The Constitution's first three articles are focused on this separation of powers. The remaining articles embody concepts of federalism, describing the rights and responsibilities of state governments, the states' relationship to the federal government, and the process of constitutional amendment. The Constitution is the oldest and longest-standing national constitution in the world. Since its ratification, it has been amended 27 times, with the first 10 amendments collectively known as the Bill of Rights. The Constitution has influenced the constitutions of other nations and is interpreted, supplemented, and implemented by a large body of federal constitutional law.",
+    "Explanation": [
+      "The British parliament corresponds to the Constitutional Convention in Philadelphia: the Bill of Rights was drafted by the British parliament, and the 1787 Constitution was drafted at the Constitutional Convention in Philadelphia. Both are historic documents drafted by important political institutions.",
+      "Limiting kingship corresponds to the separation of powers: the Bill of Rights achieved a balance of political power by limiting the power of the British king, while the separation of powers in the 1787 Constitution also embodies the principle of power balance. Both focus on balancing political power to ensure a sound democratic system.",
+      "Creating a constitutional monarchy corresponds to establishing a federal system: the Bill of Rights laid the foundation for establishing a constitutional monarchy in the UK by limiting royal power, while the 1787 Constitution established a federal system in the US. Both represent changes to the political system and the establishment of a new national order."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "The Bill of Rights",
+    "target": "The Constitution of 1787"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

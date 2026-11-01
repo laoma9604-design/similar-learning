@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0064",
+  "dataset": "scar",
+  "original_id": "64",
+  "source_object_id": "obj_group_scar_0064_src",
+  "target_object_id": "obj_group_scar_0064_tgt",
+  "faithful_mappings": [
+    [
+      "blood",
+      "electric current"
+    ],
+    [
+      "Headache",
+      "Fault"
+    ],
+    [
+      "Etiology",
+      "point of failure"
+    ]
+  ],
+  "explanation": [
+    "Blood corresponds to electric current: in the case of a headache, blood flow may be affected, leading to pain; while in a circuit fault, the flow of electric current may be hindered or interrupted, leading to a failure. Here, both blood and electric current are elements that flow within their respective systems, and changes in them may lead to problems.",
+    "Headache corresponds to fault: a headache can cause severe pain; a circuit fault can cause problems or malfunction in electronic devices. Here, both headache and fault represent problems that occur within their respective systems.",
+    "Etiology corresponds to point of failure: the etiology of a headache may include various physiological and psychological factors; the point of failure of a circuit fault may be a component on the circuit board. Here, both etiology and point of failure are the root causes of problems in their respective systems."
+  ],
+  "background": {
+    "source": "Migraine is a neurological disorder that affects a significant percentage of people worldwide. Characterized by pulsating headaches that often affect one side of the head, migraines can last from a few hours to a few days and are often accompanied by non-headache symptoms such as nausea, vomiting, and sensitivity to light, sound, or smell. The exact causes of migraines are not yet fully understood, though it is believed that a combination of genetic and environmental factors play a role. Some people also experience aura, a visual disturbance that signals an impending migraine. Treatment usually involves pain medication, medication for nausea, and avoiding triggers. There are also medications that can help prevent future attacks. Despite being a common condition, migraines can be disabling and negatively impact a person's quality of life. The word migraine originates from the Greek words for \"half\" and \"skull,\" referring to the often one-sided head pain associated with this condition.",
+    "target": "\n\nA circuit malfunction can occur when practical capacitors and inductors used in electric circuits fail to function as ideal components with only capacitance or inductance, but instead have a resistance in series. This resistance is known as the equivalent series resistance (ESR), and is measured at specified frequencies depending on the type of component. A fault may occur at the point of failure, leading to a disruption in electric current flow. It is important to ensure that components are functioning properly to prevent circuit malfunctions."
+  },
+  "raw": {
+    "id": 64,
+    "lang": "en",
+    "system_a": "Migraines",
+    "system_b": "Circuit Malfunction",
+    "mappings": [
+      [
+        "blood",
+        "electric current"
+      ],
+      [
+        "Headache",
+        "Fault"
+      ],
+      [
+        "Etiology",
+        "point of failure"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Physics",
+    "system_a_background": "Migraine is a neurological disorder that affects a significant percentage of people worldwide. Characterized by pulsating headaches that often affect one side of the head, migraines can last from a few hours to a few days and are often accompanied by non-headache symptoms such as nausea, vomiting, and sensitivity to light, sound, or smell. The exact causes of migraines are not yet fully understood, though it is believed that a combination of genetic and environmental factors play a role. Some people also experience aura, a visual disturbance that signals an impending migraine. Treatment usually involves pain medication, medication for nausea, and avoiding triggers. There are also medications that can help prevent future attacks. Despite being a common condition, migraines can be disabling and negatively impact a person's quality of life. The word migraine originates from the Greek words for \"half\" and \"skull,\" referring to the often one-sided head pain associated with this condition.",
+    "system_b_background": "\n\nA circuit malfunction can occur when practical capacitors and inductors used in electric circuits fail to function as ideal components with only capacitance or inductance, but instead have a resistance in series. This resistance is known as the equivalent series resistance (ESR), and is measured at specified frequencies depending on the type of component. A fault may occur at the point of failure, leading to a disruption in electric current flow. It is important to ensure that components are functioning properly to prevent circuit malfunctions.",
+    "Explanation": [
+      "Blood corresponds to electric current: in the case of a headache, blood flow may be affected, leading to pain; while in a circuit fault, the flow of electric current may be hindered or interrupted, leading to a failure. Here, both blood and electric current are elements that flow within their respective systems, and changes in them may lead to problems.",
+      "Headache corresponds to fault: a headache can cause severe pain; a circuit fault can cause problems or malfunction in electronic devices. Here, both headache and fault represent problems that occur within their respective systems.",
+      "Etiology corresponds to point of failure: the etiology of a headache may include various physiological and psychological factors; the point of failure of a circuit fault may be a component on the circuit board. Here, both etiology and point of failure are the root causes of problems in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Migraines",
+    "target": "Circuit Malfunction"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

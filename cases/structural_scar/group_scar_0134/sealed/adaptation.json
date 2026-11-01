@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0134",
+  "dataset": "scar",
+  "original_id": "134",
+  "source_object_id": "obj_group_scar_0134_src",
+  "target_object_id": "obj_group_scar_0134_tgt",
+  "faithful_mappings": [
+    [
+      "software design",
+      "traffic flow"
+    ],
+    [
+      "server",
+      "service area"
+    ],
+    [
+      "router",
+      "overpass"
+    ]
+  ],
+  "explanation": [
+    "Software design corresponds to traffic flow: In the network, software design is the process of planning and organizing the transmission and processing of data; on the highway, traffic flow is the process of vehicles moving on the road. Both are about organizing the flow process.",
+    "A server corresponds to a service area: In the network, a server is a device used for storing and processing data; on the highway, a service area is an area that provides services such as rest, catering, and refueling. Both are places that provide services to users.",
+    "A router corresponds to an overpass: In the network, a router is a device used to connect and manage data communication; on the highway, an overpass is a facility used to connect different roads and ensure smooth traffic. Both are hubs for connecting and managing flow."
+  ],
+  "background": {
+    "source": "In the world of technology, a network is a fundamental and essential aspect of modern computing. Often used interchangeably with networking and networked, the term network is an umbrella term that encompasses all aspects of the software design, server, and router that come together to connect a group of devices together. \n\nAt its core, a network is a series of connected computers, servers, and other devices that can communicate with each other, share resources and data, and access the internet or other networks. It allows devices that are connected to share files, printers, and other resources. In addition, a network can provide a means for devices to communicate with one another and exchange data in real-time.\n\nSoftware design is critical in creating a network. It ensures that the different devices connected to the network can communicate effectively by providing the necessary software and protocols. The software design also ensures that the network operates efficiently, as well as providing security measures to protect the network's integrity and data privacy.\n\nServers are the backbone of a network. They provide the computing power and storage for the different devices connected to the network. A server is responsible for managing access to resources, such as shared files, printers, and applications.\n\nRouters play a critical role in connecting different networks together. A router effectively creates the pathways that allow different networks to communicate. It takes information from one network and forwards it to another network, ensuring that the data arrives at its intended destination.\n\nIn conclusion, the network is an essential part of modern computing. With the right software design, server, and router, a network can allow for seamless communication between devices and even networks. With the internet becoming an integral part of our daily lives, the importance of a robust, secure, and efficient network is becoming more critical. It is thus no wonder that network technology is constantly evolving to meet changing demands and security standards, ensuring that devices can continue to communicate with each other securely and effectively.",
+    "target": "An expressway is a type of high-speed roadway designed for efficient and streamlined traffic flow. With dedicated access ramps and lane markings, these routes are typically reserved for long-distance travel and high-capacity traffic. Along the way, drivers may encounter service areas offering restrooms, food, and fuel, helping to ensure a safe and comfortable journey. Expressways often feature overpasses to accommodate elevated traffic flow, as well as advanced traffic management systems to regulate speed and congestion. From urban thoroughfares to long-distance highways, the expressway is an essential part of modern transportation infrastructure."
+  },
+  "raw": {
+    "id": 134,
+    "lang": "en",
+    "system_a": "Network",
+    "system_b": "Expressway",
+    "mappings": [
+      [
+        "software design",
+        "traffic flow"
+      ],
+      [
+        "server",
+        "service area"
+      ],
+      [
+        "router",
+        "overpass"
+      ]
+    ],
+    "system_a_domain": "Computer",
+    "system_b_domain": "Geography",
+    "system_a_background": "In the world of technology, a network is a fundamental and essential aspect of modern computing. Often used interchangeably with networking and networked, the term network is an umbrella term that encompasses all aspects of the software design, server, and router that come together to connect a group of devices together. \n\nAt its core, a network is a series of connected computers, servers, and other devices that can communicate with each other, share resources and data, and access the internet or other networks. It allows devices that are connected to share files, printers, and other resources. In addition, a network can provide a means for devices to communicate with one another and exchange data in real-time.\n\nSoftware design is critical in creating a network. It ensures that the different devices connected to the network can communicate effectively by providing the necessary software and protocols. The software design also ensures that the network operates efficiently, as well as providing security measures to protect the network's integrity and data privacy.\n\nServers are the backbone of a network. They provide the computing power and storage for the different devices connected to the network. A server is responsible for managing access to resources, such as shared files, printers, and applications.\n\nRouters play a critical role in connecting different networks together. A router effectively creates the pathways that allow different networks to communicate. It takes information from one network and forwards it to another network, ensuring that the data arrives at its intended destination.\n\nIn conclusion, the network is an essential part of modern computing. With the right software design, server, and router, a network can allow for seamless communication between devices and even networks. With the internet becoming an integral part of our daily lives, the importance of a robust, secure, and efficient network is becoming more critical. It is thus no wonder that network technology is constantly evolving to meet changing demands and security standards, ensuring that devices can continue to communicate with each other securely and effectively.",
+    "system_b_background": "An expressway is a type of high-speed roadway designed for efficient and streamlined traffic flow. With dedicated access ramps and lane markings, these routes are typically reserved for long-distance travel and high-capacity traffic. Along the way, drivers may encounter service areas offering restrooms, food, and fuel, helping to ensure a safe and comfortable journey. Expressways often feature overpasses to accommodate elevated traffic flow, as well as advanced traffic management systems to regulate speed and congestion. From urban thoroughfares to long-distance highways, the expressway is an essential part of modern transportation infrastructure.",
+    "Explanation": [
+      "Software design corresponds to traffic flow: In the network, software design is the process of planning and organizing the transmission and processing of data; on the highway, traffic flow is the process of vehicles moving on the road. Both are about organizing the flow process.",
+      "A server corresponds to a service area: In the network, a server is a device used for storing and processing data; on the highway, a service area is an area that provides services such as rest, catering, and refueling. Both are places that provide services to users.",
+      "A router corresponds to an overpass: In the network, a router is a device used to connect and manage data communication; on the highway, an overpass is a facility used to connect different roads and ensure smooth traffic. Both are hubs for connecting and managing flow."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Network",
+    "target": "Expressway"
+  },
+  "domains": {
+    "source": "Computer",
+    "target": "Geography"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

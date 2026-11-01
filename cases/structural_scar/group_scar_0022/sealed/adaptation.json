@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0022",
+  "dataset": "scar",
+  "original_id": "22",
+  "source_object_id": "obj_group_scar_0022_src",
+  "target_object_id": "obj_group_scar_0022_tgt",
+  "faithful_mappings": [
+    [
+      "species",
+      "product"
+    ],
+    [
+      "predator",
+      "consumer"
+    ],
+    [
+      "energy",
+      "profit"
+    ]
+  ],
+  "explanation": [
+    "Species corresponds to product: in this mapping, species represents different biological roles such as producers, consumers, and decomposers in the food chain. Products, on the other hand, represent different types of goods and services available in the market. Both of these are fundamental units of the system.",
+    "Predator corresponds to consumer: in the food chain, predators are those organisms that hunt and consume other species for energy. Similarly, consumers in the supply chain are individuals or businesses that purchase and use products to satisfy their needs. Both of these play a significant role in their respective systems.",
+    "Energy corresponds to profit: in the food chain, energy is a crucial factor for the transfer of nutrients between different levels, which represents the interdependence of organisms. In the supply chain, profit is the goal of businesses that manufacture and sell products, which measures their economic performance. Both of these are key drivers of the system's operation."
+  ],
+  "background": {
+    "source": "The food chain is a crucial aspect of ecology, referring to the connected chain of trophic relations between species in an ecosystem. It describes how each species serves as both a predator and prey, transferring energy from one level of the chain to another. In addition to its ecological context, \"food chain\" can also refer to other cultural and artistic works such as comics, television episodes, plays, books, and films. Whether referring to ecological or cultural contexts, the concept of the food chain remains rooted in the important relationships between species and the transfer of energy in complex systems.",
+    "target": "A supply chain is a comprehensive network of facilities and processes that involve the transformation of raw materials into finished products, which are then transported to end consumers. Supply chain management aims to optimize the flow of goods in order to enhance efficiency and maximize profit. The system is highly intricate, with suppliers ranked by tiers depending on their proximity to the end customer. In cases where recycled goods hold value, they may re-enter the supply chain at various stages. In essence, a robust supply chain creates a value chain that drives profitability while providing customers with high-quality products."
+  },
+  "raw": {
+    "id": 22,
+    "lang": "en",
+    "system_a": "Food Chain",
+    "system_b": "Supply Chain",
+    "mappings": [
+      [
+        "species",
+        "product"
+      ],
+      [
+        "predator",
+        "consumer"
+      ],
+      [
+        "energy",
+        "profit"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Biology",
+    "system_a_background": "The food chain is a crucial aspect of ecology, referring to the connected chain of trophic relations between species in an ecosystem. It describes how each species serves as both a predator and prey, transferring energy from one level of the chain to another. In addition to its ecological context, \"food chain\" can also refer to other cultural and artistic works such as comics, television episodes, plays, books, and films. Whether referring to ecological or cultural contexts, the concept of the food chain remains rooted in the important relationships between species and the transfer of energy in complex systems.",
+    "system_b_background": "A supply chain is a comprehensive network of facilities and processes that involve the transformation of raw materials into finished products, which are then transported to end consumers. Supply chain management aims to optimize the flow of goods in order to enhance efficiency and maximize profit. The system is highly intricate, with suppliers ranked by tiers depending on their proximity to the end customer. In cases where recycled goods hold value, they may re-enter the supply chain at various stages. In essence, a robust supply chain creates a value chain that drives profitability while providing customers with high-quality products.",
+    "Explanation": [
+      "Species corresponds to product: in this mapping, species represents different biological roles such as producers, consumers, and decomposers in the food chain. Products, on the other hand, represent different types of goods and services available in the market. Both of these are fundamental units of the system.",
+      "Predator corresponds to consumer: in the food chain, predators are those organisms that hunt and consume other species for energy. Similarly, consumers in the supply chain are individuals or businesses that purchase and use products to satisfy their needs. Both of these play a significant role in their respective systems.",
+      "Energy corresponds to profit: in the food chain, energy is a crucial factor for the transfer of nutrients between different levels, which represents the interdependence of organisms. In the supply chain, profit is the goal of businesses that manufacture and sell products, which measures their economic performance. Both of these are key drivers of the system's operation."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Food Chain",
+    "target": "Supply Chain"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,75 @@
+{
+  "adaptation_id": "adapt_scar_0116",
+  "dataset": "scar",
+  "original_id": "116",
+  "source_object_id": "obj_group_scar_0116_src",
+  "target_object_id": "obj_group_scar_0116_tgt",
+  "faithful_mappings": [
+    [
+      "Hydrophilic",
+      "pro-american"
+    ],
+    [
+      "Lipophilic",
+      "Pro-Russian faction"
+    ]
+  ],
+  "explanation": [
+    "Hydrophilic corresponds to the pro-American faction: In the two affinity molecules, hydrophilicity refers to the ability of a part of the molecule to interact with water. In international politics, the pro-American faction refers to a political stance with good relations with the United States. Both of these indicate affinity in their respective fields.",
+    "Lipophilic corresponds to the pro-Russian faction: In the two affinity molecules, lipophilicity refers to the ability of a part of the molecule to interact with lipids. In international politics, the pro-Russian faction refers to a political stance with good relations with Russia. Both of these indicate affinity in their respective fields."
+  ],
+  "background": {
+    "source": "An amphiphile is a chemical compound that possesses both hydrophilic and lipophilic properties, meaning it has a love for both water and fat. These compounds have become the basis for various research areas in the fields of chemistry and biochemistry. For example, phospholipid amphiphiles, which are major structural components within cell membranes, are of particular interest. Additionally, common amphiphilic compounds such as surfactants can be found in everyday household products such as soaps, detergents, and lipoproteins. Organic compounds that contain hydrophilic groups at both ends of the molecule, known as bolaamphiphilic, can form prolate micelles when aggregated.",
+    "target": "A neutral country is a state that takes a non-combatant approach towards belligerents in specific wars or permanently remains neutral in all future conflicts. Such countries avoid entering into military alliances to deter aggression using a sizeable military. Some neutral countries, like Austria and Ireland, have active UN peacekeeping forces and are part of political alliances such as the European Union. However, different nations interpret their neutrality differently, with some demilitarizing, like Costa Rica, and others holding to \"armed neutrality\" like Switzerland. In recent years, there has been a shift in how neutral conduct is perceived, with some countries, such as Sweden, abandoning its policy in the wake of the 2022 Russian invasion of Ukraine. This shift has mostly been due to the influence of pro-American and pro-Russian factions. Despite changes, nationals of neutral countries enjoy protection under the law of war, making them better protected from belligerent actions than other non-combatants."
+  },
+  "raw": {
+    "id": 116,
+    "lang": "en",
+    "system_a": "Amphiphile",
+    "system_b": "neutral country",
+    "mappings": [
+      [
+        "Hydrophilic",
+        "pro-american"
+      ],
+      [
+        "Lipophilic",
+        "Pro-Russian faction"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "History",
+    "system_a_background": "An amphiphile is a chemical compound that possesses both hydrophilic and lipophilic properties, meaning it has a love for both water and fat. These compounds have become the basis for various research areas in the fields of chemistry and biochemistry. For example, phospholipid amphiphiles, which are major structural components within cell membranes, are of particular interest. Additionally, common amphiphilic compounds such as surfactants can be found in everyday household products such as soaps, detergents, and lipoproteins. Organic compounds that contain hydrophilic groups at both ends of the molecule, known as bolaamphiphilic, can form prolate micelles when aggregated.",
+    "system_b_background": "A neutral country is a state that takes a non-combatant approach towards belligerents in specific wars or permanently remains neutral in all future conflicts. Such countries avoid entering into military alliances to deter aggression using a sizeable military. Some neutral countries, like Austria and Ireland, have active UN peacekeeping forces and are part of political alliances such as the European Union. However, different nations interpret their neutrality differently, with some demilitarizing, like Costa Rica, and others holding to \"armed neutrality\" like Switzerland. In recent years, there has been a shift in how neutral conduct is perceived, with some countries, such as Sweden, abandoning its policy in the wake of the 2022 Russian invasion of Ukraine. This shift has mostly been due to the influence of pro-American and pro-Russian factions. Despite changes, nationals of neutral countries enjoy protection under the law of war, making them better protected from belligerent actions than other non-combatants.",
+    "Explanation": [
+      "Hydrophilic corresponds to the pro-American faction: In the two affinity molecules, hydrophilicity refers to the ability of a part of the molecule to interact with water. In international politics, the pro-American faction refers to a political stance with good relations with the United States. Both of these indicate affinity in their respective fields.",
+      "Lipophilic corresponds to the pro-Russian faction: In the two affinity molecules, lipophilicity refers to the ability of a part of the molecule to interact with lipids. In international politics, the pro-Russian faction refers to a political stance with good relations with Russia. Both of these indicate affinity in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Amphiphile",
+    "target": "neutral country"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

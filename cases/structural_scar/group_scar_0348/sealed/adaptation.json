@@ -1,0 +1,141 @@
+{
+  "adaptation_id": "adapt_scar_0348",
+  "dataset": "scar",
+  "original_id": "348",
+  "source_object_id": "obj_group_scar_0348_src",
+  "target_object_id": "obj_group_scar_0348_tgt",
+  "faithful_mappings": [
+    [
+      "water",
+      "heat"
+    ],
+    [
+      "transfers",
+      "flows"
+    ],
+    [
+      "temperature",
+      "pressure"
+    ],
+    [
+      "burner",
+      "water tower"
+    ],
+    [
+      "kettle",
+      "bucket"
+    ],
+    [
+      "heating",
+      "filling"
+    ],
+    [
+      "cooling",
+      "emptying"
+    ],
+    [
+      "thermodynamics",
+      "hydrodynamics"
+    ]
+  ],
+  "explanation": [
+    "Water corresponds to heat: In water flow, water is the medium for energy and material transfer. In heat transfer, heat is the form of energy transfer. Both are energy and material carriers in their respective systems.",
+    "Transfer corresponds to flow: In water flow, transfer refers to the movement of water and transfer of materials. In heat transfer, flow refers to the transfer of heat and flow of energy. Both are the processes of movement and transfer in their respective systems.",
+    "Temperature corresponds to pressure: In water flow, temperature is a factor that influences the state and speed of water flow. In heat transfer, pressure is a factor that influences heat transfer and flow of energy. Both are key influencing factors in their respective systems.",
+    "Burner corresponds to water tower: In water flow, the burner is the equipment that heats the water, increases its energy and produces flow. In heat transfer, the water tower is the equipment that stores and distributes heat to where it is needed. Both are energy sources and distribution equipment in their respective systems.",
+    "Kettle corresponds to bucket: In water flow, the kettle is the container that stores and heats the water. In heat transfer, the bucket is the container that stores and distributes heat. Both are storage and distribution tools in their respective systems.",
+    "Heating corresponds to filling: In water flow, heating is the process of increasing the energy of water and producing flow. In heat transfer, filling is the process of transferring heat to where it is needed. Both are energy transfer and distribution processes in their respective systems.",
+    "Cooling corresponds to emptying: In water flow, cooling is the process of reducing the energy of water and stopping the flow. In heat transfer, emptying is the process of removing heat from a place. Both are energy consumption and stoppage processes in their respective systems.",
+    "Thermodynamics corresponds to hydrodynamics: In water flow, thermodynamics is the science that studies the energy conversion and transfer of water flow. In heat transfer, hydrodynamics is the science that studies heat transfer and flow of energy. Both are fundamental scientific principles in their respective systems."
+  ],
+  "background": {
+    "source": "Environmental flows refer to the quantity, timing, and quality of water necessary to support freshwater and estuarine ecosystems, as well as human well-being dependent on these ecosystems. Water managers aim to establish a flow regime or pattern that accommodates human use while preserving essential ecosystem processes. Although environmental flows do not require a total return to natural flow patterns, management does seek to gain a wider set of values and benefits from rivers than prioritizing water supply, recreation, energy or flood control. Alterations to rivers' downstream flow patterns triggered by dams, diversions, and levees mounted increasing threats to rivers, such as temperature changes, water quality, sediment movement and deposition, fishing and gardening, and healthy river ecosystem-dependant livelihoods. The implementation of environmental flows aims to maintain river functions, preserve aquatic habitats, and address traditional offstream benefits.",
+    "target": "Heat transfer is a crucial aspect of thermal engineering, which involves the generation, conversion, use, and exchange of thermal energy between several physical systems. This process can occur in various mechanisms, such as thermal conduction, convection, radiation, and transfer through the phase changes of different chemical species. These mechanisms can happen together in the same system, depending on the situation. For instance, heat conduction involves the transfer of kinetic energy over a small distance from high to low temperature in two adjoining systems. On the other hand, heat convection requires the bulk movement of a gas or liquid to carry heat through a fluid, while a heat transfer through radiation occurs via photons or electromagnetic waves in a vacuum or any transparent medium. It is essential to understand the hydrodynamics of the system to ensure that the heat transfer process happens optimally. Keywords like heat, flows, pressure, water tower, bucket, filling, and emptying will be essential in analyzing the hydrodynamics of any system aiming to achieve effective heat transfer."
+  },
+  "raw": {
+    "id": 348,
+    "lang": "en",
+    "system_a": "water flow",
+    "system_b": "heat transfer",
+    "mappings": [
+      [
+        "water",
+        "heat"
+      ],
+      [
+        "transfers",
+        "flows"
+      ],
+      [
+        "temperature",
+        "pressure"
+      ],
+      [
+        "burner",
+        "water tower"
+      ],
+      [
+        "kettle",
+        "bucket"
+      ],
+      [
+        "heating",
+        "filling"
+      ],
+      [
+        "cooling",
+        "emptying"
+      ],
+      [
+        "thermodynamics",
+        "hydrodynamics"
+      ]
+    ],
+    "system_a_domain": "Geography",
+    "system_b_domain": "Physics",
+    "system_a_background": "Environmental flows refer to the quantity, timing, and quality of water necessary to support freshwater and estuarine ecosystems, as well as human well-being dependent on these ecosystems. Water managers aim to establish a flow regime or pattern that accommodates human use while preserving essential ecosystem processes. Although environmental flows do not require a total return to natural flow patterns, management does seek to gain a wider set of values and benefits from rivers than prioritizing water supply, recreation, energy or flood control. Alterations to rivers' downstream flow patterns triggered by dams, diversions, and levees mounted increasing threats to rivers, such as temperature changes, water quality, sediment movement and deposition, fishing and gardening, and healthy river ecosystem-dependant livelihoods. The implementation of environmental flows aims to maintain river functions, preserve aquatic habitats, and address traditional offstream benefits.",
+    "system_b_background": "Heat transfer is a crucial aspect of thermal engineering, which involves the generation, conversion, use, and exchange of thermal energy between several physical systems. This process can occur in various mechanisms, such as thermal conduction, convection, radiation, and transfer through the phase changes of different chemical species. These mechanisms can happen together in the same system, depending on the situation. For instance, heat conduction involves the transfer of kinetic energy over a small distance from high to low temperature in two adjoining systems. On the other hand, heat convection requires the bulk movement of a gas or liquid to carry heat through a fluid, while a heat transfer through radiation occurs via photons or electromagnetic waves in a vacuum or any transparent medium. It is essential to understand the hydrodynamics of the system to ensure that the heat transfer process happens optimally. Keywords like heat, flows, pressure, water tower, bucket, filling, and emptying will be essential in analyzing the hydrodynamics of any system aiming to achieve effective heat transfer.",
+    "Explanation": [
+      "Water corresponds to heat: In water flow, water is the medium for energy and material transfer. In heat transfer, heat is the form of energy transfer. Both are energy and material carriers in their respective systems.",
+      "Transfer corresponds to flow: In water flow, transfer refers to the movement of water and transfer of materials. In heat transfer, flow refers to the transfer of heat and flow of energy. Both are the processes of movement and transfer in their respective systems.",
+      "Temperature corresponds to pressure: In water flow, temperature is a factor that influences the state and speed of water flow. In heat transfer, pressure is a factor that influences heat transfer and flow of energy. Both are key influencing factors in their respective systems.",
+      "Burner corresponds to water tower: In water flow, the burner is the equipment that heats the water, increases its energy and produces flow. In heat transfer, the water tower is the equipment that stores and distributes heat to where it is needed. Both are energy sources and distribution equipment in their respective systems.",
+      "Kettle corresponds to bucket: In water flow, the kettle is the container that stores and heats the water. In heat transfer, the bucket is the container that stores and distributes heat. Both are storage and distribution tools in their respective systems.",
+      "Heating corresponds to filling: In water flow, heating is the process of increasing the energy of water and producing flow. In heat transfer, filling is the process of transferring heat to where it is needed. Both are energy transfer and distribution processes in their respective systems.",
+      "Cooling corresponds to emptying: In water flow, cooling is the process of reducing the energy of water and stopping the flow. In heat transfer, emptying is the process of removing heat from a place. Both are energy consumption and stoppage processes in their respective systems.",
+      "Thermodynamics corresponds to hydrodynamics: In water flow, thermodynamics is the science that studies the energy conversion and transfer of water flow. In heat transfer, hydrodynamics is the science that studies heat transfer and flow of energy. Both are fundamental scientific principles in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6",
+        "n7": "n7",
+        "n8": "n8"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "water flow",
+    "target": "heat transfer"
+  },
+  "domains": {
+    "source": "Geography",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

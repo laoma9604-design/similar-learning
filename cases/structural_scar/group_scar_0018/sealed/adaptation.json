@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0018",
+  "dataset": "scar",
+  "original_id": "18",
+  "source_object_id": "obj_group_scar_0018_src",
+  "target_object_id": "obj_group_scar_0018_tgt",
+  "faithful_mappings": [
+    [
+      "body",
+      "computer"
+    ],
+    [
+      "Neurons",
+      "transistor"
+    ],
+    [
+      "Stimulate",
+      "electric signal"
+    ]
+  ],
+  "explanation": [
+    "Body corresponds to computer: In this mapping, the body and computer respectively represent the environment of the brain and the central processing unit of a computer. The body is the carrier of the brain, in which the brain plays the role of thinking and decision making. The computer, on the other hand, is the hardware platform of the central processing unit, in which the processor carries out various calculations and control tasks.",
+    "Neurons correspond to transistors: Neurons are the basic units in the brain responsible for receiving, processing, and transmitting information. In the field of computer science, transistors are the basic components in the central processing unit responsible for processing and controlling electrical signals. In this mapping, neurons and transistors both represent the basic functional units in their respective systems.",
+    "Stimulate corresponds to electric signal: Stimulate is the way in which information is transmitted between neurons. Neurons will produce corresponding responses after receiving stimulation. In the field of computer science, electric signals are the way in which information is transmitted within the processor, and transistors execute corresponding calculations and control tasks according to electric signals. In this mapping, stimulate and electric signals both represent the way in which information is transmitted in their respective systems."
+  ],
+  "background": {
+    "source": "The brain is one of the most complex organs in the body, serving as the center of the nervous system for all vertebrate and most invertebrate animals. It is made up of billions of neurons connected by synapses, which work together to generate patterns of muscle activity and drive the secretion of hormones. The brain allows for sophisticated purposeful control of behavior based on complex sensory input, which requires the information integrating capabilities of a centralized brain. The operations of individual brain cells are now understood in considerable detail, but the way they cooperate in ensembles of millions is yet to be solved. Despite this, recent models in modern neuroscience treat the brain as a biological computer. Overall, the study of the brain compares the properties of brains across the entire range of animal species, with a focus on vertebrates. This article covers the way the brain stimulates the rest of the body, how neurons work together, and how the brain operates as a complex system.",
+    "target": "A computer processor is a crucial component of a computing system that is responsible for performing operations on memory or other data streams. It is an electrical component that can take the form of a microprocessor and is typically implemented on a single integrated circuit chip. In the past, such processors were constructed using vacuum tubes, transistors, or integrated circuits, but today's processors use built-in transistors that are based on silicon. The processor is often referred to as the central processing unit (CPU) of the system, but it can also include coprocessors like a graphics processing unit (GPU). Essentially, processors work by using electric signals to perform operations on external data sources, making them an integral part of computing technology."
+  },
+  "raw": {
+    "id": 18,
+    "lang": "en",
+    "system_a": "Brain",
+    "system_b": "Computer Processor",
+    "mappings": [
+      [
+        "body",
+        "computer"
+      ],
+      [
+        "Neurons",
+        "transistor"
+      ],
+      [
+        "Stimulate",
+        "electric signal"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Computer",
+    "system_a_background": "The brain is one of the most complex organs in the body, serving as the center of the nervous system for all vertebrate and most invertebrate animals. It is made up of billions of neurons connected by synapses, which work together to generate patterns of muscle activity and drive the secretion of hormones. The brain allows for sophisticated purposeful control of behavior based on complex sensory input, which requires the information integrating capabilities of a centralized brain. The operations of individual brain cells are now understood in considerable detail, but the way they cooperate in ensembles of millions is yet to be solved. Despite this, recent models in modern neuroscience treat the brain as a biological computer. Overall, the study of the brain compares the properties of brains across the entire range of animal species, with a focus on vertebrates. This article covers the way the brain stimulates the rest of the body, how neurons work together, and how the brain operates as a complex system.",
+    "system_b_background": "A computer processor is a crucial component of a computing system that is responsible for performing operations on memory or other data streams. It is an electrical component that can take the form of a microprocessor and is typically implemented on a single integrated circuit chip. In the past, such processors were constructed using vacuum tubes, transistors, or integrated circuits, but today's processors use built-in transistors that are based on silicon. The processor is often referred to as the central processing unit (CPU) of the system, but it can also include coprocessors like a graphics processing unit (GPU). Essentially, processors work by using electric signals to perform operations on external data sources, making them an integral part of computing technology.",
+    "Explanation": [
+      "Body corresponds to computer: In this mapping, the body and computer respectively represent the environment of the brain and the central processing unit of a computer. The body is the carrier of the brain, in which the brain plays the role of thinking and decision making. The computer, on the other hand, is the hardware platform of the central processing unit, in which the processor carries out various calculations and control tasks.",
+      "Neurons correspond to transistors: Neurons are the basic units in the brain responsible for receiving, processing, and transmitting information. In the field of computer science, transistors are the basic components in the central processing unit responsible for processing and controlling electrical signals. In this mapping, neurons and transistors both represent the basic functional units in their respective systems.",
+      "Stimulate corresponds to electric signal: Stimulate is the way in which information is transmitted between neurons. Neurons will produce corresponding responses after receiving stimulation. In the field of computer science, electric signals are the way in which information is transmitted within the processor, and transistors execute corresponding calculations and control tasks according to electric signals. In this mapping, stimulate and electric signals both represent the way in which information is transmitted in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Brain",
+    "target": "Computer Processor"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Computer"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

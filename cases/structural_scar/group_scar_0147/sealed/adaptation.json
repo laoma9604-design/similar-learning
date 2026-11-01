@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0147",
+  "dataset": "scar",
+  "original_id": "147",
+  "source_object_id": "obj_group_scar_0147_src",
+  "target_object_id": "obj_group_scar_0147_tgt",
+  "faithful_mappings": [
+    [
+      "deviation",
+      "bullseye"
+    ],
+    [
+      "variance",
+      "spread"
+    ],
+    [
+      "underfitting",
+      "unstable"
+    ],
+    [
+      "overfitting",
+      "imprecise"
+    ]
+  ],
+  "explanation": [
+    "Deviation corresponds to bullseye: In the bias-variance tradeoff, deviation represents the difference between the model's predicted value and the true value; in archery, bullseye represents the center of the target or the ideal point of impact. Both represent the target or expected value.",
+    "Variance corresponds to the spread of the arrows: In the bias-variance tradeoff, variance represents the degree of dispersion of the model's predicted values; in archery, the spread of the arrows represents their distribution on the target surface. Both represent the stability and consistency of the predicted or actual results.",
+    "Underfitting corresponds to instability: In the bias-variance tradeoff, underfitting represents that the model cannot capture the patterns in the data well, usually through a large deviation; in archery, instability represents that the archer's skill level is unstable, which may result in poor shooting performance. Both represent insufficient process or technical level to achieve the desired effect.",
+    "Overfitting corresponds to imprecision: In the bias-variance tradeoff, overfitting represents that the model is too complex, fits the training data well, but performs poorly on new data, usually through a large variance; in archery, imprecision represents that the archer's shooting cannot accurately hit the target. Both represent a process or a technical level that is too complex, leading to an undesirable actual effect."
+  ],
+  "background": {
+    "source": "In the world of econometrics, endogeneity can pose a major problem for researchers. This occurs when an explanatory variable is correlated with the error term, which can lead to biased estimates and flawed policy recommendations. One common issue is the correlation between explanatory variables and the error term, which can arise from unobserved variables or errors in measurement. To combat endogeneity, researchers often turn to instrumental variable techniques. However, it is important to strike a balance between bias and variance when using these techniques to avoid underfitting or overfitting data. Striving for a bias-variance equilibrium is key in producing accurate and reliable results in non-experimental research.",
+    "target": "Archery is an ancient sport, dating back to the early civilizations that used it for hunting and combat. Today, it is a popular competitive sport and recreational activity enjoyed by people from all walks of life. Archers use a bow to shoot arrows at a bullseye target, trying to hit the center for the highest score. However, archery can be challenging and requires a lot of skill and practice as the bow can be unstable and imprecise, making it difficult to consistently hit the target. The spread of arrows can be unpredictable, making it a thrilling and exciting sport to participate in. Despite its challenges, archery remains a beloved pastime for many people around the globe, and it continues to capture the imagination of both beginners and skilled archers alike."
+  },
+  "raw": {
+    "id": 147,
+    "lang": "en",
+    "system_a": "Bias-Variance Equilibrium",
+    "system_b": "Archery",
+    "mappings": [
+      [
+        "deviation",
+        "bullseye"
+      ],
+      [
+        "variance",
+        "spread"
+      ],
+      [
+        "underfitting",
+        "unstable"
+      ],
+      [
+        "overfitting",
+        "imprecise"
+      ]
+    ],
+    "system_a_domain": "Computer",
+    "system_b_domain": "Sport",
+    "system_a_background": "In the world of econometrics, endogeneity can pose a major problem for researchers. This occurs when an explanatory variable is correlated with the error term, which can lead to biased estimates and flawed policy recommendations. One common issue is the correlation between explanatory variables and the error term, which can arise from unobserved variables or errors in measurement. To combat endogeneity, researchers often turn to instrumental variable techniques. However, it is important to strike a balance between bias and variance when using these techniques to avoid underfitting or overfitting data. Striving for a bias-variance equilibrium is key in producing accurate and reliable results in non-experimental research.",
+    "system_b_background": "Archery is an ancient sport, dating back to the early civilizations that used it for hunting and combat. Today, it is a popular competitive sport and recreational activity enjoyed by people from all walks of life. Archers use a bow to shoot arrows at a bullseye target, trying to hit the center for the highest score. However, archery can be challenging and requires a lot of skill and practice as the bow can be unstable and imprecise, making it difficult to consistently hit the target. The spread of arrows can be unpredictable, making it a thrilling and exciting sport to participate in. Despite its challenges, archery remains a beloved pastime for many people around the globe, and it continues to capture the imagination of both beginners and skilled archers alike.",
+    "Explanation": [
+      "Deviation corresponds to bullseye: In the bias-variance tradeoff, deviation represents the difference between the model's predicted value and the true value; in archery, bullseye represents the center of the target or the ideal point of impact. Both represent the target or expected value.",
+      "Variance corresponds to the spread of the arrows: In the bias-variance tradeoff, variance represents the degree of dispersion of the model's predicted values; in archery, the spread of the arrows represents their distribution on the target surface. Both represent the stability and consistency of the predicted or actual results.",
+      "Underfitting corresponds to instability: In the bias-variance tradeoff, underfitting represents that the model cannot capture the patterns in the data well, usually through a large deviation; in archery, instability represents that the archer's skill level is unstable, which may result in poor shooting performance. Both represent insufficient process or technical level to achieve the desired effect.",
+      "Overfitting corresponds to imprecision: In the bias-variance tradeoff, overfitting represents that the model is too complex, fits the training data well, but performs poorly on new data, usually through a large variance; in archery, imprecision represents that the archer's shooting cannot accurately hit the target. Both represent a process or a technical level that is too complex, leading to an undesirable actual effect."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Bias-Variance Equilibrium",
+    "target": "Archery"
+  },
+  "domains": {
+    "source": "Computer",
+    "target": "Sport"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

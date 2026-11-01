@@ -1,0 +1,12 @@
+{
+  "objects": [
+    {
+      "object_id": "obj_group_scar_0243_tgt",
+      "file": "obj_group_scar_0243_tgt.json"
+    },
+    {
+      "object_id": "obj_group_scar_0243_src",
+      "file": "obj_group_scar_0243_src.json"
+    }
+  ]
+}

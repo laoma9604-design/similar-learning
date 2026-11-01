@@ -1,0 +1,26 @@
+{
+  "group_id": "group_scar_0077",
+  "dataset": "scar",
+  "relation_type": "scar_analogy",
+  "schema_version": "topoadv-schema-0.3.1",
+  "vocab_version": "topoadv-vocab-0.1.1",
+  "split": "train",
+  "object_ids": [
+    "obj_group_scar_0077_tgt",
+    "obj_group_scar_0077_src"
+  ],
+  "task_ids": [
+    "task_group_scar_0077_t01"
+  ],
+  "task_counts": {
+    "positive": 1,
+    "negative": 0,
+    "total": 1
+  },
+  "source_counts": {
+    "positive": 1,
+    "negative": 0
+  },
+  "node_count": 2,
+  "multiple_mapping_type": "none"
+}

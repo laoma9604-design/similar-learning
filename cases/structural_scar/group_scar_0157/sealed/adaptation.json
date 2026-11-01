@@ -1,0 +1,75 @@
+{
+  "adaptation_id": "adapt_scar_0157",
+  "dataset": "scar",
+  "original_id": "157",
+  "source_object_id": "obj_group_scar_0157_src",
+  "target_object_id": "obj_group_scar_0157_tgt",
+  "faithful_mappings": [
+    [
+      "generator",
+      "painter"
+    ],
+    [
+      "discriminator",
+      "criticizer"
+    ]
+  ],
+  "explanation": [
+    "Generator corresponds to Painter: In GAN algorithm, the generator is responsible for generating new data samples; in the analogy between painters and critics, painters are responsible for creating new works. Both are roles in creating new things.",
+    "Discriminator corresponds to Critic: In GAN algorithm, the discriminator is responsible for determining whether the generated data sample is real; in the analogy between painters and critics, critics are responsible for evaluating the quality of the work. Both are roles in evaluating creative results."
+  ],
+  "background": {
+    "source": "The GAN Algorithm, or Generative Adversarial Network, is a powerful deep learning technique for generating synthetic data that is indistinguishable from real data. One variant of this algorithm, the Wasserstein GAN, was proposed in 2017 and addresses some key issues with the original GAN. Specifically, it provides a more stable learning signal to the generator by using a better discriminator. This means that the algorithm can be applied to high dimensional spaces and is less prone to mode collapse, a common issue with the original GAN. Overall, the GAN algorithm is a valuable tool for generating synthetic data and the Wasserstein GAN is a promising variation with improved stability.",
+    "target": "Farhad Pirbal is a multi-talented Kurdish artist, who has excelled in various fields including painting, philosophy, music, poetry, and literary criticism. He was born in Southern Kurdistan and pursued his studies in Kurdish language and literature at the University of Sulaymaniyah. He later moved to Europe, where he continued his studies at the University of Sorbonne, specializing in Kurdish literature. Despite being based in France for several years, Pirbal remained connected to his roots and established the Sharafkhan Badlisi cultural center upon his return to Southern Kurdistan in 1994. Along with his literary pursuits, Pirbal has also made significant contributions as a painter and criticizer, showcasing his talents in the realm of visual arts."
+  },
+  "raw": {
+    "id": 157,
+    "lang": "en",
+    "system_a": "GAN Algorithm",
+    "system_b": "Painter and Critic",
+    "mappings": [
+      [
+        "generator",
+        "painter"
+      ],
+      [
+        "discriminator",
+        "criticizer"
+      ]
+    ],
+    "system_a_domain": "Computer",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "The GAN Algorithm, or Generative Adversarial Network, is a powerful deep learning technique for generating synthetic data that is indistinguishable from real data. One variant of this algorithm, the Wasserstein GAN, was proposed in 2017 and addresses some key issues with the original GAN. Specifically, it provides a more stable learning signal to the generator by using a better discriminator. This means that the algorithm can be applied to high dimensional spaces and is less prone to mode collapse, a common issue with the original GAN. Overall, the GAN algorithm is a valuable tool for generating synthetic data and the Wasserstein GAN is a promising variation with improved stability.",
+    "system_b_background": "Farhad Pirbal is a multi-talented Kurdish artist, who has excelled in various fields including painting, philosophy, music, poetry, and literary criticism. He was born in Southern Kurdistan and pursued his studies in Kurdish language and literature at the University of Sulaymaniyah. He later moved to Europe, where he continued his studies at the University of Sorbonne, specializing in Kurdish literature. Despite being based in France for several years, Pirbal remained connected to his roots and established the Sharafkhan Badlisi cultural center upon his return to Southern Kurdistan in 1994. Along with his literary pursuits, Pirbal has also made significant contributions as a painter and criticizer, showcasing his talents in the realm of visual arts.",
+    "Explanation": [
+      "Generator corresponds to Painter: In GAN algorithm, the generator is responsible for generating new data samples; in the analogy between painters and critics, painters are responsible for creating new works. Both are roles in creating new things.",
+      "Discriminator corresponds to Critic: In GAN algorithm, the discriminator is responsible for determining whether the generated data sample is real; in the analogy between painters and critics, critics are responsible for evaluating the quality of the work. Both are roles in evaluating creative results."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "GAN Algorithm",
+    "target": "Painter and Critic"
+  },
+  "domains": {
+    "source": "Computer",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

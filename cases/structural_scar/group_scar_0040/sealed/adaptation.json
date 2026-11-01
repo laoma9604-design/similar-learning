@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0040",
+  "dataset": "scar",
+  "original_id": "40",
+  "source_object_id": "obj_group_scar_0040_src",
+  "target_object_id": "obj_group_scar_0040_tgt",
+  "faithful_mappings": [
+    [
+      "early warning",
+      "physical examination"
+    ],
+    [
+      "protect environment",
+      "healthy lifestyle"
+    ],
+    [
+      "rescue",
+      "treat"
+    ]
+  ],
+  "explanation": [
+    "Early warning corresponds to physical examination: early warning of natural disasters is to detect potential disaster risks in advance in order to take measures to reduce their impact; physical examination is to detect potential health problems in advance for timely treatment. Both are means of detecting problems in advance in order to take measures to reduce their consequences.",
+    "Protecting the environment corresponds to a healthy lifestyle: protecting the environment is to reduce the occurrence and impact of natural disasters and create a sustainable ecological environment; a healthy lifestyle is to prevent the occurrence and development of diseases and maintain individual health. Both aim to prevent problems from occurring and developing through active measures.",
+    "Rescue corresponds to treatment: after a natural disaster, rescue work is to save lives, reduce losses, and restore normal life; after a disease occurs, treatment is to restore health, reduce pain, and prevent complications. Both are measures taken after the problem occurs, aiming to restore normal status."
+  ],
+  "background": {
+    "source": "Natural disasters are events caused by natural hazards that bring about a negative impact on a community, leading to the loss of life, damage to property, and economic loss. The severity of the damage depends on the community's resilience and the available infrastructure. Examples of natural hazards include floods, earthquakes, wildfires, and hurricanes. However, the line between natural, man-made and man-accelerated disasters is often blurred. Human choices and activities, including poor resource management and climate change, may contribute to the occurrence of natural disasters. Natural disasters can be further aggravated by inadequate building norms, marginalized populations, inequities, and unplanned growth. Early warning systems and a focus on protecting the environment can help prevent or minimize the damage from natural disasters. Effective rescue and disaster management systems play a critical role in mitigating the consequences of natural disasters. Once a disaster strikes, communities may take years to recover, with the repair period leading to further vulnerability. The mental health of affected communities is also impacted, necessitating collective processing to foster resilience and increased community engagement.",
+    "target": "Diseases are abnormal conditions that negatively impact the structure or function of all or part of an organism. They can be caused by external factors or internal dysfunctions and can affect people physically and mentally. There are four main types of diseases: infectious, deficiency, hereditary, and physiological. To prevent and treat diseases, physical examination and adopting a healthy lifestyle are crucial. In some cases, diseases can be treated with medication or medical procedures. Pathology is the study of disease and its causes. It is essential to educate and raise awareness about diseases and their prevention measures to maintain a healthy life."
+  },
+  "raw": {
+    "id": 40,
+    "lang": "en",
+    "system_a": "Natural Disasters",
+    "system_b": "Diseases",
+    "mappings": [
+      [
+        "early warning",
+        "physical examination"
+      ],
+      [
+        "protect environment",
+        "healthy lifestyle"
+      ],
+      [
+        "rescue",
+        "treat"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Biology",
+    "system_a_background": "Natural disasters are events caused by natural hazards that bring about a negative impact on a community, leading to the loss of life, damage to property, and economic loss. The severity of the damage depends on the community's resilience and the available infrastructure. Examples of natural hazards include floods, earthquakes, wildfires, and hurricanes. However, the line between natural, man-made and man-accelerated disasters is often blurred. Human choices and activities, including poor resource management and climate change, may contribute to the occurrence of natural disasters. Natural disasters can be further aggravated by inadequate building norms, marginalized populations, inequities, and unplanned growth. Early warning systems and a focus on protecting the environment can help prevent or minimize the damage from natural disasters. Effective rescue and disaster management systems play a critical role in mitigating the consequences of natural disasters. Once a disaster strikes, communities may take years to recover, with the repair period leading to further vulnerability. The mental health of affected communities is also impacted, necessitating collective processing to foster resilience and increased community engagement.",
+    "system_b_background": "Diseases are abnormal conditions that negatively impact the structure or function of all or part of an organism. They can be caused by external factors or internal dysfunctions and can affect people physically and mentally. There are four main types of diseases: infectious, deficiency, hereditary, and physiological. To prevent and treat diseases, physical examination and adopting a healthy lifestyle are crucial. In some cases, diseases can be treated with medication or medical procedures. Pathology is the study of disease and its causes. It is essential to educate and raise awareness about diseases and their prevention measures to maintain a healthy life.",
+    "Explanation": [
+      "Early warning corresponds to physical examination: early warning of natural disasters is to detect potential disaster risks in advance in order to take measures to reduce their impact; physical examination is to detect potential health problems in advance for timely treatment. Both are means of detecting problems in advance in order to take measures to reduce their consequences.",
+      "Protecting the environment corresponds to a healthy lifestyle: protecting the environment is to reduce the occurrence and impact of natural disasters and create a sustainable ecological environment; a healthy lifestyle is to prevent the occurrence and development of diseases and maintain individual health. Both aim to prevent problems from occurring and developing through active measures.",
+      "Rescue corresponds to treatment: after a natural disaster, rescue work is to save lives, reduce losses, and restore normal life; after a disease occurs, treatment is to restore health, reduce pain, and prevent complications. Both are measures taken after the problem occurs, aiming to restore normal status."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Natural Disasters",
+    "target": "Diseases"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

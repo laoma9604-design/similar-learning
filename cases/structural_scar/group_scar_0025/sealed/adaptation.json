@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0025",
+  "dataset": "scar",
+  "original_id": "25",
+  "source_object_id": "obj_group_scar_0025_src",
+  "target_object_id": "obj_group_scar_0025_tgt",
+  "faithful_mappings": [
+    [
+      "Signal",
+      "electric current"
+    ],
+    [
+      "receptor",
+      "sensor"
+    ],
+    [
+      "Signal transduction pathway",
+      "circuit"
+    ]
+  ],
+  "explanation": [
+    "Signal corresponds to electric current: In cellular signal transduction, a signal refers to biological signaling molecules, such as hormones or neurotransmitters, which transmit information between cells. In electronic signal transmission, electric current serves as the signal transmission medium and is responsible for transmitting information in circuits.",
+    "Receptor corresponds to sensor: In cellular signal transduction, a receptor is a special protein on the cell surface that can recognize and bind to specific signaling molecules, thereby triggering the signal transduction pathway. In electronic signal transmission, a sensor is a device that can detect specific physical or chemical phenomena and convert them into electrical signals.",
+    "Signal transduction pathway corresponds to circuit: In cellular signal transduction, the signal transduction pathway is a network composed of a series of biological reactions, responsible for transmitting signals from the receptor to the interior of the cell, thereby triggering biological effects. In electronic signal transmission, a circuit is a path composed of electronic components that transmit electrical signals from the sensor to other electronic devices for processing and response."
+  ],
+  "background": {
+    "source": "Cell signaling, also known as cell communication, is a crucial function in all living cells. It involves the ability of a cell to receive, process, and transmit signals with its environment and with itself. Signals can come from physical agents like mechanical pressure, temperature, or chemical signals. There are different types of signaling depending on the distance between the cells. Receptors, which are usually proteins located on the cell surface or inside the cell, play a key role in detecting chemical signals or physical stimuli. Signal transduction pathways start with the transformation of a signal into a chemical one, which can activate an ion channel or initiate a second messenger system cascade that propagates the signal through the cell. Downstream effects of signaling pathways may include various enzymatic activities. Each cell is programmed to respond to specific extracellular signals, and errors in signaling interactions may cause diseases. In summary, understanding the mechanisms of cell signaling and signal transduction pathway is essential for development, tissue repair, immunity, and maintaining homeostasis.",
+    "target": "Electronic Signal Transmission involves the collection and analysis of various signals through the use of electronic sensors and circuits. This process is known as Signals Intelligence (SIGINT) and involves intercepting communication signals, as well as electronic signals not directly used in communication. The use of cryptanalysis is necessary to decipher encrypted messages, and traffic analysis is implemented to gather information on who is communicating with whom and how frequently. Overall, electronic signal transmission plays a crucial role in intelligence collection management."
+  },
+  "raw": {
+    "id": 25,
+    "lang": "en",
+    "system_a": "Cell Signaling",
+    "system_b": "Electronic Signal Transmission",
+    "mappings": [
+      [
+        "Signal",
+        "electric current"
+      ],
+      [
+        "receptor",
+        "sensor"
+      ],
+      [
+        "Signal transduction pathway",
+        "circuit"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Physics",
+    "system_a_background": "Cell signaling, also known as cell communication, is a crucial function in all living cells. It involves the ability of a cell to receive, process, and transmit signals with its environment and with itself. Signals can come from physical agents like mechanical pressure, temperature, or chemical signals. There are different types of signaling depending on the distance between the cells. Receptors, which are usually proteins located on the cell surface or inside the cell, play a key role in detecting chemical signals or physical stimuli. Signal transduction pathways start with the transformation of a signal into a chemical one, which can activate an ion channel or initiate a second messenger system cascade that propagates the signal through the cell. Downstream effects of signaling pathways may include various enzymatic activities. Each cell is programmed to respond to specific extracellular signals, and errors in signaling interactions may cause diseases. In summary, understanding the mechanisms of cell signaling and signal transduction pathway is essential for development, tissue repair, immunity, and maintaining homeostasis.",
+    "system_b_background": "Electronic Signal Transmission involves the collection and analysis of various signals through the use of electronic sensors and circuits. This process is known as Signals Intelligence (SIGINT) and involves intercepting communication signals, as well as electronic signals not directly used in communication. The use of cryptanalysis is necessary to decipher encrypted messages, and traffic analysis is implemented to gather information on who is communicating with whom and how frequently. Overall, electronic signal transmission plays a crucial role in intelligence collection management.",
+    "Explanation": [
+      "Signal corresponds to electric current: In cellular signal transduction, a signal refers to biological signaling molecules, such as hormones or neurotransmitters, which transmit information between cells. In electronic signal transmission, electric current serves as the signal transmission medium and is responsible for transmitting information in circuits.",
+      "Receptor corresponds to sensor: In cellular signal transduction, a receptor is a special protein on the cell surface that can recognize and bind to specific signaling molecules, thereby triggering the signal transduction pathway. In electronic signal transmission, a sensor is a device that can detect specific physical or chemical phenomena and convert them into electrical signals.",
+      "Signal transduction pathway corresponds to circuit: In cellular signal transduction, the signal transduction pathway is a network composed of a series of biological reactions, responsible for transmitting signals from the receptor to the interior of the cell, thereby triggering biological effects. In electronic signal transmission, a circuit is a path composed of electronic components that transmit electrical signals from the sensor to other electronic devices for processing and response."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Cell Signaling",
+    "target": "Electronic Signal Transmission"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

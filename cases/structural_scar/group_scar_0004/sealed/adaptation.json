@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0004",
+  "dataset": "scar",
+  "original_id": "4",
+  "source_object_id": "obj_group_scar_0004_src",
+  "target_object_id": "obj_group_scar_0004_tgt",
+  "faithful_mappings": [
+    [
+      "pathogen",
+      "fire"
+    ],
+    [
+      "crowd",
+      "combustibles"
+    ],
+    [
+      "Prevention and control measures",
+      "Fire fighting methods"
+    ]
+  ],
+  "explanation": [
+    "Pathogens correspond to fire: in the transmission of pathogens, pathogens (such as viruses and bacteria) are the causes of diseases that spread and cause health problems among people. In the spread of fires, fire is the element that ignites fires, spreading among combustibles and causing property damage and endangering lives. In this mapping, both pathogens and fire are the core factors of transmission and propagation in their respective systems.",
+    "Crowds correspond to combustibles: in the transmission of pathogens, crowds are the main channel for the spread of pathogens, which spread through contact and airborne droplets among people. In the spread of fires, combustibles (such as wood, paper, chemicals, etc.) are the key factors that allow fire to spread, as fire ignites combustibles to expand the blaze. In this mapping, both crowds and combustibles are the main channels and carriers of transmission and propagation in their respective systems.",
+    "Prevention and control measures correspond to fire fighting methods: in the transmission of pathogens, prevention and control measures (such as wearing masks, keeping social distance, vaccination, etc.) aim to slow down the speed and scope of pathogen transmission and reduce the impact of epidemics. In the spread of fires, fire fighting methods (such as fire extinguishers, firefighting equipment, fire brigades, etc.) are used to control the spread of fire, reducing the damage caused by fires. In this mapping, both prevention and control measures and fire fighting methods are means used in their respective systems to control and respond to transmission and propagation."
+  ],
+  "background": {
+    "source": "The spread of pathogens is a serious concern, especially in crowded environments where individuals are in close proximity to each other. The incident aboard the Japan Air Lines Boeing 747 serves as a harsh reminder of the potential impacts of pathogen contamination. The incident involved the consumption of a contaminated in-flight meal that contained Staphylococci bacteria, resulting in the illness of 197 individuals. The incident highlights the need for effective prevention and control measures to minimize the spread of pathogens in crowded settings. These measures may include proper hygiene practices, regular sanitization, and the use of protective equipment to limit the transmission of pathogens. By taking proactive measures, the risk of contamination and illness can be reduced, ensuring the safety and health of individuals in crowded environments.",
+    "target": "Fire is a natural process that is essential for maintaining ecological systems, but when it becomes out of control, it can cause significant damage. Fire occurs when a material undergoes rapid oxidation during combustion, releasing heat, light, and reaction products. Flames are produced at a certain point in the combustion reaction, which is known as ignition point. The color and intensity of the flame will vary depending on the substances alight and any impurities outside. In its most common form, fire can result in conflagration, which can cause damage to life and property. Fire can also cause atmospheric pollution and water contamination. However, fire also has some positive effects, such as stimulating growth and maintaining ecological systems. Fire has been used by humans for various purposes such as rituals, in agriculture for clearing land, cooking, generating heat and light, propulsion purposes, smelting, forging, incineration of waste, cremation, and as a weapon or mode of destruction. Fire fighting methods are crucial to control the spread of fire, especially in hazardous situations."
+  },
+  "raw": {
+    "id": 4,
+    "lang": "en",
+    "system_a": "Spread of Pathogens",
+    "system_b": "Spread of Fire",
+    "mappings": [
+      [
+        "pathogen",
+        "fire"
+      ],
+      [
+        "crowd",
+        "combustibles"
+      ],
+      [
+        "Prevention and control measures",
+        "Fire fighting methods"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Physics",
+    "system_a_background": "The spread of pathogens is a serious concern, especially in crowded environments where individuals are in close proximity to each other. The incident aboard the Japan Air Lines Boeing 747 serves as a harsh reminder of the potential impacts of pathogen contamination. The incident involved the consumption of a contaminated in-flight meal that contained Staphylococci bacteria, resulting in the illness of 197 individuals. The incident highlights the need for effective prevention and control measures to minimize the spread of pathogens in crowded settings. These measures may include proper hygiene practices, regular sanitization, and the use of protective equipment to limit the transmission of pathogens. By taking proactive measures, the risk of contamination and illness can be reduced, ensuring the safety and health of individuals in crowded environments.",
+    "system_b_background": "Fire is a natural process that is essential for maintaining ecological systems, but when it becomes out of control, it can cause significant damage. Fire occurs when a material undergoes rapid oxidation during combustion, releasing heat, light, and reaction products. Flames are produced at a certain point in the combustion reaction, which is known as ignition point. The color and intensity of the flame will vary depending on the substances alight and any impurities outside. In its most common form, fire can result in conflagration, which can cause damage to life and property. Fire can also cause atmospheric pollution and water contamination. However, fire also has some positive effects, such as stimulating growth and maintaining ecological systems. Fire has been used by humans for various purposes such as rituals, in agriculture for clearing land, cooking, generating heat and light, propulsion purposes, smelting, forging, incineration of waste, cremation, and as a weapon or mode of destruction. Fire fighting methods are crucial to control the spread of fire, especially in hazardous situations.",
+    "Explanation": [
+      "Pathogens correspond to fire: in the transmission of pathogens, pathogens (such as viruses and bacteria) are the causes of diseases that spread and cause health problems among people. In the spread of fires, fire is the element that ignites fires, spreading among combustibles and causing property damage and endangering lives. In this mapping, both pathogens and fire are the core factors of transmission and propagation in their respective systems.",
+      "Crowds correspond to combustibles: in the transmission of pathogens, crowds are the main channel for the spread of pathogens, which spread through contact and airborne droplets among people. In the spread of fires, combustibles (such as wood, paper, chemicals, etc.) are the key factors that allow fire to spread, as fire ignites combustibles to expand the blaze. In this mapping, both crowds and combustibles are the main channels and carriers of transmission and propagation in their respective systems.",
+      "Prevention and control measures correspond to fire fighting methods: in the transmission of pathogens, prevention and control measures (such as wearing masks, keeping social distance, vaccination, etc.) aim to slow down the speed and scope of pathogen transmission and reduce the impact of epidemics. In the spread of fires, fire fighting methods (such as fire extinguishers, firefighting equipment, fire brigades, etc.) are used to control the spread of fire, reducing the damage caused by fires. In this mapping, both prevention and control measures and fire fighting methods are means used in their respective systems to control and respond to transmission and propagation."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Spread of Pathogens",
+    "target": "Spread of Fire"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

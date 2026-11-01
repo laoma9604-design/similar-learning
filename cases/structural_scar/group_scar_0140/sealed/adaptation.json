@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0140",
+  "dataset": "scar",
+  "original_id": "140",
+  "source_object_id": "obj_group_scar_0140_src",
+  "target_object_id": "obj_group_scar_0140_tgt",
+  "faithful_mappings": [
+    [
+      "debugging",
+      "detective"
+    ],
+    [
+      "debugging tool",
+      "detective tool"
+    ],
+    [
+      "Debugging process",
+      "reasoning process"
+    ]
+  ],
+  "explanation": [
+    "Debugging corresponds to detective work: In program code, debugging is done to find errors and fix them. At a crime scene, a detective looks for clues and reconstructs the crime process. Both are processes of finding and solving problems.",
+    "Debugging tools correspond to detective tools: In program code, debugging tools like breakpoints, step-by-step execution, etc. help programmers find errors. At a crime scene, detective tools like fingerprint powder, magnifying glass, etc. help detectives find clues. Both are tools used to aid in discovering problems.",
+    "The debugging process corresponds to the reasoning process: In program code, the debugging process is the step-by-step process by which programmers observe how the code executes and gradually find and fix errors. At a crime scene, the reasoning process is the step-by-step process by which detectives collect clues, analyze evidence, and gradually reveal the truth behind the crime. Both are processes of problem-solving through logical analysis and reasoning."
+  ],
+  "background": {
+    "source": "A computer program is a set of instructions written in a programming language for a computer to execute. It is an essential component of software, which also comprises of documentation and other intangible components. The human-readable form of a computer program is called source code, which needs to be translated into machine instructions using a compiler or interpreter to execute. Debugging is an integral part of the programming process, which involves identifying and resolving errors in the program's source code. Debugging tools help developers diagnose and fix errors during the debugging process to ensure the program runs as intended.",
+    "target": "A crime scene is a place where a crime occurred and can provide important clues and evidence that can help detectives in their investigation. Detectives use various tools and techniques to analyze the crime scene and gather information to aid in their reasoning process. This can include collecting DNA samples, fingerprint analysis, photographing the location, and interviewing witnesses. With the use of detective tools and a thorough reasoning process, detectives aim to piece together what happened at the crime scene and ultimately solve the case. The term \"Crime Scene\" also refers to various media, including a TV program, a video game, and a docuseries, that focus on the investigation of crimes and the analysis of crime scenes."
+  },
+  "raw": {
+    "id": 140,
+    "lang": "en",
+    "system_a": "Program Code",
+    "system_b": "Crime Scene",
+    "mappings": [
+      [
+        "debugging",
+        "detective"
+      ],
+      [
+        "debugging tool",
+        "detective tool"
+      ],
+      [
+        "Debugging process",
+        "reasoning process"
+      ]
+    ],
+    "system_a_domain": "Computer",
+    "system_b_domain": "Art",
+    "system_a_background": "A computer program is a set of instructions written in a programming language for a computer to execute. It is an essential component of software, which also comprises of documentation and other intangible components. The human-readable form of a computer program is called source code, which needs to be translated into machine instructions using a compiler or interpreter to execute. Debugging is an integral part of the programming process, which involves identifying and resolving errors in the program's source code. Debugging tools help developers diagnose and fix errors during the debugging process to ensure the program runs as intended.",
+    "system_b_background": "A crime scene is a place where a crime occurred and can provide important clues and evidence that can help detectives in their investigation. Detectives use various tools and techniques to analyze the crime scene and gather information to aid in their reasoning process. This can include collecting DNA samples, fingerprint analysis, photographing the location, and interviewing witnesses. With the use of detective tools and a thorough reasoning process, detectives aim to piece together what happened at the crime scene and ultimately solve the case. The term \"Crime Scene\" also refers to various media, including a TV program, a video game, and a docuseries, that focus on the investigation of crimes and the analysis of crime scenes.",
+    "Explanation": [
+      "Debugging corresponds to detective work: In program code, debugging is done to find errors and fix them. At a crime scene, a detective looks for clues and reconstructs the crime process. Both are processes of finding and solving problems.",
+      "Debugging tools correspond to detective tools: In program code, debugging tools like breakpoints, step-by-step execution, etc. help programmers find errors. At a crime scene, detective tools like fingerprint powder, magnifying glass, etc. help detectives find clues. Both are tools used to aid in discovering problems.",
+      "The debugging process corresponds to the reasoning process: In program code, the debugging process is the step-by-step process by which programmers observe how the code executes and gradually find and fix errors. At a crime scene, the reasoning process is the step-by-step process by which detectives collect clues, analyze evidence, and gradually reveal the truth behind the crime. Both are processes of problem-solving through logical analysis and reasoning."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Program Code",
+    "target": "Crime Scene"
+  },
+  "domains": {
+    "source": "Computer",
+    "target": "Art"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0030",
+  "dataset": "scar",
+  "original_id": "30",
+  "source_object_id": "obj_group_scar_0030_src",
+  "target_object_id": "obj_group_scar_0030_tgt",
+  "faithful_mappings": [
+    [
+      "Historical events",
+      "species evolution"
+    ],
+    [
+      "historical period",
+      "biological period"
+    ],
+    [
+      "Cultural, Political, Economic Changes",
+      "Adapt to the environment"
+    ]
+  ],
+  "explanation": [
+    "Historical events correspond to species evolution: Key changes in human social development occur at critical nodes in historical events, such as wars and political upheavals. In biological evolution, species evolve gradually over a long period of time. Here, historical events and species evolution represent significant changes in their respective fields.",
+    "Historical periods correspond to biological periods: Historical periods are time periods that divide the course of human history, such as ancient, medieval, and modern periods. Biological periods are periods in biological evolution, such as the Cambrian and Jurassic periods. Here, historical periods and biological periods both represent a specific time period.",
+    "Cultural, political, and economic changes correspond to adaptation to the environment: Cultural, political, and economic changes in human social development reflect the characteristics of different periods. Adaptation to the environment in biological evolution is the process of adaptation that occurs as species evolve to survive in a constantly changing environment. Here, cultural, political, and economic changes, and adaptation to the environment all represent evolution and adaptation in their respective fields."
+  ],
+  "background": {
+    "source": "The Haber process, invented by Fritz Haber in 1909, revolutionized the industrial synthesis of explosives and nitrogen fertilizers. The process allowed for the economic fixation of atmospheric dinitrogen in the form of ammonia, which led to the development of intensive agriculture during the interwar period and supported worldwide population growth. The effectiveness of the Haber process has had a significant ecological impact, with half of the nitrogen in synthetic fertilizers not being assimilated by plants and finding its way into the atmosphere and rivers. This technological innovation has had a profound impact on historical events, cultural changes, political and economic changes over the past century.",
+    "target": "Biological evolution, a fundamental concept in biology, refers to the gradual, heritable changes in the characteristics of species over successive generations. These changes, which arise from genetic mutations and recombination, are shaped by two primary mechanisms: natural selection and genetic drift. Natural selection is the process by which favorable traits that enable organisms to better adapt to their environment become more common in a population, whereas genetic drift occurs when chance events result in certain traits becoming more or less common in a population. These mechanisms have led to the vast diversity of life on Earth, from microbial organisms to complex multicellular creatures.\n\nThe period of biological evolution stretches back billions of years, from the origin of life on Earth approximately 3.5-3.8 billion years ago to the speciation, anagenesis, and extinction events that continue to shape the biodiversity of the planet today. The fossil record serves as a chronicle of this evolutionary history, and patterns of morphological and biochemical similarity allow scientists to discern the relatedness of different species and construct phylogenetic trees of life.\n\nThe ability of organisms to adapt to their environment through evolutionary processes has far-reaching implications, influencing not only the development of biology itself, but also fields such as agriculture, medicine, and computer science. As evolutionary biologists continue to develop and test hypotheses, their discoveries will undoubtedly continue to inform and inspire new findings in numerous areas of study."
+  },
+  "raw": {
+    "id": 30,
+    "lang": "en",
+    "system_a": "The Process of History",
+    "system_b": "Biological Evolution",
+    "mappings": [
+      [
+        "Historical events",
+        "species evolution"
+      ],
+      [
+        "historical period",
+        "biological period"
+      ],
+      [
+        "Cultural, Political, Economic Changes",
+        "Adapt to the environment"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "Biology",
+    "system_a_background": "The Haber process, invented by Fritz Haber in 1909, revolutionized the industrial synthesis of explosives and nitrogen fertilizers. The process allowed for the economic fixation of atmospheric dinitrogen in the form of ammonia, which led to the development of intensive agriculture during the interwar period and supported worldwide population growth. The effectiveness of the Haber process has had a significant ecological impact, with half of the nitrogen in synthetic fertilizers not being assimilated by plants and finding its way into the atmosphere and rivers. This technological innovation has had a profound impact on historical events, cultural changes, political and economic changes over the past century.",
+    "system_b_background": "Biological evolution, a fundamental concept in biology, refers to the gradual, heritable changes in the characteristics of species over successive generations. These changes, which arise from genetic mutations and recombination, are shaped by two primary mechanisms: natural selection and genetic drift. Natural selection is the process by which favorable traits that enable organisms to better adapt to their environment become more common in a population, whereas genetic drift occurs when chance events result in certain traits becoming more or less common in a population. These mechanisms have led to the vast diversity of life on Earth, from microbial organisms to complex multicellular creatures.\n\nThe period of biological evolution stretches back billions of years, from the origin of life on Earth approximately 3.5-3.8 billion years ago to the speciation, anagenesis, and extinction events that continue to shape the biodiversity of the planet today. The fossil record serves as a chronicle of this evolutionary history, and patterns of morphological and biochemical similarity allow scientists to discern the relatedness of different species and construct phylogenetic trees of life.\n\nThe ability of organisms to adapt to their environment through evolutionary processes has far-reaching implications, influencing not only the development of biology itself, but also fields such as agriculture, medicine, and computer science. As evolutionary biologists continue to develop and test hypotheses, their discoveries will undoubtedly continue to inform and inspire new findings in numerous areas of study.",
+    "Explanation": [
+      "Historical events correspond to species evolution: Key changes in human social development occur at critical nodes in historical events, such as wars and political upheavals. In biological evolution, species evolve gradually over a long period of time. Here, historical events and species evolution represent significant changes in their respective fields.",
+      "Historical periods correspond to biological periods: Historical periods are time periods that divide the course of human history, such as ancient, medieval, and modern periods. Biological periods are periods in biological evolution, such as the Cambrian and Jurassic periods. Here, historical periods and biological periods both represent a specific time period.",
+      "Cultural, political, and economic changes correspond to adaptation to the environment: Cultural, political, and economic changes in human social development reflect the characteristics of different periods. Adaptation to the environment in biological evolution is the process of adaptation that occurs as species evolve to survive in a constantly changing environment. Here, cultural, political, and economic changes, and adaptation to the environment all represent evolution and adaptation in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "The Process of History",
+    "target": "Biological Evolution"
+  },
+  "domains": {
+    "source": "History",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

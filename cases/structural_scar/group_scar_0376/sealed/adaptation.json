@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0376",
+  "dataset": "scar",
+  "original_id": "376",
+  "source_object_id": "obj_group_scar_0376_src",
+  "target_object_id": "obj_group_scar_0376_tgt",
+  "faithful_mappings": [
+    [
+      "atom",
+      "individual"
+    ],
+    [
+      "nearby electronics",
+      "acquaintance"
+    ],
+    [
+      "atomic potential field",
+      "communication"
+    ],
+    [
+      "remote electronics",
+      "stranger"
+    ]
+  ],
+  "explanation": [
+    "Atom corresponds to individual: In the tight binding approximation, the atom is the fundamental unit of matter, whose properties are influenced by the nearby electrons and atomic potential field. In the social circle, the individual is the fundamental unit of social interaction, whose behavior and attitude are influenced by acquaintances and communication. In this analogy, both atom and individual represent the basic components of a certain system.",
+    "Nearby electrons correspond to acquaintances: In the tight binding approximation, nearby electrons have a direct impact on the properties of the atom, such as the distribution of atomic orbital levels. In the social circle, acquaintances have a direct impact on the behavior and attitudes of individuals, such as values and habits. Here, nearby electrons and acquaintances both represent neighboring elements that have a direct influence on the basic units.",
+    "Atomic potential field corresponds to communication: In the tight binding approximation, the atomic potential field reflects the interaction between atoms, which affects the properties and behavior of the atoms. In the social circle, communication is the way individuals interact with each other, which affects their behavior and attitude. In this analogy, both the atomic potential field and communication represent the interaction and influence between basic units.",
+    "Remote electrons correspond to strangers: In the tight binding approximation, remote electrons have a small impact on the properties and behavior of the atom, which can be neglected. In the social circle, strangers have a small impact on the behavior and attitude of individuals, and usually do not have a significant influence. Here, remote electrons and strangers both represent elements that have a small influence on the basic units."
+  ],
+  "background": {
+    "source": "The Tight-Bind Approximation is a concept used in the field of biochemistry to understand the active site of an enzyme. The active site is a crucial part of the enzyme that catalyzes the chemical reactions by binding with the substrate. This binding site is evolved to be highly specific and usually consists of a groove or pocket in the enzyme. The active site lowers the activation energy of the reaction, enabling more substrates to undergo reaction. In this process, nearby atoms and their associated electronic fields play a vital role in determining the efficacy of the enzyme. The atomic potential field of the active site and the remote electronics outside the active site play a crucial role in the functioning of the enzyme. The Tight-Bind Approximation describes the interaction between the atoms in the active site and the nearby electronics, allowing for a better understanding of the catalytic process.",
+    "target": "Social Circle is a charming city located in the southern region of Walton County and an extension in Newton County, Georgia. The city is situated 45 miles east of Atlanta making it the perfect destination for individuals seeking to escape the hustle and bustle of the city for a quieter environment. Social Circle is a community filled with friendly people, where strangers quickly become acquaintances, and communication is paramount. The city has an inviting atmosphere that makes individuals feel at home, fostering a connection with the community. Social Circle is the ideal place for anyone seeking to build social relationships while enjoying the calm of a small town. Whether you're looking to meet new people or simply savor the joys of individual interactions, Social Circle has got you covered."
+  },
+  "raw": {
+    "id": 376,
+    "lang": "en",
+    "system_a": "Tight-Bind Approximation",
+    "system_b": "Social Circle",
+    "mappings": [
+      [
+        "atom",
+        "individual"
+      ],
+      [
+        "nearby electronics",
+        "acquaintance"
+      ],
+      [
+        "atomic potential field",
+        "communication"
+      ],
+      [
+        "remote electronics",
+        "stranger"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "The Tight-Bind Approximation is a concept used in the field of biochemistry to understand the active site of an enzyme. The active site is a crucial part of the enzyme that catalyzes the chemical reactions by binding with the substrate. This binding site is evolved to be highly specific and usually consists of a groove or pocket in the enzyme. The active site lowers the activation energy of the reaction, enabling more substrates to undergo reaction. In this process, nearby atoms and their associated electronic fields play a vital role in determining the efficacy of the enzyme. The atomic potential field of the active site and the remote electronics outside the active site play a crucial role in the functioning of the enzyme. The Tight-Bind Approximation describes the interaction between the atoms in the active site and the nearby electronics, allowing for a better understanding of the catalytic process.",
+    "system_b_background": "Social Circle is a charming city located in the southern region of Walton County and an extension in Newton County, Georgia. The city is situated 45 miles east of Atlanta making it the perfect destination for individuals seeking to escape the hustle and bustle of the city for a quieter environment. Social Circle is a community filled with friendly people, where strangers quickly become acquaintances, and communication is paramount. The city has an inviting atmosphere that makes individuals feel at home, fostering a connection with the community. Social Circle is the ideal place for anyone seeking to build social relationships while enjoying the calm of a small town. Whether you're looking to meet new people or simply savor the joys of individual interactions, Social Circle has got you covered.",
+    "Explanation": [
+      "Atom corresponds to individual: In the tight binding approximation, the atom is the fundamental unit of matter, whose properties are influenced by the nearby electrons and atomic potential field. In the social circle, the individual is the fundamental unit of social interaction, whose behavior and attitude are influenced by acquaintances and communication. In this analogy, both atom and individual represent the basic components of a certain system.",
+      "Nearby electrons correspond to acquaintances: In the tight binding approximation, nearby electrons have a direct impact on the properties of the atom, such as the distribution of atomic orbital levels. In the social circle, acquaintances have a direct impact on the behavior and attitudes of individuals, such as values and habits. Here, nearby electrons and acquaintances both represent neighboring elements that have a direct influence on the basic units.",
+      "Atomic potential field corresponds to communication: In the tight binding approximation, the atomic potential field reflects the interaction between atoms, which affects the properties and behavior of the atoms. In the social circle, communication is the way individuals interact with each other, which affects their behavior and attitude. In this analogy, both the atomic potential field and communication represent the interaction and influence between basic units.",
+      "Remote electrons correspond to strangers: In the tight binding approximation, remote electrons have a small impact on the properties and behavior of the atom, which can be neglected. In the social circle, strangers have a small impact on the behavior and attitude of individuals, and usually do not have a significant influence. Here, remote electrons and strangers both represent elements that have a small influence on the basic units."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Tight-Bind Approximation",
+    "target": "Social Circle"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

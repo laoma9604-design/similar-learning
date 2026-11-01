@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0247",
+  "dataset": "scar",
+  "original_id": "247",
+  "source_object_id": "obj_group_scar_0247_src",
+  "target_object_id": "obj_group_scar_0247_tgt",
+  "faithful_mappings": [
+    [
+      "george orwell",
+      "Aldous Huxley"
+    ],
+    [
+      "winston",
+      "Smith:John"
+    ],
+    [
+      "minister aubrey",
+      "world controller"
+    ],
+    [
+      "Media Manipulation and the Big Data Era",
+      "Technology and Humanity"
+    ]
+  ],
+  "explanation": [
+    "George Orwell corresponds to Aldous Huxley: Both are authors of their own works, representing British and American literature, respectively. ",
+    "Winston corresponds to Smith: John: Both characters are protagonists of their own works, representing the rebels under totalitarianism and the characters born out of the conflict between natural education and modern civilization, respectively. ",
+    "Minister Aubrey corresponds to the World Controller: Both characters are antagonists in their own works, representing the high-level figures of totalitarian governments and the leaders who manipulate human life, respectively. ",
+    "Media Manipulation and the Big Data Era correspond to Technology and Humanity: These two themes reflect the core ideas in the two works, one focusing on government manipulation of media and information, and the other on the impact and changes of technological development on humanity."
+  ],
+  "background": {
+    "source": "1984 is a novel by George Orwell that explores the dangers of totalitarianism and government manipulation. The story follows Winston, a citizen of the oppressive regime known as Oceania, as he begins to question the authority of the government and their control over the lives of its citizens. The novel is set in a dystopian future where Big Brother, the leader of the ruling Party, utilizes media manipulation and the collection of big data to maintain their power over the population. Minister Aubrey is a character in the novel who represents the Party’s control over the flow of information and propaganda. Through Winston's story, the novel serves as a cautionary tale about the importance of individual freedom and the dangers of totalitarianism and government surveillance in the modern era.",
+    "target": "Brave New World, authored by Aldous Huxley in 1931, paints a dystopian society set in a futuristic World State. The citizens of this world exist in an intelligence-based social hierarchy that is the product of environmental engineering. Through the novel, Huxley explores the consequences of significant advancements in reproductive technology, sleep-learning, psychological manipulation, and classical conditioning. The novel's protagonist, Smith: John, challenges this society's foundations, leading to a captivating exploration of the tenuous balance between technology and humanity. Huxley followed up the book with Brave New World Revisited, an essay highlighting the book's key themes and ideas. The book also received great critical acclaim, featuring on several lists of some of the greatest books of all time, including The Modern Library's 100 best English-language novels of the 20th century. Despite its acclaim, the book has been challenged and banned for its controversial themes, highlighting the far-reaching impact of this iconic book."
+  },
+  "raw": {
+    "id": 247,
+    "lang": "en",
+    "system_a": "1984",
+    "system_b": "Brave New World",
+    "mappings": [
+      [
+        "george orwell",
+        "Aldous Huxley"
+      ],
+      [
+        "winston",
+        "Smith:John"
+      ],
+      [
+        "minister aubrey",
+        "world controller"
+      ],
+      [
+        "Media Manipulation and the Big Data Era",
+        "Technology and Humanity"
+      ]
+    ],
+    "system_a_domain": "Literature",
+    "system_b_domain": "Literature",
+    "system_a_background": "1984 is a novel by George Orwell that explores the dangers of totalitarianism and government manipulation. The story follows Winston, a citizen of the oppressive regime known as Oceania, as he begins to question the authority of the government and their control over the lives of its citizens. The novel is set in a dystopian future where Big Brother, the leader of the ruling Party, utilizes media manipulation and the collection of big data to maintain their power over the population. Minister Aubrey is a character in the novel who represents the Party’s control over the flow of information and propaganda. Through Winston's story, the novel serves as a cautionary tale about the importance of individual freedom and the dangers of totalitarianism and government surveillance in the modern era.",
+    "system_b_background": "Brave New World, authored by Aldous Huxley in 1931, paints a dystopian society set in a futuristic World State. The citizens of this world exist in an intelligence-based social hierarchy that is the product of environmental engineering. Through the novel, Huxley explores the consequences of significant advancements in reproductive technology, sleep-learning, psychological manipulation, and classical conditioning. The novel's protagonist, Smith: John, challenges this society's foundations, leading to a captivating exploration of the tenuous balance between technology and humanity. Huxley followed up the book with Brave New World Revisited, an essay highlighting the book's key themes and ideas. The book also received great critical acclaim, featuring on several lists of some of the greatest books of all time, including The Modern Library's 100 best English-language novels of the 20th century. Despite its acclaim, the book has been challenged and banned for its controversial themes, highlighting the far-reaching impact of this iconic book.",
+    "Explanation": [
+      "George Orwell corresponds to Aldous Huxley: Both are authors of their own works, representing British and American literature, respectively. ",
+      "Winston corresponds to Smith: John: Both characters are protagonists of their own works, representing the rebels under totalitarianism and the characters born out of the conflict between natural education and modern civilization, respectively. ",
+      "Minister Aubrey corresponds to the World Controller: Both characters are antagonists in their own works, representing the high-level figures of totalitarian governments and the leaders who manipulate human life, respectively. ",
+      "Media Manipulation and the Big Data Era correspond to Technology and Humanity: These two themes reflect the core ideas in the two works, one focusing on government manipulation of media and information, and the other on the impact and changes of technological development on humanity."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "1984",
+    "target": "Brave New World"
+  },
+  "domains": {
+    "source": "Literature",
+    "target": "Literature"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

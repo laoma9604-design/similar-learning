@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0087",
+  "dataset": "scar",
+  "original_id": "87",
+  "source_object_id": "obj_group_scar_0087_src",
+  "target_object_id": "obj_group_scar_0087_tgt",
+  "faithful_mappings": [
+    [
+      "doctor",
+      "Worker"
+    ],
+    [
+      "drug",
+      "Material"
+    ],
+    [
+      "disease",
+      "building damage"
+    ]
+  ],
+  "explanation": [
+    "Doctor corresponds to worker: Doctors are professionals in the medical industry responsible for the diagnosis and treatment of diseases. Workers are professionals in the construction and maintenance industry, responsible for repairing and maintaining buildings. Here, both doctors and workers are professionals in their respective fields, responsible for solving problems.",
+    "Drugs correspond to materials: Drugs are substances used to treat diseases and help patients recover their health. Materials are substances used to repair damaged buildings and help them return to their original state. In this analogy, both drugs and materials are key resources used to solve problems.",
+    "Disease corresponds to building damage: Disease is an abnormal state affecting human health that requires doctors and drugs for treatment. Building damage affects the integrity and function of buildings and requires workers and materials for repair. Here, both diseases and building damage are problems that need to be solved in order to restore normal function."
+  ],
+  "background": {
+    "source": "Healthcare is the umbrella term that encompasses a wide range of health-related services aimed at achieving better physical and mental health outcomes for individuals. It consists of a diverse mix of health professionals and allied health fields such as medicine, dentistry, pharmacy, midwifery, nursing, optometry, audiology, psychology, occupational therapy, physical therapy, and athletic training, among others. The primary goal of healthcare is to prevent, diagnose, treat, ameliorate or cure diseases, injuries, mental impairments, and other health-related conditions. An efficient healthcare system is not only significant in promoting general physical and mental health but also in contributing to a country's economy, development, and industrialization. Access to healthcare may vary depending on social and economic conditions, and it is imperative that healthcare services are available to everyone irrespective of financial limitations, geographical and logistical barriers, and personal limitations. The provision of drugs and medication by a qualified doctor is an integral part of healthcare, and diseases can be effectively managed with proper access to healthcare services.",
+    "target": "Building repair is a crucial process that aims to fix structural damage that a building may have undergone. The repair process usually involves fixing any issues with the materials used during construction, identifying the parts that require repair, and utilizing trained workers to successfully fix any problems. However, the right to repair has been a major focus of recent discussion in both the United States and the European Union. Consumers continually face barriers imposed by manufacturers that limit their ability to repair and modify their own products, increasing consumer costs and driving consumers to replace instead of repair. This trend generates significant waste and environmental damage, a problem that affects everyone. The right to repair advocates for government legislation that would prevent manufacturers from restricting access to tools and components and creating software barriers that hinder independent repair or modification. The movement has grown, with concerned citizens putting pressure on their governments to create enabling laws. The process of building repair is essential to maintaining the structural integrity of our buildings, and the right to repair movement is vital in ensuring consumers have access to the tools and resources necessary to fix issues and reduce waste while saving costs."
+  },
+  "raw": {
+    "id": 87,
+    "lang": "en",
+    "system_a": "Healthcare",
+    "system_b": "Building Repair",
+    "mappings": [
+      [
+        "doctor",
+        "Worker"
+      ],
+      [
+        "drug",
+        "Material"
+      ],
+      [
+        "disease",
+        "building damage"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Engineering",
+    "system_a_background": "Healthcare is the umbrella term that encompasses a wide range of health-related services aimed at achieving better physical and mental health outcomes for individuals. It consists of a diverse mix of health professionals and allied health fields such as medicine, dentistry, pharmacy, midwifery, nursing, optometry, audiology, psychology, occupational therapy, physical therapy, and athletic training, among others. The primary goal of healthcare is to prevent, diagnose, treat, ameliorate or cure diseases, injuries, mental impairments, and other health-related conditions. An efficient healthcare system is not only significant in promoting general physical and mental health but also in contributing to a country's economy, development, and industrialization. Access to healthcare may vary depending on social and economic conditions, and it is imperative that healthcare services are available to everyone irrespective of financial limitations, geographical and logistical barriers, and personal limitations. The provision of drugs and medication by a qualified doctor is an integral part of healthcare, and diseases can be effectively managed with proper access to healthcare services.",
+    "system_b_background": "Building repair is a crucial process that aims to fix structural damage that a building may have undergone. The repair process usually involves fixing any issues with the materials used during construction, identifying the parts that require repair, and utilizing trained workers to successfully fix any problems. However, the right to repair has been a major focus of recent discussion in both the United States and the European Union. Consumers continually face barriers imposed by manufacturers that limit their ability to repair and modify their own products, increasing consumer costs and driving consumers to replace instead of repair. This trend generates significant waste and environmental damage, a problem that affects everyone. The right to repair advocates for government legislation that would prevent manufacturers from restricting access to tools and components and creating software barriers that hinder independent repair or modification. The movement has grown, with concerned citizens putting pressure on their governments to create enabling laws. The process of building repair is essential to maintaining the structural integrity of our buildings, and the right to repair movement is vital in ensuring consumers have access to the tools and resources necessary to fix issues and reduce waste while saving costs.",
+    "Explanation": [
+      "Doctor corresponds to worker: Doctors are professionals in the medical industry responsible for the diagnosis and treatment of diseases. Workers are professionals in the construction and maintenance industry, responsible for repairing and maintaining buildings. Here, both doctors and workers are professionals in their respective fields, responsible for solving problems.",
+      "Drugs correspond to materials: Drugs are substances used to treat diseases and help patients recover their health. Materials are substances used to repair damaged buildings and help them return to their original state. In this analogy, both drugs and materials are key resources used to solve problems.",
+      "Disease corresponds to building damage: Disease is an abnormal state affecting human health that requires doctors and drugs for treatment. Building damage affects the integrity and function of buildings and requires workers and materials for repair. Here, both diseases and building damage are problems that need to be solved in order to restore normal function."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Healthcare",
+    "target": "Building Repair"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0389",
+  "dataset": "scar",
+  "original_id": "389",
+  "source_object_id": "obj_group_scar_0389_src",
+  "target_object_id": "obj_group_scar_0389_tgt",
+  "faithful_mappings": [
+    [
+      "heat",
+      "water"
+    ],
+    [
+      "Fluctuations",
+      "high tide"
+    ],
+    [
+      "dissipation",
+      "ebb and flow"
+    ]
+  ],
+  "explanation": [
+    "Heat corresponds to water: In the theory of fluctuation-dissipation, heat is the energy source that drives the system's fluctuations. In the phenomenon of tides, water is the main component of tides, which are caused by the gravitational forces of the Earth and the Moon. Both are basic components of their respective phenomena.",
+    "Fluctuations correspond to high tides: In the theory of fluctuation-dissipation, fluctuations refer to changes in the energy of the system. In the phenomenon of tides, high tides refer to the process of rising water levels. Both represent an increase to some extent.",
+    "Dissipation corresponds to ebb tides: In the theory of fluctuation-dissipation, dissipation refers to the decrease of energy in the system. In the phenomenon of tides, ebb tides refer to the process of falling water levels. Both represent a decrease to some extent."
+  ],
+  "background": {
+    "source": "The fluctuation-dissipation theorem (FDT) is a fundamental concept in statistical physics which provides a powerful tool to predict the behavior of systems that obey detailed balance. The theorem quantifies the relationship between thermodynamic fluctuations in a physical variable and the corresponding response quantified by the admittance or impedance of the same variable. Put simply, fluctuations and dissipation are two sides of the same coin. FDT is widely applicable to both classical and quantum mechanical systems, making it an essential tool for understanding the behavior of physical systems. First proven by Callen and Welton in 1951 and later expanded on by Kubo, the theorem has a rich history dating back to Einstein's explanation of Brownian motion and Nyquist's explanation of Johnson noise in resistors. FDT plays a critical role in our understanding of heat, fluctuations, and dissipation.",
+    "target": "Tidal phenomena refer to the natural rise and fall of sea levels that occur due to the gravitational forces exerted by the Moon (and to a lesser extent, the Sun) and the Earth's rotation. These forces generate a cycle of ebb and flow, resulting in high and low tides. Tide tables are used to predict the amplitude and timing of tides for a specific location, which can be affected by factors such as the Sun and Moon's alignment and the shape of the coastline. Tidal patterns can vary depending on location, with some experiencing semi-diurnal (two high and low tides per day) or diurnal (one high and low tide per day) tides. Tidal phenomena also occur in other systems when there is a gravitational field that varies in time and space. While tides are a primary source of short-term sea-level fluctuations, ocean levels can also change due to thermal expansion, wind, and barometric pressure changes, resulting in storm surges, particularly in shallow seas and coastal areas. Tide gauges at fixed stations are used to measure water level over time and generate accurate records of tidal patterns, and though tides can vary on timescales ranging from hours to years, their impact on aquatic ecosystems is significant."
+  },
+  "raw": {
+    "id": 389,
+    "lang": "en",
+    "system_a": "Fluctuation-dissipation theorem",
+    "system_b": "tidal phenomena",
+    "mappings": [
+      [
+        "heat",
+        "water"
+      ],
+      [
+        "Fluctuations",
+        "high tide"
+      ],
+      [
+        "dissipation",
+        "ebb and flow"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Geography",
+    "system_a_background": "The fluctuation-dissipation theorem (FDT) is a fundamental concept in statistical physics which provides a powerful tool to predict the behavior of systems that obey detailed balance. The theorem quantifies the relationship between thermodynamic fluctuations in a physical variable and the corresponding response quantified by the admittance or impedance of the same variable. Put simply, fluctuations and dissipation are two sides of the same coin. FDT is widely applicable to both classical and quantum mechanical systems, making it an essential tool for understanding the behavior of physical systems. First proven by Callen and Welton in 1951 and later expanded on by Kubo, the theorem has a rich history dating back to Einstein's explanation of Brownian motion and Nyquist's explanation of Johnson noise in resistors. FDT plays a critical role in our understanding of heat, fluctuations, and dissipation.",
+    "system_b_background": "Tidal phenomena refer to the natural rise and fall of sea levels that occur due to the gravitational forces exerted by the Moon (and to a lesser extent, the Sun) and the Earth's rotation. These forces generate a cycle of ebb and flow, resulting in high and low tides. Tide tables are used to predict the amplitude and timing of tides for a specific location, which can be affected by factors such as the Sun and Moon's alignment and the shape of the coastline. Tidal patterns can vary depending on location, with some experiencing semi-diurnal (two high and low tides per day) or diurnal (one high and low tide per day) tides. Tidal phenomena also occur in other systems when there is a gravitational field that varies in time and space. While tides are a primary source of short-term sea-level fluctuations, ocean levels can also change due to thermal expansion, wind, and barometric pressure changes, resulting in storm surges, particularly in shallow seas and coastal areas. Tide gauges at fixed stations are used to measure water level over time and generate accurate records of tidal patterns, and though tides can vary on timescales ranging from hours to years, their impact on aquatic ecosystems is significant.",
+    "Explanation": [
+      "Heat corresponds to water: In the theory of fluctuation-dissipation, heat is the energy source that drives the system's fluctuations. In the phenomenon of tides, water is the main component of tides, which are caused by the gravitational forces of the Earth and the Moon. Both are basic components of their respective phenomena.",
+      "Fluctuations correspond to high tides: In the theory of fluctuation-dissipation, fluctuations refer to changes in the energy of the system. In the phenomenon of tides, high tides refer to the process of rising water levels. Both represent an increase to some extent.",
+      "Dissipation corresponds to ebb tides: In the theory of fluctuation-dissipation, dissipation refers to the decrease of energy in the system. In the phenomenon of tides, ebb tides refer to the process of falling water levels. Both represent a decrease to some extent."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Fluctuation-dissipation theorem",
+    "target": "tidal phenomena"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Geography"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

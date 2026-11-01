@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0110",
+  "dataset": "scar",
+  "original_id": "110",
+  "source_object_id": "obj_group_scar_0110_src",
+  "target_object_id": "obj_group_scar_0110_tgt",
+  "faithful_mappings": [
+    [
+      "Reactant",
+      "Input"
+    ],
+    [
+      "product",
+      "output"
+    ],
+    [
+      "reaction process",
+      "operation process"
+    ]
+  ],
+  "explanation": [
+    "Reactant corresponds to input data: In a chemical reaction, the reactant is the substance that participates in the chemical reaction. In a computer, input data is the raw information required for computer operations. Both are objects that need to be processed and transformed in their respective fields.",
+    "Product corresponds to output results: In a chemical reaction, the product is the new substance formed after the chemical reaction. In a computer, output results are the results obtained after computer operations. Both are the final products in their respective fields.",
+    "Reaction process corresponds to operation process: In a chemical reaction, the reaction process is the process of converting reactants into products. In a computer, the operation process is the process of processing and calculating input data by a computer. Both describe the transformation and processing processes in their respective fields."
+  ],
+  "background": {
+    "source": "A chemical reaction is a fundamental process of transforming one set of chemical substances, known as reactants or reagents, into another set, identified as products. This process involves a change in the positions of electrons in the forming and breaking of chemical bonds between atoms. Generally characterized by a chemical change, chemical reactions follow a specific reaction process consisting of a sequence of individual sub-steps which are presented symbolically in chemical equations. The rate of these reactions is directly proportional to temperature and chemical concentration, and reactions may proceed in the forward or reverse direction until they go to completion or reach equilibrium. Various chemical reactions are used to obtain desired products through chemical synthesis, and the steps involved in such reactions are often catalyzed by enzymes. Ultimately, the scope of chemical reactions has been extended to include reactions between entities smaller than atoms, such as nuclear reactions and reactions between elementary particles.",
+    "target": "A computer is a machine that is capable of executing a wide range of tasks and operations automatically. It consists of various hardware components such as a central processing unit (CPU), memory chips, input and output devices, and a sequencing and control unit that manages the order of operations. Computers can perform generic sets of operations through programs, making them suitable for a broad range of applications in industrial and consumer products alike. Input devices such as keyboards and mice allow users to interact with the computer and retrieve information from an external source, while output devices such as monitor screens and printers display the outcome of operations. Peripheral devices can perform both input and output functions, such as the touchscreen on modern smartphones. The speed, power, and versatility of computers have been increasing rapidly since their inception, leading to the Digital Revolution in the late 20th to early 21st centuries."
+  },
+  "raw": {
+    "id": 110,
+    "lang": "en",
+    "system_a": "Chemical Reaction",
+    "system_b": "Computer",
+    "mappings": [
+      [
+        "Reactant",
+        "Input"
+      ],
+      [
+        "product",
+        "output"
+      ],
+      [
+        "reaction process",
+        "operation process"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Computer",
+    "system_a_background": "A chemical reaction is a fundamental process of transforming one set of chemical substances, known as reactants or reagents, into another set, identified as products. This process involves a change in the positions of electrons in the forming and breaking of chemical bonds between atoms. Generally characterized by a chemical change, chemical reactions follow a specific reaction process consisting of a sequence of individual sub-steps which are presented symbolically in chemical equations. The rate of these reactions is directly proportional to temperature and chemical concentration, and reactions may proceed in the forward or reverse direction until they go to completion or reach equilibrium. Various chemical reactions are used to obtain desired products through chemical synthesis, and the steps involved in such reactions are often catalyzed by enzymes. Ultimately, the scope of chemical reactions has been extended to include reactions between entities smaller than atoms, such as nuclear reactions and reactions between elementary particles.",
+    "system_b_background": "A computer is a machine that is capable of executing a wide range of tasks and operations automatically. It consists of various hardware components such as a central processing unit (CPU), memory chips, input and output devices, and a sequencing and control unit that manages the order of operations. Computers can perform generic sets of operations through programs, making them suitable for a broad range of applications in industrial and consumer products alike. Input devices such as keyboards and mice allow users to interact with the computer and retrieve information from an external source, while output devices such as monitor screens and printers display the outcome of operations. Peripheral devices can perform both input and output functions, such as the touchscreen on modern smartphones. The speed, power, and versatility of computers have been increasing rapidly since their inception, leading to the Digital Revolution in the late 20th to early 21st centuries.",
+    "Explanation": [
+      "Reactant corresponds to input data: In a chemical reaction, the reactant is the substance that participates in the chemical reaction. In a computer, input data is the raw information required for computer operations. Both are objects that need to be processed and transformed in their respective fields.",
+      "Product corresponds to output results: In a chemical reaction, the product is the new substance formed after the chemical reaction. In a computer, output results are the results obtained after computer operations. Both are the final products in their respective fields.",
+      "Reaction process corresponds to operation process: In a chemical reaction, the reaction process is the process of converting reactants into products. In a computer, the operation process is the process of processing and calculating input data by a computer. Both describe the transformation and processing processes in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Chemical Reaction",
+    "target": "Computer"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Computer"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0126",
+  "dataset": "scar",
+  "original_id": "126",
+  "source_object_id": "obj_group_scar_0126_src",
+  "target_object_id": "obj_group_scar_0126_tgt",
+  "faithful_mappings": [
+    [
+      "Neurons",
+      "neurons"
+    ],
+    [
+      "Neural Networks",
+      "neural circuit"
+    ],
+    [
+      "processing power",
+      "cognitive ability"
+    ]
+  ],
+  "explanation": [
+    "Neurons correspond to the neurons in the human brain: in deep learning, neurons are the basic processing units that simulate neural networks, which execute tasks and process information; in the human brain, neurons are cells that transmit and process information.",
+    "Neural networks correspond to neural circuits: in deep learning, neural networks are complex structures formed by neurons connections, which are used for processing and learning data; in the human brain, neural circuits are networks formed by neurons connections, which are responsible for processing and learning information.",
+    "Processing power corresponds to cognitive ability: in deep learning, processing power refers to the ability of a neural network to analyze and process data; in the human brain, cognitive ability refers to the ability of the brain to analyze and process information."
+  ],
+  "background": {
+    "source": "Deep learning is a powerful machine learning method that is based on artificial neural networks. It uses advanced algorithms to learn from data, allowing computers to make predictions, recognize patterns and perform complex tasks. The use of deep neural networks, recurrent neural networks, convolutional neural networks, and transformers has revolutionized fields such as computer vision, speech recognition, natural language processing, and machine translation. Deep learning technology has also been applied to many other fields, including drug design, medical imaging, climate science, and material inspection. With its superior processing power, deep learning has produced results comparable to and in some cases exceeding human expert performance. The technology is allowing us to solve problems that were previously impossible, and it is revolutionizing the way we think about computing and artificial intelligence.",
+    "target": "The human brain is a complex and sophisticated organ that controls most of the activities of the body. It is composed of the cerebrum, brainstem and cerebellum, and contains more than 86 billion neurons that work together to process, integrate, and coordinate information received from sense organs. The cerebrum, the largest part of the brain, is divided into four lobes and is responsible for executive functions such as self-control, planning, reasoning, and abstract thought. The brainstem connects the cerebrum to the spinal cord and consists of the midbrain, pons, and medulla oblongata. The cerebellum, on the other hand, is connected to the brainstem by cerebellar peduncles. The brain is protected by the skull and the cerebrospinal fluid, but it is still susceptible to damage, disease, and infection. Research on the brain is ongoing and involves numerous techniques such as neuroanatomy, neuroscience, and functional neuroimaging. Understanding how the neural circuits in the brain work together can help us better understand cognitive ability and brain dysfunctions."
+  },
+  "raw": {
+    "id": 126,
+    "lang": "en",
+    "system_a": "Deep Learning",
+    "system_b": "How the Human Brain Works",
+    "mappings": [
+      [
+        "Neurons",
+        "neurons"
+      ],
+      [
+        "Neural Networks",
+        "neural circuit"
+      ],
+      [
+        "processing power",
+        "cognitive ability"
+      ]
+    ],
+    "system_a_domain": "Computer",
+    "system_b_domain": "Biology",
+    "system_a_background": "Deep learning is a powerful machine learning method that is based on artificial neural networks. It uses advanced algorithms to learn from data, allowing computers to make predictions, recognize patterns and perform complex tasks. The use of deep neural networks, recurrent neural networks, convolutional neural networks, and transformers has revolutionized fields such as computer vision, speech recognition, natural language processing, and machine translation. Deep learning technology has also been applied to many other fields, including drug design, medical imaging, climate science, and material inspection. With its superior processing power, deep learning has produced results comparable to and in some cases exceeding human expert performance. The technology is allowing us to solve problems that were previously impossible, and it is revolutionizing the way we think about computing and artificial intelligence.",
+    "system_b_background": "The human brain is a complex and sophisticated organ that controls most of the activities of the body. It is composed of the cerebrum, brainstem and cerebellum, and contains more than 86 billion neurons that work together to process, integrate, and coordinate information received from sense organs. The cerebrum, the largest part of the brain, is divided into four lobes and is responsible for executive functions such as self-control, planning, reasoning, and abstract thought. The brainstem connects the cerebrum to the spinal cord and consists of the midbrain, pons, and medulla oblongata. The cerebellum, on the other hand, is connected to the brainstem by cerebellar peduncles. The brain is protected by the skull and the cerebrospinal fluid, but it is still susceptible to damage, disease, and infection. Research on the brain is ongoing and involves numerous techniques such as neuroanatomy, neuroscience, and functional neuroimaging. Understanding how the neural circuits in the brain work together can help us better understand cognitive ability and brain dysfunctions.",
+    "Explanation": [
+      "Neurons correspond to the neurons in the human brain: in deep learning, neurons are the basic processing units that simulate neural networks, which execute tasks and process information; in the human brain, neurons are cells that transmit and process information.",
+      "Neural networks correspond to neural circuits: in deep learning, neural networks are complex structures formed by neurons connections, which are used for processing and learning data; in the human brain, neural circuits are networks formed by neurons connections, which are responsible for processing and learning information.",
+      "Processing power corresponds to cognitive ability: in deep learning, processing power refers to the ability of a neural network to analyze and process data; in the human brain, cognitive ability refers to the ability of the brain to analyze and process information."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Deep Learning",
+    "target": "How the Human Brain Works"
+  },
+  "domains": {
+    "source": "Computer",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

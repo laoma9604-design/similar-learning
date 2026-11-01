@@ -1,0 +1,119 @@
+{
+  "adaptation_id": "adapt_scar_0197",
+  "dataset": "scar",
+  "original_id": "197",
+  "source_object_id": "obj_group_scar_0197_src",
+  "target_object_id": "obj_group_scar_0197_tgt",
+  "faithful_mappings": [
+    [
+      "Feudal rule",
+      "colonial ruling"
+    ],
+    [
+      "Capitalist economy",
+      "Capitalist economy"
+    ],
+    [
+      "constitutional monarchy",
+      "bourgeois democratic republic"
+    ],
+    [
+      "Bourgeois revolution",
+      "national liberation movement"
+    ],
+    [
+      "Cromwell",
+      "washington"
+    ],
+    [
+      "Bill of Rights",
+      "Declaration of Independence"
+    ]
+  ],
+  "explanation": [
+    "Feudal rule corresponds to colonial ruling: The English bourgeois revolution was a struggle against feudal rule, while the American War of Independence was a struggle against colonial rule. Both were aimed at getting rid of oppressive and unfair governance.",
+    "Capitalist economy corresponds to capitalist economy: The English bourgeois revolution and the American War of Independence took place against the backdrop of the development of a capitalist economy. This mapping indicates that the economic background of the two events was similar.",
+    "Constitutional monarchy corresponds to bourgeois democratic republic: The English bourgeois revolution eventually achieved a constitutional monarchy, while the American War of Independence established a bourgeois democratic republic. Both were changes and developments in political systems.",
+    "Bourgeois revolution corresponds to national liberation movement: The English bourgeois revolution was a struggle by the bourgeoisie against feudal rule, while the American War of Independence was a national liberation movement. Both were struggles for freedom and rights.",
+    "Cromwell corresponds to Washington: Cromwell was the leader of the English bourgeois revolution, while Washington was the leader of the American War of Independence. Both were leaders and symbols of their respective events.",
+    "Bill of Rights corresponds to Declaration of Independence: The Bill of Rights was one of the achievements of the English bourgeois revolution, which established the constitutional monarchy in England. The Declaration of Independence was the declaration of the American War of Independence, which declared American independence. Both were important documents and achievements of their respective events."
+  ],
+  "background": {
+    "source": "The British Bourgeois Revolution is a significant event in history, marked by a transition from feudal rule to a capitalist economy, and the establishment of a constitutional monarchy. The bourgeoisie, or the middle and upper classes, played a crucial role in this revolution through their cultural and financial capital. This revolution was influenced by key historical figures such as Cromwell and was ultimately solidified by the Bill of Rights. The bourgeoisie's rise to power marked the beginning of modern industrialization, and their interests in property and capital preservation continue to impact societal concerns today.",
+    "target": "The American War of Independence was a defining moment in the history of the United States, marking the birth of a new nation and the end of colonial rule in America. The conflict was characterized by a national liberation movement seeking the establishment of a bourgeois democratic republic, and led by the iconic George Washington. The conflict was formalized and intensified following the passage of the Lee Resolution on July 2, 1776, which asserted that the Thirteen Colonies were \"free and independent states,\" and the Declaration of Independence, drafted by the Committee of Five and written primarily by Thomas Jefferson, two days later, on July 4, 1776, by the Second Continental Congress in Philadelphia. The war saw American patriot forces, supported by the Kingdom of France and the Kingdom of Spain, defeat the British, who were supported by Hessian soldiers, most Native Americans, Loyalists, and freedmen. The conflict was fought in North America, the Caribbean, and the Atlantic Ocean, and was driven by tensions that arose over trade, policy in the Northwest Territory, and taxation measures, including the Stamp Act and Townshend Acts. Despite attempts to achieve a peaceful solution, fighting began, with the Battle of Lexington on April 19, 1775, and in June Congress authorized the creation of a Continental Army with George Washington as commander-in-chief. The war ultimately led to the establishment and securing of the independence of the United States, a feat that was recognized in the Treaties of Versailles and formally ratified on September 3, 1783, with the Treaty of Paris."
+  },
+  "raw": {
+    "id": 197,
+    "lang": "en",
+    "system_a": "The British Bourgeois Revolution",
+    "system_b": "The American War of Independence",
+    "mappings": [
+      [
+        "Feudal rule",
+        "colonial ruling"
+      ],
+      [
+        "Capitalist economy",
+        "Capitalist economy"
+      ],
+      [
+        "constitutional monarchy",
+        "bourgeois democratic republic"
+      ],
+      [
+        "Bourgeois revolution",
+        "national liberation movement"
+      ],
+      [
+        "Cromwell",
+        "washington"
+      ],
+      [
+        "Bill of Rights",
+        "Declaration of Independence"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "The British Bourgeois Revolution is a significant event in history, marked by a transition from feudal rule to a capitalist economy, and the establishment of a constitutional monarchy. The bourgeoisie, or the middle and upper classes, played a crucial role in this revolution through their cultural and financial capital. This revolution was influenced by key historical figures such as Cromwell and was ultimately solidified by the Bill of Rights. The bourgeoisie's rise to power marked the beginning of modern industrialization, and their interests in property and capital preservation continue to impact societal concerns today.",
+    "system_b_background": "The American War of Independence was a defining moment in the history of the United States, marking the birth of a new nation and the end of colonial rule in America. The conflict was characterized by a national liberation movement seeking the establishment of a bourgeois democratic republic, and led by the iconic George Washington. The conflict was formalized and intensified following the passage of the Lee Resolution on July 2, 1776, which asserted that the Thirteen Colonies were \"free and independent states,\" and the Declaration of Independence, drafted by the Committee of Five and written primarily by Thomas Jefferson, two days later, on July 4, 1776, by the Second Continental Congress in Philadelphia. The war saw American patriot forces, supported by the Kingdom of France and the Kingdom of Spain, defeat the British, who were supported by Hessian soldiers, most Native Americans, Loyalists, and freedmen. The conflict was fought in North America, the Caribbean, and the Atlantic Ocean, and was driven by tensions that arose over trade, policy in the Northwest Territory, and taxation measures, including the Stamp Act and Townshend Acts. Despite attempts to achieve a peaceful solution, fighting began, with the Battle of Lexington on April 19, 1775, and in June Congress authorized the creation of a Continental Army with George Washington as commander-in-chief. The war ultimately led to the establishment and securing of the independence of the United States, a feat that was recognized in the Treaties of Versailles and formally ratified on September 3, 1783, with the Treaty of Paris.",
+    "Explanation": [
+      "Feudal rule corresponds to colonial ruling: The English bourgeois revolution was a struggle against feudal rule, while the American War of Independence was a struggle against colonial rule. Both were aimed at getting rid of oppressive and unfair governance.",
+      "Capitalist economy corresponds to capitalist economy: The English bourgeois revolution and the American War of Independence took place against the backdrop of the development of a capitalist economy. This mapping indicates that the economic background of the two events was similar.",
+      "Constitutional monarchy corresponds to bourgeois democratic republic: The English bourgeois revolution eventually achieved a constitutional monarchy, while the American War of Independence established a bourgeois democratic republic. Both were changes and developments in political systems.",
+      "Bourgeois revolution corresponds to national liberation movement: The English bourgeois revolution was a struggle by the bourgeoisie against feudal rule, while the American War of Independence was a national liberation movement. Both were struggles for freedom and rights.",
+      "Cromwell corresponds to Washington: Cromwell was the leader of the English bourgeois revolution, while Washington was the leader of the American War of Independence. Both were leaders and symbols of their respective events.",
+      "Bill of Rights corresponds to Declaration of Independence: The Bill of Rights was one of the achievements of the English bourgeois revolution, which established the constitutional monarchy in England. The Declaration of Independence was the declaration of the American War of Independence, which declared American independence. Both were important documents and achievements of their respective events."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "The British Bourgeois Revolution",
+    "target": "The American War of Independence"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

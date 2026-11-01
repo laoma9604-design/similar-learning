@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0122",
+  "dataset": "scar",
+  "original_id": "122",
+  "source_object_id": "obj_group_scar_0122_src",
+  "target_object_id": "obj_group_scar_0122_tgt",
+  "faithful_mappings": [
+    [
+      "basic material",
+      "Ingredients"
+    ],
+    [
+      "enhancer",
+      "seasoning"
+    ],
+    [
+      "Preparation Process",
+      "Cooking methods"
+    ]
+  ],
+  "explanation": [
+    "Basic material corresponds to ingredients: In polymer composite materials, the basic material is the main component that constitutes the composite material. In culinary arts, ingredients are the basic raw materials for making delicious food. Both are fundamental building blocks in their respective fields.",
+    "Enhancer corresponds to seasoning: In polymer composite materials, enhancers are additives used to improve the performance of the basic material. In culinary arts, seasonings are auxiliary materials used to enhance the taste of ingredients. Here, enhancers and seasonings are both auxiliary components used to improve the performance and quality of the basic elements.",
+    "Preparation process corresponds to cooking methods: The preparation process in polymer composite materials is the process of combining the basic material and enhancer together. Cooking methods in culinary arts are the process of processing ingredients and seasoning to create delicious food. In this analogy, the preparation process and cooking methods both represent processing and production processes in their respective fields."
+  ],
+  "background": {
+    "source": "Polymer composites are a basic material in the field of materials science. These composites are composed of a variety of short or continuous fibers and are bound together by a matrix of organic polymers. They are designed to efficiently transfer loads between the fibers of a matrix. With their unique composition, they offer several advantages such as light weight, high resistance to abrasion and corrosion, as well as high stiffness and strength. These properties make polymer composites a popular enhancer for a wide variety of applications across many industries. The preparation process for these composites is critical, requiring precise measures to be taken in order to achieve the desired final product. Overall, polymer composites are a versatile and valuable material used to create high-performance products across a number of applications.",
+    "target": "Gourmet refers to a cultural concept that revolves around providing an exquisite culinary experience, which includes fine food and drink. This type of cuisine is characterized by its intricate, refined preparations and presentations, typically consisting of multiple courses. The dishes are aesthetically balanced and often feature contrasting and rich flavors. Historical records suggest that gourmet meals feature rare ingredients that are either sourced from different regions or are governed by local state and religious customs. This type of cuisine is often associated with people who have refined tastes and are enthusiastic about food. Gourmet food is typically served in smaller, more expensive portions, making it a luxury experience. Moreover, cross-cultural interactions often bring new ingredients, materials, and traditions, further enhancing the gourmet experience. To create such exquisite dishes, chefs employ unique cooking methods and seasoning techniques, which contribute to the overall taste and presentation of the dish."
+  },
+  "raw": {
+    "id": 122,
+    "lang": "en",
+    "system_a": "Polymer Composites",
+    "system_b": "Gourmet",
+    "mappings": [
+      [
+        "basic material",
+        "Ingredients"
+      ],
+      [
+        "enhancer",
+        "seasoning"
+      ],
+      [
+        "Preparation Process",
+        "Cooking methods"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Biology",
+    "system_a_background": "Polymer composites are a basic material in the field of materials science. These composites are composed of a variety of short or continuous fibers and are bound together by a matrix of organic polymers. They are designed to efficiently transfer loads between the fibers of a matrix. With their unique composition, they offer several advantages such as light weight, high resistance to abrasion and corrosion, as well as high stiffness and strength. These properties make polymer composites a popular enhancer for a wide variety of applications across many industries. The preparation process for these composites is critical, requiring precise measures to be taken in order to achieve the desired final product. Overall, polymer composites are a versatile and valuable material used to create high-performance products across a number of applications.",
+    "system_b_background": "Gourmet refers to a cultural concept that revolves around providing an exquisite culinary experience, which includes fine food and drink. This type of cuisine is characterized by its intricate, refined preparations and presentations, typically consisting of multiple courses. The dishes are aesthetically balanced and often feature contrasting and rich flavors. Historical records suggest that gourmet meals feature rare ingredients that are either sourced from different regions or are governed by local state and religious customs. This type of cuisine is often associated with people who have refined tastes and are enthusiastic about food. Gourmet food is typically served in smaller, more expensive portions, making it a luxury experience. Moreover, cross-cultural interactions often bring new ingredients, materials, and traditions, further enhancing the gourmet experience. To create such exquisite dishes, chefs employ unique cooking methods and seasoning techniques, which contribute to the overall taste and presentation of the dish.",
+    "Explanation": [
+      "Basic material corresponds to ingredients: In polymer composite materials, the basic material is the main component that constitutes the composite material. In culinary arts, ingredients are the basic raw materials for making delicious food. Both are fundamental building blocks in their respective fields.",
+      "Enhancer corresponds to seasoning: In polymer composite materials, enhancers are additives used to improve the performance of the basic material. In culinary arts, seasonings are auxiliary materials used to enhance the taste of ingredients. Here, enhancers and seasonings are both auxiliary components used to improve the performance and quality of the basic elements.",
+      "Preparation process corresponds to cooking methods: The preparation process in polymer composite materials is the process of combining the basic material and enhancer together. Cooking methods in culinary arts are the process of processing ingredients and seasoning to create delicious food. In this analogy, the preparation process and cooking methods both represent processing and production processes in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Polymer Composites",
+    "target": "Gourmet"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

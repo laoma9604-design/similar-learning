@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0029",
+  "dataset": "scar",
+  "original_id": "29",
+  "source_object_id": "obj_group_scar_0029_src",
+  "target_object_id": "obj_group_scar_0029_tgt",
+  "faithful_mappings": [
+    [
+      "retina",
+      "film"
+    ],
+    [
+      "iris",
+      "diaphragm"
+    ],
+    [
+      "pupil",
+      "aperture"
+    ],
+    [
+      "lens",
+      "lens"
+    ],
+    [
+      "choroid",
+      "black paint"
+    ]
+  ],
+  "explanation": [
+    "The film corresponds to the retina: the film is the part of the camera that captures and records light, converting light into images. The retina is the part of the eye that receives light and converts it into nerve signals. Here, the film and the retina are both components that capture light and convert it into recognizable information. ",
+    "The diaphragm corresponds to the iris: the diaphragm is the part of the camera that controls the entry of light, and the amount of light is controlled by adjusting its size. The iris is the part of the eye that regulates the entry of light, controlling the amount of light by contracting or expanding. Here, the diaphragm and iris are both components that control the entry of light. ",
+    "The aperture corresponds to the pupil: the aperture is the opening of the camera's aperture that allows light to enter the camera. The pupil is the opening of the iris of the eye that allows light to enter the eye. Here, both the aperture and the pupil are channels through which light enters. ",
+    "The lens corresponds to the lens: the lens is the part of the camera that focuses light and directs it to the film. The lens is the part of the eye that focuses light and directs it to the retina. Here, both the lens and the lens are components that focus light. ",
+    "Black varnish corresponds to the choroid: Black varnish is the coating on the inside of the camera that prevents light from reflecting and interfering with image quality. The choroid is the part of the eye that contains melanin and is responsible for absorbing excess light, preventing it from reflecting and interfering with vision. Here, both the black paint and the choroid are components that guarantee image quality. "
+  ],
+  "background": {
+    "source": "The eye is a remarkable organ that allows us to see and experience the world around us. It consists of various structures that work together to convert light into electrical signals that are sent to the brain to create our visual perception. The retina, iris, pupil, lens, and choroid are all important components of the eye. The retina contains millions of specialized cells called photoreceptors that convert light into electrical signals. The iris and pupil work together to regulate the amount of light that enters the eye, while the lens helps to focus light onto the retina, allowing us to see objects both near and far. The choroid provides nutrients and oxygen to the eye, helping to maintain its health. Understanding the different structures of the eye and how they work together can help us appreciate the wonders of our vision. The eye is an essential tool in our daily lives, allowing us to navigate the world around us and appreciate its beauty.",
+    "target": "A camera is a device that captures visual images by using a combination of components. The film records the image, while the diaphragm and aperture control the amount of light that enters the camera. The lens focuses the light onto the film, and black paint is used to reduce reflections and glare. By understanding how these components work together, photographers can create beautiful and impactful images.Modern cameras have evolved significantly, with digital technology replacing traditional film and allowing for instant image capture. However, the basic principles of a camera remain the same. Whether using a digital or film camera, photographers must still understand the importance of light control, focus, and composition in order to create compelling images.The camera has become an essential tool in modern society, used for everything from capturing memories to documenting news events. As technology continues to advance, the camera will continue to evolve, providing new opportunities for photographers and changing the way we see and experience the world."
+  },
+  "raw": {
+    "id": 29,
+    "lang": "en",
+    "system_a": "eye",
+    "system_b": "camera",
+    "mappings": [
+      [
+        "retina",
+        "film"
+      ],
+      [
+        "iris",
+        "diaphragm"
+      ],
+      [
+        "pupil",
+        "aperture"
+      ],
+      [
+        "lens",
+        "lens"
+      ],
+      [
+        "choroid",
+        "black paint"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Engineering",
+    "system_a_background": "The eye is a remarkable organ that allows us to see and experience the world around us. It consists of various structures that work together to convert light into electrical signals that are sent to the brain to create our visual perception. The retina, iris, pupil, lens, and choroid are all important components of the eye. The retina contains millions of specialized cells called photoreceptors that convert light into electrical signals. The iris and pupil work together to regulate the amount of light that enters the eye, while the lens helps to focus light onto the retina, allowing us to see objects both near and far. The choroid provides nutrients and oxygen to the eye, helping to maintain its health. Understanding the different structures of the eye and how they work together can help us appreciate the wonders of our vision. The eye is an essential tool in our daily lives, allowing us to navigate the world around us and appreciate its beauty.",
+    "system_b_background": "A camera is a device that captures visual images by using a combination of components. The film records the image, while the diaphragm and aperture control the amount of light that enters the camera. The lens focuses the light onto the film, and black paint is used to reduce reflections and glare. By understanding how these components work together, photographers can create beautiful and impactful images.Modern cameras have evolved significantly, with digital technology replacing traditional film and allowing for instant image capture. However, the basic principles of a camera remain the same. Whether using a digital or film camera, photographers must still understand the importance of light control, focus, and composition in order to create compelling images.The camera has become an essential tool in modern society, used for everything from capturing memories to documenting news events. As technology continues to advance, the camera will continue to evolve, providing new opportunities for photographers and changing the way we see and experience the world.",
+    "Explanation": [
+      "The film corresponds to the retina: the film is the part of the camera that captures and records light, converting light into images. The retina is the part of the eye that receives light and converts it into nerve signals. Here, the film and the retina are both components that capture light and convert it into recognizable information. ",
+      "The diaphragm corresponds to the iris: the diaphragm is the part of the camera that controls the entry of light, and the amount of light is controlled by adjusting its size. The iris is the part of the eye that regulates the entry of light, controlling the amount of light by contracting or expanding. Here, the diaphragm and iris are both components that control the entry of light. ",
+      "The aperture corresponds to the pupil: the aperture is the opening of the camera's aperture that allows light to enter the camera. The pupil is the opening of the iris of the eye that allows light to enter the eye. Here, both the aperture and the pupil are channels through which light enters. ",
+      "The lens corresponds to the lens: the lens is the part of the camera that focuses light and directs it to the film. The lens is the part of the eye that focuses light and directs it to the retina. Here, both the lens and the lens are components that focus light. ",
+      "Black varnish corresponds to the choroid: Black varnish is the coating on the inside of the camera that prevents light from reflecting and interfering with image quality. The choroid is the part of the eye that contains melanin and is responsible for absorbing excess light, preventing it from reflecting and interfering with vision. Here, both the black paint and the choroid are components that guarantee image quality. "
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "eye",
+    "target": "camera"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

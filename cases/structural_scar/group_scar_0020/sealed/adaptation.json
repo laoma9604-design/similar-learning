@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0020",
+  "dataset": "scar",
+  "original_id": "20",
+  "source_object_id": "obj_group_scar_0020_src",
+  "target_object_id": "obj_group_scar_0020_tgt",
+  "faithful_mappings": [
+    [
+      "biological population",
+      "urban population"
+    ],
+    [
+      "Genetic Variation",
+      "building transformation"
+    ],
+    [
+      "natural selection",
+      "market competition"
+    ],
+    [
+      "species adaptation",
+      "Planning adjustment"
+    ]
+  ],
+  "explanation": [
+    "Biological population corresponds to urban population: In this analogy, biological population and urban population represent the fundamental units of biological evolution and urban development, respectively. Biological population is composed of many similar individual organisms that evolve and adapt to the environment. Urban population consists of residents who collectively influence and shape the development and transformation of the city.",
+    "Genetic variation corresponds to building transformation: Genetic variation is a key factor in the process of biological evolution that generates new features that help organisms adapt to the changing environment. Similarly, building transformation is an important manifestation of urban development where new building designs and urban planning meet the changing needs and lifestyles of residents.",
+    "Natural selection corresponds to market competition: Natural selection is the process by which the most adapted organisms survive and reproduce in the environment, and the principle of survival of the fittest drives biological evolution. Similarly, market competition is a critical force in urban development, as effective market competition drives innovation in businesses and industries, promoting economic prosperity in the city.",
+    "Species adaptation corresponds to planning adjustment: Species adaptation is the result of biological evolution, where organisms improve their ability to survive and reproduce by adapting to the environment. In urban development, planning adjustment is an important means of adapting the city to changing resident needs, environmental conditions, and societal development by adjusting the urban planning."
+  ],
+  "background": {
+    "source": "Biological evolution is a process of change that occurs over successive generations in biological populations. This change is driven by genetic variation that exists within the population due to genetic mutation and recombination. The process is governed by evolutionary pressures such as natural selection and genetic drift, resulting in certain characteristics becoming more common or rare within the population. The theory of evolution by natural selection was conceived by Charles Darwin and Alfred Russel Wallace and is established by observable facts about living organisms. All life on Earth—including humanity—shares a last universal common ancestor, which lived approximately 3.5–3.8 billion years ago. Existing patterns of biodiversity have been shaped by repeated formations of new species, changes within species, and loss of species throughout the evolutionary history of life on Earth. Evolutionary biologists continue to study various aspects of evolution by forming and testing hypotheses based on evidence from the field or laboratory. The discoveries made in this field have influenced numerous scientific and industrial areas, including agriculture, medicine, and computer science.",
+    "target": "Urban evolution is a fascinating concept that highlights the genetic changes of populations in response to urban development and anthropogenic activities. As cities continue to grow and transform, they create new environments that can impact plant and animal populations in unique ways. This transformed environment creates selection pressures that allow for some organisms to adapt and thrive, while others struggle to survive. The shift in environmental conditions also leads to changes in species composition, presenting a unique opportunity for scientists to study the specific evolutionary responses in these rapidly changing landscapes. With market competition and planning adjustments at play, urban evolution is a key area of interest for biologists and urban planners alike. The study of urban evolution provides a fascinating perspective on rapid evolution in response to human activities, and how certain species are able to adapt while others cannot. These observations can inform future urban development and help create more sustainable and resilient cities."
+  },
+  "raw": {
+    "id": 20,
+    "lang": "en",
+    "system_a": "Biological Evolution",
+    "system_b": "Urban Evolution",
+    "mappings": [
+      [
+        "biological population",
+        "urban population"
+      ],
+      [
+        "Genetic Variation",
+        "building transformation"
+      ],
+      [
+        "natural selection",
+        "market competition"
+      ],
+      [
+        "species adaptation",
+        "Planning adjustment"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Geography",
+    "system_a_background": "Biological evolution is a process of change that occurs over successive generations in biological populations. This change is driven by genetic variation that exists within the population due to genetic mutation and recombination. The process is governed by evolutionary pressures such as natural selection and genetic drift, resulting in certain characteristics becoming more common or rare within the population. The theory of evolution by natural selection was conceived by Charles Darwin and Alfred Russel Wallace and is established by observable facts about living organisms. All life on Earth—including humanity—shares a last universal common ancestor, which lived approximately 3.5–3.8 billion years ago. Existing patterns of biodiversity have been shaped by repeated formations of new species, changes within species, and loss of species throughout the evolutionary history of life on Earth. Evolutionary biologists continue to study various aspects of evolution by forming and testing hypotheses based on evidence from the field or laboratory. The discoveries made in this field have influenced numerous scientific and industrial areas, including agriculture, medicine, and computer science.",
+    "system_b_background": "Urban evolution is a fascinating concept that highlights the genetic changes of populations in response to urban development and anthropogenic activities. As cities continue to grow and transform, they create new environments that can impact plant and animal populations in unique ways. This transformed environment creates selection pressures that allow for some organisms to adapt and thrive, while others struggle to survive. The shift in environmental conditions also leads to changes in species composition, presenting a unique opportunity for scientists to study the specific evolutionary responses in these rapidly changing landscapes. With market competition and planning adjustments at play, urban evolution is a key area of interest for biologists and urban planners alike. The study of urban evolution provides a fascinating perspective on rapid evolution in response to human activities, and how certain species are able to adapt while others cannot. These observations can inform future urban development and help create more sustainable and resilient cities.",
+    "Explanation": [
+      "Biological population corresponds to urban population: In this analogy, biological population and urban population represent the fundamental units of biological evolution and urban development, respectively. Biological population is composed of many similar individual organisms that evolve and adapt to the environment. Urban population consists of residents who collectively influence and shape the development and transformation of the city.",
+      "Genetic variation corresponds to building transformation: Genetic variation is a key factor in the process of biological evolution that generates new features that help organisms adapt to the changing environment. Similarly, building transformation is an important manifestation of urban development where new building designs and urban planning meet the changing needs and lifestyles of residents.",
+      "Natural selection corresponds to market competition: Natural selection is the process by which the most adapted organisms survive and reproduce in the environment, and the principle of survival of the fittest drives biological evolution. Similarly, market competition is a critical force in urban development, as effective market competition drives innovation in businesses and industries, promoting economic prosperity in the city.",
+      "Species adaptation corresponds to planning adjustment: Species adaptation is the result of biological evolution, where organisms improve their ability to survive and reproduce by adapting to the environment. In urban development, planning adjustment is an important means of adapting the city to changing resident needs, environmental conditions, and societal development by adjusting the urban planning."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Biological Evolution",
+    "target": "Urban Evolution"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Geography"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

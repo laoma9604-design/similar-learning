@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0076",
+  "dataset": "scar",
+  "original_id": "76",
+  "source_object_id": "obj_group_scar_0076_src",
+  "target_object_id": "obj_group_scar_0076_tgt",
+  "faithful_mappings": [
+    [
+      "Stomach",
+      "Reactor"
+    ],
+    [
+      "intestine",
+      "Conveyor pipeline"
+    ],
+    [
+      "absorb",
+      "product separation"
+    ]
+  ],
+  "explanation": [
+    "The stomach corresponds to the reactor: the stomach is the organ in the digestive system that is responsible for storing and breaking down food; the reactor is the equipment in a factory used for chemical reactions. Both are responsible for processing and transforming substances in their respective systems.",
+    "The intestine corresponds to the conveyor pipeline: the intestine is the part of the digestive system responsible for transporting digested material to various organs; the conveyor pipeline is the equipment in a factory used for transporting raw materials or products from one place to another. Both play a role in transportation and distribution in their respective systems.",
+    "Absorption corresponds to product separation: the digestive system absorbs nutrients from digested material into the bloodstream; product separation is the process in a factory of separating finished products from waste and by-products. Both are responsible for extracting useful substances from other substances in their respective systems."
+  ],
+  "background": {
+    "source": "The digestive system is a complex and essential system responsible for breaking down food into smaller molecules that the body can absorb and utilize for energy. It consists of various organs, including the mouth, stomach, and intestine, which work together to facilitate mechanical and chemical digestion. Through the process of peristalsis, the food travels down the esophagus and into the stomach, where gastric juice breaks down proteins, and mechanical mixing continues. Once the partially digested food enters the small intestine, it mixes with digestive enzymes from the pancreas and bile juice from the liver, where it is fully digested and absorbed into the bloodstream. The large intestine absorbs water and minerals before waste material is eliminated through defecation. Overall, the digestive system is a vital process in the body that allows for the absorption of nutrients essential for survival.",
+    "target": "A factory, also known as a manufacturing plant or production plant, is a vital part of modern economic production. It is an industrial facility consisting of buildings filled with various heavy machinery, where workers operate these machines to manufacture or process items into another. Factories have evolved over time; during the Industrial Revolution, the introduction of machinery resulted in factories becoming more complex and larger than traditional workshops. Today, they are equipped with cutting-edge machinery and technology, including conveyor pipelines to transport materials and products, and reactors to facilitate chemical reactions. Factories may produce discrete products or continuously produced materials, like chemicals or refined oils, with most of their equipment and processes located outdoors. The processes used in factories are often powered by electricity or heat, which transform raw materials into finished products. The ultimate goal of factories is to produce high-quality items efficiently and cost-effectively. Products are often separated through various means, with some parts and assemblies shipped elsewhere for final assembly. In some countries, such as Australia, a factory building is known as a \"shed\", and they are usually located in areas with access to multiple modes of transportation, including rail, highway, and water loading and unloading facilities."
+  },
+  "raw": {
+    "id": 76,
+    "lang": "en",
+    "system_a": "Digestive System",
+    "system_b": "Factory",
+    "mappings": [
+      [
+        "Stomach",
+        "Reactor"
+      ],
+      [
+        "intestine",
+        "Conveyor pipeline"
+      ],
+      [
+        "absorb",
+        "product separation"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Engineering",
+    "system_a_background": "The digestive system is a complex and essential system responsible for breaking down food into smaller molecules that the body can absorb and utilize for energy. It consists of various organs, including the mouth, stomach, and intestine, which work together to facilitate mechanical and chemical digestion. Through the process of peristalsis, the food travels down the esophagus and into the stomach, where gastric juice breaks down proteins, and mechanical mixing continues. Once the partially digested food enters the small intestine, it mixes with digestive enzymes from the pancreas and bile juice from the liver, where it is fully digested and absorbed into the bloodstream. The large intestine absorbs water and minerals before waste material is eliminated through defecation. Overall, the digestive system is a vital process in the body that allows for the absorption of nutrients essential for survival.",
+    "system_b_background": "A factory, also known as a manufacturing plant or production plant, is a vital part of modern economic production. It is an industrial facility consisting of buildings filled with various heavy machinery, where workers operate these machines to manufacture or process items into another. Factories have evolved over time; during the Industrial Revolution, the introduction of machinery resulted in factories becoming more complex and larger than traditional workshops. Today, they are equipped with cutting-edge machinery and technology, including conveyor pipelines to transport materials and products, and reactors to facilitate chemical reactions. Factories may produce discrete products or continuously produced materials, like chemicals or refined oils, with most of their equipment and processes located outdoors. The processes used in factories are often powered by electricity or heat, which transform raw materials into finished products. The ultimate goal of factories is to produce high-quality items efficiently and cost-effectively. Products are often separated through various means, with some parts and assemblies shipped elsewhere for final assembly. In some countries, such as Australia, a factory building is known as a \"shed\", and they are usually located in areas with access to multiple modes of transportation, including rail, highway, and water loading and unloading facilities.",
+    "Explanation": [
+      "The stomach corresponds to the reactor: the stomach is the organ in the digestive system that is responsible for storing and breaking down food; the reactor is the equipment in a factory used for chemical reactions. Both are responsible for processing and transforming substances in their respective systems.",
+      "The intestine corresponds to the conveyor pipeline: the intestine is the part of the digestive system responsible for transporting digested material to various organs; the conveyor pipeline is the equipment in a factory used for transporting raw materials or products from one place to another. Both play a role in transportation and distribution in their respective systems.",
+      "Absorption corresponds to product separation: the digestive system absorbs nutrients from digested material into the bloodstream; product separation is the process in a factory of separating finished products from waste and by-products. Both are responsible for extracting useful substances from other substances in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Digestive System",
+    "target": "Factory"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

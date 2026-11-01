@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0174",
+  "dataset": "scar",
+  "original_id": "174",
+  "source_object_id": "obj_group_scar_0174_src",
+  "target_object_id": "obj_group_scar_0174_tgt",
+  "faithful_mappings": [
+    [
+      "Boom period",
+      "daytime"
+    ],
+    [
+      "Recession",
+      "night"
+    ],
+    [
+      "recovery period",
+      "dawn"
+    ]
+  ],
+  "explanation": [
+    "The boom period corresponds to daytime: The boom period is the peak stage of the economic cycle, during which economic activities thrive, and production and investment grow rapidly. Daytime is the period with sufficient sunlight in the day-night cycle, during which biological activities are active. Here, the boom period and daytime represent the active and prosperous period in their respective fields.",
+    "The recession corresponds to night: The recession is the downward stage of the economic cycle, during which economic activities slow down, and production and investment growth slow down. Night is the period with weaker sunlight in the day-night cycle, during which biological activities slow down. Here, the recession and night represent the subdued and sluggish period in their respective fields.",
+    "The recovery period corresponds to dawn: The recovery period is the stage of economic recovery in the economic cycle, during which the economy gradually improves, and production and investment growth recovers. Dawn is the period with gradually increasing sunlight in the day-night cycle, during which biological activities begin to recover. Here, the recovery period and dawn represent the recovery and the beginning of a new cycle in their respective fields."
+  ],
+  "background": {
+    "source": "The business cycle is a phenomenon marked by alternating periods of expansion, recession, and recovery in the economy. These cycles are defined by changes in macroeconomic variables and are typically measured by indicators such as Real Gross Domestic Production. The duration and intensity of each cycle can vary greatly, with periodicity ranging from 2 to 10 years. Understanding the frequency of business cycles can be achieved through statistical methods such as Bayesian analysis. Although the occurrence of business cycles can be unpredictable, economists have gained insight into their causes through research and data analysis. During boom periods, the economy experiences growth, while recessions are characterized by negative GDP growth lasting for 2 quarters. Recovery periods follow recessions as the economy begins to rebound. The business cycle can be affected by numerous sources, including sudden changes in oil prices, consumer sentiment, and crises such as the 2007-2008 financial crisis or the COVID-19 pandemic.",
+    "target": "The day and night cycle, also known as the diurnal cycle, is a natural phenomenon that occurs as a result of the Earth's rotation around its axis. As the planet rotates, the sun appears to rise and set, creating distinct periods of daytime and night. The diurnal cycle is responsible for the fluctuations in surface temperatures that occur throughout the day and night, as well as the changes in weather patterns over the course of the year. At dawn, when the sun first rises, the day begins and the cycle starts anew. The daytime is characterized by sunlight and warmth, while the night is marked by darkness and coolness. The diurnal cycle is an essential aspect of life on Earth, influencing everything from sleep patterns to plant growth and animal behavior."
+  },
+  "raw": {
+    "id": 174,
+    "lang": "en",
+    "system_a": "Business cycle",
+    "system_b": "day and night cycle",
+    "mappings": [
+      [
+        "Boom period",
+        "daytime"
+      ],
+      [
+        "Recession",
+        "night"
+      ],
+      [
+        "recovery period",
+        "dawn"
+      ]
+    ],
+    "system_a_domain": "Economy",
+    "system_b_domain": "Geography",
+    "system_a_background": "The business cycle is a phenomenon marked by alternating periods of expansion, recession, and recovery in the economy. These cycles are defined by changes in macroeconomic variables and are typically measured by indicators such as Real Gross Domestic Production. The duration and intensity of each cycle can vary greatly, with periodicity ranging from 2 to 10 years. Understanding the frequency of business cycles can be achieved through statistical methods such as Bayesian analysis. Although the occurrence of business cycles can be unpredictable, economists have gained insight into their causes through research and data analysis. During boom periods, the economy experiences growth, while recessions are characterized by negative GDP growth lasting for 2 quarters. Recovery periods follow recessions as the economy begins to rebound. The business cycle can be affected by numerous sources, including sudden changes in oil prices, consumer sentiment, and crises such as the 2007-2008 financial crisis or the COVID-19 pandemic.",
+    "system_b_background": "The day and night cycle, also known as the diurnal cycle, is a natural phenomenon that occurs as a result of the Earth's rotation around its axis. As the planet rotates, the sun appears to rise and set, creating distinct periods of daytime and night. The diurnal cycle is responsible for the fluctuations in surface temperatures that occur throughout the day and night, as well as the changes in weather patterns over the course of the year. At dawn, when the sun first rises, the day begins and the cycle starts anew. The daytime is characterized by sunlight and warmth, while the night is marked by darkness and coolness. The diurnal cycle is an essential aspect of life on Earth, influencing everything from sleep patterns to plant growth and animal behavior.",
+    "Explanation": [
+      "The boom period corresponds to daytime: The boom period is the peak stage of the economic cycle, during which economic activities thrive, and production and investment grow rapidly. Daytime is the period with sufficient sunlight in the day-night cycle, during which biological activities are active. Here, the boom period and daytime represent the active and prosperous period in their respective fields.",
+      "The recession corresponds to night: The recession is the downward stage of the economic cycle, during which economic activities slow down, and production and investment growth slow down. Night is the period with weaker sunlight in the day-night cycle, during which biological activities slow down. Here, the recession and night represent the subdued and sluggish period in their respective fields.",
+      "The recovery period corresponds to dawn: The recovery period is the stage of economic recovery in the economic cycle, during which the economy gradually improves, and production and investment growth recovers. Dawn is the period with gradually increasing sunlight in the day-night cycle, during which biological activities begin to recover. Here, the recovery period and dawn represent the recovery and the beginning of a new cycle in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Business cycle",
+    "target": "day and night cycle"
+  },
+  "domains": {
+    "source": "Economy",
+    "target": "Geography"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

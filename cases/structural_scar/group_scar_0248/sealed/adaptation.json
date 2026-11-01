@@ -1,0 +1,119 @@
+{
+  "adaptation_id": "adapt_scar_0248",
+  "dataset": "scar",
+  "original_id": "248",
+  "source_object_id": "obj_group_scar_0248_src",
+  "target_object_id": "obj_group_scar_0248_tgt",
+  "faithful_mappings": [
+    [
+      "Cao Xueqin",
+      "Keyan"
+    ],
+    [
+      "Jia Baoyu",
+      "Yan Ling"
+    ],
+    [
+      "Lin Daiyu",
+      "Cui Yingying"
+    ],
+    [
+      "Shi Xiangyun",
+      "Zhao Feiyan"
+    ],
+    [
+      "family honor",
+      "women's destiny"
+    ],
+    [
+      "Official power",
+      "social morality"
+    ]
+  ],
+  "explanation": [
+    "Cao Xueqin corresponds to Keyan: Both are the authors of their respective works, representing classical and modern Chinese literature, respectively. ",
+    "Jia Baoyu corresponds to Yan Ling: These two characters are the protagonists of their respective works, representing the noble children in classical times and the intellectuals in modern society. ",
+    "Lin Daiyu corresponds to Cui Yingying: Both characters are important female characters in their respective works, and their fates reflect the status and experiences of women in different times in the family and society. ",
+    "Shi Xiangyun corresponds to Zhao Feiyan: These two characters are both important in their respective works, representing female images in different social backgrounds. ",
+    "Family honor corresponds to women's destiny: These two themes respectively embody the core ideas of the two works. The former focuses on the ethical and moral concepts behind the rise and fall of the family, while the latter focuses on the status and fate of women in society. ",
+    "Official power corresponds to social morality: These two themes respectively embody the core ideas of the two works. The former focuses on the political struggles and the rise and fall of families in ancient China's officialdom, while the latter focuses on the moral concepts and values ​​in modern society."
+  ],
+  "background": {
+    "source": "Dream of the Red Chamber, also known as The Story of the Stone, is a masterpiece novel composed by Cao Xueqin in the middle of the 18th century. The novel is regarded as one of the Four Great Classical Novels of Chinese literature which depicts the rise and decline of a family much alike to Cao's own and, by extension, of the dynasty itself. It offers a deep insight into the worldview, aesthetics, life-styles, and social relations of 18th-century China. Exploring a range of philosophical and religious questions, the novel's intricate plot delves into the concepts of family honor and official power. At its core, the novel is a memorial to the women that Cao Xueqin knew in his youth, including friends, relatives, and servants. While the author depicts the power of the father over the family, the novel provides a profound portrayal of women's lives in this era. The story centers around Jia Baoyu, Lin Daiyu, Shi Xiangyun, and other members of the Jia clan as they navigate their personal relationships and family dynamics. The novel was not published until nearly three decades after Cao's death when it was edited by Gao E and Cheng Weiyuan, adding 40 chapters, to become the most widely circulated version. The novel has been translated into different titles, including A Dream of Red Mansions, Red Chamber Dream, and The Story of the Stone.",
+    "target": "Nie Haihua is a prominent figure in China, known for his achievements in the field of Keyan. Born in October 1942, Zhu Wenquan is a general of the People's Liberation Army (PLA) and a former delegate to the National People's Congress. His contributions to the country have been recognized by his appointment as an alternate member of the 16th Central Committee of the Chinese Communist Party. \n\nDespite being a man of great accomplishments, Nie Haihua has also shown a keen interest in women's destiny and social morality. This is clearly evidenced in his appreciation of legendary figures such as Yan Ling, Cui Yingying, and Zhao Feiyan, who have become symbols of femininity and strength. Overall, Nie Haihua's career and values are a testament to his commitment to the betterment of China and its people."
+  },
+  "raw": {
+    "id": 248,
+    "lang": "en",
+    "system_a": "Dream of Red Mansions",
+    "system_b": "Nie Haihua",
+    "mappings": [
+      [
+        "Cao Xueqin",
+        "Keyan"
+      ],
+      [
+        "Jia Baoyu",
+        "Yan Ling"
+      ],
+      [
+        "Lin Daiyu",
+        "Cui Yingying"
+      ],
+      [
+        "Shi Xiangyun",
+        "Zhao Feiyan"
+      ],
+      [
+        "family honor",
+        "women's destiny"
+      ],
+      [
+        "Official power",
+        "social morality"
+      ]
+    ],
+    "system_a_domain": "Literature",
+    "system_b_domain": "Literature",
+    "system_a_background": "Dream of the Red Chamber, also known as The Story of the Stone, is a masterpiece novel composed by Cao Xueqin in the middle of the 18th century. The novel is regarded as one of the Four Great Classical Novels of Chinese literature which depicts the rise and decline of a family much alike to Cao's own and, by extension, of the dynasty itself. It offers a deep insight into the worldview, aesthetics, life-styles, and social relations of 18th-century China. Exploring a range of philosophical and religious questions, the novel's intricate plot delves into the concepts of family honor and official power. At its core, the novel is a memorial to the women that Cao Xueqin knew in his youth, including friends, relatives, and servants. While the author depicts the power of the father over the family, the novel provides a profound portrayal of women's lives in this era. The story centers around Jia Baoyu, Lin Daiyu, Shi Xiangyun, and other members of the Jia clan as they navigate their personal relationships and family dynamics. The novel was not published until nearly three decades after Cao's death when it was edited by Gao E and Cheng Weiyuan, adding 40 chapters, to become the most widely circulated version. The novel has been translated into different titles, including A Dream of Red Mansions, Red Chamber Dream, and The Story of the Stone.",
+    "system_b_background": "Nie Haihua is a prominent figure in China, known for his achievements in the field of Keyan. Born in October 1942, Zhu Wenquan is a general of the People's Liberation Army (PLA) and a former delegate to the National People's Congress. His contributions to the country have been recognized by his appointment as an alternate member of the 16th Central Committee of the Chinese Communist Party. \n\nDespite being a man of great accomplishments, Nie Haihua has also shown a keen interest in women's destiny and social morality. This is clearly evidenced in his appreciation of legendary figures such as Yan Ling, Cui Yingying, and Zhao Feiyan, who have become symbols of femininity and strength. Overall, Nie Haihua's career and values are a testament to his commitment to the betterment of China and its people.",
+    "Explanation": [
+      "Cao Xueqin corresponds to Keyan: Both are the authors of their respective works, representing classical and modern Chinese literature, respectively. ",
+      "Jia Baoyu corresponds to Yan Ling: These two characters are the protagonists of their respective works, representing the noble children in classical times and the intellectuals in modern society. ",
+      "Lin Daiyu corresponds to Cui Yingying: Both characters are important female characters in their respective works, and their fates reflect the status and experiences of women in different times in the family and society. ",
+      "Shi Xiangyun corresponds to Zhao Feiyan: These two characters are both important in their respective works, representing female images in different social backgrounds. ",
+      "Family honor corresponds to women's destiny: These two themes respectively embody the core ideas of the two works. The former focuses on the ethical and moral concepts behind the rise and fall of the family, while the latter focuses on the status and fate of women in society. ",
+      "Official power corresponds to social morality: These two themes respectively embody the core ideas of the two works. The former focuses on the political struggles and the rise and fall of families in ancient China's officialdom, while the latter focuses on the moral concepts and values ​​in modern society."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Dream of Red Mansions",
+    "target": "Nie Haihua"
+  },
+  "domains": {
+    "source": "Literature",
+    "target": "Literature"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

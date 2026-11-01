@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0043",
+  "dataset": "scar",
+  "original_id": "43",
+  "source_object_id": "obj_group_scar_0043_src",
+  "target_object_id": "obj_group_scar_0043_tgt",
+  "faithful_mappings": [
+    [
+      "microorganism",
+      "biological group"
+    ],
+    [
+      "Habitats",
+      "Habitats"
+    ],
+    [
+      "Synergy",
+      "biological interactions"
+    ]
+  ],
+  "explanation": [
+    "Microorganisms correspond to biological groups: Microorganisms in microbial communities are the fundamental units that make up the community, whereas biological groups in ecosystems are the fundamental units that make up the ecosystem. Both are the basic components of their respective systems.",
+    "The ecological niche between microorganisms corresponds to habitats and ecological niches in ecosystems: The ecological niche between microorganisms refers to the position and function of microorganisms in their environment, while habitats and ecological niches in ecosystems refer to the position and function of organisms in the ecosystem. Both describe the positioning and function of organisms in the environment.",
+    "The synergy between microorganisms corresponds to biological interactions: The synergy between microorganisms refers to the process where microorganisms interact with and live with each other in a community, while biological interactions refer to the process where organisms interact with and live with each other in an ecosystem. Both describe the mutual interaction and dependence between organisms."
+  ],
+  "background": {
+    "source": "Microbiome refers to a community of microorganisms living together in a specific habitat, ranging from bacteria, archaea, fungi, algae, viruses, and small protists. Whipps et al. defined microbiome in 1988 as a microbial community occupying a well-defined habitat. The concept of microbiome has developed over the years, and an international panel of experts in 2020 proposed a definition based on Whipps et al.'s definition but with two supplementary paragraphs. The first paragraph emphasizes the dynamic nature of microbiomes, while the second distinguishes microbiota from microbiome. All animals and plants form associations with microorganisms, and the potential for microbiomes to influence their health, physiology, behaviour, and ecology is immense. Microbiome research has undergone several paradigm shifts, and the development of new techniques and equipment has led to a better understanding of the synergy between different microorganisms and their role in ecosystem functioning. Overall, microbiomes are critical to the functioning of ecosystems, and research in this field has tremendous potential in improving human, animal, and plant health.",
+    "target": "An ecosystem is a complex biological group consisting of organisms and their physical environment that are in constant interaction with each other. The biotic and abiotic components of the ecosystem are interlinked through nutrient cycles and energy flows. The ecosystem is controlled by external and internal factors, with the former being influenced by climate, parent material, and topography. While the latter is controlled by decomposition, root competition, shading, disturbance, succession, and the types of species present. Ecosystems are dynamic entities and are subject to periodic disturbances, which can affect their function, structure, and feedbacks. The resistance of an ecosystem to recover from disturbance is termed its resistance, and the capacity of the ecosystem to absorb disturbance and reorganize while undergoing change is ecological resilience. Ecosystems provide a variety of goods and services upon which people depend, including water, food, fuel, construction material, and medicinal plants. Ecosystem restoration can contribute to achieving the Sustainable Development Goals."
+  },
+  "raw": {
+    "id": 43,
+    "lang": "en",
+    "system_a": "Microbiome",
+    "system_b": "ecosystem",
+    "mappings": [
+      [
+        "microorganism",
+        "biological group"
+      ],
+      [
+        "Habitats",
+        "Habitats"
+      ],
+      [
+        "Synergy",
+        "biological interactions"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Biology",
+    "system_a_background": "Microbiome refers to a community of microorganisms living together in a specific habitat, ranging from bacteria, archaea, fungi, algae, viruses, and small protists. Whipps et al. defined microbiome in 1988 as a microbial community occupying a well-defined habitat. The concept of microbiome has developed over the years, and an international panel of experts in 2020 proposed a definition based on Whipps et al.'s definition but with two supplementary paragraphs. The first paragraph emphasizes the dynamic nature of microbiomes, while the second distinguishes microbiota from microbiome. All animals and plants form associations with microorganisms, and the potential for microbiomes to influence their health, physiology, behaviour, and ecology is immense. Microbiome research has undergone several paradigm shifts, and the development of new techniques and equipment has led to a better understanding of the synergy between different microorganisms and their role in ecosystem functioning. Overall, microbiomes are critical to the functioning of ecosystems, and research in this field has tremendous potential in improving human, animal, and plant health.",
+    "system_b_background": "An ecosystem is a complex biological group consisting of organisms and their physical environment that are in constant interaction with each other. The biotic and abiotic components of the ecosystem are interlinked through nutrient cycles and energy flows. The ecosystem is controlled by external and internal factors, with the former being influenced by climate, parent material, and topography. While the latter is controlled by decomposition, root competition, shading, disturbance, succession, and the types of species present. Ecosystems are dynamic entities and are subject to periodic disturbances, which can affect their function, structure, and feedbacks. The resistance of an ecosystem to recover from disturbance is termed its resistance, and the capacity of the ecosystem to absorb disturbance and reorganize while undergoing change is ecological resilience. Ecosystems provide a variety of goods and services upon which people depend, including water, food, fuel, construction material, and medicinal plants. Ecosystem restoration can contribute to achieving the Sustainable Development Goals.",
+    "Explanation": [
+      "Microorganisms correspond to biological groups: Microorganisms in microbial communities are the fundamental units that make up the community, whereas biological groups in ecosystems are the fundamental units that make up the ecosystem. Both are the basic components of their respective systems.",
+      "The ecological niche between microorganisms corresponds to habitats and ecological niches in ecosystems: The ecological niche between microorganisms refers to the position and function of microorganisms in their environment, while habitats and ecological niches in ecosystems refer to the position and function of organisms in the ecosystem. Both describe the positioning and function of organisms in the environment.",
+      "The synergy between microorganisms corresponds to biological interactions: The synergy between microorganisms refers to the process where microorganisms interact with and live with each other in a community, while biological interactions refer to the process where organisms interact with and live with each other in an ecosystem. Both describe the mutual interaction and dependence between organisms."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Microbiome",
+    "target": "ecosystem"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

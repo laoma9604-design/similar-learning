@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0368",
+  "dataset": "scar",
+  "original_id": "368",
+  "source_object_id": "obj_group_scar_0368_src",
+  "target_object_id": "obj_group_scar_0368_tgt",
+  "faithful_mappings": [
+    [
+      "charge",
+      "data"
+    ],
+    [
+      "Voltage",
+      "address"
+    ],
+    [
+      "capacitance",
+      "capacity"
+    ]
+  ],
+  "explanation": [
+    "Charge corresponds to data: in a capacitor, charge is the basic unit of storage. In memory, data is the basic unit of storage. Both are storage objects in their respective domains.",
+    "Voltage corresponds to address: in a capacitor, voltage represents the storage state of charge. In memory, an address represents the storage location of data. Both are parameters that describe the storage state.",
+    "Capacitance corresponds to capacity: in a capacitor, capacitance represents the amount of charge the capacitor can store. In memory, capacity represents the amount of data that the memory can store. Both are indicators that describe the storage capability."
+  ],
+  "background": {
+    "source": "A capacitor is an electronic device that stores electrical energy in an electric field. It consists of two terminals, and its main effect is known as capacitance. The capacitor adds capacitance to a circuit, which can be helpful in blocking direct current while allowing alternating current to pass. When a voltage is applied across its terminals, an electric field develops across the dielectric or insulating material, causing one plate to accumulate a net positive charge, and the other to accumulate a net negative charge. Capacitors are widely used in electrical circuits and electronic devices, and their ability to store energy has found applications in resonant circuits, power transmission systems, and digital memory. The earliest forms of capacitors were water-filled glass jars called Leyden jars, which were created in the 1740s. The physical form and construction of practical capacitors vary widely, and most capacitors contain two electrical conductors separated by a dielectric medium. Capacitors are an essential component in many common electrical devices and contribute significantly to the field of electronics.",
+    "target": "Memory, in the context of psychology and neuroscience, refers to the human mind's ability to encode, store, and retrieve data or information when needed. It is one of the most crucial faculties of the human mind since without it, personal identity, relationships, and communication would be impossible. Memory is usually seen as an information processing system with explicit and implicit functions. It is made up of a sensory processor, short-term (or working) memory, and long-term memory. The capacity of memory can be affected by many factors, such as attention given to new stimuli, physical damage to the brain, and decay over time. In computing, address and capacity are also crucial factors in memory storage and retrieval, and they refer to the location of the data and the amount of data that can be stored, respectively."
+  },
+  "raw": {
+    "id": 368,
+    "lang": "en",
+    "system_a": "Capacitor",
+    "system_b": "memory",
+    "mappings": [
+      [
+        "charge",
+        "data"
+      ],
+      [
+        "Voltage",
+        "address"
+      ],
+      [
+        "capacitance",
+        "capacity"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Computer",
+    "system_a_background": "A capacitor is an electronic device that stores electrical energy in an electric field. It consists of two terminals, and its main effect is known as capacitance. The capacitor adds capacitance to a circuit, which can be helpful in blocking direct current while allowing alternating current to pass. When a voltage is applied across its terminals, an electric field develops across the dielectric or insulating material, causing one plate to accumulate a net positive charge, and the other to accumulate a net negative charge. Capacitors are widely used in electrical circuits and electronic devices, and their ability to store energy has found applications in resonant circuits, power transmission systems, and digital memory. The earliest forms of capacitors were water-filled glass jars called Leyden jars, which were created in the 1740s. The physical form and construction of practical capacitors vary widely, and most capacitors contain two electrical conductors separated by a dielectric medium. Capacitors are an essential component in many common electrical devices and contribute significantly to the field of electronics.",
+    "system_b_background": "Memory, in the context of psychology and neuroscience, refers to the human mind's ability to encode, store, and retrieve data or information when needed. It is one of the most crucial faculties of the human mind since without it, personal identity, relationships, and communication would be impossible. Memory is usually seen as an information processing system with explicit and implicit functions. It is made up of a sensory processor, short-term (or working) memory, and long-term memory. The capacity of memory can be affected by many factors, such as attention given to new stimuli, physical damage to the brain, and decay over time. In computing, address and capacity are also crucial factors in memory storage and retrieval, and they refer to the location of the data and the amount of data that can be stored, respectively.",
+    "Explanation": [
+      "Charge corresponds to data: in a capacitor, charge is the basic unit of storage. In memory, data is the basic unit of storage. Both are storage objects in their respective domains.",
+      "Voltage corresponds to address: in a capacitor, voltage represents the storage state of charge. In memory, an address represents the storage location of data. Both are parameters that describe the storage state.",
+      "Capacitance corresponds to capacity: in a capacitor, capacitance represents the amount of charge the capacitor can store. In memory, capacity represents the amount of data that the memory can store. Both are indicators that describe the storage capability."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Capacitor",
+    "target": "memory"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Computer"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

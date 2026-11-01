@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0329",
+  "dataset": "scar",
+  "original_id": "329",
+  "source_object_id": "obj_group_scar_0329_src",
+  "target_object_id": "obj_group_scar_0329_tgt",
+  "faithful_mappings": [
+    [
+      "verse",
+      "Note"
+    ],
+    [
+      "poet",
+      "musician"
+    ],
+    [
+      "length",
+      "duration"
+    ],
+    [
+      "rhyme",
+      "harmony"
+    ],
+    [
+      "rhythm",
+      "rhythm"
+    ]
+  ],
+  "explanation": [
+    "A verse corresponds to a note: in poetry, a verse is the basic unit used to express the poet's emotions and thoughts through the combination of different verses. In music, a note is the basic unit used to create melodies and express the musician's emotions. Both are fundamental elements in their respective fields, used to convey the creator's ideas and feelings.",
+    "A poet corresponds to a musician: a poet is someone who writes poetry to express their emotions, viewpoints and imagination, while a musician composes music to express their emotions, viewpoints and imagination. Both poets and musicians are creators in their respective fields, responsible for creating and conveying artistic works.",
+    "Length corresponds to duration: the length of a poem refers to the total number of verses, reflecting the length of the poem. The duration of a piece of music refers to the time needed for the music to be played from start to finish, reflecting the length of the music. In this mapping, both length and duration indicate the size and length of the works.",
+    "Rhyme corresponds to harmony: rhyme in poetry refers to the repetition of similar sounds at the end of adjacent or spaced verses, enhancing the beauty and rhythm of the poem. Harmony in music refers to different notes played at the same time, enhancing the richness and beauty of the music. Both rhyme and harmony are techniques used to enhance the aesthetic and rhythmic qualities of a work.",
+    "Rhythm corresponds to rhythm: rhythm in poetry refers to the rhythm and sound structure of the poem, adjusted through the length, pauses and rhymes of the verses. In music, rhythm refers to the combination of strong and weak notes, length, speed, and determines the rhythm of the music. In this mapping, both the rhythm in poetry and rhythm in music are elements used to adjust the rhythmic and dynamic qualities of a work."
+  ],
+  "background": {
+    "source": "Poetry is a form of literature that allows for the use of aesthetic and rhythmic qualities of language to evoke meanings beyond its surface level. Created by poets, a poem can take on many shapes and forms, with a history dating back to prehistoric times. Early poems were inspired by hunting, court poetry, and folk songs, eventually evolving into religious hymns and epic poetry. Poetry uses forms and conventions to suggest different interpretations of words, and various devices like rhythm and rhyme can create musical or incantatory effects. While poetry has long been associated with inspiration and the Muse, poets today often adapt forms and techniques from diverse cultures and languages, contributing to the evolution of their languages in various linguistic, expressive, and utilitarian ways.",
+    "target": "Music is an art form that involves arranging sound to express emotions or convey a message using a combination of notes, pitches, speed, and rhythm. It is a universal cultural phenomenon present in all societies and can be structured or improvised. Music is performed using a variety of instruments, including the human voice, and is heard through a range of mediums, from public concert performances to personal audio devices. It is an essential component of social activities, celebrations, and can even play a role in religious and cultural events. The industry surrounding music includes various professionals such as songwriters, performers, and sound engineers, with compositions and performances evaluated by critics, journalists, scholars, and amateurs alike."
+  },
+  "raw": {
+    "id": 329,
+    "lang": "en",
+    "system_a": "Poetry",
+    "system_b": "Music",
+    "mappings": [
+      [
+        "verse",
+        "Note"
+      ],
+      [
+        "poet",
+        "musician"
+      ],
+      [
+        "length",
+        "duration"
+      ],
+      [
+        "rhyme",
+        "harmony"
+      ],
+      [
+        "rhythm",
+        "rhythm"
+      ]
+    ],
+    "system_a_domain": "Literature",
+    "system_b_domain": "Art",
+    "system_a_background": "Poetry is a form of literature that allows for the use of aesthetic and rhythmic qualities of language to evoke meanings beyond its surface level. Created by poets, a poem can take on many shapes and forms, with a history dating back to prehistoric times. Early poems were inspired by hunting, court poetry, and folk songs, eventually evolving into religious hymns and epic poetry. Poetry uses forms and conventions to suggest different interpretations of words, and various devices like rhythm and rhyme can create musical or incantatory effects. While poetry has long been associated with inspiration and the Muse, poets today often adapt forms and techniques from diverse cultures and languages, contributing to the evolution of their languages in various linguistic, expressive, and utilitarian ways.",
+    "system_b_background": "Music is an art form that involves arranging sound to express emotions or convey a message using a combination of notes, pitches, speed, and rhythm. It is a universal cultural phenomenon present in all societies and can be structured or improvised. Music is performed using a variety of instruments, including the human voice, and is heard through a range of mediums, from public concert performances to personal audio devices. It is an essential component of social activities, celebrations, and can even play a role in religious and cultural events. The industry surrounding music includes various professionals such as songwriters, performers, and sound engineers, with compositions and performances evaluated by critics, journalists, scholars, and amateurs alike.",
+    "Explanation": [
+      "A verse corresponds to a note: in poetry, a verse is the basic unit used to express the poet's emotions and thoughts through the combination of different verses. In music, a note is the basic unit used to create melodies and express the musician's emotions. Both are fundamental elements in their respective fields, used to convey the creator's ideas and feelings.",
+      "A poet corresponds to a musician: a poet is someone who writes poetry to express their emotions, viewpoints and imagination, while a musician composes music to express their emotions, viewpoints and imagination. Both poets and musicians are creators in their respective fields, responsible for creating and conveying artistic works.",
+      "Length corresponds to duration: the length of a poem refers to the total number of verses, reflecting the length of the poem. The duration of a piece of music refers to the time needed for the music to be played from start to finish, reflecting the length of the music. In this mapping, both length and duration indicate the size and length of the works.",
+      "Rhyme corresponds to harmony: rhyme in poetry refers to the repetition of similar sounds at the end of adjacent or spaced verses, enhancing the beauty and rhythm of the poem. Harmony in music refers to different notes played at the same time, enhancing the richness and beauty of the music. Both rhyme and harmony are techniques used to enhance the aesthetic and rhythmic qualities of a work.",
+      "Rhythm corresponds to rhythm: rhythm in poetry refers to the rhythm and sound structure of the poem, adjusted through the length, pauses and rhymes of the verses. In music, rhythm refers to the combination of strong and weak notes, length, speed, and determines the rhythm of the music. In this mapping, both the rhythm in poetry and rhythm in music are elements used to adjust the rhythmic and dynamic qualities of a work."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Poetry",
+    "target": "Music"
+  },
+  "domains": {
+    "source": "Literature",
+    "target": "Art"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

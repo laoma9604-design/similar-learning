@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0367",
+  "dataset": "scar",
+  "original_id": "367",
+  "source_object_id": "obj_group_scar_0367_src",
+  "target_object_id": "obj_group_scar_0367_tgt",
+  "faithful_mappings": [
+    [
+      "particle",
+      "money"
+    ],
+    [
+      "wave function",
+      "stock price"
+    ],
+    [
+      "Measurement",
+      "Investment decision"
+    ],
+    [
+      "uncertainty principle",
+      "investment risk"
+    ]
+  ],
+  "explanation": [
+    "Particle corresponds to money: In quantum mechanics, a particle is the fundamental unit of matter. In the financial market, money is the basic unit of exchange. Both are the basic units in their respective domains.",
+    "Wave function corresponds to stock prices: In quantum mechanics, the wave function describes the state and behavior of a particle. In the financial market, stock prices describe the value and market behavior of a stock. Both are key parameters for describing system states.",
+    "Measurement corresponds to investment decision: In quantum mechanics, measurement is the process of obtaining information about a particle. In the financial market, investment decisions are based on the analysis and judgment of market information. Both involve the processing and application of information.",
+    "Uncertainty principle corresponds to investment risk: In quantum mechanics, the uncertainty principle describes the inability to simultaneously precisely measure certain properties of a particle. In the financial market, investment risk describes the uncertainty of investment outcomes. Both describe uncertainty and risk in a system."
+  ],
+  "background": {
+    "source": "Quantum mechanics is a revolutionary theory in physics that explains the behavior of nature at the subatomic level. It is the foundation of quantum physics and all of its various applications, including quantum chemistry, quantum field theory, quantum technology, and quantum information science. This theory is based on principles that differ from classical physics where energy, momentum, and other physical quantities are quantized and have characteristics of both particles and waves. Quantum mechanics also imposes limits on the accuracy with which physical quantities can be predicted prior to measurement due to the uncertainty principle. This theory was developed by scientists like Niels Bohr, Erwin Schrödinger, and Werner Heisenberg, and is formulated mathematically with the help of the wave function. In short, quantum mechanics is a fascinating and essential field of study for understanding the behavior of particles and the probabilistic nature of measurements at the subatomic level.",
+    "target": "Financial markets serve as a platform for people to buy and sell financial securities and derivatives at a low transaction cost. These securities include stocks, bonds, commodities, and precious metals. With exchanges like the NYSE, LSE, JSE Limited and BSE, people can trade stocks in a centralized manner, while corporate actions such as mergers and spinoffs remain outside these exchanges. Trading of currencies and bonds is mostly on a bilateral basis, but some bonds also trade on stock exchanges. Making investment decisions in financial markets involve weighing the investment risk associated with the investment, and the stock price. There is a growing global initiative to improve regulation and monitoring of global financial markets, with the United Nations Sustainable Development Goal 10 having a focus on this issue."
+  },
+  "raw": {
+    "id": 367,
+    "lang": "en",
+    "system_a": "Quantum Mechanics",
+    "system_b": "Financial Markets",
+    "mappings": [
+      [
+        "particle",
+        "money"
+      ],
+      [
+        "wave function",
+        "stock price"
+      ],
+      [
+        "Measurement",
+        "Investment decision"
+      ],
+      [
+        "uncertainty principle",
+        "investment risk"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Economy",
+    "system_a_background": "Quantum mechanics is a revolutionary theory in physics that explains the behavior of nature at the subatomic level. It is the foundation of quantum physics and all of its various applications, including quantum chemistry, quantum field theory, quantum technology, and quantum information science. This theory is based on principles that differ from classical physics where energy, momentum, and other physical quantities are quantized and have characteristics of both particles and waves. Quantum mechanics also imposes limits on the accuracy with which physical quantities can be predicted prior to measurement due to the uncertainty principle. This theory was developed by scientists like Niels Bohr, Erwin Schrödinger, and Werner Heisenberg, and is formulated mathematically with the help of the wave function. In short, quantum mechanics is a fascinating and essential field of study for understanding the behavior of particles and the probabilistic nature of measurements at the subatomic level.",
+    "system_b_background": "Financial markets serve as a platform for people to buy and sell financial securities and derivatives at a low transaction cost. These securities include stocks, bonds, commodities, and precious metals. With exchanges like the NYSE, LSE, JSE Limited and BSE, people can trade stocks in a centralized manner, while corporate actions such as mergers and spinoffs remain outside these exchanges. Trading of currencies and bonds is mostly on a bilateral basis, but some bonds also trade on stock exchanges. Making investment decisions in financial markets involve weighing the investment risk associated with the investment, and the stock price. There is a growing global initiative to improve regulation and monitoring of global financial markets, with the United Nations Sustainable Development Goal 10 having a focus on this issue.",
+    "Explanation": [
+      "Particle corresponds to money: In quantum mechanics, a particle is the fundamental unit of matter. In the financial market, money is the basic unit of exchange. Both are the basic units in their respective domains.",
+      "Wave function corresponds to stock prices: In quantum mechanics, the wave function describes the state and behavior of a particle. In the financial market, stock prices describe the value and market behavior of a stock. Both are key parameters for describing system states.",
+      "Measurement corresponds to investment decision: In quantum mechanics, measurement is the process of obtaining information about a particle. In the financial market, investment decisions are based on the analysis and judgment of market information. Both involve the processing and application of information.",
+      "Uncertainty principle corresponds to investment risk: In quantum mechanics, the uncertainty principle describes the inability to simultaneously precisely measure certain properties of a particle. In the financial market, investment risk describes the uncertainty of investment outcomes. Both describe uncertainty and risk in a system."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Quantum Mechanics",
+    "target": "Financial Markets"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Economy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0361",
+  "dataset": "scar",
+  "original_id": "361",
+  "source_object_id": "obj_group_scar_0361_src",
+  "target_object_id": "obj_group_scar_0361_tgt",
+  "faithful_mappings": [
+    [
+      "convex",
+      "sphere"
+    ],
+    [
+      "camber",
+      "taper"
+    ],
+    [
+      "light propagation",
+      "sound wave propagation"
+    ],
+    [
+      "lens",
+      "speaker"
+    ]
+  ],
+  "explanation": [
+    "Convex corresponds to sphere: The convex surface in an optical lens can converge light rays to form a focal point. In an acoustic system, a spherical speaker can disperse sound waves in all directions. Here, both convex and sphere represent shapes that can focus or spread out something.",
+    "Concave corresponds to taper: The concave surface in an optical lens can diverge light rays. In an acoustic system, a conical speaker can concentrate sound waves more effectively. Here, both concave and taper represent shapes that can change the direction of propagation.",
+    "Light propagation corresponds to sound wave propagation: Light propagation in an optical lens refers to the process of light passing through the lens. Sound wave propagation in an acoustic system refers to the process of sound passing through a speaker. In this mapping, both light propagation and sound wave propagation represent the transfer of energy.",
+    "Lens corresponds to speaker: An optical lens is an optical element used to converge or diverge light rays. A speaker in an acoustic system is a device used to amplify and propagate sound. Here, both lens and speaker represent devices that can alter the properties of propagation."
+  ],
+  "background": {
+    "source": "Optical lenses are transmissive devices that play a crucial role in directing and controlling light propagation. A lens can focus or disperse a light beam through refraction, and they come in various types, including simple and compound lenses. Simple lenses consist of a single piece of transparent material, while compound lenses consist of several simple lenses arranged along a common axis. The shape of a lens is critical in determining its function, and they can be ground, polished, or molded to the required shape. Convex and camber lenses are some of the common shapes used in optics. Optical lenses play an essential role in various imaging devices such as telescopes, binoculars, and cameras, and they are vital visual aids used in correcting defects of vision such as myopia and hypermetropia. In summary, optical lenses are versatile devices used in various applications, and their importance in the field of optics cannot be overstated.",
+    "target": "Horn loudspeakers are a type of loudspeaker that use an acoustic horn to improve the efficiency of the driving element. They consist of a compression driver attached to a horn that conducts sound waves to the open air. The horn serves as an acoustic transformer that provides impedance matching between the driver and the air, resulting in greater acoustic output power. However, the radiation pattern varies with frequency, which is a significant problem. This is because high-frequency sound tends to be emitted in narrow beams with poor off-axis performance. Horn loudspeakers are more efficient and can produce 3 times more sound power than a cone speaker from a given amplifier output. They are commonly used in public address systems, megaphones, and sound systems for large venues like theaters, auditoriums, and sports stadiums. However, their frequency response is more uneven, and to achieve adequate bass response, horn speakers must be very large, making them more often used for midrange and high frequencies. Despite their historical significance as the first practical loudspeakers, the use of horn speakers in high fidelity audio systems has declined due to the development of cone loudspeakers with a flatter frequency response, and the availability of inexpensive amplifier power."
+  },
+  "raw": {
+    "id": 361,
+    "lang": "en",
+    "system_a": "Optical Lenses",
+    "system_b": "Loudspeakers for Acoustic Systems",
+    "mappings": [
+      [
+        "convex",
+        "sphere"
+      ],
+      [
+        "camber",
+        "\r\ntaper\r\n"
+      ],
+      [
+        "light propagation",
+        "sound wave propagation"
+      ],
+      [
+        "lens",
+        "speaker"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Physics",
+    "system_a_background": "Optical lenses are transmissive devices that play a crucial role in directing and controlling light propagation. A lens can focus or disperse a light beam through refraction, and they come in various types, including simple and compound lenses. Simple lenses consist of a single piece of transparent material, while compound lenses consist of several simple lenses arranged along a common axis. The shape of a lens is critical in determining its function, and they can be ground, polished, or molded to the required shape. Convex and camber lenses are some of the common shapes used in optics. Optical lenses play an essential role in various imaging devices such as telescopes, binoculars, and cameras, and they are vital visual aids used in correcting defects of vision such as myopia and hypermetropia. In summary, optical lenses are versatile devices used in various applications, and their importance in the field of optics cannot be overstated.",
+    "system_b_background": "Horn loudspeakers are a type of loudspeaker that use an acoustic horn to improve the efficiency of the driving element. They consist of a compression driver attached to a horn that conducts sound waves to the open air. The horn serves as an acoustic transformer that provides impedance matching between the driver and the air, resulting in greater acoustic output power. However, the radiation pattern varies with frequency, which is a significant problem. This is because high-frequency sound tends to be emitted in narrow beams with poor off-axis performance. Horn loudspeakers are more efficient and can produce 3 times more sound power than a cone speaker from a given amplifier output. They are commonly used in public address systems, megaphones, and sound systems for large venues like theaters, auditoriums, and sports stadiums. However, their frequency response is more uneven, and to achieve adequate bass response, horn speakers must be very large, making them more often used for midrange and high frequencies. Despite their historical significance as the first practical loudspeakers, the use of horn speakers in high fidelity audio systems has declined due to the development of cone loudspeakers with a flatter frequency response, and the availability of inexpensive amplifier power.",
+    "Explanation": [
+      "Convex corresponds to sphere: The convex surface in an optical lens can converge light rays to form a focal point. In an acoustic system, a spherical speaker can disperse sound waves in all directions. Here, both convex and sphere represent shapes that can focus or spread out something.",
+      "Concave corresponds to taper: The concave surface in an optical lens can diverge light rays. In an acoustic system, a conical speaker can concentrate sound waves more effectively. Here, both concave and taper represent shapes that can change the direction of propagation.",
+      "Light propagation corresponds to sound wave propagation: Light propagation in an optical lens refers to the process of light passing through the lens. Sound wave propagation in an acoustic system refers to the process of sound passing through a speaker. In this mapping, both light propagation and sound wave propagation represent the transfer of energy.",
+      "Lens corresponds to speaker: An optical lens is an optical element used to converge or diverge light rays. A speaker in an acoustic system is a device used to amplify and propagate sound. Here, both lens and speaker represent devices that can alter the properties of propagation."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Optical Lenses",
+    "target": "Loudspeakers for Acoustic Systems"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0387",
+  "dataset": "scar",
+  "original_id": "387",
+  "source_object_id": "obj_group_scar_0387_src",
+  "target_object_id": "obj_group_scar_0387_tgt",
+  "faithful_mappings": [
+    [
+      "type",
+      "gender"
+    ],
+    [
+      "electronic",
+      "individual"
+    ],
+    [
+      "repel",
+      "avoid"
+    ]
+  ],
+  "explanation": [
+    "Type corresponds to gender: In Pauli's exclusion principle, type represents the different combinations of four quantum numbers of electrons. In interpersonal relationships, gender is a characteristic that distinguishes individuals. In this mapping, type and gender are both attributes that distinguish different individuals.",
+    "Electronic corresponds to individual: In Pauli's exclusion principle, electrons are basic particles that follow this principle. In interpersonal relationships, individuals are the basic units that make up interpersonal relationships. In this mapping, electrons and individuals are basic units in their respective concepts.",
+    "Repel corresponds to avoid: In Pauli's exclusion principle, repulsion means that two electrons cannot be in exactly the same quantum state. In interpersonal relationships, avoidance represents a distant relationship between individuals. In this mapping, repulsion and avoidance both represent phenomena of avoidance in their respective concepts."
+  ],
+  "background": {
+    "source": "The Pauli Exclusion Principle is a fundamental concept in quantum mechanics that describes the behavior of identical particles with half-integer spins or fermions such as electrons. It states that these particles cannot occupy the same quantum state simultaneously, and therefore must have opposite half-integer spin projections. This principle has important implications for the behavior of electrons in atoms, where two electrons cannot have the same values of the four quantum numbers. This is why electrons in the same orbital must have opposite spin. Particles with integer spins or bosons, on the other hand, are not subject to the Pauli exclusion principle and any number of identical bosons can occupy the same quantum state. The principle is based on the fact that the total wave function must be antisymmetric for fermions but symmetric for bosons, meaning that if two identical particles are interchanged, the total wave function changes its sign for fermions but not for bosons. The repulsion caused by the exclusion principle plays a vital role in many areas of science, such as explaining the structure of atoms and the behavior of materials.",
+    "target": "Human relationships are an integral part of social interactions that links individuals with each other. They involve the affiliation and connection between people and vary in terms of intimacy, duration, reciprocity, power distribution, and other factors. Interpersonal relationships find their roots in various themes such as family, love, business, clubs, and communities that are regulated by law or mutual agreement. These relationships emerge when people communicate or interact within specific social contexts, and they thrive on equitable and reciprocal compromises. The scientific analysis of human relationships involves research conducted by experts from various disciplines such as communication, psychology, anthropology, social work, sociology, and mathematics. The interdisciplinary field of \"relationship science\" aims to provide evidence-based conclusions by analyzing data. Despite the many benefits of interpersonal relationships, some individuals may choose to avoid them due to various reasons, including gender-related issues or personal preference."
+  },
+  "raw": {
+    "id": 387,
+    "lang": "en",
+    "system_a": "The Pauli Exclusion Principle",
+    "system_b": "Human Relationships",
+    "mappings": [
+      [
+        "type",
+        "gender"
+      ],
+      [
+        "electronic",
+        "individual"
+      ],
+      [
+        "repel",
+        "avoid"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "The Pauli Exclusion Principle is a fundamental concept in quantum mechanics that describes the behavior of identical particles with half-integer spins or fermions such as electrons. It states that these particles cannot occupy the same quantum state simultaneously, and therefore must have opposite half-integer spin projections. This principle has important implications for the behavior of electrons in atoms, where two electrons cannot have the same values of the four quantum numbers. This is why electrons in the same orbital must have opposite spin. Particles with integer spins or bosons, on the other hand, are not subject to the Pauli exclusion principle and any number of identical bosons can occupy the same quantum state. The principle is based on the fact that the total wave function must be antisymmetric for fermions but symmetric for bosons, meaning that if two identical particles are interchanged, the total wave function changes its sign for fermions but not for bosons. The repulsion caused by the exclusion principle plays a vital role in many areas of science, such as explaining the structure of atoms and the behavior of materials.",
+    "system_b_background": "Human relationships are an integral part of social interactions that links individuals with each other. They involve the affiliation and connection between people and vary in terms of intimacy, duration, reciprocity, power distribution, and other factors. Interpersonal relationships find their roots in various themes such as family, love, business, clubs, and communities that are regulated by law or mutual agreement. These relationships emerge when people communicate or interact within specific social contexts, and they thrive on equitable and reciprocal compromises. The scientific analysis of human relationships involves research conducted by experts from various disciplines such as communication, psychology, anthropology, social work, sociology, and mathematics. The interdisciplinary field of \"relationship science\" aims to provide evidence-based conclusions by analyzing data. Despite the many benefits of interpersonal relationships, some individuals may choose to avoid them due to various reasons, including gender-related issues or personal preference.",
+    "Explanation": [
+      "Type corresponds to gender: In Pauli's exclusion principle, type represents the different combinations of four quantum numbers of electrons. In interpersonal relationships, gender is a characteristic that distinguishes individuals. In this mapping, type and gender are both attributes that distinguish different individuals.",
+      "Electronic corresponds to individual: In Pauli's exclusion principle, electrons are basic particles that follow this principle. In interpersonal relationships, individuals are the basic units that make up interpersonal relationships. In this mapping, electrons and individuals are basic units in their respective concepts.",
+      "Repel corresponds to avoid: In Pauli's exclusion principle, repulsion means that two electrons cannot be in exactly the same quantum state. In interpersonal relationships, avoidance represents a distant relationship between individuals. In this mapping, repulsion and avoidance both represent phenomena of avoidance in their respective concepts."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "The Pauli Exclusion Principle",
+    "target": "Human Relationships"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

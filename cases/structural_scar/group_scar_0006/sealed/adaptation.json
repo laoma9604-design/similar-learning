@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0006",
+  "dataset": "scar",
+  "original_id": "6",
+  "source_object_id": "obj_group_scar_0006_src",
+  "target_object_id": "obj_group_scar_0006_tgt",
+  "faithful_mappings": [
+    [
+      "water",
+      "resource"
+    ],
+    [
+      "processing facility",
+      "recycle and re-use"
+    ],
+    [
+      "plumbing system",
+      "supply chain"
+    ]
+  ],
+  "explanation": [
+    "Water corresponds to resources: in the water cycle, water is a core element that constantly circulates through processes such as evaporation, precipitation, and runoff from various parts of the earth. In the circular economy, resources (such as raw materials, energy, etc.) are the foundation of the circular economy. They are used in production and consumption, and are recycled and reused after use. In this mapping, water and resources are both core elements in their respective systems, and they are constantly circulated and utilized within the system.",
+    "Processing facilities correspond to recycling and re-use: in the water cycle, processing facilities (such as water treatment plants) are responsible for treating wastewater, filtering impurities, and purifying water before reintroducing it into the water cycle. In the circular economy, recycling and re-use is a crucial process that involves collecting, processing, and remanufacturing used resources for new production and consumption. In this mapping, processing facilities and recycling and re-use are both key links in their respective systems for maintaining resource circulation and efficient utilization.",
+    "Plumbing systems correspond to supply chains: in the water cycle, plumbing systems (such as water pipelines and pump stations) are responsible for transporting water from one place to another to meet various water needs. In the circular economy, the supply chain is the connection channel for resources in the production, consumption, and recycling processes, and it runs through the entire resource circulation process. In this mapping, plumbing systems and supply chains are both infrastructure in their respective systems that connect various links and maintain resource flow."
+  ],
+  "background": {
+    "source": "The water cycle is a natural phenomenon that describes the constant movement of water on Earth's surface, both above and below it. This complex biogeochemical cycle involves various physical processes such as evaporation, transpiration, condensation, and precipitation, and plays a crucial role in shaping the Earth's climate and ecosystems. The water cycle affects the global distribution of water, and its exchange of energy leads to temperature changes, making it a critical component of the planet's climate system. Additionally, the purification and transport of water across the globe via the water cycle help support the growth and maintenance of life on Earth. While the water cycle is a natural process, it is essential to understand how it connects to human-made systems, such as water processing facilities and plumbing systems, to ensure sustainable access to clean and safe water.",
+    "target": "The circular economy is an innovative model of production and consumption that aims to tackle global challenges such as climate change, biodiversity loss, waste, and pollution. It involves sharing, leasing, reusing, repairing, refurbishing, and recycling existing materials and products for as long as possible. The model is based on three essential principles: eliminating waste and pollution, circulating products and materials, and regenerating nature. The concept of the circular economy has gained popularity because it helps to minimize emissions and consumption of raw materials, open up new market prospects, and increase the sustainability of consumption while improving resource efficiency. The circular economy is viewed as a means to combat global warming and facilitate long-term growth, and it helps to stop material loops at the regional level. In contrast to the traditional linear economy, which is based on 'take, make, waste' in the circular economy, waste materials and energy become inputs for other processes through waste valorization, creating a closed-loop system that reduces the use of resource inputs and the creation of waste, pollution, and carbon emissions. The circular economy focuses on recycling and reusing resources throughout the supply chain, ensuring that materials are in use for longer and improving the productivity of these resources."
+  },
+  "raw": {
+    "id": 6,
+    "lang": "en",
+    "system_a": "Water Cycle",
+    "system_b": "Circular Economy",
+    "mappings": [
+      [
+        "water",
+        "resource"
+      ],
+      [
+        "processing facility",
+        "recycle and re-use"
+      ],
+      [
+        "plumbing system",
+        "supply chain"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Economy",
+    "system_a_background": "The water cycle is a natural phenomenon that describes the constant movement of water on Earth's surface, both above and below it. This complex biogeochemical cycle involves various physical processes such as evaporation, transpiration, condensation, and precipitation, and plays a crucial role in shaping the Earth's climate and ecosystems. The water cycle affects the global distribution of water, and its exchange of energy leads to temperature changes, making it a critical component of the planet's climate system. Additionally, the purification and transport of water across the globe via the water cycle help support the growth and maintenance of life on Earth. While the water cycle is a natural process, it is essential to understand how it connects to human-made systems, such as water processing facilities and plumbing systems, to ensure sustainable access to clean and safe water.",
+    "system_b_background": "The circular economy is an innovative model of production and consumption that aims to tackle global challenges such as climate change, biodiversity loss, waste, and pollution. It involves sharing, leasing, reusing, repairing, refurbishing, and recycling existing materials and products for as long as possible. The model is based on three essential principles: eliminating waste and pollution, circulating products and materials, and regenerating nature. The concept of the circular economy has gained popularity because it helps to minimize emissions and consumption of raw materials, open up new market prospects, and increase the sustainability of consumption while improving resource efficiency. The circular economy is viewed as a means to combat global warming and facilitate long-term growth, and it helps to stop material loops at the regional level. In contrast to the traditional linear economy, which is based on 'take, make, waste' in the circular economy, waste materials and energy become inputs for other processes through waste valorization, creating a closed-loop system that reduces the use of resource inputs and the creation of waste, pollution, and carbon emissions. The circular economy focuses on recycling and reusing resources throughout the supply chain, ensuring that materials are in use for longer and improving the productivity of these resources.",
+    "Explanation": [
+      "Water corresponds to resources: in the water cycle, water is a core element that constantly circulates through processes such as evaporation, precipitation, and runoff from various parts of the earth. In the circular economy, resources (such as raw materials, energy, etc.) are the foundation of the circular economy. They are used in production and consumption, and are recycled and reused after use. In this mapping, water and resources are both core elements in their respective systems, and they are constantly circulated and utilized within the system.",
+      "Processing facilities correspond to recycling and re-use: in the water cycle, processing facilities (such as water treatment plants) are responsible for treating wastewater, filtering impurities, and purifying water before reintroducing it into the water cycle. In the circular economy, recycling and re-use is a crucial process that involves collecting, processing, and remanufacturing used resources for new production and consumption. In this mapping, processing facilities and recycling and re-use are both key links in their respective systems for maintaining resource circulation and efficient utilization.",
+      "Plumbing systems correspond to supply chains: in the water cycle, plumbing systems (such as water pipelines and pump stations) are responsible for transporting water from one place to another to meet various water needs. In the circular economy, the supply chain is the connection channel for resources in the production, consumption, and recycling processes, and it runs through the entire resource circulation process. In this mapping, plumbing systems and supply chains are both infrastructure in their respective systems that connect various links and maintain resource flow."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Water Cycle",
+    "target": "Circular Economy"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Economy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0257",
+  "dataset": "scar",
+  "original_id": "257",
+  "source_object_id": "obj_group_scar_0257_src",
+  "target_object_id": "obj_group_scar_0257_tgt",
+  "faithful_mappings": [
+    [
+      "Arthur Conan Doyle",
+      "Keigo Higashino"
+    ],
+    [
+      "sherlock holmes",
+      "Kyoichiro Kaga"
+    ],
+    [
+      "reasoning and puzzle solving",
+      "Psychological description and narrative"
+    ]
+  ],
+  "explanation": [
+    "Arthur Conan Doyle corresponds to Keigo Higashino: Both are outstanding writers in the field of detective fiction, the authors of \"The Adventures of Sherlock Holmes\" and \"Naoko\". ",
+    "Sherlock Holmes corresponds to Kyoichiro Kaga: Both are the main detective characters in detective novels, known for their keen observation and excellent reasoning ability.",
+    "Reasoning and puzzle solving correspond to psychological description and narrative: In \"The Adventures of Sherlock Holmes,\" reasoning and puzzle solving are the core elements of the work, and the story revolves around Sherlock Holmes solving cases one by one; in \"Naoko,\" psychological description and narrative are one of the characteristics of the work, through in-depth exploration of the characters' inner world, it shows the complexity of human nature and the twists and turns of the story. Although these two sets of concepts have differences to some extent, they are both important components in their respective works, shaping the unique style of each work."
+  ],
+  "background": {
+    "source": "Sherlock Holmes is a fictional detective created by the British author Arthur Conan Doyle, known for his unsurpassed skills in reasoning and puzzle-solving while solving cases for a wide range of clients, including Scotland Yard. The character was first introduced in 1887 and has since become one of the world's most renowned literary detectives. Holmes's popularity is such that many believe him to be a genuine person, not a fictional hero. His impact on popular culture and mystery writing cannot be understated, with countless adaptations and recreations appearing in literature, television, film, video games, and other media. Conan Doyle's ingenuity in crafting the enigmatic Holmes, combined with his exceptional writing skills, culminated in a creation that has stood the test of time and influenced generations.",
+    "target": "Unfortunately, the provided keywords do not relate to the item description. The description is about a movie called \"A Girl Walks Home Alone at Night,\" and the provided keywords seem to be about a book or an author named Keigo Higashino and a detective character named Kyoichiro Kaga, with a focus on psychological descriptions and narratives. Please provide appropriate keywords or a different description for me to generate a relevant introduction."
+  },
+  "raw": {
+    "id": 257,
+    "lang": "en",
+    "system_a": "Sherlock Holmes",
+    "system_b": "White Night Walk",
+    "mappings": [
+      [
+        "Arthur Conan Doyle",
+        "Keigo Higashino"
+      ],
+      [
+        "sherlock holmes",
+        "Kyoichiro Kaga"
+      ],
+      [
+        "reasoning and puzzle solving",
+        "Psychological description and narrative"
+      ]
+    ],
+    "system_a_domain": "Literature",
+    "system_b_domain": "Literature",
+    "system_a_background": "Sherlock Holmes is a fictional detective created by the British author Arthur Conan Doyle, known for his unsurpassed skills in reasoning and puzzle-solving while solving cases for a wide range of clients, including Scotland Yard. The character was first introduced in 1887 and has since become one of the world's most renowned literary detectives. Holmes's popularity is such that many believe him to be a genuine person, not a fictional hero. His impact on popular culture and mystery writing cannot be understated, with countless adaptations and recreations appearing in literature, television, film, video games, and other media. Conan Doyle's ingenuity in crafting the enigmatic Holmes, combined with his exceptional writing skills, culminated in a creation that has stood the test of time and influenced generations.",
+    "system_b_background": "Unfortunately, the provided keywords do not relate to the item description. The description is about a movie called \"A Girl Walks Home Alone at Night,\" and the provided keywords seem to be about a book or an author named Keigo Higashino and a detective character named Kyoichiro Kaga, with a focus on psychological descriptions and narratives. Please provide appropriate keywords or a different description for me to generate a relevant introduction.",
+    "Explanation": [
+      "Arthur Conan Doyle corresponds to Keigo Higashino: Both are outstanding writers in the field of detective fiction, the authors of \"The Adventures of Sherlock Holmes\" and \"Naoko\". ",
+      "Sherlock Holmes corresponds to Kyoichiro Kaga: Both are the main detective characters in detective novels, known for their keen observation and excellent reasoning ability.",
+      "Reasoning and puzzle solving correspond to psychological description and narrative: In \"The Adventures of Sherlock Holmes,\" reasoning and puzzle solving are the core elements of the work, and the story revolves around Sherlock Holmes solving cases one by one; in \"Naoko,\" psychological description and narrative are one of the characteristics of the work, through in-depth exploration of the characters' inner world, it shows the complexity of human nature and the twists and turns of the story. Although these two sets of concepts have differences to some extent, they are both important components in their respective works, shaping the unique style of each work."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Sherlock Holmes",
+    "target": "White Night Walk"
+  },
+  "domains": {
+    "source": "Literature",
+    "target": "Literature"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

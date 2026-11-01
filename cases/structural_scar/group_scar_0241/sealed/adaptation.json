@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0241",
+  "dataset": "scar",
+  "original_id": "241",
+  "source_object_id": "obj_group_scar_0241_src",
+  "target_object_id": "obj_group_scar_0241_tgt",
+  "faithful_mappings": [
+    [
+      "president",
+      "emperor"
+    ],
+    [
+      "election",
+      "hereditary"
+    ],
+    [
+      "four years",
+      "life tenure"
+    ]
+  ],
+  "explanation": [
+    "The president corresponds to the emperor: In the American presidential system, the president is the highest leader of the country, with certain powers and responsibilities. In the German monarchy constitutional system, the emperor is also the highest leader of the country, with similar powers and responsibilities. Both represent the highest leader of the country.",
+    "Election corresponds to hereditary: In the American presidential system, the president is elected, meaning that the people vote for their preferred candidate. In the German monarchy constitutional system, the emperor's position is hereditary, meaning that their children inherit their position. Here, election and hereditary both represent the way in which national leaders are chosen, even though they differ in the specifics of their implementation.",
+    "Four years corresponds to life tenure: In the American presidential system, the president's term is four years, while in the German monarchy constitutional system, the emperor's position is for life. Here, four years and life tenure both represent the characteristics of a national leader's term, even though they differ in the specific length of time."
+  ],
+  "background": {
+    "source": "The American Presidential System is one form of government that is adopted by several countries around the world. In this system, the head of government is directly or indirectly elected by a group of citizens and holds the title of president. The president is not responsible to the legislature and is the head of state as well as the head of the executive branch of the government. The presidency term in the United States is restricted to four years, after which the president has to be re-elected for another four-year term if he/she wishes to continue serving as the president. This system of government is prevalent in the mainland Americas, Central and southern West Africa and in Central Asia, and is in contrast to a parliamentary system where the head of government is elected by gaining the confidence of an elected legislature.",
+    "target": "A German Constitutional Monarchy is a form of government in which the monarch exercises their authority in accordance with a constitution and is not alone in decision making. This differs from absolute monarchies where the monarch is the only decision-maker. Constitutional monarchies have a legal framework to exercise their powers and authorities within limits prescribed by the constitution. The monarch may hold formal authority and act as a non-party political head of state under the constitution, but they do not personally set public policy or choose political leaders. This system is also known as a parliamentary monarchy or democratic monarchy. In Germany, the emperor holds a hereditary position with life tenure."
+  },
+  "raw": {
+    "id": 241,
+    "lang": "en",
+    "system_a": "American Presidential System",
+    "system_b": "German Constitutional Monarchy",
+    "mappings": [
+      [
+        "president",
+        "emperor"
+      ],
+      [
+        "election",
+        "hereditary"
+      ],
+      [
+        "four years",
+        "life tenure"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "The American Presidential System is one form of government that is adopted by several countries around the world. In this system, the head of government is directly or indirectly elected by a group of citizens and holds the title of president. The president is not responsible to the legislature and is the head of state as well as the head of the executive branch of the government. The presidency term in the United States is restricted to four years, after which the president has to be re-elected for another four-year term if he/she wishes to continue serving as the president. This system of government is prevalent in the mainland Americas, Central and southern West Africa and in Central Asia, and is in contrast to a parliamentary system where the head of government is elected by gaining the confidence of an elected legislature.",
+    "system_b_background": "A German Constitutional Monarchy is a form of government in which the monarch exercises their authority in accordance with a constitution and is not alone in decision making. This differs from absolute monarchies where the monarch is the only decision-maker. Constitutional monarchies have a legal framework to exercise their powers and authorities within limits prescribed by the constitution. The monarch may hold formal authority and act as a non-party political head of state under the constitution, but they do not personally set public policy or choose political leaders. This system is also known as a parliamentary monarchy or democratic monarchy. In Germany, the emperor holds a hereditary position with life tenure.",
+    "Explanation": [
+      "The president corresponds to the emperor: In the American presidential system, the president is the highest leader of the country, with certain powers and responsibilities. In the German monarchy constitutional system, the emperor is also the highest leader of the country, with similar powers and responsibilities. Both represent the highest leader of the country.",
+      "Election corresponds to hereditary: In the American presidential system, the president is elected, meaning that the people vote for their preferred candidate. In the German monarchy constitutional system, the emperor's position is hereditary, meaning that their children inherit their position. Here, election and hereditary both represent the way in which national leaders are chosen, even though they differ in the specifics of their implementation.",
+      "Four years corresponds to life tenure: In the American presidential system, the president's term is four years, while in the German monarchy constitutional system, the emperor's position is for life. Here, four years and life tenure both represent the characteristics of a national leader's term, even though they differ in the specific length of time."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "American Presidential System",
+    "target": "German Constitutional Monarchy"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

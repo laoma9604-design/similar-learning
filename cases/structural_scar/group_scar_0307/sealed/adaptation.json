@@ -1,0 +1,141 @@
+{
+  "adaptation_id": "adapt_scar_0307",
+  "dataset": "scar",
+  "original_id": "307",
+  "source_object_id": "obj_group_scar_0307_src",
+  "target_object_id": "obj_group_scar_0307_tgt",
+  "faithful_mappings": [
+    [
+      "food",
+      "idea"
+    ],
+    [
+      "appetite",
+      "curiosity"
+    ],
+    [
+      "flavor",
+      "interestingness"
+    ],
+    [
+      "cooking",
+      "thinking"
+    ],
+    [
+      "freshness",
+      "originality"
+    ],
+    [
+      "staleness",
+      "irrelevance"
+    ],
+    [
+      "seasoning",
+      "provocation"
+    ],
+    [
+      "nutrition",
+      "learning"
+    ]
+  ],
+  "explanation": [
+    "Food corresponds to idea: Food is a physical entity that satisfies people's physiological needs and can satisfy people's taste needs through taste and cooking. Idea is an abstract concept that satisfies people's psychological needs and can satisfy people's thinking needs through interestingness, originality, and other aspects. Both are ways to satisfy different needs.",
+    "Appetite corresponds to curiosity: Appetite is people's desire and need for food, driving them to seek and taste delicious food. Curiosity is people's desire and need for new things, driving them to explore and understand unknown areas. Both are internal motivations that drive people to pursue satisfaction.",
+    "Flavor corresponds to interestingness: Flavor is an important characteristic of food, determining whether it can attract people to taste it. Interestingness is an important characteristic of an idea, determining whether it can attract people to pay attention and think. Both are key features that attract people's attention.",
+    "Cooking corresponds to thinking: Cooking is the process of transforming ingredients into delicious food through skills and methods, reflecting people's creativity in food. Thinking is the process of transforming concepts into ideas through logic and reasoning, reflecting people's creativity in ideas. Both are creative processes.",
+    "Freshness corresponds to originality: Fresh food has the characteristics of attracting people to taste it because of its unique taste and nutritional value. Original ideas have the characteristics of attracting people's attention because of their unique perspectives and values. Both have unique features that are attractive.",
+    "Staleness corresponds to irrelevance: Stale food loses its fresh taste and nutritional value, and people no longer pay attention to it. Irrelevant ideas lack unique perspectives and values, and people no longer pay attention to them. Both have the characteristic of losing attractiveness.",
+    "Seasoning corresponds to provocation: Seasoning is used to enhance the taste and texture of food and make it more attractive. Provocation is used to stimulate people's thinking and discussion, making ideas more attractive. Both are means of increasing attractiveness.",
+    "Nutrition corresponds to learning: The nutritional value of food is an important factor for people to obtain energy and health from food. Learning is an important way for people to obtain knowledge and wisdom from ideas. Both are important ways to satisfy people's needs."
+  ],
+  "background": {
+    "source": "Food is an essential aspect of life, providing vital nutrients and energy for living organisms. It comes in various forms, including plants, animals, and even fungi. The taste of food is often determined by the flavours and seasonings used during cooking, which can greatly enhance its appeal. However, the nutritional value of food is key to maintaining healthy lifestyles. A balance of carbohydrates, fats, proteins, vitamins and minerals, can be obtained through a variety of sources. The freshness and staleness of food play a crucial role in determining its quality and impact on health. The methods of cooking, seasoning and processing can also impact the nutritional value of food over time. In essence, the way we eat and produce food can greatly impact our environment, economy, and society as a whole. The food industry is a major contributor to climate change, while agencies monitor the safety and security of the food supply chain. Understanding the value of food and its impact on the world around us, is important for maintaining a sustainable future.",
+    "target": "Ideas are the backbone of human innovation, our ability to create and understand the meaning of ideas is a defining feature of humanity. Whether it is a mental representational image of an object or a reflexive thought, the capacity to think, reflect, and form new and original ideas is crucial to our progress. Our natural curiosity and interest in the world around us often lead to the formation of new ideas, some of which may be completely irrelevant to our current situation, but some may provoke new ways of thinking and learning. The link between curiosity and interestingness, and the ability to create novel and unconventional ideas, makes ideas an essential asset to human development. Through critical thinking, we can cultivate originality and provocation, leading to the formation of ideas that can bring about significant change."
+  },
+  "raw": {
+    "id": 307,
+    "lang": "en",
+    "system_a": "food",
+    "system_b": "idea",
+    "mappings": [
+      [
+        "food",
+        "idea"
+      ],
+      [
+        "appetite",
+        "curiosity"
+      ],
+      [
+        "flavor",
+        "interestingness"
+      ],
+      [
+        "cooking",
+        "thinking"
+      ],
+      [
+        "freshness",
+        "originality"
+      ],
+      [
+        "staleness",
+        "irrelevance"
+      ],
+      [
+        "seasoning",
+        "provocation"
+      ],
+      [
+        "nutrition",
+        "learning"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "Food is an essential aspect of life, providing vital nutrients and energy for living organisms. It comes in various forms, including plants, animals, and even fungi. The taste of food is often determined by the flavours and seasonings used during cooking, which can greatly enhance its appeal. However, the nutritional value of food is key to maintaining healthy lifestyles. A balance of carbohydrates, fats, proteins, vitamins and minerals, can be obtained through a variety of sources. The freshness and staleness of food play a crucial role in determining its quality and impact on health. The methods of cooking, seasoning and processing can also impact the nutritional value of food over time. In essence, the way we eat and produce food can greatly impact our environment, economy, and society as a whole. The food industry is a major contributor to climate change, while agencies monitor the safety and security of the food supply chain. Understanding the value of food and its impact on the world around us, is important for maintaining a sustainable future.",
+    "system_b_background": "Ideas are the backbone of human innovation, our ability to create and understand the meaning of ideas is a defining feature of humanity. Whether it is a mental representational image of an object or a reflexive thought, the capacity to think, reflect, and form new and original ideas is crucial to our progress. Our natural curiosity and interest in the world around us often lead to the formation of new ideas, some of which may be completely irrelevant to our current situation, but some may provoke new ways of thinking and learning. The link between curiosity and interestingness, and the ability to create novel and unconventional ideas, makes ideas an essential asset to human development. Through critical thinking, we can cultivate originality and provocation, leading to the formation of ideas that can bring about significant change.",
+    "Explanation": [
+      "Food corresponds to idea: Food is a physical entity that satisfies people's physiological needs and can satisfy people's taste needs through taste and cooking. Idea is an abstract concept that satisfies people's psychological needs and can satisfy people's thinking needs through interestingness, originality, and other aspects. Both are ways to satisfy different needs.",
+      "Appetite corresponds to curiosity: Appetite is people's desire and need for food, driving them to seek and taste delicious food. Curiosity is people's desire and need for new things, driving them to explore and understand unknown areas. Both are internal motivations that drive people to pursue satisfaction.",
+      "Flavor corresponds to interestingness: Flavor is an important characteristic of food, determining whether it can attract people to taste it. Interestingness is an important characteristic of an idea, determining whether it can attract people to pay attention and think. Both are key features that attract people's attention.",
+      "Cooking corresponds to thinking: Cooking is the process of transforming ingredients into delicious food through skills and methods, reflecting people's creativity in food. Thinking is the process of transforming concepts into ideas through logic and reasoning, reflecting people's creativity in ideas. Both are creative processes.",
+      "Freshness corresponds to originality: Fresh food has the characteristics of attracting people to taste it because of its unique taste and nutritional value. Original ideas have the characteristics of attracting people's attention because of their unique perspectives and values. Both have unique features that are attractive.",
+      "Staleness corresponds to irrelevance: Stale food loses its fresh taste and nutritional value, and people no longer pay attention to it. Irrelevant ideas lack unique perspectives and values, and people no longer pay attention to them. Both have the characteristic of losing attractiveness.",
+      "Seasoning corresponds to provocation: Seasoning is used to enhance the taste and texture of food and make it more attractive. Provocation is used to stimulate people's thinking and discussion, making ideas more attractive. Both are means of increasing attractiveness.",
+      "Nutrition corresponds to learning: The nutritional value of food is an important factor for people to obtain energy and health from food. Learning is an important way for people to obtain knowledge and wisdom from ideas. Both are important ways to satisfy people's needs."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6",
+        "n7": "n7",
+        "n8": "n8"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "food",
+    "target": "idea"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

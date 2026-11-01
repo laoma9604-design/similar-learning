@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0109",
+  "dataset": "scar",
+  "original_id": "109",
+  "source_object_id": "obj_group_scar_0109_src",
+  "target_object_id": "obj_group_scar_0109_tgt",
+  "faithful_mappings": [
+    [
+      "Reactant",
+      "player"
+    ],
+    [
+      "Reaction conditions",
+      "stadium situation"
+    ],
+    [
+      "Reactant properties",
+      "player characteristics"
+    ]
+  ],
+  "explanation": [
+    "Reactant corresponds to player: In a chemical reaction, reactant is the substance that participates in the reaction. In a football match, player is the person who participates in the game. Both are the main and fundamental elements in their respective fields.",
+    "Reaction conditions correspond to stadium situation: In a chemical reaction, reaction conditions refer to the factors that affect the reaction, such as temperature, pressure, etc. In a football match, stadium situation refers to the situation and trend of the game. Both describe the environmental and background factors in their respective fields.",
+    "Reactant properties correspond to player characteristics: In a chemical reaction, reactant properties refer to the chemical properties of the reactants. In a football match, player characteristics refer to the skills, physical fitness and other characteristics of the players. Both describe the characteristics and properties of the main body in their respective fields."
+  ],
+  "background": {
+    "source": "Chemistry is a physical science that explores the properties and behavior of different forms of matter, from the elements that make up substances to the compounds made of atoms, molecules, and ions. Among the topics, it covers are the composition, structure, properties, behavior, and changes of matter when it reacts with other substances. The science of chemistry also investigates the nature of chemical bonds in chemical compounds, making it an essential science that occupies an intermediate position between physics and biology. As a central science, the study of chemistry provides a foundation for understanding different scientific disciplines at a fundamental level, from basic to applied fields. Knowledge of chemistry helps to explain aspects of plant growth, environmental changes, medications, and forensics. To understand chemical reactions, chemists consider factors such as reactants' properties, reaction conditions, and other variables that influence how reactants interact with each other.",
+    "target": "American football is a team sport played by eleven players on each side in a rectangular field with goalposts at each end. The game is played with an oval-shaped ball, and the objective of the team with possession of the ball, called the offense, is to advance the ball down the field by running or passing it while the opposing team, called the defense, aims to stop them. This sport requires strategic planning, quick reflexes, and physical strength from the players. The game is played in a stadium situation, providing a thrilling experience for fans with its high energy and intensity. The various player characteristics, such as speed, agility, and strength, are essential for success in American football. The sport is highly popular in the United States, with professional and college football as the most popular forms of the game. The National Football League has the highest average attendance of any professional sports league in the world, and the Super Bowl is one of the most-watched club sporting events globally. Although professional leagues exist worldwide, American football still lacks the global interest of other American sports like baseball and basketball."
+  },
+  "raw": {
+    "id": 109,
+    "lang": "en",
+    "system_a": "Chemistry",
+    "system_b": "Football Game",
+    "mappings": [
+      [
+        "Reactant",
+        "player"
+      ],
+      [
+        "Reaction conditions",
+        "stadium situation"
+      ],
+      [
+        "Reactant properties",
+        "player characteristics"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Sport",
+    "system_a_background": "Chemistry is a physical science that explores the properties and behavior of different forms of matter, from the elements that make up substances to the compounds made of atoms, molecules, and ions. Among the topics, it covers are the composition, structure, properties, behavior, and changes of matter when it reacts with other substances. The science of chemistry also investigates the nature of chemical bonds in chemical compounds, making it an essential science that occupies an intermediate position between physics and biology. As a central science, the study of chemistry provides a foundation for understanding different scientific disciplines at a fundamental level, from basic to applied fields. Knowledge of chemistry helps to explain aspects of plant growth, environmental changes, medications, and forensics. To understand chemical reactions, chemists consider factors such as reactants' properties, reaction conditions, and other variables that influence how reactants interact with each other.",
+    "system_b_background": "American football is a team sport played by eleven players on each side in a rectangular field with goalposts at each end. The game is played with an oval-shaped ball, and the objective of the team with possession of the ball, called the offense, is to advance the ball down the field by running or passing it while the opposing team, called the defense, aims to stop them. This sport requires strategic planning, quick reflexes, and physical strength from the players. The game is played in a stadium situation, providing a thrilling experience for fans with its high energy and intensity. The various player characteristics, such as speed, agility, and strength, are essential for success in American football. The sport is highly popular in the United States, with professional and college football as the most popular forms of the game. The National Football League has the highest average attendance of any professional sports league in the world, and the Super Bowl is one of the most-watched club sporting events globally. Although professional leagues exist worldwide, American football still lacks the global interest of other American sports like baseball and basketball.",
+    "Explanation": [
+      "Reactant corresponds to player: In a chemical reaction, reactant is the substance that participates in the reaction. In a football match, player is the person who participates in the game. Both are the main and fundamental elements in their respective fields.",
+      "Reaction conditions correspond to stadium situation: In a chemical reaction, reaction conditions refer to the factors that affect the reaction, such as temperature, pressure, etc. In a football match, stadium situation refers to the situation and trend of the game. Both describe the environmental and background factors in their respective fields.",
+      "Reactant properties correspond to player characteristics: In a chemical reaction, reactant properties refer to the chemical properties of the reactants. In a football match, player characteristics refer to the skills, physical fitness and other characteristics of the players. Both describe the characteristics and properties of the main body in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Chemistry",
+    "target": "Football Game"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Sport"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

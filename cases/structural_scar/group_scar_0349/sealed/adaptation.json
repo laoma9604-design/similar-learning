@@ -1,0 +1,141 @@
+{
+  "adaptation_id": "adapt_scar_0349",
+  "dataset": "scar",
+  "original_id": "349",
+  "source_object_id": "obj_group_scar_0349_src",
+  "target_object_id": "obj_group_scar_0349_tgt",
+  "faithful_mappings": [
+    [
+      "waves",
+      "sounds"
+    ],
+    [
+      "shore",
+      "wall"
+    ],
+    [
+      "reflects",
+      "echoes"
+    ],
+    [
+      "water",
+      "air"
+    ],
+    [
+      "breakwater",
+      "insulation"
+    ],
+    [
+      "rough",
+      "loud"
+    ],
+    [
+      "calm",
+      "quiet"
+    ],
+    [
+      "crashing",
+      "vibrating"
+    ]
+  ],
+  "explanation": [
+    "Waves correspond to sounds: Waves are the way energy propagates in water, while sounds are the way energy propagates in air. Both are wave phenomena propagated through a medium.",
+    "Shore corresponds to wall: The shore is the boundary of waves in water, while the wall is the boundary of sound in air. Both are the limits of wave phenomena restrictions.",
+    "Reflects correspond to echoes: Waves reflect at the shore, while sounds echo on walls. Both are reflection phenomena when wave phenomena encounter boundaries.",
+    "Water corresponds to air: Water is the medium for wave propagation, while air is the medium for sound propagation. Both are media for wave phenomena propagation.",
+    "Breakwater corresponds to insulation: A breakwater is used to reduce the energy of waves, while insulation is used to reduce the energy of sound. Both are structures used to reduce energy in wave phenomena.",
+    "Rough corresponds to loud: Rough waves indicate that wave energy is high, while loud sounds indicate that sound energy is high. Both represent states where wave phenomena energy is high.",
+    "Calm corresponds to quiet: Calm waves indicate that wave energy is low, while quiet sounds indicate that sound energy is low. Both represent states where wave phenomena energy is low.",
+    "Crashing corresponds to vibrating: Waves crash and reflect at the shore, while sounds vibrate and echo on walls. Both are interactive phenomena when wave phenomena encounter boundaries."
+  ],
+  "background": {
+    "source": "Waves are a fundamental aspect of our world, and they come in different forms. These oscillations transfer energy and travel through space or mass. Many people associate waves with the shore, where they experience the powerful forces of the ocean. The sight of waves crashing against a breakwater or the sound of waves reflecting off of a nearby cliff are iconic. In bodies of water, waves manifest as surface oscillations that can be rough or calm, depending on various factors such as wind and the surrounding area. For surfers and water enthusiasts, the tumultuousness of rough waves can provide an adrenaline rush, whereas calm waves can offer relaxation and peace. Despite the dangers associated with rough waters, many people find solace in watching the waves break along the shore, creating a mesmerizing symphony that can calm the soul.",
+    "target": "Sounds are vibrations that travel through the air and other mediums, such as liquids and solids. These vibrations create acoustic waves that, when received by the human brain, become sounds. Sound waves with frequencies between 20 Hz and 20 kHz are audible to human beings, and are responsible for the noises that surround us in everyday life. However, sounds can differ greatly in loudness and tone, and can be affected by factors such as insulation and the materials of the surrounding walls. Echoes can also play a part in the perception of sounds, and can create a sensation of vibrating noise. Overall, sounds are an integral part of our sensory experience, and play a vital role in our understanding of the world around us."
+  },
+  "raw": {
+    "id": 349,
+    "lang": "en",
+    "system_a": "waves",
+    "system_b": "sounds",
+    "mappings": [
+      [
+        "waves",
+        "sounds"
+      ],
+      [
+        "shore",
+        "wall"
+      ],
+      [
+        "reflects",
+        "echoes"
+      ],
+      [
+        "water",
+        "air"
+      ],
+      [
+        "breakwater",
+        "insulation"
+      ],
+      [
+        "rough",
+        "loud"
+      ],
+      [
+        "calm",
+        "quiet"
+      ],
+      [
+        "crashing",
+        "vibrating"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Physics",
+    "system_a_background": "Waves are a fundamental aspect of our world, and they come in different forms. These oscillations transfer energy and travel through space or mass. Many people associate waves with the shore, where they experience the powerful forces of the ocean. The sight of waves crashing against a breakwater or the sound of waves reflecting off of a nearby cliff are iconic. In bodies of water, waves manifest as surface oscillations that can be rough or calm, depending on various factors such as wind and the surrounding area. For surfers and water enthusiasts, the tumultuousness of rough waves can provide an adrenaline rush, whereas calm waves can offer relaxation and peace. Despite the dangers associated with rough waters, many people find solace in watching the waves break along the shore, creating a mesmerizing symphony that can calm the soul.",
+    "system_b_background": "Sounds are vibrations that travel through the air and other mediums, such as liquids and solids. These vibrations create acoustic waves that, when received by the human brain, become sounds. Sound waves with frequencies between 20 Hz and 20 kHz are audible to human beings, and are responsible for the noises that surround us in everyday life. However, sounds can differ greatly in loudness and tone, and can be affected by factors such as insulation and the materials of the surrounding walls. Echoes can also play a part in the perception of sounds, and can create a sensation of vibrating noise. Overall, sounds are an integral part of our sensory experience, and play a vital role in our understanding of the world around us.",
+    "Explanation": [
+      "Waves correspond to sounds: Waves are the way energy propagates in water, while sounds are the way energy propagates in air. Both are wave phenomena propagated through a medium.",
+      "Shore corresponds to wall: The shore is the boundary of waves in water, while the wall is the boundary of sound in air. Both are the limits of wave phenomena restrictions.",
+      "Reflects correspond to echoes: Waves reflect at the shore, while sounds echo on walls. Both are reflection phenomena when wave phenomena encounter boundaries.",
+      "Water corresponds to air: Water is the medium for wave propagation, while air is the medium for sound propagation. Both are media for wave phenomena propagation.",
+      "Breakwater corresponds to insulation: A breakwater is used to reduce the energy of waves, while insulation is used to reduce the energy of sound. Both are structures used to reduce energy in wave phenomena.",
+      "Rough corresponds to loud: Rough waves indicate that wave energy is high, while loud sounds indicate that sound energy is high. Both represent states where wave phenomena energy is high.",
+      "Calm corresponds to quiet: Calm waves indicate that wave energy is low, while quiet sounds indicate that sound energy is low. Both represent states where wave phenomena energy is low.",
+      "Crashing corresponds to vibrating: Waves crash and reflect at the shore, while sounds vibrate and echo on walls. Both are interactive phenomena when wave phenomena encounter boundaries."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6",
+        "n7": "n7",
+        "n8": "n8"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "waves",
+    "target": "sounds"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

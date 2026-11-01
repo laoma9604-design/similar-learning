@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0039",
+  "dataset": "scar",
+  "original_id": "39",
+  "source_object_id": "obj_group_scar_0039_src",
+  "target_object_id": "obj_group_scar_0039_tgt",
+  "faithful_mappings": [
+    [
+      "J",
+      "skeleton"
+    ],
+    [
+      "volcanic activity",
+      "blood circulation system"
+    ],
+    [
+      "magma",
+      "blood"
+    ],
+    [
+      "climate change",
+      "Human Metabolism Regulation"
+    ],
+    [
+      "Earth's core",
+      "heart"
+    ]
+  ],
+  "explanation": [
+    "The lithosphere corresponds to the skeleton: The lithosphere of the Earth is its support and framework, while the skeletal system of the human body provides support and framework for the body. Both provide structure and stability to their respective systems.",
+    "Volcanic activity corresponds to the blood circulation system: Volcanic activity is a form of crustal activity on Earth, and the heat, gas, and other substances it produces need to be transferred through the Earth's environmental circulation system. Similarly, the human blood circulation system plays a similar role, delivering nutrients, oxygen, and other materials to various organs and tissues in the body.",
+    "Magma corresponds to blood: Magma is a high-temperature, high-pressure substance inside the Earth, while blood is the circulating fluid inside the human body. Both serve as media for transporting substances within their respective systems.",
+    "Climate change corresponds to human metabolism regulation: Climate change is an important environmental factor in the Earth's ecosystem, affecting the growth, reproduction, and survival of various organisms. Human metabolism regulation is an important way to adapt to environmental changes, such as regulating body temperature and metabolic rate.",
+    "The Earth's core corresponds to the heart: The Earth's core is the central part of the Earth, and extreme conditions such as high temperature and high pressure have an important impact on the structure and movement of the Earth. Similarly, the heart is the central organ of the human circulatory system and plays a crucial role in the movement and life activities of the body."
+  ],
+  "background": {
+    "source": "Earth is the third planet from the Sun and teems with life, making it a unique and precious outlier in the vast universe. Comprising mainly of liquid surface water, extensive oceans, and ice sheets, the planet offers a wide range of habitable ecosystems. Its landmass, which consists of continents and islands, is widely covered with vegetation, fostering a diverse web of life. While Earth's physical features are constantly impacted by volcanic activity, magma flow, and tectonic plate movements, its magnetic field resists harmful solar winds and cosmic radiation. The planet's atmosphere, consisting primarily of nitrogen and oxygen, supports Earth's surface conditions, protects it from meteoroids and UV-light, and generates precipitation, thus contributing to the water cycle. The Earth's climate system is propelled by differences in solar energy input and leads to varying weather phenomena, which play a vital role in maintaining the planet's natural balance. However, over the last few years, human activities have resulted in unprecedented levels of climate change, leading to environmental degradation and loss of habitat for many species. While the core of the Earth continues to produce energy and shape the planet, humanity must act quickly and responsibly to help safeguard our planet before it's too late.",
+    "target": "The human body is a complex structure consisting of various cells, tissues, and organ systems that work together to ensure the proper functioning of the body. It is composed of a head, neck, trunk, arms, and legs, all of which have specific functions. The study of the human body involves various fields such as anatomy, physiology, histology, and embryology. One of the vital systems in the body is the blood circulation system, which ensures the proper supply of blood to the different organs and tissues. The heart plays a critical role in this system, pumping blood throughout the body. Human Metabolism Regulation is significant to maintain homeostasis and keep the levels of substances such as sugar and oxygen in the blood stable. The skeleton provides structural support to the body, protecting the internal organs and allowing movement. Understanding the intricacies of the human body is crucial for health professionals, physiologists, anatomists, and artists."
+  },
+  "raw": {
+    "id": 39,
+    "lang": "en",
+    "system_a": "Earth",
+    "system_b": "Human Body",
+    "mappings": [
+      [
+        "J",
+        "skeleton"
+      ],
+      [
+        "volcanic activity",
+        "blood circulation system"
+      ],
+      [
+        "magma",
+        "blood"
+      ],
+      [
+        "climate change",
+        "Human Metabolism Regulation"
+      ],
+      [
+        "Earth's core",
+        "heart"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Biology",
+    "system_a_background": "Earth is the third planet from the Sun and teems with life, making it a unique and precious outlier in the vast universe. Comprising mainly of liquid surface water, extensive oceans, and ice sheets, the planet offers a wide range of habitable ecosystems. Its landmass, which consists of continents and islands, is widely covered with vegetation, fostering a diverse web of life. While Earth's physical features are constantly impacted by volcanic activity, magma flow, and tectonic plate movements, its magnetic field resists harmful solar winds and cosmic radiation. The planet's atmosphere, consisting primarily of nitrogen and oxygen, supports Earth's surface conditions, protects it from meteoroids and UV-light, and generates precipitation, thus contributing to the water cycle. The Earth's climate system is propelled by differences in solar energy input and leads to varying weather phenomena, which play a vital role in maintaining the planet's natural balance. However, over the last few years, human activities have resulted in unprecedented levels of climate change, leading to environmental degradation and loss of habitat for many species. While the core of the Earth continues to produce energy and shape the planet, humanity must act quickly and responsibly to help safeguard our planet before it's too late.",
+    "system_b_background": "The human body is a complex structure consisting of various cells, tissues, and organ systems that work together to ensure the proper functioning of the body. It is composed of a head, neck, trunk, arms, and legs, all of which have specific functions. The study of the human body involves various fields such as anatomy, physiology, histology, and embryology. One of the vital systems in the body is the blood circulation system, which ensures the proper supply of blood to the different organs and tissues. The heart plays a critical role in this system, pumping blood throughout the body. Human Metabolism Regulation is significant to maintain homeostasis and keep the levels of substances such as sugar and oxygen in the blood stable. The skeleton provides structural support to the body, protecting the internal organs and allowing movement. Understanding the intricacies of the human body is crucial for health professionals, physiologists, anatomists, and artists.",
+    "Explanation": [
+      "The lithosphere corresponds to the skeleton: The lithosphere of the Earth is its support and framework, while the skeletal system of the human body provides support and framework for the body. Both provide structure and stability to their respective systems.",
+      "Volcanic activity corresponds to the blood circulation system: Volcanic activity is a form of crustal activity on Earth, and the heat, gas, and other substances it produces need to be transferred through the Earth's environmental circulation system. Similarly, the human blood circulation system plays a similar role, delivering nutrients, oxygen, and other materials to various organs and tissues in the body.",
+      "Magma corresponds to blood: Magma is a high-temperature, high-pressure substance inside the Earth, while blood is the circulating fluid inside the human body. Both serve as media for transporting substances within their respective systems.",
+      "Climate change corresponds to human metabolism regulation: Climate change is an important environmental factor in the Earth's ecosystem, affecting the growth, reproduction, and survival of various organisms. Human metabolism regulation is an important way to adapt to environmental changes, such as regulating body temperature and metabolic rate.",
+      "The Earth's core corresponds to the heart: The Earth's core is the central part of the Earth, and extreme conditions such as high temperature and high pressure have an important impact on the structure and movement of the Earth. Similarly, the heart is the central organ of the human circulatory system and plays a crucial role in the movement and life activities of the body."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Earth",
+    "target": "Human Body"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

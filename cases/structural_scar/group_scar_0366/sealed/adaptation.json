@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0366",
+  "dataset": "scar",
+  "original_id": "366",
+  "source_object_id": "obj_group_scar_0366_src",
+  "target_object_id": "obj_group_scar_0366_tgt",
+  "faithful_mappings": [
+    [
+      "resistance",
+      "consume"
+    ],
+    [
+      "energy",
+      "currency"
+    ],
+    [
+      "heat production",
+      "waste"
+    ]
+  ],
+  "explanation": [
+    "Resistance corresponds to consumption: In energy loss, resistance is the main cause of energy loss. In currency loss, consumption is the main cause of currency loss. Both are sources of loss.",
+    "Energy corresponds to currency: In energy loss, energy is the resource that is consumed. In currency loss, currency is the resource that is consumed. Both are resources that need to be protected and managed.",
+    "Heat production corresponds to waste: In energy loss, heat production is a manifestation of energy loss. In currency loss, waste is a manifestation of currency loss. Both are negative phenomena that need to be avoided."
+  ],
+  "background": {
+    "source": "Energy loss is a phenomenon that occurs when electrons are exposed to a beam of electrons with a narrow range of kinetic energies. This is done through a process called electron energy loss spectroscopy (EELS), which measures the amount of energy lost through inelastic scattering. This scattering is caused by different types of excitations, such as phonon excitations, inner shell ionizations, and plasmon excitations. Inner-shell ionizations are particularly useful for identifying the elemental components of a material, as they provide evidence of the presence of specific atoms. By measuring the amount of energy lost and the scattering angle of the electrons, EELS can provide information on the dispersion relation of the material, as well as determine the types and numbers of atoms being struck by the beam. Energy loss can have important implications for resistance and heat production, which can be further studied through the use of EELS.",
+    "target": "Currency loss is the expected sum of potential losses associated with bank lending, including loans for consumption such as homes, autos, and credit cards, and commercial lending. This loss can occur for multiple reasons, such as changes in the value of pledged collateral or outstanding loan amounts. The analysis of expected loss is based on three factors: probability of default, exposure at default, and loss given default. When managing bank loans, it is essential to consider all these factors carefully to determine the expected loss in advance to minimize wastage."
+  },
+  "raw": {
+    "id": 366,
+    "lang": "en",
+    "system_a": "Energy Loss",
+    "system_b": "Currency Loss",
+    "mappings": [
+      [
+        "resistance",
+        "consume"
+      ],
+      [
+        "energy",
+        "currency"
+      ],
+      [
+        "heat production",
+        "waste"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Economy",
+    "system_a_background": "Energy loss is a phenomenon that occurs when electrons are exposed to a beam of electrons with a narrow range of kinetic energies. This is done through a process called electron energy loss spectroscopy (EELS), which measures the amount of energy lost through inelastic scattering. This scattering is caused by different types of excitations, such as phonon excitations, inner shell ionizations, and plasmon excitations. Inner-shell ionizations are particularly useful for identifying the elemental components of a material, as they provide evidence of the presence of specific atoms. By measuring the amount of energy lost and the scattering angle of the electrons, EELS can provide information on the dispersion relation of the material, as well as determine the types and numbers of atoms being struck by the beam. Energy loss can have important implications for resistance and heat production, which can be further studied through the use of EELS.",
+    "system_b_background": "Currency loss is the expected sum of potential losses associated with bank lending, including loans for consumption such as homes, autos, and credit cards, and commercial lending. This loss can occur for multiple reasons, such as changes in the value of pledged collateral or outstanding loan amounts. The analysis of expected loss is based on three factors: probability of default, exposure at default, and loss given default. When managing bank loans, it is essential to consider all these factors carefully to determine the expected loss in advance to minimize wastage.",
+    "Explanation": [
+      "Resistance corresponds to consumption: In energy loss, resistance is the main cause of energy loss. In currency loss, consumption is the main cause of currency loss. Both are sources of loss.",
+      "Energy corresponds to currency: In energy loss, energy is the resource that is consumed. In currency loss, currency is the resource that is consumed. Both are resources that need to be protected and managed.",
+      "Heat production corresponds to waste: In energy loss, heat production is a manifestation of energy loss. In currency loss, waste is a manifestation of currency loss. Both are negative phenomena that need to be avoided."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Energy Loss",
+    "target": "Currency Loss"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Economy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

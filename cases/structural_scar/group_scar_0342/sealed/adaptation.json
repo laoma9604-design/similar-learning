@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0342",
+  "dataset": "scar",
+  "original_id": "342",
+  "source_object_id": "obj_group_scar_0342_src",
+  "target_object_id": "obj_group_scar_0342_tgt",
+  "faithful_mappings": [
+    [
+      "communication channel",
+      "pipeline system"
+    ],
+    [
+      "Express",
+      "flowing"
+    ],
+    [
+      "transfer",
+      "meet"
+    ]
+  ],
+  "explanation": [
+    "Communication channel corresponds to pipeline system: in emotion, communication channel refers to the way to transmit and receive emotional information. In the river, pipeline system refers to the channel through which water flows. Communication channels and pipeline systems are both tools for connection and transmission.",
+    "Expression corresponds to flowing: in emotion, expression refers to conveying inner emotions through language, behavior, and other means. In the river, flowing refers to the movement of water in the channel. Expression and flowing are both dynamic processes, representing the transmission of information and matter.",
+    "Transfer corresponds to meeting: in emotion, transfer refers to emotional information being passed from one person to another. In the river, meeting refers to the merging of different rivers. Transfer and meeting both represent the process of connection and communication."
+  ],
+  "background": {
+    "source": "Emotions are complex experiences that are associated with a particular pattern of physiological activity. They involve multiple components such as subjective experience, cognitive processes, expressive behavior, psychophysiological changes, and instrumental behavior. Over the past two decades, there has been an increase in research on emotion across many different fields including psychology, medicine, sociology of emotions, and computer science. Despite the lack of scientific consensus on a definition, the numerous attempts to explain the origins and functions of emotions have led to intense research in this area. Charles Darwin was one of the first to theorize about the evolutionary origins and possible purpose of emotion. Modern research areas include the neuroscience of emotion, using tools like PET and fMRI scans to study affective picture processes in the brain. From a mechanistic perspective, emotions can be defined as a positive or negative experience associated with physiological activity. In recent years, most research into emotions has focused on emotion dynamics in daily life including the intensity of specific emotions, their variability, instability, inertia, and differentiation, individual differences, and emotion transfer between individuals.",
+    "target": "A river is a natural flowing watercourse that transports water from a source to a destination, which could be an ocean, sea, lake, or another river. With its complex pipeline system, water from a river may take different paths, submerging underground and reemerging elsewhere. These freshwater streams provide a vital water source for the aquatic and semiaquatic fauna and flora, and enable the survival of terrestrial ecosystems in riparian zones. Rivers are a significant waterbody that have been significant to human settlements throughout history, as they have been depended upon as a vital source of drinking water, for food supply through fishing and agricultural irrigation, for shipping, and as a source of hydropower. Potamology is the scientific study of rivers, while limnology is the study of inland waters in general. The language around the distinction between a river and a creek is vague, and often specific to geographic location; however, regardless of size, all rivers play a crucial role in regulating the Earth's water cycle, carving out rills, gullies and valleys in the surface, and creating river deltas and islands where the flow slows down."
+  },
+  "raw": {
+    "id": 342,
+    "lang": "en",
+    "system_a": "Emotion",
+    "system_b": "River",
+    "mappings": [
+      [
+        "communication channel",
+        "pipeline system"
+      ],
+      [
+        "Express",
+        "flowing"
+      ],
+      [
+        "transfer",
+        "meet"
+      ]
+    ],
+    "system_a_domain": "Philosophy",
+    "system_b_domain": "Geography",
+    "system_a_background": "Emotions are complex experiences that are associated with a particular pattern of physiological activity. They involve multiple components such as subjective experience, cognitive processes, expressive behavior, psychophysiological changes, and instrumental behavior. Over the past two decades, there has been an increase in research on emotion across many different fields including psychology, medicine, sociology of emotions, and computer science. Despite the lack of scientific consensus on a definition, the numerous attempts to explain the origins and functions of emotions have led to intense research in this area. Charles Darwin was one of the first to theorize about the evolutionary origins and possible purpose of emotion. Modern research areas include the neuroscience of emotion, using tools like PET and fMRI scans to study affective picture processes in the brain. From a mechanistic perspective, emotions can be defined as a positive or negative experience associated with physiological activity. In recent years, most research into emotions has focused on emotion dynamics in daily life including the intensity of specific emotions, their variability, instability, inertia, and differentiation, individual differences, and emotion transfer between individuals.",
+    "system_b_background": "A river is a natural flowing watercourse that transports water from a source to a destination, which could be an ocean, sea, lake, or another river. With its complex pipeline system, water from a river may take different paths, submerging underground and reemerging elsewhere. These freshwater streams provide a vital water source for the aquatic and semiaquatic fauna and flora, and enable the survival of terrestrial ecosystems in riparian zones. Rivers are a significant waterbody that have been significant to human settlements throughout history, as they have been depended upon as a vital source of drinking water, for food supply through fishing and agricultural irrigation, for shipping, and as a source of hydropower. Potamology is the scientific study of rivers, while limnology is the study of inland waters in general. The language around the distinction between a river and a creek is vague, and often specific to geographic location; however, regardless of size, all rivers play a crucial role in regulating the Earth's water cycle, carving out rills, gullies and valleys in the surface, and creating river deltas and islands where the flow slows down.",
+    "Explanation": [
+      "Communication channel corresponds to pipeline system: in emotion, communication channel refers to the way to transmit and receive emotional information. In the river, pipeline system refers to the channel through which water flows. Communication channels and pipeline systems are both tools for connection and transmission.",
+      "Expression corresponds to flowing: in emotion, expression refers to conveying inner emotions through language, behavior, and other means. In the river, flowing refers to the movement of water in the channel. Expression and flowing are both dynamic processes, representing the transmission of information and matter.",
+      "Transfer corresponds to meeting: in emotion, transfer refers to emotional information being passed from one person to another. In the river, meeting refers to the merging of different rivers. Transfer and meeting both represent the process of connection and communication."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Emotion",
+    "target": "River"
+  },
+  "domains": {
+    "source": "Philosophy",
+    "target": "Geography"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

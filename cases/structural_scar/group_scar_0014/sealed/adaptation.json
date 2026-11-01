@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0014",
+  "dataset": "scar",
+  "original_id": "14",
+  "source_object_id": "obj_group_scar_0014_src",
+  "target_object_id": "obj_group_scar_0014_tgt",
+  "faithful_mappings": [
+    [
+      "sequence",
+      "parts"
+    ],
+    [
+      "structure",
+      "features"
+    ],
+    [
+      "fold",
+      "stitching"
+    ]
+  ],
+  "explanation": [
+    "Amino acid sequence corresponds to puzzle pieces: in protein folding, amino acid sequence is the basic building unit of the protein, arranged in a specific order. In three-dimensional puzzles, puzzle pieces are the basic building blocks, each with a unique shape and position. In this mapping, both the amino acid sequence and puzzle pieces represent the fundamental building blocks of their respective systems.",
+    "Amino acid structure corresponds to puzzle block features: amino acid structure is an intermediate state in the folding process of the protein, playing a crucial role in the protein folding into a specific functional three-dimensional structure. In three-dimensional puzzles, puzzle block features (such as concave-convex and color) enable the puzzle pieces to be correctly assembled together. In this mapping, both amino acid structure and puzzle block features represent the intermediate states of their respective systems, playing a crucial role.",
+    "Folding corresponds to stitching: protein folding is a biochemical process in which the amino acid sequence gradually folds into a specific functional three-dimensional structure. In three-dimensional puzzles, stitching is the process of combining puzzle pieces together based on their features to form a complete three-dimensional model. In this mapping, both folding and stitching represent the final assembly process of their respective systems, from basic unit to complete structure."
+  ],
+  "background": {
+    "source": "Protein folding is the process by which a linear chain of amino acids, generated from mRNA, is transformed into the biologically functional three-dimensional structure of a protein. The folding process is essential to the function of the protein, which can only occur in its stable, native state. The amino acid sequence determines the final folded structure of the protein, although protein dynamics play a role in some functional proteins. Misfolded proteins can lead to diseases like neurodegeneration, and allergies can be caused by proteins that are incorrectly folded. The folding duration is protein-specific, with some smaller proteins folding in a single step while larger proteins may require hours. Understanding the mechanism of protein folding has been a significant challenge for computational biology.",
+    "target": "A three-dimensional puzzle, also known as a jigsaw puzzle, is an entertaining and stimulating activity that involves assembling puzzle pieces to form a whole picture. Originally created in the 18th century, jigsaw puzzles have evolved to incorporate various images and designs, from scenes of nature and buildings to unusual art and personal photographs. They can be made from interlocking cardboard pieces, wooden pieces, or even constructed in three-dimensional shapes such as spheres and architectural recreations. Jigsaw puzzle enthusiasts can enjoy a range of accessories to assist with puzzle assembly, and finished puzzles can be displayed as works of art. While stitching and other features are not typically associated with jigsaw puzzles, the challenge comes in piecing together the various parts to create a completed picture."
+  },
+  "raw": {
+    "id": 14,
+    "lang": "en",
+    "system_a": "Protein folding",
+    "system_b": "a three-dimensional puzzle",
+    "mappings": [
+      [
+        "sequence",
+        "parts"
+      ],
+      [
+        "structure",
+        "features"
+      ],
+      [
+        "fold",
+        "stitching"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Engineering",
+    "system_a_background": "Protein folding is the process by which a linear chain of amino acids, generated from mRNA, is transformed into the biologically functional three-dimensional structure of a protein. The folding process is essential to the function of the protein, which can only occur in its stable, native state. The amino acid sequence determines the final folded structure of the protein, although protein dynamics play a role in some functional proteins. Misfolded proteins can lead to diseases like neurodegeneration, and allergies can be caused by proteins that are incorrectly folded. The folding duration is protein-specific, with some smaller proteins folding in a single step while larger proteins may require hours. Understanding the mechanism of protein folding has been a significant challenge for computational biology.",
+    "system_b_background": "A three-dimensional puzzle, also known as a jigsaw puzzle, is an entertaining and stimulating activity that involves assembling puzzle pieces to form a whole picture. Originally created in the 18th century, jigsaw puzzles have evolved to incorporate various images and designs, from scenes of nature and buildings to unusual art and personal photographs. They can be made from interlocking cardboard pieces, wooden pieces, or even constructed in three-dimensional shapes such as spheres and architectural recreations. Jigsaw puzzle enthusiasts can enjoy a range of accessories to assist with puzzle assembly, and finished puzzles can be displayed as works of art. While stitching and other features are not typically associated with jigsaw puzzles, the challenge comes in piecing together the various parts to create a completed picture.",
+    "Explanation": [
+      "Amino acid sequence corresponds to puzzle pieces: in protein folding, amino acid sequence is the basic building unit of the protein, arranged in a specific order. In three-dimensional puzzles, puzzle pieces are the basic building blocks, each with a unique shape and position. In this mapping, both the amino acid sequence and puzzle pieces represent the fundamental building blocks of their respective systems.",
+      "Amino acid structure corresponds to puzzle block features: amino acid structure is an intermediate state in the folding process of the protein, playing a crucial role in the protein folding into a specific functional three-dimensional structure. In three-dimensional puzzles, puzzle block features (such as concave-convex and color) enable the puzzle pieces to be correctly assembled together. In this mapping, both amino acid structure and puzzle block features represent the intermediate states of their respective systems, playing a crucial role.",
+      "Folding corresponds to stitching: protein folding is a biochemical process in which the amino acid sequence gradually folds into a specific functional three-dimensional structure. In three-dimensional puzzles, stitching is the process of combining puzzle pieces together based on their features to form a complete three-dimensional model. In this mapping, both folding and stitching represent the final assembly process of their respective systems, from basic unit to complete structure."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Protein folding",
+    "target": "a three-dimensional puzzle"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

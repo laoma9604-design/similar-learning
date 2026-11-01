@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0363",
+  "dataset": "scar",
+  "original_id": "363",
+  "source_object_id": "obj_group_scar_0363_src",
+  "target_object_id": "obj_group_scar_0363_tgt",
+  "faithful_mappings": [
+    [
+      "gravitational field",
+      "attraction"
+    ],
+    [
+      "Singular point",
+      "swirl center"
+    ],
+    [
+      "substance",
+      "water flow"
+    ]
+  ],
+  "explanation": [
+    "Gravitational field corresponds to attraction: the gravitational field of a black hole is the reason why it attracts surrounding matter. The attraction of a whirlpool is the reason why water flows towards the center of the swirl. In this analogy, both the gravitational field and attraction represent a force that can attract objects.",
+    "Singular point corresponds to swirl center: the singularity of a black hole is the strongest point of its gravitational field, where matter is absorbed. The center of a whirlpool is the strongest point of its attraction, where water converges. In this mapping, both the singular point and swirl center represent a location where energy or matter converge.",
+    "Substance corresponds to water flow: a black hole absorbs the surrounding matter. A whirlpool attracts surrounding water flow. In this analogy, both substance and water flow represent a substance that is attracted."
+  ],
+  "background": {
+    "source": "A black hole is a mysterious phenomenon in the universe, where gravity is so overpowering that even light cannot escape its event horizon. Essentially, it is a singular point in spacetime where matter has collapsed under extreme gravitational forces, creating a region of infinite density known as the singularity. Despite its invisibility, black holes have been studied and theorized about since the 18th century, and their existence has slowly been confirmed through observations of their gravitational effects on surrounding matter. Black holes come in various sizes, from stellar-sized ones that form from collapsing stars, to supermassive ones that exist at the centers of galaxies. They can also be identified through their interaction with accretion disks and the radiation emitted by nearby matter. While black holes remain a theoretical curiosity to some, they represent a fascinating and important area of study for scientists seeking to understand the workings of gravity and the nature of the universe.",
+    "target": "A vortex is a fascinating phenomenon in fluid dynamics where a fluid flow revolves around an axis line, forming a swirl center. This can occur in stirred fluids like water flow and can be observed in natural occurrences such as tropical cyclones, tornadoes, and dust devils. The distribution of velocity and vorticity provide a means to characterize these vortices. Such swirling motions are a significant component in turbulent flow, and are used to explain the concept of circulation. Once formed, vortices can interact in complex and unpredictable ways, and carry with them angular and linear momentum, energy, and mass. The fascinating nature of vortices is attributed to their attractive features that make them a captivating topic among various fields of science."
+  },
+  "raw": {
+    "id": 363,
+    "lang": "en",
+    "system_a": "Black Hole",
+    "system_b": "Vortex",
+    "mappings": [
+      [
+        "gravitational field",
+        "attraction"
+      ],
+      [
+        "Singular point",
+        "swirl center"
+      ],
+      [
+        "substance",
+        "water flow"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Geography",
+    "system_a_background": "A black hole is a mysterious phenomenon in the universe, where gravity is so overpowering that even light cannot escape its event horizon. Essentially, it is a singular point in spacetime where matter has collapsed under extreme gravitational forces, creating a region of infinite density known as the singularity. Despite its invisibility, black holes have been studied and theorized about since the 18th century, and their existence has slowly been confirmed through observations of their gravitational effects on surrounding matter. Black holes come in various sizes, from stellar-sized ones that form from collapsing stars, to supermassive ones that exist at the centers of galaxies. They can also be identified through their interaction with accretion disks and the radiation emitted by nearby matter. While black holes remain a theoretical curiosity to some, they represent a fascinating and important area of study for scientists seeking to understand the workings of gravity and the nature of the universe.",
+    "system_b_background": "A vortex is a fascinating phenomenon in fluid dynamics where a fluid flow revolves around an axis line, forming a swirl center. This can occur in stirred fluids like water flow and can be observed in natural occurrences such as tropical cyclones, tornadoes, and dust devils. The distribution of velocity and vorticity provide a means to characterize these vortices. Such swirling motions are a significant component in turbulent flow, and are used to explain the concept of circulation. Once formed, vortices can interact in complex and unpredictable ways, and carry with them angular and linear momentum, energy, and mass. The fascinating nature of vortices is attributed to their attractive features that make them a captivating topic among various fields of science.",
+    "Explanation": [
+      "Gravitational field corresponds to attraction: the gravitational field of a black hole is the reason why it attracts surrounding matter. The attraction of a whirlpool is the reason why water flows towards the center of the swirl. In this analogy, both the gravitational field and attraction represent a force that can attract objects.",
+      "Singular point corresponds to swirl center: the singularity of a black hole is the strongest point of its gravitational field, where matter is absorbed. The center of a whirlpool is the strongest point of its attraction, where water converges. In this mapping, both the singular point and swirl center represent a location where energy or matter converge.",
+      "Substance corresponds to water flow: a black hole absorbs the surrounding matter. A whirlpool attracts surrounding water flow. In this analogy, both substance and water flow represent a substance that is attracted."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Black Hole",
+    "target": "Vortex"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Geography"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

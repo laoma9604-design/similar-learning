@@ -1,0 +1,152 @@
+{
+  "adaptation_id": "adapt_scar_0316",
+  "dataset": "scar",
+  "original_id": "316",
+  "source_object_id": "obj_group_scar_0316_src",
+  "target_object_id": "obj_group_scar_0316_tgt",
+  "faithful_mappings": [
+    [
+      "machine",
+      "politics"
+    ],
+    [
+      "politician",
+      "politician"
+    ],
+    [
+      "algorithm",
+      "law"
+    ],
+    [
+      "operator",
+      "president"
+    ],
+    [
+      "oil",
+      "press"
+    ],
+    [
+      "oil",
+      "campaign"
+    ],
+    [
+      "oil",
+      "money"
+    ],
+    [
+      "breakdown",
+      "crisis"
+    ],
+    [
+      "rust",
+      "corruption"
+    ]
+  ],
+  "explanation": [
+    "Machine corresponds to politics: In this mapping, a machine represents a system with a specific function and purpose, while politics is a system involving power, decision-making, and social governance. Both are complex systems consisting of multiple components and elements that need to work together to achieve their goals.",
+    "Politician corresponds to politician: This mapping is straightforward. Politicians play leadership and decision-making roles in the political arena, while in machines, politicians may refer to people responsible for formulating and executing strategies.",
+    "Algorithm corresponds to law: In the machine, an algorithm is a set of rules and instructions used to guide the machine in completing a specific task. In politics, the law is a set of regulations and rules used to guide social behavior and maintain order. Both are rule systems developed to achieve a specific purpose.",
+    "Operator corresponds to president: In the machine, the operator is responsible for controlling and supervising the operation of the machine. In politics, the president, as the highest leader of the country, is responsible for leading the government and overseeing national affairs. Both play critical leadership and supervisory roles in their respective systems.",
+    "Oil corresponds to press: In the machine, oil is a substance used to lubricate and maintain the machine. In politics, the press helps maintain the political system by publishing and disseminating information. Both provide supporting elements for maintaining the normal operation of the system.",
+    "Oil corresponds to campaign: In this mapping, oil also represents support and maintenance for the system. Political activities, such as campaigns and protests, are important components of the political system and help maintain political order and advance the political process.",
+    "Oil corresponds to money: In this mapping, oil can also be interpreted as an element that provides financial support to the political system. Money plays a crucial role in politics, such as funding campaign activities and the work of politicians.",
+    "Breakdown corresponds to crisis: In the machine, breakdown refers to the situation where the machine fails or cannot operate normally. In politics, a crisis refers to the major challenges and difficulties faced by the political system, such as war, economic crisis, etc. Both represent the state of the system under pressure and difficulties.",
+    "Rust corresponds to corruption: In the machine, rust refers to the wear and damage caused by long-term use and environmental factors. In politics, corruption refers to moral and legal issues in the political system, such as corruption and abuse of power. Both represent the problems and drawbacks that may occur during the long-term operation of the system."
+  ],
+  "background": {
+    "source": "A machine is a powerful mechanism that utilizes various types of energy, including chemical, thermal or electrical, to control movement and apply force to perform specific actions. From cars to airplanes and home appliances like computers and air handling systems, modern machines are complex and multifaceted systems consisting of structural elements, control components, and mechanisms. They are used in various areas of life, including transportation, industry, agriculture, and many more. While machines are designed to run efficiently, they are susceptible to breakdowns due to a variety of factors such as rust and lack of maintenance. Despite their potential to function autonomously, machines may require human intervention and guidance from operators to function correctly. Additionally, algorithms and sensors can be used to monitor and optimize the performance of machines. Despite the critical role of machines in society, they remain an area of debate in politics, particularly in regards to oil and its impact on the environment.",
+    "target": "Politics is an integral part of human society that involves decision-making and the distribution of resources and power relations among individuals. It can be described as the art or science of government or the studies of politics and government that make use of various methods such as laws, negotiation, and even warfare against adversaries. It operates at various social levels, from clans and tribes to sovereign states and the international level. Politicians represent people's ideas and positions on different issues by forming political parties, supporting the same changes to law, and agreeing to take the same position on various issues. Political systems are frameworks that define acceptable political methods within society. Political thought can be traced back to ancient times, and different approaches on whether it should be used extensively or limitedly, empirically or normatively, and on whether conflict or cooperation is more essential to it. Despite its positive connotation, politics often carries a negative connotation, widely publicized by the press during campaign times. This is mainly due to the abundant use of money that often leads to crises and corruption."
+  },
+  "raw": {
+    "id": 316,
+    "lang": "en",
+    "system_a": "machine",
+    "system_b": "politics",
+    "mappings": [
+      [
+        "machine",
+        "politics"
+      ],
+      [
+        "politician",
+        "politician"
+      ],
+      [
+        "algorithm",
+        "law"
+      ],
+      [
+        "operator",
+        "president"
+      ],
+      [
+        "oil",
+        "press"
+      ],
+      [
+        "oil",
+        "campaign"
+      ],
+      [
+        "oil",
+        "money"
+      ],
+      [
+        "breakdown",
+        "crisis"
+      ],
+      [
+        "rust",
+        "corruption"
+      ]
+    ],
+    "system_a_domain": "Engineering",
+    "system_b_domain": "History",
+    "system_a_background": "A machine is a powerful mechanism that utilizes various types of energy, including chemical, thermal or electrical, to control movement and apply force to perform specific actions. From cars to airplanes and home appliances like computers and air handling systems, modern machines are complex and multifaceted systems consisting of structural elements, control components, and mechanisms. They are used in various areas of life, including transportation, industry, agriculture, and many more. While machines are designed to run efficiently, they are susceptible to breakdowns due to a variety of factors such as rust and lack of maintenance. Despite their potential to function autonomously, machines may require human intervention and guidance from operators to function correctly. Additionally, algorithms and sensors can be used to monitor and optimize the performance of machines. Despite the critical role of machines in society, they remain an area of debate in politics, particularly in regards to oil and its impact on the environment.",
+    "system_b_background": "Politics is an integral part of human society that involves decision-making and the distribution of resources and power relations among individuals. It can be described as the art or science of government or the studies of politics and government that make use of various methods such as laws, negotiation, and even warfare against adversaries. It operates at various social levels, from clans and tribes to sovereign states and the international level. Politicians represent people's ideas and positions on different issues by forming political parties, supporting the same changes to law, and agreeing to take the same position on various issues. Political systems are frameworks that define acceptable political methods within society. Political thought can be traced back to ancient times, and different approaches on whether it should be used extensively or limitedly, empirically or normatively, and on whether conflict or cooperation is more essential to it. Despite its positive connotation, politics often carries a negative connotation, widely publicized by the press during campaign times. This is mainly due to the abundant use of money that often leads to crises and corruption.",
+    "Explanation": [
+      "Machine corresponds to politics: In this mapping, a machine represents a system with a specific function and purpose, while politics is a system involving power, decision-making, and social governance. Both are complex systems consisting of multiple components and elements that need to work together to achieve their goals.",
+      "Politician corresponds to politician: This mapping is straightforward. Politicians play leadership and decision-making roles in the political arena, while in machines, politicians may refer to people responsible for formulating and executing strategies.",
+      "Algorithm corresponds to law: In the machine, an algorithm is a set of rules and instructions used to guide the machine in completing a specific task. In politics, the law is a set of regulations and rules used to guide social behavior and maintain order. Both are rule systems developed to achieve a specific purpose.",
+      "Operator corresponds to president: In the machine, the operator is responsible for controlling and supervising the operation of the machine. In politics, the president, as the highest leader of the country, is responsible for leading the government and overseeing national affairs. Both play critical leadership and supervisory roles in their respective systems.",
+      "Oil corresponds to press: In the machine, oil is a substance used to lubricate and maintain the machine. In politics, the press helps maintain the political system by publishing and disseminating information. Both provide supporting elements for maintaining the normal operation of the system.",
+      "Oil corresponds to campaign: In this mapping, oil also represents support and maintenance for the system. Political activities, such as campaigns and protests, are important components of the political system and help maintain political order and advance the political process.",
+      "Oil corresponds to money: In this mapping, oil can also be interpreted as an element that provides financial support to the political system. Money plays a crucial role in politics, such as funding campaign activities and the work of politicians.",
+      "Breakdown corresponds to crisis: In the machine, breakdown refers to the situation where the machine fails or cannot operate normally. In politics, a crisis refers to the major challenges and difficulties faced by the political system, such as war, economic crisis, etc. Both represent the state of the system under pressure and difficulties.",
+      "Rust corresponds to corruption: In the machine, rust refers to the wear and damage caused by long-term use and environmental factors. In politics, corruption refers to moral and legal issues in the political system, such as corruption and abuse of power. Both represent the problems and drawbacks that may occur during the long-term operation of the system."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "non_bijective",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6",
+        "n7": "n7",
+        "n8": "n8",
+        "n9": "n9"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "one_to_many",
+  "system": {
+    "source": "machine",
+    "target": "politics"
+  },
+  "domains": {
+    "source": "Engineering",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

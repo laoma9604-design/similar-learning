@@ -1,0 +1,163 @@
+{
+  "adaptation_id": "adapt_scar_0296",
+  "dataset": "scar",
+  "original_id": "296",
+  "source_object_id": "obj_group_scar_0296_src",
+  "target_object_id": "obj_group_scar_0296_tgt",
+  "faithful_mappings": [
+    [
+      "boat",
+      "marriage"
+    ],
+    [
+      "passenger",
+      "spouse"
+    ],
+    [
+      "shipwreck",
+      "divorce"
+    ],
+    [
+      "storm",
+      "quarrel"
+    ],
+    [
+      "storm",
+      "anger"
+    ],
+    [
+      "sail",
+      "happiness"
+    ],
+    [
+      "sail",
+      "love"
+    ],
+    [
+      "rock",
+      "affair"
+    ],
+    [
+      "rock",
+      "problem"
+    ],
+    [
+      "anchor",
+      "home"
+    ]
+  ],
+  "explanation": [
+    "Boat corresponds to marriage: a boat is a means of transportation that carries passengers, while marriage is a relationship that carries the emotions of two people. Both are carriers of certain values.",
+    "Passenger corresponds to spouse: passengers are people on board the boat, while a spouse is the other half in a marriage. Both are participants in the relationship.",
+    "Shipwreck corresponds to divorce: a shipwreck is the end of a boat, while a divorce is the end of a marriage. Both are the end of a relationship.",
+    "Storm corresponds to quarrel: a storm is a difficulty that a boat may encounter during the journey, while a quarrel is a difficulty that may arise in a marriage. Both are challenges that arise during the process.",
+    "Storm corresponds to anger: a storm is an unstable factor in a boat's journey, while anger is an unstable factor in a marriage. Both are negative emotions in a relationship.",
+    "Sail corresponds to happiness: a sail is the driving force of a boat, while happiness is the driving force of a marriage. Both are positive emotions in a relationship.",
+    "Sail corresponds to love: a sail is the support of a boat's journey, while love is the support of a marriage. Both are the foundation of a relationship.",
+    "Rock corresponds to affair: a rock is an obstacle that a boat may encounter during the journey, while an affair is an obstacle that may arise in a marriage. Both are difficulties in a relationship.",
+    "Rock corresponds to problem: a rock is a problem that needs to be solved during a boat's journey, while a problem is something that needs to be solved in a marriage. Both are challenges that need to be faced in a relationship.",
+    "Anchor corresponds to home: an anchor is the support of a boat's anchoring, while home is the support of a marriage. Both are a stable foundation of a relationship."
+  ],
+  "background": {
+    "source": "A boat is a watercraft that comes in various sizes and types, smaller than a ship, and can accommodate passengers or cargo. Boats are designed to navigate waters such as rivers, lakes, and protected coastal areas, but some can navigate offshore environments. They can be made from different materials, and their design depends on their intended purpose, materials available, or local traditions. Boats can be propelled by manpower, wind, or inboard/outboard motors. Sailboats, in particular, harness the power of the wind to move across the water. However, boats can encounter challenges such as shipwrecks or storms, which can be dangerous to the passengers on board. To prevent accidents and disasters, boat owners must know how to anchor their boats securely and navigate through rocky waters.",
+    "target": "Marriage is a culturally and often legally recognized union between two people, referred to as spouses. It is an institution in which interpersonal relationships, usually sexual, are acknowledged or sanctioned. Many factors can influence who an individual marries, including legal, social, libidinal, emotional, financial, spiritual, and religious purposes. Marriage ceremonies are commonly referred to as weddings. Historically, marriage has restricted the rights of women, who were considered the property of their husbands. However, there has been a general trend towards ensuring equal rights for women within marriage, including liberalizing divorce laws and reforming reproductive and sexual rights. While marriage is often viewed positively as a source of happiness and love, it can also lead to problems and even divorce due to quarrels, anger, affairs, and other issues that arise within the home."
+  },
+  "raw": {
+    "id": 296,
+    "lang": "en",
+    "system_a": "boat",
+    "system_b": "marriage",
+    "mappings": [
+      [
+        "boat",
+        "marriage"
+      ],
+      [
+        "passenger",
+        "spouse"
+      ],
+      [
+        "shipwreck",
+        "divorce"
+      ],
+      [
+        "storm",
+        "quarrel"
+      ],
+      [
+        "storm",
+        "anger"
+      ],
+      [
+        "sail",
+        "happiness"
+      ],
+      [
+        "sail",
+        "love"
+      ],
+      [
+        "rock",
+        "affair"
+      ],
+      [
+        "rock",
+        "problem"
+      ],
+      [
+        "anchor",
+        "home"
+      ]
+    ],
+    "system_a_domain": "Engineering",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "A boat is a watercraft that comes in various sizes and types, smaller than a ship, and can accommodate passengers or cargo. Boats are designed to navigate waters such as rivers, lakes, and protected coastal areas, but some can navigate offshore environments. They can be made from different materials, and their design depends on their intended purpose, materials available, or local traditions. Boats can be propelled by manpower, wind, or inboard/outboard motors. Sailboats, in particular, harness the power of the wind to move across the water. However, boats can encounter challenges such as shipwrecks or storms, which can be dangerous to the passengers on board. To prevent accidents and disasters, boat owners must know how to anchor their boats securely and navigate through rocky waters.",
+    "system_b_background": "Marriage is a culturally and often legally recognized union between two people, referred to as spouses. It is an institution in which interpersonal relationships, usually sexual, are acknowledged or sanctioned. Many factors can influence who an individual marries, including legal, social, libidinal, emotional, financial, spiritual, and religious purposes. Marriage ceremonies are commonly referred to as weddings. Historically, marriage has restricted the rights of women, who were considered the property of their husbands. However, there has been a general trend towards ensuring equal rights for women within marriage, including liberalizing divorce laws and reforming reproductive and sexual rights. While marriage is often viewed positively as a source of happiness and love, it can also lead to problems and even divorce due to quarrels, anger, affairs, and other issues that arise within the home.",
+    "Explanation": [
+      "Boat corresponds to marriage: a boat is a means of transportation that carries passengers, while marriage is a relationship that carries the emotions of two people. Both are carriers of certain values.",
+      "Passenger corresponds to spouse: passengers are people on board the boat, while a spouse is the other half in a marriage. Both are participants in the relationship.",
+      "Shipwreck corresponds to divorce: a shipwreck is the end of a boat, while a divorce is the end of a marriage. Both are the end of a relationship.",
+      "Storm corresponds to quarrel: a storm is a difficulty that a boat may encounter during the journey, while a quarrel is a difficulty that may arise in a marriage. Both are challenges that arise during the process.",
+      "Storm corresponds to anger: a storm is an unstable factor in a boat's journey, while anger is an unstable factor in a marriage. Both are negative emotions in a relationship.",
+      "Sail corresponds to happiness: a sail is the driving force of a boat, while happiness is the driving force of a marriage. Both are positive emotions in a relationship.",
+      "Sail corresponds to love: a sail is the support of a boat's journey, while love is the support of a marriage. Both are the foundation of a relationship.",
+      "Rock corresponds to affair: a rock is an obstacle that a boat may encounter during the journey, while an affair is an obstacle that may arise in a marriage. Both are difficulties in a relationship.",
+      "Rock corresponds to problem: a rock is a problem that needs to be solved during a boat's journey, while a problem is something that needs to be solved in a marriage. Both are challenges that need to be faced in a relationship.",
+      "Anchor corresponds to home: an anchor is the support of a boat's anchoring, while home is the support of a marriage. Both are a stable foundation of a relationship."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "non_bijective",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6",
+        "n7": "n7",
+        "n8": "n8",
+        "n9": "n9",
+        "n10": "n10"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "one_to_many",
+  "system": {
+    "source": "boat",
+    "target": "marriage"
+  },
+  "domains": {
+    "source": "Engineering",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

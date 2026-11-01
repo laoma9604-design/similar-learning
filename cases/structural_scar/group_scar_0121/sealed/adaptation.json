@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0121",
+  "dataset": "scar",
+  "original_id": "121",
+  "source_object_id": "obj_group_scar_0121_src",
+  "target_object_id": "obj_group_scar_0121_tgt",
+  "faithful_mappings": [
+    [
+      "monomer",
+      "family member"
+    ],
+    [
+      "segment",
+      "membership"
+    ],
+    [
+      "Copolymer",
+      "member combination"
+    ]
+  ],
+  "explanation": [
+    "Monomer corresponds to family member: In polymerization, a monomer is the basic unit that constitutes the polymer. In a family, a family member is the basic unit that constitutes the family. Both are basic units in their respective fields.",
+    "Segment corresponds to membership: In polymerization, a segment is a polymer segment connected by monomers. In a family, membership is the connection and interaction between family members. Here, both segment and membership represent connection and interaction in their respective fields.",
+    "Copolymer corresponds to member combination: A copolymer in polymerization is a polymer composed of different types of monomers. In a family, member combination is the family structure composed of different family members. In this mapping, copolymer and member combination both represent diversity and combination in their respective fields."
+  ],
+  "background": {
+    "source": "High molecular polymers are complex molecules that undergo a process called crystallization, which leads to the partial alignment of their molecular chains. This process results in the formation of organized regions called lamellae, which make up larger structures known as spherulites. Polymers can crystallize due to various factors such as cooling from melting, mechanical stretching, or solvent evaporation. Crystallization significantly impacts the mechanical, thermal, chemical, and optical properties of the polymer. The degree of crystallinity is an important factor, estimated through different analytical methods and typically ranging between 10 and 80%. Polymer structures that experience crystallization are usually referred to as semi-crystalline, and their properties are influenced by the size and orientation of the molecular chains. High molecular polymers can be synthesized from monomers or copolymers that contain various segments, making them versatile materials with different physical and chemical properties.",
+    "target": "Family is a fundamental social unit that is created by a group of people related to each other by birth or marriage. The main objective of a family is to provide love, care, and support to its members, to help them develop and grow as individuals, and to maintain the well-being of the community. Families can take on different forms depending on their member combination, whether it be matrifocal, patrifocal, conjugal, avuncular, or extended. Genealogy is a field that studies the family lineages through history, and family economics examines the family as an economic unit. The term \"families\" can also be used to describe larger groups such as communities, nations, and the global village, emphasizing the importance of membership and belonging."
+  },
+  "raw": {
+    "id": 121,
+    "lang": "en",
+    "system_a": "High Molecular Polymers",
+    "system_b": "Families",
+    "mappings": [
+      [
+        "monomer",
+        "family member"
+      ],
+      [
+        "segment",
+        "membership"
+      ],
+      [
+        "Copolymer",
+        "member combination"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "High molecular polymers are complex molecules that undergo a process called crystallization, which leads to the partial alignment of their molecular chains. This process results in the formation of organized regions called lamellae, which make up larger structures known as spherulites. Polymers can crystallize due to various factors such as cooling from melting, mechanical stretching, or solvent evaporation. Crystallization significantly impacts the mechanical, thermal, chemical, and optical properties of the polymer. The degree of crystallinity is an important factor, estimated through different analytical methods and typically ranging between 10 and 80%. Polymer structures that experience crystallization are usually referred to as semi-crystalline, and their properties are influenced by the size and orientation of the molecular chains. High molecular polymers can be synthesized from monomers or copolymers that contain various segments, making them versatile materials with different physical and chemical properties.",
+    "system_b_background": "Family is a fundamental social unit that is created by a group of people related to each other by birth or marriage. The main objective of a family is to provide love, care, and support to its members, to help them develop and grow as individuals, and to maintain the well-being of the community. Families can take on different forms depending on their member combination, whether it be matrifocal, patrifocal, conjugal, avuncular, or extended. Genealogy is a field that studies the family lineages through history, and family economics examines the family as an economic unit. The term \"families\" can also be used to describe larger groups such as communities, nations, and the global village, emphasizing the importance of membership and belonging.",
+    "Explanation": [
+      "Monomer corresponds to family member: In polymerization, a monomer is the basic unit that constitutes the polymer. In a family, a family member is the basic unit that constitutes the family. Both are basic units in their respective fields.",
+      "Segment corresponds to membership: In polymerization, a segment is a polymer segment connected by monomers. In a family, membership is the connection and interaction between family members. Here, both segment and membership represent connection and interaction in their respective fields.",
+      "Copolymer corresponds to member combination: A copolymer in polymerization is a polymer composed of different types of monomers. In a family, member combination is the family structure composed of different family members. In this mapping, copolymer and member combination both represent diversity and combination in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "High Molecular Polymers",
+    "target": "Families"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

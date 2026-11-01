@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0188",
+  "dataset": "scar",
+  "original_id": "188",
+  "source_object_id": "obj_group_scar_0188_src",
+  "target_object_id": "obj_group_scar_0188_tgt",
+  "faithful_mappings": [
+    [
+      "territory",
+      "root system"
+    ],
+    [
+      "civilization",
+      "branches and leaves"
+    ],
+    [
+      "perish",
+      "withered"
+    ]
+  ],
+  "explanation": [
+    "Territory corresponds to root system: In an empire, territory is the foundation that provides resources and living space for the empire. In a big tree, the root system is the foundation that provides water and nutrients for the tree. In this analogy, both territory and root system represent the basis and support of a system.",
+    "Civilization corresponds to branches and leaves: In an empire, civilization refers to the development of culture, technology, and social systems. The branches and leaves of a tree represent its growth and prosperity. In this analogy, civilization and branches and leaves both represent the development and prosperity of a system.",
+    "Perish corresponds to withered: The decline and extinction of an empire means its demise. The withering of a tree means its aging and death. In this analogy, both perish and withered represent the decline and end of a system."
+  ],
+  "background": {
+    "source": "An Empire is a dominant political unit that comprises several territories and peoples. It is formed through conquest and is divided into a dominant centre and subordinate peripheries. The central power exerts political control over the rest of the territories, and each population is governed according to its distinct set of rights. Empires can be ancient or modern, centralized or decentralized, and have varying degrees of brutality. The term \"Empire\" is also used colloquially to refer to large-scale business enterprises or political organizations controlled by a single individual or group. The concept of empire is associated with imperialism, colonialism, and globalization. While the idea of empire can evoke negative sentiment, it remains a significant aspect of human civilization.",
+    "target": "A tree is a perennial plant that has a trunk, branches, and leaves. It is a type of plant that has evolved a trunk and branches to tower above other plants and compete for sunlight. Trees come in a wide variety of species and are typically angiosperms or hardwoods. They have a root system below the ground that helps anchor the tree and extract moisture and nutrients from the soil. Trees typically have a bark that serves as a protective layer for the trunk. The leaves of the tree capture light energy and convert it into sugars through photosynthesis, which is used for growth and development. Although trees are beneficial and have many uses, they can also wither and die."
+  },
+  "raw": {
+    "id": 188,
+    "lang": "en",
+    "system_a": "Empire",
+    "system_b": "Tree",
+    "mappings": [
+      [
+        "territory",
+        "root system"
+      ],
+      [
+        "civilization",
+        "branches and leaves"
+      ],
+      [
+        "perish",
+        "withered"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "Biology",
+    "system_a_background": "An Empire is a dominant political unit that comprises several territories and peoples. It is formed through conquest and is divided into a dominant centre and subordinate peripheries. The central power exerts political control over the rest of the territories, and each population is governed according to its distinct set of rights. Empires can be ancient or modern, centralized or decentralized, and have varying degrees of brutality. The term \"Empire\" is also used colloquially to refer to large-scale business enterprises or political organizations controlled by a single individual or group. The concept of empire is associated with imperialism, colonialism, and globalization. While the idea of empire can evoke negative sentiment, it remains a significant aspect of human civilization.",
+    "system_b_background": "A tree is a perennial plant that has a trunk, branches, and leaves. It is a type of plant that has evolved a trunk and branches to tower above other plants and compete for sunlight. Trees come in a wide variety of species and are typically angiosperms or hardwoods. They have a root system below the ground that helps anchor the tree and extract moisture and nutrients from the soil. Trees typically have a bark that serves as a protective layer for the trunk. The leaves of the tree capture light energy and convert it into sugars through photosynthesis, which is used for growth and development. Although trees are beneficial and have many uses, they can also wither and die.",
+    "Explanation": [
+      "Territory corresponds to root system: In an empire, territory is the foundation that provides resources and living space for the empire. In a big tree, the root system is the foundation that provides water and nutrients for the tree. In this analogy, both territory and root system represent the basis and support of a system.",
+      "Civilization corresponds to branches and leaves: In an empire, civilization refers to the development of culture, technology, and social systems. The branches and leaves of a tree represent its growth and prosperity. In this analogy, civilization and branches and leaves both represent the development and prosperity of a system.",
+      "Perish corresponds to withered: The decline and extinction of an empire means its demise. The withering of a tree means its aging and death. In this analogy, both perish and withered represent the decline and end of a system."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Empire",
+    "target": "Tree"
+  },
+  "domains": {
+    "source": "History",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

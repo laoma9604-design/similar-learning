@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0328",
+  "dataset": "scar",
+  "original_id": "328",
+  "source_object_id": "obj_group_scar_0328_src",
+  "target_object_id": "obj_group_scar_0328_tgt",
+  "faithful_mappings": [
+    [
+      "Word",
+      "Material"
+    ],
+    [
+      "plot",
+      "structure"
+    ],
+    [
+      "character image",
+      "decorate"
+    ]
+  ],
+  "explanation": [
+    "Word corresponds to material: In a novel, words are the basic elements that make up the story. In architecture, materials are the basic elements that make up the building. In this analogy, words and materials both represent the basic units of construction in their respective fields.",
+    "Plot corresponds to structure: In a novel, the plot is the backbone of the story, determining its development and direction. In architecture, the structure is the backbone of the building, determining its stability and shape. Here, plot and structure both represent the core frameworks in their respective fields.",
+    "Character image corresponds to decoration: In a novel, character images are the soul of the story, adding color and depth. In architecture, decoration is the finishing touch of the building, adding color and depth. In this analogy, character images and decoration both represent the aesthetic elements in their respective fields."
+  ],
+  "background": {
+    "source": "Fiction refers to imaginative and creative work that portrays individuals, events, or places that are not rooted in history or fact. It is expressed in various mediums, including prose, live performances, films, television programs, radio dramas, comics, role-playing games, and video games. The hallmark of fiction is its ability to tell a story, typically with a plot and characters that capture the imagination of readers, viewers, or players. Through descriptive language and vivid imagery, fiction writers and other creators immerse audiences in complex narratives that offer a glimpse into alternate realities and unique perspectives. These narratives are an artful blend of fact and fiction, designed to capture the essence of the human experience and evoke emotions by creating a visual character image through the power of words.",
+    "target": "Architecture is the process of designing and constructing buildings or other structures. It involves creating material forms that are not only sturdy and functional but also beautiful and culturally significant. From ancient civilizations to modern times, architecture has been used as a means of expression for cultures all over the world. The study of architecture dates back to ancient times, with texts on theories and principles of architecture being written since the 1st century AD. Today, architecture has expanded to include ship design and interior decoration. The field is constantly evolving, with modern techniques and materials being used to create sustainable and aesthetically pleasing structures."
+  },
+  "raw": {
+    "id": 328,
+    "lang": "en",
+    "system_a": "Fiction",
+    "system_b": "Architecture",
+    "mappings": [
+      [
+        "Word",
+        "Material"
+      ],
+      [
+        "plot",
+        "structure"
+      ],
+      [
+        "character image",
+        "decorate"
+      ]
+    ],
+    "system_a_domain": "Literature",
+    "system_b_domain": "Engineering",
+    "system_a_background": "Fiction refers to imaginative and creative work that portrays individuals, events, or places that are not rooted in history or fact. It is expressed in various mediums, including prose, live performances, films, television programs, radio dramas, comics, role-playing games, and video games. The hallmark of fiction is its ability to tell a story, typically with a plot and characters that capture the imagination of readers, viewers, or players. Through descriptive language and vivid imagery, fiction writers and other creators immerse audiences in complex narratives that offer a glimpse into alternate realities and unique perspectives. These narratives are an artful blend of fact and fiction, designed to capture the essence of the human experience and evoke emotions by creating a visual character image through the power of words.",
+    "system_b_background": "Architecture is the process of designing and constructing buildings or other structures. It involves creating material forms that are not only sturdy and functional but also beautiful and culturally significant. From ancient civilizations to modern times, architecture has been used as a means of expression for cultures all over the world. The study of architecture dates back to ancient times, with texts on theories and principles of architecture being written since the 1st century AD. Today, architecture has expanded to include ship design and interior decoration. The field is constantly evolving, with modern techniques and materials being used to create sustainable and aesthetically pleasing structures.",
+    "Explanation": [
+      "Word corresponds to material: In a novel, words are the basic elements that make up the story. In architecture, materials are the basic elements that make up the building. In this analogy, words and materials both represent the basic units of construction in their respective fields.",
+      "Plot corresponds to structure: In a novel, the plot is the backbone of the story, determining its development and direction. In architecture, the structure is the backbone of the building, determining its stability and shape. Here, plot and structure both represent the core frameworks in their respective fields.",
+      "Character image corresponds to decoration: In a novel, character images are the soul of the story, adding color and depth. In architecture, decoration is the finishing touch of the building, adding color and depth. In this analogy, character images and decoration both represent the aesthetic elements in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Fiction",
+    "target": "Architecture"
+  },
+  "domains": {
+    "source": "Literature",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

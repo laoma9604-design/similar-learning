@@ -1,0 +1,75 @@
+{
+  "adaptation_id": "adapt_scar_0027",
+  "dataset": "scar",
+  "original_id": "27",
+  "source_object_id": "obj_group_scar_0027_src",
+  "target_object_id": "obj_group_scar_0027_tgt",
+  "faithful_mappings": [
+    [
+      "dna sequence",
+      "puzzle pieces"
+    ],
+    [
+      "Sequencing technology",
+      "stitching"
+    ]
+  ],
+  "explanation": [
+    "DNA sequence corresponds to puzzle pieces: In the context of DNA sequencing, the DNA sequence is a biological information encoding sequence composed of nucleotides. Similarly, in the context of jigsaw puzzles, puzzle pieces are individual parts that make up a complete image.",
+    "Sequencing technology corresponds to stitching: In the context of DNA sequencing, sequencing technology is a method used to determine the order of nucleotides in a DNA sequence. Likewise, in the context of jigsaw puzzles, stitching refers to the process of combining puzzle pieces together based on visual cues to form a complete image."
+  ],
+  "background": {
+    "source": "DNA sequencing has revolutionized the field of biology and medicine, allowing researchers to determine the order of nucleotides in DNA, which can provide valuable information for basic biological research and applied fields, such as medical diagnosis, biotechnology, and forensic biology. With the advent of rapid sequencing technology, DNA sequencing has become faster and more accurate, allowing for the sequencing of complete DNA sequences or genomes of numerous types and species of life. The technology has also enabled a quick diagnosis of different diseases, including various cancers, and can guide patient treatment, leading to more individualized medical care. The future is bright for DNA sequencing technology as it continues to accelerate biological and medical research and discovery.",
+    "target": "A puzzle is a fascinating mental challenge that requires one to think critically and strategically to solve. There are many forms of puzzles, ranging from jigsaw puzzles to economic puzzles, and even video game puzzles. Jigsaw puzzles are the most common type of puzzle, consisting of small, interlocking puzzle pieces that one must assemble to form a larger picture. Completing a jigsaw puzzle can be an immensely satisfying experience, as it requires patience, discipline, and a high attention to detail. \n\nOn the other hand, economic puzzles focus on using theories to explain economic data, but when the outcome contradicts the predicted results, it becomes referred to as an economic puzzle. This field requires critical thinking, knowledge in both economic theories and economic data, and the ability to analyze and evaluate trends. \n\nPuzzle video games are also a popular genre, providing players with interactive entertainment that challenges their problem-solving abilities. These games come in many forms, from simple puzzle-solving to complex, brain-teasing challenges. Players must use their wits and strategy to complete the game's levels or solve specific challenges.\n\nThe term “puzzle” can also refer to a broad range of activities and items, from stitching a puzzle piece to solving complex problems in real-life situations. Regardless of the kind of puzzle, it always opens up a whole new world of challenges waiting to be explored."
+  },
+  "raw": {
+    "id": 27,
+    "lang": "en",
+    "system_a": "DNA Sequencing",
+    "system_b": "The Puzzle",
+    "mappings": [
+      [
+        "dna sequence",
+        "puzzle pieces"
+      ],
+      [
+        "Sequencing technology",
+        "stitching"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Engineering",
+    "system_a_background": "DNA sequencing has revolutionized the field of biology and medicine, allowing researchers to determine the order of nucleotides in DNA, which can provide valuable information for basic biological research and applied fields, such as medical diagnosis, biotechnology, and forensic biology. With the advent of rapid sequencing technology, DNA sequencing has become faster and more accurate, allowing for the sequencing of complete DNA sequences or genomes of numerous types and species of life. The technology has also enabled a quick diagnosis of different diseases, including various cancers, and can guide patient treatment, leading to more individualized medical care. The future is bright for DNA sequencing technology as it continues to accelerate biological and medical research and discovery.",
+    "system_b_background": "A puzzle is a fascinating mental challenge that requires one to think critically and strategically to solve. There are many forms of puzzles, ranging from jigsaw puzzles to economic puzzles, and even video game puzzles. Jigsaw puzzles are the most common type of puzzle, consisting of small, interlocking puzzle pieces that one must assemble to form a larger picture. Completing a jigsaw puzzle can be an immensely satisfying experience, as it requires patience, discipline, and a high attention to detail. \n\nOn the other hand, economic puzzles focus on using theories to explain economic data, but when the outcome contradicts the predicted results, it becomes referred to as an economic puzzle. This field requires critical thinking, knowledge in both economic theories and economic data, and the ability to analyze and evaluate trends. \n\nPuzzle video games are also a popular genre, providing players with interactive entertainment that challenges their problem-solving abilities. These games come in many forms, from simple puzzle-solving to complex, brain-teasing challenges. Players must use their wits and strategy to complete the game's levels or solve specific challenges.\n\nThe term “puzzle” can also refer to a broad range of activities and items, from stitching a puzzle piece to solving complex problems in real-life situations. Regardless of the kind of puzzle, it always opens up a whole new world of challenges waiting to be explored.",
+    "Explanation": [
+      "DNA sequence corresponds to puzzle pieces: In the context of DNA sequencing, the DNA sequence is a biological information encoding sequence composed of nucleotides. Similarly, in the context of jigsaw puzzles, puzzle pieces are individual parts that make up a complete image.",
+      "Sequencing technology corresponds to stitching: In the context of DNA sequencing, sequencing technology is a method used to determine the order of nucleotides in a DNA sequence. Likewise, in the context of jigsaw puzzles, stitching refers to the process of combining puzzle pieces together based on visual cues to form a complete image."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "DNA Sequencing",
+    "target": "The Puzzle"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

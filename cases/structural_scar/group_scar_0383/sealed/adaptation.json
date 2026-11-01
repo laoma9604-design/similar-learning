@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0383",
+  "dataset": "scar",
+  "original_id": "383",
+  "source_object_id": "obj_group_scar_0383_src",
+  "target_object_id": "obj_group_scar_0383_tgt",
+  "faithful_mappings": [
+    [
+      "particle",
+      "individual"
+    ],
+    [
+      "system",
+      "group"
+    ],
+    [
+      "average effect",
+      "average behavior"
+    ]
+  ],
+  "explanation": [
+    "Particle corresponds to individual: in the mean field approximation, particles are the basic units of a system; in collective behavior, individuals are the basic units of a group. Both are the fundamental components of their respective systems.",
+    "System corresponds to group: in the mean field approximation, a system is the whole composed of particles; in collective behavior, a group is the whole composed of individuals. Both represent wholes composed of basic units.",
+    "Average effect corresponds to average behavior: in the mean field approximation, the average effect describes the average behavior of particles in a system; in collective behavior, average behavior describes the average behavior of individuals in a group. Both represent the average behavior of the basic units in their respective systems."
+  ],
+  "background": {
+    "source": "The Mean Field Approximation (MFA) is a powerful tool in physics and probability theory that simplifies the study of high-dimensional stochastic models by considering the averaging of degrees of freedom. MFA achieves this by approximating the original many-body problem with a simpler effective one-body problem, where all interactions to any one body are replaced with an average or effective interaction. In this way, the behavior of the system can be studied at a lower computational cost, making it a valuable tool in a wide range of fields, including statistical inference, neuroscience, and game theory. The MFA is an essential concept in modern physics and probability theory, and its applications continue to expand with ongoing research.",
+    "target": "Group behavior refers to the system of behaviors and psychological processes that occur within a social group, as well as between social groups. This field of study is useful in understanding decision-making behavior, tracking the spread of diseases, developing effective therapy techniques, and following the emergence of new ideas and technologies. In order to better understand group behavior, researchers study individual behaviors, group dynamics, and the average behavior of the group as a whole. This multidisciplinary field is studied in various fields including psychology, sociology, anthropology, political science, epidemiology, education, social work, leadership studies, business, managerial studies, and communication studies. By studying group behavior, we can gain insights into how people interact and make decisions within various social settings."
+  },
+  "raw": {
+    "id": 383,
+    "lang": "en",
+    "system_a": "Mean Field Approximation",
+    "system_b": "Group Behavior",
+    "mappings": [
+      [
+        "particle",
+        "individual"
+      ],
+      [
+        "system",
+        "group"
+      ],
+      [
+        "average effect",
+        "average behavior"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Biology",
+    "system_a_background": "The Mean Field Approximation (MFA) is a powerful tool in physics and probability theory that simplifies the study of high-dimensional stochastic models by considering the averaging of degrees of freedom. MFA achieves this by approximating the original many-body problem with a simpler effective one-body problem, where all interactions to any one body are replaced with an average or effective interaction. In this way, the behavior of the system can be studied at a lower computational cost, making it a valuable tool in a wide range of fields, including statistical inference, neuroscience, and game theory. The MFA is an essential concept in modern physics and probability theory, and its applications continue to expand with ongoing research.",
+    "system_b_background": "Group behavior refers to the system of behaviors and psychological processes that occur within a social group, as well as between social groups. This field of study is useful in understanding decision-making behavior, tracking the spread of diseases, developing effective therapy techniques, and following the emergence of new ideas and technologies. In order to better understand group behavior, researchers study individual behaviors, group dynamics, and the average behavior of the group as a whole. This multidisciplinary field is studied in various fields including psychology, sociology, anthropology, political science, epidemiology, education, social work, leadership studies, business, managerial studies, and communication studies. By studying group behavior, we can gain insights into how people interact and make decisions within various social settings.",
+    "Explanation": [
+      "Particle corresponds to individual: in the mean field approximation, particles are the basic units of a system; in collective behavior, individuals are the basic units of a group. Both are the fundamental components of their respective systems.",
+      "System corresponds to group: in the mean field approximation, a system is the whole composed of particles; in collective behavior, a group is the whole composed of individuals. Both represent wholes composed of basic units.",
+      "Average effect corresponds to average behavior: in the mean field approximation, the average effect describes the average behavior of particles in a system; in collective behavior, average behavior describes the average behavior of individuals in a group. Both represent the average behavior of the basic units in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Mean Field Approximation",
+    "target": "Group Behavior"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

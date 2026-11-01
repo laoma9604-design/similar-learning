@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0209",
+  "dataset": "scar",
+  "original_id": "209",
+  "source_object_id": "obj_group_scar_0209_src",
+  "target_object_id": "obj_group_scar_0209_tgt",
+  "faithful_mappings": [
+    [
+      "Italy",
+      "France"
+    ],
+    [
+      "feudal theocracy",
+      "feudal autocracy"
+    ],
+    [
+      "humanism",
+      "Freedom and democracy"
+    ],
+    [
+      "Dante",
+      "Voltaire"
+    ]
+  ],
+  "explanation": [
+    "Italy corresponds to France: the Renaissance originated in Italy and Italy became the cultural center of this period; while the center of the Enlightenment was France, which became the leader of thought during this period. Both were the cultural and intellectual centers of their respective eras.",
+    "Feudal theocracy corresponds to feudal autocracy: during the Renaissance, people opposed feudal theocracy and advocated for individual freedom and dignity; while during the Enlightenment, people opposed feudal autocracy and advocated for freedom and democracy. Both reflected people's resistance to feudalism and their pursuit of a better social system.",
+    "Humanism corresponds to freedom and democracy: the core idea of the Renaissance was humanism, which emphasized individual value and the spirit of freedom; while the Enlightenment advocated freedom and democracy, emphasizing political freedom and democratic participation. Both reflect the human pursuit of freedom, equality, and dignity.",
+    "Dante corresponds to Voltaire: the representative figure of the Renaissance was Dante, whose work embodies the spirit of humanism; while the representative figure of the Enlightenment was Voltaire, whose work embodies the Enlightenment thought. Both were important thinkers and cultural representatives of their respective eras."
+  ],
+  "background": {
+    "source": "The Renaissance was a period in European history characterized by efforts to revive and surpass the ideas and achievements of classical antiquity. It spanned the 15th and 16th centuries, but its origins are said to begin in the early 14th century. It was a period of great social change that occurred after the Crisis of the Late Middle Ages. The Renaissance was associated with cultural movements like Italy's Peloponnesian war, the Florentine Republic, and the nature of the feudal theocracy. The intellectual basis of the Renaissance was its version of humanism, derived from the concept of Roman humanitas and the rediscovery of classical Greek philosophy. This new thinking became manifest in art, architecture, politics, science, and literature. Early examples were the development of perspective in oil painting and the revived knowledge of how to make concrete. Although the changes of the Renaissance were not uniform across Europe, its contributions in literature, painting, sculpture, music, and other art forms were significant. The Renaissance was also a period when various scientific fields like astronomy, mathematics, and other fields made great progress. The Renaissance began in Florence, Italy, one of the many states of Italy. The origins of the Renaissance are said to be due to a variety of factors, including the social and civic peculiarities of Florence at the time, the political structure, the patronage of its dominant family, and migration of Greek scholars and their texts to Italy. The Renaissance has a long and complex historiography, and in recent years, there has been much debate among historians over its usefulness as a term and as a historical delineation. Dante was one of the most significant poets of the period, and his works are still studied and celebrated today.",
+    "target": "Enlightenment was a significant philosophical, intellectual, and cultural movement that originated in France during the late 17th and early 18th centuries. The movement was a response to the feudal autocracy that dominated France, as well as the institutionalized oppression that came with it. It was a time when people began to challenge old ways of thinking and explore new ideas based on reason and evidence rather than dogma and superstition.\n\nAt the heart of the Enlightenment was the belief in freedom and democracy, the idea that all individuals have certain inalienable rights that cannot be taken away by any government, monarch, or ruler. This idea was promoted by prominent Enlightenment thinkers such as Voltaire, who was a fierce critic of the abuses of power that had become common in France at the time.\n\nEnlightenment thinkers believed in the power of knowledge and reason to transform society for the better. They sought to promote science, education, and intellectual inquiry as a means of creating a better world. They believed that through the expansion of knowledge and the promotion of rational inquiry, people could become more enlightened and more free.\n\nToday, the Enlightenment is widely regarded as one of the most significant intellectual and cultural movements in human history. Its legacy can be seen in the principles of modern democracy, the scientific method, and the pursuit of knowledge and truth. Despite the challenges and setbacks that the world has faced in the centuries since the Enlightenment began, its spirit of inquiry and free thinking continues to inspire people to this day."
+  },
+  "raw": {
+    "id": 209,
+    "lang": "en",
+    "system_a": "Renaissance",
+    "system_b": "Enlightenment",
+    "mappings": [
+      [
+        "Italy",
+        "France"
+      ],
+      [
+        "feudal theocracy",
+        "feudal autocracy"
+      ],
+      [
+        "humanism",
+        "Freedom and democracy"
+      ],
+      [
+        "Dante",
+        "Voltaire"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "The Renaissance was a period in European history characterized by efforts to revive and surpass the ideas and achievements of classical antiquity. It spanned the 15th and 16th centuries, but its origins are said to begin in the early 14th century. It was a period of great social change that occurred after the Crisis of the Late Middle Ages. The Renaissance was associated with cultural movements like Italy's Peloponnesian war, the Florentine Republic, and the nature of the feudal theocracy. The intellectual basis of the Renaissance was its version of humanism, derived from the concept of Roman humanitas and the rediscovery of classical Greek philosophy. This new thinking became manifest in art, architecture, politics, science, and literature. Early examples were the development of perspective in oil painting and the revived knowledge of how to make concrete. Although the changes of the Renaissance were not uniform across Europe, its contributions in literature, painting, sculpture, music, and other art forms were significant. The Renaissance was also a period when various scientific fields like astronomy, mathematics, and other fields made great progress. The Renaissance began in Florence, Italy, one of the many states of Italy. The origins of the Renaissance are said to be due to a variety of factors, including the social and civic peculiarities of Florence at the time, the political structure, the patronage of its dominant family, and migration of Greek scholars and their texts to Italy. The Renaissance has a long and complex historiography, and in recent years, there has been much debate among historians over its usefulness as a term and as a historical delineation. Dante was one of the most significant poets of the period, and his works are still studied and celebrated today.",
+    "system_b_background": "Enlightenment was a significant philosophical, intellectual, and cultural movement that originated in France during the late 17th and early 18th centuries. The movement was a response to the feudal autocracy that dominated France, as well as the institutionalized oppression that came with it. It was a time when people began to challenge old ways of thinking and explore new ideas based on reason and evidence rather than dogma and superstition.\n\nAt the heart of the Enlightenment was the belief in freedom and democracy, the idea that all individuals have certain inalienable rights that cannot be taken away by any government, monarch, or ruler. This idea was promoted by prominent Enlightenment thinkers such as Voltaire, who was a fierce critic of the abuses of power that had become common in France at the time.\n\nEnlightenment thinkers believed in the power of knowledge and reason to transform society for the better. They sought to promote science, education, and intellectual inquiry as a means of creating a better world. They believed that through the expansion of knowledge and the promotion of rational inquiry, people could become more enlightened and more free.\n\nToday, the Enlightenment is widely regarded as one of the most significant intellectual and cultural movements in human history. Its legacy can be seen in the principles of modern democracy, the scientific method, and the pursuit of knowledge and truth. Despite the challenges and setbacks that the world has faced in the centuries since the Enlightenment began, its spirit of inquiry and free thinking continues to inspire people to this day.",
+    "Explanation": [
+      "Italy corresponds to France: the Renaissance originated in Italy and Italy became the cultural center of this period; while the center of the Enlightenment was France, which became the leader of thought during this period. Both were the cultural and intellectual centers of their respective eras.",
+      "Feudal theocracy corresponds to feudal autocracy: during the Renaissance, people opposed feudal theocracy and advocated for individual freedom and dignity; while during the Enlightenment, people opposed feudal autocracy and advocated for freedom and democracy. Both reflected people's resistance to feudalism and their pursuit of a better social system.",
+      "Humanism corresponds to freedom and democracy: the core idea of the Renaissance was humanism, which emphasized individual value and the spirit of freedom; while the Enlightenment advocated freedom and democracy, emphasizing political freedom and democratic participation. Both reflect the human pursuit of freedom, equality, and dignity.",
+      "Dante corresponds to Voltaire: the representative figure of the Renaissance was Dante, whose work embodies the spirit of humanism; while the representative figure of the Enlightenment was Voltaire, whose work embodies the Enlightenment thought. Both were important thinkers and cultural representatives of their respective eras."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Renaissance",
+    "target": "Enlightenment"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

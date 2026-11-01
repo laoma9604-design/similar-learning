@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0152",
+  "dataset": "scar",
+  "original_id": "152",
+  "source_object_id": "obj_group_scar_0152_src",
+  "target_object_id": "obj_group_scar_0152_tgt",
+  "faithful_mappings": [
+    [
+      "data point",
+      "people"
+    ],
+    [
+      "sample point",
+      "people around"
+    ],
+    [
+      "measure",
+      "distance"
+    ]
+  ],
+  "explanation": [
+    "Data point corresponds to people: In KNN algorithm, data point refers to the sample used for classification or regression. In searching for the nearest neighbors, people refer to the objects that need to find neighbors. Here, both data point and people represent the basic units for achieving the goal.",
+    "Sample point corresponds to people around: In KNN algorithm, sample point refers to the K-nearest neighbors to the data point. In searching for the nearest neighbors, people around refer to other people who are closer to the target person. In this mapping, both sample point and people around represent other objects that are closer to the target object.",
+    "Measure corresponds to distance: In KNN algorithm, measure refers to the method used to calculate the distance between data points, such as Euclidean distance or Manhattan distance. In searching for the nearest neighbors, distance refers to the physical distance between people. Here, both measure and distance represent the methods used to measure the relationships between objects."
+  ],
+  "background": {
+    "source": "The k-nearest neighbors algorithm, or k-NN, is a statistical supervised learning method that utilizes the k closest data points or sample points to make classifications or predictions on new data points. This algorithm can be used for both classification and regression tasks, and is best suited for datasets with known classes or property values. The k-NN algorithm relies on measuring the distance between data points, which can be improved with data normalization techniques. Additionally, assigning weights to nearby points can improve the accuracy of predictions. The k-NN algorithm is a useful tool for approximating local functions, and its sensitivity to local data structure makes it a powerful tool in data analysis.",
+    "target": "Finding the nearest neighbors is the process of determining the closest point to a given point in a given set based on a dissimilarity function. This optimization problem is commonly used in various applications, such as assigning the nearest post office to a residence. The problem is often formulated in a metric space and measured using distance metrics like Euclidean and Manhattan distances. By finding the k closest points, this problem can be generalized to k-NN search. This process is helpful in finding people around a given location based on their distance from the point."
+  },
+  "raw": {
+    "id": 152,
+    "lang": "en",
+    "system_a": "KNN Algorithm",
+    "system_b": "Finding Nearest Neighbors",
+    "mappings": [
+      [
+        "data point",
+        "people"
+      ],
+      [
+        "sample point",
+        "people around"
+      ],
+      [
+        "measure",
+        "distance"
+      ]
+    ],
+    "system_a_domain": "Computer",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "The k-nearest neighbors algorithm, or k-NN, is a statistical supervised learning method that utilizes the k closest data points or sample points to make classifications or predictions on new data points. This algorithm can be used for both classification and regression tasks, and is best suited for datasets with known classes or property values. The k-NN algorithm relies on measuring the distance between data points, which can be improved with data normalization techniques. Additionally, assigning weights to nearby points can improve the accuracy of predictions. The k-NN algorithm is a useful tool for approximating local functions, and its sensitivity to local data structure makes it a powerful tool in data analysis.",
+    "system_b_background": "Finding the nearest neighbors is the process of determining the closest point to a given point in a given set based on a dissimilarity function. This optimization problem is commonly used in various applications, such as assigning the nearest post office to a residence. The problem is often formulated in a metric space and measured using distance metrics like Euclidean and Manhattan distances. By finding the k closest points, this problem can be generalized to k-NN search. This process is helpful in finding people around a given location based on their distance from the point.",
+    "Explanation": [
+      "Data point corresponds to people: In KNN algorithm, data point refers to the sample used for classification or regression. In searching for the nearest neighbors, people refer to the objects that need to find neighbors. Here, both data point and people represent the basic units for achieving the goal.",
+      "Sample point corresponds to people around: In KNN algorithm, sample point refers to the K-nearest neighbors to the data point. In searching for the nearest neighbors, people around refer to other people who are closer to the target person. In this mapping, both sample point and people around represent other objects that are closer to the target object.",
+      "Measure corresponds to distance: In KNN algorithm, measure refers to the method used to calculate the distance between data points, such as Euclidean distance or Manhattan distance. In searching for the nearest neighbors, distance refers to the physical distance between people. Here, both measure and distance represent the methods used to measure the relationships between objects."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "KNN Algorithm",
+    "target": "Finding Nearest Neighbors"
+  },
+  "domains": {
+    "source": "Computer",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

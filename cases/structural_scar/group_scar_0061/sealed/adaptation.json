@@ -1,0 +1,119 @@
+{
+  "adaptation_id": "adapt_scar_0061",
+  "dataset": "scar",
+  "original_id": "61",
+  "source_object_id": "obj_group_scar_0061_src",
+  "target_object_id": "obj_group_scar_0061_tgt",
+  "faithful_mappings": [
+    [
+      "virus",
+      "code"
+    ],
+    [
+      "virus",
+      "malware"
+    ],
+    [
+      "reproduction",
+      "replication"
+    ],
+    [
+      "infection",
+      "installation"
+    ],
+    [
+      "eradication",
+      "removal"
+    ],
+    [
+      "vaccine",
+      "antivirus"
+    ]
+  ],
+  "explanation": [
+    "Virus corresponds to code: Virus is a biological entity that relies on the host cell for reproduction, while code is a set of instructions in computer programs. Both are basic units with specific functions.",
+    "Virus corresponds to malware: Virus infects the host cell to cause disease, while malware infects computer systems to cause damage. Both are destructive and infectious.",
+    "Reproduction corresponds to replication: Virus replicates inside the host cell to produce new viral particles, while code can be replicated in computer systems to achieve specific functions. Both involve the process of proliferating information or matter.",
+    "Infection corresponds to installation: Virus enters the body by infecting the host cell, while malware enters the computer system by installation. Both involve invasion and occupation of a new environment.",
+    "Eradication corresponds to removal: Virus can be eradicated by treatment or preventive measures, while malware can be removed by antivirus software or other means. Both involve the process of eliminating adverse effects.",
+    "Vaccine corresponds to antivirus software: Vaccine can prevent virus infection, while antivirus software can prevent malware invasion. Both are defensive measures against destructive factors."
+  ],
+  "background": {
+    "source": "A virus is a small infectious agent that requires a host cell to reproduce and is capable of infecting animals, plants, bacteria, and archaea. It consists of genetic material surrounded by a protein coat and sometimes an outside envelope of lipids. Viruses spread through various pathways, such as vectors, coughing, and sneezing, and can cause diseases ranging from the common cold to deadly illnesses such as COVID-19. The immune system of an infected host can usually eliminate the virus, but some viruses can evade the immune response and cause chronic infections. Vaccines have been developed to confer an artificially acquired immunity to specific viral infections, and antiviral drugs have been developed to treat some viral infections.",
+    "target": "Code is a crucial aspect of modern communication and information processing systems that enables the conversion of information into symbols for efficient communication and storage. It has played a vital role in the evolution of human language and communication, making it possible to transmit information beyond the limits of speech. However, coding can also be used maliciously, as in the case of malware that replicates, installs, and requires removal through the use of antivirus software. Despite the potential dangers of coding, it remains an essential tool for secure and efficient communication and information storage in the digital age."
+  },
+  "raw": {
+    "id": 61,
+    "lang": "en",
+    "system_a": "virus",
+    "system_b": "code",
+    "mappings": [
+      [
+        "virus",
+        "code"
+      ],
+      [
+        "virus",
+        "malware"
+      ],
+      [
+        "reproduction",
+        "replication"
+      ],
+      [
+        "infection",
+        "installation"
+      ],
+      [
+        "eradication",
+        "removal"
+      ],
+      [
+        "vaccine",
+        "antivirus"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Computer",
+    "system_a_background": "A virus is a small infectious agent that requires a host cell to reproduce and is capable of infecting animals, plants, bacteria, and archaea. It consists of genetic material surrounded by a protein coat and sometimes an outside envelope of lipids. Viruses spread through various pathways, such as vectors, coughing, and sneezing, and can cause diseases ranging from the common cold to deadly illnesses such as COVID-19. The immune system of an infected host can usually eliminate the virus, but some viruses can evade the immune response and cause chronic infections. Vaccines have been developed to confer an artificially acquired immunity to specific viral infections, and antiviral drugs have been developed to treat some viral infections.",
+    "system_b_background": "Code is a crucial aspect of modern communication and information processing systems that enables the conversion of information into symbols for efficient communication and storage. It has played a vital role in the evolution of human language and communication, making it possible to transmit information beyond the limits of speech. However, coding can also be used maliciously, as in the case of malware that replicates, installs, and requires removal through the use of antivirus software. Despite the potential dangers of coding, it remains an essential tool for secure and efficient communication and information storage in the digital age.",
+    "Explanation": [
+      "Virus corresponds to code: Virus is a biological entity that relies on the host cell for reproduction, while code is a set of instructions in computer programs. Both are basic units with specific functions.",
+      "Virus corresponds to malware: Virus infects the host cell to cause disease, while malware infects computer systems to cause damage. Both are destructive and infectious.",
+      "Reproduction corresponds to replication: Virus replicates inside the host cell to produce new viral particles, while code can be replicated in computer systems to achieve specific functions. Both involve the process of proliferating information or matter.",
+      "Infection corresponds to installation: Virus enters the body by infecting the host cell, while malware enters the computer system by installation. Both involve invasion and occupation of a new environment.",
+      "Eradication corresponds to removal: Virus can be eradicated by treatment or preventive measures, while malware can be removed by antivirus software or other means. Both involve the process of eliminating adverse effects.",
+      "Vaccine corresponds to antivirus software: Vaccine can prevent virus infection, while antivirus software can prevent malware invasion. Both are defensive measures against destructive factors."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "non_bijective",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "one_to_many",
+  "system": {
+    "source": "virus",
+    "target": "code"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Computer"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

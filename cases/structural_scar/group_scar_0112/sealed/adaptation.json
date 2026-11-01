@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0112",
+  "dataset": "scar",
+  "original_id": "112",
+  "source_object_id": "obj_group_scar_0112_src",
+  "target_object_id": "obj_group_scar_0112_tgt",
+  "faithful_mappings": [
+    [
+      "Reactant",
+      "sell goods"
+    ],
+    [
+      "product",
+      "purchase goods"
+    ],
+    [
+      "reaction speed",
+      "Goods circulation rate"
+    ],
+    [
+      "Response ratio",
+      "exchange rate"
+    ]
+  ],
+  "explanation": [
+    "Reactant corresponds to selling goods: In a chemical reaction, a reactant is a substance that participates in the reaction. In trading, selling goods are the commodities exchanged between both parties. Both of them are objects that need to be processed and transformed in their respective fields.",
+    "Product corresponds to purchasing goods: In a chemical reaction, a product is a new substance formed after the chemical reaction. In trading, purchasing goods are the commodities obtained through exchange between both parties. Both of them are the final products in their respective fields.",
+    "Reaction speed corresponds to goods circulation rate: In a chemical reaction, reaction speed refers to the rate at which reactants are converted into products. In trading, goods circulation rate refers to the speed of goods circulation in the market. Both of them describe the speed and efficiency of changes in their respective fields.",
+    "Reaction ratio corresponds to exchange rate: In a chemical reaction, reaction ratio refers to the molar ratio of reactants and products in a chemical reaction. In trading, exchange rate refers to the exchange rate between different goods. Both of them are ratio factors used to describe the quantity relationship in their respective fields."
+  ],
+  "background": {
+    "source": "Chemistry is the scientific study of matter and the changes it can undergo. It is a physical science that focuses on the properties, behavior, and composition of various elements, compounds, molecules, and ions. In particular, chemistry is concerned with how these substances react with one another and the changes that take place during a reaction, such as the creation of reactants and products. Chemistry is also interested in the speed at which these reactions occur, called the reaction speed, and the ratio of the response to the stimulus, termed the response ratio. Chemistry occupies a central position in the field of natural sciences, providing a foundation for understanding various scientific disciplines, including botany, geology, ecology, cosmochemistry, pharmacology, and forensics.",
+    "target": "\"Sell/Buy/Date\" is a highly anticipated American documentary-comedy-drama film that explores the world of buying and selling goods. Directed by Sarah Jones and produced by Meryl Streep, the film is set to hit theatres on October 14, 2022. The film follows the journey of individuals as they navigate the world of buying and selling items, exploring the goods circulation rate and exchange rate. With a story based on Jones' off-Broadway play, \"Sell/Buy/Date\" promises to provide a unique perspective on the complex nature of circulating goods and will leave audiences enthralled with its insightful commentary."
+  },
+  "raw": {
+    "id": 112,
+    "lang": "en",
+    "system_a": "Chemistry",
+    "system_b": "Buy and Sell",
+    "mappings": [
+      [
+        "Reactant",
+        "sell goods"
+      ],
+      [
+        "product",
+        "purchase goods"
+      ],
+      [
+        "reaction speed",
+        "Goods circulation rate"
+      ],
+      [
+        "Response ratio",
+        "exchange rate"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Economy",
+    "system_a_background": "Chemistry is the scientific study of matter and the changes it can undergo. It is a physical science that focuses on the properties, behavior, and composition of various elements, compounds, molecules, and ions. In particular, chemistry is concerned with how these substances react with one another and the changes that take place during a reaction, such as the creation of reactants and products. Chemistry is also interested in the speed at which these reactions occur, called the reaction speed, and the ratio of the response to the stimulus, termed the response ratio. Chemistry occupies a central position in the field of natural sciences, providing a foundation for understanding various scientific disciplines, including botany, geology, ecology, cosmochemistry, pharmacology, and forensics.",
+    "system_b_background": "\"Sell/Buy/Date\" is a highly anticipated American documentary-comedy-drama film that explores the world of buying and selling goods. Directed by Sarah Jones and produced by Meryl Streep, the film is set to hit theatres on October 14, 2022. The film follows the journey of individuals as they navigate the world of buying and selling items, exploring the goods circulation rate and exchange rate. With a story based on Jones' off-Broadway play, \"Sell/Buy/Date\" promises to provide a unique perspective on the complex nature of circulating goods and will leave audiences enthralled with its insightful commentary.",
+    "Explanation": [
+      "Reactant corresponds to selling goods: In a chemical reaction, a reactant is a substance that participates in the reaction. In trading, selling goods are the commodities exchanged between both parties. Both of them are objects that need to be processed and transformed in their respective fields.",
+      "Product corresponds to purchasing goods: In a chemical reaction, a product is a new substance formed after the chemical reaction. In trading, purchasing goods are the commodities obtained through exchange between both parties. Both of them are the final products in their respective fields.",
+      "Reaction speed corresponds to goods circulation rate: In a chemical reaction, reaction speed refers to the rate at which reactants are converted into products. In trading, goods circulation rate refers to the speed of goods circulation in the market. Both of them describe the speed and efficiency of changes in their respective fields.",
+      "Reaction ratio corresponds to exchange rate: In a chemical reaction, reaction ratio refers to the molar ratio of reactants and products in a chemical reaction. In trading, exchange rate refers to the exchange rate between different goods. Both of them are ratio factors used to describe the quantity relationship in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Chemistry",
+    "target": "Buy and Sell"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Economy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

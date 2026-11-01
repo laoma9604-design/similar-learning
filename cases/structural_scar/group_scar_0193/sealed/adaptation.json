@@ -1,0 +1,75 @@
+{
+  "adaptation_id": "adapt_scar_0193",
+  "dataset": "scar",
+  "original_id": "193",
+  "source_object_id": "obj_group_scar_0193_src",
+  "target_object_id": "obj_group_scar_0193_tgt",
+  "faithful_mappings": [
+    [
+      "the emperor",
+      "queen of england"
+    ],
+    [
+      "cabinet",
+      "cabinet"
+    ]
+  ],
+  "explanation": [
+    "The Emperor corresponds to the Queen of England: In the Japanese government system, the Emperor is the symbol and ruler of the country, although his actual power is limited. Similarly, in the British government system, the Queen of England is also the symbol and ruler of the country with limited actual power. Both represent the highest authority and symbolic status of their countries.",
+    "The cabinet corresponds to the cabinet: In the government systems of Japan and England, the cabinet is the actual governing body that is responsible for formulating and implementing policies. The mapping here represents the actual governing departments in the government systems of the two countries."
+  ],
+  "background": {
+    "source": "The Japanese Government System is based on the Constitution adopted in 1947, which established a unitary state with three branches of government: legislative, executive, and judiciary. The Emperor is the Head of State but has only ceremonial duties and no powers related to the government. The Cabinet, headed by the Prime Minister, is responsible for directing and controlling the Government's operations and the civil service. The Prime Minister is nominated and appointed to office by the Emperor and has the executive power to lead the Government. The legislative branch consists of two houses - the House of Councilors being the upper house, and the House of Representatives being the lower house. They are directly elected by the people and serve as the supreme organ of sovereignty in the Constitution. The judiciary branch is independent of the other two branches and has the power of judicial review. The Supreme Court and other inferior courts have all judicial powers in the state, and judges are nominated or appointed by the Cabinet and cannot be removed by the executive or the legislature except during impeachment.",
+    "target": "The British Government System is the central executive authority of the United Kingdom, led by the prime minister and composed of a team of ministers and advisers. The system operates under the uncodified British constitution, with the executive authority ultimately lying with the sovereign. The most important decision-making committee is known as the Cabinet, which is made up of the prime minister and the most senior ministers. Members of the Cabinet make statements and answer questions in the elected House of Commons. The government is also dependent on Parliament to create primary legislation, and general elections are held every five years. Additionally, the sovereign receives advice from the Cabinet and other key figures through the Privy Council. The government is often referred to by the metonym \"Westminster\" or \"Whitehall,\" as many of its offices are located there."
+  },
+  "raw": {
+    "id": 193,
+    "lang": "en",
+    "system_a": "Japanese Government System",
+    "system_b": "British Government System",
+    "mappings": [
+      [
+        "the emperor",
+        "queen of england"
+      ],
+      [
+        "cabinet",
+        "cabinet"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "The Japanese Government System is based on the Constitution adopted in 1947, which established a unitary state with three branches of government: legislative, executive, and judiciary. The Emperor is the Head of State but has only ceremonial duties and no powers related to the government. The Cabinet, headed by the Prime Minister, is responsible for directing and controlling the Government's operations and the civil service. The Prime Minister is nominated and appointed to office by the Emperor and has the executive power to lead the Government. The legislative branch consists of two houses - the House of Councilors being the upper house, and the House of Representatives being the lower house. They are directly elected by the people and serve as the supreme organ of sovereignty in the Constitution. The judiciary branch is independent of the other two branches and has the power of judicial review. The Supreme Court and other inferior courts have all judicial powers in the state, and judges are nominated or appointed by the Cabinet and cannot be removed by the executive or the legislature except during impeachment.",
+    "system_b_background": "The British Government System is the central executive authority of the United Kingdom, led by the prime minister and composed of a team of ministers and advisers. The system operates under the uncodified British constitution, with the executive authority ultimately lying with the sovereign. The most important decision-making committee is known as the Cabinet, which is made up of the prime minister and the most senior ministers. Members of the Cabinet make statements and answer questions in the elected House of Commons. The government is also dependent on Parliament to create primary legislation, and general elections are held every five years. Additionally, the sovereign receives advice from the Cabinet and other key figures through the Privy Council. The government is often referred to by the metonym \"Westminster\" or \"Whitehall,\" as many of its offices are located there.",
+    "Explanation": [
+      "The Emperor corresponds to the Queen of England: In the Japanese government system, the Emperor is the symbol and ruler of the country, although his actual power is limited. Similarly, in the British government system, the Queen of England is also the symbol and ruler of the country with limited actual power. Both represent the highest authority and symbolic status of their countries.",
+      "The cabinet corresponds to the cabinet: In the government systems of Japan and England, the cabinet is the actual governing body that is responsible for formulating and implementing policies. The mapping here represents the actual governing departments in the government systems of the two countries."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Japanese Government System",
+    "target": "British Government System"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

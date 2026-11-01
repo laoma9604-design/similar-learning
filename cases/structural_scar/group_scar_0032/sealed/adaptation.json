@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0032",
+  "dataset": "scar",
+  "original_id": "32",
+  "source_object_id": "obj_group_scar_0032_src",
+  "target_object_id": "obj_group_scar_0032_tgt",
+  "faithful_mappings": [
+    [
+      "signal molecule",
+      "electric signal"
+    ],
+    [
+      "receptor",
+      "electric wire"
+    ],
+    [
+      "Signal transduction pathway",
+      "circuit"
+    ],
+    [
+      "transcription factor",
+      "electrical equipment"
+    ]
+  ],
+  "explanation": [
+    "Signal molecule corresponds to electric signal: The signal molecule in cell signaling is a chemical substance that carries information, such as hormones, neurotransmitters, etc. The electric signal in electronic signal transmission is an electron flow that carries information. Here, both signal molecule and electric signal are media for transmitting information.",
+    "Receptor corresponds to electric wire: The receptor in cell signaling is a protein that receives signal molecules and activates the signal transduction pathway. The electric wire in electronic signal transmission carries electric signals and transmits them to target devices. Here, both receptor and electric wire are structures that receive and transmit information.",
+    "Signal transduction pathway corresponds to circuit: The signal transduction pathway in cell signaling is a network composed of a series of biomolecules that transmits signals from receptors to the interior of the cell. The circuit in electronic signal transmission is a network composed of electronic components used to process and transmit electric signals. Here, both signal transduction pathway and circuit are pathways for transmitting and processing information.",
+    "Transcription factor corresponds to electrical equipment: The transcription factor in cell signaling is a type of protein that regulates gene expression. The electrical equipment in electronic signal transmission is a device that receives and processes electric signals, such as computers, phones, etc. Here, both transcription factor and electrical equipment are structures that realize specific functions in their respective systems."
+  ],
+  "background": {
+    "source": "Cell signaling is an essential biological process that allows cells to communicate with each other and their environment. It involves the ability of a cell to receive, process, and transmit signals through chemical and physical stimuli such as signal molecules or extracellular signals. Receptors are key players in cell signaling as they detect these signals and initiate enzymic or ion channel activity, which can lead to the transformation of the signal into a chemical one. This process is known as signal transduction and may involve the activation of a second messenger system. Ultimately, the downstream effects of these signaling pathways may include various enzymatic activities such as proteolytic cleavage, phosphorylation, methylation, and ubiquitinylation. The interplay of these signaling interactions is critical in development, tissue repair, immunity, and homeostasis. However, errors in these interactions can lead to diseases such as cancer, autoimmunity, and diabetes. Transcription factors are another essential component of cell signaling pathways and are responsible for regulating gene expression. The complexity and specificity of cellular signals and their interactions ensure that each cell responds to specific extracellular signals molecules. Understanding cell signaling is fundamental to comprehend the fundamental properties of all cellular life in prokaryotes and eukaryotes.",
+    "target": "Electronic Signal Transmission is a method of intelligence-gathering by intercepting signals through various electronic equipment such as electric wires, circuits, and other electrical equipment. This kind of intelligence collection involves capturing both communications between people (COMINT) and electronic signals not directly used in communication (ELINT). Electronic signals often carry classified and sensitive information, which is usually encrypted to protect the information from unauthorized access. Therefore, electronic signal transmission involves the use of cryptanalysis to decipher and understand the encoded messages. Traffic analysis is another technique used to integrate and understand the intercepted information. Thus, electronic signal transmission is a crucial method that serves as a subset of intelligence collection management."
+  },
+  "raw": {
+    "id": 32,
+    "lang": "en",
+    "system_a": "Cell Signaling",
+    "system_b": "Electronic Signal Transmission",
+    "mappings": [
+      [
+        "signal molecule",
+        "electric signal"
+      ],
+      [
+        "receptor",
+        "electric wire"
+      ],
+      [
+        "Signal transduction pathway",
+        "circuit"
+      ],
+      [
+        "transcription factor",
+        "electrical equipment"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Physics",
+    "system_a_background": "Cell signaling is an essential biological process that allows cells to communicate with each other and their environment. It involves the ability of a cell to receive, process, and transmit signals through chemical and physical stimuli such as signal molecules or extracellular signals. Receptors are key players in cell signaling as they detect these signals and initiate enzymic or ion channel activity, which can lead to the transformation of the signal into a chemical one. This process is known as signal transduction and may involve the activation of a second messenger system. Ultimately, the downstream effects of these signaling pathways may include various enzymatic activities such as proteolytic cleavage, phosphorylation, methylation, and ubiquitinylation. The interplay of these signaling interactions is critical in development, tissue repair, immunity, and homeostasis. However, errors in these interactions can lead to diseases such as cancer, autoimmunity, and diabetes. Transcription factors are another essential component of cell signaling pathways and are responsible for regulating gene expression. The complexity and specificity of cellular signals and their interactions ensure that each cell responds to specific extracellular signals molecules. Understanding cell signaling is fundamental to comprehend the fundamental properties of all cellular life in prokaryotes and eukaryotes.",
+    "system_b_background": "Electronic Signal Transmission is a method of intelligence-gathering by intercepting signals through various electronic equipment such as electric wires, circuits, and other electrical equipment. This kind of intelligence collection involves capturing both communications between people (COMINT) and electronic signals not directly used in communication (ELINT). Electronic signals often carry classified and sensitive information, which is usually encrypted to protect the information from unauthorized access. Therefore, electronic signal transmission involves the use of cryptanalysis to decipher and understand the encoded messages. Traffic analysis is another technique used to integrate and understand the intercepted information. Thus, electronic signal transmission is a crucial method that serves as a subset of intelligence collection management.",
+    "Explanation": [
+      "Signal molecule corresponds to electric signal: The signal molecule in cell signaling is a chemical substance that carries information, such as hormones, neurotransmitters, etc. The electric signal in electronic signal transmission is an electron flow that carries information. Here, both signal molecule and electric signal are media for transmitting information.",
+      "Receptor corresponds to electric wire: The receptor in cell signaling is a protein that receives signal molecules and activates the signal transduction pathway. The electric wire in electronic signal transmission carries electric signals and transmits them to target devices. Here, both receptor and electric wire are structures that receive and transmit information.",
+      "Signal transduction pathway corresponds to circuit: The signal transduction pathway in cell signaling is a network composed of a series of biomolecules that transmits signals from receptors to the interior of the cell. The circuit in electronic signal transmission is a network composed of electronic components used to process and transmit electric signals. Here, both signal transduction pathway and circuit are pathways for transmitting and processing information.",
+      "Transcription factor corresponds to electrical equipment: The transcription factor in cell signaling is a type of protein that regulates gene expression. The electrical equipment in electronic signal transmission is a device that receives and processes electric signals, such as computers, phones, etc. Here, both transcription factor and electrical equipment are structures that realize specific functions in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Cell Signaling",
+    "target": "Electronic Signal Transmission"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

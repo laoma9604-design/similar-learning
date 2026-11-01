@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0167",
+  "dataset": "scar",
+  "original_id": "167",
+  "source_object_id": "obj_group_scar_0167_src",
+  "target_object_id": "obj_group_scar_0167_tgt",
+  "faithful_mappings": [
+    [
+      "interest rate",
+      "dose"
+    ],
+    [
+      "money supply",
+      "drug"
+    ],
+    [
+      "inflation",
+      "disease"
+    ]
+  ],
+  "explanation": [
+    "Interest rate corresponds to dosage: In monetary policy, interest rate refers to the cost of borrowing funds, used to regulate economic activities. In drug therapy, dosage refers to the amount of a drug used to regulate its efficacy. Both represent quantitative indicators of regulatory measures.",
+    "Money supply corresponds to drug: In monetary policy, money supply refers to the total amount of money circulating in the economic system. In drug therapy, drug refers to the substance used to treat a disease. Both represent the subject of regulatory measures.",
+    "Inflation corresponds to disease: In monetary policy, inflation refers to the phenomenon of rising prices caused by an excessive money supply. In drug therapy, disease refers to the illness that requires treatment with medication. Both represent the problem targeted by regulatory measures."
+  ],
+  "background": {
+    "source": "Monetary policy is a tool used by the government to manage the economy by controlling either the interest rate payable for very short-term borrowing or the money supply. The policy is designed to ensure price stability and general trust in the value and stability of the nation's currency. Through monetary policy, a government can decrease the money supply or \"print\" more money to control inflation and interest rates. By modifying the supply of money, a government can also contribute to the stability of gross domestic product, maintain low unemployment, and predictable exchange rates with other currencies. In developed countries, monetary policy is generally formed separately from fiscal policy. Expansionary policy and contractionary policy are the two types of monetary policy. The former is used to stimulate the economy by maintaining short-term interest rates at a lower than usual rate or increasing the total supply of money in the economy more rapidly than usual. The latter is used to slow short-term economic growth and lessen inflation by maintaining short-term interest rates greater than usual, slowing the rate of growth of the money supply, or even decreasing it. The implementation of either policy should be done with caution to avoid negative effects such as increased unemployment and depressed borrowing and spending by consumers and businesses, which can eventually result in an economic recession.",
+    "target": "Drug treatment is a broad term that can refer to different medical procedures that use pharmaceutical drugs to treat various diseases. In this context, drug treatment usually involves administering medication under the supervision of a qualified healthcare professional. The medication can be in the form of pills, injections, or infusions that work to alleviate the symptoms of the disease. The treatment may be for a short period repeatedly, or it may require a longer duration, depending on the type of disease and how it reacts to the medication.\n\nAlternatively, drug treatment can also refer to drug rehabilitation or addiction treatment. This type of drug treatment aims to help individuals overcome their dependence on drugs, which can be physical or psychological. Drug rehab centers typically offer a range of services to help individuals detox from the drugs they are addicted to, and also provide support and counseling to help them stay off drugs for the long term.\n\nIn both cases, the dose of the drug is crucial to the success of the treatment. In medical treatment, the appropriate dosage should be prescribed by qualified medical professionals and adjusted as needed based on the individual's response. In drug addiction treatment, the dose is carefully monitored and reduced progressively to help the individual manage withdrawal symptoms and eventually achieve sobriety.\n\nOverall, drug treatment plays a critical role in managing disease and addiction, and it requires careful attention to the specific needs of the individual in question."
+  },
+  "raw": {
+    "id": 167,
+    "lang": "en",
+    "system_a": "Monetary Policy",
+    "system_b": "Drug Treatment",
+    "mappings": [
+      [
+        "interest rate",
+        "dose"
+      ],
+      [
+        "money supply",
+        "drug"
+      ],
+      [
+        "inflation",
+        "disease"
+      ]
+    ],
+    "system_a_domain": "Economy",
+    "system_b_domain": "Biology",
+    "system_a_background": "Monetary policy is a tool used by the government to manage the economy by controlling either the interest rate payable for very short-term borrowing or the money supply. The policy is designed to ensure price stability and general trust in the value and stability of the nation's currency. Through monetary policy, a government can decrease the money supply or \"print\" more money to control inflation and interest rates. By modifying the supply of money, a government can also contribute to the stability of gross domestic product, maintain low unemployment, and predictable exchange rates with other currencies. In developed countries, monetary policy is generally formed separately from fiscal policy. Expansionary policy and contractionary policy are the two types of monetary policy. The former is used to stimulate the economy by maintaining short-term interest rates at a lower than usual rate or increasing the total supply of money in the economy more rapidly than usual. The latter is used to slow short-term economic growth and lessen inflation by maintaining short-term interest rates greater than usual, slowing the rate of growth of the money supply, or even decreasing it. The implementation of either policy should be done with caution to avoid negative effects such as increased unemployment and depressed borrowing and spending by consumers and businesses, which can eventually result in an economic recession.",
+    "system_b_background": "Drug treatment is a broad term that can refer to different medical procedures that use pharmaceutical drugs to treat various diseases. In this context, drug treatment usually involves administering medication under the supervision of a qualified healthcare professional. The medication can be in the form of pills, injections, or infusions that work to alleviate the symptoms of the disease. The treatment may be for a short period repeatedly, or it may require a longer duration, depending on the type of disease and how it reacts to the medication.\n\nAlternatively, drug treatment can also refer to drug rehabilitation or addiction treatment. This type of drug treatment aims to help individuals overcome their dependence on drugs, which can be physical or psychological. Drug rehab centers typically offer a range of services to help individuals detox from the drugs they are addicted to, and also provide support and counseling to help them stay off drugs for the long term.\n\nIn both cases, the dose of the drug is crucial to the success of the treatment. In medical treatment, the appropriate dosage should be prescribed by qualified medical professionals and adjusted as needed based on the individual's response. In drug addiction treatment, the dose is carefully monitored and reduced progressively to help the individual manage withdrawal symptoms and eventually achieve sobriety.\n\nOverall, drug treatment plays a critical role in managing disease and addiction, and it requires careful attention to the specific needs of the individual in question.",
+    "Explanation": [
+      "Interest rate corresponds to dosage: In monetary policy, interest rate refers to the cost of borrowing funds, used to regulate economic activities. In drug therapy, dosage refers to the amount of a drug used to regulate its efficacy. Both represent quantitative indicators of regulatory measures.",
+      "Money supply corresponds to drug: In monetary policy, money supply refers to the total amount of money circulating in the economic system. In drug therapy, drug refers to the substance used to treat a disease. Both represent the subject of regulatory measures.",
+      "Inflation corresponds to disease: In monetary policy, inflation refers to the phenomenon of rising prices caused by an excessive money supply. In drug therapy, disease refers to the illness that requires treatment with medication. Both represent the problem targeted by regulatory measures."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Monetary Policy",
+    "target": "Drug Treatment"
+  },
+  "domains": {
+    "source": "Economy",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

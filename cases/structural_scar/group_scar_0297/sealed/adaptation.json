@@ -1,0 +1,152 @@
+{
+  "adaptation_id": "adapt_scar_0297",
+  "dataset": "scar",
+  "original_id": "297",
+  "source_object_id": "obj_group_scar_0297_src",
+  "target_object_id": "obj_group_scar_0297_tgt",
+  "faithful_mappings": [
+    [
+      "war",
+      "argument"
+    ],
+    [
+      "battleground",
+      "topic"
+    ],
+    [
+      "combatant",
+      "debater"
+    ],
+    [
+      "position",
+      "claim"
+    ],
+    [
+      "attack",
+      "criticize"
+    ],
+    [
+      "maneuver",
+      "rhetoric"
+    ],
+    [
+      "retreat",
+      "retraction"
+    ],
+    [
+      "surrender",
+      "loss"
+    ],
+    [
+      "victory",
+      "win"
+    ]
+  ],
+  "explanation": [
+    "War corresponds to argument: war is a conflict between nations, while argument is a conflict between individuals. Both are manifestations of conflict.",
+    "Battleground corresponds to topic: battleground is the location where the war takes place, and the topic is the focal point of the argument. Both are the core of conflict.",
+    "Combatant corresponds to debater: combatant refers to those who participate in the war, and debater refers to those who participate in the argument. Both are participants in the conflict.",
+    "Position corresponds to claim: position refers to the standing position of a combatant on the battlefield, and claim refers to the stance taken by debater in an argument. Both are expressions in a conflict.",
+    "Attack corresponds to criticism: attack is the offensive against the enemy by the combatant, and criticism is a debater's challenge to the opponent's point of view. Both are means of confrontation in conflict.",
+    "Maneuver corresponds to rhetoric: maneuver refers to the process of preparing a combatant for war, and rhetoric refers to the process of preparing a debater for an argument. Both are preparatory actions prior to conflict.",
+    "Retreat corresponds to retraction: retreat refers to the combatant's act of giving up an attack in war, and retraction refers to the debater's act of giving up a point of view during an argument. Both are compromises in conflict.",
+    "Surrender corresponds to loss: surrender refers to the combatant acknowledging defeat in war, and loss refers to the debater acknowledging a mistake during an argument. Both are acts of admitting defeat in conflict.",
+    "Victory corresponds to win: victory is the ultimate goal of war, and win is the ultimate goal of argument. Both are the ultimate pursuit of conflict."
+  ],
+  "background": {
+    "source": "War is a devastating event that can wreak havoc on entire nations, governments, and societies. It is a conflict that involves the use of armed forces and military tactics between two or more opposing sides, with the intention of gaining an advantage over the other. The battleground of a war is a place of extreme violence and destruction where combatants fight to gain a strategic position, attack their opponents, maneuver around enemy forces, retreat when necessary, and ultimately aim for victory. The outcome of war can have far-reaching consequences for the people involved, including surrender or mass casualties. While some argue that war is an inherent part of human nature, others suggest it is shaped by socio-cultural, economic, or ecological factors. Regardless of the cause, war remains one of the most destructive events in human history.",
+    "target": "An argument is a statement or group of statements aimed at evaluating the truth or acceptability of another statement. It can be studied from three perspectives - logical, dialectical, and rhetorical. Logic is concerned with the forms of reasoning in arguments and the development of standards and criteria to evaluate them. Deductive arguments can be valid, and the valid ones can be sound. Inductive arguments, by contrast, can have different degrees of logical strength. Dialectics view arguments as a social and verbal means of trying to resolve or contend with a conflict or difference of opinion between two or more parties. Rhetoric, on the other hand, links arguments to the context, particularly the time and place where the argument is situated, and evaluates them not just through the parties involved but also by the audience. Arguments are expressed not only in formal, symbolic language but also through natural language. Philosophers and rhetoricians have developed types of argument lists in which premises and conclusions are connected in informal and defeasible ways. In an argument, debaters put forth claims, criticize opposing claims, and try to win the debate. The outcome of an argument can be a retraction, a loss, or a win."
+  },
+  "raw": {
+    "id": 297,
+    "lang": "en",
+    "system_a": "war",
+    "system_b": "argument",
+    "mappings": [
+      [
+        "war",
+        "argument"
+      ],
+      [
+        "battleground",
+        "topic"
+      ],
+      [
+        "combatant",
+        "debater"
+      ],
+      [
+        "position",
+        "claim"
+      ],
+      [
+        "attack",
+        "criticize"
+      ],
+      [
+        "maneuver",
+        "rhetoric"
+      ],
+      [
+        "retreat",
+        "retraction"
+      ],
+      [
+        "surrender",
+        "loss"
+      ],
+      [
+        "victory",
+        "win"
+      ]
+    ],
+    "system_a_domain": "Philosophy",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "War is a devastating event that can wreak havoc on entire nations, governments, and societies. It is a conflict that involves the use of armed forces and military tactics between two or more opposing sides, with the intention of gaining an advantage over the other. The battleground of a war is a place of extreme violence and destruction where combatants fight to gain a strategic position, attack their opponents, maneuver around enemy forces, retreat when necessary, and ultimately aim for victory. The outcome of war can have far-reaching consequences for the people involved, including surrender or mass casualties. While some argue that war is an inherent part of human nature, others suggest it is shaped by socio-cultural, economic, or ecological factors. Regardless of the cause, war remains one of the most destructive events in human history.",
+    "system_b_background": "An argument is a statement or group of statements aimed at evaluating the truth or acceptability of another statement. It can be studied from three perspectives - logical, dialectical, and rhetorical. Logic is concerned with the forms of reasoning in arguments and the development of standards and criteria to evaluate them. Deductive arguments can be valid, and the valid ones can be sound. Inductive arguments, by contrast, can have different degrees of logical strength. Dialectics view arguments as a social and verbal means of trying to resolve or contend with a conflict or difference of opinion between two or more parties. Rhetoric, on the other hand, links arguments to the context, particularly the time and place where the argument is situated, and evaluates them not just through the parties involved but also by the audience. Arguments are expressed not only in formal, symbolic language but also through natural language. Philosophers and rhetoricians have developed types of argument lists in which premises and conclusions are connected in informal and defeasible ways. In an argument, debaters put forth claims, criticize opposing claims, and try to win the debate. The outcome of an argument can be a retraction, a loss, or a win.",
+    "Explanation": [
+      "War corresponds to argument: war is a conflict between nations, while argument is a conflict between individuals. Both are manifestations of conflict.",
+      "Battleground corresponds to topic: battleground is the location where the war takes place, and the topic is the focal point of the argument. Both are the core of conflict.",
+      "Combatant corresponds to debater: combatant refers to those who participate in the war, and debater refers to those who participate in the argument. Both are participants in the conflict.",
+      "Position corresponds to claim: position refers to the standing position of a combatant on the battlefield, and claim refers to the stance taken by debater in an argument. Both are expressions in a conflict.",
+      "Attack corresponds to criticism: attack is the offensive against the enemy by the combatant, and criticism is a debater's challenge to the opponent's point of view. Both are means of confrontation in conflict.",
+      "Maneuver corresponds to rhetoric: maneuver refers to the process of preparing a combatant for war, and rhetoric refers to the process of preparing a debater for an argument. Both are preparatory actions prior to conflict.",
+      "Retreat corresponds to retraction: retreat refers to the combatant's act of giving up an attack in war, and retraction refers to the debater's act of giving up a point of view during an argument. Both are compromises in conflict.",
+      "Surrender corresponds to loss: surrender refers to the combatant acknowledging defeat in war, and loss refers to the debater acknowledging a mistake during an argument. Both are acts of admitting defeat in conflict.",
+      "Victory corresponds to win: victory is the ultimate goal of war, and win is the ultimate goal of argument. Both are the ultimate pursuit of conflict."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6",
+        "n7": "n7",
+        "n8": "n8",
+        "n9": "n9"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "war",
+    "target": "argument"
+  },
+  "domains": {
+    "source": "Philosophy",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0181",
+  "dataset": "scar",
+  "original_id": "181",
+  "source_object_id": "obj_group_scar_0181_src",
+  "target_object_id": "obj_group_scar_0181_tgt",
+  "faithful_mappings": [
+    [
+      "plate",
+      "bone"
+    ],
+    [
+      "fault",
+      "joint"
+    ],
+    [
+      "move",
+      "sports"
+    ],
+    [
+      "fracture",
+      "fracture"
+    ]
+  ],
+  "explanation": [
+    "Plate corresponds to bone: In the concept of active faults, plates are large blocks of rocks that make up the Earth's crust, their movement causing the formation of faults. In the concept of the skeletal system, bones are hard tissues that make up the skeleton, providing support and protection. Here, both plates and bones are the basic structures that make up their respective systems.",
+    "Fault corresponds to joint: In the concept of active faults, faults are the boundaries between plates, where plates move relative to each other. In the concept of the skeletal system, joints are the parts that connect bones, allowing them to move relative to each other. Here, both faults and joints are the structures that provide connection and movement.",
+    "Move corresponds to sports: In the concept of active faults, movement refers to the relative movement of plates at the fault. In the concept of the skeletal system, sports refer to the relative movement of bones at the joint. Here, both move and sports represent the relative movement process between objects.",
+    "Fracture corresponds to fracture: In the concept of active faults, a fracture refers to the phenomenon of the Earth's crust cracking at the fault. In the concept of the skeletal system, a fracture refers to the phenomenon of bones breaking due to external forces. Here, both fracture and fracture represent the process of objects breaking due to being under force."
+  ],
+  "background": {
+    "source": "Active faults are geological hazards that have the potential to cause earthquakes in the future. These faults are classified as active if there has been a movement observed or evidence of seismic activity within the last 10,000 years. The effects of active faulting can be catastrophic, including strong ground motion, surface faulting, tectonic deformation, landslides, rockfalls, liquefaction, tsunamis, and seiches. Quaternary faults are considered to be active faults that have been observed at the surface and have evidence of movement during the Quaternary period. Studying active faults involves various geological disciplines such as seismology, geomorphology, plate tectonics, remote sensing, and risk analysis. These disciplines aim to better understand the behavior of plates, fractures, and movements of the earth crust to help identify and mitigate risks associated with active faults.",
+    "target": "The human skeletal system is a vital framework within our body, containing over 200 bones which support our weight and enable movement. The axial skeleton is made up of the vertebral column, rib cage, skull, and other associated bones, while the appendicular skeleton is attached to the axial skeleton and includes the shoulder and pelvic girdles, and bones of the upper and lower limbs. Alongside providing support and movement, the skeletal system also protects our vital organs, produces blood cells, regulates hormones, and stores essential minerals. Although subtle differences exist between sexes, the male and female skeletons are relatively similar, with the most significant variation being the female pelvis's shape to facilitate childbirth. In sports, bone fractures can occur due to trauma or repetitive stress, requiring careful management and rehabilitation to ensure full recovery."
+  },
+  "raw": {
+    "id": 181,
+    "lang": "en",
+    "system_a": "Active faults",
+    "system_b": "the skeletal system",
+    "mappings": [
+      [
+        "plate",
+        "bone"
+      ],
+      [
+        "fault",
+        "joint"
+      ],
+      [
+        "move",
+        "sports"
+      ],
+      [
+        "fracture",
+        "fracture"
+      ]
+    ],
+    "system_a_domain": "Geography",
+    "system_b_domain": "Biology",
+    "system_a_background": "Active faults are geological hazards that have the potential to cause earthquakes in the future. These faults are classified as active if there has been a movement observed or evidence of seismic activity within the last 10,000 years. The effects of active faulting can be catastrophic, including strong ground motion, surface faulting, tectonic deformation, landslides, rockfalls, liquefaction, tsunamis, and seiches. Quaternary faults are considered to be active faults that have been observed at the surface and have evidence of movement during the Quaternary period. Studying active faults involves various geological disciplines such as seismology, geomorphology, plate tectonics, remote sensing, and risk analysis. These disciplines aim to better understand the behavior of plates, fractures, and movements of the earth crust to help identify and mitigate risks associated with active faults.",
+    "system_b_background": "The human skeletal system is a vital framework within our body, containing over 200 bones which support our weight and enable movement. The axial skeleton is made up of the vertebral column, rib cage, skull, and other associated bones, while the appendicular skeleton is attached to the axial skeleton and includes the shoulder and pelvic girdles, and bones of the upper and lower limbs. Alongside providing support and movement, the skeletal system also protects our vital organs, produces blood cells, regulates hormones, and stores essential minerals. Although subtle differences exist between sexes, the male and female skeletons are relatively similar, with the most significant variation being the female pelvis's shape to facilitate childbirth. In sports, bone fractures can occur due to trauma or repetitive stress, requiring careful management and rehabilitation to ensure full recovery.",
+    "Explanation": [
+      "Plate corresponds to bone: In the concept of active faults, plates are large blocks of rocks that make up the Earth's crust, their movement causing the formation of faults. In the concept of the skeletal system, bones are hard tissues that make up the skeleton, providing support and protection. Here, both plates and bones are the basic structures that make up their respective systems.",
+      "Fault corresponds to joint: In the concept of active faults, faults are the boundaries between plates, where plates move relative to each other. In the concept of the skeletal system, joints are the parts that connect bones, allowing them to move relative to each other. Here, both faults and joints are the structures that provide connection and movement.",
+      "Move corresponds to sports: In the concept of active faults, movement refers to the relative movement of plates at the fault. In the concept of the skeletal system, sports refer to the relative movement of bones at the joint. Here, both move and sports represent the relative movement process between objects.",
+      "Fracture corresponds to fracture: In the concept of active faults, a fracture refers to the phenomenon of the Earth's crust cracking at the fault. In the concept of the skeletal system, a fracture refers to the phenomenon of bones breaking due to external forces. Here, both fracture and fracture represent the process of objects breaking due to being under force."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Active faults",
+    "target": "the skeletal system"
+  },
+  "domains": {
+    "source": "Geography",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

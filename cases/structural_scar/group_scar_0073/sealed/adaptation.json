@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0073",
+  "dataset": "scar",
+  "original_id": "73",
+  "source_object_id": "obj_group_scar_0073_src",
+  "target_object_id": "obj_group_scar_0073_tgt",
+  "faithful_mappings": [
+    [
+      "lung",
+      "balloon bag"
+    ],
+    [
+      "Alveoli",
+      "balloon"
+    ],
+    [
+      "gas",
+      "gas"
+    ]
+  ],
+  "explanation": [
+    "The lung corresponds to the balloon bag: In the alveoli, the lung is the organ containing the alveoli, responsible for the respiratory function. In the balloon, the balloon bag is the container containing the balloon for the storage of gas. Here, both the lung and the balloon bag represent the structure that contains gas.",
+    "The alveoli corresponds to the balloon: In the alveoli, the alveoli are the small sac-like structures inside the lungs responsible for gas exchange. In the balloon, the balloon is an elastic sac filled with gas used for storage and release of gas. Here, both the alveoli and the balloon represent the functional units for gas exchange and storage.",
+    "Gas corresponds to gas: In the alveoli, gas refers to the oxygen and carbon dioxide exchanged in the alveoli. In the balloon, gas refers to the air or other gases filled in the balloon. Here, gas represents the gas itself in both concepts, which is the common element between the two concepts."
+  ],
+  "background": {
+    "source": "The alveoli are tiny, air-filled sacs found within the lungs of most mammals, including humans. These structures are of great importance in the process of respiration, as they are where the exchange of gases takes place. As air is inhaled, it enters the lungs and travels through a network of bronchioles, eventually reaching the alveoli. Here, oxygen from the air diffuses across the thin walls of the alveoli and into the bloodstream, while carbon dioxide, a waste gas produced by the body, moves in the opposite direction and is exhaled. The presence of the alveoli is what allows us to breathe and obtain the oxygen we need to survive. Due to their small size and delicate structure, the alveoli are particularly vulnerable to damage from smoking, pollution, and other irritants, which can lead to respiratory problems and diseases such as emphysema. Maintaining healthy lungs and supporting proper respiratory function is crucial for overall health and well-being.",
+    "target": "Balloons are a fun and versatile item that can add excitement to any occasion. A balloon is essentially a bag that can be filled with various types of gas, such as helium or air, to create a lightweight and colorful decoration that can float effortlessly in the air. Modern balloons are typically made of rubber, latex, polychloroprene, or nylon, and can come in a variety of colors and shapes. They can be used for decorative purposes, such as at parties or events, or for practical applications such as meteorology or medical treatment. With their low density and affordability, balloons have become a widely used item that can bring joy and entertainment to people of all ages. The origins of the rubber balloon can be traced back to Michael Faraday's experiments with gases in 1824. Since then, balloons have come a long way and continue to be a popular item for a range of uses."
+  },
+  "raw": {
+    "id": 73,
+    "lang": "en",
+    "system_a": "Alveoli",
+    "system_b": "Balloons",
+    "mappings": [
+      [
+        "lung",
+        "balloon bag"
+      ],
+      [
+        "Alveoli",
+        "balloon"
+      ],
+      [
+        "gas",
+        "gas"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Engineering",
+    "system_a_background": "The alveoli are tiny, air-filled sacs found within the lungs of most mammals, including humans. These structures are of great importance in the process of respiration, as they are where the exchange of gases takes place. As air is inhaled, it enters the lungs and travels through a network of bronchioles, eventually reaching the alveoli. Here, oxygen from the air diffuses across the thin walls of the alveoli and into the bloodstream, while carbon dioxide, a waste gas produced by the body, moves in the opposite direction and is exhaled. The presence of the alveoli is what allows us to breathe and obtain the oxygen we need to survive. Due to their small size and delicate structure, the alveoli are particularly vulnerable to damage from smoking, pollution, and other irritants, which can lead to respiratory problems and diseases such as emphysema. Maintaining healthy lungs and supporting proper respiratory function is crucial for overall health and well-being.",
+    "system_b_background": "Balloons are a fun and versatile item that can add excitement to any occasion. A balloon is essentially a bag that can be filled with various types of gas, such as helium or air, to create a lightweight and colorful decoration that can float effortlessly in the air. Modern balloons are typically made of rubber, latex, polychloroprene, or nylon, and can come in a variety of colors and shapes. They can be used for decorative purposes, such as at parties or events, or for practical applications such as meteorology or medical treatment. With their low density and affordability, balloons have become a widely used item that can bring joy and entertainment to people of all ages. The origins of the rubber balloon can be traced back to Michael Faraday's experiments with gases in 1824. Since then, balloons have come a long way and continue to be a popular item for a range of uses.",
+    "Explanation": [
+      "The lung corresponds to the balloon bag: In the alveoli, the lung is the organ containing the alveoli, responsible for the respiratory function. In the balloon, the balloon bag is the container containing the balloon for the storage of gas. Here, both the lung and the balloon bag represent the structure that contains gas.",
+      "The alveoli corresponds to the balloon: In the alveoli, the alveoli are the small sac-like structures inside the lungs responsible for gas exchange. In the balloon, the balloon is an elastic sac filled with gas used for storage and release of gas. Here, both the alveoli and the balloon represent the functional units for gas exchange and storage.",
+      "Gas corresponds to gas: In the alveoli, gas refers to the oxygen and carbon dioxide exchanged in the alveoli. In the balloon, gas refers to the air or other gases filled in the balloon. Here, gas represents the gas itself in both concepts, which is the common element between the two concepts."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Alveoli",
+    "target": "Balloons"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

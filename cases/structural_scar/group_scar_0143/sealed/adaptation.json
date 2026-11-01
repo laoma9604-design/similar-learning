@@ -1,0 +1,119 @@
+{
+  "adaptation_id": "adapt_scar_0143",
+  "dataset": "scar",
+  "original_id": "143",
+  "source_object_id": "obj_group_scar_0143_src",
+  "target_object_id": "obj_group_scar_0143_tgt",
+  "faithful_mappings": [
+    [
+      "engineer",
+      "traveler"
+    ],
+    [
+      "Requirements",
+      "destination"
+    ],
+    [
+      "design",
+      "route planning"
+    ],
+    [
+      "maintenance",
+      "halfway break"
+    ],
+    [
+      "deployment",
+      "check in hotel"
+    ],
+    [
+      "coding",
+      "driving"
+    ]
+  ],
+  "explanation": [
+    "An engineer corresponds to a traveler: In software development, engineers are responsible for the development and maintenance of the software. In long-distance travel, travelers are the ones who undertake the journey. Both are key participants in their respective processes.",
+    "Software requirements correspond to the destination: In software development, requirements refer to the software's target functionality and performance. In long-distance travel, the destination is the place where the traveler intends to arrive. Both are the goals of their respective processes.",
+    "Software design corresponds to route planning: In software development, design involves the planning of the architecture and components of software. In long-distance travel, route planning involves planning the path from the starting point to the destination. Both involve the planning and organization of the entire process.",
+    "Software maintenance corresponds to a halfway break: In software development, maintenance involves updating and fixing software that has already been deployed. In long-distance travel, a halfway break is a temporary rest period for the traveler. Both are aimed at maintaining good condition and preparing for the next stage.",
+    "Software deployment corresponds to checking in at a hotel: In software development, deployment involves installing developed software onto users' devices. In long-distance travel, checking in at a hotel is a temporary place of stay and rest for the traveler at the destination. Both are the implementation and application stages of their respective processes.",
+    "Coding corresponds to driving: In software development, coding is the process of translating software design into computer-executable programs. In long-distance travel, driving is the physical process of traveling. Both are concrete actions taken to achieve the goal."
+  ],
+  "background": {
+    "source": "Software development can be defined as the systematic process of designing, coding, maintaining, and deploying software applications using a variety of programming languages and tools. To achieve this, software engineers work closely with clients and stakeholders to gather requirements, create design specifications, and develop robust software solutions that meet the needs of the end-users. From the initial planning stages to the final deployment, software development involves a range of tasks, including coding, testing, bug fixing, and maintenance, to ensure the software performs reliably and meets the highest standards of quality. Through careful research, prototyping, modification, and reuse, software engineers are able to create innovative new products that deliver real value to organizations and individuals alike. Whether working independently or as part of a team, software developers play a critical role in shaping the future of technology and driving innovation across a wide range of industries.",
+    "target": "The Long Journey is a series of six novels by Danish author and poet Johannes V. Jensen, which offers a unique blend of mythology and Darwinian evolutionary theory. The books transport readers through humanity's history, starting from pre-Ice Age to the voyage of Christopher Columbus. The series is a perfect choice for literary travelers who want to explore the depths of evolution theory in mythological prose. However, if you are looking for tips on route planning, halfway breaks, or checking in at hotels during your driving journey, this book is not for you."
+  },
+  "raw": {
+    "id": 143,
+    "lang": "en",
+    "system_a": "Software Development",
+    "system_b": "The Long Journey",
+    "mappings": [
+      [
+        "engineer",
+        "traveler"
+      ],
+      [
+        "Requirements",
+        "destination"
+      ],
+      [
+        "design",
+        "route planning"
+      ],
+      [
+        "maintenance",
+        "halfway break"
+      ],
+      [
+        "deployment",
+        "check in hotel"
+      ],
+      [
+        "coding",
+        "driving"
+      ]
+    ],
+    "system_a_domain": "Computer",
+    "system_b_domain": "Geography",
+    "system_a_background": "Software development can be defined as the systematic process of designing, coding, maintaining, and deploying software applications using a variety of programming languages and tools. To achieve this, software engineers work closely with clients and stakeholders to gather requirements, create design specifications, and develop robust software solutions that meet the needs of the end-users. From the initial planning stages to the final deployment, software development involves a range of tasks, including coding, testing, bug fixing, and maintenance, to ensure the software performs reliably and meets the highest standards of quality. Through careful research, prototyping, modification, and reuse, software engineers are able to create innovative new products that deliver real value to organizations and individuals alike. Whether working independently or as part of a team, software developers play a critical role in shaping the future of technology and driving innovation across a wide range of industries.",
+    "system_b_background": "The Long Journey is a series of six novels by Danish author and poet Johannes V. Jensen, which offers a unique blend of mythology and Darwinian evolutionary theory. The books transport readers through humanity's history, starting from pre-Ice Age to the voyage of Christopher Columbus. The series is a perfect choice for literary travelers who want to explore the depths of evolution theory in mythological prose. However, if you are looking for tips on route planning, halfway breaks, or checking in at hotels during your driving journey, this book is not for you.",
+    "Explanation": [
+      "An engineer corresponds to a traveler: In software development, engineers are responsible for the development and maintenance of the software. In long-distance travel, travelers are the ones who undertake the journey. Both are key participants in their respective processes.",
+      "Software requirements correspond to the destination: In software development, requirements refer to the software's target functionality and performance. In long-distance travel, the destination is the place where the traveler intends to arrive. Both are the goals of their respective processes.",
+      "Software design corresponds to route planning: In software development, design involves the planning of the architecture and components of software. In long-distance travel, route planning involves planning the path from the starting point to the destination. Both involve the planning and organization of the entire process.",
+      "Software maintenance corresponds to a halfway break: In software development, maintenance involves updating and fixing software that has already been deployed. In long-distance travel, a halfway break is a temporary rest period for the traveler. Both are aimed at maintaining good condition and preparing for the next stage.",
+      "Software deployment corresponds to checking in at a hotel: In software development, deployment involves installing developed software onto users' devices. In long-distance travel, checking in at a hotel is a temporary place of stay and rest for the traveler at the destination. Both are the implementation and application stages of their respective processes.",
+      "Coding corresponds to driving: In software development, coding is the process of translating software design into computer-executable programs. In long-distance travel, driving is the physical process of traveling. Both are concrete actions taken to achieve the goal."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Software Development",
+    "target": "The Long Journey"
+  },
+  "domains": {
+    "source": "Computer",
+    "target": "Geography"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

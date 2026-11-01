@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0051",
+  "dataset": "scar",
+  "original_id": "51",
+  "source_object_id": "obj_group_scar_0051_src",
+  "target_object_id": "obj_group_scar_0051_tgt",
+  "faithful_mappings": [
+    [
+      "Ribosome",
+      "factory"
+    ],
+    [
+      "golgi apparatus",
+      "post office"
+    ],
+    [
+      "mitochondria",
+      "power station"
+    ],
+    [
+      "nucleus",
+      "government center"
+    ],
+    [
+      "cell membrane",
+      "city wall"
+    ]
+  ],
+  "explanation": [
+    "Ribosome corresponds to factory: Ribosome is a part of the cell that is responsible for protein synthesis. In a city, factories are places responsible for producing goods. Both play a vital role in production.",
+    "Golgi apparatus corresponds to post office: Golgi apparatus is a part of the cell that is responsible for processing, packaging, and transporting proteins. In a city, post offices are places responsible for processing, sorting, and delivering mail. Both play a crucial role in processing and transportation.",
+    "Mitochondria corresponds to power station: Mitochondria is a part of the cell that is responsible for energy production. In a city, power stations are facilities responsible for generating electricity. Both play a vital role in energy production.",
+    "Nucleus corresponds to government center: The nucleus is a part of the cell that stores and controls genetic information. In a city, the government center is responsible for managing and controlling the city's operations. Both play a crucial role in control and management.",
+    "Cell membrane corresponds to city wall: The cell membrane is a part of the cell responsible for protecting the internal structure and function of the cell. In a city, the wall is responsible for protecting the city's internal security. Both play a vital role in protection."
+  ],
+  "background": {
+    "source": "Cellular structure refers to the organization of components that make up living cells. These components include the ribosome, golgi apparatus, mitochondria, nucleus, and cell membrane. The nucleus is the control center of the cell and contains the genetic material, while the mitochondria are responsible for energy production. The golgi apparatus is involved in processing and packaging proteins, and the ribosomes are responsible for protein synthesis. The cell membrane acts as a barrier and regulates the movement of substances in and out of the cell. Understanding the cellular structure is crucial to understanding how cells function and interact with their environment.",
+    "target": "A city is a human settlement of notable size with administratively defined boundaries that offers a multitude of services and facilities for its inhabitants. These include housing, transportation, sanitation, utilities, production of goods, communication and government representation. With more than half of the world’s population residing in cities, they have become significant players in global issues such as sustainable development and climate change. Sustainable cities, with a smaller ecological footprint per inhabitant, offer potential in fighting climate change but can have negative consequences such as concentrated pollution and urban heat islands. Capitals and religious sites also hold cultural significance within a nation or religion. These cities are often protected by city walls, which were historically built to prevent sieges and attacks. Overall, cities are important centres that influence the world around them and require planning and investment to ensure their sustainable development."
+  },
+  "raw": {
+    "id": 51,
+    "lang": "en",
+    "system_a": "Cellular Structure",
+    "system_b": "City",
+    "mappings": [
+      [
+        "Ribosome",
+        "factory"
+      ],
+      [
+        "golgi apparatus",
+        "post office"
+      ],
+      [
+        "mitochondria",
+        "power station"
+      ],
+      [
+        "nucleus",
+        "government center"
+      ],
+      [
+        "cell membrane",
+        "city wall"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Geography",
+    "system_a_background": "Cellular structure refers to the organization of components that make up living cells. These components include the ribosome, golgi apparatus, mitochondria, nucleus, and cell membrane. The nucleus is the control center of the cell and contains the genetic material, while the mitochondria are responsible for energy production. The golgi apparatus is involved in processing and packaging proteins, and the ribosomes are responsible for protein synthesis. The cell membrane acts as a barrier and regulates the movement of substances in and out of the cell. Understanding the cellular structure is crucial to understanding how cells function and interact with their environment.",
+    "system_b_background": "A city is a human settlement of notable size with administratively defined boundaries that offers a multitude of services and facilities for its inhabitants. These include housing, transportation, sanitation, utilities, production of goods, communication and government representation. With more than half of the world’s population residing in cities, they have become significant players in global issues such as sustainable development and climate change. Sustainable cities, with a smaller ecological footprint per inhabitant, offer potential in fighting climate change but can have negative consequences such as concentrated pollution and urban heat islands. Capitals and religious sites also hold cultural significance within a nation or religion. These cities are often protected by city walls, which were historically built to prevent sieges and attacks. Overall, cities are important centres that influence the world around them and require planning and investment to ensure their sustainable development.",
+    "Explanation": [
+      "Ribosome corresponds to factory: Ribosome is a part of the cell that is responsible for protein synthesis. In a city, factories are places responsible for producing goods. Both play a vital role in production.",
+      "Golgi apparatus corresponds to post office: Golgi apparatus is a part of the cell that is responsible for processing, packaging, and transporting proteins. In a city, post offices are places responsible for processing, sorting, and delivering mail. Both play a crucial role in processing and transportation.",
+      "Mitochondria corresponds to power station: Mitochondria is a part of the cell that is responsible for energy production. In a city, power stations are facilities responsible for generating electricity. Both play a vital role in energy production.",
+      "Nucleus corresponds to government center: The nucleus is a part of the cell that stores and controls genetic information. In a city, the government center is responsible for managing and controlling the city's operations. Both play a crucial role in control and management.",
+      "Cell membrane corresponds to city wall: The cell membrane is a part of the cell responsible for protecting the internal structure and function of the cell. In a city, the wall is responsible for protecting the city's internal security. Both play a vital role in protection."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Cellular Structure",
+    "target": "City"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Geography"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

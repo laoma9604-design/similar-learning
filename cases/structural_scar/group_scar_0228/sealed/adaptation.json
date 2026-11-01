@@ -1,0 +1,75 @@
+{
+  "adaptation_id": "adapt_scar_0228",
+  "dataset": "scar",
+  "original_id": "228",
+  "source_object_id": "obj_group_scar_0228_src",
+  "target_object_id": "obj_group_scar_0228_tgt",
+  "faithful_mappings": [
+    [
+      "Yellow River Yangtze River",
+      "aegean sea"
+    ],
+    [
+      "Oracle",
+      "Greek alphabet"
+    ]
+  ],
+  "explanation": [
+    "The Yellow River and the Yangtze River correspond to the Aegean Sea: The Yellow River and the Yangtze River are two important rivers in China that have had a profound impact on the country's history and culture. Similarly, the Aegean Sea is the birthplace of ancient Greek civilization and has important significance for Greek history and culture. Here, both represent the geographical features and historical backgrounds of their respective civilizations.",
+    "Oracle corresponds to the Greek alphabet: Oracle is an ancient Chinese writing system and one of the origins of Chinese characters. The Greek alphabet is the writing system of ancient Greek civilization. In this mapping, both Oracle and the Greek alphabet represent the writing systems and scripts of their respective civilizations."
+  ],
+  "background": {
+    "source": "China, officially the People's Republic of China (PRC), is a country located in East Asia. It is the world's most populous country and one of the largest nations in terms of land area, spanning the equivalent of five time zones. The country is home to over 1.4 billion people and has a rich cultural and historical heritage. Chinese civilization can be traced back to the Yellow River and the Xia dynasty in the 21st century BCE. The country has seen the rise and fall of many dynasties and empires, including the Qin, Han, Sui, Tang, Song, Yuan, Ming, and Qing. The collapse of the monarchy in 1912 led to the establishment of the Republic of China, which was later replaced by the People's Republic of China in 1949. The country is currently governed as a Marxist-Leninist one-party socialist republic by the Chinese Communist Party (CCP). China has made significant economic and social progress since the establishment of the PRC, but has also been criticized for human rights abuses and political repression. The country has an important role in the global economy and is a major manufacturer and exporter. China is also considered to be a potential superpower due to its growing military strength and influence in international affairs. The Yellow River, Yangtze River, and Oracle are all important aspects of China's cultural and historical heritage.",
+    "target": "Ancient Greece, also known as Hellás, was a civilization located in the northeastern Mediterranean region. It spanned from the 12th-9th centuries BC, referred to as the Greek Dark Ages, until classical antiquity ended around 600 AD. Greek city-states and other territories made up the region, but they were only officially unified once during Alexander the Great's empire from 336 to 323 BC. The Archaic Period began in the 8th century BC with the formation of Greek urban poleis and the colonization of the Mediterranean Basin. It was followed by the Classical Greece period, which spanned from the Greco-Persian Wars to the 5th to 4th centuries BC, including the Golden Age of Athens. The Hellenistic period ended with the Roman Republic's conquest of the eastern Mediterranean and the annexation of the Roman province of Macedonia in Roman Greece. Classical Greek culture had a profound influence on ancient Rome, spreading throughout the Mediterranean and much of Europe. The cradle of Western civilization owes much to Classical Greece, with its politics, philosophy, science, and art, including the Greek alphabet, which has made a significant impact on the world."
+  },
+  "raw": {
+    "id": 228,
+    "lang": "en",
+    "system_a": "China",
+    "system_b": "Ancient Greece",
+    "mappings": [
+      [
+        "Yellow River Yangtze River",
+        "aegean sea"
+      ],
+      [
+        "Oracle",
+        "Greek alphabet"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "China, officially the People's Republic of China (PRC), is a country located in East Asia. It is the world's most populous country and one of the largest nations in terms of land area, spanning the equivalent of five time zones. The country is home to over 1.4 billion people and has a rich cultural and historical heritage. Chinese civilization can be traced back to the Yellow River and the Xia dynasty in the 21st century BCE. The country has seen the rise and fall of many dynasties and empires, including the Qin, Han, Sui, Tang, Song, Yuan, Ming, and Qing. The collapse of the monarchy in 1912 led to the establishment of the Republic of China, which was later replaced by the People's Republic of China in 1949. The country is currently governed as a Marxist-Leninist one-party socialist republic by the Chinese Communist Party (CCP). China has made significant economic and social progress since the establishment of the PRC, but has also been criticized for human rights abuses and political repression. The country has an important role in the global economy and is a major manufacturer and exporter. China is also considered to be a potential superpower due to its growing military strength and influence in international affairs. The Yellow River, Yangtze River, and Oracle are all important aspects of China's cultural and historical heritage.",
+    "system_b_background": "Ancient Greece, also known as Hellás, was a civilization located in the northeastern Mediterranean region. It spanned from the 12th-9th centuries BC, referred to as the Greek Dark Ages, until classical antiquity ended around 600 AD. Greek city-states and other territories made up the region, but they were only officially unified once during Alexander the Great's empire from 336 to 323 BC. The Archaic Period began in the 8th century BC with the formation of Greek urban poleis and the colonization of the Mediterranean Basin. It was followed by the Classical Greece period, which spanned from the Greco-Persian Wars to the 5th to 4th centuries BC, including the Golden Age of Athens. The Hellenistic period ended with the Roman Republic's conquest of the eastern Mediterranean and the annexation of the Roman province of Macedonia in Roman Greece. Classical Greek culture had a profound influence on ancient Rome, spreading throughout the Mediterranean and much of Europe. The cradle of Western civilization owes much to Classical Greece, with its politics, philosophy, science, and art, including the Greek alphabet, which has made a significant impact on the world.",
+    "Explanation": [
+      "The Yellow River and the Yangtze River correspond to the Aegean Sea: The Yellow River and the Yangtze River are two important rivers in China that have had a profound impact on the country's history and culture. Similarly, the Aegean Sea is the birthplace of ancient Greek civilization and has important significance for Greek history and culture. Here, both represent the geographical features and historical backgrounds of their respective civilizations.",
+      "Oracle corresponds to the Greek alphabet: Oracle is an ancient Chinese writing system and one of the origins of Chinese characters. The Greek alphabet is the writing system of ancient Greek civilization. In this mapping, both Oracle and the Greek alphabet represent the writing systems and scripts of their respective civilizations."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "China",
+    "target": "Ancient Greece"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

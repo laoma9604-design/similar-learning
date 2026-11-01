@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0096",
+  "dataset": "scar",
+  "original_id": "96",
+  "source_object_id": "obj_group_scar_0096_src",
+  "target_object_id": "obj_group_scar_0096_tgt",
+  "faithful_mappings": [
+    [
+      "activation energy",
+      "obstacle"
+    ],
+    [
+      "Reactant",
+      "Prepare"
+    ],
+    [
+      "product",
+      "success"
+    ]
+  ],
+  "explanation": [
+    "Activation energy corresponds to obstacles: The activation energy in a chemical reaction is the energy threshold that needs to be overcome, while the obstacle in crossing obstacles is the difficulty that needs to be overcome. In both fields, these are thresholds or difficulties that need to be overcome.",
+    "Reactant corresponds to preparation: The reactant in a chemical reaction is the substance involved in the reaction, while the preparation in overcoming obstacles is the preparatory work for overcoming difficulties. In both fields, these are necessary conditions before achieving the goal.",
+    "Product corresponds to success: The product in a chemical reaction is the new substance obtained after the reaction is completed, while the success in crossing obstacles is the goal achieved after overcoming difficulties. In both fields, these are achievements after achieving the goal."
+  ],
+  "background": {
+    "source": "Chemistry is a fascinating field of study that helps us understand the building blocks that make up the world around us - from the elements that compose matter to the compounds made of atoms and molecules. It deals with the composition, structure, properties, and behavior of matter, as well as the changes that occur when substances react with one another. One of the key concepts in chemistry is activation energy which is the minimum amount of energy required for a chemical reaction to occur. Reactants are the substances that undergo a chemical change while products are the substances formed after a reaction. Understanding these concepts can provide insights into the behavior of matter in our physical environment and is useful in many fields, such as botany, geology, ecology, pharmacology, and forensics. Overall, chemistry plays a foundational role in both basic and applied scientific disciplines and has a wide range of fascinating applications that continue to be explored by scientists today.",
+    "target": "Leaping over barriers is a concept deeply embedded in Chinese mythology and culture. While fish are a common motif in Chinese myths, they are also seen as a symbol of abundance, wealth, and prosperity. This is because the Chinese word for \"fish\" is a homophone for \"abundance\" and \"plenty\". The act of fishing is also an important motif in Chinese culture, representing perseverance and determination in the face of obstacles. To prepare for success in life, one must be willing to leap over barriers and overcome any challenges that may come their way. This philosophy is deeply ingrained in Chinese mythology and has been passed down through generations as a way to inspire and motivate individuals to achieve their goals."
+  },
+  "raw": {
+    "id": 96,
+    "lang": "en",
+    "system_a": "Chemistry",
+    "system_b": "Leaping Over Barriers",
+    "mappings": [
+      [
+        "activation energy",
+        "obstacle"
+      ],
+      [
+        "Reactant",
+        "Prepare"
+      ],
+      [
+        "product",
+        "success"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Sport",
+    "system_a_background": "Chemistry is a fascinating field of study that helps us understand the building blocks that make up the world around us - from the elements that compose matter to the compounds made of atoms and molecules. It deals with the composition, structure, properties, and behavior of matter, as well as the changes that occur when substances react with one another. One of the key concepts in chemistry is activation energy which is the minimum amount of energy required for a chemical reaction to occur. Reactants are the substances that undergo a chemical change while products are the substances formed after a reaction. Understanding these concepts can provide insights into the behavior of matter in our physical environment and is useful in many fields, such as botany, geology, ecology, pharmacology, and forensics. Overall, chemistry plays a foundational role in both basic and applied scientific disciplines and has a wide range of fascinating applications that continue to be explored by scientists today.",
+    "system_b_background": "Leaping over barriers is a concept deeply embedded in Chinese mythology and culture. While fish are a common motif in Chinese myths, they are also seen as a symbol of abundance, wealth, and prosperity. This is because the Chinese word for \"fish\" is a homophone for \"abundance\" and \"plenty\". The act of fishing is also an important motif in Chinese culture, representing perseverance and determination in the face of obstacles. To prepare for success in life, one must be willing to leap over barriers and overcome any challenges that may come their way. This philosophy is deeply ingrained in Chinese mythology and has been passed down through generations as a way to inspire and motivate individuals to achieve their goals.",
+    "Explanation": [
+      "Activation energy corresponds to obstacles: The activation energy in a chemical reaction is the energy threshold that needs to be overcome, while the obstacle in crossing obstacles is the difficulty that needs to be overcome. In both fields, these are thresholds or difficulties that need to be overcome.",
+      "Reactant corresponds to preparation: The reactant in a chemical reaction is the substance involved in the reaction, while the preparation in overcoming obstacles is the preparatory work for overcoming difficulties. In both fields, these are necessary conditions before achieving the goal.",
+      "Product corresponds to success: The product in a chemical reaction is the new substance obtained after the reaction is completed, while the success in crossing obstacles is the goal achieved after overcoming difficulties. In both fields, these are achievements after achieving the goal."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Chemistry",
+    "target": "Leaping Over Barriers"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Sport"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0212",
+  "dataset": "scar",
+  "original_id": "212",
+  "source_object_id": "obj_group_scar_0212_src",
+  "target_object_id": "obj_group_scar_0212_tgt",
+  "faithful_mappings": [
+    [
+      "technology",
+      "Thought and Culture"
+    ],
+    [
+      "self-improvement",
+      "democratic science"
+    ],
+    [
+      "Li Hongzhang",
+      "Chen Duxiu"
+    ],
+    [
+      "Landlord Class Westernization School",
+      "democrats"
+    ],
+    [
+      "feudal ruler self-help movement",
+      "ideological liberation movement"
+    ]
+  ],
+  "explanation": [
+    "Technology corresponds to Thought and Culture: The Self-Strengthening Movement focused on introducing and developing technology to enhance the country's strength, while the New Culture Movement focused on reforming thought and culture to achieve the liberation and progress of national thought. Both are for the development of the country and nation, but with different focuses.",
+    "Self-improvement for Wealth corresponds to Democratic Science: The Self-Strengthening Movement advocated self-improvement for wealth and enhancing the country's strength through technological progress, while the New Culture Movement emphasized the importance of democracy and scientific thought in national development. Both are for the progress of the country, but with different methods and means.",
+    "Li Hongzhang corresponds to Chen Duxiu: Li Hongzhang is the representative figure of the Self-Strengthening Movement who promoted the implementation of the movement, while Chen Duxiu is the leader and important thinker of the New Culture Movement. Both are the leaders and representatives of their respective movements.",
+    "The Landlord Class Westernization School corresponds to Democrats: The supporters of the Self-Strengthening Movement were mainly the Landlord Class Westernization School who hoped to maintain their own interests through technological reform, while the supporters of the New Culture Movement were mainly Democrats who were committed to promoting democratic, free, and equal ideas and values. Both are the supporters and promoters of their respective movements, but with different class bases and interests.",
+    "The Feudal Ruler Self-help Movement corresponds to the Ideological Liberation Movement: The Self-Strengthening Movement is regarded as a self-help movement for feudal rulers to seek survival, while the New Culture Movement is an ideological liberation movement aimed at getting rid of feudal thought constraints and pursuing national rejuvenation and progress. Both are social changes in their respective eras, but with different driving forces and purposes."
+  ],
+  "background": {
+    "source": "The feminist movement is a social and political movement that began in the 1800s to promote radical and liberal reforms on women's issues. Over the years, the movement has evolved and expanded to include issues such as reproductive rights, domestic violence, equal pay, and sexual harassment. Feminism in the Western world has gone through four high moments, each wave seeking to address different feminist issues. The movement now examines the interlocking systems of power that contribute to the social stratification of traditionally marginalized groups. While the feminist movement has its own unique history and context, it is part of a broader movement towards self-improvement and social progress that has been ongoing since the turn of the century. The Westernization Movement, exemplified by the Landlord Class Westernization School and promoted by figures such as Li Hongzhang, sought to modernize Chinese society by adopting Western technology and ideas. The feminist movement can be seen as a kind of self-help movement that seeks to empower women and promote gender equality, much like the Westernization Movement sought to empower China and promote progress through embracing Western ideas and technologies.",
+    "target": "The New Culture Movement, a thought and culture movement that emerged in China in the early 20th century, challenged traditional Chinese values and practices. This movement led by intellectuals such as Chen Duxiu, Cai Yuanpei, and Hu Shih criticized the existing Confucian system and promoted progressive ideas like democratic science. It gave rise to a new era of democrats who sought to create a new society based on individual freedom and scientific progress. The movement that began as an ideological liberation movement transformed into a political one following the May Fourth Movement, which saw protests against the transfer of German rights over Jiaozhou Bay to Imperial Japan at the Paris Peace Conference. The New Culture Movement played an instrumental role in shaping modern China's political and intellectual landscape."
+  },
+  "raw": {
+    "id": 212,
+    "lang": "en",
+    "system_a": "Westernization Movement",
+    "system_b": "New Culture Movement",
+    "mappings": [
+      [
+        "technology",
+        "Thought and Culture"
+      ],
+      [
+        "self-improvement",
+        "democratic science"
+      ],
+      [
+        "Li Hongzhang",
+        "Chen Duxiu"
+      ],
+      [
+        "Landlord Class Westernization School",
+        "democrats"
+      ],
+      [
+        "feudal ruler self-help movement",
+        "ideological liberation movement"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "The feminist movement is a social and political movement that began in the 1800s to promote radical and liberal reforms on women's issues. Over the years, the movement has evolved and expanded to include issues such as reproductive rights, domestic violence, equal pay, and sexual harassment. Feminism in the Western world has gone through four high moments, each wave seeking to address different feminist issues. The movement now examines the interlocking systems of power that contribute to the social stratification of traditionally marginalized groups. While the feminist movement has its own unique history and context, it is part of a broader movement towards self-improvement and social progress that has been ongoing since the turn of the century. The Westernization Movement, exemplified by the Landlord Class Westernization School and promoted by figures such as Li Hongzhang, sought to modernize Chinese society by adopting Western technology and ideas. The feminist movement can be seen as a kind of self-help movement that seeks to empower women and promote gender equality, much like the Westernization Movement sought to empower China and promote progress through embracing Western ideas and technologies.",
+    "system_b_background": "The New Culture Movement, a thought and culture movement that emerged in China in the early 20th century, challenged traditional Chinese values and practices. This movement led by intellectuals such as Chen Duxiu, Cai Yuanpei, and Hu Shih criticized the existing Confucian system and promoted progressive ideas like democratic science. It gave rise to a new era of democrats who sought to create a new society based on individual freedom and scientific progress. The movement that began as an ideological liberation movement transformed into a political one following the May Fourth Movement, which saw protests against the transfer of German rights over Jiaozhou Bay to Imperial Japan at the Paris Peace Conference. The New Culture Movement played an instrumental role in shaping modern China's political and intellectual landscape.",
+    "Explanation": [
+      "Technology corresponds to Thought and Culture: The Self-Strengthening Movement focused on introducing and developing technology to enhance the country's strength, while the New Culture Movement focused on reforming thought and culture to achieve the liberation and progress of national thought. Both are for the development of the country and nation, but with different focuses.",
+      "Self-improvement for Wealth corresponds to Democratic Science: The Self-Strengthening Movement advocated self-improvement for wealth and enhancing the country's strength through technological progress, while the New Culture Movement emphasized the importance of democracy and scientific thought in national development. Both are for the progress of the country, but with different methods and means.",
+      "Li Hongzhang corresponds to Chen Duxiu: Li Hongzhang is the representative figure of the Self-Strengthening Movement who promoted the implementation of the movement, while Chen Duxiu is the leader and important thinker of the New Culture Movement. Both are the leaders and representatives of their respective movements.",
+      "The Landlord Class Westernization School corresponds to Democrats: The supporters of the Self-Strengthening Movement were mainly the Landlord Class Westernization School who hoped to maintain their own interests through technological reform, while the supporters of the New Culture Movement were mainly Democrats who were committed to promoting democratic, free, and equal ideas and values. Both are the supporters and promoters of their respective movements, but with different class bases and interests.",
+      "The Feudal Ruler Self-help Movement corresponds to the Ideological Liberation Movement: The Self-Strengthening Movement is regarded as a self-help movement for feudal rulers to seek survival, while the New Culture Movement is an ideological liberation movement aimed at getting rid of feudal thought constraints and pursuing national rejuvenation and progress. Both are social changes in their respective eras, but with different driving forces and purposes."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Westernization Movement",
+    "target": "New Culture Movement"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

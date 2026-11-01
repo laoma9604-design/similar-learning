@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0219",
+  "dataset": "scar",
+  "original_id": "219",
+  "source_object_id": "obj_group_scar_0219_src",
+  "target_object_id": "obj_group_scar_0219_tgt",
+  "faithful_mappings": [
+    [
+      "Mesopotamia",
+      "Indian River"
+    ],
+    [
+      "Judaism",
+      "Buddhism"
+    ],
+    [
+      "cuneiform",
+      "Indus script"
+    ]
+  ],
+  "explanation": [
+    "Mesopotamia corresponds to the Indian River: Mesopotamia is the place where ancient Sumerian civilization originated, and the Indian River is the place where Indian civilization originated. Both are important geographical regions and birthplaces of their respective civilizations.",
+    "Judaism corresponds to Buddhism: Judaism is a religious belief in the ancient western Asia region, while Buddhism is a religious belief in the Indian region. Both are the main religions of their respective regions and have had a profound impact on the local culture.",
+    "Cuneiform corresponds to Indus script: Cuneiform is the writing system of ancient Mesopotamian civilization used to record history, culture, and religion, among other things. Indus script, on the other hand, is an ancient writing system of Indian civilization. Both are writing tools of their respective civilizations used to record and disseminate knowledge."
+  ],
+  "background": {
+    "source": "\n\nUnfortunately, the description and keywords provided do not seem to be related to the item mentioned, which is \"Gusia.\" Could you please provide more information or clarify the description and keywords so that I can generate a proper introduction for the item? Thank you.",
+    "target": "India, officially known as the Republic of India, is a South Asian country that boasts of being the seventh-largest country by area and the second-most populous country in the world. Its borders are surrounded by the Indian Ocean, Arabian Sea, and Bay of Bengal, and it shares its land borders with Pakistan, China, Nepal, Bhutan, Bangladesh, and Myanmar. The region is known for its genetic diversity, second only to Africa, owing to the long occupation of the region by modern humans who arrived from Africa around 55,000 years ago. Settled life emerged around 9,000 years ago in the Indus river basin, which gradually evolved into the Indus Valley Civilisation, a culture that is believed to have been the most extensive of the four ancient civilizations, alongside Egypt, Mesopotamia, and China. Ancient India is known for the spread of Buddhism and Jainism, two religions that rejected the social order linked to heredity prevalent in Hinduism. Hinduism itself began its dawning in India around 1200 BCE, and its evidence can be found in hymns from the Rigveda, written in Sanskrit, an Indo-European language that spread into India from the northwest. The country has a rich and diverse history that saw the emergence and decline of various empires and civilisations such as the Maurya and Gupta Empires, Mughal Empire, and the Vijayanagara Empire, known for creating a composite Hindu culture in south India. Today, India is a federal republic governed through a democratic parliamentary system and is known for being a fast-growing major economy, a hub for information technology services, and a center for cultural exports such as movies, music, and spiritual teachings. However, the country also faces socio-economic challenges such as gender inequality, child malnutrition, rising levels of air pollution, and disputes over Kashmir with its neighbors, Pakistan and China. Despite these challenges, India remains a megadiverse land, with four biodiversity hotspots, and a country with a rich cultural heritage that continues to influence global culture."
+  },
+  "raw": {
+    "id": 219,
+    "lang": "en",
+    "system_a": "Gusia",
+    "system_b": "India",
+    "mappings": [
+      [
+        "Mesopotamia",
+        "Indian River"
+      ],
+      [
+        "Judaism",
+        "Buddhism"
+      ],
+      [
+        "cuneiform",
+        "Indus script"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "\n\nUnfortunately, the description and keywords provided do not seem to be related to the item mentioned, which is \"Gusia.\" Could you please provide more information or clarify the description and keywords so that I can generate a proper introduction for the item? Thank you.",
+    "system_b_background": "India, officially known as the Republic of India, is a South Asian country that boasts of being the seventh-largest country by area and the second-most populous country in the world. Its borders are surrounded by the Indian Ocean, Arabian Sea, and Bay of Bengal, and it shares its land borders with Pakistan, China, Nepal, Bhutan, Bangladesh, and Myanmar. The region is known for its genetic diversity, second only to Africa, owing to the long occupation of the region by modern humans who arrived from Africa around 55,000 years ago. Settled life emerged around 9,000 years ago in the Indus river basin, which gradually evolved into the Indus Valley Civilisation, a culture that is believed to have been the most extensive of the four ancient civilizations, alongside Egypt, Mesopotamia, and China. Ancient India is known for the spread of Buddhism and Jainism, two religions that rejected the social order linked to heredity prevalent in Hinduism. Hinduism itself began its dawning in India around 1200 BCE, and its evidence can be found in hymns from the Rigveda, written in Sanskrit, an Indo-European language that spread into India from the northwest. The country has a rich and diverse history that saw the emergence and decline of various empires and civilisations such as the Maurya and Gupta Empires, Mughal Empire, and the Vijayanagara Empire, known for creating a composite Hindu culture in south India. Today, India is a federal republic governed through a democratic parliamentary system and is known for being a fast-growing major economy, a hub for information technology services, and a center for cultural exports such as movies, music, and spiritual teachings. However, the country also faces socio-economic challenges such as gender inequality, child malnutrition, rising levels of air pollution, and disputes over Kashmir with its neighbors, Pakistan and China. Despite these challenges, India remains a megadiverse land, with four biodiversity hotspots, and a country with a rich cultural heritage that continues to influence global culture.",
+    "Explanation": [
+      "Mesopotamia corresponds to the Indian River: Mesopotamia is the place where ancient Sumerian civilization originated, and the Indian River is the place where Indian civilization originated. Both are important geographical regions and birthplaces of their respective civilizations.",
+      "Judaism corresponds to Buddhism: Judaism is a religious belief in the ancient western Asia region, while Buddhism is a religious belief in the Indian region. Both are the main religions of their respective regions and have had a profound impact on the local culture.",
+      "Cuneiform corresponds to Indus script: Cuneiform is the writing system of ancient Mesopotamian civilization used to record history, culture, and religion, among other things. Indus script, on the other hand, is an ancient writing system of Indian civilization. Both are writing tools of their respective civilizations used to record and disseminate knowledge."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Gusia",
+    "target": "India"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

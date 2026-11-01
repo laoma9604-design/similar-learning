@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0154",
+  "dataset": "scar",
+  "original_id": "154",
+  "source_object_id": "obj_group_scar_0154_src",
+  "target_object_id": "obj_group_scar_0154_tgt",
+  "faithful_mappings": [
+    [
+      "reinforcement learning",
+      "study"
+    ],
+    [
+      "iteration",
+      "examination"
+    ],
+    [
+      "accuracy",
+      "score"
+    ]
+  ],
+  "explanation": [
+    "Reinforcement learning corresponds to studying: in the AdaBoost algorithm, reinforcement learning is a method of improving prediction accuracy by combining multiple weak learners; in the process of a student's study, learning is the process of improving knowledge and abilities. Both are processes of improving certain abilities.",
+    "Iteration corresponds to examination: in the AdaBoost algorithm, iteration is the process of continuously improving model performance through loops; in a student's learning process, examination is a way to test learning outcomes. Both are processes of improvement through repeated practice.",
+    "Accuracy corresponds to score: in the AdaBoost algorithm, accuracy is the indicator that measures the correctness of model predictions; in a student's learning process, score is the indicator that measures the student's learning level. Both are methods of evaluating ability levels."
+  ],
+  "background": {
+    "source": "The AdaBoost algorithm, originally formulated by Yoav Freund and Robert Schapire in 1995, is a powerful statistical classification meta-algorithm that has won numerous accolades for its ability to improve the performance of other learning algorithms. By combining the outputs of weaker learning algorithms into a weighted sum, AdaBoost effectively creates a boosted classifier that is highly accurate, even when the individual learners are only marginally good at their respective tasks. What sets AdaBoost apart from other learning algorithms is its flexibility and adaptability; it can be used for binary classification, but can also be generalized for multiple classes or bounded intervals on the real line. Furthermore, subsequent weak learners are tweaked based on instances misclassified by previous classifiers, making it less susceptible to overfitting problems. The AdaBoost algorithm has been shown to be highly effective at combining both weak and strong base learners, making it an ideal 'out-of-the-box' classifier when used with decision tree learning. Finally, the iterative nature of AdaBoost helps it achieve optimal accuracy, while also making it a popular choice for reinforcement learning tasks.",
+    "target": "A student is an individual who is currently enrolled in any educational institution for the purpose of acquiring knowledge and skills in a particular field. They dedicate their time and effort to study and attend various classes to gain knowledge from teachers and professors. Students are expected to participate in various academic activities such as examinations, group projects, and research assignments.\n\nThroughout their academic journey, students are evaluated based on their performance in these activities and are given scores or grades as a measure of their progress. Examinations are a critical aspect of a student's academic life, and they are required to demonstrate their understanding of the course content in these tests. \n\nThese scores are used to measure a student's academic success and their ability to retain and apply the acquired knowledge. It provides valuable feedback to both the students and their lecturers on the areas of strength and weakness. A good score is an indication of academic excellence and can open up opportunities for further studies or employment.\n\nIn conclusion, students are the backbone of any educational institution, and their success in academic pursuits requires dedication, hard work, and determination. With a passion for learning and a desire to succeed, students can achieve their academic goals and build a successful career."
+  },
+  "raw": {
+    "id": 154,
+    "lang": "en",
+    "system_a": "AdaBoost Algorithm",
+    "system_b": "Student",
+    "mappings": [
+      [
+        "reinforcement learning",
+        "study"
+      ],
+      [
+        "iteration",
+        "examination"
+      ],
+      [
+        "accuracy",
+        "score"
+      ]
+    ],
+    "system_a_domain": "Computer",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "The AdaBoost algorithm, originally formulated by Yoav Freund and Robert Schapire in 1995, is a powerful statistical classification meta-algorithm that has won numerous accolades for its ability to improve the performance of other learning algorithms. By combining the outputs of weaker learning algorithms into a weighted sum, AdaBoost effectively creates a boosted classifier that is highly accurate, even when the individual learners are only marginally good at their respective tasks. What sets AdaBoost apart from other learning algorithms is its flexibility and adaptability; it can be used for binary classification, but can also be generalized for multiple classes or bounded intervals on the real line. Furthermore, subsequent weak learners are tweaked based on instances misclassified by previous classifiers, making it less susceptible to overfitting problems. The AdaBoost algorithm has been shown to be highly effective at combining both weak and strong base learners, making it an ideal 'out-of-the-box' classifier when used with decision tree learning. Finally, the iterative nature of AdaBoost helps it achieve optimal accuracy, while also making it a popular choice for reinforcement learning tasks.",
+    "system_b_background": "A student is an individual who is currently enrolled in any educational institution for the purpose of acquiring knowledge and skills in a particular field. They dedicate their time and effort to study and attend various classes to gain knowledge from teachers and professors. Students are expected to participate in various academic activities such as examinations, group projects, and research assignments.\n\nThroughout their academic journey, students are evaluated based on their performance in these activities and are given scores or grades as a measure of their progress. Examinations are a critical aspect of a student's academic life, and they are required to demonstrate their understanding of the course content in these tests. \n\nThese scores are used to measure a student's academic success and their ability to retain and apply the acquired knowledge. It provides valuable feedback to both the students and their lecturers on the areas of strength and weakness. A good score is an indication of academic excellence and can open up opportunities for further studies or employment.\n\nIn conclusion, students are the backbone of any educational institution, and their success in academic pursuits requires dedication, hard work, and determination. With a passion for learning and a desire to succeed, students can achieve their academic goals and build a successful career.",
+    "Explanation": [
+      "Reinforcement learning corresponds to studying: in the AdaBoost algorithm, reinforcement learning is a method of improving prediction accuracy by combining multiple weak learners; in the process of a student's study, learning is the process of improving knowledge and abilities. Both are processes of improving certain abilities.",
+      "Iteration corresponds to examination: in the AdaBoost algorithm, iteration is the process of continuously improving model performance through loops; in a student's learning process, examination is a way to test learning outcomes. Both are processes of improvement through repeated practice.",
+      "Accuracy corresponds to score: in the AdaBoost algorithm, accuracy is the indicator that measures the correctness of model predictions; in a student's learning process, score is the indicator that measures the student's learning level. Both are methods of evaluating ability levels."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "AdaBoost Algorithm",
+    "target": "Student"
+  },
+  "domains": {
+    "source": "Computer",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

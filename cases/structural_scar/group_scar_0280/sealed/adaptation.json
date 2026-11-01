@@ -1,0 +1,119 @@
+{
+  "adaptation_id": "adapt_scar_0280",
+  "dataset": "scar",
+  "original_id": "280",
+  "source_object_id": "obj_group_scar_0280_src",
+  "target_object_id": "obj_group_scar_0280_tgt",
+  "faithful_mappings": [
+    [
+      "organism",
+      "society"
+    ],
+    [
+      "cell",
+      "person"
+    ],
+    [
+      "cell",
+      "citizen"
+    ],
+    [
+      "organ",
+      "organisation"
+    ],
+    [
+      "tissue",
+      "people"
+    ],
+    [
+      "vein",
+      "communication"
+    ]
+  ],
+  "explanation": [
+    "Organism corresponds to society: Organism refers to all living organisms, while society refers to a group composed of humans. Here, both organism and society represent a whole composed of multiple individuals.",
+    "Cell corresponds to person: In the concept of biology, a cell is the basic unit that makes up an organism. In the concept of society, a person is the basic unit that makes up a society. Here, both cell and person represent a basic component of a whole.",
+    "Cell corresponds to citizen: In the concept of biology, a cell is the basic unit that makes up an organism. In the concept of society, a citizen refers to a person with rights and responsibilities in a country or community. Here, both cell and citizen represent a basic component of a whole, and have specific functions and responsibilities.",
+    "Organ corresponds to organization: In the concept of biology, an organ is a structure with specific functions composed of multiple tissues. In the concept of society, an organization is a group of people with specific goals. Here, both organ and organization represent a structure composed of multiple basic units with specific functions.",
+    "Tissue corresponds to people: In the concept of biology, a tissue is a structure with specific functions composed of multiple cells. In the concept of society, people refer to a group of individuals in a society. Here, both tissue and people represent a group composed of multiple basic units.",
+    "Vein corresponds to communication: In the concept of biology, a vein is a blood vessel system responsible for transporting blood. In the concept of society, communication refers to the process of exchanging information between people. Here, both vein and communication represent a process of transmission and exchange in a system."
+  ],
+  "background": {
+    "source": "An organism is a complex living system that functions as an individual unit with a unique genetic makeup. It is composed of one or more cells, which adhere to the cell theory that defines the basic functional and structural unit of life. The concept of an organism is based on the idea of a minimal functional unit of life, possessing three key attributes of noncompartmentability, individuality, and distinctness. Organisms are classified into different taxonomic groups such as multicellular animals, plants, fungi, unicellular microorganisms such as protists, bacteria, and archaea, all of which are capable of growth, reproduction, and maintenance. The multicellular organisms, such as beetles, squids, tetrapods, mushrooms, and vascular plants possess specialized tissues and organs. Unicellular organisms can either be prokaryotes or eukaryotes, where eukaryotes are characterized by a nuclear membrane and membrane-bound organelles. The Earth comprises of a vast range of organism species extending from multicellular to unicellular ones, with over 1.7 million documented species out of an estimated 2 million to 1 trillion species. With the identification of specific genes from the last universal common ancestor of all organisms on Earth, the study of organisms has become more comprehensive and detailed. The concepts of cells, organs, tissues, and veins are vital in classifying and understanding these diverse living systems.",
+    "target": "A society is a dynamic and complex entity that brings together individuals who share common cultural and institutional patterns of behavior. It is characterized by social interactions and relationships that are subject to the same political authority and cultural expectations. In a society, people communicate and engage with each other to construct norms and values that define acceptable behavior. These norms change and evolve over time, reflecting the gradual transformations of the society itself. \nA person, as a citizen of society, benefits from its collaborative nature, which allows individuals to overcome difficulties that would otherwise be insurmountable. Organizations also play a crucial role in shaping societal norms, and they are subject to the same overarching rules and expectations that apply to individuals. \nOverall, society is a reflection of the relationships between people, institutions, and the broader socio-economic and cultural infrastructure that defines our lives."
+  },
+  "raw": {
+    "id": 280,
+    "lang": "en",
+    "system_a": "organism",
+    "system_b": "society",
+    "mappings": [
+      [
+        "organism",
+        "society"
+      ],
+      [
+        "cell",
+        "person"
+      ],
+      [
+        "cell",
+        "citizen"
+      ],
+      [
+        "organ",
+        "organisation"
+      ],
+      [
+        "tissue",
+        "people"
+      ],
+      [
+        "vein",
+        "communication"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "An organism is a complex living system that functions as an individual unit with a unique genetic makeup. It is composed of one or more cells, which adhere to the cell theory that defines the basic functional and structural unit of life. The concept of an organism is based on the idea of a minimal functional unit of life, possessing three key attributes of noncompartmentability, individuality, and distinctness. Organisms are classified into different taxonomic groups such as multicellular animals, plants, fungi, unicellular microorganisms such as protists, bacteria, and archaea, all of which are capable of growth, reproduction, and maintenance. The multicellular organisms, such as beetles, squids, tetrapods, mushrooms, and vascular plants possess specialized tissues and organs. Unicellular organisms can either be prokaryotes or eukaryotes, where eukaryotes are characterized by a nuclear membrane and membrane-bound organelles. The Earth comprises of a vast range of organism species extending from multicellular to unicellular ones, with over 1.7 million documented species out of an estimated 2 million to 1 trillion species. With the identification of specific genes from the last universal common ancestor of all organisms on Earth, the study of organisms has become more comprehensive and detailed. The concepts of cells, organs, tissues, and veins are vital in classifying and understanding these diverse living systems.",
+    "system_b_background": "A society is a dynamic and complex entity that brings together individuals who share common cultural and institutional patterns of behavior. It is characterized by social interactions and relationships that are subject to the same political authority and cultural expectations. In a society, people communicate and engage with each other to construct norms and values that define acceptable behavior. These norms change and evolve over time, reflecting the gradual transformations of the society itself. \nA person, as a citizen of society, benefits from its collaborative nature, which allows individuals to overcome difficulties that would otherwise be insurmountable. Organizations also play a crucial role in shaping societal norms, and they are subject to the same overarching rules and expectations that apply to individuals. \nOverall, society is a reflection of the relationships between people, institutions, and the broader socio-economic and cultural infrastructure that defines our lives.",
+    "Explanation": [
+      "Organism corresponds to society: Organism refers to all living organisms, while society refers to a group composed of humans. Here, both organism and society represent a whole composed of multiple individuals.",
+      "Cell corresponds to person: In the concept of biology, a cell is the basic unit that makes up an organism. In the concept of society, a person is the basic unit that makes up a society. Here, both cell and person represent a basic component of a whole.",
+      "Cell corresponds to citizen: In the concept of biology, a cell is the basic unit that makes up an organism. In the concept of society, a citizen refers to a person with rights and responsibilities in a country or community. Here, both cell and citizen represent a basic component of a whole, and have specific functions and responsibilities.",
+      "Organ corresponds to organization: In the concept of biology, an organ is a structure with specific functions composed of multiple tissues. In the concept of society, an organization is a group of people with specific goals. Here, both organ and organization represent a structure composed of multiple basic units with specific functions.",
+      "Tissue corresponds to people: In the concept of biology, a tissue is a structure with specific functions composed of multiple cells. In the concept of society, people refer to a group of individuals in a society. Here, both tissue and people represent a group composed of multiple basic units.",
+      "Vein corresponds to communication: In the concept of biology, a vein is a blood vessel system responsible for transporting blood. In the concept of society, communication refers to the process of exchanging information between people. Here, both vein and communication represent a process of transmission and exchange in a system."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "non_bijective",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "one_to_many",
+  "system": {
+    "source": "organism",
+    "target": "society"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

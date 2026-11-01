@@ -1,0 +1,75 @@
+{
+  "adaptation_id": "adapt_scar_0223",
+  "dataset": "scar",
+  "original_id": "223",
+  "source_object_id": "obj_group_scar_0223_src",
+  "target_object_id": "obj_group_scar_0223_tgt",
+  "faithful_mappings": [
+    [
+      "Mesopotamia",
+      "Yellow River Yangtze River"
+    ],
+    [
+      "cuneiform",
+      "Oracle"
+    ]
+  ],
+  "explanation": [
+    "The Mesopotamian and Yellow River-Yangtze River correspond to each other: The Mesopotamian region is the origin of the ancient civilization of West Asia, which includes the Tigris and Euphrates Rivers. The Yellow River and Yangtze River are the origins of Chinese civilization, including the Yellow River and Yangtze River. Both sets of rivers are the origins of their respective regional civilizations and important geographic features.",
+    "Cuneiform corresponds to Oracle bone script: Cuneiform is one of the earliest writing systems in ancient West Asia, used to record history, law, religion and other contents. Oracle bone script is one of the earliest writing systems in China, used to record history, divination, sacrifice and other contents. These two writing systems are important components of their respective regional civilizations and represent the development of human civilization."
+  ],
+  "background": {
+    "source": "I'm sorry, but the description and the keywords do not seem to be related to the same topic. The name \"Gusia\" is not mentioned in the description and the keywords \"Mesopotamia\" and \"cuneiform\" do not have any apparent connection to Agnieszka Dowbor-Muśnicka or her role in the Polish resistance during World War II. If you could provide a more accurate and coherent description and set of keywords, I would be happy to generate a short introduction of the item.",
+    "target": "China, officially known as the People's Republic of China, is the most populous country in the world, boasting a population of over 1.4 billion people. The country is situated in East Asia and spans over an area of 9.6 million square kilometres, making it the world's third-largest country. The country's history goes back to the semi-legendary Xia dynasty in 21st century BCE, and since then, China has had a rich and turbulent history that has influenced the world through its writing, literature, and innovative creations. The country is known for its dynasties, bureaucracy, and political systems, including the Qin and Han dynasties, the Tang dynasty, and more. China's modern era began in 1912 with the Xinhai Revolution, which replaced the Qing dynasty with the Republic of China. The country has since fought wars, undergone social and economic reforms, and been ruled by a unitary Marxist-Leninist one-party socialist republic by the Chinese Community Party. With a massive economy, advanced military, and fast-growing innovation, China is also considered a potential superpower in international affairs."
+  },
+  "raw": {
+    "id": 223,
+    "lang": "en",
+    "system_a": "Gusia",
+    "system_b": "China",
+    "mappings": [
+      [
+        "Mesopotamia",
+        "Yellow River Yangtze River"
+      ],
+      [
+        "cuneiform",
+        "Oracle"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "I'm sorry, but the description and the keywords do not seem to be related to the same topic. The name \"Gusia\" is not mentioned in the description and the keywords \"Mesopotamia\" and \"cuneiform\" do not have any apparent connection to Agnieszka Dowbor-Muśnicka or her role in the Polish resistance during World War II. If you could provide a more accurate and coherent description and set of keywords, I would be happy to generate a short introduction of the item.",
+    "system_b_background": "China, officially known as the People's Republic of China, is the most populous country in the world, boasting a population of over 1.4 billion people. The country is situated in East Asia and spans over an area of 9.6 million square kilometres, making it the world's third-largest country. The country's history goes back to the semi-legendary Xia dynasty in 21st century BCE, and since then, China has had a rich and turbulent history that has influenced the world through its writing, literature, and innovative creations. The country is known for its dynasties, bureaucracy, and political systems, including the Qin and Han dynasties, the Tang dynasty, and more. China's modern era began in 1912 with the Xinhai Revolution, which replaced the Qing dynasty with the Republic of China. The country has since fought wars, undergone social and economic reforms, and been ruled by a unitary Marxist-Leninist one-party socialist republic by the Chinese Community Party. With a massive economy, advanced military, and fast-growing innovation, China is also considered a potential superpower in international affairs.",
+    "Explanation": [
+      "The Mesopotamian and Yellow River-Yangtze River correspond to each other: The Mesopotamian region is the origin of the ancient civilization of West Asia, which includes the Tigris and Euphrates Rivers. The Yellow River and Yangtze River are the origins of Chinese civilization, including the Yellow River and Yangtze River. Both sets of rivers are the origins of their respective regional civilizations and important geographic features.",
+      "Cuneiform corresponds to Oracle bone script: Cuneiform is one of the earliest writing systems in ancient West Asia, used to record history, law, religion and other contents. Oracle bone script is one of the earliest writing systems in China, used to record history, divination, sacrifice and other contents. These two writing systems are important components of their respective regional civilizations and represent the development of human civilization."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Gusia",
+    "target": "China"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

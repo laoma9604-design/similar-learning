@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0362",
+  "dataset": "scar",
+  "original_id": "362",
+  "source_object_id": "obj_group_scar_0362_src",
+  "target_object_id": "obj_group_scar_0362_tgt",
+  "faithful_mappings": [
+    [
+      "sound wave",
+      "water waves"
+    ],
+    [
+      "Sound source",
+      "falling stone"
+    ],
+    [
+      "Acoustic medium",
+      "water"
+    ]
+  ],
+  "explanation": [
+    "A sound wave corresponds to a water wave: a sound wave is a vibration wave that propagates through air or other mediums, while a water wave is a wave that propagates through water. Here, both sound waves and water waves represent some form of energy transmission.",
+    "A sound source corresponds to a falling stone: a sound source is an object that generates sound waves, while a falling stone is an object that generates water waves. In this mapping, both sound sources and falling stones represent the starting point of energy transmission.",
+    "An acoustic medium corresponds to water: an acoustic medium is the substance that sound waves depend on for transmission, such as air or water. Water, on the other hand, is the medium through which water waves propagate. Here, both an acoustic medium and water represent the substance that energy transmission depends on."
+  ],
+  "background": {
+    "source": "Sound wave propagation refers to the movement of longitudinal waves through an acoustic medium, such as air or water. These waves cause a displacement of the medium in the same direction as their propagation, creating areas of compression and rarefaction. The result is a pressure wave that can be perceived by human ears as sound. Sound sources, such as speakers or musical instruments, generate these waves through vibrations that travel through the air or other materials. Understanding the behavior of sound waves is essential in the fields of engineering, architecture, and music, as it allows us to control and manipulate the properties of sound for various applications.",
+    "target": "Water wave propagation is the study of how disturbances within a body of water propagate and move energy and momentum throughout the water. Waves can be divided into two types: mechanical and electromagnetic, with each exhibiting different characteristics of motion. Waves can be described using wave equations and are often studied as signals in mathematics and electronics. Physical wave fields are limited to finite regions of space, with infinite domain waves studied primarily in math. One of the most fundamental waves is a sinusoidal plane wave, where the disturbance is identical across any infinite plane normal to a specific direction of travel. One example of water wave propagation is the displacement of water molecules when a falling stone hits the surface of a body of water."
+  },
+  "raw": {
+    "id": 362,
+    "lang": "en",
+    "system_a": "Sound Wave Propagation",
+    "system_b": "Water Wave Propagation",
+    "mappings": [
+      [
+        "sound wave",
+        "water waves"
+      ],
+      [
+        "Sound source",
+        "falling stone"
+      ],
+      [
+        "Acoustic medium",
+        "water"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Physics",
+    "system_a_background": "Sound wave propagation refers to the movement of longitudinal waves through an acoustic medium, such as air or water. These waves cause a displacement of the medium in the same direction as their propagation, creating areas of compression and rarefaction. The result is a pressure wave that can be perceived by human ears as sound. Sound sources, such as speakers or musical instruments, generate these waves through vibrations that travel through the air or other materials. Understanding the behavior of sound waves is essential in the fields of engineering, architecture, and music, as it allows us to control and manipulate the properties of sound for various applications.",
+    "system_b_background": "Water wave propagation is the study of how disturbances within a body of water propagate and move energy and momentum throughout the water. Waves can be divided into two types: mechanical and electromagnetic, with each exhibiting different characteristics of motion. Waves can be described using wave equations and are often studied as signals in mathematics and electronics. Physical wave fields are limited to finite regions of space, with infinite domain waves studied primarily in math. One of the most fundamental waves is a sinusoidal plane wave, where the disturbance is identical across any infinite plane normal to a specific direction of travel. One example of water wave propagation is the displacement of water molecules when a falling stone hits the surface of a body of water.",
+    "Explanation": [
+      "A sound wave corresponds to a water wave: a sound wave is a vibration wave that propagates through air or other mediums, while a water wave is a wave that propagates through water. Here, both sound waves and water waves represent some form of energy transmission.",
+      "A sound source corresponds to a falling stone: a sound source is an object that generates sound waves, while a falling stone is an object that generates water waves. In this mapping, both sound sources and falling stones represent the starting point of energy transmission.",
+      "An acoustic medium corresponds to water: an acoustic medium is the substance that sound waves depend on for transmission, such as air or water. Water, on the other hand, is the medium through which water waves propagate. Here, both an acoustic medium and water represent the substance that energy transmission depends on."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Sound Wave Propagation",
+    "target": "Water Wave Propagation"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

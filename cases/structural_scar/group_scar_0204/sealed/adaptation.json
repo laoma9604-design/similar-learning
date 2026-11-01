@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0204",
+  "dataset": "scar",
+  "original_id": "204",
+  "source_object_id": "obj_group_scar_0204_src",
+  "target_object_id": "obj_group_scar_0204_tgt",
+  "faithful_mappings": [
+    [
+      "Second Continental Congress",
+      "constitutional convention"
+    ],
+    [
+      "safeguard human rights",
+      "equal rights"
+    ],
+    [
+      "america was born",
+      "The French Revolution"
+    ]
+  ],
+  "explanation": [
+    "The Second Continental Congress corresponds to the Constitutional Convention: both are significant meetings in their respective country's history, laying the foundation for the United States' Declaration of Independence and France's Declaration of the Rights of Man.",
+    "Safeguarding human rights corresponds to equal rights: both elements emphasize the protection and respect of human rights. The Declaration of Independence emphasizes the safeguarding of human rights, asserting that the people have the right to rebel against unjust rule. The Declaration of the Rights of Man, on the other hand, advocates for equal rights, stating that all people should have equal rights before the law.",
+    "The birth of America corresponds to the French Revolution: both represent significant turning points in their respective country's history. The birth of America signified its independence from British colonial rule, becoming an independent nation. The French Revolution was a major change in French history, overthrowing the old regime and laying the foundation for France's modernization."
+  ],
+  "background": {
+    "source": "The Declaration of Independence is perhaps the most iconic document in American history. Written by the Second Continental Congress, it proclaimed the colonies' independence from British rule and safeguarded human rights. With its publication in 1776, a new nation was born: America. Although viewed as an act of rebellion by the British Empire, the Declaration served as a legal and moral justification for the American Revolution, which ultimately led to the birth of the United States of America. Today, the Declaration of Independence remains a timeless statement of liberty and self-determination, inspiring countless individuals and movements around the world.",
+    "target": "The Universal Declaration of Human Rights is a document adopted by the United Nations General Assembly that delineates the fundamental rights and freedoms of all humans. Created by a UN committee chaired by Eleanor Roosevelt, the declaration comprises thirty articles that recognize an individual's basic rights and freedoms and confirm their universal character as evident and inalienable. The Declaration is considered groundbreaking for its universalist language, which makes no reference to a particular culture, political system, or religion. It has inspired the development of international human rights law and served as a precursor to the International Bill of Human Rights. Though not legally binding, the Declaration has had a significant impact on legal, political, and social developments worldwide."
+  },
+  "raw": {
+    "id": 204,
+    "lang": "en",
+    "system_a": "Declaration of Independence",
+    "system_b": "Declaration of Human Rights",
+    "mappings": [
+      [
+        "Second Continental Congress",
+        "constitutional convention"
+      ],
+      [
+        "safeguard human rights",
+        "equal rights"
+      ],
+      [
+        "america was born",
+        "The French Revolution"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "The Declaration of Independence is perhaps the most iconic document in American history. Written by the Second Continental Congress, it proclaimed the colonies' independence from British rule and safeguarded human rights. With its publication in 1776, a new nation was born: America. Although viewed as an act of rebellion by the British Empire, the Declaration served as a legal and moral justification for the American Revolution, which ultimately led to the birth of the United States of America. Today, the Declaration of Independence remains a timeless statement of liberty and self-determination, inspiring countless individuals and movements around the world.",
+    "system_b_background": "The Universal Declaration of Human Rights is a document adopted by the United Nations General Assembly that delineates the fundamental rights and freedoms of all humans. Created by a UN committee chaired by Eleanor Roosevelt, the declaration comprises thirty articles that recognize an individual's basic rights and freedoms and confirm their universal character as evident and inalienable. The Declaration is considered groundbreaking for its universalist language, which makes no reference to a particular culture, political system, or religion. It has inspired the development of international human rights law and served as a precursor to the International Bill of Human Rights. Though not legally binding, the Declaration has had a significant impact on legal, political, and social developments worldwide.",
+    "Explanation": [
+      "The Second Continental Congress corresponds to the Constitutional Convention: both are significant meetings in their respective country's history, laying the foundation for the United States' Declaration of Independence and France's Declaration of the Rights of Man.",
+      "Safeguarding human rights corresponds to equal rights: both elements emphasize the protection and respect of human rights. The Declaration of Independence emphasizes the safeguarding of human rights, asserting that the people have the right to rebel against unjust rule. The Declaration of the Rights of Man, on the other hand, advocates for equal rights, stating that all people should have equal rights before the law.",
+      "The birth of America corresponds to the French Revolution: both represent significant turning points in their respective country's history. The birth of America signified its independence from British colonial rule, becoming an independent nation. The French Revolution was a major change in French history, overthrowing the old regime and laying the foundation for France's modernization."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Declaration of Independence",
+    "target": "Declaration of Human Rights"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

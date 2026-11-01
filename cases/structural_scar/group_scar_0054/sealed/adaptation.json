@@ -1,0 +1,75 @@
+{
+  "adaptation_id": "adapt_scar_0054",
+  "dataset": "scar",
+  "original_id": "54",
+  "source_object_id": "obj_group_scar_0054_src",
+  "target_object_id": "obj_group_scar_0054_tgt",
+  "faithful_mappings": [
+    [
+      "amino acid",
+      "puzzle pieces"
+    ],
+    [
+      "shape",
+      "pattern"
+    ]
+  ],
+  "explanation": [
+    "Amino acids correspond to puzzle pieces: proteins are composed of amino acids, which are linked together to form larger structures. Puzzles are composed of puzzle pieces that are linked together to form a complete pattern. In this mapping, both amino acids and puzzle pieces are the basic building units of their respective systems.",
+    "Shape corresponds to pattern: proteins have specific three-dimensional shapes that determine their function. Once completed, puzzles present a specific pattern. In this mapping, shape and pattern both represent ordered structures and characteristics within their respective systems."
+  ],
+  "background": {
+    "source": "Proteins are essential biomolecules made up of one or more long chains of amino acids that perform various vital functions within organisms. These functions include catalysing metabolic reactions, DNA replication, providing structure to cells and organisms, transporting molecules, and responding to stimuli. The specific activity of a protein is determined by its unique 3D structure, which is determined by its sequence of amino acids encoded by the gene. Proteins can be complex and can work together to perform a particular function. They have various lifespans, and once formed, proteins are often chemically modified and are ultimately degraded and recycled by the cell's machinery. Proteins can additionally have non-peptide groups attached to them, which can be called prosthetic groups or cofactors. Overall, the precise shape of a protein plays a crucial role in its function within the organism.",
+    "target": "A puzzle is a fascinating mental challenge that has intrigued people of all ages and backgrounds for centuries. It involves solving a particular problem by using your cognitive abilities to put together pieces of information or concepts in a logical way. One popular form of a puzzle is a jigsaw puzzle, which involves assembling puzzle pieces to form a complete picture. The satisfaction of finally putting together a challenging jigsaw puzzle can be incredibly rewarding, as you begin to see the pattern hidden within the chaos of the individual pieces.\n\nHowever, puzzles are not limited to just jigsaw puzzles. An economic puzzle is another example of a type of puzzle that exists in the realm of economics. In this case, the implications of a particular economic theory are inconsistent with the observed economic data, creating a type of mental challenge for economists to puzzle out.\n\nIn recent years, a new type of puzzle has emerged in the form of video games. Puzzle video games are a popular genre that requires players to solve increasingly complex puzzles to progress through the game. These games often incorporate the challenge of pattern recognition, as players must identify recurring patterns within the puzzles they are trying to solve to progress further.\n\nOverall, whether in the form of jigsaw puzzles, economic puzzles, or puzzle video games, the puzzle remains a favorite form of mental challenge for people of all ages. The satisfaction of finally piecing together a particular pattern or solution after struggling with a puzzle for some time is a feeling that cannot be replicated. So why not challenge yourself with a puzzle today?"
+  },
+  "raw": {
+    "id": 54,
+    "lang": "en",
+    "system_a": "Protein",
+    "system_b": "The Puzzle",
+    "mappings": [
+      [
+        "amino acid",
+        "puzzle pieces"
+      ],
+      [
+        "shape",
+        "pattern"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Engineering",
+    "system_a_background": "Proteins are essential biomolecules made up of one or more long chains of amino acids that perform various vital functions within organisms. These functions include catalysing metabolic reactions, DNA replication, providing structure to cells and organisms, transporting molecules, and responding to stimuli. The specific activity of a protein is determined by its unique 3D structure, which is determined by its sequence of amino acids encoded by the gene. Proteins can be complex and can work together to perform a particular function. They have various lifespans, and once formed, proteins are often chemically modified and are ultimately degraded and recycled by the cell's machinery. Proteins can additionally have non-peptide groups attached to them, which can be called prosthetic groups or cofactors. Overall, the precise shape of a protein plays a crucial role in its function within the organism.",
+    "system_b_background": "A puzzle is a fascinating mental challenge that has intrigued people of all ages and backgrounds for centuries. It involves solving a particular problem by using your cognitive abilities to put together pieces of information or concepts in a logical way. One popular form of a puzzle is a jigsaw puzzle, which involves assembling puzzle pieces to form a complete picture. The satisfaction of finally putting together a challenging jigsaw puzzle can be incredibly rewarding, as you begin to see the pattern hidden within the chaos of the individual pieces.\n\nHowever, puzzles are not limited to just jigsaw puzzles. An economic puzzle is another example of a type of puzzle that exists in the realm of economics. In this case, the implications of a particular economic theory are inconsistent with the observed economic data, creating a type of mental challenge for economists to puzzle out.\n\nIn recent years, a new type of puzzle has emerged in the form of video games. Puzzle video games are a popular genre that requires players to solve increasingly complex puzzles to progress through the game. These games often incorporate the challenge of pattern recognition, as players must identify recurring patterns within the puzzles they are trying to solve to progress further.\n\nOverall, whether in the form of jigsaw puzzles, economic puzzles, or puzzle video games, the puzzle remains a favorite form of mental challenge for people of all ages. The satisfaction of finally piecing together a particular pattern or solution after struggling with a puzzle for some time is a feeling that cannot be replicated. So why not challenge yourself with a puzzle today?",
+    "Explanation": [
+      "Amino acids correspond to puzzle pieces: proteins are composed of amino acids, which are linked together to form larger structures. Puzzles are composed of puzzle pieces that are linked together to form a complete pattern. In this mapping, both amino acids and puzzle pieces are the basic building units of their respective systems.",
+      "Shape corresponds to pattern: proteins have specific three-dimensional shapes that determine their function. Once completed, puzzles present a specific pattern. In this mapping, shape and pattern both represent ordered structures and characteristics within their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Protein",
+    "target": "The Puzzle"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

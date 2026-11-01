@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0305",
+  "dataset": "scar",
+  "original_id": "305",
+  "source_object_id": "obj_group_scar_0305_src",
+  "target_object_id": "obj_group_scar_0305_tgt",
+  "faithful_mappings": [
+    [
+      "building",
+      "theory"
+    ],
+    [
+      "foundation",
+      "axiom"
+    ],
+    [
+      "framework",
+      "proposition"
+    ],
+    [
+      "architect",
+      "scientist"
+    ]
+  ],
+  "explanation": [
+    "Building corresponds to theory: A building is a concrete entity composed of foundation, framework, and other parts. Theory is an abstract concept composed of axioms, propositions, and logic. Both are composed of their respective parts to form a whole.",
+    "Foundation corresponds to axiom: The foundation of a building is an essential part that provides stability to the entire structure. Axioms are the foundation of a theory, providing the basic premise. Both are the fundamental parts of their respective wholes.",
+    "Framework corresponds to proposition: The framework of a building is the structure that supports the building, determining its shape and function. Propositions are the core ideas of a theory, determining its direction and purpose. Both are the core parts of their respective wholes.",
+    "Architect corresponds to scientist: An architect is a professional who designs and constructs buildings, using their knowledge and skills to create them. A scientist is a professional who researches and develops theory, using their knowledge and skills to cultivate theory. Both are specialized professionals in their respective fields."
+  ],
+  "background": {
+    "source": "A building is a structure that is permanently placed at a particular location, with walls and a roof, designed to provide shelter and space for various activities. Buildings come in different sizes, shapes, and designs, serving various purposes for society, such as shelter, protection, comfort, and privacy. They are designed by architects who provide the foundation and framework for the structure to be erected. Buildings are crucial in defining human habitats, providing spaces for people to live, work, and interact with the environment around them. The framework of a building represents the backbone of the structure, providing a solid foundation for the walls, roofing, and interior spaces. The design of a building is an essential aspect of its creation and can be a form of artistic expression. Additionally, a focus on sustainable building practices has become increasingly important in recent times to reduce the environmental impact of construction.",
+    "target": "A theory is defined as a well-constructed explanation of a phenomenon based on contemplative and rational thinking. It is an abstract concept that is often associated with observational study or scientific research. The term theory originates from ancient Greek but has modern usage in different contexts. A scientific theory is a confirmed explanation of nature made in accordance with the scientific method and fulfilling the criteria required by modern science. Theories are different from hypotheses and scientific laws, in that they guide the enterprise of finding facts rather than reaching goals. The credibility of a theory could be contested by referring to it as \"just a theory,\" which implies that the idea has not yet been tested. The word theory is often contrasted with practice, but it is possible to research health and sickness without curing specific patients, and it is also possible to cure a patient without knowing how the cure worked. Scientists rigorously use theories as a framework to explain and explore the natural world, thereby contributing to the body of knowledge called science. Axioms and propositions are also important elements in the development of theories, and logic is a necessary tool in constructing a coherent and consistent theory."
+  },
+  "raw": {
+    "id": 305,
+    "lang": "en",
+    "system_a": "building",
+    "system_b": "theory",
+    "mappings": [
+      [
+        "building",
+        "theory"
+      ],
+      [
+        "foundation",
+        "axiom"
+      ],
+      [
+        "framework",
+        "proposition"
+      ],
+      [
+        "architect",
+        "scientist"
+      ]
+    ],
+    "system_a_domain": "Engineering",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "A building is a structure that is permanently placed at a particular location, with walls and a roof, designed to provide shelter and space for various activities. Buildings come in different sizes, shapes, and designs, serving various purposes for society, such as shelter, protection, comfort, and privacy. They are designed by architects who provide the foundation and framework for the structure to be erected. Buildings are crucial in defining human habitats, providing spaces for people to live, work, and interact with the environment around them. The framework of a building represents the backbone of the structure, providing a solid foundation for the walls, roofing, and interior spaces. The design of a building is an essential aspect of its creation and can be a form of artistic expression. Additionally, a focus on sustainable building practices has become increasingly important in recent times to reduce the environmental impact of construction.",
+    "system_b_background": "A theory is defined as a well-constructed explanation of a phenomenon based on contemplative and rational thinking. It is an abstract concept that is often associated with observational study or scientific research. The term theory originates from ancient Greek but has modern usage in different contexts. A scientific theory is a confirmed explanation of nature made in accordance with the scientific method and fulfilling the criteria required by modern science. Theories are different from hypotheses and scientific laws, in that they guide the enterprise of finding facts rather than reaching goals. The credibility of a theory could be contested by referring to it as \"just a theory,\" which implies that the idea has not yet been tested. The word theory is often contrasted with practice, but it is possible to research health and sickness without curing specific patients, and it is also possible to cure a patient without knowing how the cure worked. Scientists rigorously use theories as a framework to explain and explore the natural world, thereby contributing to the body of knowledge called science. Axioms and propositions are also important elements in the development of theories, and logic is a necessary tool in constructing a coherent and consistent theory.",
+    "Explanation": [
+      "Building corresponds to theory: A building is a concrete entity composed of foundation, framework, and other parts. Theory is an abstract concept composed of axioms, propositions, and logic. Both are composed of their respective parts to form a whole.",
+      "Foundation corresponds to axiom: The foundation of a building is an essential part that provides stability to the entire structure. Axioms are the foundation of a theory, providing the basic premise. Both are the fundamental parts of their respective wholes.",
+      "Framework corresponds to proposition: The framework of a building is the structure that supports the building, determining its shape and function. Propositions are the core ideas of a theory, determining its direction and purpose. Both are the core parts of their respective wholes.",
+      "Architect corresponds to scientist: An architect is a professional who designs and constructs buildings, using their knowledge and skills to create them. A scientist is a professional who researches and develops theory, using their knowledge and skills to cultivate theory. Both are specialized professionals in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "building",
+    "target": "theory"
+  },
+  "domains": {
+    "source": "Engineering",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

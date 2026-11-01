@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0106",
+  "dataset": "scar",
+  "original_id": "106",
+  "source_object_id": "obj_group_scar_0106_src",
+  "target_object_id": "obj_group_scar_0106_tgt",
+  "faithful_mappings": [
+    [
+      "Reactant",
+      "prelude"
+    ],
+    [
+      "intermediate",
+      "plot"
+    ],
+    [
+      "product",
+      "ending"
+    ]
+  ],
+  "explanation": [
+    "Reactant corresponds to prelude: In a chemical reaction, reactant refers to the initial substance involved in the reaction. In a movie, prelude refers to the plot at the beginning of the movie, which displays the background and characters of the story to the audience. Both indicate the starting state of a process or story.",
+    "Intermediate corresponds to plot: In a chemical reaction, intermediate refers to the transient substance produced during the reaction process. In a movie, plot refers to the main story that displays interactions between characters and story development. Both indicate the development and changes of a process or story.",
+    "Product corresponds to ending: In a chemical reaction, product refers to the new substance formed after the reaction is completed. In a movie, ending refers to the final outcome of the story, which presents the endpoint of the story to the audience. Both indicate the terminating state of a process or story."
+  ],
+  "background": {
+    "source": "Chemistry is a fascinating field of science that deals with the properties and behavior of matter. It involves the study of various elements, compounds, molecules, and ions, and their structure, composition, properties, and changes during a reaction with other substances. Reactants, intermediates, and products form the basis of chemistry by allowing us to understand the mechanism of chemical reactions. Not only does chemistry play a significant role in advancing our knowledge of the natural world, but it also has practical applications in many other disciplines. This is why chemistry is often called the central science, as it forms the foundation for understanding basic and applied scientific fields like botany, geology, ecology, cosmology, pharmacology, and forensics. Chemistry offers a unique perspective on the physical and chemical changes that occur in the natural world and helps to solve real-world problems in a wide range of scientific and industrial contexts.",
+    "target": "\"The Movie\" is a classic episode of the iconic sitcom, Seinfeld. Serving as a prelude to the hijinks that follow, this episode is a testament to the show's ability to take the mundane and turn it into comedic gold. The plot centers around the main characters' attempts to go see a movie together, but their plans are thwarted at every turn. As the episode progresses, the chaos builds to a hilarious climax that leaves viewers laughing until the very end. With its witty writing and impeccable comedic timing, \"The Movie\" is a must-see for any fan of Seinfeld or comedy in general."
+  },
+  "raw": {
+    "id": 106,
+    "lang": "en",
+    "system_a": "Chemistry",
+    "system_b": "The Movie",
+    "mappings": [
+      [
+        "Reactant",
+        "prelude"
+      ],
+      [
+        "intermediate",
+        "plot"
+      ],
+      [
+        "product",
+        "ending"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Literature",
+    "system_a_background": "Chemistry is a fascinating field of science that deals with the properties and behavior of matter. It involves the study of various elements, compounds, molecules, and ions, and their structure, composition, properties, and changes during a reaction with other substances. Reactants, intermediates, and products form the basis of chemistry by allowing us to understand the mechanism of chemical reactions. Not only does chemistry play a significant role in advancing our knowledge of the natural world, but it also has practical applications in many other disciplines. This is why chemistry is often called the central science, as it forms the foundation for understanding basic and applied scientific fields like botany, geology, ecology, cosmology, pharmacology, and forensics. Chemistry offers a unique perspective on the physical and chemical changes that occur in the natural world and helps to solve real-world problems in a wide range of scientific and industrial contexts.",
+    "system_b_background": "\"The Movie\" is a classic episode of the iconic sitcom, Seinfeld. Serving as a prelude to the hijinks that follow, this episode is a testament to the show's ability to take the mundane and turn it into comedic gold. The plot centers around the main characters' attempts to go see a movie together, but their plans are thwarted at every turn. As the episode progresses, the chaos builds to a hilarious climax that leaves viewers laughing until the very end. With its witty writing and impeccable comedic timing, \"The Movie\" is a must-see for any fan of Seinfeld or comedy in general.",
+    "Explanation": [
+      "Reactant corresponds to prelude: In a chemical reaction, reactant refers to the initial substance involved in the reaction. In a movie, prelude refers to the plot at the beginning of the movie, which displays the background and characters of the story to the audience. Both indicate the starting state of a process or story.",
+      "Intermediate corresponds to plot: In a chemical reaction, intermediate refers to the transient substance produced during the reaction process. In a movie, plot refers to the main story that displays interactions between characters and story development. Both indicate the development and changes of a process or story.",
+      "Product corresponds to ending: In a chemical reaction, product refers to the new substance formed after the reaction is completed. In a movie, ending refers to the final outcome of the story, which presents the endpoint of the story to the audience. Both indicate the terminating state of a process or story."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Chemistry",
+    "target": "The Movie"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Literature"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

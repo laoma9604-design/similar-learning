@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0199",
+  "dataset": "scar",
+  "original_id": "199",
+  "source_object_id": "obj_group_scar_0199_src",
+  "target_object_id": "obj_group_scar_0199_tgt",
+  "faithful_mappings": [
+    [
+      "colonial ruling",
+      "feudal autocracy"
+    ],
+    [
+      "Capitalist economy",
+      "Capitalist economy"
+    ],
+    [
+      "bourgeois democratic republic",
+      "bourgeois democratic republic"
+    ],
+    [
+      "national liberation movement",
+      "Bourgeois revolution"
+    ]
+  ],
+  "explanation": [
+    "Colonial ruling corresponds to feudal autocracy: Colonial ruling in the American Revolution refers to British rule over America, while feudal autocracy in the French Revolution refers to the old system domestically. Both were oppressive forms of rule before the revolutions.",
+    "Capitalist economy corresponds to capitalist economy: This is the same element, indicating the development of capitalist economic systems in both revolutions.",
+    "Bourgeois democratic republic corresponds to bourgeois democratic republic: This is the same element, indicating the establishment of bourgeois democratic republic systems after both revolutions.",
+    "National liberation movement corresponds to bourgeois revolution: The national liberation movement in the American Revolution was to rid America of British colonial rule, and the French Revolution was to overthrow feudal autocracy. Both represent revolutions aimed at liberation."
+  ],
+  "background": {
+    "source": "The American Revolutionary War, also known as the American War of Independence, was a national liberation movement that established and secured the independence of the United States. The conflict arose out of tensions between the thirteen American colonies and Great Britain, which had established the colonies by Royal charter in the 17th and 18th centuries. The colonies were largely autonomous in domestic affairs and trading with Britain, but disputes over trade policies, taxation measures, and British rule in the Northwest Territory and the American colonies ultimately led to the war. The American patriot forces were supported by France and Spain, while the British were supported by Hessian soldiers, Loyalists, Native Americans, and freedmen. The war was fought in North America, the Caribbean, and the Atlantic Ocean. The Continental Army was authorized by Congress with George Washington as commander-in-chief, and significant victories at Trenton and Princeton restored Patriot confidence. France and Spain's support was crucial, resulting in the Treaty of Alliance in February 1778, while Spain's Gulf Coast campaign deprived the Royal Navy of key bases. The war took British forces to the Southern United States, but the Franco-American siege of Yorktown in September 1781 led to Cornwallis's surrender in October. With the Treaty of Paris ratified on September 3, 1783, Britain accepted American independence, and the war officially ended. Thus, the American Revolutionary War established a bourgeois democratic republic, marked by a capitalist economy, ending colonial ruling in the United States.",
+    "target": "The French Revolution was a time of immense change in France starting in 1789. The country was previously ruled by a feudal autocracy, but the uprising was fueled by social, political, and economic factors that the ruling class proved incapable of managing. The Estates General was called in May of 1789, leading to a series of events, including the Storming of the Bastille and the formation of a National Assembly. The period that followed was a chaotic struggle for political control and civil unrest, culminating in the abolition of the monarchy and creation of the French First Republic in 1792. The next few years saw the outbreak of the French Revolutionary Wars, the Reign of Terror, and changes in political leadership until the formation of the French Consulate in 1799. The French Revolution is widely recognized as a bourgeois democratic revolution and gave rise to many principles of liberal democracy that continue to shape French political discourse."
+  },
+  "raw": {
+    "id": 199,
+    "lang": "en",
+    "system_a": "American Revolutionary War",
+    "system_b": "The French Revolution",
+    "mappings": [
+      [
+        "colonial ruling",
+        "feudal autocracy"
+      ],
+      [
+        "Capitalist economy",
+        "Capitalist economy"
+      ],
+      [
+        "bourgeois democratic republic",
+        "bourgeois democratic republic"
+      ],
+      [
+        "national liberation movement",
+        "Bourgeois revolution"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "The American Revolutionary War, also known as the American War of Independence, was a national liberation movement that established and secured the independence of the United States. The conflict arose out of tensions between the thirteen American colonies and Great Britain, which had established the colonies by Royal charter in the 17th and 18th centuries. The colonies were largely autonomous in domestic affairs and trading with Britain, but disputes over trade policies, taxation measures, and British rule in the Northwest Territory and the American colonies ultimately led to the war. The American patriot forces were supported by France and Spain, while the British were supported by Hessian soldiers, Loyalists, Native Americans, and freedmen. The war was fought in North America, the Caribbean, and the Atlantic Ocean. The Continental Army was authorized by Congress with George Washington as commander-in-chief, and significant victories at Trenton and Princeton restored Patriot confidence. France and Spain's support was crucial, resulting in the Treaty of Alliance in February 1778, while Spain's Gulf Coast campaign deprived the Royal Navy of key bases. The war took British forces to the Southern United States, but the Franco-American siege of Yorktown in September 1781 led to Cornwallis's surrender in October. With the Treaty of Paris ratified on September 3, 1783, Britain accepted American independence, and the war officially ended. Thus, the American Revolutionary War established a bourgeois democratic republic, marked by a capitalist economy, ending colonial ruling in the United States.",
+    "system_b_background": "The French Revolution was a time of immense change in France starting in 1789. The country was previously ruled by a feudal autocracy, but the uprising was fueled by social, political, and economic factors that the ruling class proved incapable of managing. The Estates General was called in May of 1789, leading to a series of events, including the Storming of the Bastille and the formation of a National Assembly. The period that followed was a chaotic struggle for political control and civil unrest, culminating in the abolition of the monarchy and creation of the French First Republic in 1792. The next few years saw the outbreak of the French Revolutionary Wars, the Reign of Terror, and changes in political leadership until the formation of the French Consulate in 1799. The French Revolution is widely recognized as a bourgeois democratic revolution and gave rise to many principles of liberal democracy that continue to shape French political discourse.",
+    "Explanation": [
+      "Colonial ruling corresponds to feudal autocracy: Colonial ruling in the American Revolution refers to British rule over America, while feudal autocracy in the French Revolution refers to the old system domestically. Both were oppressive forms of rule before the revolutions.",
+      "Capitalist economy corresponds to capitalist economy: This is the same element, indicating the development of capitalist economic systems in both revolutions.",
+      "Bourgeois democratic republic corresponds to bourgeois democratic republic: This is the same element, indicating the establishment of bourgeois democratic republic systems after both revolutions.",
+      "National liberation movement corresponds to bourgeois revolution: The national liberation movement in the American Revolution was to rid America of British colonial rule, and the French Revolution was to overthrow feudal autocracy. Both represent revolutions aimed at liberation."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "American Revolutionary War",
+    "target": "The French Revolution"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

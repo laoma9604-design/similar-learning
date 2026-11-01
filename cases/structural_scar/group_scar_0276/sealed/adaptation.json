@@ -1,0 +1,141 @@
+{
+  "adaptation_id": "adapt_scar_0276",
+  "dataset": "scar",
+  "original_id": "276",
+  "source_object_id": "obj_group_scar_0276_src",
+  "target_object_id": "obj_group_scar_0276_tgt",
+  "faithful_mappings": [
+    [
+      "flower",
+      "innovation"
+    ],
+    [
+      "water",
+      "funding"
+    ],
+    [
+      "stem",
+      "research"
+    ],
+    [
+      "soil",
+      "laboratory"
+    ],
+    [
+      "planting",
+      "experiment"
+    ],
+    [
+      "blossom",
+      "idea"
+    ],
+    [
+      "greenhouse",
+      "conference"
+    ],
+    [
+      "symbiosis",
+      "collaboration"
+    ]
+  ],
+  "explanation": [
+    "Blossoming corresponds to innovation: Blossoming refers to the proliferation and prosperity of plant flowers, displaying life force. Innovation means continuously attempting new ideas and methods to advance progress. Both represent a form of prosperity and development.",
+    "Water corresponds to funding: In the process of plant growth, water is an essential resource. In the innovation process, funding is an important resource to support research and experimentation. Here, water and funding are both crucial factors in promoting growth and development.",
+    "Stem corresponds to research: Plants require stems to support their growth. Innovation requires research to provide theoretical foundations and practical guidance. Both are critical parts that support and guide the entire process.",
+    "Soil corresponds to the laboratory: Soil provides plants with nutrients and is the basis for their growth. The laboratory provides an experimental environment and facilities for innovation research, serving as the foundation for innovation. Here, soil and laboratory are both fundamental infrastructures for growth and development.",
+    "Planting corresponds to experimentation: Planting is the process of plant growth, cultivating healthy plants through continuous experimentation and adjustment. The experiment in the innovation process is the process of trying new methods and techniques. Both represent the actions of exploration and experimentation.",
+    "Blooming corresponds to an idea: Blooming is an important stage in the process of plant growth, symbolizing success and achievement. In the innovation process, an idea is the key to achieving breakthroughs and success. Here, blooming and an idea both represent the generation of success and achievement.",
+    "Greenhouse corresponds to a conference: The greenhouse provides a suitable growth environment for plants, and the conference provides a platform for innovation teams to discuss and exchange ideas. Here, both the greenhouse and conference serve as environments and places that promote growth and development.",
+    "Symbiosis corresponds to collaboration: Symbiosis refers to the interdependence and mutual development between organisms. Collaboration in the innovation process is the process of mutual support and progress among team members. Here, symbiosis and collaboration both represent a relationship of synergy and mutual assistance."
+  ],
+  "background": {
+    "source": "Flowers are the reproductive structures found in flowering plants and play a crucial role in the plant's reproduction cycle. These flowers produce gametophytes which develop into the male and female reproductive cells. Some flowers self-pollinate while others need cross-pollination, which is facilitated by animals like bees and butterflies that are attracted by the bright colors and nectar produced by the flowers. Flowers are also appreciated by humans for their beauty, scent, and cultural significance. Proper planting of flowers requires a good amount of water, suitable soil, and a healthy stem. Greenhouses can be used for growing and nurturing flowers in a controlled environment. Flowers and animals have a symbiotic relationship where the flowers provide food and shelter to the animals, and in turn, the animals facilitate the plants' reproduction by transferring their pollen.",
+    "target": "Innovation is a crucial element in the growth and development of businesses, markets, and society as a whole. It involves the practical implementation of creative ideas that result in the introduction of new products, services, and technologies or improvements in existing offerings. However, innovation requires funding, research, and collaboration to turn an idea into a marketable solution. Laboratories and experiments play a critical role in the early stages of innovation, allowing for testing and refining of concepts. Conferences serve as a platform to share knowledge and connect with potential collaborators. Collaboration is essential in bringing innovative solutions to fruition, as it enables cross-pollination of ideas and expertise. In short, innovation requires a curious mind and a collaborative spirit, along with research, experimentation, funding, and conferences to achieve success in today's fast-paced and ever-changing world."
+  },
+  "raw": {
+    "id": 276,
+    "lang": "en",
+    "system_a": "flower",
+    "system_b": "innovation",
+    "mappings": [
+      [
+        "flower",
+        "innovation"
+      ],
+      [
+        "water",
+        "funding"
+      ],
+      [
+        "stem",
+        "research"
+      ],
+      [
+        "soil",
+        "laboratory"
+      ],
+      [
+        "planting",
+        "experiment"
+      ],
+      [
+        "blossom",
+        "idea"
+      ],
+      [
+        "greenhouse",
+        "conference"
+      ],
+      [
+        "symbiosis",
+        "collaboration"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "Flowers are the reproductive structures found in flowering plants and play a crucial role in the plant's reproduction cycle. These flowers produce gametophytes which develop into the male and female reproductive cells. Some flowers self-pollinate while others need cross-pollination, which is facilitated by animals like bees and butterflies that are attracted by the bright colors and nectar produced by the flowers. Flowers are also appreciated by humans for their beauty, scent, and cultural significance. Proper planting of flowers requires a good amount of water, suitable soil, and a healthy stem. Greenhouses can be used for growing and nurturing flowers in a controlled environment. Flowers and animals have a symbiotic relationship where the flowers provide food and shelter to the animals, and in turn, the animals facilitate the plants' reproduction by transferring their pollen.",
+    "system_b_background": "Innovation is a crucial element in the growth and development of businesses, markets, and society as a whole. It involves the practical implementation of creative ideas that result in the introduction of new products, services, and technologies or improvements in existing offerings. However, innovation requires funding, research, and collaboration to turn an idea into a marketable solution. Laboratories and experiments play a critical role in the early stages of innovation, allowing for testing and refining of concepts. Conferences serve as a platform to share knowledge and connect with potential collaborators. Collaboration is essential in bringing innovative solutions to fruition, as it enables cross-pollination of ideas and expertise. In short, innovation requires a curious mind and a collaborative spirit, along with research, experimentation, funding, and conferences to achieve success in today's fast-paced and ever-changing world.",
+    "Explanation": [
+      "Blossoming corresponds to innovation: Blossoming refers to the proliferation and prosperity of plant flowers, displaying life force. Innovation means continuously attempting new ideas and methods to advance progress. Both represent a form of prosperity and development.",
+      "Water corresponds to funding: In the process of plant growth, water is an essential resource. In the innovation process, funding is an important resource to support research and experimentation. Here, water and funding are both crucial factors in promoting growth and development.",
+      "Stem corresponds to research: Plants require stems to support their growth. Innovation requires research to provide theoretical foundations and practical guidance. Both are critical parts that support and guide the entire process.",
+      "Soil corresponds to the laboratory: Soil provides plants with nutrients and is the basis for their growth. The laboratory provides an experimental environment and facilities for innovation research, serving as the foundation for innovation. Here, soil and laboratory are both fundamental infrastructures for growth and development.",
+      "Planting corresponds to experimentation: Planting is the process of plant growth, cultivating healthy plants through continuous experimentation and adjustment. The experiment in the innovation process is the process of trying new methods and techniques. Both represent the actions of exploration and experimentation.",
+      "Blooming corresponds to an idea: Blooming is an important stage in the process of plant growth, symbolizing success and achievement. In the innovation process, an idea is the key to achieving breakthroughs and success. Here, blooming and an idea both represent the generation of success and achievement.",
+      "Greenhouse corresponds to a conference: The greenhouse provides a suitable growth environment for plants, and the conference provides a platform for innovation teams to discuss and exchange ideas. Here, both the greenhouse and conference serve as environments and places that promote growth and development.",
+      "Symbiosis corresponds to collaboration: Symbiosis refers to the interdependence and mutual development between organisms. Collaboration in the innovation process is the process of mutual support and progress among team members. Here, symbiosis and collaboration both represent a relationship of synergy and mutual assistance."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6",
+        "n7": "n7",
+        "n8": "n8"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "flower",
+    "target": "innovation"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,130 @@
+{
+  "adaptation_id": "adapt_scar_0268",
+  "dataset": "scar",
+  "original_id": "268",
+  "source_object_id": "obj_group_scar_0268_src",
+  "target_object_id": "obj_group_scar_0268_tgt",
+  "faithful_mappings": [
+    [
+      "seeds",
+      "ideas"
+    ],
+    [
+      "planted",
+      "inspired"
+    ],
+    [
+      "fruitful",
+      "productive"
+    ],
+    [
+      "fruit",
+      "product"
+    ],
+    [
+      "grow",
+      "develop"
+    ],
+    [
+      "wither",
+      "fail"
+    ],
+    [
+      "blossom",
+      "succeed"
+    ]
+  ],
+  "explanation": [
+    "Seeds correspond to ideas: seeds are the starting point of plant growth, and ideas are the starting point for innovation and development. Both are the beginning and source of something.",
+    "Planted corresponds to inspired: planting is the process of burying seeds in soil to grow, and inspiring is the process of stimulating and guiding ideas. Both are nurturing and driving something.",
+    "Fruitful corresponds to productive: fruitfulness refers to plants bearing abundant fruit, and productivity refers to ideas bringing rich results. Both indicate the harvest and success of something.",
+    "Fruit corresponds to product: fruit is the result of plant growth, and product is the result of idea implementation. Both are the actual output and result of something.",
+    "Grow corresponds to develop: growth is the process from seed to maturity in plants, and development is the process from budding to realization in ideas. Both are the growth and progress of something.",
+    "Wither corresponds to fail: withering is the phenomenon of decline in the growth process of plants, and failure is the phenomenon of unsuccessfulness in the process of idea implementation. Both indicate the decline and difficulty of something.",
+    "Blossom corresponds to succeed: blooming is a successful manifestation in the growth process of plants, and success is an achievement manifestation in the process of idea implementation. Both indicate the smoothness and accomplishment of something."
+  ],
+  "background": {
+    "source": "Seeds are the beginnings of life for many plants, containing the essential nutrients and genetic material needed to produce a fruitful plant. These small but mighty packages contain an undeveloped plant embryo encased in a protective outer covering, ready to be planted and grow under the right conditions. Upon fertilization, the embryo develops from the zygote and forms a seed coat around the ovule, eventually growing within the mother plant before being released to grow on its own. In some cases, the ovary ripens into a fruit that contains the seeds and serves as a means of dissemination. Though certain modifications exist within different groups of plants, such as stone fruits with hardened layers and nuts enclosed within a hard shell, seeds remain a fundamental element in the growth and blossoming of many plant species. Without seeds, many of the world's forests and grasslands would wither away, unable to continue their cycle of growth and propagation.",
+    "target": "Ideas are the essence of human thinking and reasoning. They are the results of our thoughts, imagination and creativity, and can take the form of mental images or concepts that represent an object or a phenomenon. The ability to generate and understand ideas is a fundamental quality that defines our humanity. Ideas can emerge spontaneously or be inspired by our experiences, observations, and interactions with the world around us. They can be productive or unproductive, lead to success or failure, but they always have the potential to drive innovation and progress. Developing an idea into a product requires a strategic and thoughtful approach, including research, analysis, and planning. While failure is a possible outcome, a successful outcome can lead to significant achievements and improvements in people's lives. Therefore, nurturing and promoting ideas is important for individual and collective growth and advancement."
+  },
+  "raw": {
+    "id": 268,
+    "lang": "en",
+    "system_a": "seeds",
+    "system_b": "ideas",
+    "mappings": [
+      [
+        "seeds",
+        "ideas"
+      ],
+      [
+        "planted",
+        "inspired"
+      ],
+      [
+        "fruitful",
+        "productive"
+      ],
+      [
+        "fruit",
+        "product"
+      ],
+      [
+        "grow",
+        "develop"
+      ],
+      [
+        "wither",
+        "fail"
+      ],
+      [
+        "blossom",
+        "succeed"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "Seeds are the beginnings of life for many plants, containing the essential nutrients and genetic material needed to produce a fruitful plant. These small but mighty packages contain an undeveloped plant embryo encased in a protective outer covering, ready to be planted and grow under the right conditions. Upon fertilization, the embryo develops from the zygote and forms a seed coat around the ovule, eventually growing within the mother plant before being released to grow on its own. In some cases, the ovary ripens into a fruit that contains the seeds and serves as a means of dissemination. Though certain modifications exist within different groups of plants, such as stone fruits with hardened layers and nuts enclosed within a hard shell, seeds remain a fundamental element in the growth and blossoming of many plant species. Without seeds, many of the world's forests and grasslands would wither away, unable to continue their cycle of growth and propagation.",
+    "system_b_background": "Ideas are the essence of human thinking and reasoning. They are the results of our thoughts, imagination and creativity, and can take the form of mental images or concepts that represent an object or a phenomenon. The ability to generate and understand ideas is a fundamental quality that defines our humanity. Ideas can emerge spontaneously or be inspired by our experiences, observations, and interactions with the world around us. They can be productive or unproductive, lead to success or failure, but they always have the potential to drive innovation and progress. Developing an idea into a product requires a strategic and thoughtful approach, including research, analysis, and planning. While failure is a possible outcome, a successful outcome can lead to significant achievements and improvements in people's lives. Therefore, nurturing and promoting ideas is important for individual and collective growth and advancement.",
+    "Explanation": [
+      "Seeds correspond to ideas: seeds are the starting point of plant growth, and ideas are the starting point for innovation and development. Both are the beginning and source of something.",
+      "Planted corresponds to inspired: planting is the process of burying seeds in soil to grow, and inspiring is the process of stimulating and guiding ideas. Both are nurturing and driving something.",
+      "Fruitful corresponds to productive: fruitfulness refers to plants bearing abundant fruit, and productivity refers to ideas bringing rich results. Both indicate the harvest and success of something.",
+      "Fruit corresponds to product: fruit is the result of plant growth, and product is the result of idea implementation. Both are the actual output and result of something.",
+      "Grow corresponds to develop: growth is the process from seed to maturity in plants, and development is the process from budding to realization in ideas. Both are the growth and progress of something.",
+      "Wither corresponds to fail: withering is the phenomenon of decline in the growth process of plants, and failure is the phenomenon of unsuccessfulness in the process of idea implementation. Both indicate the decline and difficulty of something.",
+      "Blossom corresponds to succeed: blooming is a successful manifestation in the growth process of plants, and success is an achievement manifestation in the process of idea implementation. Both indicate the smoothness and accomplishment of something."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6",
+        "n7": "n7"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "seeds",
+    "target": "ideas"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

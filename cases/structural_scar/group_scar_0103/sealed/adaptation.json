@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0103",
+  "dataset": "scar",
+  "original_id": "103",
+  "source_object_id": "obj_group_scar_0103_src",
+  "target_object_id": "obj_group_scar_0103_tgt",
+  "faithful_mappings": [
+    [
+      "Element properties",
+      "personality traits"
+    ],
+    [
+      "chemical reaction",
+      "Interaction between people"
+    ],
+    [
+      "The role of different substances",
+      "roles in different contexts"
+    ]
+  ],
+  "explanation": [
+    "Element properties correspond to personality traits: In chemical elements, element properties refer to the chemical and physical characteristics of elements. In the personality traits of individuals, they refer to characteristics such as personality, habits, and interests. Both represent unique attributes and features in their respective fields.",
+    "Chemical reactions correspond to interactions between people: In chemical elements, chemical reactions describe how different elements interact with each other and produce new substances. In interpersonal relationships, the interactions between people include social processes such as communication, collaboration, and competition. Both describe interactions and mutual actions in their respective fields.",
+    "The roles of different substances correspond to roles in different contexts: In chemical elements, the roles of different substances refer to the properties and functions of elements in different compounds or substances. In human contexts, the roles in different environments refer to the roles individuals play in different social backgrounds, families, work, and other environments. Both describe behaviors and functions in different contexts in their respective fields."
+  ],
+  "background": {
+    "source": "A chemical element is a fundamental building block of matter that cannot be broken down into simpler substances. Each element is characterized by the number of protons in its nucleus, which determines its unique properties. When elements participate in chemical reactions, they can be combined or rearranged to form different compounds. While some elements, such as silver and gold, occur naturally in a pure form, most are found in complex compounds and mixtures. The discovery and classification of elements has a long history, and modern scientists continue to explore and discover new ones. The periodic table is a valuable tool used by chemists to understand the properties and relationships between elements.",
+    "target": "The human species, Homo sapiens, is a remarkable and complex form of great ape that is distinguishable from other primates through bipedalism and an extraordinary cognitive capacity. Humans have formed social structures that range from family units to political states, leading to a diverse range of values, social norms, languages, and rituals. Humans have a diverse range of personality traits and play varying roles in different contexts. Throughout history, humans have evolved from nomadic hunter-gatherers to permanent settlements and civilizations, using scientific, technological, philosophical, mythological, and religious frameworks to understand and influence the world around them. The human brain is highly developed, capable of episodic memory, introspection, and great cognitive reasoning, which have facilitated language, art, and trade, defining aspects of human society."
+  },
+  "raw": {
+    "id": 103,
+    "lang": "en",
+    "system_a": "chemical element",
+    "system_b": "human",
+    "mappings": [
+      [
+        "Element properties",
+        "personality traits"
+      ],
+      [
+        "chemical reaction",
+        "Interaction between people"
+      ],
+      [
+        "The role of different substances",
+        "roles in different contexts"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "A chemical element is a fundamental building block of matter that cannot be broken down into simpler substances. Each element is characterized by the number of protons in its nucleus, which determines its unique properties. When elements participate in chemical reactions, they can be combined or rearranged to form different compounds. While some elements, such as silver and gold, occur naturally in a pure form, most are found in complex compounds and mixtures. The discovery and classification of elements has a long history, and modern scientists continue to explore and discover new ones. The periodic table is a valuable tool used by chemists to understand the properties and relationships between elements.",
+    "system_b_background": "The human species, Homo sapiens, is a remarkable and complex form of great ape that is distinguishable from other primates through bipedalism and an extraordinary cognitive capacity. Humans have formed social structures that range from family units to political states, leading to a diverse range of values, social norms, languages, and rituals. Humans have a diverse range of personality traits and play varying roles in different contexts. Throughout history, humans have evolved from nomadic hunter-gatherers to permanent settlements and civilizations, using scientific, technological, philosophical, mythological, and religious frameworks to understand and influence the world around them. The human brain is highly developed, capable of episodic memory, introspection, and great cognitive reasoning, which have facilitated language, art, and trade, defining aspects of human society.",
+    "Explanation": [
+      "Element properties correspond to personality traits: In chemical elements, element properties refer to the chemical and physical characteristics of elements. In the personality traits of individuals, they refer to characteristics such as personality, habits, and interests. Both represent unique attributes and features in their respective fields.",
+      "Chemical reactions correspond to interactions between people: In chemical elements, chemical reactions describe how different elements interact with each other and produce new substances. In interpersonal relationships, the interactions between people include social processes such as communication, collaboration, and competition. Both describe interactions and mutual actions in their respective fields.",
+      "The roles of different substances correspond to roles in different contexts: In chemical elements, the roles of different substances refer to the properties and functions of elements in different compounds or substances. In human contexts, the roles in different environments refer to the roles individuals play in different social backgrounds, families, work, and other environments. Both describe behaviors and functions in different contexts in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "chemical element",
+    "target": "human"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

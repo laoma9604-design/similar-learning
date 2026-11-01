@@ -1,6 +1,6 @@
 {
-  "schema_version": "topoadv-schema-0.3.0-draft",
-  "status": "draft-v4，待 B/C 复核冻结（object 新增 relation_type / split 两个字段；function/baseline/scales 已对齐 case-fixtures.json 写法；audit 记录按 C 反馈：两域调用/缓存拆分、加 status、Ebar 移交 A 独立评价）",
+  "schema_version": "topoadv-schema-0.3.1",
+  "status": "draft-v5，待 B/C 复核冻结（v5：adaptation 新增 available_checks / multiple_mapping_type，用于声明该对象有原始依据可核验哪些结构检查项、以及多值映射的结构类型；metrics.build_checks 据此决定检查清单，SCAR/SCAN 的结构模式不再被 MRED 的 11 项清单判失败。v4：object 新增 relation_type / split；function/baseline/scales 对齐 case-fixtures.json；audit 记录按 C 反馈拆分两域调用/缓存、加 status、Ebar 移交 A 独立评价）",
   "source": "research-principles-experiment-taskbook.pdf sec:representation / sec:case-handoff / sec:data / tab:records；case-fixtures.json（verify_cases.py 生成）作为字段写法的基准",
   "conventions": {
     "mapping_direction": "node_map / edge_map 一律 source→target（源域键、目标域值）",
@@ -11,123 +11,409 @@
     "direction_tokens": "edge 的 input_nodes 为 '-' 端，output_nodes 为 '+' 端",
     "unbounded_domain": "legal_domain 用 null 表示无穷：[lo, null] 意为下界 lo 上界 +∞，[null, hi] 意为下界 -∞；求值器须按 ±∞ 处理 null",
     "baseline_alignment": "baseline / input_scales 是列表，按 controllable_inputs 的顺序对齐；baseline_output / output_scale 是单输出标量（多输出留待扩展）",
-    "split_rule": "数据划分 70/15/15，种子 20261007，同对象派生/正负任务同组；split 取值 dev/train/val/test，dev 为开发验证样例，不进入正式评测"
+    "split_rule": "数据划分 70/15/15，种子 20261007，同对象派生/正负任务同组；split 取值 dev/train/val/test，dev 为开发验证样例，不进入正式评测",
+    "struct_check_availability": "结构检查项的可核验性由 adaptation.available_checks 声明，不从数据里猜：原文提供什么标注就算什么项。SCAR/SCAN 走结构模式（L957），不执行响应检验，其 SF/SIPR 与 MRED 的 SF/SIPR 分母不同，跨数据集比较须同时报告 SF_common（仅取两者都支持的类别）。",
+    "multi_valid_mapping": "存在多个合理映射时保存有效映射集合（adaptation.valid_mappings）并在参考侧标注multiple_mapping_type；评价器对候选与集合逐条比对，命中任一条即算全通过，不得因候选不等于某一条参考映射而判错。"
   },
   "records": {
     "object": {
       "desc": "知识对象 = 六元组 H=(V,E,τ_V,τ_E,ρ,Φ) + 基准/尺度 + relation_type(类比关系类型) + split(数据划分)。object_kind=structural 时无 function/baseline 等求值字段（SCAR/SCAN）；=mechanistic 时必须有求值字段（MRED）。function/baseline/scales 的写法对齐 case-fixtures.json。不含答案，原始证据只放 adaptation。",
       "fields": {
-        "object_id": {"type": "string", "required": true, "desc": "稳定 ID（对应 case-fixtures 的 id）"},
-        "object_kind": {"type": "enum[mechanistic,structural]", "required": true, "desc": "是否有可执行响应函数"},
-        "relation_type": {"type": "string", "required": true, "desc": "类比关系类型：机制类=edge_type（multiplicative_growth / linear_drive_resistance / saturation_response）；结构类=类比概念（中心-环绕 / 系统-子系统等，T02 归纳定）"},
-        "split": {"type": "enum[dev,train,val,test]", "required": true, "desc": "数据划分：dev=开发验证样例（不进正式评测），train/val/test 按 70/15/15、种子 20261007"},
-        "label": {"type": "string", "required": true, "desc": "人类可读名，如“银行复利”"},
-        "nodes": {"type": "array", "required": true, "desc": "节点列表，每项 {node_id,label,type}，type∈τ_V"},
-        "edges": {"type": "array", "required": true, "desc": "超边列表，每项 {edge_id,edge_type,input_nodes[],output_nodes[],roles{node_id:role}}，edge_type∈τ_E，roles 为 ρ(v,e)"},
-        "function": {"type": "string", "required": "mechanistic 时必填", "desc": "响应函数表达式，用节点 ID 直接书写（如 \"A_t * (1 + rate_t)\"，常量内联如 \"N_t**2 / 1000 * (1 + rate_s)\"）。单个函数、单输出；多关系求值顺序留待扩展（首批无环单关系）。与 a_data/runtime.py 的 expression_value 对齐"},
-        "controllable_inputs": {"type": "array", "required": "mechanistic 时必填", "desc": "可干预输入节点 ID（对应 PDF 的 J），顺序即 baseline/input_scales 的对齐顺序"},
-        "designated_outputs": {"type": "array", "required": "mechanistic 时必填", "desc": "指定输出节点 ID（对应 PDF 的 Y），首批单输出"},
-        "baseline": {"type": "array", "required": "mechanistic 时必填", "desc": "基准输入值列表，按 controllable_inputs 顺序对齐（如 [5000, 0.1]）"},
-        "input_scales": {"type": "array", "required": "mechanistic 时必填", "desc": "输入参考尺度列表 a>0，按 controllable_inputs 顺序对齐"},
-        "baseline_output": {"type": "number", "required": "mechanistic 时必填", "desc": "基准输出值（单输出标量）"},
-        "output_scale": {"type": "number", "required": "mechanistic 时必填", "desc": "输出参考尺度（单输出标量）"},
-        "legal_domain": {"type": "object", "required": "mechanistic 时必填", "desc": "合法输入范围（绝对值），键 node_id，值 [lo,hi]，null=无穷"},
-        "intervention_bounds": {"type": "object", "required": "mechanistic 时必填", "desc": "无量纲扰动 u 的允许范围，键 node_id，值 [lo,hi]，通常 [-0.2,0.2]"},
-        "provenance": {"type": "object", "required": true, "desc": "{dataset,original_id,structure_source(provided|inferred)}；license/version/commit 统一记录在 data/数据来源说明.md，不逐对象重复"}
+        "object_id": {
+          "type": "string",
+          "required": true,
+          "desc": "稳定 ID（对应 case-fixtures 的 id）"
+        },
+        "object_kind": {
+          "type": "enum[mechanistic,structural]",
+          "required": true,
+          "desc": "是否有可执行响应函数"
+        },
+        "relation_type": {
+          "type": "string",
+          "required": true,
+          "desc": "类比关系类型：机制类=edge_type（multiplicative_growth / linear_drive_resistance / saturation_response）；结构类=类比概念（中心-环绕 / 系统-子系统等，T02 归纳定）"
+        },
+        "split": {
+          "type": "enum[dev,train,val,test]",
+          "required": true,
+          "desc": "数据划分：dev=开发验证样例（不进正式评测），train/val/test 按 70/15/15、种子 20261007"
+        },
+        "label": {
+          "type": "string",
+          "required": true,
+          "desc": "人类可读名，如“银行复利”"
+        },
+        "nodes": {
+          "type": "array",
+          "required": true,
+          "desc": "节点列表，每项 {node_id,label,type}，type∈τ_V"
+        },
+        "edges": {
+          "type": "array",
+          "required": true,
+          "desc": "超边列表，每项 {edge_id,edge_type,input_nodes[],output_nodes[],roles{node_id:role}}，edge_type∈τ_E，roles 为 ρ(v,e)"
+        },
+        "function": {
+          "type": "string",
+          "required": "mechanistic 时必填",
+          "desc": "响应函数表达式，用节点 ID 直接书写（如 \"A_t * (1 + rate_t)\"，常量内联如 \"N_t**2 / 1000 * (1 + rate_s)\"）。单个函数、单输出；多关系求值顺序留待扩展（首批无环单关系）。与 a_data/runtime.py 的 expression_value 对齐"
+        },
+        "controllable_inputs": {
+          "type": "array",
+          "required": "mechanistic 时必填",
+          "desc": "可干预输入节点 ID（对应 PDF 的 J），顺序即 baseline/input_scales 的对齐顺序"
+        },
+        "designated_outputs": {
+          "type": "array",
+          "required": "mechanistic 时必填",
+          "desc": "指定输出节点 ID（对应 PDF 的 Y），首批单输出"
+        },
+        "baseline": {
+          "type": "array",
+          "required": "mechanistic 时必填",
+          "desc": "基准输入值列表，按 controllable_inputs 顺序对齐（如 [5000, 0.1]）"
+        },
+        "input_scales": {
+          "type": "array",
+          "required": "mechanistic 时必填",
+          "desc": "输入参考尺度列表 a>0，按 controllable_inputs 顺序对齐"
+        },
+        "baseline_output": {
+          "type": "number",
+          "required": "mechanistic 时必填",
+          "desc": "基准输出值（单输出标量）"
+        },
+        "output_scale": {
+          "type": "number",
+          "required": "mechanistic 时必填",
+          "desc": "输出参考尺度（单输出标量）"
+        },
+        "legal_domain": {
+          "type": "object",
+          "required": "mechanistic 时必填",
+          "desc": "合法输入范围（绝对值），键 node_id，值 [lo,hi]，null=无穷"
+        },
+        "intervention_bounds": {
+          "type": "object",
+          "required": "mechanistic 时必填",
+          "desc": "无量纲扰动 u 的允许范围，键 node_id，值 [lo,hi]，通常 [-0.2,0.2]"
+        },
+        "provenance": {
+          "type": "object",
+          "required": true,
+          "desc": "{dataset,original_id,structure_source(provided|inferred)}；license/version/commit 统一记录在 data/数据来源说明.md，不逐对象重复"
+        }
       }
     },
     "vocab": {
       "desc": "类型/角色词表，见 T01-vocabulary.json。object/task 只引用版本号，不内嵌词表。",
       "fields": {
-        "vocab_version": {"type": "string", "required": true},
-        "node_types": {"type": "array", "required": true},
-        "edge_types": {"type": "array", "required": true},
-        "direction": {"type": "object", "required": true}
+        "vocab_version": {
+          "type": "string",
+          "required": true
+        },
+        "node_types": {
+          "type": "array",
+          "required": true
+        },
+        "edge_types": {
+          "type": "array",
+          "required": true
+        },
+        "direction": {
+          "type": "object",
+          "required": true
+        }
       }
     },
     "task": {
       "desc": "方法输入：目标 + 候选源域库 + 可干预输入 + 指定输出 + 干预范围。不含标签、见证点、正确源域。task_id 不编码标签。",
       "fields": {
-        "task_id": {"type": "string", "required": true},
-        "group_id": {"type": "string", "required": true, "desc": "基础组 ID，正负任务同组"},
-        "target_id": {"type": "string", "required": true},
-        "source_ids": {"type": "array", "required": true, "desc": "候选源域库 object_id 列表"},
-        "schema_version": {"type": "string", "required": true},
-        "vocab_version": {"type": "string", "required": true},
-        "intervenable_inputs": {"type": "array", "required": true, "desc": "目标域可干预输入节点 ID（J）"},
-        "specified_outputs": {"type": "array", "required": true, "desc": "目标域指定输出节点 ID（Y）"},
-        "intervention_range": {"type": "object", "required": true, "desc": "键 node_id，值 [u_lo,u_hi]"}
+        "task_id": {
+          "type": "string",
+          "required": true
+        },
+        "group_id": {
+          "type": "string",
+          "required": true,
+          "desc": "基础组 ID，正负任务同组"
+        },
+        "target_id": {
+          "type": "string",
+          "required": true
+        },
+        "source_ids": {
+          "type": "array",
+          "required": true,
+          "desc": "候选源域库 object_id 列表"
+        },
+        "schema_version": {
+          "type": "string",
+          "required": true
+        },
+        "vocab_version": {
+          "type": "string",
+          "required": true
+        },
+        "intervenable_inputs": {
+          "type": "array",
+          "required": true,
+          "desc": "目标域可干预输入节点 ID（J）"
+        },
+        "specified_outputs": {
+          "type": "array",
+          "required": true,
+          "desc": "目标域指定输出节点 ID（Y）"
+        },
+        "intervention_range": {
+          "type": "object",
+          "required": true,
+          "desc": "键 node_id，值 [u_lo,u_hi]"
+        }
       }
     },
     "adaptation": {
       "desc": "公开数据适配的封存复核材料（A 的 T02 交付）。原始概念对应、解释、背景与结构标注证据只放这里，供 A 维护、评价器与受邀复核的 B/C 读取，不进入方法输入。",
       "fields": {
-        "adaptation_id": {"type": "string", "required": true},
-        "dataset": {"type": "enum[scar,scan]", "required": true},
-        "original_id": {"type": "string", "required": true, "desc": "SCAR 的 id，或 SCAN 的 target->source 组键"},
-        "source_object_id": {"type": "string", "required": true, "desc": "本组源域对象（映射方向 source→target 的起点）"},
-        "target_object_id": {"type": "string", "required": true, "desc": "本组目标域对象"},
-        "faithful_mappings": {"type": "array", "required": true, "desc": "原始概念对应，source→target，[[a,b],...]；可能是非双射(一对多/多对一)，如实保留，不强行改成双射"},
-        "explanation": {"type": "array", "required": false, "desc": "逐对解释原文（SCAR 的 Explanation）"},
-        "background": {"type": "object", "required": false, "desc": "{source,target} 两系统背景原文"},
-        "raw": {"type": "object|array", "required": true, "desc": "原始数据逐字留存：SCAR 单条 JSON 原文；SCAN 该组全部 CSV 行。供 B/C 复核结构标注的证据"},
-        "structure_source": {"type": "enum[provided,inferred]", "required": true, "desc": "节点/关系/类型/角色标注是原文提供还是推断"},
-        "annotation_status": {"type": "enum[confirmed,non_bijective,to_review,excluded]", "required": true},
-        "valid_mappings": {"type": "array", "required": false, "desc": "结构化的有效映射集，source→target，[{node_map,edge_map}]；一个源多解列多条(如置换对称)；to_review 时可为空"}
+        "adaptation_id": {
+          "type": "string",
+          "required": true
+        },
+        "dataset": {
+          "type": "enum[scar,scan]",
+          "required": true
+        },
+        "original_id": {
+          "type": "string",
+          "required": true,
+          "desc": "SCAR 的 id，或 SCAN 的 target->source 组键"
+        },
+        "source_object_id": {
+          "type": "string",
+          "required": true,
+          "desc": "本组源域对象（映射方向 source→target 的起点）"
+        },
+        "target_object_id": {
+          "type": "string",
+          "required": true,
+          "desc": "本组目标域对象"
+        },
+        "faithful_mappings": {
+          "type": "array",
+          "required": true,
+          "desc": "原始概念对应，source→target，[[a,b],...]；可能是非双射(一对多/多对一)，如实保留，不强行改成双射"
+        },
+        "explanation": {
+          "type": "array",
+          "required": false,
+          "desc": "逐对解释原文（SCAR 的 Explanation）"
+        },
+        "background": {
+          "type": "object",
+          "required": false,
+          "desc": "{source,target} 两系统背景原文"
+        },
+        "raw": {
+          "type": "object|array",
+          "required": true,
+          "desc": "原始数据逐字留存：SCAR 单条 JSON 原文；SCAN 该组全部 CSV 行。供 B/C 复核结构标注的证据"
+        },
+        "structure_source": {
+          "type": "enum[provided,inferred]",
+          "required": true,
+          "desc": "节点/关系/类型/角色标注是原文提供还是推断"
+        },
+        "annotation_status": {
+          "type": "enum[confirmed,non_bijective,to_review,excluded]",
+          "required": true
+        },
+        "valid_mappings": {
+          "type": "array",
+          "required": false,
+          "desc": "结构化的有效映射集，source→target，[{node_map,edge_map}]；一个源多解列多条(如置换对称)；to_review 时可为空"
+        },
+        "available_checks": {
+          "type": "array",
+          "required": true,
+          "desc": "该组对象**有原始依据**可核验的结构检查项类别，取值见 metrics.CHECK_GROUPS：node_bijection / edge_bijection / node_type / edge_type / input_output_set / role。评价器只把这些类别计入该任务的检查清单分母；未列出的类别不判失败、直接不进分母（依据 L1034「清单由完整参考结构确定」）。禁止为凑满清单而把缺失标注推断成 provided（规范1）。例：SCAR 原始只给概念对与逐对解释 → 只有 node_bijection（及多值一致性）；MRED 全六类。"
+        },
+        "multiple_mapping_type": {
+          "type": "enum[none, one_to_many, many_to_one, both, permutation_symmetric]",
+          "required": true,
+          "desc": "该组有效映射的结构类型（规范3：一个任务可能存在多个合理映射，不能只凭一个参考映射判其他合理映射错误）。none=唯一参考映射；one_to_many=源端一对多；many_to_one=多对一；both=两端都有重复；permutation_symmetric=存在置换对称（L1008 要求检查所有模块置换）。非 none 时 valid_mappings 必须列出全部有效映射或给出有效性条件。"
+        }
       }
     },
     "reference": {
       "desc": "封存参考答案，仅 A 维护、评价器读取。",
       "fields": {
-        "task_id": {"type": "string", "required": true},
-        "label": {"type": "enum[positive,negative]", "required": true, "desc": "正任务=库中至少一个有效映射；负任务=库中无有效映射"},
-        "valid": {"type": "array", "required": "正任务必填（负任务为空）", "desc": "有效源域及映射列表 [{source_id,node_map,edge_map}]，source→target；多个源各一条、一个源多解列多条(置换对称)；不把不同于单一答案的正确映射判错"},
-        "exclusions": {"type": "array", "required": "负任务必填", "desc": "逐候选排除依据 [{source_id,reason,witness}]，witness 为超过参考容差的合法干预及两域输出/误差；共同证明整个库无有效映射"},
-        "reference_tolerance": {"type": "object", "required": true, "desc": "{min_ctc,max_error}，数据版本固定的参考容差，不随方法 γ/ζ 调整"},
-        "status": {"type": "enum[bijective_confirmed,non_bijective,to_review,excluded]", "required": true, "desc": "参考映射本身的适配状态"}
+        "task_id": {
+          "type": "string",
+          "required": true
+        },
+        "label": {
+          "type": "enum[positive,negative]",
+          "required": true,
+          "desc": "正任务=库中至少一个有效映射；负任务=库中无有效映射"
+        },
+        "valid": {
+          "type": "array",
+          "required": "正任务必填（负任务为空）",
+          "desc": "有效源域及映射列表 [{source_id,node_map,edge_map}]，source→target；多个源各一条、一个源多解列多条(置换对称)；不把不同于单一答案的正确映射判错"
+        },
+        "exclusions": {
+          "type": "array",
+          "required": "负任务必填",
+          "desc": "逐候选排除依据 [{source_id,reason,witness}]，witness 为超过参考容差的合法干预及两域输出/误差；共同证明整个库无有效映射"
+        },
+        "reference_tolerance": {
+          "type": "object",
+          "required": true,
+          "desc": "{min_ctc,max_error}，数据版本固定的参考容差，不随方法 γ/ζ 调整"
+        },
+        "status": {
+          "type": "enum[bijective_confirmed,non_bijective,to_review,excluded]",
+          "required": true,
+          "desc": "参考映射本身的适配状态"
+        }
       }
     },
     "candidate": {
       "desc": "B（或基线适配器）输出。原始候选在结构剔除前保存，不能覆盖。",
       "fields": {
-        "candidate_id": {"type": "string", "required": true},
-        "task_id": {"type": "string", "required": true},
-        "source_id": {"type": "string", "required": true},
-        "node_map": {"type": "object", "required": true, "desc": "source→target 双射"},
-        "edge_map": {"type": "object", "required": true, "desc": "source→target 双射"},
-        "raw_score": {"type": "number", "required": true},
-        "generation_order": {"type": "integer", "required": true},
-        "method": {"type": "string", "required": true},
-        "structure_check": {"type": "object", "required": true, "desc": "{passed, failed_items[], per_item[]}，失败项也保留供原始结构指标统计"}
+        "candidate_id": {
+          "type": "string",
+          "required": true
+        },
+        "task_id": {
+          "type": "string",
+          "required": true
+        },
+        "source_id": {
+          "type": "string",
+          "required": true
+        },
+        "node_map": {
+          "type": "object",
+          "required": true,
+          "desc": "source→target 双射"
+        },
+        "edge_map": {
+          "type": "object",
+          "required": true,
+          "desc": "source→target 双射"
+        },
+        "raw_score": {
+          "type": "number",
+          "required": true
+        },
+        "generation_order": {
+          "type": "integer",
+          "required": true
+        },
+        "method": {
+          "type": "string",
+          "required": true
+        },
+        "structure_check": {
+          "type": "object",
+          "required": true,
+          "desc": "{passed, failed_items[], per_item[]}，失败项也保留供原始结构指标统计"
+        }
       }
     },
     "audit": {
       "desc": "C 的统一求值接口输出。Ebar（留出点平均误差）不在此记录，由 A 的独立评价(evaluate)在留出干预上计算。",
       "fields": {
-        "candidate_id": {"type": "string", "required": true},
-        "task_id": {"type": "string", "required": true},
-        "status": {"type": "enum[completed,incomplete,infeasible]", "required": true, "desc": "检验状态类别：completed=至少完成一个完整干预点；incomplete=预算耗尽/初始化未完成、零个完整干预点（此时 CTC/Rhat 无定义，记 null，不能按零误差通过）；infeasible=映射缺需要改变的变量、无法执行。termination_reason 写具体原因"},
-        "interventions": {"type": "array", "required": true, "desc": "每项 {u,target_input,source_input,target_output,source_output,r_target,r_source,error,target_new_calls,source_new_calls,target_cache_hit,source_cache_hit}；新增调用与缓存命中按目标域/源域分别记录，一个点的新增调用=两域之和(0/1/2)"},
-        "CTC": {"type": "number", "required": true, "desc": "已检查点方向一致率；status=incomplete 时无定义记 null"},
-        "Rhat": {"type": "number", "required": true, "desc": "已检查点的最大平均响应误差；status=incomplete 时无定义记 null"},
-        "baseline_calls": {"type": "integer", "required": true, "desc": "单列，不占每候选干预预算"},
-        "total_new_calls": {"type": "integer", "required": true, "desc": "新增函数调用总数 = Σ(target_new_calls + source_new_calls)"},
-        "completed_interventions": {"type": "integer", "required": true},
-        "termination_reason": {"type": "string", "required": true, "desc": "具体原因（如预算耗尽/缺映射变量），status 写原因所属的类别"}
+        "candidate_id": {
+          "type": "string",
+          "required": true
+        },
+        "task_id": {
+          "type": "string",
+          "required": true
+        },
+        "status": {
+          "type": "enum[completed,incomplete,infeasible]",
+          "required": true,
+          "desc": "检验状态类别：completed=至少完成一个完整干预点；incomplete=预算耗尽/初始化未完成、零个完整干预点（此时 CTC/Rhat 无定义，记 null，不能按零误差通过）；infeasible=映射缺需要改变的变量、无法执行。termination_reason 写具体原因"
+        },
+        "interventions": {
+          "type": "array",
+          "required": true,
+          "desc": "每项 {u,target_input,source_input,target_output,source_output,r_target,r_source,error,target_new_calls,source_new_calls,target_cache_hit,source_cache_hit}；新增调用与缓存命中按目标域/源域分别记录，一个点的新增调用=两域之和(0/1/2)"
+        },
+        "CTC": {
+          "type": "number",
+          "required": true,
+          "desc": "已检查点方向一致率；status=incomplete 时无定义记 null"
+        },
+        "Rhat": {
+          "type": "number",
+          "required": true,
+          "desc": "已检查点的最大平均响应误差；status=incomplete 时无定义记 null"
+        },
+        "baseline_calls": {
+          "type": "integer",
+          "required": true,
+          "desc": "单列，不占每候选干预预算"
+        },
+        "total_new_calls": {
+          "type": "integer",
+          "required": true,
+          "desc": "新增函数调用总数 = Σ(target_new_calls + source_new_calls)"
+        },
+        "completed_interventions": {
+          "type": "integer",
+          "required": true
+        },
+        "termination_reason": {
+          "type": "string",
+          "required": true,
+          "desc": "具体原因（如预算耗尽/缺映射变量），status 写原因所属的类别"
+        }
       }
     },
     "prediction": {
       "desc": "统一运行入口输出。",
       "fields": {
-        "task_id": {"type": "string", "required": true},
-        "returned": {"type": "boolean", "required": true},
-        "final_candidate_id": {"type": "string", "required": false},
-        "source_id": {"type": "string", "required": false},
-        "rejection_reason": {"type": "string", "required": false},
-        "stage_timings": {"type": "object", "required": true},
-        "model_calls": {"type": "integer", "required": true},
-        "function_calls": {"type": "integer", "required": true},
-        "explanation_file": {"type": "string", "required": false}
+        "task_id": {
+          "type": "string",
+          "required": true
+        },
+        "returned": {
+          "type": "boolean",
+          "required": true
+        },
+        "final_candidate_id": {
+          "type": "string",
+          "required": false
+        },
+        "source_id": {
+          "type": "string",
+          "required": false
+        },
+        "rejection_reason": {
+          "type": "string",
+          "required": false
+        },
+        "stage_timings": {
+          "type": "object",
+          "required": true
+        },
+        "model_calls": {
+          "type": "integer",
+          "required": true
+        },
+        "function_calls": {
+          "type": "integer",
+          "required": true
+        },
+        "explanation_file": {
+          "type": "string",
+          "required": false
+        }
       }
     }
   }

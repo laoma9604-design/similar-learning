@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0335",
+  "dataset": "scar",
+  "original_id": "335",
+  "source_object_id": "obj_group_scar_0335_src",
+  "target_object_id": "obj_group_scar_0335_tgt",
+  "faithful_mappings": [
+    [
+      "actor",
+      "athlete"
+    ],
+    [
+      "Role",
+      "Target"
+    ],
+    [
+      "stage",
+      "playing field"
+    ],
+    [
+      "audience",
+      "audience"
+    ]
+  ],
+  "explanation": [
+    "Actor corresponds to athlete: In drama, actors play various roles and present stories to the audience through their performances. In sports, athletes are people who compete to achieve their goals. Here, actors and athletes are both main players in their respective fields, playing important roles.",
+    "Role corresponds to target: The roles in drama are the various characters played by actors, who play important roles in the story. The target in sports is the result or honor that athletes strive for. In this analogy, both the roles and the targets are the core elements in their respective fields.",
+    "Stage corresponds to playing field: The stage in drama is where actors perform and where the story takes place. The playing field in sports is where athletes compete. Here, the stage and the playing field are both important places in their respective fields.",
+    "Audience corresponds to audience: The audience in drama and sports are the people who watch the performance or competition, providing feedback and support for the performers or athletes."
+  ],
+  "background": {
+    "source": "Drama is a form of fiction that is performed on stage, in a theatre, or on radio and television. It encompasses a variety of art forms such as plays, operas, mimes, and ballets. The term \"drama\" originates from a Greek word that means \"act\" or \"deed,\" highlighting the idea that drama is a form of art that is meant to be acted out. The two masks associated with drama represent the traditional generic division between comedy and tragedy. The enactment of drama presupposes collaborative modes of production and a collective form of reception. Drama is performed by actors on a stage before an audience, and the structure of dramatic texts is directly influenced by this collaborative production and collective reception. Drama can be combined with music as well as improvised to devise a dramatic script spontaneously before an audience. In short, drama is a collaborative form of art that involves actors, roles, a stage, and an audience, and is designed to be performed live.",
+    "target": "Competition is a ubiquitous phenomenon that can be observed almost everywhere, from the natural environment to human society. It is a rivalry that occurs when two or more parties strive for a common goal that cannot be shared, and where the gain of one party leads to the loss of another. Whether it's a game of chess or a race between athletes, competition requires a playing field, a target, and an audience to witness and appreciate the outcome. In the world of sports, competition takes center stage, as athletes compete against each other to prove their skills and abilities. However, competition is not limited to sports; it is an essential feature of market economies and businesses as well. Companies compete for the same group of customers by providing better quality services or improved products. Within the company, competition is stimulated to reach a higher quality of performance or product development. The psychology, sociology, and anthropology of competition are studied to uncover the natural urge of competition and its circumstances, the effects of competition on society, and how it manifests itself in various cultural settings. Mixtures of cooperation and competition are often observed, as two sides cooperate in competing, like two chess players."
+  },
+  "raw": {
+    "id": 335,
+    "lang": "en",
+    "system_a": "Drama",
+    "system_b": "Competition",
+    "mappings": [
+      [
+        "actor",
+        "athlete"
+      ],
+      [
+        "Role",
+        "Target"
+      ],
+      [
+        "stage",
+        "playing field"
+      ],
+      [
+        "audience",
+        "audience"
+      ]
+    ],
+    "system_a_domain": "Art",
+    "system_b_domain": "Sport",
+    "system_a_background": "Drama is a form of fiction that is performed on stage, in a theatre, or on radio and television. It encompasses a variety of art forms such as plays, operas, mimes, and ballets. The term \"drama\" originates from a Greek word that means \"act\" or \"deed,\" highlighting the idea that drama is a form of art that is meant to be acted out. The two masks associated with drama represent the traditional generic division between comedy and tragedy. The enactment of drama presupposes collaborative modes of production and a collective form of reception. Drama is performed by actors on a stage before an audience, and the structure of dramatic texts is directly influenced by this collaborative production and collective reception. Drama can be combined with music as well as improvised to devise a dramatic script spontaneously before an audience. In short, drama is a collaborative form of art that involves actors, roles, a stage, and an audience, and is designed to be performed live.",
+    "system_b_background": "Competition is a ubiquitous phenomenon that can be observed almost everywhere, from the natural environment to human society. It is a rivalry that occurs when two or more parties strive for a common goal that cannot be shared, and where the gain of one party leads to the loss of another. Whether it's a game of chess or a race between athletes, competition requires a playing field, a target, and an audience to witness and appreciate the outcome. In the world of sports, competition takes center stage, as athletes compete against each other to prove their skills and abilities. However, competition is not limited to sports; it is an essential feature of market economies and businesses as well. Companies compete for the same group of customers by providing better quality services or improved products. Within the company, competition is stimulated to reach a higher quality of performance or product development. The psychology, sociology, and anthropology of competition are studied to uncover the natural urge of competition and its circumstances, the effects of competition on society, and how it manifests itself in various cultural settings. Mixtures of cooperation and competition are often observed, as two sides cooperate in competing, like two chess players.",
+    "Explanation": [
+      "Actor corresponds to athlete: In drama, actors play various roles and present stories to the audience through their performances. In sports, athletes are people who compete to achieve their goals. Here, actors and athletes are both main players in their respective fields, playing important roles.",
+      "Role corresponds to target: The roles in drama are the various characters played by actors, who play important roles in the story. The target in sports is the result or honor that athletes strive for. In this analogy, both the roles and the targets are the core elements in their respective fields.",
+      "Stage corresponds to playing field: The stage in drama is where actors perform and where the story takes place. The playing field in sports is where athletes compete. Here, the stage and the playing field are both important places in their respective fields.",
+      "Audience corresponds to audience: The audience in drama and sports are the people who watch the performance or competition, providing feedback and support for the performers or athletes."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Drama",
+    "target": "Competition"
+  },
+  "domains": {
+    "source": "Art",
+    "target": "Sport"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

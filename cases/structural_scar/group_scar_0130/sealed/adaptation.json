@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0130",
+  "dataset": "scar",
+  "original_id": "130",
+  "source_object_id": "obj_group_scar_0130_src",
+  "target_object_id": "obj_group_scar_0130_tgt",
+  "faithful_mappings": [
+    [
+      "data",
+      "electric signal"
+    ],
+    [
+      "algorithm",
+      "Neurons"
+    ],
+    [
+      "deep learning",
+      "human learning"
+    ]
+  ],
+  "explanation": [
+    "Data corresponds to electric signals: In artificial intelligence, data is the foundation for training and optimizing algorithms. In the nervous system, electric signals are the way information is transmitted between neurons. Both are the basic information carriers in the system.",
+    "Algorithm corresponds to neurons: Algorithms in AI are the methods used to process data, perform calculations and solve problems. Neurons in the nervous system are the basic units for processing and transmitting electric signals. In this case, algorithms and neurons are both the information processing and computing components in the system.",
+    "Deep learning corresponds to human learning: Deep learning in AI is a method of training and optimizing algorithms through a large amount of data. Human learning in the nervous system is the process of improving cognition and behavior through continuously receiving and processing information. In this case, deep learning and human learning are both the learning and optimization mechanisms in the system."
+  ],
+  "background": {
+    "source": "Artificial Intelligence (AI) is a technology that aims to enable computers to perform tasks that normally require human intelligence. This is done using algorithms and deep learning techniques to analyze large amounts of data and make predictions or decisions based on that analysis. AI has numerous applications across a range of industries, including web search engines, recommendation systems, speech recognition, self-driving cars, creative tools, automated decision-making, and gaming. Despite its successes, AI has faced numerous challenges, including lack of funding, overhype, and concerns about its impact on society. Nonetheless, AI researchers continue to push the boundaries of what is possible in the field, and the potential benefits of AI are significant, making it a key technology of the 21st century.",
+    "target": "The nervous system is an intricate system in animals that detects environmental changes and coordinates the body's response by transmitting signals to and from different areas. It consists of two main parts, the central nervous system (CNS) and peripheral nervous system (PNS), with the former made up of the brain and spinal cord, while the latter is mainly composed of nerves that connect the CNS to every part of the body. The nervous system contains neurons that are specialized cells with structures that enable them to send signals quickly and accurately to other cells in the form of electric signals. Together, these neurons form neural pathways, circuits, and networks that generate an organism's perception of the world and shape its behavior. The nervous system also contains glial cells that provide structural and metabolic support. With its significant role in human learning and other bodily functions, understanding the complex nervous system and its disorders has been a crucial area of study for neurology and neuroscience."
+  },
+  "raw": {
+    "id": 130,
+    "lang": "en",
+    "system_a": "Artificial Intelligence",
+    "system_b": "The Nervous System",
+    "mappings": [
+      [
+        "data",
+        "electric signal"
+      ],
+      [
+        "algorithm",
+        "Neurons"
+      ],
+      [
+        "deep learning",
+        "human learning"
+      ]
+    ],
+    "system_a_domain": "Computer",
+    "system_b_domain": "Biology",
+    "system_a_background": "Artificial Intelligence (AI) is a technology that aims to enable computers to perform tasks that normally require human intelligence. This is done using algorithms and deep learning techniques to analyze large amounts of data and make predictions or decisions based on that analysis. AI has numerous applications across a range of industries, including web search engines, recommendation systems, speech recognition, self-driving cars, creative tools, automated decision-making, and gaming. Despite its successes, AI has faced numerous challenges, including lack of funding, overhype, and concerns about its impact on society. Nonetheless, AI researchers continue to push the boundaries of what is possible in the field, and the potential benefits of AI are significant, making it a key technology of the 21st century.",
+    "system_b_background": "The nervous system is an intricate system in animals that detects environmental changes and coordinates the body's response by transmitting signals to and from different areas. It consists of two main parts, the central nervous system (CNS) and peripheral nervous system (PNS), with the former made up of the brain and spinal cord, while the latter is mainly composed of nerves that connect the CNS to every part of the body. The nervous system contains neurons that are specialized cells with structures that enable them to send signals quickly and accurately to other cells in the form of electric signals. Together, these neurons form neural pathways, circuits, and networks that generate an organism's perception of the world and shape its behavior. The nervous system also contains glial cells that provide structural and metabolic support. With its significant role in human learning and other bodily functions, understanding the complex nervous system and its disorders has been a crucial area of study for neurology and neuroscience.",
+    "Explanation": [
+      "Data corresponds to electric signals: In artificial intelligence, data is the foundation for training and optimizing algorithms. In the nervous system, electric signals are the way information is transmitted between neurons. Both are the basic information carriers in the system.",
+      "Algorithm corresponds to neurons: Algorithms in AI are the methods used to process data, perform calculations and solve problems. Neurons in the nervous system are the basic units for processing and transmitting electric signals. In this case, algorithms and neurons are both the information processing and computing components in the system.",
+      "Deep learning corresponds to human learning: Deep learning in AI is a method of training and optimizing algorithms through a large amount of data. Human learning in the nervous system is the process of improving cognition and behavior through continuously receiving and processing information. In this case, deep learning and human learning are both the learning and optimization mechanisms in the system."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Artificial Intelligence",
+    "target": "The Nervous System"
+  },
+  "domains": {
+    "source": "Computer",
+    "target": "Biology"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

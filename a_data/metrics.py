@@ -78,13 +78,39 @@ def load_group(group_dir: Path) -> dict[str, Any]:
 # 检查清单（11 项对应的通用构造）
 # --------------------------------------------------------------------------
 
+# --------------------------------------------------------------------------
+# 检查项分六类（与 L1034 的统一清单一一对应）
+# 用于「该对象有原始依据可核验哪些项」的声明（adaptation.available_checks）
+# --------------------------------------------------------------------------
+CHECK_GROUPS = {
+    "node_bijection": "节点双射",
+    "edge_bijection": "超边双射",
+    "node_type": "每个节点的类型",
+    "edge_type": "每条超边的类型",
+    "input_output_set": "输入集合与输出集合",
+    "role": "每个节点-超边关联的角色",
+}
+
+# 检查项 key → 类别（key 形如 node_type:<node_id>、role:<node_id>）
+def _group_of(check_key: str) -> str:
+    return check_key.split(":", 1)[0]
+
+
 def build_checks(target: dict[str, Any], src: dict[str, Any],
-                 node_map: dict[str, str], edge_map: dict[str, str]) -> dict[str, dict[str, Any]]:
+                 node_map: dict[str, str], edge_map: dict[str, str],
+                 available: list[str] | None = None) -> dict[str, dict[str, Any]]:
     """按参考结构构造完整检查清单，逐项判定候选映射是否通过。
 
     返回 {check_key: {"kind": ..., "passed": bool, "detail": ...}}
     清单由**目标域完整参考结构**确定（任务书 L1034"清单由完整参考结构确定，
     未匹配项记失败"），所以先遍历 target，再看候选有没有给出对应匹配。
+
+    available: 该对象**有原始依据可核验**的检查项类别（Six 类，见 CHECK_GROUPS）。
+        None → 不做过滤，清单与 MRED 一致（11 项 / 二元 9 项），保持既有行为。
+        给出时 → 只保留声明为可用的类别；其余类别不进分母（不是判失败）。
+        依据：L1034「清单由完整参考结构确定」——SCAR 的完整参考结构里
+        本来就没有类型/角色/方向这三类标注，它们不属于该任务的检查项集合。
+        绝不用「词义相似」之类猜测去补这些项（规范1）。
     """
     checks: dict[str, dict[str, Any]] = {}
     tnodes, tedges = target["_nodes"], target["_edges"]
@@ -212,6 +238,20 @@ def build_checks(target: dict[str, Any], src: dict[str, Any],
                 "detail": f"{s_nid}({s_role}) -> {t_nid}({t_role})",
             }
 
+    # ---- 按「该对象有原始依据可核验的项」过滤 ----
+    # available=None 时不过滤（MRED 行为不变）；
+    # 给出时只保留声明可用的类别，其余整类不进分母（不是判失败）。
+    if available is not None:
+        keep = set(available)
+        unknown = keep - set(CHECK_GROUPS)
+        if unknown:
+            raise ValueError(f"available_checks 含未知类别: {sorted(unknown)}；"
+                             f"合法值: {sorted(CHECK_GROUPS)}")
+        checks = {k: v for k, v in checks.items() if _group_of(k) in keep}
+        if not checks:
+            raise ValueError("available_checks 过滤后检查清单为空，"
+                             "无法计算 SF/SIPR；请检查该对象的可用项声明")
+
     return checks
 
 
@@ -220,8 +260,17 @@ def build_checks(target: dict[str, Any], src: dict[str, Any],
 # --------------------------------------------------------------------------
 
 def score_prediction(target: dict[str, Any], src: dict[str, Any],
-                     prediction: dict[str, Any] | None) -> dict[str, Any]:
-    """对单个任务的候选映射打分。prediction=None 表示方法无候选（两项记零）。"""
+                     prediction: dict[str, Any] | None,
+                     available: list[str] | None = None) -> dict[str, Any]:
+    """对单个任务的候选映射打分。prediction=None 表示方法无候选（两项记零）。
+
+    available: 该对象有原始依据可核验的检查项类别；None 时与 MRED 口径一致。
+        另外支持检查两种「有效映射集合」情形：
+        · prediction 里带 "valid_set"（多条有效映射）→ 候选只要命中集合中任一条即算全通过
+        · 命中时 sf=1、sipr=1，并在返回值里记录 matched_index
+        依据 L1034 与规范3：一个任务可能存在多个合理映射，不能只凭单一参考映射
+        判定其他合理映射错误。
+    """
     if prediction is None:
         return {
             "has_candidate": False, "sf": 0.0, "sipr": 0,
@@ -229,8 +278,49 @@ def score_prediction(target: dict[str, Any], src: dict[str, Any],
             "error_breakdown": {"type_error": 0, "endpoint_error": 0, "role_error": 0},
         }
 
+    # ---- 有效映射集合优先（规范3）----
+    # 任务可能有多条合理映射（多对一结构、置换对称等）。此时不能只拿某一
+    # 参考映射去判，应把候选与集合逐条比对，命中任一条即视为全通过。
+    valid_set = prediction.get("valid_set")
+    if valid_set:
+        for idx, ref in enumerate(valid_set):
+            checks = build_checks(target, src,
+                                  ref["node_map"], ref["edge_map"],
+                                  available=available)
+            n_total = len(checks)
+            n_pass = sum(1 for c in checks.values() if c["passed"])
+            if n_total and n_pass == n_total:
+                return {
+                    "has_candidate": True, "sf": 1.0, "sipr": 1,
+                    "n_checks": n_total, "n_passed": n_pass,
+                    "checks": checks, "matched_index": idx,
+                    "valid_set_size": len(valid_set),
+                    "error_breakdown": {"type_error": 0, "endpoint_error": 0,
+                                        "role_error": 0},
+                }
+        # 一条都没命中：用第一条的检查明细报错（便于定位），SF/SIPR 记 0
+        ref = valid_set[0]
+        checks = build_checks(target, src, ref["node_map"], ref["edge_map"],
+                              available=available)
+        n_total = len(checks)
+        n_pass = sum(1 for c in checks.values() if c["passed"])
+        breakdown = {"type_error": 0, "endpoint_error": 0, "role_error": 0}
+        for c in checks.values():
+            if not c["passed"]:
+                breakdown[c["kind"]] += 1
+        return {
+            "has_candidate": True,
+            "sf": n_pass / n_total if n_total else 0.0,
+            "sipr": 0,
+            "n_checks": n_total, "n_passed": n_pass,
+            "checks": checks, "matched_index": None,
+            "valid_set_size": len(valid_set),
+            "error_breakdown": breakdown,
+        }
+
     checks = build_checks(target, src,
-                          prediction["node_map"], prediction["edge_map"])
+                          prediction["node_map"], prediction["edge_map"],
+                          available=available)
     n_total = len(checks)
     n_pass = sum(1 for c in checks.values() if c["passed"])
     breakdown = {"type_error": 0, "endpoint_error": 0, "role_error": 0}

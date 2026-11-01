@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0031",
+  "dataset": "scar",
+  "original_id": "31",
+  "source_object_id": "obj_group_scar_0031_src",
+  "target_object_id": "obj_group_scar_0031_tgt",
+  "faithful_mappings": [
+    [
+      "Gene",
+      "code"
+    ],
+    [
+      "mutation",
+      "mistake"
+    ],
+    [
+      "Express",
+      "run"
+    ]
+  ],
+  "explanation": [
+    "Gene corresponds to program code: Genes are carriers of genetic information in organisms and are responsible for controlling processes such as growth, development, and reproduction. Program code is the basic component of computer programs that serve specific functions. In this case, genes and program code are both basic units that control respective system functions.",
+    "Mutation corresponds to mistake: Gene mutation refers to changes in the gene sequence, which may result in the appearance of new traits or diseases in organisms. Program errors are errors in program code, which may make it impossible for programs to run normally or produce incorrect results. In this case, mutations and errors both represent unstable factors in their respective systems that may have a negative impact on functionality.",
+    "Express corresponds to run: Gene expression refers to the process by which organisms convert gene information into actual functionality, such as protein synthesis. Program running refers to the process by which computers execute specific tasks based on program code. In this case, expression and running represent the process of transforming basic units into actual functionality in their respective systems."
+  ],
+  "background": {
+    "source": "A gene mutation is a change in the DNA sequence of a specific gene in the genome of an organism, virus, or extrachromosomal DNA. These mutations arise from various factors such as replication errors, damage caused by exposure to UV radiation, or from mobile genetic elements. Mutations can result in a variety of changes, ranging from no effect to altering the gene's product, or preventing it from functioning properly. While some mutations can be neutral or marginally beneficial, others can cause harmful effects. Gene mutations are also the ultimate source of genetic variation, which plays a significant role in evolution, cancer development, and the immune system's development, including junctional diversity. With organisms having mechanisms such as DNA repair to restore mutated sequences, we can understand how genes express themselves in certain conditions, and thus study the effects of gene mutations on these conditions.",
+    "target": "A software bug is an error or flaw in the design, development, or operation of computer software that can cause the program to produce unexpected results or behave in unintended ways. This can result from mistakes made during interpreting user requirements, planning a program's design, or writing its source code. During the process of identifying and correcting bugs, formal techniques or tools are often used. Running buggy code can have ripple effects, ranging from subtle effects on text formatting to more serious issues like program crashes, freezing computers, or causing damage to hardware. Some bugs can also be classified as security bugs, potentially allowing unauthorized access and privileges to malicious users. Unfortunately, some bugs have even led to disasters, including patient deaths caused by radiation therapy machine errors and the destruction of the $1 billion Ariane 5 rocket. The US economy reportedly loses an estimated $59 billion annually due to software bugs, highlighting the importance of identifying and resolving such mistakes in code."
+  },
+  "raw": {
+    "id": 31,
+    "lang": "en",
+    "system_a": "Gene Mutation",
+    "system_b": "Program Error",
+    "mappings": [
+      [
+        "Gene",
+        "code"
+      ],
+      [
+        "mutation",
+        "mistake"
+      ],
+      [
+        "Express",
+        "run"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Computer",
+    "system_a_background": "A gene mutation is a change in the DNA sequence of a specific gene in the genome of an organism, virus, or extrachromosomal DNA. These mutations arise from various factors such as replication errors, damage caused by exposure to UV radiation, or from mobile genetic elements. Mutations can result in a variety of changes, ranging from no effect to altering the gene's product, or preventing it from functioning properly. While some mutations can be neutral or marginally beneficial, others can cause harmful effects. Gene mutations are also the ultimate source of genetic variation, which plays a significant role in evolution, cancer development, and the immune system's development, including junctional diversity. With organisms having mechanisms such as DNA repair to restore mutated sequences, we can understand how genes express themselves in certain conditions, and thus study the effects of gene mutations on these conditions.",
+    "system_b_background": "A software bug is an error or flaw in the design, development, or operation of computer software that can cause the program to produce unexpected results or behave in unintended ways. This can result from mistakes made during interpreting user requirements, planning a program's design, or writing its source code. During the process of identifying and correcting bugs, formal techniques or tools are often used. Running buggy code can have ripple effects, ranging from subtle effects on text formatting to more serious issues like program crashes, freezing computers, or causing damage to hardware. Some bugs can also be classified as security bugs, potentially allowing unauthorized access and privileges to malicious users. Unfortunately, some bugs have even led to disasters, including patient deaths caused by radiation therapy machine errors and the destruction of the $1 billion Ariane 5 rocket. The US economy reportedly loses an estimated $59 billion annually due to software bugs, highlighting the importance of identifying and resolving such mistakes in code.",
+    "Explanation": [
+      "Gene corresponds to program code: Genes are carriers of genetic information in organisms and are responsible for controlling processes such as growth, development, and reproduction. Program code is the basic component of computer programs that serve specific functions. In this case, genes and program code are both basic units that control respective system functions.",
+      "Mutation corresponds to mistake: Gene mutation refers to changes in the gene sequence, which may result in the appearance of new traits or diseases in organisms. Program errors are errors in program code, which may make it impossible for programs to run normally or produce incorrect results. In this case, mutations and errors both represent unstable factors in their respective systems that may have a negative impact on functionality.",
+      "Express corresponds to run: Gene expression refers to the process by which organisms convert gene information into actual functionality, such as protein synthesis. Program running refers to the process by which computers execute specific tasks based on program code. In this case, expression and running represent the process of transforming basic units into actual functionality in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Gene Mutation",
+    "target": "Program Error"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Computer"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

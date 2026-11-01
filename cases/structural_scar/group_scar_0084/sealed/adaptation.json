@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0084",
+  "dataset": "scar",
+  "original_id": "84",
+  "source_object_id": "obj_group_scar_0084_src",
+  "target_object_id": "obj_group_scar_0084_tgt",
+  "faithful_mappings": [
+    [
+      "thymus",
+      "nation"
+    ],
+    [
+      "circulatory system",
+      "outside world"
+    ],
+    [
+      "barrier",
+      "wall"
+    ],
+    [
+      "Toxic Chemicals",
+      "enemy"
+    ]
+  ],
+  "explanation": [
+    "Thymus corresponds to nation: Thymus is an important tissue of the immune system that produces and regulates immune cells. A nation, on the other hand, is a political entity responsible for maintaining the security and stability of the country. Here, both thymus and nation play a protective and maintenance role.",
+    "Circulatory system corresponds to outside world: The circulatory system is responsible for transporting blood to various parts of the body to sustain life activities. The outside world refers to the environment outside the country. In this analogy, the circulatory system and outside world both relate to the biological body or nation's interaction with the environment.",
+    "Barrier corresponds to wall: Blood-thymus barrier is a biological barrier that can prevent toxic substances from entering the circulatory system. The Great Wall, on the other hand, is a functional wall used to prevent enemy invasion. Here, both barrier and wall play a role in prevention and protection.",
+    "Toxic Chemicals correspond to enemy: Toxic chemicals are harmful substances to the body that may cause illness or death. An enemy is an external force that threatens a country. In this analogy, toxic chemicals and enemy are both hazardous factors that require prevention and resistance."
+  ],
+  "background": {
+    "source": "The Blood Chest Barrier plays a crucial role in the respiratory system of mammals, including humans. The lungs are responsible for extracting oxygen from the air and transferring it into the bloodstream, and releasing carbon dioxide from the bloodstream into the atmosphere. The pleurae reduce friction between the lungs and chest wall during breathing to allow for smooth and effortless movements of the lungs. Humans have two lungs situated in the thoracic cavity of the chest, within pleural sacs. Each lung has lobes that are further divided into bronchopulmonary segments and pulmonary lobules. The lungs receive a unique blood supply, with one circulatory system receiving deoxygenated blood from the heart for oxygen exchange and a separate supply of oxygenated blood to the lung tissue. However, the lungs are highly susceptible to respiratory diseases due to exposure to toxic chemicals or inhalation of harmful substances such as coal dust or asbestos fibers. The Thymus plays a key barrier function in the human body, protecting it from the threats of air and fluid pollutants, exposure to radiation, harmful chemicals, and external agents.",
+    "target": "The Great Wall of China is a monumental series of fortifications that functioned to protect the nation from the numerous nomadic groups from the Eurasian Steppe. Spanning over thousands of kilometers, different sections of the wall were built by numerous Chinese dynasties over the course of several centuries. The wall served many purposes, including being a means of controlling trade and immigration, as well as providing a pathway for transportation across China's northern borders. The Wall's successful defensive tactics were enhanced by the construction of watchtowers, troop barracks, and garrison stations. Today, this architectural feat stands as a testament to the nation's unwavering efforts in safeguarding itself from the outside world and its enemies."
+  },
+  "raw": {
+    "id": 84,
+    "lang": "en",
+    "system_a": "Blood Chest Barrier",
+    "system_b": "Great Wall",
+    "mappings": [
+      [
+        "thymus",
+        "nation"
+      ],
+      [
+        "circulatory system",
+        "outside world"
+      ],
+      [
+        "barrier",
+        "wall"
+      ],
+      [
+        "Toxic Chemicals",
+        "enemy"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "History",
+    "system_a_background": "The Blood Chest Barrier plays a crucial role in the respiratory system of mammals, including humans. The lungs are responsible for extracting oxygen from the air and transferring it into the bloodstream, and releasing carbon dioxide from the bloodstream into the atmosphere. The pleurae reduce friction between the lungs and chest wall during breathing to allow for smooth and effortless movements of the lungs. Humans have two lungs situated in the thoracic cavity of the chest, within pleural sacs. Each lung has lobes that are further divided into bronchopulmonary segments and pulmonary lobules. The lungs receive a unique blood supply, with one circulatory system receiving deoxygenated blood from the heart for oxygen exchange and a separate supply of oxygenated blood to the lung tissue. However, the lungs are highly susceptible to respiratory diseases due to exposure to toxic chemicals or inhalation of harmful substances such as coal dust or asbestos fibers. The Thymus plays a key barrier function in the human body, protecting it from the threats of air and fluid pollutants, exposure to radiation, harmful chemicals, and external agents.",
+    "system_b_background": "The Great Wall of China is a monumental series of fortifications that functioned to protect the nation from the numerous nomadic groups from the Eurasian Steppe. Spanning over thousands of kilometers, different sections of the wall were built by numerous Chinese dynasties over the course of several centuries. The wall served many purposes, including being a means of controlling trade and immigration, as well as providing a pathway for transportation across China's northern borders. The Wall's successful defensive tactics were enhanced by the construction of watchtowers, troop barracks, and garrison stations. Today, this architectural feat stands as a testament to the nation's unwavering efforts in safeguarding itself from the outside world and its enemies.",
+    "Explanation": [
+      "Thymus corresponds to nation: Thymus is an important tissue of the immune system that produces and regulates immune cells. A nation, on the other hand, is a political entity responsible for maintaining the security and stability of the country. Here, both thymus and nation play a protective and maintenance role.",
+      "Circulatory system corresponds to outside world: The circulatory system is responsible for transporting blood to various parts of the body to sustain life activities. The outside world refers to the environment outside the country. In this analogy, the circulatory system and outside world both relate to the biological body or nation's interaction with the environment.",
+      "Barrier corresponds to wall: Blood-thymus barrier is a biological barrier that can prevent toxic substances from entering the circulatory system. The Great Wall, on the other hand, is a functional wall used to prevent enemy invasion. Here, both barrier and wall play a role in prevention and protection.",
+      "Toxic Chemicals correspond to enemy: Toxic chemicals are harmful substances to the body that may cause illness or death. An enemy is an external force that threatens a country. In this analogy, toxic chemicals and enemy are both hazardous factors that require prevention and resistance."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Blood Chest Barrier",
+    "target": "Great Wall"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

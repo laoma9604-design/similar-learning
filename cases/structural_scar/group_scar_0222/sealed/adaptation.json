@@ -1,0 +1,75 @@
+{
+  "adaptation_id": "adapt_scar_0222",
+  "dataset": "scar",
+  "original_id": "222",
+  "source_object_id": "obj_group_scar_0222_src",
+  "target_object_id": "obj_group_scar_0222_tgt",
+  "faithful_mappings": [
+    [
+      "the nile",
+      "Yellow River Yangtze River"
+    ],
+    [
+      "hieroglyphs",
+      "Oracle"
+    ]
+  ],
+  "explanation": [
+    "The Nile corresponds to the Yellow River and Yangtze River: The Nile and the Yellow River and Yangtze River are important rivers for two ancient civilizations, and they are the cradle of these two civilizations and the source of life. They also influence the development and prosperity of these two civilizations.",
+    "Hieroglyphs correspond to Oracle: Hieroglyphs and Oracle are both writing systems of ancient civilizations, used for recording and passing on cultural knowledge. They both use pictographic symbols to represent specific things and concepts, and they are evolved from actual objects."
+  ],
+  "background": {
+    "source": "Egypt is a country located in Northeast Africa and Southwest Asia. Its transcontinental location is composed of the Sinai Peninsula, which forms a land bridge to connect the two regions. Bordering the Mediterranean Sea to the north, Palestine and Israel to the northeast, Sudan to the south, and Libya to the west, Egypt is known for its iconic monuments such as the Giza Necropolis, the Sphinx, Karnak, and other ancient ruins along the Nile Delta. With over 100 million inhabitants, it is considered the 14th most populated country in the world. Egypt has a long and rich cultural heritage, with the Nile River being a vital part of its identity, and hieroglyphs being one of the earliest developments of writing. Although largely Islamized in the 7th century, Egypt has a significant Christian minority and other lesser practiced faiths. Overcoming political instability and turmoil, Egypt is now classified as a developing country and a regional power in North Africa, the Middle East, and the Muslim world.",
+    "target": "China is a country in East Asia, officially known as the People's Republic of China (PRC), with a population of over 1.4 billion, making it the most populous country in the world. Its history reaches back to the cradle of civilization in the North China Plain, where the Xia dynasty, among other illustrious dynasties, emerged. Chinese writing, Chinese classic literature, and the Hundred Schools of Thought flourished during this period and influenced China and its neighboring countries for centuries to come. The country is known for its long and rich history, spanning over several dynasties that have lasted for thousands of years. The Yellow River and the Yangtze River, the two most important rivers in China, have played a significant role in shaping the country's culture and traditions. China is a nuclear-weapon state with the world's largest standing army and is considered a potential superpower due to its high level of innovation, economic potential, growing military strength, and influence in international affairs. The country is also known for the controversy surrounding its human rights record, especially concerning political repression, mass censorship, mass surveillance, and suppression of protest and dissent."
+  },
+  "raw": {
+    "id": 222,
+    "lang": "en",
+    "system_a": "Egypt",
+    "system_b": "China",
+    "mappings": [
+      [
+        "the nile",
+        "Yellow River Yangtze River"
+      ],
+      [
+        "hieroglyphs",
+        "Oracle"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "Egypt is a country located in Northeast Africa and Southwest Asia. Its transcontinental location is composed of the Sinai Peninsula, which forms a land bridge to connect the two regions. Bordering the Mediterranean Sea to the north, Palestine and Israel to the northeast, Sudan to the south, and Libya to the west, Egypt is known for its iconic monuments such as the Giza Necropolis, the Sphinx, Karnak, and other ancient ruins along the Nile Delta. With over 100 million inhabitants, it is considered the 14th most populated country in the world. Egypt has a long and rich cultural heritage, with the Nile River being a vital part of its identity, and hieroglyphs being one of the earliest developments of writing. Although largely Islamized in the 7th century, Egypt has a significant Christian minority and other lesser practiced faiths. Overcoming political instability and turmoil, Egypt is now classified as a developing country and a regional power in North Africa, the Middle East, and the Muslim world.",
+    "system_b_background": "China is a country in East Asia, officially known as the People's Republic of China (PRC), with a population of over 1.4 billion, making it the most populous country in the world. Its history reaches back to the cradle of civilization in the North China Plain, where the Xia dynasty, among other illustrious dynasties, emerged. Chinese writing, Chinese classic literature, and the Hundred Schools of Thought flourished during this period and influenced China and its neighboring countries for centuries to come. The country is known for its long and rich history, spanning over several dynasties that have lasted for thousands of years. The Yellow River and the Yangtze River, the two most important rivers in China, have played a significant role in shaping the country's culture and traditions. China is a nuclear-weapon state with the world's largest standing army and is considered a potential superpower due to its high level of innovation, economic potential, growing military strength, and influence in international affairs. The country is also known for the controversy surrounding its human rights record, especially concerning political repression, mass censorship, mass surveillance, and suppression of protest and dissent.",
+    "Explanation": [
+      "The Nile corresponds to the Yellow River and Yangtze River: The Nile and the Yellow River and Yangtze River are important rivers for two ancient civilizations, and they are the cradle of these two civilizations and the source of life. They also influence the development and prosperity of these two civilizations.",
+      "Hieroglyphs correspond to Oracle: Hieroglyphs and Oracle are both writing systems of ancient civilizations, used for recording and passing on cultural knowledge. They both use pictographic symbols to represent specific things and concepts, and they are evolved from actual objects."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Egypt",
+    "target": "China"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

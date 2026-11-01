@@ -1,0 +1,75 @@
+{
+  "adaptation_id": "adapt_scar_0023",
+  "dataset": "scar",
+  "original_id": "23",
+  "source_object_id": "obj_group_scar_0023_src",
+  "target_object_id": "obj_group_scar_0023_tgt",
+  "faithful_mappings": [
+    [
+      "dna strand",
+      "bridge"
+    ],
+    [
+      "base pair",
+      "column"
+    ]
+  ],
+  "explanation": [
+    "DNA strands correspond to bridges: In this analogy, DNA strands are the two long chains that make up the double helix structure of DNA. Similarly, the bridge is the main structural component of a spiral bridge that connects two locations. Both of these are the basic building blocks of their respective systems.",
+    "Base pairs correspond to columns: In the double helix structure of DNA, base pairs are the chemical bonds that connect the two DNA strands, and their interactions help to maintain the stability of the DNA structure. In a spiral bridge, columns are the pillars supporting the bridge structure, which bear the weight of the bridge and ensure its stability. Both of these play a role in maintaining the stability of their respective structures."
+  ],
+  "background": {
+    "source": "The DNA double helix structure is a fundamental component of molecular biology and is formed by double-stranded nucleic acid molecules such as DNA. This biopolymer of nucleic acid is held together by base pairs which are responsible for its unique structure. The DNA double helix contains a major groove and minor groove, with the major groove being wider than the minor groove. This difference in widths makes it easier for proteins to bind to the DNA strand through the major groove. The discovery of the double helix structure of DNA revolutionized the field of genetics and continues to play a significant role in research today.",
+    "target": "The Helix Bridge, also known as the Double Helix Bridge, is a significant pedestrian bridge located in Marina Bay, Singapore. It connects Marina Centre and Marina South, and it is one of the most iconic landmarks of the region. This bridge is designed in such a way that it resembles a DNA structure, which is a double helix. The bridge was officially opened on 24 April 2010, with only half of it being accessible due to ongoing construction work in the Marina Bay Sands area. The bridge was fully opened on 18 July for the public. The bridge features several unique features that make it stand out from other pedestrian bridges. It consists of four steel columns that carry the weight of the bridge and supports the pedestrian walkway that is enclosed in a free-form structure. The two helixes are interwoven to create a geometric structure that is visually appealing and provides unobstructed views of the surrounding waterfront. The bridge's design features innovative elements and sustainable practices that showcase Singapore’s commitment to being a leading sustainable city. The Helix Bridge is accompanied by the Bayfront Bridge, a vehicular bridge that also connects Marina Bay with other parts of Singapore. The Helix Bridge not only serves as an essential transportation link but also as a significant attraction for tourists and locals alike, providing a unique experience and breathtaking views of Singapore's skyline."
+  },
+  "raw": {
+    "id": 23,
+    "lang": "en",
+    "system_a": "DNA Double Helix Structure",
+    "system_b": "The Helix Bridge",
+    "mappings": [
+      [
+        "dna strand",
+        "bridge"
+      ],
+      [
+        "base pair",
+        "column"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Physics",
+    "system_a_background": "The DNA double helix structure is a fundamental component of molecular biology and is formed by double-stranded nucleic acid molecules such as DNA. This biopolymer of nucleic acid is held together by base pairs which are responsible for its unique structure. The DNA double helix contains a major groove and minor groove, with the major groove being wider than the minor groove. This difference in widths makes it easier for proteins to bind to the DNA strand through the major groove. The discovery of the double helix structure of DNA revolutionized the field of genetics and continues to play a significant role in research today.",
+    "system_b_background": "The Helix Bridge, also known as the Double Helix Bridge, is a significant pedestrian bridge located in Marina Bay, Singapore. It connects Marina Centre and Marina South, and it is one of the most iconic landmarks of the region. This bridge is designed in such a way that it resembles a DNA structure, which is a double helix. The bridge was officially opened on 24 April 2010, with only half of it being accessible due to ongoing construction work in the Marina Bay Sands area. The bridge was fully opened on 18 July for the public. The bridge features several unique features that make it stand out from other pedestrian bridges. It consists of four steel columns that carry the weight of the bridge and supports the pedestrian walkway that is enclosed in a free-form structure. The two helixes are interwoven to create a geometric structure that is visually appealing and provides unobstructed views of the surrounding waterfront. The bridge's design features innovative elements and sustainable practices that showcase Singapore’s commitment to being a leading sustainable city. The Helix Bridge is accompanied by the Bayfront Bridge, a vehicular bridge that also connects Marina Bay with other parts of Singapore. The Helix Bridge not only serves as an essential transportation link but also as a significant attraction for tourists and locals alike, providing a unique experience and breathtaking views of Singapore's skyline.",
+    "Explanation": [
+      "DNA strands correspond to bridges: In this analogy, DNA strands are the two long chains that make up the double helix structure of DNA. Similarly, the bridge is the main structural component of a spiral bridge that connects two locations. Both of these are the basic building blocks of their respective systems.",
+      "Base pairs correspond to columns: In the double helix structure of DNA, base pairs are the chemical bonds that connect the two DNA strands, and their interactions help to maintain the stability of the DNA structure. In a spiral bridge, columns are the pillars supporting the bridge structure, which bear the weight of the bridge and ensure its stability. Both of these play a role in maintaining the stability of their respective structures."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "DNA Double Helix Structure",
+    "target": "The Helix Bridge"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0399",
+  "dataset": "scar",
+  "original_id": "399",
+  "source_object_id": "obj_group_scar_0399_src",
+  "target_object_id": "obj_group_scar_0399_tgt",
+  "faithful_mappings": [
+    [
+      "proton",
+      "prey"
+    ],
+    [
+      "accelerator",
+      "hunter"
+    ],
+    [
+      "target",
+      "hunting ground"
+    ]
+  ],
+  "explanation": [
+    "Proton corresponds to prey: In a proton accelerator, a proton is the basic particle being accelerated and studied. In hunting, prey is the target that is pursued and captured. Both are the primary objects of experimentation or activity.",
+    "Accelerator corresponds to hunter: A proton accelerator is a device used to accelerate protons to high speeds for experimentation. A hunter is a person who hunts and pursues prey. Here, the accelerator and the hunter are both the main driving forces behind experimentation or activity.",
+    "Target corresponds to hunting ground: The target in a proton accelerator is the object of proton impact used to produce different experimental results. The hunting ground in hunting is the environment where hunters and prey interact. In this analogy, the target and the hunting ground are the places where the experimentation or activity takes place."
+  ],
+  "background": {
+    "source": "A proton accelerator is a type of particle accelerator that uses electromagnetic fields to accelerate charged particles to very high speeds and energies. These accelerators are used for a wide variety of applications, including fundamental research in particle physics, synchrotron light sources for condensed matter physics, and medical diagnostics and treatments such as particle therapy for oncological purposes. There are two basic classes of accelerators: electrostatic and electrodynamic. While electrostatic accelerators use static electric fields to accelerate particles, electrodynamic accelerators use changing electromagnetic fields to accelerate particles, allowing particles to pass through the same accelerating field multiple times and achieve significantly higher output energy. Notable pioneers of this field include Rolf Widerøe, Gustav Ising, Leó Szilárd, Max Steenbeck, and Ernest Lawrence who were responsible for conceiving and building the first operational linear particle accelerator, the betatron, and the cyclotron. Although early accelerators were commonly referred to as atom smashers due to the fact that the target of the particle beams was usually the atoms of a piece of matter, many modern accelerators create collisions between subatomic particles.",
+    "target": "\n\nThe Hunt is a term that has been used for centuries to describe the timeless phenomenon of the prey being hunted by the hunter. It consists of the challenge to track down, capture, or kill wild animals for food, sport, or other purposes. The prey is the animal that the hunter is after, while the hunter is the one pursuing the animal. The Hunting ground may refer to the area or location where it is happening. \n\nHunting is an activity that has been part of human history for a long time. It has been done for food, clothing, and other materials. It has also been used as a ritual and a way to celebrate and honor certain events. Hunting has also evolved as a sport, and nowadays, it is primarily done for recreation. It involves various types of hunting methods like using firearms, archery, and trapping. \n\nFor the hunter, the thrill of the hunt comes from the challenge of tracking down an animal and making the kill. It requires skill, patience, and knowledge of the prey, such as its habits, behavior, and habitat. Some hunters prefer a particular type of prey, while others enjoy the challenge of hunting different types of animals. \n\nThe prey, on the other hand, faces the challenge of avoiding the hunter's attack. It also requires the animal to have similar skills and knowledge of the environment to evade being captured, and in some cases, to fight back. It is an instinctual behavior of the animal to avoid predators as it is part of their survival. \n\nThe hunting ground may refer to any natural habitat, such as forests, plains, or mountains. Hunting grounds are carefully managed, and hunting regulations are used to ensure that the prey populations remain healthy and sustainable. It is important to keep a balance between the prey and predator populations, and the right hunting methods and equipment are used to ensure that it is done in a humane and ethical way. \n\nIn conclusion, the hunt is an activity that dates back to human civilization's beginnings. It is an activity that is enjoyed by many, but also contested by others. It is an essential part of history, culture and a way to maintain the balance of nature."
+  },
+  "raw": {
+    "id": 399,
+    "lang": "en",
+    "system_a": "Proton Accelerator",
+    "system_b": "The Hunt",
+    "mappings": [
+      [
+        "proton",
+        "prey"
+      ],
+      [
+        "accelerator",
+        "hunter"
+      ],
+      [
+        "target",
+        "hunting ground"
+      ]
+    ],
+    "system_a_domain": "Physics",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "A proton accelerator is a type of particle accelerator that uses electromagnetic fields to accelerate charged particles to very high speeds and energies. These accelerators are used for a wide variety of applications, including fundamental research in particle physics, synchrotron light sources for condensed matter physics, and medical diagnostics and treatments such as particle therapy for oncological purposes. There are two basic classes of accelerators: electrostatic and electrodynamic. While electrostatic accelerators use static electric fields to accelerate particles, electrodynamic accelerators use changing electromagnetic fields to accelerate particles, allowing particles to pass through the same accelerating field multiple times and achieve significantly higher output energy. Notable pioneers of this field include Rolf Widerøe, Gustav Ising, Leó Szilárd, Max Steenbeck, and Ernest Lawrence who were responsible for conceiving and building the first operational linear particle accelerator, the betatron, and the cyclotron. Although early accelerators were commonly referred to as atom smashers due to the fact that the target of the particle beams was usually the atoms of a piece of matter, many modern accelerators create collisions between subatomic particles.",
+    "system_b_background": "\n\nThe Hunt is a term that has been used for centuries to describe the timeless phenomenon of the prey being hunted by the hunter. It consists of the challenge to track down, capture, or kill wild animals for food, sport, or other purposes. The prey is the animal that the hunter is after, while the hunter is the one pursuing the animal. The Hunting ground may refer to the area or location where it is happening. \n\nHunting is an activity that has been part of human history for a long time. It has been done for food, clothing, and other materials. It has also been used as a ritual and a way to celebrate and honor certain events. Hunting has also evolved as a sport, and nowadays, it is primarily done for recreation. It involves various types of hunting methods like using firearms, archery, and trapping. \n\nFor the hunter, the thrill of the hunt comes from the challenge of tracking down an animal and making the kill. It requires skill, patience, and knowledge of the prey, such as its habits, behavior, and habitat. Some hunters prefer a particular type of prey, while others enjoy the challenge of hunting different types of animals. \n\nThe prey, on the other hand, faces the challenge of avoiding the hunter's attack. It also requires the animal to have similar skills and knowledge of the environment to evade being captured, and in some cases, to fight back. It is an instinctual behavior of the animal to avoid predators as it is part of their survival. \n\nThe hunting ground may refer to any natural habitat, such as forests, plains, or mountains. Hunting grounds are carefully managed, and hunting regulations are used to ensure that the prey populations remain healthy and sustainable. It is important to keep a balance between the prey and predator populations, and the right hunting methods and equipment are used to ensure that it is done in a humane and ethical way. \n\nIn conclusion, the hunt is an activity that dates back to human civilization's beginnings. It is an activity that is enjoyed by many, but also contested by others. It is an essential part of history, culture and a way to maintain the balance of nature.",
+    "Explanation": [
+      "Proton corresponds to prey: In a proton accelerator, a proton is the basic particle being accelerated and studied. In hunting, prey is the target that is pursued and captured. Both are the primary objects of experimentation or activity.",
+      "Accelerator corresponds to hunter: A proton accelerator is a device used to accelerate protons to high speeds for experimentation. A hunter is a person who hunts and pursues prey. Here, the accelerator and the hunter are both the main driving forces behind experimentation or activity.",
+      "Target corresponds to hunting ground: The target in a proton accelerator is the object of proton impact used to produce different experimental results. The hunting ground in hunting is the environment where hunters and prey interact. In this analogy, the target and the hunting ground are the places where the experimentation or activity takes place."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Proton Accelerator",
+    "target": "The Hunt"
+  },
+  "domains": {
+    "source": "Physics",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

@@ -1,0 +1,119 @@
+{
+  "adaptation_id": "adapt_scar_0302",
+  "dataset": "scar",
+  "original_id": "302",
+  "source_object_id": "obj_group_scar_0302_src",
+  "target_object_id": "obj_group_scar_0302_tgt",
+  "faithful_mappings": [
+    [
+      "virus",
+      "crime"
+    ],
+    [
+      "outbreak",
+      "spree"
+    ],
+    [
+      "epidemic",
+      "spread"
+    ],
+    [
+      "inoculation",
+      "information"
+    ],
+    [
+      "prevention",
+      "education"
+    ],
+    [
+      "precursor",
+      "poverty"
+    ]
+  ],
+  "explanation": [
+    "Virus corresponds to crime: Here, virus represents infectious diseases, and crime represents illegal behavior. Both have negative impacts on society and individuals.",
+    "Outbreak corresponds to spree: Virus outbreak refers to the rapid spread and infection of the virus, while crime spree is a large-scale gathering of criminal behavior. Here, outbreak and spree both represent the rapid spread and gathering of a certain behavior.",
+    "Epidemic corresponds to spread: The prevalence of the virus in a population is represented by its epidemic, while the spread of crime represents the extent to which criminal behavior spreads in society. Here, epidemic and spread both represent the spread of a phenomenon in a group.",
+    "Inoculation corresponds to information: Virus inoculation is the process of preventing the spread of the virus through vaccination, while crime information is the process of preventing crime by spreading knowledge and raising legal awareness. Here, inoculation and information both represent preventive measures and means of spreading knowledge.",
+    "Prevention corresponds to education: Virus prevention refers to the behavior of taking measures to prevent virus infection, while crime education is the process of raising people's legal awareness through education to prevent crime. Here, prevention and education both represent prevention and resistance to certain phenomena.",
+    "Precursor corresponds to poverty: The precursor of the virus may include various factors such as environment and lifestyle habits, which may lead to the spread and infection of the virus. Crime poverty refers to poverty as a potential cause of criminal behavior. Here, precursor and poverty both represent the root and cause of a certain phenomenon."
+  ],
+  "background": {
+    "source": "A virus is a microscopic infectious agent that replicates inside the living cells of organisms, including animals, plants, and microorganisms. Viruses are pervasive in almost every ecosystem on Earth and are the most abundant biological entity. They consist of genetic material, a protein coat, and, in some instances, an outer envelope of lipids. While the origin of viruses in evolutionary history is uncertain, viruses are crucial in horizontal gene transfer; they reproduce, carry genetic material, and evolve through natural selection. Viruses spread through vectors, such as insects, coughing and sneezing, and contact with infected blood, faecal matter, or body fluids. A virus can infect a broad or narrow range of host cells, which determines its host range. The immune response to viral infections in animals usually eliminates the virus, but in some infections, it results in chronic disease. Vaccines and antiviral treatments are essential in preventing and controlling outbreaks and epidemics of viral infections. As a precursor to virulence, viruses pose a constant threat to public health, making virology a critical subspeciality of microbiology.",
+    "target": "\n\nA crime is an act that is considered unlawful by the state or other authorities and punishable by law. It is a category created by law and varies in definition depending on the relevant jurisdiction. Most commonly, a crime is harmful not only to an individual, but also to the community, society, or state. While murder, rape, and theft are considered universal criminal acts, what constitutes a criminal offense differs from place to place. When found guilty, an offender can receive a range of punishments, from community service to imprisonment or even death. The actus reus (or guilty act) must generally be accompanied by mens rea (or guilty mind) to be classified as a crime. It's important to note that not every violation of the law constitutes a crime - this depends on whether the law violated was private law or public law. Crimes can often be prevented through education and spreading information, and poverty can be a contributing factor to the increase in crime sprees."
+  },
+  "raw": {
+    "id": 302,
+    "lang": "en",
+    "system_a": "virus",
+    "system_b": "crime",
+    "mappings": [
+      [
+        "virus",
+        "crime"
+      ],
+      [
+        "outbreak",
+        "spree"
+      ],
+      [
+        "epidemic",
+        "spread"
+      ],
+      [
+        "inoculation",
+        "information"
+      ],
+      [
+        "prevention",
+        "education"
+      ],
+      [
+        "precursor",
+        "poverty"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "A virus is a microscopic infectious agent that replicates inside the living cells of organisms, including animals, plants, and microorganisms. Viruses are pervasive in almost every ecosystem on Earth and are the most abundant biological entity. They consist of genetic material, a protein coat, and, in some instances, an outer envelope of lipids. While the origin of viruses in evolutionary history is uncertain, viruses are crucial in horizontal gene transfer; they reproduce, carry genetic material, and evolve through natural selection. Viruses spread through vectors, such as insects, coughing and sneezing, and contact with infected blood, faecal matter, or body fluids. A virus can infect a broad or narrow range of host cells, which determines its host range. The immune response to viral infections in animals usually eliminates the virus, but in some infections, it results in chronic disease. Vaccines and antiviral treatments are essential in preventing and controlling outbreaks and epidemics of viral infections. As a precursor to virulence, viruses pose a constant threat to public health, making virology a critical subspeciality of microbiology.",
+    "system_b_background": "\n\nA crime is an act that is considered unlawful by the state or other authorities and punishable by law. It is a category created by law and varies in definition depending on the relevant jurisdiction. Most commonly, a crime is harmful not only to an individual, but also to the community, society, or state. While murder, rape, and theft are considered universal criminal acts, what constitutes a criminal offense differs from place to place. When found guilty, an offender can receive a range of punishments, from community service to imprisonment or even death. The actus reus (or guilty act) must generally be accompanied by mens rea (or guilty mind) to be classified as a crime. It's important to note that not every violation of the law constitutes a crime - this depends on whether the law violated was private law or public law. Crimes can often be prevented through education and spreading information, and poverty can be a contributing factor to the increase in crime sprees.",
+    "Explanation": [
+      "Virus corresponds to crime: Here, virus represents infectious diseases, and crime represents illegal behavior. Both have negative impacts on society and individuals.",
+      "Outbreak corresponds to spree: Virus outbreak refers to the rapid spread and infection of the virus, while crime spree is a large-scale gathering of criminal behavior. Here, outbreak and spree both represent the rapid spread and gathering of a certain behavior.",
+      "Epidemic corresponds to spread: The prevalence of the virus in a population is represented by its epidemic, while the spread of crime represents the extent to which criminal behavior spreads in society. Here, epidemic and spread both represent the spread of a phenomenon in a group.",
+      "Inoculation corresponds to information: Virus inoculation is the process of preventing the spread of the virus through vaccination, while crime information is the process of preventing crime by spreading knowledge and raising legal awareness. Here, inoculation and information both represent preventive measures and means of spreading knowledge.",
+      "Prevention corresponds to education: Virus prevention refers to the behavior of taking measures to prevent virus infection, while crime education is the process of raising people's legal awareness through education to prevent crime. Here, prevention and education both represent prevention and resistance to certain phenomena.",
+      "Precursor corresponds to poverty: The precursor of the virus may include various factors such as environment and lifestyle habits, which may lead to the spread and infection of the virus. Crime poverty refers to poverty as a potential cause of criminal behavior. Here, precursor and poverty both represent the root and cause of a certain phenomenon."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "virus",
+    "target": "crime"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

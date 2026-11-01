@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0286",
+  "dataset": "scar",
+  "original_id": "286",
+  "source_object_id": "obj_group_scar_0286_src",
+  "target_object_id": "obj_group_scar_0286_tgt",
+  "faithful_mappings": [
+    [
+      "building",
+      "family"
+    ],
+    [
+      "foundation",
+      "love"
+    ],
+    [
+      "cement",
+      "understanding"
+    ]
+  ],
+  "explanation": [
+    "Building corresponds to family: A building is a physical space used to accommodate and protect its occupants, while a family is an emotional space that accommodates affection, love, and care. Here, both building and family represent a space of accommodation and protection.",
+    "Foundation corresponds to love: In a building, the foundation is a critical part that supports the entire structure, while in a family, love is the core force that sustains family relationships. Here, both foundation and love represent supportive elements in their respective domains.",
+    "Cement corresponds to understanding: Cement is used in buildings to connect and fix different parts, while in a family, understanding is the bond that connects one another's spirits. Here, both cement and understanding represent the role of connection and fixation."
+  ],
+  "background": {
+    "source": "A building is a significant structure that provides shelter, security, and living space to people. It serves as a physical division between the inside and outside world, providing comfort and safety from the harsh environment. Buildings come in a variety of sizes, shapes, and functions, and have been adapted throughout history for various reasons, from building materials available to aesthetic reasons. Every building needs a strong foundation made of cement to withstand the test of time. With the advancement of technology, sustainable planning and building practices have become an integral part of the design process of modern buildings.",
+    "target": "Family is the fundamental unit of society, consisting of individuals related either by blood or marriage. It is a group of people bonded by love, understanding, and shared experiences, working towards maintaining the well-being of its members and the society. Families come in different forms, including matrifocal, patrifocal, conjugal, avuncular, and extended. The structured nature of the family offers predictability and safety, which plays a critical role in the socialization process of individuals. Genealogy is an area of study that traces family lineages, while family economics looks at the economic aspect of family life. The concept of family can also be used metaphorically to create inclusive categories like community, nationhood, and global village."
+  },
+  "raw": {
+    "id": 286,
+    "lang": "en",
+    "system_a": "building",
+    "system_b": "family",
+    "mappings": [
+      [
+        "building",
+        "family"
+      ],
+      [
+        "foundation",
+        "love"
+      ],
+      [
+        "cement",
+        "understanding"
+      ]
+    ],
+    "system_a_domain": "Engineering",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "A building is a significant structure that provides shelter, security, and living space to people. It serves as a physical division between the inside and outside world, providing comfort and safety from the harsh environment. Buildings come in a variety of sizes, shapes, and functions, and have been adapted throughout history for various reasons, from building materials available to aesthetic reasons. Every building needs a strong foundation made of cement to withstand the test of time. With the advancement of technology, sustainable planning and building practices have become an integral part of the design process of modern buildings.",
+    "system_b_background": "Family is the fundamental unit of society, consisting of individuals related either by blood or marriage. It is a group of people bonded by love, understanding, and shared experiences, working towards maintaining the well-being of its members and the society. Families come in different forms, including matrifocal, patrifocal, conjugal, avuncular, and extended. The structured nature of the family offers predictability and safety, which plays a critical role in the socialization process of individuals. Genealogy is an area of study that traces family lineages, while family economics looks at the economic aspect of family life. The concept of family can also be used metaphorically to create inclusive categories like community, nationhood, and global village.",
+    "Explanation": [
+      "Building corresponds to family: A building is a physical space used to accommodate and protect its occupants, while a family is an emotional space that accommodates affection, love, and care. Here, both building and family represent a space of accommodation and protection.",
+      "Foundation corresponds to love: In a building, the foundation is a critical part that supports the entire structure, while in a family, love is the core force that sustains family relationships. Here, both foundation and love represent supportive elements in their respective domains.",
+      "Cement corresponds to understanding: Cement is used in buildings to connect and fix different parts, while in a family, understanding is the bond that connects one another's spirits. Here, both cement and understanding represent the role of connection and fixation."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "building",
+    "target": "family"
+  },
+  "domains": {
+    "source": "Engineering",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

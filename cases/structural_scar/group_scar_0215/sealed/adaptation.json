@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0215",
+  "dataset": "scar",
+  "original_id": "215",
+  "source_object_id": "obj_group_scar_0215_src",
+  "target_object_id": "obj_group_scar_0215_tgt",
+  "faithful_mappings": [
+    [
+      "politics",
+      "Thought and Culture"
+    ],
+    [
+      "Democratic Republic",
+      "democratic science"
+    ],
+    [
+      "Sun Yat-sen",
+      "Chen Duxiu"
+    ],
+    [
+      "bourgeois revolutionaries",
+      "democrats"
+    ],
+    [
+      "bourgeois revolutionary movement",
+      "ideological liberation movement"
+    ]
+  ],
+  "explanation": [
+    "The system corresponds to Thought and Culture: the main concern of the Xinhai Revolution was the reform of the national system, while the New Culture Movement focused on the liberation of thought and culture. Both attempted to achieve modernization and progress by changing existing systems or ideologies.",
+    "Democratic Republic corresponds to democratic science: The Xinhai Revolution achieved national reform by establishing a democratic republic, while the New Culture Movement promoted democratic science to achieve national reform. Both aimed to change the political system or ideological concepts of the country.",
+    "Sun Yat-sen corresponds to Chen Duxiu: Sun Yat-sen was the leader of the Xinhai Revolution, advocating for a democratic republic and achieving national reform through revolution. Chen Duxiu was the leader of the New Culture Movement, promoting democratic science and achieving national reform through the liberation of thought. Both were leaders and representatives of their respective movements.",
+    "Bourgeois revolutionary forces correspond to democrats: The bourgeois revolutionary forces were the main driving force of the Xinhai Revolution, overthrowing the Qing dynasty and establishing a democratic republic to achieve national reform. Democrats were the main driving force of the New Culture Movement, promoting democratic science to achieve national reform. Both were the main forces of their respective movements.",
+    "The bourgeois revolutionary movement corresponds to the ideological liberation movement: The Xinhai Revolution was a bourgeois revolutionary movement, overthrowing the Qing dynasty and establishing a democratic republic to achieve national reform. The New Culture Movement was an ideological liberation movement, promoting democratic science to achieve national reform. Both aimed to change the political system and status quo of the country."
+  ],
+  "background": {
+    "source": "The Revolution of 1911, also known as the Xinhai Revolution, marked the end of China's last imperial dynasty, the Qing dynasty, and the establishment of the Republic of China. The nation had struggled to reform the government and resist foreign aggression, but the program of reforms faced opposition from Qing court conservatives as too radical and from reformers as too slow. The revolution was the culmination of years of agitation, revolts, and uprisings among various factions, including underground anti-Qing groups, revolutionaries in exile, and bourgeois revolutionaries who wanted to save the monarchy through modernization. The revolution began with the Wuchang Uprising, an armed rebellion among members of the New Army, which spread spontaneously around the country. Nanjing became the base for a provisional coalition government, and the National Assembly declared the establishment of the Republic of China, with Sun Yat-sen, leader of the United League as President. A brief civil war between the North and the South ended in compromise, with Sun resigning in favor of Yuan Shikai, leader of the powerful Beiyang Army, who would become President of the new national government on the condition of securing the abdication of the Qing emperor. The edict of abdication was promulgated, and Yuan was sworn in as president. However, his failure to consolidate a legitimate central government led to decades of political division and warlordism. The Xinhai Revolution was a significant political event and marked the end of imperial rule in China. It is still commemorated in Taiwan as the National Day of the Republic of China and in mainland China as the Anniversary of the 1911 Revolution, with both nations considering themselves the legitimate successors of the revolution's ideals of nationalism, republicanism, modernization, and national unity.",
+    "target": "The New Culture Movement was a groundbreaking ideological liberation movement that originated in China during the early 20th century. This movement, led by scholars such as Chen Duxiu, Li Dazhao, Lu Xun, and Hu Shih, sought to criticize and undermine traditional Chinese culture, promoting instead a new culture based on progressive ideals like democratic science. They sought to create a society based on unconstrained individuals rather than the Confucian system. The movement gained momentum after the failure of the Republic of China to address the country's problems, leading to disillusionment with traditional Chinese values. The movement was considered the forerunner of the May Fourth Movement, and the students' protests aligned with the movement, transformed it from a cultural movement into a political one. This thought and culture movement paved the way for the democrats of China, promoting a new democratic path that emphasized science, democracy, and individualism."
+  },
+  "raw": {
+    "id": 215,
+    "lang": "en",
+    "system_a": "Revolution of 1911",
+    "system_b": "New Culture Movement",
+    "mappings": [
+      [
+        "politics",
+        "Thought and Culture"
+      ],
+      [
+        "Democratic Republic",
+        "democratic science"
+      ],
+      [
+        "Sun Yat-sen",
+        "Chen Duxiu"
+      ],
+      [
+        "bourgeois revolutionaries",
+        "democrats"
+      ],
+      [
+        "bourgeois revolutionary movement",
+        "ideological liberation movement"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "The Revolution of 1911, also known as the Xinhai Revolution, marked the end of China's last imperial dynasty, the Qing dynasty, and the establishment of the Republic of China. The nation had struggled to reform the government and resist foreign aggression, but the program of reforms faced opposition from Qing court conservatives as too radical and from reformers as too slow. The revolution was the culmination of years of agitation, revolts, and uprisings among various factions, including underground anti-Qing groups, revolutionaries in exile, and bourgeois revolutionaries who wanted to save the monarchy through modernization. The revolution began with the Wuchang Uprising, an armed rebellion among members of the New Army, which spread spontaneously around the country. Nanjing became the base for a provisional coalition government, and the National Assembly declared the establishment of the Republic of China, with Sun Yat-sen, leader of the United League as President. A brief civil war between the North and the South ended in compromise, with Sun resigning in favor of Yuan Shikai, leader of the powerful Beiyang Army, who would become President of the new national government on the condition of securing the abdication of the Qing emperor. The edict of abdication was promulgated, and Yuan was sworn in as president. However, his failure to consolidate a legitimate central government led to decades of political division and warlordism. The Xinhai Revolution was a significant political event and marked the end of imperial rule in China. It is still commemorated in Taiwan as the National Day of the Republic of China and in mainland China as the Anniversary of the 1911 Revolution, with both nations considering themselves the legitimate successors of the revolution's ideals of nationalism, republicanism, modernization, and national unity.",
+    "system_b_background": "The New Culture Movement was a groundbreaking ideological liberation movement that originated in China during the early 20th century. This movement, led by scholars such as Chen Duxiu, Li Dazhao, Lu Xun, and Hu Shih, sought to criticize and undermine traditional Chinese culture, promoting instead a new culture based on progressive ideals like democratic science. They sought to create a society based on unconstrained individuals rather than the Confucian system. The movement gained momentum after the failure of the Republic of China to address the country's problems, leading to disillusionment with traditional Chinese values. The movement was considered the forerunner of the May Fourth Movement, and the students' protests aligned with the movement, transformed it from a cultural movement into a political one. This thought and culture movement paved the way for the democrats of China, promoting a new democratic path that emphasized science, democracy, and individualism.",
+    "Explanation": [
+      "The system corresponds to Thought and Culture: the main concern of the Xinhai Revolution was the reform of the national system, while the New Culture Movement focused on the liberation of thought and culture. Both attempted to achieve modernization and progress by changing existing systems or ideologies.",
+      "Democratic Republic corresponds to democratic science: The Xinhai Revolution achieved national reform by establishing a democratic republic, while the New Culture Movement promoted democratic science to achieve national reform. Both aimed to change the political system or ideological concepts of the country.",
+      "Sun Yat-sen corresponds to Chen Duxiu: Sun Yat-sen was the leader of the Xinhai Revolution, advocating for a democratic republic and achieving national reform through revolution. Chen Duxiu was the leader of the New Culture Movement, promoting democratic science and achieving national reform through the liberation of thought. Both were leaders and representatives of their respective movements.",
+      "Bourgeois revolutionary forces correspond to democrats: The bourgeois revolutionary forces were the main driving force of the Xinhai Revolution, overthrowing the Qing dynasty and establishing a democratic republic to achieve national reform. Democrats were the main driving force of the New Culture Movement, promoting democratic science to achieve national reform. Both were the main forces of their respective movements.",
+      "The bourgeois revolutionary movement corresponds to the ideological liberation movement: The Xinhai Revolution was a bourgeois revolutionary movement, overthrowing the Qing dynasty and establishing a democratic republic to achieve national reform. The New Culture Movement was an ideological liberation movement, promoting democratic science to achieve national reform. Both aimed to change the political system and status quo of the country."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Revolution of 1911",
+    "target": "New Culture Movement"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

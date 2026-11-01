@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0035",
+  "dataset": "scar",
+  "original_id": "35",
+  "source_object_id": "obj_group_scar_0035_src",
+  "target_object_id": "obj_group_scar_0035_tgt",
+  "faithful_mappings": [
+    [
+      "Gene",
+      "chapter"
+    ],
+    [
+      "dna",
+      "Word"
+    ],
+    [
+      "chromosome",
+      "Book"
+    ]
+  ],
+  "explanation": [
+    "Gene corresponds to chapter: Genes in the nucleus are the basic units of genetic information in organisms. Chapters in books on a shelf are the units of information organization and transmission. Here, genes and chapters are units that carry and organize information in their respective systems.",
+    "DNA corresponds to words: DNA in the nucleus is the material basis of genes, storing genetic information in the form of a sequence of nucleotides. Words in a book are symbols that express and transmit information in the form of characters. Here, DNA and words are forms of expression and transmission of information in their respective systems.",
+    "Chromosome corresponds to book: Chromosomes in the nucleus are structures composed of DNA and proteins, carrying genes. Books on a shelf are carriers that carry and organize words and chapters. Here, chromosomes and books are structures that carry and organize information in their respective systems."
+  ],
+  "background": {
+    "source": "Nucleus, as the name suggests, is a central organelle found in the eukaryotic cell, which plays a crucial role in storing genetic information. It contains most of the cell's DNA, along with various proteins and other molecular components that regulate genetic functions. The DNA within the nucleus is organized into self-replicating structures called chromosomes, which carry genes responsible for encoding all the characteristics and traits of an organism. The nucleus is often referred to as the \"control center\" of a eukaryotic cell since it regulates the expression of genes and supervises cellular processes such as cell division and growth. The structure of the nucleus is complex but can be simplified into two main components, the nuclear envelope and the nucleoplasm. The nuclear envelope separates the nucleus from the surrounding cytoplasm and consists of two lipid bilayers with nuclear pores that regulate molecular transport between the nucleus and cytoplasm. The nucleoplasm makes up the majority of the nucleus and contains chromatin fibers, nucleoli, and other molecular components that are essential in the transcription and regulation of genetic information. Thus, the nucleus is the hub of genetic activity in a eukaryotic cell, and any malfunction can lead to a wide array of genetic disorders and diseases.",
+    "target": "A bookshelf is a versatile piece of furniture used for storing books and other printed materials. With horizontal shelves that may be fixed or adjustable, a bookcase can come in all sizes, from small table-height models to towering versions that reach the ceiling. It is also commonly found in private homes, public and university libraries, offices, schools, and bookstores. Glass doors may be added to protect the books from dust or moisture, with some rare volumes kept in locked, wooden or glazed cases. Bookshelves can also stand on other pieces of furniture or be fixed to walls and floors in rooms dedicated solely to book storage. Interestingly, the concept of a bookcase is represented by the Latin and Greek terms Bibliotheca and Bibliothēkē. Many modern languages derive their term for library from these words. In a library, large bookshelves are called \"stacks.\" So, whether you're looking to store a chapter or a Word, a bookshelf is an ideal solution."
+  },
+  "raw": {
+    "id": 35,
+    "lang": "en",
+    "system_a": "Nucleus",
+    "system_b": "Bookshelf",
+    "mappings": [
+      [
+        "Gene",
+        "chapter"
+      ],
+      [
+        "dna",
+        "Word"
+      ],
+      [
+        "chromosome",
+        "Book"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Art",
+    "system_a_background": "Nucleus, as the name suggests, is a central organelle found in the eukaryotic cell, which plays a crucial role in storing genetic information. It contains most of the cell's DNA, along with various proteins and other molecular components that regulate genetic functions. The DNA within the nucleus is organized into self-replicating structures called chromosomes, which carry genes responsible for encoding all the characteristics and traits of an organism. The nucleus is often referred to as the \"control center\" of a eukaryotic cell since it regulates the expression of genes and supervises cellular processes such as cell division and growth. The structure of the nucleus is complex but can be simplified into two main components, the nuclear envelope and the nucleoplasm. The nuclear envelope separates the nucleus from the surrounding cytoplasm and consists of two lipid bilayers with nuclear pores that regulate molecular transport between the nucleus and cytoplasm. The nucleoplasm makes up the majority of the nucleus and contains chromatin fibers, nucleoli, and other molecular components that are essential in the transcription and regulation of genetic information. Thus, the nucleus is the hub of genetic activity in a eukaryotic cell, and any malfunction can lead to a wide array of genetic disorders and diseases.",
+    "system_b_background": "A bookshelf is a versatile piece of furniture used for storing books and other printed materials. With horizontal shelves that may be fixed or adjustable, a bookcase can come in all sizes, from small table-height models to towering versions that reach the ceiling. It is also commonly found in private homes, public and university libraries, offices, schools, and bookstores. Glass doors may be added to protect the books from dust or moisture, with some rare volumes kept in locked, wooden or glazed cases. Bookshelves can also stand on other pieces of furniture or be fixed to walls and floors in rooms dedicated solely to book storage. Interestingly, the concept of a bookcase is represented by the Latin and Greek terms Bibliotheca and Bibliothēkē. Many modern languages derive their term for library from these words. In a library, large bookshelves are called \"stacks.\" So, whether you're looking to store a chapter or a Word, a bookshelf is an ideal solution.",
+    "Explanation": [
+      "Gene corresponds to chapter: Genes in the nucleus are the basic units of genetic information in organisms. Chapters in books on a shelf are the units of information organization and transmission. Here, genes and chapters are units that carry and organize information in their respective systems.",
+      "DNA corresponds to words: DNA in the nucleus is the material basis of genes, storing genetic information in the form of a sequence of nucleotides. Words in a book are symbols that express and transmit information in the form of characters. Here, DNA and words are forms of expression and transmission of information in their respective systems.",
+      "Chromosome corresponds to book: Chromosomes in the nucleus are structures composed of DNA and proteins, carrying genes. Books on a shelf are carriers that carry and organize words and chapters. Here, chromosomes and books are structures that carry and organize information in their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Nucleus",
+    "target": "Bookshelf"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Art"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

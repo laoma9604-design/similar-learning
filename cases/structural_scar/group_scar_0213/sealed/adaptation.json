@@ -1,0 +1,108 @@
+{
+  "adaptation_id": "adapt_scar_0213",
+  "dataset": "scar",
+  "original_id": "213",
+  "source_object_id": "obj_group_scar_0213_src",
+  "target_object_id": "obj_group_scar_0213_tgt",
+  "faithful_mappings": [
+    [
+      "politics",
+      "politics"
+    ],
+    [
+      "reform",
+      "Democratic Republic"
+    ],
+    [
+      "Kang Youwei",
+      "Sun Yat-sen"
+    ],
+    [
+      "bourgeois reformers",
+      "bourgeois revolutionaries"
+    ],
+    [
+      "bourgeois reform movement",
+      "bourgeois revolutionary movement"
+    ]
+  ],
+  "explanation": [
+    "In both the Hundred Days' Reform and the Xinhai Revolution, the system corresponded to the system: both involved reforms of the national system, attempting to achieve modernization and progress by changing the existing system.",
+    "The Reform Movement and the New Policy corresponded to democracy and republicanism: the Hundred Days' Reform attempted to achieve national reform through the movement, while the Xinhai Revolution aimed to overthrow the Qing dynasty and establish a democratic republic for national reform. Both aimed to change the political system of the country.",
+    "Kang Youwei corresponds to Sun Yat-sen: Kang Youwei was one of the main leaders of the Hundred Days' Reform, advocating for the movement and attempting to revitalize China through reforms. Sun Yat-sen was a leader of the Xinhai Revolution, advocating for democracy and republicanism and achieving national reform through revolution. Both were leaders and representatives of their respective movements.",
+    "The bourgeois reformers corresponded to the bourgeois revolutionaries: the bourgeois reformers were the main driving force behind the Hundred Days' Reform, attempting to achieve modernization of the country through reforms. The bourgeois revolutionaries were the main driving force behind the Xinhai Revolution, achieving national reform by overthrowing the Qing dynasty and establishing a democratic republic. Both were the main forces of their respective movements.",
+    "The bourgeois reform movement corresponded to the bourgeois revolutionary movement: the Hundred Days' Reform was a bourgeois reform movement, attempting to achieve modernization of the country through reforms. The Xinhai Revolution was a bourgeois revolutionary movement, achieving national reform by overthrowing the Qing dynasty and establishing a democratic republic. Both aimed to change the political system and current state of the country."
+  ],
+  "background": {
+    "source": "The Reform Movement of 1898, also known as the Wuxu Reform, was a significant political and cultural event in late Qing dynasty China. The movement was initiated by the young emperor Guangxu and supported by a group of bourgeois reformers led by Kang Youwei. The aim of the reform movement was to modernize China's political and educational systems and increase its economic and military power. However, the conservative opponents, led by Empress Dowager Cixi, staged a coup d'état and ended the movement after just 103 days. Despite its failure, the Reform Movement of 1898 represented a critical moment in Chinese history and paved the way for future political and social reforms.",
+    "target": "The Revolution of 1911, also known as the Xinhai Revolution, marked the collapse of the Chinese monarchy and saw the establishment of the Republic of China, ending over two thousand years of imperial rule. The revolution was the result of a decade of agitation, revolts, and uprisings. It began with the Wuchang Uprising in October 1911 and spread spontaneously across the country as revolutionaries in all provinces renounced the Qing dynasty. The revolution was led by bourgeois revolutionaries, including Sun Yat-sen, who became the first president of the Democratic Republic. The Revolution's ideals of nationalism, republicanism, modernization of China and national unity continue to be honored in Taiwan and mainland China. Though the revolution brought change to China, Yuan Shikai's failure to consolidate a legitimate central government and the attempt at imperial restoration led to decades of political division and warlordism."
+  },
+  "raw": {
+    "id": 213,
+    "lang": "en",
+    "system_a": "Reform Movement of 1898",
+    "system_b": "Revolution of 1911",
+    "mappings": [
+      [
+        "politics",
+        "politics"
+      ],
+      [
+        "reform",
+        "Democratic Republic"
+      ],
+      [
+        "Kang Youwei",
+        "Sun Yat-sen"
+      ],
+      [
+        "bourgeois reformers",
+        "bourgeois revolutionaries"
+      ],
+      [
+        "bourgeois reform movement",
+        "bourgeois revolutionary movement"
+      ]
+    ],
+    "system_a_domain": "History",
+    "system_b_domain": "History",
+    "system_a_background": "The Reform Movement of 1898, also known as the Wuxu Reform, was a significant political and cultural event in late Qing dynasty China. The movement was initiated by the young emperor Guangxu and supported by a group of bourgeois reformers led by Kang Youwei. The aim of the reform movement was to modernize China's political and educational systems and increase its economic and military power. However, the conservative opponents, led by Empress Dowager Cixi, staged a coup d'état and ended the movement after just 103 days. Despite its failure, the Reform Movement of 1898 represented a critical moment in Chinese history and paved the way for future political and social reforms.",
+    "system_b_background": "The Revolution of 1911, also known as the Xinhai Revolution, marked the collapse of the Chinese monarchy and saw the establishment of the Republic of China, ending over two thousand years of imperial rule. The revolution was the result of a decade of agitation, revolts, and uprisings. It began with the Wuchang Uprising in October 1911 and spread spontaneously across the country as revolutionaries in all provinces renounced the Qing dynasty. The revolution was led by bourgeois revolutionaries, including Sun Yat-sen, who became the first president of the Democratic Republic. The Revolution's ideals of nationalism, republicanism, modernization of China and national unity continue to be honored in Taiwan and mainland China. Though the revolution brought change to China, Yuan Shikai's failure to consolidate a legitimate central government and the attempt at imperial restoration led to decades of political division and warlordism.",
+    "Explanation": [
+      "In both the Hundred Days' Reform and the Xinhai Revolution, the system corresponded to the system: both involved reforms of the national system, attempting to achieve modernization and progress by changing the existing system.",
+      "The Reform Movement and the New Policy corresponded to democracy and republicanism: the Hundred Days' Reform attempted to achieve national reform through the movement, while the Xinhai Revolution aimed to overthrow the Qing dynasty and establish a democratic republic for national reform. Both aimed to change the political system of the country.",
+      "Kang Youwei corresponds to Sun Yat-sen: Kang Youwei was one of the main leaders of the Hundred Days' Reform, advocating for the movement and attempting to revitalize China through reforms. Sun Yat-sen was a leader of the Xinhai Revolution, advocating for democracy and republicanism and achieving national reform through revolution. Both were leaders and representatives of their respective movements.",
+      "The bourgeois reformers corresponded to the bourgeois revolutionaries: the bourgeois reformers were the main driving force behind the Hundred Days' Reform, attempting to achieve modernization of the country through reforms. The bourgeois revolutionaries were the main driving force behind the Xinhai Revolution, achieving national reform by overthrowing the Qing dynasty and establishing a democratic republic. Both were the main forces of their respective movements.",
+      "The bourgeois reform movement corresponded to the bourgeois revolutionary movement: the Hundred Days' Reform was a bourgeois reform movement, attempting to achieve modernization of the country through reforms. The Xinhai Revolution was a bourgeois revolutionary movement, achieving national reform by overthrowing the Qing dynasty and establishing a democratic republic. Both aimed to change the political system and current state of the country."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Reform Movement of 1898",
+    "target": "Revolution of 1911"
+  },
+  "domains": {
+    "source": "History",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

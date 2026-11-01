@@ -1,0 +1,207 @@
+{
+  "adaptation_id": "adapt_scar_0283",
+  "dataset": "scar",
+  "original_id": "283",
+  "source_object_id": "obj_group_scar_0283_src",
+  "target_object_id": "obj_group_scar_0283_tgt",
+  "faithful_mappings": [
+    [
+      "journey",
+      "education"
+    ],
+    [
+      "stop",
+      "exam"
+    ],
+    [
+      "station",
+      "class"
+    ],
+    [
+      "vehicle",
+      "lecture"
+    ],
+    [
+      "vehicle",
+      "reading"
+    ],
+    [
+      "vehicle",
+      "textbook"
+    ],
+    [
+      "vehicle",
+      "book"
+    ],
+    [
+      "landscape",
+      "knowledge"
+    ],
+    [
+      "destination",
+      "skill"
+    ],
+    [
+      "traveller",
+      "student"
+    ],
+    [
+      "guide",
+      "teacher"
+    ],
+    [
+      "driver",
+      "professor"
+    ],
+    [
+      "fuel",
+      "scholarship"
+    ],
+    [
+      "conductor",
+      "examiner"
+    ]
+  ],
+  "explanation": [
+    "Journey corresponds to education: Journey refers to the process of traveling from one place to another, usually accompanied by new experiences and learning. Education refers to the process of acquiring knowledge and skills through learning and practice. Here, journey and education both represent a process of discovery and learning.",
+    "Stop corresponds to exam: In the concept of journey, stop refers to the temporary rest during the journey. In the concept of education, exam refers to the test used to evaluate students' knowledge and skills. Here, stop and exam both represent a stage of evaluation and reflection.",
+    "Station corresponds to class: In the concept of journey, station refers to the place that travelers pass through during the journey. In the concept of education, class refers to the group of students divided by grade or subject. Here, station and class both represent a specific environment or scene.",
+    "Vehicle corresponds to lecture: In the concept of journey, vehicle refers to the tool used to transport travelers. In the concept of education, lecture refers to the oral expression for delivering knowledge and information. Here, vehicle and lecture both represent a means of communication and transfer.",
+    "Vehicle corresponds to reading: In the concept of journey, vehicle refers to the tool used to transport travelers. In the concept of education, reading refers to the process of acquiring knowledge and information through reading. Here, vehicle and reading both represent a means of acquiring and transferring.",
+    "Vehicle corresponds to textbook: In the concept of journey, vehicle refers to the tool used to transport travelers. In the concept of education, textbook refers to the book used for teaching. Here, vehicle and textbook both represent a tool that provides support and resources.",
+    "Vehicle corresponds to book: In the concept of journey, vehicle refers to the tool used to transport travelers. In the concept of education, book refers to the item used for recording and disseminating knowledge. Here, vehicle and book both represent a tool that provides support and resources.",
+    "Landscape corresponds to knowledge: In the concept of journey, landscape refers to the natural and man-made scenery seen during the journey. In the concept of education, knowledge refers to the information and understanding obtained through learning and practice. Here, landscape and knowledge both represent an object that can be observed and learned.",
+    "Destination corresponds to skill: In the concept of journey, destination refers to the ultimate goal of the journey. In the concept of education, skill refers to the ability mastered through learning and practice. Here, destination and skill both represent a goal that requires effort and practice to achieve.",
+    "Traveler corresponds to student: In the concept of journey, traveler refers to the person who participates in the journey. In the concept of education, student refers to the person who participates in learning. Here, traveler and student both represent the person seeking discovery and learning in a specific field.",
+    "Tour guide corresponds to teacher: In the concept of journey, tour guide refers to the person who provides travel guidance and commentary for tourists. In the concept of education, teacher refers to the person who provides education and guidance for students. Here, tour guide and teacher both represent the guide with professional knowledge and abilities in a specific field.",
+    "Driver corresponds to professor: In the concept of journey, driver refers to the person responsible for driving the vehicle. In the concept of education, professor refers to the person who teaches and conducts research in higher education institutions. Here, driver and professor both represent the person with professional knowledge and abilities in a specific field.",
+    "Fuel corresponds to scholarship: In the concept of journey, fuel refers to the energy used to drive the vehicle. In the concept of education, scholarship refers to the economic support provided to students to help them complete their studies. Here, fuel and scholarship both represent the support and resources required to achieve goals.",
+    "Guide corresponds to examiner: In the concept of journey, guide refers to the person who provides commentary for tourists visiting attractions. In the concept of education, examiner refers to the person responsible for organizing and evaluating exams. Here, guide and examiner both represent the role responsible for evaluation and interpretation in a specific field."
+  ],
+  "background": {
+    "source": "A journey can be one of the most exciting experiences of a person's life. It refers to the travel or movement of people between distant geographical locations. A journey can be completed on any vehicle such as a car, bus, train or plane, with multiple stops at stations along the way. A journey can vary in length; it can be a day trip or a long-distance travel expedition like a road trip. \n\nDuring a journey, passengers can witness the beauty of the landscape and explore new destinations. A wise traveller does not just depend on the driver to take them to places, but they also seek a guide to provide them with valuable insights about the route and the exciting locations along the journey. They keep an eye on the fuel to ensure the smooth functioning of their vehicle, while relying on the conductor to keep passengers informed about stops and stations.\n\nUltimately, embarking on a journey not only involves moving from one place to another but also discovering new experiences, learning about different cultures, and meeting new people along the way. So, buckle up and get ready for an exciting journey ahead!",
+    "target": "Education is a purposeful activity which aims at transmitting knowledge and fostering skills, character traits, and critical thinking in students. It can take on various forms, such as formal, non-formal, and informal education, which all come with different settings, structures, and methodologies of teaching. The product of this process is the mental states and dispositions developed by educated individuals, which encompass new ideas such as empathy, vocational skills, and modern society's demands. Despite different educational philosophies, there are movements for education reforms aimed at improving quality and efficiency towards relevant problem-solving in society, as seen in global initiatives such as Sustainable Development Goal 4. With a focus on education, knowledge and skills can be enhanced, not just for the student, but also for the professor, examiner, and scholar alike, through class lectures, readings, textbooks, and examinations."
+  },
+  "raw": {
+    "id": 283,
+    "lang": "en",
+    "system_a": "journey",
+    "system_b": "education",
+    "mappings": [
+      [
+        "journey",
+        "education"
+      ],
+      [
+        "stop",
+        "exam"
+      ],
+      [
+        "station",
+        "class"
+      ],
+      [
+        "vehicle",
+        "lecture"
+      ],
+      [
+        "vehicle",
+        "reading"
+      ],
+      [
+        "vehicle",
+        "textbook"
+      ],
+      [
+        "vehicle",
+        "book"
+      ],
+      [
+        "landscape",
+        "knowledge"
+      ],
+      [
+        "destination",
+        "skill"
+      ],
+      [
+        "traveller",
+        "student"
+      ],
+      [
+        "guide",
+        "teacher"
+      ],
+      [
+        "driver",
+        "professor"
+      ],
+      [
+        "fuel",
+        "scholarship"
+      ],
+      [
+        "conductor",
+        "examiner"
+      ]
+    ],
+    "system_a_domain": "Philosophy",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "A journey can be one of the most exciting experiences of a person's life. It refers to the travel or movement of people between distant geographical locations. A journey can be completed on any vehicle such as a car, bus, train or plane, with multiple stops at stations along the way. A journey can vary in length; it can be a day trip or a long-distance travel expedition like a road trip. \n\nDuring a journey, passengers can witness the beauty of the landscape and explore new destinations. A wise traveller does not just depend on the driver to take them to places, but they also seek a guide to provide them with valuable insights about the route and the exciting locations along the journey. They keep an eye on the fuel to ensure the smooth functioning of their vehicle, while relying on the conductor to keep passengers informed about stops and stations.\n\nUltimately, embarking on a journey not only involves moving from one place to another but also discovering new experiences, learning about different cultures, and meeting new people along the way. So, buckle up and get ready for an exciting journey ahead!",
+    "system_b_background": "Education is a purposeful activity which aims at transmitting knowledge and fostering skills, character traits, and critical thinking in students. It can take on various forms, such as formal, non-formal, and informal education, which all come with different settings, structures, and methodologies of teaching. The product of this process is the mental states and dispositions developed by educated individuals, which encompass new ideas such as empathy, vocational skills, and modern society's demands. Despite different educational philosophies, there are movements for education reforms aimed at improving quality and efficiency towards relevant problem-solving in society, as seen in global initiatives such as Sustainable Development Goal 4. With a focus on education, knowledge and skills can be enhanced, not just for the student, but also for the professor, examiner, and scholar alike, through class lectures, readings, textbooks, and examinations.",
+    "Explanation": [
+      "Journey corresponds to education: Journey refers to the process of traveling from one place to another, usually accompanied by new experiences and learning. Education refers to the process of acquiring knowledge and skills through learning and practice. Here, journey and education both represent a process of discovery and learning.",
+      "Stop corresponds to exam: In the concept of journey, stop refers to the temporary rest during the journey. In the concept of education, exam refers to the test used to evaluate students' knowledge and skills. Here, stop and exam both represent a stage of evaluation and reflection.",
+      "Station corresponds to class: In the concept of journey, station refers to the place that travelers pass through during the journey. In the concept of education, class refers to the group of students divided by grade or subject. Here, station and class both represent a specific environment or scene.",
+      "Vehicle corresponds to lecture: In the concept of journey, vehicle refers to the tool used to transport travelers. In the concept of education, lecture refers to the oral expression for delivering knowledge and information. Here, vehicle and lecture both represent a means of communication and transfer.",
+      "Vehicle corresponds to reading: In the concept of journey, vehicle refers to the tool used to transport travelers. In the concept of education, reading refers to the process of acquiring knowledge and information through reading. Here, vehicle and reading both represent a means of acquiring and transferring.",
+      "Vehicle corresponds to textbook: In the concept of journey, vehicle refers to the tool used to transport travelers. In the concept of education, textbook refers to the book used for teaching. Here, vehicle and textbook both represent a tool that provides support and resources.",
+      "Vehicle corresponds to book: In the concept of journey, vehicle refers to the tool used to transport travelers. In the concept of education, book refers to the item used for recording and disseminating knowledge. Here, vehicle and book both represent a tool that provides support and resources.",
+      "Landscape corresponds to knowledge: In the concept of journey, landscape refers to the natural and man-made scenery seen during the journey. In the concept of education, knowledge refers to the information and understanding obtained through learning and practice. Here, landscape and knowledge both represent an object that can be observed and learned.",
+      "Destination corresponds to skill: In the concept of journey, destination refers to the ultimate goal of the journey. In the concept of education, skill refers to the ability mastered through learning and practice. Here, destination and skill both represent a goal that requires effort and practice to achieve.",
+      "Traveler corresponds to student: In the concept of journey, traveler refers to the person who participates in the journey. In the concept of education, student refers to the person who participates in learning. Here, traveler and student both represent the person seeking discovery and learning in a specific field.",
+      "Tour guide corresponds to teacher: In the concept of journey, tour guide refers to the person who provides travel guidance and commentary for tourists. In the concept of education, teacher refers to the person who provides education and guidance for students. Here, tour guide and teacher both represent the guide with professional knowledge and abilities in a specific field.",
+      "Driver corresponds to professor: In the concept of journey, driver refers to the person responsible for driving the vehicle. In the concept of education, professor refers to the person who teaches and conducts research in higher education institutions. Here, driver and professor both represent the person with professional knowledge and abilities in a specific field.",
+      "Fuel corresponds to scholarship: In the concept of journey, fuel refers to the energy used to drive the vehicle. In the concept of education, scholarship refers to the economic support provided to students to help them complete their studies. Here, fuel and scholarship both represent the support and resources required to achieve goals.",
+      "Guide corresponds to examiner: In the concept of journey, guide refers to the person who provides commentary for tourists visiting attractions. In the concept of education, examiner refers to the person responsible for organizing and evaluating exams. Here, guide and examiner both represent the role responsible for evaluation and interpretation in a specific field."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "non_bijective",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6",
+        "n7": "n7",
+        "n8": "n8",
+        "n9": "n9",
+        "n10": "n10",
+        "n11": "n11",
+        "n12": "n12",
+        "n13": "n13",
+        "n14": "n14"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "one_to_many",
+  "system": {
+    "source": "journey",
+    "target": "education"
+  },
+  "domains": {
+    "source": "Philosophy",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

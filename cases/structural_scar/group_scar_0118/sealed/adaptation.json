@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0118",
+  "dataset": "scar",
+  "original_id": "118",
+  "source_object_id": "obj_group_scar_0118_src",
+  "target_object_id": "obj_group_scar_0118_tgt",
+  "faithful_mappings": [
+    [
+      "molecular",
+      "people"
+    ],
+    [
+      "substituent",
+      "Profession"
+    ],
+    [
+      "chemical properties",
+      "social function"
+    ]
+  ],
+  "explanation": [
+    "Molecules correspond to people: In a functional group, a molecule is a basic unit with specific chemical properties. In a profession, a person is a basic unit that undertakes specific social functions. Both are basic constituent units in their respective fields.",
+    "Substituents correspond to professions: In a functional group, a substituent is a specific part of the molecule that determines its chemical properties. In a profession, a profession is a specific role that a person undertakes in society and determines their social function. Here, substituents and professions are both key parts that determine the nature and function of basic units.",
+    "Chemical properties correspond to social function: The chemical properties in a functional group are determined by the molecule and substituent together, and they determine the behavior of the molecule in chemical reactions. In a profession, the social function is determined by the person and profession together, and it determines the person's role and contribution in society. In this mapping, chemical properties and social function both represent the functions and roles in their respective fields."
+  ],
+  "background": {
+    "source": "In organic chemistry, a functional group is a set of atoms within a molecule that determine the molecule's characteristic chemical properties and reactivity, regardless of the rest of the molecule's composition. These distinct groups, also known as substituents, can be used to predict and modify the behavior of organic compounds, as well as serve as a basis for designing chemical synthesis. The functional group concept is also applicable to polymers, ligands in coordination complexes, and solvation interactions. The naming convention for organic compounds involves combining the functional group names with parent alkanes, using Greek letters or numerical labeling to indicate the position of functional groups and isomers. While the term \"moiety\" can also refer to a functional group, it encompasses larger units consisting of multiple functional groups.",
+    "target": "Occupation is a term that refers to various aspects related to people, their profession, and social function in society. In most cases, it is used to describe a job or role that an individual performs regularly in exchange for payment. This could be in the form of employment or entrepreneurship. A wide range of professions falls under the term occupation, including doctors, teachers, engineers, lawyers, and much more. Each profession requires specific skills, knowledge and expertise to meet the demands of their job. \n\nApart from its definition as a profession or a job, occupation can also be used in the context of political demonstration by holding public or symbolic spaces. People engaging in such protests aim to bring attention to social and political issues that are affecting their lives. Military occupation, on the other hand, refers to the martial control of a territory by a foreign country or power. This is often associated with conflict and instability in the region. \n\nOccupancy is another facet of occupation, referring to the use of a building without any implication of ownership. It is a legal term that is linked to housing and property management. When individuals or entities occupy a building, they are responsible for ensuring its maintenance and upkeep, although it may not belong to them. \n\nOverall, occupation is a multifaceted term that encompasses a range of meanings and contexts. It plays a significant role in shaping societies and determining the social, economic and political well-being of people. From individual professions to political protests and military conflict, occupation is a constant presence in the lives of people."
+  },
+  "raw": {
+    "id": 118,
+    "lang": "en",
+    "system_a": "Functional Group",
+    "system_b": "Occupation",
+    "mappings": [
+      [
+        "molecular",
+        "people"
+      ],
+      [
+        "substituent",
+        "Profession"
+      ],
+      [
+        "chemical properties",
+        "social function"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "In organic chemistry, a functional group is a set of atoms within a molecule that determine the molecule's characteristic chemical properties and reactivity, regardless of the rest of the molecule's composition. These distinct groups, also known as substituents, can be used to predict and modify the behavior of organic compounds, as well as serve as a basis for designing chemical synthesis. The functional group concept is also applicable to polymers, ligands in coordination complexes, and solvation interactions. The naming convention for organic compounds involves combining the functional group names with parent alkanes, using Greek letters or numerical labeling to indicate the position of functional groups and isomers. While the term \"moiety\" can also refer to a functional group, it encompasses larger units consisting of multiple functional groups.",
+    "system_b_background": "Occupation is a term that refers to various aspects related to people, their profession, and social function in society. In most cases, it is used to describe a job or role that an individual performs regularly in exchange for payment. This could be in the form of employment or entrepreneurship. A wide range of professions falls under the term occupation, including doctors, teachers, engineers, lawyers, and much more. Each profession requires specific skills, knowledge and expertise to meet the demands of their job. \n\nApart from its definition as a profession or a job, occupation can also be used in the context of political demonstration by holding public or symbolic spaces. People engaging in such protests aim to bring attention to social and political issues that are affecting their lives. Military occupation, on the other hand, refers to the martial control of a territory by a foreign country or power. This is often associated with conflict and instability in the region. \n\nOccupancy is another facet of occupation, referring to the use of a building without any implication of ownership. It is a legal term that is linked to housing and property management. When individuals or entities occupy a building, they are responsible for ensuring its maintenance and upkeep, although it may not belong to them. \n\nOverall, occupation is a multifaceted term that encompasses a range of meanings and contexts. It plays a significant role in shaping societies and determining the social, economic and political well-being of people. From individual professions to political protests and military conflict, occupation is a constant presence in the lives of people.",
+    "Explanation": [
+      "Molecules correspond to people: In a functional group, a molecule is a basic unit with specific chemical properties. In a profession, a person is a basic unit that undertakes specific social functions. Both are basic constituent units in their respective fields.",
+      "Substituents correspond to professions: In a functional group, a substituent is a specific part of the molecule that determines its chemical properties. In a profession, a profession is a specific role that a person undertakes in society and determines their social function. Here, substituents and professions are both key parts that determine the nature and function of basic units.",
+      "Chemical properties correspond to social function: The chemical properties in a functional group are determined by the molecule and substituent together, and they determine the behavior of the molecule in chemical reactions. In a profession, the social function is determined by the person and profession together, and it determines the person's role and contribution in society. In this mapping, chemical properties and social function both represent the functions and roles in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Functional Group",
+    "target": "Occupation"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

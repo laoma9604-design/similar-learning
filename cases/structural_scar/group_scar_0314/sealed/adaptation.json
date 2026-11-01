@@ -1,0 +1,130 @@
+{
+  "adaptation_id": "adapt_scar_0314",
+  "dataset": "scar",
+  "original_id": "314",
+  "source_object_id": "obj_group_scar_0314_src",
+  "target_object_id": "obj_group_scar_0314_tgt",
+  "faithful_mappings": [
+    [
+      "game",
+      "politics"
+    ],
+    [
+      "player",
+      "politician"
+    ],
+    [
+      "bet",
+      "election"
+    ],
+    [
+      "rules",
+      "law"
+    ],
+    [
+      "playground",
+      "parliament"
+    ],
+    [
+      "ball",
+      "press"
+    ],
+    [
+      "toy",
+      "citizen"
+    ]
+  ],
+  "explanation": [
+    "Game corresponds to politics: both games and politics are activities that involve strategy, competition, and cooperation. In games, players need to follow rules and develop strategies to win; in politics, politicians need to follow laws and develop policies to achieve their goals.",
+    "Player corresponds to politician: in games, players are the main participants in competition and cooperation, and they achieve game goals by developing strategies and interacting with each other; in politics, politicians are the main participants in political activities and achieve political goals by developing policies and interacting with other politicians.",
+    "Bet corresponds to election: in games, bets are the risks players take to win; in politics, elections are the competitions politicians participate in to gain power. Both represent the efforts and risks participants make to achieve their goals.",
+    "Rules correspond to law: in games, rules are a set of regulations that constrain players' behavior, ensuring the fairness and order of the game; in politics, law is a set of regulations that constrains politicians and citizens' behavior, ensuring the fairness and order of society. Both are norms established to maintain order and fairness.",
+    "Playground corresponds to parliament: in games, the playground is where players play the game; in politics, parliament is where politicians engage in political activities. Both are specialized places established to achieve respective goals.",
+    "Ball corresponds to press: in games, the ball is the tool that players use to achieve game goals by operating; in politics, press can be understood as the tool that politicians use to achieve political goals by operating, such as legislation and voting. Both are means used by participants to achieve their goals.",
+    "Toy corresponds to citizen: in games, toys are for entertainment and enjoyment of the game; in politics, citizens are the foundation of the political system, and politicians need to pay attention to the needs and interests of citizens. Both are core elements in their respective fields and provide support and motivation for the entire system."
+  ],
+  "background": {
+    "source": "A game is an activity that provides entertainment, either individually or in a team setting. Players aim to achieve specific goals according to established rules that govern the game, and they may face different challenges that require mental or physical interaction. While games can be played for fun, they may also serve as an educational tool or help develop practical skills. Additionally, some games allow individuals to place a bet, making the gameplay even more exciting. Games have been a part of human experience since ancient times - from royal games like the Royal Game of Ur to sports like football, which involves a ball played on a playground. It is important to note that a toy and a game differ in that games have rules to follow, while toys allow for unrestricted play.",
+    "target": "Politics is a broad term that encompasses all activities related to the distribution of power and resources among individuals or groups. It involves making decisions, negotiating with other political subjects, making laws, and even using internal and external force to achieve goals. Political science is a branch of social science that studies politics and government, embracing different views on whether it should be exercised extensively, limitedly, or through conflict or cooperation. Politics is exercised at various social levels and in modern nation-states, political parties emerge as representatives of people's ideas. The competition between different parties is often settled by election, a process that allows citizens to choose leaders and decide on the changes to law. In this political framework, different political systems define acceptable political methods within a society, and the press plays a critical role in shaping opinions and public discourse."
+  },
+  "raw": {
+    "id": 314,
+    "lang": "en",
+    "system_a": "game",
+    "system_b": "politics",
+    "mappings": [
+      [
+        "game",
+        "politics"
+      ],
+      [
+        "player",
+        "politician"
+      ],
+      [
+        "bet",
+        "election"
+      ],
+      [
+        "rules",
+        "law"
+      ],
+      [
+        "playground",
+        "parliament"
+      ],
+      [
+        "ball",
+        "press"
+      ],
+      [
+        "toy",
+        "citizen"
+      ]
+    ],
+    "system_a_domain": "Art",
+    "system_b_domain": "History",
+    "system_a_background": "A game is an activity that provides entertainment, either individually or in a team setting. Players aim to achieve specific goals according to established rules that govern the game, and they may face different challenges that require mental or physical interaction. While games can be played for fun, they may also serve as an educational tool or help develop practical skills. Additionally, some games allow individuals to place a bet, making the gameplay even more exciting. Games have been a part of human experience since ancient times - from royal games like the Royal Game of Ur to sports like football, which involves a ball played on a playground. It is important to note that a toy and a game differ in that games have rules to follow, while toys allow for unrestricted play.",
+    "system_b_background": "Politics is a broad term that encompasses all activities related to the distribution of power and resources among individuals or groups. It involves making decisions, negotiating with other political subjects, making laws, and even using internal and external force to achieve goals. Political science is a branch of social science that studies politics and government, embracing different views on whether it should be exercised extensively, limitedly, or through conflict or cooperation. Politics is exercised at various social levels and in modern nation-states, political parties emerge as representatives of people's ideas. The competition between different parties is often settled by election, a process that allows citizens to choose leaders and decide on the changes to law. In this political framework, different political systems define acceptable political methods within a society, and the press plays a critical role in shaping opinions and public discourse.",
+    "Explanation": [
+      "Game corresponds to politics: both games and politics are activities that involve strategy, competition, and cooperation. In games, players need to follow rules and develop strategies to win; in politics, politicians need to follow laws and develop policies to achieve their goals.",
+      "Player corresponds to politician: in games, players are the main participants in competition and cooperation, and they achieve game goals by developing strategies and interacting with each other; in politics, politicians are the main participants in political activities and achieve political goals by developing policies and interacting with other politicians.",
+      "Bet corresponds to election: in games, bets are the risks players take to win; in politics, elections are the competitions politicians participate in to gain power. Both represent the efforts and risks participants make to achieve their goals.",
+      "Rules correspond to law: in games, rules are a set of regulations that constrain players' behavior, ensuring the fairness and order of the game; in politics, law is a set of regulations that constrains politicians and citizens' behavior, ensuring the fairness and order of society. Both are norms established to maintain order and fairness.",
+      "Playground corresponds to parliament: in games, the playground is where players play the game; in politics, parliament is where politicians engage in political activities. Both are specialized places established to achieve respective goals.",
+      "Ball corresponds to press: in games, the ball is the tool that players use to achieve game goals by operating; in politics, press can be understood as the tool that politicians use to achieve political goals by operating, such as legislation and voting. Both are means used by participants to achieve their goals.",
+      "Toy corresponds to citizen: in games, toys are for entertainment and enjoyment of the game; in politics, citizens are the foundation of the political system, and politicians need to pay attention to the needs and interests of citizens. Both are core elements in their respective fields and provide support and motivation for the entire system."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6",
+        "n7": "n7"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "game",
+    "target": "politics"
+  },
+  "domains": {
+    "source": "Art",
+    "target": "History"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

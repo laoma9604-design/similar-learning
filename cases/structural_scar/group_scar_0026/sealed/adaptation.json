@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0026",
+  "dataset": "scar",
+  "original_id": "26",
+  "source_object_id": "obj_group_scar_0026_src",
+  "target_object_id": "obj_group_scar_0026_tgt",
+  "faithful_mappings": [
+    [
+      "gene sequence",
+      "article"
+    ],
+    [
+      "genetic mutation",
+      "typo"
+    ],
+    [
+      "Gene",
+      "meaning"
+    ],
+    [
+      "repair",
+      "correct"
+    ]
+  ],
+  "explanation": [
+    "Gene sequence corresponds to article: In the context of genetic mutations, gene sequence is a biological information coding sequence composed of nucleotides. Whereas in the context of typos, articles contain information composed of words.",
+    "Genetic mutation corresponds to typo: Genetic mutation refers to errors or changes in the nucleotides of a gene sequence, which may result in changes in gene function. In the context of typos, typos refer to words that are incorrectly entered or replaced, which may result in a change in meaning.",
+    "Gene corresponds to meaning: In the context of genetic mutations, a gene refers to a specific part of the gene sequence that codes for a particular biological characteristic. In the context of typos, meaning refers to the information and intention conveyed by an article.",
+    "Repair corresponds to correct: In the context of genetic mutations, repair refers to an organism's intrinsic repair mechanism to correct errors in gene sequences. In the context of typos, correct refers to discovering and rectifying errors in an article."
+  ],
+  "background": {
+    "source": "Genetic mutation refers to any alteration in the nucleic acid sequence of an organism's genome, like DNA, virus or extrachromosomal DNA. It can arise from errors that occur during replication, mitosis, meiosis or other DNA damages, and may or may not produce detectable changes in the observable characteristics or phenotype of an organism. Mutations play a crucial part in both normal and abnormal biological processes, including evolution, the development of the immune system, and cancer. Mutations in genes can have many effects, whether it alters the product of a gene or prevents the gene from functioning entirely. Due to the damaging effects of mutations, organisms have mechanisms such as DNA repair to prevent or correct mutations by restoring the mutated sequence back to its original state.",
+    "target": "An article about typos is a piece of writing that discusses the errors that can be made in printed or electronic material. Typos, or typographical errors, are mistakes that are made when typing or printing, and can range from simple duplication to substitution or transposition of a few characters. Historically, typos referred to errors that occurred during manual type-setting, but now they can be caused by mechanical failure, slips of the hand or finger, or inaccuracy due to larger fingers on touchscreens or keyboards. It is important to correct typos in order to convey the intended meaning of the text."
+  },
+  "raw": {
+    "id": 26,
+    "lang": "en",
+    "system_a": "Genetic Mutation",
+    "system_b": "Typo",
+    "mappings": [
+      [
+        "gene sequence",
+        "article"
+      ],
+      [
+        "genetic mutation",
+        "typo"
+      ],
+      [
+        "Gene",
+        "meaning"
+      ],
+      [
+        "repair",
+        "correct"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Engineering",
+    "system_a_background": "Genetic mutation refers to any alteration in the nucleic acid sequence of an organism's genome, like DNA, virus or extrachromosomal DNA. It can arise from errors that occur during replication, mitosis, meiosis or other DNA damages, and may or may not produce detectable changes in the observable characteristics or phenotype of an organism. Mutations play a crucial part in both normal and abnormal biological processes, including evolution, the development of the immune system, and cancer. Mutations in genes can have many effects, whether it alters the product of a gene or prevents the gene from functioning entirely. Due to the damaging effects of mutations, organisms have mechanisms such as DNA repair to prevent or correct mutations by restoring the mutated sequence back to its original state.",
+    "system_b_background": "An article about typos is a piece of writing that discusses the errors that can be made in printed or electronic material. Typos, or typographical errors, are mistakes that are made when typing or printing, and can range from simple duplication to substitution or transposition of a few characters. Historically, typos referred to errors that occurred during manual type-setting, but now they can be caused by mechanical failure, slips of the hand or finger, or inaccuracy due to larger fingers on touchscreens or keyboards. It is important to correct typos in order to convey the intended meaning of the text.",
+    "Explanation": [
+      "Gene sequence corresponds to article: In the context of genetic mutations, gene sequence is a biological information coding sequence composed of nucleotides. Whereas in the context of typos, articles contain information composed of words.",
+      "Genetic mutation corresponds to typo: Genetic mutation refers to errors or changes in the nucleotides of a gene sequence, which may result in changes in gene function. In the context of typos, typos refer to words that are incorrectly entered or replaced, which may result in a change in meaning.",
+      "Gene corresponds to meaning: In the context of genetic mutations, a gene refers to a specific part of the gene sequence that codes for a particular biological characteristic. In the context of typos, meaning refers to the information and intention conveyed by an article.",
+      "Repair corresponds to correct: In the context of genetic mutations, repair refers to an organism's intrinsic repair mechanism to correct errors in gene sequences. In the context of typos, correct refers to discovering and rectifying errors in an article."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Genetic Mutation",
+    "target": "Typo"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

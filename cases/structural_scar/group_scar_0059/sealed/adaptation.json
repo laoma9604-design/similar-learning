@@ -1,0 +1,75 @@
+{
+  "adaptation_id": "adapt_scar_0059",
+  "dataset": "scar",
+  "original_id": "59",
+  "source_object_id": "obj_group_scar_0059_src",
+  "target_object_id": "obj_group_scar_0059_tgt",
+  "faithful_mappings": [
+    [
+      "transcription",
+      "text"
+    ],
+    [
+      "translate",
+      "language"
+    ]
+  ],
+  "explanation": [
+    "Transcription corresponds to printing text: In biology, transcription is the process of converting information from DNA to RNA. This process is similar to the process of a printer converting textual information from an electronic document to a paper document. Both involve information conversion and output.",
+    "Translation corresponds to printing language: In biology, translation is the process of converting information from RNA to protein. This process is similar to the process of a printer converting language information from an electronic document to a paper document. Both involve information interpretation and presentation."
+  ],
+  "background": {
+    "source": "Transcription and Translation are fundamental processes of gene expression that play critical roles in the biosynthesis of proteins. Transcription is the process where the genetic information within DNA is copied onto RNA, which then serves as a template for translation. Translation is the process where the RNA code is translated into the protein structure. In prokaryotes, these processes are coupled, meaning that transcription and translation occur simultaneously. This coupling enables communication between RNA polymerase, the enzyme that catalyzes transcription, and the ribosome, which catalyzes translation. This process involves direct physical interactions between RNA polymerase and the ribosome, as well as ribosome-induced changes to the structure and accessibility of the intervening mRNA that affect transcription. These mechanisms of coupling are vital for the proper regulation and efficient synthesis of proteins in prokaryotes. Overall, through the transcription-translation coupling, the genetic information within DNA is converted into functional proteins that are essential for the survival and growth of living organisms.",
+    "target": "Printers are an essential device that enables you to create hard copies of digital text documents. They are designed to print written text, images, and graphics onto paper, cardboard, or other materials. The language which a printer uses is an integral part of its operation. Language refers to the programming instructions that the printer relies on to decode and print text documents. Today, printers are available in various designs and sizes, ranging from portable ones to large office printers. They use inkjet or laser technology to produce high-quality documents, making them an invaluable device for both personal and professional use. With advances in printing technology, printers have become more versatile and efficient in printing a wide range of text languages. Whether you are printing work documents, flyers, or photos, a printer is a necessary tool to have in your home or office."
+  },
+  "raw": {
+    "id": 59,
+    "lang": "en",
+    "system_a": "Transcription and Translation",
+    "system_b": "Printers",
+    "mappings": [
+      [
+        "transcription",
+        "text"
+      ],
+      [
+        "translate",
+        "language"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Physics",
+    "system_a_background": "Transcription and Translation are fundamental processes of gene expression that play critical roles in the biosynthesis of proteins. Transcription is the process where the genetic information within DNA is copied onto RNA, which then serves as a template for translation. Translation is the process where the RNA code is translated into the protein structure. In prokaryotes, these processes are coupled, meaning that transcription and translation occur simultaneously. This coupling enables communication between RNA polymerase, the enzyme that catalyzes transcription, and the ribosome, which catalyzes translation. This process involves direct physical interactions between RNA polymerase and the ribosome, as well as ribosome-induced changes to the structure and accessibility of the intervening mRNA that affect transcription. These mechanisms of coupling are vital for the proper regulation and efficient synthesis of proteins in prokaryotes. Overall, through the transcription-translation coupling, the genetic information within DNA is converted into functional proteins that are essential for the survival and growth of living organisms.",
+    "system_b_background": "Printers are an essential device that enables you to create hard copies of digital text documents. They are designed to print written text, images, and graphics onto paper, cardboard, or other materials. The language which a printer uses is an integral part of its operation. Language refers to the programming instructions that the printer relies on to decode and print text documents. Today, printers are available in various designs and sizes, ranging from portable ones to large office printers. They use inkjet or laser technology to produce high-quality documents, making them an invaluable device for both personal and professional use. With advances in printing technology, printers have become more versatile and efficient in printing a wide range of text languages. Whether you are printing work documents, flyers, or photos, a printer is a necessary tool to have in your home or office.",
+    "Explanation": [
+      "Transcription corresponds to printing text: In biology, transcription is the process of converting information from DNA to RNA. This process is similar to the process of a printer converting textual information from an electronic document to a paper document. Both involve information conversion and output.",
+      "Translation corresponds to printing language: In biology, translation is the process of converting information from RNA to protein. This process is similar to the process of a printer converting language information from an electronic document to a paper document. Both involve information interpretation and presentation."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Transcription and Translation",
+    "target": "Printers"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Physics"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

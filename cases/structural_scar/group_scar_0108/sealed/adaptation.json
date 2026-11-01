@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0108",
+  "dataset": "scar",
+  "original_id": "108",
+  "source_object_id": "obj_group_scar_0108_src",
+  "target_object_id": "obj_group_scar_0108_tgt",
+  "faithful_mappings": [
+    [
+      "acidic substance",
+      "Negative emotions"
+    ],
+    [
+      "alkaline substance",
+      "positive emotions"
+    ],
+    [
+      "pH value",
+      "sentiment index"
+    ]
+  ],
+  "explanation": [
+    "Acidic substance corresponds to negative emotions: In chemical substances, acidic substances have lower pH values. In human emotions, negative emotions refer to those unpleasant and negative emotions. Both represent the negative aspect in their respective fields.",
+    "Alkaline substance corresponds to positive emotions: In chemical substances, alkaline substances have higher pH values. In human emotions, positive emotions refer to those pleasant and positive emotions. Both represent the positive aspect in their respective fields.",
+    "pH value corresponds to sentiment index: In chemical substances, pH value is an indicator used to measure the acidity or alkalinity of a substance. In human emotions, sentiment index is an indicator used to measure a person's emotional state. Both are quantifiable indicators used to describe a certain characteristic in their respective fields."
+  ],
+  "background": {
+    "source": "Chemical substances are the building blocks of everything around us, from the air we breathe to the food we eat. They are defined as matter with constant chemical composition and unique properties. Chemical substances come in different forms - simple substances, chemical compounds or even alloys. Often referred to as 'pure', chemical substances are different from mixtures since they possess the same physical and chemical properties regardless of their origin.\nSome of the well-known examples of chemical substances include water, diamond, gold, table salt, and sucrose. Although no substance is completely pure, the intended use of a chemical determines its purity. Chemical reactions can be used to combine or change the form of chemical substances. Moreover, they exist in different states like solids, liquids, gases or plasma, and can transform between these phases depending on variations in temperature, pressure, and time.\nWhen it comes to chemical substances, their acidic or alkaline properties are critical in determining their behavior in different environments. Measured on the pH scale, an acidic substance has values below 7, while an alkaline substance has values above 7. Understanding the pH value of chemical substances is essential in various fields like agriculture, medicine, and industrial manufacturing, among others.",
+    "target": "Human emotions are a complex phenomena that have intrigued scholars and artists alike throughout human history. David Allan Coe's album 'Human Emotions' is an introspective look into the wide-ranging emotional states of human beings. With a collection of both positive and negative emotions, this album delves deep into the psyche of the human condition. The lyrics are steeped in an intense sentiment index that perfectly captures the essence of each emotional state painted in the songs. Released in 1978 by Columbia, the album is an exploration of the range of emotions that humans experience - from the depths of despair to the heights of jubilation. Coe's masterful lyrics and melodious voice do justice to the subject matter, serving up a rich and thought-provoking listening experience. In short, 'Human Emotions' is a must-listen for anyone who wishes to gain a better understanding of the inner workings of the human psyche."
+  },
+  "raw": {
+    "id": 108,
+    "lang": "en",
+    "system_a": "Chemical Substances",
+    "system_b": "Human Emotions",
+    "mappings": [
+      [
+        "acidic substance",
+        "Negative emotions"
+      ],
+      [
+        "alkaline substance",
+        "positive emotions"
+      ],
+      [
+        "pH value",
+        "sentiment index"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Philosophy",
+    "system_a_background": "Chemical substances are the building blocks of everything around us, from the air we breathe to the food we eat. They are defined as matter with constant chemical composition and unique properties. Chemical substances come in different forms - simple substances, chemical compounds or even alloys. Often referred to as 'pure', chemical substances are different from mixtures since they possess the same physical and chemical properties regardless of their origin.\nSome of the well-known examples of chemical substances include water, diamond, gold, table salt, and sucrose. Although no substance is completely pure, the intended use of a chemical determines its purity. Chemical reactions can be used to combine or change the form of chemical substances. Moreover, they exist in different states like solids, liquids, gases or plasma, and can transform between these phases depending on variations in temperature, pressure, and time.\nWhen it comes to chemical substances, their acidic or alkaline properties are critical in determining their behavior in different environments. Measured on the pH scale, an acidic substance has values below 7, while an alkaline substance has values above 7. Understanding the pH value of chemical substances is essential in various fields like agriculture, medicine, and industrial manufacturing, among others.",
+    "system_b_background": "Human emotions are a complex phenomena that have intrigued scholars and artists alike throughout human history. David Allan Coe's album 'Human Emotions' is an introspective look into the wide-ranging emotional states of human beings. With a collection of both positive and negative emotions, this album delves deep into the psyche of the human condition. The lyrics are steeped in an intense sentiment index that perfectly captures the essence of each emotional state painted in the songs. Released in 1978 by Columbia, the album is an exploration of the range of emotions that humans experience - from the depths of despair to the heights of jubilation. Coe's masterful lyrics and melodious voice do justice to the subject matter, serving up a rich and thought-provoking listening experience. In short, 'Human Emotions' is a must-listen for anyone who wishes to gain a better understanding of the inner workings of the human psyche.",
+    "Explanation": [
+      "Acidic substance corresponds to negative emotions: In chemical substances, acidic substances have lower pH values. In human emotions, negative emotions refer to those unpleasant and negative emotions. Both represent the negative aspect in their respective fields.",
+      "Alkaline substance corresponds to positive emotions: In chemical substances, alkaline substances have higher pH values. In human emotions, positive emotions refer to those pleasant and positive emotions. Both represent the positive aspect in their respective fields.",
+      "pH value corresponds to sentiment index: In chemical substances, pH value is an indicator used to measure the acidity or alkalinity of a substance. In human emotions, sentiment index is an indicator used to measure a person's emotional state. Both are quantifiable indicators used to describe a certain characteristic in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Chemical Substances",
+    "target": "Human Emotions"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Philosophy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

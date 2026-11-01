@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0120",
+  "dataset": "scar",
+  "original_id": "120",
+  "source_object_id": "obj_group_scar_0120_src",
+  "target_object_id": "obj_group_scar_0120_tgt",
+  "faithful_mappings": [
+    [
+      "polymer chain",
+      "building structure"
+    ],
+    [
+      "monomer",
+      "building materials"
+    ],
+    [
+      "molecular crosslinking",
+      "supporting structure"
+    ]
+  ],
+  "explanation": [
+    "The polymer chain corresponds to the building structure: in a polymer structure, the polymer chain is the basic unit that forms the polymer. In a building, the building structure is the basic framework that forms the building. Both are the fundamental units in their respective fields.",
+    "The monomer corresponds to the building materials: in a polymer structure, the monomer is the basic unit that forms the polymer chain. In a building, the building materials are the basic elements that form the building structure. Here, the monomer and the building materials are both the fundamental components in their respective fields.",
+    "Molecular crosslinking corresponds to the supporting structure: the molecular crosslinking in a polymer structure connects the polymer chains to enhance the stability and strength of the polymer. In a building, the supporting structure is the component that connects the building structure to enhance the stability and load-bearing capacity of the building. In this analogy, molecular crosslinking and supporting structure both represent the connection and reinforcement in their respective fields."
+  ],
+  "background": {
+    "source": "Polymers are substances or materials consisting of very large molecules known as macromolecules, made up of repeating subunits called monomers. These monomers are linked together through polymerization, resulting in a long polymer chain with a unique set of physical properties. The term \"polymer\" comes from the Greek words meaning \"many parts,\" and these materials can range from natural biopolymers like DNA and proteins to synthetic plastics like polystyrene. The molecular crosslinking within polymers gives rise to their distinctive qualities, such as high elasticity, toughness, and the ability to form amorphous or semi-crystalline structures. While polymers were first studied in the context of covalent chemical bonds, recent research has also focused on the formation of supramolecular polymers through non-covalent connections. As a foundation of polymer science, these versatile materials have applications across many fields, from biophysics to materials science and engineering.",
+    "target": "Buildings are an essential part of human civilization, providing us with shelter, security, and comfort. They are structures that are built to last and come in a variety of shapes, sizes, and functions, using different building materials and supporting structures. Buildings have been designed to meet specific requirements, from environmental to aesthetic. They are also used to express artistic expressions as well as meet societal needs like living and working spaces, storage, privacy, and safety. In recent years, there has been an increasing interest in sustainable planning and building practices, making buildings more than just functional structures, but also environmentally friendly and sustainable. Building structures are the backbone of our built environment, providing us with places to live, work, and play."
+  },
+  "raw": {
+    "id": 120,
+    "lang": "en",
+    "system_a": "Polymer Structure",
+    "system_b": "Buildings",
+    "mappings": [
+      [
+        "polymer chain",
+        "building structure"
+      ],
+      [
+        "monomer",
+        "building materials"
+      ],
+      [
+        "molecular crosslinking",
+        "supporting structure"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Engineering",
+    "system_a_background": "Polymers are substances or materials consisting of very large molecules known as macromolecules, made up of repeating subunits called monomers. These monomers are linked together through polymerization, resulting in a long polymer chain with a unique set of physical properties. The term \"polymer\" comes from the Greek words meaning \"many parts,\" and these materials can range from natural biopolymers like DNA and proteins to synthetic plastics like polystyrene. The molecular crosslinking within polymers gives rise to their distinctive qualities, such as high elasticity, toughness, and the ability to form amorphous or semi-crystalline structures. While polymers were first studied in the context of covalent chemical bonds, recent research has also focused on the formation of supramolecular polymers through non-covalent connections. As a foundation of polymer science, these versatile materials have applications across many fields, from biophysics to materials science and engineering.",
+    "system_b_background": "Buildings are an essential part of human civilization, providing us with shelter, security, and comfort. They are structures that are built to last and come in a variety of shapes, sizes, and functions, using different building materials and supporting structures. Buildings have been designed to meet specific requirements, from environmental to aesthetic. They are also used to express artistic expressions as well as meet societal needs like living and working spaces, storage, privacy, and safety. In recent years, there has been an increasing interest in sustainable planning and building practices, making buildings more than just functional structures, but also environmentally friendly and sustainable. Building structures are the backbone of our built environment, providing us with places to live, work, and play.",
+    "Explanation": [
+      "The polymer chain corresponds to the building structure: in a polymer structure, the polymer chain is the basic unit that forms the polymer. In a building, the building structure is the basic framework that forms the building. Both are the fundamental units in their respective fields.",
+      "The monomer corresponds to the building materials: in a polymer structure, the monomer is the basic unit that forms the polymer chain. In a building, the building materials are the basic elements that form the building structure. Here, the monomer and the building materials are both the fundamental components in their respective fields.",
+      "Molecular crosslinking corresponds to the supporting structure: the molecular crosslinking in a polymer structure connects the polymer chains to enhance the stability and strength of the polymer. In a building, the supporting structure is the component that connects the building structure to enhance the stability and load-bearing capacity of the building. In this analogy, molecular crosslinking and supporting structure both represent the connection and reinforcement in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Polymer Structure",
+    "target": "Buildings"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

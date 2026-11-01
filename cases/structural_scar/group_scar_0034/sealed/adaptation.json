@@ -1,0 +1,86 @@
+{
+  "adaptation_id": "adapt_scar_0034",
+  "dataset": "scar",
+  "original_id": "34",
+  "source_object_id": "obj_group_scar_0034_src",
+  "target_object_id": "obj_group_scar_0034_tgt",
+  "faithful_mappings": [
+    [
+      "cell",
+      "manuscript"
+    ],
+    [
+      "cell organelle",
+      "part"
+    ],
+    [
+      "molecular",
+      "ink cartridge"
+    ]
+  ],
+  "explanation": [
+    "Cell corresponds to manuscript: During the process of cell division, the cell is the basic unit that needs to be replicated. In a photocopier, the manuscript is the paper that needs to be copied. Here, both the cell and the manuscript represent the objects to be replicated in their respective systems.",
+    "Cell organelles correspond to parts: Organelles are structures within cells that are responsible for specific functions. Parts in a photocopy machine are components that are responsible for specific functions within the machine. Here, both organelles and parts are the components that carry out specific functions in their respective systems.",
+    "Molecules correspond to ink cartridges: Molecules during the process of cell division are the basic units that make up cells and organelles. Ink cartridges in a photocopy machine are responsible for printing on the paper. Here, both molecules and ink cartridges are the key components that implement the functions of their respective systems."
+  ],
+  "background": {
+    "source": "Cell division is the process by which a single cell divides into two daughter cells while maintaining the genetic material's integrity. The process is vital for all living organisms and is an integral part of their life cycle. Eukaryotic cells undergo two types of cell division: mitosis, a vegetative division that results in genetically identical daughter cells, and meiosis, which produces haploid gametes for sexual reproduction. In contrast, prokaryotic cells usually undergo binary fission to form two daughter cells that contain the same genetic information as the parent cell. The replication of DNA and careful separation of chromosomes are vital steps that ensure genomic consistency among species. With the help of various cellular organelles and molecular signaling mechanisms, the process of cell division enables the continual construction and repair of the organism, leading to the creation of multiple new generations.",
+    "target": "The Replicator is a multifaceted device that is designed to enable the replication of various items. Its functionalities are diverse, but the device is mainly geared towards the replication of manuscripts, parts, and ink cartridges.\n\nRegarding the replication of manuscripts, the Replicator is equipped with advanced scanning technology that makes it possible to scan and reproduce any manuscript with flawless clarity. This means that any document can be replicated and reproduced with the same precision as the original, thus making it an essential tool in the preservation of historical and cultural artifacts.\n\nIn terms of part replication, the Replicator can easily replicate any physical part, regardless of its complexity, to exact specifications. This feature has proven invaluable in industries such as automotive, aerospace and manufacturing. The device is able to replicate parts that would otherwise be difficult or impossible to obtain, therefore saving many companies time and money.\n\nThe Replicator's function as an ink cartridge replicator is also notable. This feature allows it to produce high-quality ink cartridges for various types of printers. With the Replicator, there is no need to worry about running out of ink, as the device can easily produce ink cartridges of any required specifications.\n\nIn conclusion, the Replicator is a highly versatile device that makes it possible to replicate a variety of items with ease. Whether it's replicating manuscripts, parts, or ink cartridges, the Replicator is a useful tool that has proven to be indispensable in various industries. With its advanced technology and precision, the Replicator is a must-have for anyone who needs to replicate anything with accuracy and efficiency."
+  },
+  "raw": {
+    "id": 34,
+    "lang": "en",
+    "system_a": "Cell division",
+    "system_b": "the replicator",
+    "mappings": [
+      [
+        "cell",
+        "manuscript"
+      ],
+      [
+        "cell organelle",
+        "part"
+      ],
+      [
+        "molecular",
+        "ink cartridge"
+      ]
+    ],
+    "system_a_domain": "Biology",
+    "system_b_domain": "Engineering",
+    "system_a_background": "Cell division is the process by which a single cell divides into two daughter cells while maintaining the genetic material's integrity. The process is vital for all living organisms and is an integral part of their life cycle. Eukaryotic cells undergo two types of cell division: mitosis, a vegetative division that results in genetically identical daughter cells, and meiosis, which produces haploid gametes for sexual reproduction. In contrast, prokaryotic cells usually undergo binary fission to form two daughter cells that contain the same genetic information as the parent cell. The replication of DNA and careful separation of chromosomes are vital steps that ensure genomic consistency among species. With the help of various cellular organelles and molecular signaling mechanisms, the process of cell division enables the continual construction and repair of the organism, leading to the creation of multiple new generations.",
+    "system_b_background": "The Replicator is a multifaceted device that is designed to enable the replication of various items. Its functionalities are diverse, but the device is mainly geared towards the replication of manuscripts, parts, and ink cartridges.\n\nRegarding the replication of manuscripts, the Replicator is equipped with advanced scanning technology that makes it possible to scan and reproduce any manuscript with flawless clarity. This means that any document can be replicated and reproduced with the same precision as the original, thus making it an essential tool in the preservation of historical and cultural artifacts.\n\nIn terms of part replication, the Replicator can easily replicate any physical part, regardless of its complexity, to exact specifications. This feature has proven invaluable in industries such as automotive, aerospace and manufacturing. The device is able to replicate parts that would otherwise be difficult or impossible to obtain, therefore saving many companies time and money.\n\nThe Replicator's function as an ink cartridge replicator is also notable. This feature allows it to produce high-quality ink cartridges for various types of printers. With the Replicator, there is no need to worry about running out of ink, as the device can easily produce ink cartridges of any required specifications.\n\nIn conclusion, the Replicator is a highly versatile device that makes it possible to replicate a variety of items with ease. Whether it's replicating manuscripts, parts, or ink cartridges, the Replicator is a useful tool that has proven to be indispensable in various industries. With its advanced technology and precision, the Replicator is a must-have for anyone who needs to replicate anything with accuracy and efficiency.",
+    "Explanation": [
+      "Cell corresponds to manuscript: During the process of cell division, the cell is the basic unit that needs to be replicated. In a photocopier, the manuscript is the paper that needs to be copied. Here, both the cell and the manuscript represent the objects to be replicated in their respective systems.",
+      "Cell organelles correspond to parts: Organelles are structures within cells that are responsible for specific functions. Parts in a photocopy machine are components that are responsible for specific functions within the machine. Here, both organelles and parts are the components that carry out specific functions in their respective systems.",
+      "Molecules correspond to ink cartridges: Molecules during the process of cell division are the basic units that make up cells and organelles. Ink cartridges in a photocopy machine are responsible for printing on the paper. Here, both molecules and ink cartridges are the key components that implement the functions of their respective systems."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Cell division",
+    "target": "the replicator"
+  },
+  "domains": {
+    "source": "Biology",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

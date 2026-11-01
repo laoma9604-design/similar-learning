@@ -1,0 +1,185 @@
+{
+  "adaptation_id": "adapt_scar_0292",
+  "dataset": "scar",
+  "original_id": "292",
+  "source_object_id": "obj_group_scar_0292_src",
+  "target_object_id": "obj_group_scar_0292_tgt",
+  "faithful_mappings": [
+    [
+      "liquid",
+      "money"
+    ],
+    [
+      "pouring",
+      "investing"
+    ],
+    [
+      "flow",
+      "transfer"
+    ],
+    [
+      "flux",
+      "income"
+    ],
+    [
+      "flux",
+      "profit"
+    ],
+    [
+      "outflow",
+      "loss"
+    ],
+    [
+      "outflow",
+      "spending"
+    ],
+    [
+      "container",
+      "bank"
+    ],
+    [
+      "container",
+      "account"
+    ],
+    [
+      "sea",
+      "wealth"
+    ],
+    [
+      "source",
+      "salary"
+    ],
+    [
+      "pool",
+      "capital"
+    ]
+  ],
+  "explanation": [
+    "Liquid corresponds to money: both liquid and money can be seen as a type of resource.",
+    "Pouring corresponds to investing: pouring is the act of pouring liquid into a certain place, while investing is putting money into a certain project. This represents the allocation of resources in their respective fields.",
+    "Flow corresponds to transfer: flow refers to the movement of liquid, while transfer refers to the movement of funds. This represents the process of resource changes in their respective fields.",
+    "Inflow corresponds to income: inflow represents the process of liquid flowing in, while income represents the process of funds flowing in. This represents the increase of resources in their respective fields.",
+    "Inflow corresponds to profit: same as above, profit also represents the increase of resources in the economic field.",
+    "Outflow corresponds to loss: outflow represents the process of liquid flowing out, while loss represents the process of funds flowing out. This represents the decrease of resources in their respective fields.",
+    "Outflow corresponds to spending: same as above, spending also represents the decrease of resources in the economic field.",
+    "Container corresponds to bank: containers are used to hold liquid, while banks are used to store money. This represents the institutions used to store resources in their respective fields.",
+    "Container corresponds to account: same as above, an account is also a way to store money.",
+    "Sea corresponds to wealth: the sea represents a large amount of liquid, while wealth represents a large amount of money. This represents the abundance of resources in their respective fields.",
+    "Source corresponds to salary: source represents the starting point of liquid, while salary represents one of the sources of funds. This represents the methods of obtaining resources in their respective fields.",
+    "Pool corresponds to capital: a pool represents a gathering place for liquid, while capital represents a gathering place for funds. This represents a gathering place for resources in their respective fields."
+  ],
+  "background": {
+    "source": "A liquid is a unique state of matter that takes the shape of the container it is in, while maintaining a relatively constant volume. It is made up of tiny particles of matter held together by intermolecular bonds, and can flow like a gas while also retaining a density closer to that of a solid. Liquids, like gases, are considered fluids due to their ability to flow. Unlike gases, liquids do not disperse to fill every space of a container, and exhibit surface tension. While water is the most common liquid on Earth, liquid is actually the least common state of matter in the universe. This state of matter has the ability to pour, flow, and create outflow, making it an important resource for many uses. From the sea to a container or pool, liquids serve a variety of purposes.",
+    "target": "Money is an essential part of any society and economy, as it serves as a medium of exchange and a store of value. It can be used to transfer wealth, to pay for goods and services, and to generate income and profit through investing. However, it can also lead to loss through careless or excessive spending or making poor investment decisions. Banks play a crucial role in managing and safeguarding money through accounts and other services. Overall, money and its management are key aspects of personal and societal wealth and capital accumulation."
+  },
+  "raw": {
+    "id": 292,
+    "lang": "en",
+    "system_a": "liquid",
+    "system_b": "money",
+    "mappings": [
+      [
+        "liquid",
+        "money"
+      ],
+      [
+        "pouring",
+        "investing"
+      ],
+      [
+        "flow",
+        "transfer"
+      ],
+      [
+        "flux",
+        "income"
+      ],
+      [
+        "flux",
+        "profit"
+      ],
+      [
+        "outflow",
+        "loss"
+      ],
+      [
+        "outflow",
+        "spending"
+      ],
+      [
+        "container",
+        "bank"
+      ],
+      [
+        "container",
+        "account"
+      ],
+      [
+        "sea",
+        "wealth"
+      ],
+      [
+        "source",
+        "salary"
+      ],
+      [
+        "pool",
+        "capital"
+      ]
+    ],
+    "system_a_domain": "Chemical",
+    "system_b_domain": "Economy",
+    "system_a_background": "A liquid is a unique state of matter that takes the shape of the container it is in, while maintaining a relatively constant volume. It is made up of tiny particles of matter held together by intermolecular bonds, and can flow like a gas while also retaining a density closer to that of a solid. Liquids, like gases, are considered fluids due to their ability to flow. Unlike gases, liquids do not disperse to fill every space of a container, and exhibit surface tension. While water is the most common liquid on Earth, liquid is actually the least common state of matter in the universe. This state of matter has the ability to pour, flow, and create outflow, making it an important resource for many uses. From the sea to a container or pool, liquids serve a variety of purposes.",
+    "system_b_background": "Money is an essential part of any society and economy, as it serves as a medium of exchange and a store of value. It can be used to transfer wealth, to pay for goods and services, and to generate income and profit through investing. However, it can also lead to loss through careless or excessive spending or making poor investment decisions. Banks play a crucial role in managing and safeguarding money through accounts and other services. Overall, money and its management are key aspects of personal and societal wealth and capital accumulation.",
+    "Explanation": [
+      "Liquid corresponds to money: both liquid and money can be seen as a type of resource.",
+      "Pouring corresponds to investing: pouring is the act of pouring liquid into a certain place, while investing is putting money into a certain project. This represents the allocation of resources in their respective fields.",
+      "Flow corresponds to transfer: flow refers to the movement of liquid, while transfer refers to the movement of funds. This represents the process of resource changes in their respective fields.",
+      "Inflow corresponds to income: inflow represents the process of liquid flowing in, while income represents the process of funds flowing in. This represents the increase of resources in their respective fields.",
+      "Inflow corresponds to profit: same as above, profit also represents the increase of resources in the economic field.",
+      "Outflow corresponds to loss: outflow represents the process of liquid flowing out, while loss represents the process of funds flowing out. This represents the decrease of resources in their respective fields.",
+      "Outflow corresponds to spending: same as above, spending also represents the decrease of resources in the economic field.",
+      "Container corresponds to bank: containers are used to hold liquid, while banks are used to store money. This represents the institutions used to store resources in their respective fields.",
+      "Container corresponds to account: same as above, an account is also a way to store money.",
+      "Sea corresponds to wealth: the sea represents a large amount of liquid, while wealth represents a large amount of money. This represents the abundance of resources in their respective fields.",
+      "Source corresponds to salary: source represents the starting point of liquid, while salary represents one of the sources of funds. This represents the methods of obtaining resources in their respective fields.",
+      "Pool corresponds to capital: a pool represents a gathering place for liquid, while capital represents a gathering place for funds. This represents a gathering place for resources in their respective fields."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "non_bijective",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4",
+        "n5": "n5",
+        "n6": "n6",
+        "n7": "n7",
+        "n8": "n8",
+        "n9": "n9",
+        "n10": "n10",
+        "n11": "n11",
+        "n12": "n12"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "one_to_many",
+  "system": {
+    "source": "liquid",
+    "target": "money"
+  },
+  "domains": {
+    "source": "Chemical",
+    "target": "Economy"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}

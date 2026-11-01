@@ -1,0 +1,97 @@
+{
+  "adaptation_id": "adapt_scar_0180",
+  "dataset": "scar",
+  "original_id": "180",
+  "source_object_id": "obj_group_scar_0180_src",
+  "target_object_id": "obj_group_scar_0180_tgt",
+  "faithful_mappings": [
+    [
+      "ocean",
+      "platform"
+    ],
+    [
+      "Moon",
+      "console"
+    ],
+    [
+      "high tide",
+      "rise"
+    ],
+    [
+      "ebb and flow",
+      "decline"
+    ]
+  ],
+  "explanation": [
+    "Ocean corresponds to platform: In the concept of tides, the ocean is the place where tidal phenomenon occurs. In the concept of a platform, the platform is the main part that is used to support objects or personnel. Here, the ocean and platform are both places where corresponding phenomena occur.",
+    "Moon corresponds to console: In the concept of tides, the moon is the primary celestial body that affects tides and causes changes in the ocean's water level through gravitational force. In the concept of a platform, the console is the equipment used to control the platform's ascent and descent. Here, the moon and console both serve as factors that control the situation.",
+    "High tide corresponds to rise: In the concept of tides, high tide refers to the phenomenon where the ocean's water level rises. In the concept of a platform, rise refers to the process where the platform moves upwards. Here, high tide and rise both represent the upward movement of an object.",
+    "Ebb and flow correspond to decline: Inthe concept of tides, ebb and flow refer to the phenomenon where the ocean's water level decreases. In the concept of a platform, decline refers to the process where the platform moves downwards. Here, ebb and flow and decline both represent the downward movement of an object."
+  ],
+  "background": {
+    "source": "Tides are a natural phenomenon that occur in oceans and other systems as a result of the ebb and flow of sea levels. The gravitational forces exerted by the Moon (and to a lesser extent, the Sun) cause these fluctuations, which can be predicted using tide tables specific to different locations. The alignment of the Sun and Moon, the phase and amplitude of the tide, and the shape of the coastline and near-shore bathymetry all play a role in determining the timing and height of tides. While tide gauges at fixed stations measure water level over time, short-term sea-level fluctuations can also be caused by thermal expansion, wind, and barometric pressure changes, resulting in storm surges. Despite these various factors, tides are an essential aspect of oceanic ecosystems and have been studied for centuries for their impact on land masses and coastlines.",
+    "target": "A lift is a mechanical device that is designed to raise or lower a platform vertically. It is also known as an elevator or hoist. The platform is attached to a console, which usually contains the controls for operating the lift. The lift platform is capable of moving up and down with ease, allowing objects and people to rise and decline as needed. The lift is commonly used in buildings, where it provides quick and convenient access to different floors. It is also used in warehouses, loading docks, construction sites, and other places where heavy objects need to be lifted and transported. The lift is an essential piece of equipment that helps to streamline operations and improve efficiency in a variety of industries."
+  },
+  "raw": {
+    "id": 180,
+    "lang": "en",
+    "system_a": "Tide",
+    "system_b": "lift",
+    "mappings": [
+      [
+        "ocean",
+        "platform"
+      ],
+      [
+        "Moon",
+        "console"
+      ],
+      [
+        "high tide",
+        "rise"
+      ],
+      [
+        "ebb and flow",
+        "decline"
+      ]
+    ],
+    "system_a_domain": "Geography",
+    "system_b_domain": "Engineering",
+    "system_a_background": "Tides are a natural phenomenon that occur in oceans and other systems as a result of the ebb and flow of sea levels. The gravitational forces exerted by the Moon (and to a lesser extent, the Sun) cause these fluctuations, which can be predicted using tide tables specific to different locations. The alignment of the Sun and Moon, the phase and amplitude of the tide, and the shape of the coastline and near-shore bathymetry all play a role in determining the timing and height of tides. While tide gauges at fixed stations measure water level over time, short-term sea-level fluctuations can also be caused by thermal expansion, wind, and barometric pressure changes, resulting in storm surges. Despite these various factors, tides are an essential aspect of oceanic ecosystems and have been studied for centuries for their impact on land masses and coastlines.",
+    "system_b_background": "A lift is a mechanical device that is designed to raise or lower a platform vertically. It is also known as an elevator or hoist. The platform is attached to a console, which usually contains the controls for operating the lift. The lift platform is capable of moving up and down with ease, allowing objects and people to rise and decline as needed. The lift is commonly used in buildings, where it provides quick and convenient access to different floors. It is also used in warehouses, loading docks, construction sites, and other places where heavy objects need to be lifted and transported. The lift is an essential piece of equipment that helps to streamline operations and improve efficiency in a variety of industries.",
+    "Explanation": [
+      "Ocean corresponds to platform: In the concept of tides, the ocean is the place where tidal phenomenon occurs. In the concept of a platform, the platform is the main part that is used to support objects or personnel. Here, the ocean and platform are both places where corresponding phenomena occur.",
+      "Moon corresponds to console: In the concept of tides, the moon is the primary celestial body that affects tides and causes changes in the ocean's water level through gravitational force. In the concept of a platform, the console is the equipment used to control the platform's ascent and descent. Here, the moon and console both serve as factors that control the situation.",
+      "High tide corresponds to rise: In the concept of tides, high tide refers to the phenomenon where the ocean's water level rises. In the concept of a platform, rise refers to the process where the platform moves upwards. Here, high tide and rise both represent the upward movement of an object.",
+      "Ebb and flow correspond to decline: Inthe concept of tides, ebb and flow refer to the phenomenon where the ocean's water level decreases. In the concept of a platform, decline refers to the process where the platform moves downwards. Here, ebb and flow and decline both represent the downward movement of an object."
+    ]
+  },
+  "structure_source": "provided",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "n1": "n1",
+        "n2": "n2",
+        "n3": "n3",
+        "n4": "n4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "node_bijection"
+  ],
+  "multiple_mapping_type": "none",
+  "system": {
+    "source": "Tide",
+    "target": "lift"
+  },
+  "domains": {
+    "source": "Geography",
+    "target": "Engineering"
+  },
+  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+}
