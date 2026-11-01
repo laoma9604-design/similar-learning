@@ -436,3 +436,154 @@ def test_dev_groups_exist_and_are_excluded_from_formal(groups):
     assert "group_dev" not in splits_csv, "开发组不应进入 splits.csv"
     ref_all = (ROOT / "data/reference_all.jsonl").read_text(encoding="utf-8")
     assert "group_dev" not in ref_all, "开发组不应进入 reference_all.jsonl"
+
+
+# ---------------------------------------------------------------------------
+# M01-M08 验收清单（T02 确认完成的条件，逐项固化为测试）
+# ---------------------------------------------------------------------------
+def test_m01_counts_separate_groups_and_tasks(groups):
+    """M01：基础组数与正负任务数分开核对。"""
+    assert len(groups) == 300, f"基础组 {len(groups)} != 300"
+    pos = sum(1 for G in groups for r in G["ref"].values() if r["label"] == "positive")
+    neg = sum(1 for G in groups for r in G["ref"].values() if r["label"] == "negative")
+    assert (pos, neg) == (300, 300), f"正负任务 {pos}/{neg} != 300/300"
+    for G in groups:
+        tc = G["manifest"].get("task_counts") or {}
+        assert tc.get("total") == len(G["ref"]) == 2, f"{G['gid']} task_counts 与实有任务不符"
+
+
+def test_m02_three_relation_types_present(groups):
+    """M02：三类关系（线性驱动-阻力 / 乘性增长 / 饱和响应）齐全。"""
+    cnt = Counter(G["manifest"]["relation_type"] for G in groups)
+    assert set(cnt) == set(RELS), f"关系类型不全: {dict(cnt)}"
+    # 角色集合必须与关系类型一一对应
+    expect = {
+        "multiplicative_growth": {"current", "ratio", "next"},
+        "linear_drive_resistance": {"driver", "resistance", "response"},
+        "saturation_response": {"input", "response"},
+    }
+    for G in groups:
+        rel = G["manifest"]["relation_type"]
+        for o in G["objs"].values():
+            got = set(o["edges"][0]["roles"].values())
+            assert got == expect[rel], f"{G['gid']}/{o['object_id']} 角色集合 {got} != {expect[rel]}"
+
+
+def test_m03_four_candidate_types_present(groups):
+    """M03：四种候选类型齐全（有效 / 结构错误 / 结构同响应错 / 局部扰动）。"""
+    kinds = Counter()
+    for G in groups:
+        for r in G["ref"].values():
+            if r["valid"]:
+                kinds["valid"] += len(r["valid"])
+            for e in r["exclusions"]:
+                kinds[e["kind"]] += 1
+    for k in ("valid", "structure_error", "response_error", "local_perturbation"):
+        assert kinds[k] > 0, f"缺候选类型 {k}，实有 {dict(kinds)}"
+    # 正任务构成：1 有效 + 3 结构错 + 3 响应错 + 3 局部扰动
+    for G in groups:
+        for tid, r in G["ref"].items():
+            if r["label"] != "positive":
+                continue
+            got = Counter(e["kind"] for e in r["exclusions"])
+            got["valid"] = len(r["valid"])
+            assert dict(got) == {"structure_error": 3, "response_error": 3,
+                                 "local_perturbation": 3, "valid": 1}, \
+                f"{G['gid']}/{tid} 正任务构成 {dict(got)} 不合要求"
+
+
+def test_m04_positive_has_valid_negative_has_none(groups):
+    """M04：正任务至少 1 个有效源域；负任务整个候选库无有效源域。"""
+    for G in groups:
+        for tid, r in G["ref"].items():
+            if r["label"] == "positive":
+                assert len(r["valid"]) >= 1, f"{G['gid']}/{tid} 正任务无有效源域"
+            else:
+                assert not r["valid"], f"{G['gid']}/{tid} 负任务却有有效源域"
+                assert r.get("full_library_verified"), f"{G['gid']}/{tid} 全库核验未成立"
+
+
+def test_m05_function_baseline_scales_and_legal_domain(groups):
+    """M05：基准输入、输出、参数及合法域一致可求值。"""
+    for G in groups:
+        for oid, o in G["objs"].items():
+            ctrl = o["controllable_inputs"]
+            assert len(o["baseline"]) == len(ctrl), f"{oid} baseline 长度"
+            assert len(o["input_scales"]) == len(ctrl), f"{oid} input_scales 长度"
+            assert all(s > 0 for s in o["input_scales"]), f"{oid} input_scales 非正"
+            for i, nid in enumerate(ctrl):
+                lo, hi = o["legal_domain"][nid]
+                lo = -math.inf if lo is None else lo
+                hi = math.inf if hi is None else hi
+                assert lo - 1e-12 <= o["baseline"][i] <= hi + 1e-12, \
+                    f"{oid} baseline {nid} 越界"
+            y = _ev(o["function"], dict(zip(ctrl, o["baseline"])))
+            assert abs(y - o["baseline_output"]) <= 1e-6 * max(1.0, abs(y)), \
+                f"{oid} baseline_output 与实算不符"
+            assert abs(o["output_scale"] - o["baseline_output"]) <= 1e-9 * max(1.0, abs(y)), \
+                f"{oid} output_scale != baseline_output"
+            # 函数引用的节点必须在节点表内（exp 是求值器内置函数）
+            import ast as _ast
+            tree = _ast.parse(o["function"], mode="eval")
+            calls = {n.func.id for n in _ast.walk(tree)
+                     if isinstance(n, _ast.Call) and isinstance(n.func, _ast.Name)}
+            names = {n.id for n in _ast.walk(tree) if isinstance(n, _ast.Name)} - calls
+            assert names <= {n["node_id"] for n in o["nodes"]}, f"{oid} 引用未声明节点"
+
+
+def test_m06_response_scale_has_common_meaning(groups):
+    """M06：两域用同一含义的无量纲尺度（正例响应处处相等）。"""
+    worst = 0.0
+    for G in groups:
+        tgt = G["objs"][G["manifest"]["object_ids"][0]]
+        for tid, r in G["ref"].items():
+            if r["label"] != "positive":
+                continue
+            truth = r["valid"][0]
+            src = G["objs"][truth["source_id"]]
+            inv = {v: k for k, v in truth["node_map"].items()}
+            axes = []
+            for nid in tgt["controllable_inputs"]:
+                lo, hi = tgt["intervention_bounds"][nid]
+                axes.append([lo, lo / 2, 0.0, hi / 2, hi])
+            for combo in itertools.product(*axes):
+                ut = dict(zip(tgt["controllable_inputs"], combo))
+                us = {inv[k]: v for k, v in ut.items()}
+                worst = max(worst, abs(_resp(src, us) - _resp(tgt, ut)))
+    assert worst <= 1e-9, f"两域归一化响应最大偏差 {worst:.2e} > 1e-9"
+
+
+def test_m07_group_level_split(groups):
+    """M07：基础组级别划分，同一域对不跨划分。"""
+    sp = Counter(G["manifest"]["split"] for G in groups)
+    assert sum(sp.values()) == 300
+    assert sp["train"] / 300 >= 0.65, f"train 占比 {sp['train']/300:.2f} 偏低"
+    assert sp["val"] > 0 and sp["test"] > 0
+    pair_split = defaultdict(set)
+    for G in groups:
+        pair_split[(G["manifest"]["relation_type"], G["manifest"]["pair_id"])].add(G["manifest"]["split"])
+    leak = [k for k, v in pair_split.items() if len(v) > 1]
+    assert not leak, f"{len(leak)} 个域对跨划分"
+
+
+def test_m08_holdout_interventions(groups):
+    """M08：每个测试任务 100 个独立合法干预点。"""
+    n = 0
+    for G in groups:
+        p = G["dir"] / "sealed/intervention_points.json"
+        is_test = G["manifest"]["split"] == "test"
+        assert is_test == p.is_file(), f"{G['gid']} 测试组与干预点文件不匹配"
+        if not is_test:
+            continue
+        tgt = G["objs"][G["manifest"]["object_ids"][0]]
+        pts = json.loads(p.read_text(encoding="utf-8"))
+        for tid, lst in pts["tasks"].items():
+            n += 1
+            assert len(lst) == 100, f"{G['gid']}/{tid} 点数 {len(lst)}"
+            assert len({tuple(sorted(u.items())) for u in lst}) == 100, f"{tid} 有重复点"
+            assert not any(all(abs(v) < 1e-12 for v in u.values()) for u in lst), f"{tid} 含全零"
+            for u in lst:
+                for nid in tgt["controllable_inputs"]:
+                    lo, hi = tgt["intervention_bounds"][nid]
+                    assert lo - 1e-9 <= u[nid] <= hi + 1e-9, f"{tid} 干预越界"
+    assert n == 96, f"测试任务数 {n} != 96"
