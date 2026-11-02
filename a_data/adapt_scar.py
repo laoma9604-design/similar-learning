@@ -11,7 +11,7 @@
      参考映射不再是恒等；模型必须真正推理对应关系
   2. 节点 label 填**原始概念词**（这是任务输入，不是答案；「哪个对哪个」才是答案）
   3. 节点类型按词表 τ_V 标注（原文无类型，标 structure_source=inferred，
-     available_checks 相应增加 node_type）
+     structural_checks 声明实际判据）
   4. 多解忠实表达：共享端点只建**一个**节点，多个源指向它；node_map 里真实体现
      n→m 的多对一，不再拆成同编号双射
   5. 有效映射集合区分两种情形（评审要求）：
@@ -344,7 +344,11 @@ def write_group(g):
         allowed_mappings_total=None,
         status="structural_only",
         multiple_mapping_type=g["multiple_mapping_type"],
-        available_checks=["node_bijection", "node_type"],
+        # 结构模式实际使用的判据（不是机械模式的六类）。
+        # 机械模式的 node_bijection 在多值对应上必然失败，
+        # node_type（要求两端同类型）会误伤 32.5% 的跨范畴正确映射，
+        # 因此结构模式改用下面两项；详见 SCAR适配规范.md 9.0.2。
+        structural_checks=["pair_consistency", "type_pattern"],
         node_type_source="inferred",
         # 参考类型快照：type_pattern 的判定基准。
         # 必须存在这里，否则检查时只能读候选对象自身的类型，基准跟着候选变，永远相等。
@@ -366,7 +370,7 @@ def write_group(g):
         node_type_source="inferred",
         annotation_status=g["status"],
         valid_mappings=[dict(node_map=g["node_map"], edge_map=g["edge_map"])],
-        available_checks=["node_bijection", "node_type"],
+        structural_checks=["pair_consistency", "type_pattern"],
         multiple_mapping_type=g["multiple_mapping_type"],
         system={"source": rec.get("system_a"), "target": rec.get("system_b")},
         domains={"source": rec.get("system_a_domain"),

@@ -85,9 +85,9 @@
     "allowed_mappings_total": null,
     "status": "structural_only",
     "multiple_mapping_type": "none",
-    "available_checks": [
-      "node_bijection",
-      "node_type"
+    "structural_checks": [
+      "pair_consistency",
+      "type_pattern"
     ],
     "node_type_source": "inferred",
     "ref_type_pattern": [

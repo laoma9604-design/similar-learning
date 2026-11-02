@@ -115,9 +115,9 @@
       }
     }
   ],
-  "available_checks": [
-    "node_bijection",
-    "node_type"
+  "structural_checks": [
+    "pair_consistency",
+    "type_pattern"
   ],
   "multiple_mapping_type": "one_to_many",
   "system": {
