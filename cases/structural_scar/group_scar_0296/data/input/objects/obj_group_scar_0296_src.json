@@ -3,57 +3,42 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "val",
-  "label": "源系统",
+  "label": "boat",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "s1",
+      "label": "boat",
+      "type": "entity"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "s6",
+      "label": "passenger",
+      "type": "entity"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "s2",
+      "label": "shipwreck",
+      "type": "process"
     },
     {
-      "node_id": "n4",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "s7",
+      "label": "storm",
+      "type": "process"
     },
     {
-      "node_id": "n5",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "s4",
+      "label": "sail",
+      "type": "process"
     },
     {
-      "node_id": "n6",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "s5",
+      "label": "rock",
+      "type": "entity"
     },
     {
-      "node_id": "n7",
-      "label": "概念",
-      "type": "abstract_concept"
-    },
-    {
-      "node_id": "n8",
-      "label": "概念",
-      "type": "abstract_concept"
-    },
-    {
-      "node_id": "n9",
-      "label": "概念",
-      "type": "abstract_concept"
-    },
-    {
-      "node_id": "n10",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "s3",
+      "label": "anchor",
+      "type": "entity"
     }
   ],
   "edges": [
@@ -61,29 +46,23 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3",
-        "n4",
-        "n5",
-        "n6",
-        "n7",
-        "n8",
-        "n9",
-        "n10"
+        "s1",
+        "s6",
+        "s2",
+        "s7",
+        "s4",
+        "s5",
+        "s3"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant",
-        "n4": "participant",
-        "n5": "participant",
-        "n6": "participant",
-        "n7": "participant",
-        "n8": "participant",
-        "n9": "participant",
-        "n10": "participant"
+        "s1": "participant",
+        "s6": "participant",
+        "s2": "participant",
+        "s7": "participant",
+        "s4": "participant",
+        "s5": "participant",
+        "s3": "participant"
       }
     }
   ],

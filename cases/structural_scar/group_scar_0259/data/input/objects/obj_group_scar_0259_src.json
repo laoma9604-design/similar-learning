@@ -3,26 +3,26 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "train",
-  "label": "源系统",
+  "label": "Group Theory",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
+      "node_id": "s3",
+      "label": "group",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
+      "node_id": "s2",
+      "label": "element",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "s4",
+      "label": "operate",
+      "type": "process"
     },
     {
-      "node_id": "n4",
-      "label": "概念",
+      "node_id": "s1",
+      "label": "invariant subset",
       "type": "abstract_concept"
     }
   ],
@@ -31,17 +31,17 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3",
-        "n4"
+        "s3",
+        "s2",
+        "s4",
+        "s1"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant",
-        "n4": "participant"
+        "s3": "participant",
+        "s2": "participant",
+        "s4": "participant",
+        "s1": "participant"
       }
     }
   ],

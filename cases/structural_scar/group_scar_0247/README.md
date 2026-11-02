@@ -1,9 +1,9 @@
 group_scar_0247 —— SCAR id=247：1984 → Brave New World
 
 领域：Literature → Literature
-概念对数：4（节点数与之一致，未压缩）
+概念对：4    源域节点：4    目标域节点：4
 结构类型：none
-可核验检查项：node_bijection（SCAR 无类型/角色/方向标注）
+可核验检查项：node_bijection, node_type（类型为推断，原文未标注）
 结构模式：无响应函数，不执行响应检验（任务书 L957）
 
-封存材料：sealed/reference.json（参考映射）、sealed/adaptation.json（原始概念对/解释/背景逐字留存）
+参考映射与原始解释在 sealed/ 下，不进入方法输入。

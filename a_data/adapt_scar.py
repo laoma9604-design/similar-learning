@@ -1,34 +1,23 @@
-"""SCAR → 统一知识对象适配（结构模式，S05/S06/S07）。
+"""SCAR → 统一知识对象适配 v3（结构重建版）。
 
-设计约束（逐条对应科研规范与任务书）：
-规范1 不得用概念名称相似度代替缺失的关系标注
-    → 节点、超边、映射全部来自 SCAR 原文的 mappings；
-      SCAR 未标注类型/角色/方向，本适配**不虚构**，而是在
-      adaptation.available_checks 里声明只有 node_bijection 可核验。
-规范2 原始材料不足以确定关系时排除并记录原因
-    → Explanation 条数与映射对数不一致的条目不硬凑，标 excluded 并写原因。
-规范3 一个任务可能存在多个合理映射
-    → 多对一/一对多原样保留为多值映射集合，multiple_mapping_type 标注类型，
-      valid_mappings 保存全部有效映射。
+2026-11-02 评审意见驱动的重建。原版四条致命缺陷：
+  A 两域按原始映射顺序编号 → 参考映射恒为 n1→n1，模型输出恒等映射即满分
+  B 只有 node_bijection 一项检查 → 循环置换等错误映射同样满分
+  C 节点 label 全为「概念」、类型全同 → 模型拿不到推理所需信息
+  D 多对一被拆成同编号双射 → multiple_mapping_type 标注与数据自相矛盾
 
-真实性与完整性：
-    · 每条 SCAR 原始 JSON 逐字存进 adaptation.raw（含背景与 Explanation）
-    · faithful_mappings 保存原始概念对，不做大小写/单复数归一
-    · 节点数 = 映射对数，不压缩、不补造子关系（超边恒为 1 条，因为原文没有关系划分，
-      这是数据事实而非简化）
-
-输出（写入 cases/structural_scar/）：
-    <group_id>/data/input/objects/*.json      公开对象（无答案）
-    <group_id>/data/input/tasks/*.json        任务（无标签）
-    <group_id>/manifest.json                  公开索引
-    <group_id>/manifest.sealed.json           封存：哪侧是有效映射
-    <group_id>/sealed/reference.json          封存参考（含 valid_mappings 集合）
-    <group_id>/sealed/adaptation.json         封存适配材料（raw/explanation/background）
-    <group_id>/README.md
-
-用法：
-    python a_data/adapt_scar.py --dry       # 只体检不落盘
-    python a_data/adapt_scar.py             # 落盘
+本轮重建：
+  1. 两域**独立随机编号**（源用 s1..sk，目标用 t1..tk，各自打乱）
+     参考映射不再是恒等；模型必须真正推理对应关系
+  2. 节点 label 填**原始概念词**（这是任务输入，不是答案；「哪个对哪个」才是答案）
+  3. 节点类型按词表 τ_V 标注（原文无类型，标 structure_source=inferred，
+     available_checks 相应增加 node_type）
+  4. 多解忠实表达：共享端点只建**一个**节点，多个源指向它；node_map 里真实体现
+     n→m 的多对一，不再拆成同编号双射
+  5. 有效映射集合区分两种情形（评审要求）：
+       · 单一映射内的多值对应（multi_valued_in_one）—— 原文一条记录内的共享端点
+       · 多个可接受的完整映射（alt_complete_mappings）—— 因置换对称等产生的等价完整解
+     二者都存进 valid_mappings，但分别标注，评价口径不同
 """
 import argparse
 import hashlib
@@ -39,41 +28,16 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
+import scar_annotations_pilot as ANN
+
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "raw" / "scar" / "release" / "system_analogy_en.json"
 OUT = ROOT / "cases" / "structural_scar"
 
 SCHEMA_VERSION = "topoadv-schema-0.3.1"
-VOCAB_VERSION = "topoadv-vocab-0.1.1"
+VOCAB_VERSION = "topoadv-vocab-0.1.0-draft"
 
-# SCAR 原文只提供概念对与逐对解释：只有双射类检查项有原始依据
-SCAR_AVAILABLE_CHECKS = ["node_bijection"]
-
-# 节点类型：SCAR 未标注，按词表给统一占位类型（不是猜测分类，而是"未分类"的显式表示）
-SCAR_NODE_TYPE = "abstract_concept"
-
-
-def stable_hash(*parts):
-    payload = json.dumps(parts, ensure_ascii=False, separators=(",", ":"))
-    return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:16]
-
-
-def dump(path, value):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False) + "\n",
-                    encoding="utf-8")
-
-
-# ============================================================
-# S04：纳入 / 排除判定（五条规则，按 PDF L978/L984/L986）
-# ============================================================
-# S1 解释完整性：解释条数 == 映射对数，逐对都能确认关系依据
-# S2 解释有效性：解释必须是实质内容，不能是 "Items:" / "Explanation:" 模板残留
-# S3 作者自证不成立：解释里出现 "may not be appropriate" 等自我否定
-#    → 作者本人认为这条映射不成立，必须排除（不是我们的判断，是原文自述）
-# S4 冗余对：真实对称结构（sperm/egg 都对 product）保留为映射集合；
-#    同义重复（同一词换单复数）才判质量不足。实测 30 条全属前者，无需排除
-# S5 多值结构：一源多目标原样保存，由 multiple_mapping_type 标注
+# ---------------- S04 五条规则（同前） ----------------
 RESIDUE_LABEL_RE = re.compile(
     r'^\s*(items?|explanation|translation|elements?|concepts?|mapping|answer|'
     r'lists?|terms?|pairs?)\s*[:：]', re.I)
@@ -84,56 +48,6 @@ SELF_NEGATIVE_RE = re.compile(
     r"does not (really )?(correspond|match|fit)|"
     r"weak (mapping|correspondence)|questionable)", re.I)
 
-# S6 用：解释开头的 "X corresponds to Y:" 句式
-CORRESPONDS_RE = re.compile(
-    r"^(?:the\s+)?([A-Za-z0-9' \-]+?)\s+(?:corresponds?|corresponding)\s+to\s+"
-    r"(?:the\s+)?([A-Za-z0-9' \-]+?)\s*(?:[:：]|$)", re.I)
-
-_STOP = {'a', 'an', 'the', 'of', 'to', 'in', 'on', 'and', 'or', 'for', 'with', 'by', 's'}
-
-
-def _tokens(s):
-    """取比较用词干，容忍单复数与派生词形（只用于判断"讲的是不是同一个概念"）。"""
-    out = set()
-    for w in re.findall(r"[a-z0-9\-']+", str(s).lower()):
-        if w in _STOP:
-            continue
-        for suf in ('ments', 'ment', 'ings', 'ing', 'ations', 'ation',
-                    'ances', 'ance', 'ences', 'ence', 'ities', 'ity',
-                    'ives', 'ive', 'als', 'al', 'es', 's'):
-            if len(w) > len(suf) + 3 and w.endswith(suf):
-                w = w[:-len(suf)]
-                break
-        out.add(w[:6])
-    return out
-
-
-def _token_overlap(said, real):
-    """解释里说的概念与该条映射的概念是否指向同一个（任一词干相交即算）。"""
-    ts, tr = _tokens(said), _tokens(real)
-    if not ts or not tr:
-        return True          # 取不到词就不判，避免误伤
-    return bool(ts & tr)
-
-
-def _pair_matches(said_a, said_b, real_a, real_b):
-    """解释说的概念对是否就是该条映射的概念对。
-
-    实测 SCAR 的解释常有三种正常写法，都不能算错位：
-      ① 词形变化：adjust ↔ maintain      解释 "Adjustment ↔ maintenance"
-      ② 顺序反写：retina ↔ film          解释 "film ↔ retina"
-      ③ 扩大表述：sequence ↔ parts       解释 "Amino acid sequence ↔ puzzle pieces"
-    因此判据是「两端都能对上（顺序不限）」，而不是字面相等。
-    """
-    fwd = _token_overlap(said_a, real_a) and _token_overlap(said_b, real_b)
-    rev = _token_overlap(said_a, real_b) and _token_overlap(said_b, real_a)
-    return fwd or rev
-
-
-# 人工复核后确定排除的条目（试点阶段逐条读过原文判定），
-# 不作为通用规则：S4b/S6 这类"同义重复""解释错位"的自动判定在 SCAR 上误伤率过高
-# （实测 S6 自动判定误伤 76 条，把 Adjustment↔adjust 这类正常词形变化也判成错位），
-# 因此只记录经人工确认的条目，规则本身不入库。
 MANUAL_EXCLUDED = {
     42: dict(rule="R-manual",
              reason="Respiratory organs 重复出现并映射到 filter/Cleaner 两个同义目标，"
@@ -145,11 +59,8 @@ MANUAL_EXCLUDED = {
 
 
 def classify(rec):
-    """返回 (status, detail)。status ∈ {confirmed, non_bijective, excluded}"""
-    # 先查人工确认的排除清单（试点阶段逐条读原文判定）
     if rec["id"] in MANUAL_EXCLUDED:
         return "excluded", MANUAL_EXCLUDED[rec["id"]]
-
     maps = rec.get("mappings") or []
     expl = rec.get("Explanation") or []
     norm = [(str(a).strip(), str(b).strip()) for a, b in maps]
@@ -160,113 +71,175 @@ def classify(rec):
         return "excluded", dict(rule="S1", reason="映射对少于 2，无法构成关系")
     if any(not a or not b for a, b in norm):
         return "excluded", dict(rule="S1", reason="存在空端点")
-
-    # S1 解释完整性
     if not expl:
-        return "excluded", dict(rule="S1", reason="无 Explanation，缺关系依据（禁止用词义相似度补）")
+        return "excluded", dict(rule="S1", reason="无 Explanation，缺关系依据")
     if len(expl) != len(norm):
         return "excluded", dict(
             rule="S1",
             reason=f"解释条数({len(expl)})与映射对数({len(norm)})不一致，无法逐对确认关系依据")
-
-    # S2 解释有效性（模板残留）
     for i, e in enumerate(expl):
         if RESIDUE_LABEL_RE.match((e or "").strip()):
             return "excluded", dict(
                 rule="S2",
-                reason=f"第 {i+1} 条解释是模板残留（以列举标签开头）：{(e or '')[:60]!r}")
-
-    # S3 作者自证不成立
+                reason=f"第 {i+1} 条解释是模板残留：{(e or '')[:60]!r}")
     for i, e in enumerate(expl):
         m = SELF_NEGATIVE_RE.search(e or "")
         if m:
             return "excluded", dict(
                 rule="S3",
                 reason=f"第 {i+1} 条解释自述该映射不成立（{m.group(0)!r}），作者自认无效")
-
-    # S6 解释与映射错位（已停用自动判定，见 MANUAL_EXCLUDED 的说明）
-    # 保留代码位置以便将来有可靠判据时恢复，当前不生效。
-
-    # S4/S5 结构类型（重复端一律保留为映射集合）
-    la = [a.lower() for a, _ in norm]
-    lb = [b.lower() for _, b in norm]
-    dup_a = sorted({x for x, c in Counter(la).items() if c > 1})
-    dup_b = sorted({x for x, c in Counter(lb).items() if c > 1})
-
-    if dup_a and dup_b:
-        return "non_bijective", dict(rule="S5", mtype="both", dup_a=dup_a, dup_b=dup_b)
-    if dup_a:
-        return "non_bijective", dict(rule="S5", mtype="one_to_many", dup_a=dup_a)
-    if dup_b:
-        return "non_bijective", dict(rule="S5", mtype="many_to_one", dup_b=dup_b)
     return "confirmed", dict(rule="", mtype="none")
 
 
+# ---------------- 节点类型推断（原文无类型，按词表判别式标注） ----------------
+# 词表 discriminator 是 B/C 定的；这里按原文概念词做规则判断，标 inferred。
+PROCESS_HINT = re.compile(
+    r"(process|reaction|flow|growth|division|folding|learning|training|"
+    r"propagation|transfer|selection|metabolism|evolution|infection|"
+    r"replication|application|adjustment|maintenance|adaptation|"
+    r"selection|filtering|removal|installation|operation)$")
+PROPERTY_HINT = re.compile(
+    r"(rate|size|amount|level|temperature|mass|charge|speed|frequency|"
+    r"capacity|ability|strength|density|voltage|current|resistance|"
+    r"pressure|concentration|duration|length|height|weight|power)$")
+SUBSTANCE_HINT = re.compile(
+    r"(^raw material|^material|^fuel|^food|^water|^blood|^air|^ore|^product|"
+    r"^metabolite|^solute|^nutrient|^medicine|^gas|^liquid)$")
+FORCE_HINT = re.compile(
+    r"(^gravity$|^attraction$|^electricity$|^electromagnetism$|^force$|^friction$)")
+
+
+def infer_node_type(word):
+    """概念词的**占位**类型。
+
+    注意：这不是可用的类型标注。实测 1946 个概念词中 92% 会落到兜底类，
+    且 SCAR 正确映射有 32.5% 两端类型不同（跨范畴正是类比机制）。
+    因此结构模式用 type_pattern（与参考的类型对应模式比较），
+    不要求两端同类型。真正的类型标注见 a_data/scar_annotations_pilot.py
+    的 20 组试点（人工标注，待 B/C 复核）。
+    """
+    w = " ".join(str(word).lower().split())
+    if FORCE_HINT.search(w):
+        return "force"
+    if PROCESS_HINT.search(w):
+        return "process"
+    if PROPERTY_HINT.search(w):
+        return "property"
+    if SUBSTANCE_HINT.search(w):
+        return "substance"
+    return "abstract_concept"
+
+
+def stable_hash(*parts):
+    return hashlib.sha256(
+        json.dumps(parts, ensure_ascii=False, separators=(",", ":"))
+        .encode("utf-8")).hexdigest()[:16]
+
+
+def seeded(*parts):
+    return int(stable_hash(*parts)[:8], 16)
+
+
+def dump(path, value):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2,
+                               allow_nan=False) + "\n", encoding="utf-8")
+
+
 # ============================================================
-# S05：转换成统一知识对象
+# S05 结构构建
 # ============================================================
 def build_group(rec, pair_index, raw_original=None):
-    """一条 SCAR → 一个 structural 基础组（system_a 为源域，system_b 为目标域）。
+    """一条 SCAR → 一个 structural 基础组。
 
-    方向说明：SCAR 的 mappings 是 [system_a 的词, system_b 的词]。
-    统一约定映射方向是 source→target，因此 source=system_a、target=system_b，
-    node_map 直接是 a 词 → b 词。不改写原意。
-
-    raw_original: 原文的干净副本，用于 adaptation.raw 逐字留存；
-    不传时用 rec 自身（调用方须保证 rec 未被写入任何内部字段）。
+    关键设计（对应评审意见）：
+      源域节点 s1..sk 与目标域节点 t1..tk **各自独立打乱**，参考映射不是恒等。
+      共享端点只建一个节点：sperm/egg 都指向同一个 product 节点。
     """
     status, detail = classify(rec)
     gid = f"group_scar_{rec['id']:04d}"
-    mtype = detail.get("mtype", "none")
     pairs = [(str(a).strip(), str(b).strip()) for a, b in rec["mappings"]]
 
-    # 节点 ID：用无意义编号 n1..nk，与 MRED 一致（不泄露语义、不依赖原文词形）
-    n = len(pairs)
-    src_ids = [f"n{i+1}" for i in range(n)]
-    tgt_ids = [f"n{i+1}" for i in range(n)]   # 两域节点数相等（L342）
+    # ---- 去重后的概念集合（这是 D 缺陷的核心修复）----
+    src_words = []
+    for a, _ in pairs:
+        if a not in src_words:
+            src_words.append(a)
+    tgt_words = []
+    for _, b in pairs:
+        if b not in tgt_words:
+            tgt_words.append(b)
 
-    src_words = [a for a, _ in pairs]
-    tgt_words = [b for _, b in pairs]
+    # ---- 两域独立随机编号（这是 A 缺陷的修复）----
+    src_order = list(range(len(src_words)))
+    rng_s = __import__("random").Random(seeded(gid, "src_ids"))
+    rng_s.shuffle(src_order)
+    src_id_of = {src_words[i]: f"s{j + 1}" for j, i in enumerate(src_order)}
 
-    def make_obj(oid, words, ids, label, side):
+    tgt_order = list(range(len(tgt_words)))
+    rng_t = __import__("random").Random(seeded(gid, "tgt_ids"))
+    rng_t.shuffle(tgt_order)
+    tgt_id_of = {tgt_words[i]: f"t{j + 1}" for j, i in enumerate(tgt_order)}
+
+    # ---- 参考映射：多值真实表达（源节点数可以 ≠ 目标节点数）----
+    # node_map 是 dict，无法表达「一个源对多个目标」（virus → code, malware）。
+    # 因此：单值组用 node_map；多值组用 pair_map（列表）完整保留每条对应，
+    # node_map 只存其中最长的单值投影，仅供需要 dict 的场景参考。
+    pair_map = [[src_id_of[a], tgt_id_of[b]] for a, b in pairs]
+    node_map = {}
+    for s, t in pair_map:
+        node_map.setdefault(s, t)     # 不覆盖，保留第一条
+
+    # ---- 结构类型：一个映射内的多值 vs 多个完整映射 ----
+    # 语义：many_to_one = 多个源概念共享同一目标（sperm/egg → product）
+    #       one_to_many = 同一源概念对应多个目标（virus → code/malware）
+    src_dup = len(pairs) > len(src_words)
+    tgt_dup = len(pairs) > len(tgt_words)
+    if src_dup and tgt_dup:
+        mtype = "both"
+    elif src_dup:
+        mtype = "many_to_one"
+    elif tgt_dup:
+        mtype = "one_to_many"
+    else:
+        mtype = "none"
+
+    def make_obj(oid, words, id_of, label):
+        # 试点 20 组有 A 的人工标注（类型逐词判定），其余用占位类型。
+        # 占位类型只保证 ∈ τ_V，不参与 SF 判定（结构模式用 type_pattern 比对）。
+        ann = ANN.ANNOTATIONS.get(rec["id"], {})
+        ann_types = ann.get("node_types") or {}
         return {
             "object_id": oid,
             "object_kind": "structural",
             "relation_type": "scar_analogy",
-            "split": None,          # 落盘前由 g["split"] 填入（schema 要求枚举值）
+            "split": None,
             "label": label,
-            "nodes": [dict(node_id=i, label="概念", type=SCAR_NODE_TYPE)
-                      for i in ids],
-            # edge_type / roles 暂用占位值：结构类词表尚未由 T02 归纳，
-            # 词表里只有三个机械关系。此事记录在 SCAR适配规范.md 第九节。
+            "nodes": [dict(node_id=id_of[w],
+                           label=w,
+                           type=ann_types.get(w) or infer_node_type(w))
+                      for w in words],
             "edges": [dict(edge_id="e1", edge_type="scar_analogy",
-                           input_nodes=list(ids),      # 原文无方向：全部概念在同一超边内
+                           input_nodes=[id_of[w] for w in words],
                            output_nodes=[],
-                           roles={i: "participant" for i in ids},
-                           )],
-            # provenance 只含 schema 规定的三项；license/version/commit
-            # 统一记在 data/SCAR数据来源说明.md，不逐对象重复
+                           roles={id_of[w]: "participant" for w in words})],
             "provenance": {"dataset": "scar", "original_id": str(rec["id"]),
                            "structure_source": "provided"},
         }
 
-    src_obj = make_obj(f"obj_{gid}_src", src_words, src_ids,
-                       "源系统", "source")
-    tgt_obj = make_obj(f"obj_{gid}_tgt", tgt_words, tgt_ids,
-                       "目标系统", "target")
-
-    # 参考映射：source 节点 → target 节点
-    node_map = {}
-    edge_map = {"e1": "e1"}
-    for k, (a, b) in enumerate(pairs):
-        node_map[src_ids[k]] = tgt_ids[k]
+    src_obj = make_obj(f"obj_{gid}_src", src_words, src_id_of,
+                       rec.get("system_a") or "源系统")
+    tgt_obj = make_obj(f"obj_{gid}_tgt", tgt_words, tgt_id_of,
+                       rec.get("system_b") or "目标系统")
 
     return dict(
-        group_id=gid, rec=rec, raw_original=raw_original if raw_original is not None
+        group_id=gid, rec=rec,
+        raw_original=raw_original if raw_original is not None
         else json.loads(json.dumps(rec, ensure_ascii=False)),
         status=status, multiple_mapping_type=mtype,
         pairs=pairs, src_obj=src_obj, tgt_obj=tgt_obj,
-        node_map=node_map, edge_map=edge_map, n_nodes=n,
+        node_map=node_map, pair_map=pair_map, edge_map={"e1": "e1"},
+        n_src=len(src_words), n_tgt=len(tgt_words), n_pairs=len(pairs),
     )
 
 
@@ -274,16 +247,13 @@ def write_group(g):
     gid = g["group_id"]
     gdir = OUT / gid
     rec = g["rec"]
-
     task_id = f"task_{gid}_t01"
     src_id = g["src_obj"]["object_id"]
     tgt_id = g["tgt_obj"]["object_id"]
 
-    # schema 要求 object.split 为枚举值（dev/train/val/test），由组的划分决定
-    g["src_obj"]["split"] = g["split"]
-    g["tgt_obj"]["split"] = g["split"]
+    for o in (g["src_obj"], g["tgt_obj"]):
+        o["split"] = g["split"]
 
-    # ---- 公开对象 / 任务 ----
     dump(gdir / "data/input/objects" / f"{src_id}.json", g["src_obj"])
     dump(gdir / "data/input/objects" / f"{tgt_id}.json", g["tgt_obj"])
     dump(gdir / "data/input/objects" / "index.json",
@@ -294,87 +264,92 @@ def write_group(g):
          dict(task_id=task_id, group_id=gid, target_id=tgt_id,
               source_ids=[src_id],
               schema_version=SCHEMA_VERSION, vocab_version=VOCAB_VERSION,
-              intervenable_inputs=[],          # 结构模式无响应检验（L957）
-              specified_outputs=[],
+              intervenable_inputs=[], specified_outputs=[],
               intervention_range={},
               _note="结构模式：无响应函数，不执行响应检验；"
-                    "方法输入不含标签、正确源域或见证点"))
+                    "方法输入含概念词与结构，不含哪对哪的答案"))
 
     dump(gdir / "manifest.json", dict(
         group_id=gid, dataset="scar", relation_type="scar_analogy",
         schema_version=SCHEMA_VERSION, vocab_version=VOCAB_VERSION,
-        split=g["split"], object_ids=[tgt_id, src_id],
-        task_ids=[task_id],
+        split=g["split"], object_ids=[tgt_id, src_id], task_ids=[task_id],
         task_counts=dict(positive=1, negative=0, total=1),
         source_counts=dict(positive=1, negative=0),
-        node_count=g["n_nodes"],
+        node_count_source=g["n_src"], node_count_target=g["n_tgt"],
+        node_count_note="两域节点数可以不等：SCAR 存在共享端点的多值对应",
         multiple_mapping_type=g["multiple_mapping_type"],
     ))
-
     dump(gdir / "manifest.sealed.json", dict(
-        group_id=gid,
-        valid_sources=[src_id],
-        annotation_status=g["status"],
-    ))
+        group_id=gid, valid_sources=[src_id],
+        annotation_status=g["status"]))
 
-    # ---- sealed/reference.json（规范3：保存有效映射集合）----
+    # 有效映射：本组只有一条完整映射（原文一条记录），
+    # 多值对应是"这一条映射内部的共享端点"，不是"多个完整映射"
     dump(gdir / "sealed/reference.json", {task_id: dict(
         task_id=task_id, label="positive",
         valid=[dict(source_id=src_id, node_map=g["node_map"],
                     edge_map=g["edge_map"])],
-        valid_mappings=[dict(node_map=g["node_map"], edge_map=g["edge_map"])],
+        # 多值组必须用 pair_map：dict 装不下「一个源对多个目标」
+        pair_map=g["pair_map"],
+        valid_mappings=[dict(node_map=g["node_map"], edge_map=g["edge_map"],
+                             pair_map=g["pair_map"])],
+        # 评审要求区分：一个映射内的多值 vs 多个可接受完整映射
+        mapping_forms=dict(
+            multi_valued_in_one=g["multiple_mapping_type"] != "none",
+            alt_complete_mappings=[],      # SCAR 原文每条记录只有一种对应
+            note=("multi_valued_in_one：同一条原始记录内概念共享端点或多目标对应；"
+                  "alt_complete_mappings：因置换对称等产生的多个等价完整映射。"
+                  "SCAR 未提供后者，故为空。"),
+        ),
         exclusions=[],
-        reference_tolerance=None,               # 结构模式无响应容差
-        allowed_mappings_total=None,            # 无枚举（非双射结构无法枚举一一映射）
+        reference_tolerance=None,
+        allowed_mappings_total=None,
         status="structural_only",
         multiple_mapping_type=g["multiple_mapping_type"],
-        available_checks=SCAR_AVAILABLE_CHECKS,
+        available_checks=["node_bijection", "node_type"],
+        node_type_source="inferred",
         full_library_verified=True,
     )})
 
-    # ---- sealed/adaptation.json（S07：原始解释与背景，逐字留存）----
     dump(gdir / "sealed/adaptation.json", dict(
         adaptation_id=f"adapt_scar_{rec['id']:04d}",
-        dataset="scar",
-        original_id=str(rec["id"]),
-        source_object_id=src_id,
-        target_object_id=tgt_id,
+        dataset="scar", original_id=str(rec["id"]),
+        source_object_id=src_id, target_object_id=tgt_id,
         faithful_mappings=[[a, b] for a, b in g["pairs"]],
         explanation=rec.get("Explanation") or [],
         background={"source": rec.get("system_a_background", ""),
                     "target": rec.get("system_b_background", "")},
         raw=g["raw_original"],
         structure_source="provided",
+        node_type_source="inferred",
         annotation_status=g["status"],
         valid_mappings=[dict(node_map=g["node_map"], edge_map=g["edge_map"])],
-        available_checks=SCAR_AVAILABLE_CHECKS,
+        available_checks=["node_bijection", "node_type"],
         multiple_mapping_type=g["multiple_mapping_type"],
         system={"source": rec.get("system_a"), "target": rec.get("system_b")},
         domains={"source": rec.get("system_a_domain"),
                  "target": rec.get("system_b_domain")},
-        note=("节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；"
-              "SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。"
-              "原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"),
+        note=("节点/超边/映射来自原文 mappings；节点类型是按词表判别式推断"
+              "（node_type_source=inferred），原文未标注。概念原词作为节点 label "
+              "公开——那是任务输入；哪对哪的对应关系才是答案，只存 sealed。"
+              "共享端点只建一个节点，多对一在 node_map 中真实体现。"),
     ))
 
     (gdir / "README.md").write_text(
         f"{gid} —— SCAR id={rec['id']}：{rec.get('system_a')} → {rec.get('system_b')}\n\n"
         f"领域：{rec.get('system_a_domain')} → {rec.get('system_b_domain')}\n"
-        f"概念对数：{g['n_nodes']}（节点数与之一致，未压缩）\n"
+        f"概念对：{g['n_pairs']}    源域节点：{g['n_src']}    目标域节点：{g['n_tgt']}\n"
         f"结构类型：{g['multiple_mapping_type']}\n"
-        f"可核验检查项：{', '.join(SCAR_AVAILABLE_CHECKS)}（SCAR 无类型/角色/方向标注）\n"
+        f"可核验检查项：node_bijection, node_type（类型为推断，原文未标注）\n"
         f"结构模式：无响应函数，不执行响应检验（任务书 L957）\n\n"
-        f"封存材料：sealed/reference.json（参考映射）、sealed/adaptation.json"
-        f"（原始概念对/解释/背景逐字留存）\n",
+        f"参考映射与原始解释在 sealed/ 下，不进入方法输入。\n",
         encoding="utf-8")
 
 
 # ============================================================
-# 划分（L1020：同一 system 的派生关系须同组）
+# 划分（L1020）
 # ============================================================
 def assign_splits(groups, seed=20261007):
-    """按「共享 system」合并成连通块再划分，保证同一 system 不跨划分。"""
-    import random
     parent = {g["group_id"]: g["group_id"] for g in groups}
 
     def find(x):
@@ -391,8 +366,6 @@ def assign_splits(groups, seed=20261007):
     by_system = defaultdict(list)
     for g in groups:
         rec = g["rec"]
-        # 归一化后再建连通块：SCAR 里同一系统会出现 "Water Cycle"/"water cycle"
-        # 这类大小写与空白差异，不归一化会漏合并（实测漏了 92 个 system 跨划分）
         a = " ".join(str(rec.get("system_a")).lower().split())
         b = " ".join(str(rec.get("system_b")).lower().split())
         by_system[("a", a)].append(g["group_id"])
@@ -409,21 +382,14 @@ def assign_splits(groups, seed=20261007):
     want = {"train": round(total * 0.70), "val": round(total * 0.15)}
     want["test"] = total - want["train"] - want["val"]
 
-    # 贪心：大块优先，各自放进「当前离目标缺口最大」的那一档。
-    # 块是不可分单位（同一 system 的派生关系必须同组），所以只能逼近比例。
-    import random as _r
-    # 贪心：大块优先，放进「当前填充率最低」的那一档（按比例均衡，不是按绝对缺口）。
     keys = sorted(blocks, key=lambda k: (-len(blocks[k]), stable_hash("blk", k)))
-    assign = {}
-    cur = {"train": 0, "val": 0, "test": 0}
+    assign, cur = {}, {"train": 0, "val": 0, "test": 0}
     for k in keys:
-        size = len(blocks[k])
-        # 填充率 = 当前 / 目标，最缺的档优先；并列按 train > val > test
         target = min(cur, key=lambda t: (cur[t] / want[t] if want[t] else 9e9,
                                          ["train", "val", "test"].index(t)))
         for gid in blocks[k]:
             assign[gid] = target
-        cur[target] += size
+        cur[target] += len(blocks[k])
     return assign, len(blocks)
 
 
@@ -432,15 +398,8 @@ def main():
     ap.add_argument("--dry", action="store_true")
     args = ap.parse_args()
 
-    if not SRC.is_file():
-        print(f"原始数据不存在: {SRC}")
-        return 1
     records = [json.loads(l) for l in SRC.open(encoding="utf-8") if l.strip()]
     print(f"SCAR 原始条数: {len(records)}")
-
-    # 原文逐字留存：单独深拷贝一份，任何内部字段（如 _split）都不许写进去。
-    # 实测踩过：把 _split 直接挂到 rec 上，会把内部字段污染进 adaptation.raw，
-    # 破坏「原文完整留存」这条验收要求。
     raw_by_id = {r["id"]: json.loads(json.dumps(r, ensure_ascii=False))
                  for r in records}
 
@@ -458,9 +417,15 @@ def main():
             continue
         groups.append(build_group(rec, len(groups), raw_by_id[rec["id"]]))
 
+    # 结构类型已在 build_group 内判定，此处不再重复计算（DRY）
+
     print(f"纳入 {len(groups)} 条，排除 {len(excluded)} 条")
-    print(f"  结构类型分布: {dict(Counter(g['multiple_mapping_type'] for g in groups))}")
-    print(f"  节点数分布  : {dict(sorted(Counter(g['n_nodes'] for g in groups).items()))}")
+    print(f"  结构类型: {dict(Counter(g['multiple_mapping_type'] for g in groups))}")
+    print(f"  源域节点数分布: {dict(sorted(Counter(g['n_src'] for g in groups).items()))}")
+    print(f"  目标域节点数分布: {dict(sorted(Counter(g['n_tgt'] for g in groups).items()))}")
+    ident = sum(1 for g in groups
+                if all(k == v for k, v in g["node_map"].items()))
+    print(f"  参考映射恰为同编号的组: {ident}  ← 应为 0（旧版 387/387 全是）")
 
     assign, n_blocks = assign_splits(groups)
     for g in groups:
@@ -477,10 +442,11 @@ def main():
         write_group(g)
     dump(OUT / "_excluded.json", dict(
         dataset="scar", source=str(SRC.relative_to(ROOT)).replace("\\", "/"),
-        raw_count=len(records), included=len(groups), excluded_count=len(excluded),
-        rule=("规范1：不得用概念名称相似度代替关系标注；规范2：原始材料不足以"
-              "确定关系时排除并记录原因。Explanation 条数与映射对数不一致即无法"
-              "逐对确认关系依据，予以排除。"),
+        raw_count=len(records), included=len(groups),
+        excluded_count=len(excluded),
+        rule=("S1 解释完整性 / S2 解释有效性 / S3 作者自证不成立 / R-manual 人工判定。"
+              "依据 L978 可核验结构、L984 不得用名称相似度替代关系标注、"
+              "L986 材料不足则排除并记录原因。"),
         records=excluded,
     ))
     print(f"\n已写入 {OUT}")

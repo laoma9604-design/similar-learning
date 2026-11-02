@@ -3,7 +3,7 @@
   "dataset": "scar",
   "relation_type": "scar_analogy",
   "schema_version": "topoadv-schema-0.3.1",
-  "vocab_version": "topoadv-vocab-0.1.1",
+  "vocab_version": "topoadv-vocab-0.1.0-draft",
   "split": "train",
   "object_ids": [
     "obj_group_scar_0271_tgt",
@@ -21,6 +21,8 @@
     "positive": 1,
     "negative": 0
   },
-  "node_count": 8,
+  "node_count_source": 8,
+  "node_count_target": 8,
+  "node_count_note": "两域节点数可以不等：SCAR 存在共享端点的多值对应",
   "multiple_mapping_type": "none"
 }

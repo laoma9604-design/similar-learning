@@ -3,52 +3,52 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "train",
-  "label": "源系统",
+  "label": "war",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
+      "node_id": "s4",
+      "label": "war",
+      "type": "process"
+    },
+    {
+      "node_id": "s1",
+      "label": "battleground",
+      "type": "entity"
+    },
+    {
+      "node_id": "s6",
+      "label": "combatant",
+      "type": "entity"
+    },
+    {
+      "node_id": "s2",
+      "label": "position",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "s9",
+      "label": "attack",
+      "type": "process"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "s8",
+      "label": "maneuver",
+      "type": "process"
     },
     {
-      "node_id": "n4",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "s3",
+      "label": "retreat",
+      "type": "process"
     },
     {
-      "node_id": "n5",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "s7",
+      "label": "surrender",
+      "type": "process"
     },
     {
-      "node_id": "n6",
-      "label": "概念",
-      "type": "abstract_concept"
-    },
-    {
-      "node_id": "n7",
-      "label": "概念",
-      "type": "abstract_concept"
-    },
-    {
-      "node_id": "n8",
-      "label": "概念",
-      "type": "abstract_concept"
-    },
-    {
-      "node_id": "n9",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "s5",
+      "label": "victory",
+      "type": "property"
     }
   ],
   "edges": [
@@ -56,27 +56,27 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3",
-        "n4",
-        "n5",
-        "n6",
-        "n7",
-        "n8",
-        "n9"
+        "s4",
+        "s1",
+        "s6",
+        "s2",
+        "s9",
+        "s8",
+        "s3",
+        "s7",
+        "s5"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant",
-        "n4": "participant",
-        "n5": "participant",
-        "n6": "participant",
-        "n7": "participant",
-        "n8": "participant",
-        "n9": "participant"
+        "s4": "participant",
+        "s1": "participant",
+        "s6": "participant",
+        "s2": "participant",
+        "s9": "participant",
+        "s8": "participant",
+        "s3": "participant",
+        "s7": "participant",
+        "s5": "participant"
       }
     }
   ],

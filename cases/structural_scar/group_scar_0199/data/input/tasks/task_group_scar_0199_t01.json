@@ -6,9 +6,9 @@
     "obj_group_scar_0199_src"
   ],
   "schema_version": "topoadv-schema-0.3.1",
-  "vocab_version": "topoadv-vocab-0.1.1",
+  "vocab_version": "topoadv-vocab-0.1.0-draft",
   "intervenable_inputs": [],
   "specified_outputs": [],
   "intervention_range": {},
-  "_note": "结构模式：无响应函数，不执行响应检验；方法输入不含标签、正确源域或见证点"
+  "_note": "结构模式：无响应函数，不执行响应检验；方法输入含概念词与结构，不含哪对哪的答案"
 }

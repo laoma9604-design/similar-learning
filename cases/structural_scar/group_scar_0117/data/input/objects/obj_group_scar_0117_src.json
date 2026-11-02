@@ -3,16 +3,16 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "train",
-  "label": "源系统",
+  "label": "Enantiomers",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
+      "node_id": "s1",
+      "label": "mirror symmetry",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
+      "node_id": "s2",
+      "label": "chiral center",
       "type": "abstract_concept"
     }
   ],
@@ -21,13 +21,13 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2"
+        "s1",
+        "s2"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant"
+        "s1": "participant",
+        "s2": "participant"
       }
     }
   ],

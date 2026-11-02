@@ -78,14 +78,28 @@ def test_s03_counts_reconcile(scar, raw):
 
 
 def test_s04_no_guessed_relations(scar, raw):
-    """规范1：映射全部来自原文，不得引入任何按词义推断的对应。"""
+    """规范1：映射全部来自原文，节点集合由 faithful_mappings 唯一确定。"""
     for G in scar:
         orig = raw[int(G["ad"]["original_id"])]
         want = [[str(a).strip(), str(b).strip()] for a, b in orig["mappings"]]
         assert G["ad"]["faithful_mappings"] == want, f"{G['dir'].name} 映射被改动"
-        # 参考映射的节点对应关系必须与 faithful_mappings 一一吻合
-        nm = G["ref"][list(G["ref"])[0]]["valid"][0]["node_map"]
-        assert len(nm) == len(want)
+
+        # 参考映射必须完整覆盖原文的每一对（pair_map 不受 dict 键唯一性限制）
+        r = G["ref"][list(G["ref"])[0]]
+        pm = r["pair_map"]
+        assert len(pm) == len(want), f"{G['dir'].name} pair_map 条数 {len(pm)} != 原文 {len(want)}"
+        # pair_map 的节点集合必须与两域节点数吻合（共享端点不重复建节点）
+        idx = json.loads((G["dir"] / "data/input/objects/index.json")
+                         .read_text(encoding="utf-8"))
+        objs = {o["object_id"]: json.loads((G["dir"] / "data/input/objects" / o["file"])
+                                           .read_text(encoding="utf-8"))
+                for o in idx["objects"]}
+        # 源域 = valid 里给出的 source_id，不靠节点数大小猜
+        sid = r["valid"][0]["source_id"]
+        src_obj = objs[sid]
+        tgt_obj = objs[[k for k in objs if k != sid][0]]
+        assert len({a for a, _ in pm}) == len(src_obj["nodes"]), f"{G['dir'].name} 源节点数不符"
+        assert len({b for _, b in pm}) == len(tgt_obj["nodes"]), f"{G['dir'].name} 目标节点数不符"
 
 
 def test_s07_raw_preserved_verbatim(scar, raw):
@@ -100,40 +114,53 @@ def test_s07_raw_preserved_verbatim(scar, raw):
 
 
 def test_s05_node_count_not_compressed(scar):
-    """不压缩：节点数必须等于映射对数，任何规模都不许压成固定值。"""
+    """不压缩：两域节点数 = 各自去重后的概念数；共享端点不重复建节点。"""
     sizes = Counter()
     for G in scar:
-        n = len(G["ad"]["faithful_mappings"])
-        sizes[n] += 1
+        pairs = G["ad"]["faithful_mappings"]
+        n_src = len({a for a, _ in pairs})
+        n_tgt = len({b for _, b in pairs})
+        sizes[(n_src, n_tgt)] += 1
         idx = json.loads((G["dir"] / "data/input/objects/index.json").read_text(encoding="utf-8"))
-        objs = [json.loads((G["dir"] / "data/input/objects" / o["file"]).read_text(encoding="utf-8"))
-                for o in idx["objects"]]
-        for o in objs:
-            assert len(o["nodes"]) == n, f"{G['dir'].name} 节点数 {len(o['nodes'])} != {n}"
-    # 规模必须多样，不能全被压成一种
-    assert len(sizes) >= 5, f"节点规模过于单一: {dict(sizes)}"
+        objs = {o["object_id"]: json.loads((G["dir"] / "data/input/objects" / o["file"])
+                                           .read_text(encoding="utf-8"))
+                for o in idx["objects"]}
+        got = sorted(len(o["nodes"]) for o in objs.values())
+        assert got == sorted([n_src, n_tgt]), \
+            f"{G['dir'].name} 节点数 {got} != [{n_src}, {n_tgt}]"
+    # 规模必须多样
+    assert len({s[0] for s in sizes}) >= 5, f"规模过于单一: {dict(sizes)}"
+    # 必须存在两域节点数不等的组（多值对应），否则说明共享端点被拆开了
+    assert any(s[0] != s[1] for s in sizes), "没有任何多值结构，共享端点可能被拆成独立节点"
 
 
 def test_s06_multiple_mapping_type_matches_data(scar):
-    """规范3：多值映射类型标注必须与原始数据实际结构一致。"""
+    """规范3：多值类型标注必须与结构一致。
+
+    语义（易错点，曾标反）：
+      many_to_one  多个源概念对应同一个目标（目标端去重后变少）
+      one_to_many  同一个源概念对应多个目标（源端去重后变少）
+    """
     for G in scar:
         pairs = G["ad"]["faithful_mappings"]
-        la = [a.lower() for a, _ in pairs]
-        lb = [b.lower() for _, b in pairs]
-        dup_a = any(c > 1 for c in Counter(la).values())
-        dup_b = any(c > 1 for c in Counter(lb).values())
-        want = ("both" if (dup_a and dup_b) else
-                "one_to_many" if dup_a else
-                "many_to_one" if dup_b else "none")
-        got = G["ref"][list(G["ref"])[0]]["multiple_mapping_type"]
-        assert got == want, f"{G['dir'].name} 标注 {got} != 实际 {want}"
+        src_dup = len(pairs) > len({a for a, _ in pairs})
+        tgt_dup = len(pairs) > len({b for _, b in pairs})
+        want = ("both" if (src_dup and tgt_dup) else
+                "many_to_one" if src_dup else
+                "one_to_many" if tgt_dup else "none")
+        r = G["ref"][list(G["ref"])[0]]
+        assert r["multiple_mapping_type"] == want, \
+            f"{G['dir'].name} 标注 {r['multiple_mapping_type']} != 实际 {want}"
         if want != "none":
-            assert G["ref"][list(G["ref"])[0]]["valid_mappings"], \
-                f"{G['dir'].name} 多值映射缺 valid_mappings"
+            assert r["valid_mappings"], f"{G['dir'].name} 多值映射缺 valid_mappings"
+            assert r["mapping_forms"]["multi_valued_in_one"] is True
+        # 多个可接受的完整映射：SCAR 未提供，必须为空而不是编造
+        assert r["mapping_forms"]["alt_complete_mappings"] == [], \
+            f"{G['dir'].name} 不应凭空产生替代完整映射"
 
 
 def test_available_checks_declared_and_computable(scar):
-    """available_checks 声明的项必须能算出非空清单（否则 SF/SIPR 无分母）。"""
+    """结构模式：参考映射必须满分（标注与结构自洽的机器自检）。"""
     import sys
     sys.path.insert(0, str(ROOT / "a_data"))
     import metrics
@@ -145,14 +172,53 @@ def test_available_checks_declared_and_computable(scar):
                 for o in idx["objects"]}
         tgt = objs[G["man"]["object_ids"][0]]
         src = objs[[o for o in G["man"]["object_ids"] if o != tgt["object_id"]][0]]
-        res = metrics.score_prediction(
-            tgt, src,
-            {"node_map": r["valid"][0]["node_map"], "edge_map": r["valid"][0]["edge_map"]},
-            available=r["available_checks"])
-        assert res["n_checks"] > 0, f"{G['dir'].name} 检查清单为空"
-        assert res["sf"] == 1.0 and res["sipr"] == 1, f"{G['dir'].name} 参考映射未满分"
-        # SCAR 只有双射类依据，不得声明类型/角色/方向
-        assert r["available_checks"] == ["node_bijection"]
+        res = metrics.score_prediction(tgt, src, {"pair_map": r["pair_map"]},
+                                       ref_pairs=r["pair_map"])
+        assert res["mode"] == "structural"
+        assert res["n_checks"] == len(metrics.STRUCTURAL_CHECKS)
+        assert res["sf"] == 1.0 and res["sipr"] == 1, \
+            f"{G['dir'].name} 参考映射未满分 SF={res['sf']} {res['checks']}"
+
+
+def test_wrong_mappings_cannot_score_full(scar):
+    """区分力：错误映射不得满分（评审核心问题）。
+
+    旧版只有 node_bijection 一项，任何排列都是双射 → 循环置换也满分。
+    必须保证：恒等映射、循环置换、相邻交换都不再拿满分。
+    """
+    import sys
+    sys.path.insert(0, str(ROOT / "a_data"))
+    import metrics
+
+    leak = {"identity": 0, "cycle": 0, "swap": 0}
+    for G in scar:
+        r = G["ref"][list(G["ref"])[0]]
+        idx = json.loads((G["dir"] / "data/input/objects/index.json").read_text(encoding="utf-8"))
+        objs = {o["object_id"]: metrics.load_object(G["dir"] / "data/input/objects" / o["file"])
+                for o in idx["objects"]}
+        tgt = objs[G["man"]["object_ids"][0]]
+        src = objs[[o for o in G["man"]["object_ids"] if o != tgt["object_id"]][0]]
+        rp = r["pair_map"]
+
+        tids = {n["node_id"] for n in tgt["nodes"]}
+        ident = [[n["node_id"], n["node_id"]] for n in src["nodes"] if n["node_id"] in tids]
+        if ident and metrics.score_prediction(tgt, src, {"pair_map": ident},
+                                              ref_pairs=rp)["sipr"] == 1:
+            leak["identity"] += 1
+
+        cyc = [[rp[i][0], rp[(i + 1) % len(rp)][1]] for i in range(len(rp))]
+        if metrics.score_prediction(tgt, src, {"pair_map": cyc}, ref_pairs=rp)["sipr"] == 1:
+            leak["cycle"] += 1
+
+        if len(rp) >= 2:
+            sw = [[rp[0][0], rp[1][1]], [rp[1][0], rp[0][1]]] + rp[2:]
+            if metrics.score_prediction(tgt, src, {"pair_map": sw}, ref_pairs=rp)["sipr"] == 1:
+                leak["swap"] += 1
+
+    assert leak["identity"] == 0, f"恒等映射拿满分 {leak['identity']} 组"
+    assert leak["cycle"] == 0, f"循环置换拿满分 {leak['cycle']} 组"
+    # 相邻交换只错了 2 对，要求绝大多数被识别（允许极少偶然重合）
+    assert leak["swap"] <= 2, f"相邻交换拿满分 {leak['swap']} 组（过多）"
 
 
 def test_split_ratio_and_no_system_leak(scar):
@@ -173,10 +239,12 @@ def test_split_ratio_and_no_system_leak(scar):
 
 
 def test_public_input_has_no_answer(scar):
-    """公开输入不含忠实映射、解释原文、背景或 SCAR 原词标签。
+    """公开输入含概念词（任务输入），但**不含哪对哪的对应关系**（答案）。
 
-    注意：只检查 data/input/ 下的对象与任务（方法可见部分）。
-    README 里写出系统名是有意为之（便于人复核），不属于方法输入。
+    边界（2026-11-02 评审后修正）：
+      概念原词、系统名 → 公开。这是模型推理所需输入，抹掉会让任务无法完成。
+      概念对应关系、Explanation、背景 → 封存。这才是答案。
+    旧版把原词也当答案隐藏，评审指出「删除了模型推理需要的概念信息」。
     """
     for G in scar:
         obj_dir = G["dir"] / "data/input/objects"
@@ -187,27 +255,34 @@ def test_public_input_has_no_answer(scar):
                  for p in (G["dir"] / "data/input/tasks").glob("*.json")]
         blob = json.dumps(objs + tasks, ensure_ascii=False)
 
-        for leak in ("faithful_mappings", "Explanation", "background",
-                     "system_a", "system_b"):
-            assert leak not in blob, f"{G['dir'].name} 公开输入含 {leak}"
+        # 答案类字段一律不得进入方法可见部分。
+        # 只查字段名，不做全文匹配：SCAR 的概念里就有 "background"、结构里就有
+        # "node_map" 同名词，全文匹配会误报（第三次踩同类坑）。
+        def keys_of(v):
+            if isinstance(v, dict):
+                for k, x in v.items():
+                    yield k
+                    yield from keys_of(x)
+            elif isinstance(v, list):
+                for x in v:
+                    yield from keys_of(x)
 
-        # 检查方法可见的**标识性字段**：对象 label、节点 label、系统名。
-        # 不能扫全部字段值：SCAR 的 concept 里就有 "structure"、"participant"
-        # 这类词，会撞上字段名或角色名造成误报（实测两次）。
-        ident = []
-        for o in objs:
-            ident.append(str(o.get("label", "")))
-            ident.extend(str(n.get("label", "")) for n in o.get("nodes") or [])
-        vals = {s.lower() for s in ident}
+        present = set(keys_of(objs)) | set(keys_of(tasks))
+        for leak in ("faithful_mappings", "Explanation", "system_a_background",
+                     "system_b_background", "valid_mappings", "node_map"):
+            assert leak not in present, f"{G['dir'].name} 公开输入含答案字段 {leak}"
+
+        # 概念原词必须公开（评审要求），且与原始映射覆盖的概念集合一致
+        pub_labels = {n["label"] for o in objs for n in o.get("nodes") or []}
         words = {w for p in G["ad"]["faithful_mappings"] for w in p}
-        for k in ("source", "target"):
-            words.add(" ".join(str(G["ad"]["system"][k]).lower().split()))
-        for w in words:
-            assert w.lower() not in vals, f"{G['dir'].name} 公开标识字段含原词 {w!r}"
-        # 节点 label 必须是中性占位（"概念"），不能是任何 SCAR 原词
-        for o in objs:
-            for n in o.get("nodes") or []:
-                assert n["label"] == "概念", f"{G['dir'].name} 节点 label 非中性占位"
+        assert pub_labels == words, \
+            f"{G['dir'].name} 公开概念集与原文不一致：多 {pub_labels - words}，缺 {words - pub_labels}"
+
+        # 关键：不能通过「编号顺序」泄露对应关系
+        # 参考映射若为恒等，模型输出 id 相同即满分（旧版 387/387 全是）
+        pm = G["ref"][list(G["ref"])[0]]["pair_map"]
+        assert not all(a == b for a, b in pm), \
+            f"{G['dir'].name} 参考映射为恒等，编号顺序在泄露答案"
 
 
 # ---------------------------------------------------------------------------

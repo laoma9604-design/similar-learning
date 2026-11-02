@@ -3,26 +3,26 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "test",
-  "label": "目标系统",
+  "label": "Conservation of Water Flow",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
+      "node_id": "t1",
+      "label": "water",
+      "type": "substance"
+    },
+    {
+      "node_id": "t4",
+      "label": "water pipe",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
+      "node_id": "t2",
+      "label": "the macro",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
-      "type": "abstract_concept"
-    },
-    {
-      "node_id": "n4",
-      "label": "概念",
+      "node_id": "t3",
+      "label": "pipe width",
       "type": "abstract_concept"
     }
   ],
@@ -31,17 +31,17 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3",
-        "n4"
+        "t1",
+        "t4",
+        "t2",
+        "t3"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant",
-        "n4": "participant"
+        "t1": "participant",
+        "t4": "participant",
+        "t2": "participant",
+        "t3": "participant"
       }
     }
   ],

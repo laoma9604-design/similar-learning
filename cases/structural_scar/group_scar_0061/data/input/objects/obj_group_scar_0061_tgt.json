@@ -3,37 +3,37 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "train",
-  "label": "目标系统",
+  "label": "code",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
+      "node_id": "t4",
+      "label": "code",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t6",
+      "label": "malware",
+      "type": "entity"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t2",
+      "label": "replication",
+      "type": "process"
     },
     {
-      "node_id": "n4",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t1",
+      "label": "installation",
+      "type": "process"
     },
     {
-      "node_id": "n5",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t5",
+      "label": "removal",
+      "type": "process"
     },
     {
-      "node_id": "n6",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t3",
+      "label": "antivirus",
+      "type": "entity"
     }
   ],
   "edges": [
@@ -41,21 +41,21 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3",
-        "n4",
-        "n5",
-        "n6"
+        "t4",
+        "t6",
+        "t2",
+        "t1",
+        "t5",
+        "t3"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant",
-        "n4": "participant",
-        "n5": "participant",
-        "n6": "participant"
+        "t4": "participant",
+        "t6": "participant",
+        "t2": "participant",
+        "t1": "participant",
+        "t5": "participant",
+        "t3": "participant"
       }
     }
   ],

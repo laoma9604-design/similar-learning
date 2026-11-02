@@ -89,7 +89,60 @@ CHECK_GROUPS = {
     "edge_type": "每条超边的类型",
     "input_output_set": "输入集合与输出集合",
     "role": "每个节点-超边关联的角色",
+    # 结构模式专用（SCAR/SCAN）：与上面六类互斥使用
+    "pair_consistency": "概念对应关系与参考一致（含多值端点）",
+    "type_pattern": "类型对应模式与参考一致（不要求两端同类型）",
 }
+
+# 结构模式可用的检查项（机械模式的六类不适用于跨范畴类比）
+STRUCTURAL_CHECKS = ("pair_consistency", "type_pattern")
+
+
+def build_structural_checks(tgt, src, cand_pairs, ref_pairs,
+                            type_pattern_required=True):
+    """结构模式（SCAR/SCAN）的检查清单。
+
+    为什么不用机械模式的六类（实测依据，2026-11-02）：
+      · node_bijection：SCAR 存在多值对应（virus→code,malware / sperm,egg→product），
+        双射必然失败，与真实结构矛盾
+      · node_type（要求两端同类型）：SCAR 的正确映射中 32.5% 是跨类型
+        （virus(实体)↔code(抽象)、vaccine(物质)↔antivirus(实体)），
+        跨范畴正是类比的核心机制，要求同类型会误伤正确答案
+
+    改用两条在 SCAR 上真正成立的检查：
+      pair_consistency 候选的概念对应集合必须与参考一致（顺序无关，含多值端点）
+      type_pattern     候选的类型对应模式必须与参考一致
+                       （例如参考是 entity→abstract_concept，候选也必须是，
+                         但不要求候选两端同类型）
+
+    cand_pairs / ref_pairs: [[源节点ID, 目标节点ID], ...]
+    """
+    checks = {}
+
+    def pairset(pairs):
+        return {(str(a), str(b)) for a, b in pairs}
+
+    cs, rs = pairset(cand_pairs), pairset(ref_pairs)
+    checks["pair_consistency"] = {
+        "kind": "endpoint_error", "passed": cs == rs,
+        "detail": (f"候选 {len(cs)} 对 / 参考 {len(rs)} 对；"
+                   f"缺 {sorted(rs - cs)[:3]} 多 {sorted(cs - rs)[:3]}"),
+    }
+
+    if type_pattern_required:
+        tmap = {n["node_id"]: n.get("type") for n in tgt["nodes"]}
+        smap = {n["node_id"]: n.get("type") for n in src["nodes"]}
+
+        def pattern(pairs):
+            return sorted((smap.get(a), tmap.get(b)) for a, b in pairs)
+
+        cpat, rpat = pattern(cand_pairs), pattern(ref_pairs)
+        checks["type_pattern"] = {
+            "kind": "type_error", "passed": cpat == rpat,
+            "detail": f"候选 {cpat[:3]} / 参考 {rpat[:3]}",
+        }
+
+    return checks
 
 # 检查项 key → 类别（key 形如 node_type:<node_id>、role:<node_id>）
 def _group_of(check_key: str) -> str:
@@ -261,15 +314,16 @@ def build_checks(target: dict[str, Any], src: dict[str, Any],
 
 def score_prediction(target: dict[str, Any], src: dict[str, Any],
                      prediction: dict[str, Any] | None,
-                     available: list[str] | None = None) -> dict[str, Any]:
+                     available: list[str] | None = None,
+                     valid_set: list[dict[str, Any]] | None = None,
+                     ref_pairs: list | None = None) -> dict[str, Any]:
     """对单个任务的候选映射打分。prediction=None 表示方法无候选（两项记零）。
 
     available: 该对象有原始依据可核验的检查项类别；None 时与 MRED 口径一致。
-        另外支持检查两种「有效映射集合」情形：
-        · prediction 里带 "valid_set"（多条有效映射）→ 候选只要命中集合中任一条即算全通过
-        · 命中时 sf=1、sipr=1，并在返回值里记录 matched_index
-        依据 L1034 与规范3：一个任务可能存在多个合理映射，不能只凭单一参考映射
-        判定其他合理映射错误。
+    ref_pairs: **结构模式专用**。给出时改用 build_structural_checks，
+        候选须提供 pair_map（[[源,目标],...]），按 pair 集合与类型模式判定。
+        这是 SCAR/SCAN 的正确口径——机械模式的六类检查在跨范畴类比上会误伤。
+    valid_set: **评价侧**提供的有效映射集合（来自 reference），不是模型提交的内容。
     """
     if prediction is None:
         return {
@@ -278,30 +332,63 @@ def score_prediction(target: dict[str, Any], src: dict[str, Any],
             "error_breakdown": {"type_error": 0, "endpoint_error": 0, "role_error": 0},
         }
 
-    # ---- 有效映射集合优先（规范3）----
-    # 任务可能有多条合理映射（多对一结构、置换对称等）。此时不能只拿某一
-    # 参考映射去判，应把候选与集合逐条比对，命中任一条即视为全通过。
-    valid_set = prediction.get("valid_set")
+    # ---- 结构模式（SCAR/SCAN）：按概念对应集合与类型模式判定 ----
+    # 机械模式的六类检查（双射、两端同类型）在跨范畴类比上会误伤正确答案：
+    # 实测 SCAR 正确映射中 32.5% 两端类型不同，多值对应也无法满足双射。
+    if ref_pairs is not None:
+        cand_pairs = prediction.get("pair_map")
+        if cand_pairs is None:
+            # 回退：从 node_map 还原（丢掉多值信息，但至少能量化）
+            cand_pairs = [[s, t] for s, t in (prediction.get("node_map") or {}).items()]
+        checks = build_structural_checks(target, src, cand_pairs, ref_pairs)
+        n_total = len(checks)
+        n_pass = sum(1 for c in checks.values() if c["passed"])
+        breakdown = {"type_error": 0, "endpoint_error": 0, "role_error": 0}
+        for c in checks.values():
+            if not c["passed"]:
+                breakdown[c["kind"]] += 1
+        return {
+            "has_candidate": True,
+            "sf": n_pass / n_total if n_total else 0.0,
+            "sipr": 1 if n_total and n_pass == n_total else 0,
+            "n_checks": n_total, "n_passed": n_pass,
+            "checks": checks,
+            "error_breakdown": breakdown,
+            "mode": "structural",
+        }
+
+    # ---- 有效映射集合（规范3）----
+    # 一个任务可能有多条合理映射（多对一结构、置换对称等）。此时候选只要**完整命中**
+    # 集合中任一条即算全通过；否则按最接近的那条报错。
+    #
+    # 关键：valid_set 必须来自**评价侧**（reference），不能从 prediction 里取。
+    # 早期版本从 prediction 里取 valid_set 并拿它给自己 build_checks，等于用参考答案
+    # 给自己打分，空映射/乱映射都能得满分（实测：空映射 SF=1.0）。评审发现后改为参数传入。
     if valid_set:
+        # 模型提交的映射必须与集合中某一条**完全一致**（不是拿参考去给自己打分）
+        try:
+            cand_nm = prediction["node_map"]
+            cand_em = prediction["edge_map"]
+        except KeyError:
+            cand_nm, cand_em = {}, {}
         for idx, ref in enumerate(valid_set):
-            checks = build_checks(target, src,
-                                  ref["node_map"], ref["edge_map"],
-                                  available=available)
-            n_total = len(checks)
-            n_pass = sum(1 for c in checks.values() if c["passed"])
-            if n_total and n_pass == n_total:
+            # 按内容比较，不按 dict 书写顺序：{n1:m2,n2:m1} 与 {n2:m1,n1:m2} 是同一映射
+            if (dict(cand_nm) == dict(ref["node_map"])
+                    and dict(cand_em) == dict(ref.get("edge_map") or {})):
+                checks = build_checks(target, src, cand_nm, cand_em,
+                                      available=available)
+                n_total = len(checks)
                 return {
                     "has_candidate": True, "sf": 1.0, "sipr": 1,
-                    "n_checks": n_total, "n_passed": n_pass,
+                    "n_checks": n_total, "n_passed": n_total,
                     "checks": checks, "matched_index": idx,
                     "valid_set_size": len(valid_set),
                     "error_breakdown": {"type_error": 0, "endpoint_error": 0,
                                         "role_error": 0},
                 }
-        # 一条都没命中：用第一条的检查明细报错（便于定位），SF/SIPR 记 0
+        # 未命中任何一条：按候选自身与第一条参考的差异报检查明细，SIPR 记 0
         ref = valid_set[0]
-        checks = build_checks(target, src, ref["node_map"], ref["edge_map"],
-                              available=available)
+        checks = build_checks(target, src, cand_nm, cand_em, available=available)
         n_total = len(checks)
         n_pass = sum(1 for c in checks.values() if c["passed"])
         breakdown = {"type_error": 0, "endpoint_error": 0, "role_error": 0}

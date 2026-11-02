@@ -3,21 +3,21 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "test",
-  "label": "目标系统",
+  "label": "Printing",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
+      "node_id": "t1",
+      "label": "letter",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
+      "node_id": "t3",
+      "label": "print",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
+      "node_id": "t2",
+      "label": "proofread",
       "type": "abstract_concept"
     }
   ],
@@ -26,15 +26,15 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3"
+        "t1",
+        "t3",
+        "t2"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant"
+        "t1": "participant",
+        "t3": "participant",
+        "t2": "participant"
       }
     }
   ],

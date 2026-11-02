@@ -3,67 +3,67 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "val",
-  "label": "目标系统",
+  "label": "money",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t1",
+      "label": "money",
+      "type": "substance"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t3",
+      "label": "investing",
+      "type": "process"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t10",
+      "label": "transfer",
+      "type": "process"
     },
     {
-      "node_id": "n4",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t11",
+      "label": "income",
+      "type": "substance"
     },
     {
-      "node_id": "n5",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t12",
+      "label": "profit",
+      "type": "substance"
     },
     {
-      "node_id": "n6",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t4",
+      "label": "loss",
+      "type": "property"
     },
     {
-      "node_id": "n7",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t5",
+      "label": "spending",
+      "type": "process"
     },
     {
-      "node_id": "n8",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t7",
+      "label": "bank",
+      "type": "entity"
     },
     {
-      "node_id": "n9",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t2",
+      "label": "account",
+      "type": "entity"
     },
     {
-      "node_id": "n10",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t6",
+      "label": "wealth",
+      "type": "substance"
     },
     {
-      "node_id": "n11",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t9",
+      "label": "salary",
+      "type": "substance"
     },
     {
-      "node_id": "n12",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t8",
+      "label": "capital",
+      "type": "substance"
     }
   ],
   "edges": [
@@ -71,33 +71,33 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3",
-        "n4",
-        "n5",
-        "n6",
-        "n7",
-        "n8",
-        "n9",
-        "n10",
-        "n11",
-        "n12"
+        "t1",
+        "t3",
+        "t10",
+        "t11",
+        "t12",
+        "t4",
+        "t5",
+        "t7",
+        "t2",
+        "t6",
+        "t9",
+        "t8"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant",
-        "n4": "participant",
-        "n5": "participant",
-        "n6": "participant",
-        "n7": "participant",
-        "n8": "participant",
-        "n9": "participant",
-        "n10": "participant",
-        "n11": "participant",
-        "n12": "participant"
+        "t1": "participant",
+        "t3": "participant",
+        "t10": "participant",
+        "t11": "participant",
+        "t12": "participant",
+        "t4": "participant",
+        "t5": "participant",
+        "t7": "participant",
+        "t2": "participant",
+        "t6": "participant",
+        "t9": "participant",
+        "t8": "participant"
       }
     }
   ],

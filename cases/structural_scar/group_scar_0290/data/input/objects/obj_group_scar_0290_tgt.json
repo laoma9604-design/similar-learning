@@ -3,31 +3,31 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "train",
-  "label": "目标系统",
+  "label": "competition",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
+      "node_id": "t3",
+      "label": "competition",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
+      "node_id": "t4",
+      "label": "competitor",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
+      "node_id": "t2",
+      "label": "market",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n4",
-      "label": "概念",
+      "node_id": "t5",
+      "label": "success",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n5",
-      "label": "概念",
+      "node_id": "t1",
+      "label": "failure",
       "type": "abstract_concept"
     }
   ],
@@ -36,19 +36,19 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3",
-        "n4",
-        "n5"
+        "t3",
+        "t4",
+        "t2",
+        "t5",
+        "t1"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant",
-        "n4": "participant",
-        "n5": "participant"
+        "t3": "participant",
+        "t4": "participant",
+        "t2": "participant",
+        "t5": "participant",
+        "t1": "participant"
       }
     }
   ],

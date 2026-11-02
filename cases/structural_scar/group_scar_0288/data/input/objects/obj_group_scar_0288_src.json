@@ -3,32 +3,22 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "val",
-  "label": "源系统",
+  "label": "weapon",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "s3",
+      "label": "weapon",
+      "type": "entity"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "s2",
+      "label": "fighter",
+      "type": "entity"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
-      "type": "abstract_concept"
-    },
-    {
-      "node_id": "n4",
-      "label": "概念",
-      "type": "abstract_concept"
-    },
-    {
-      "node_id": "n5",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "s1",
+      "label": "war",
+      "type": "process"
     }
   ],
   "edges": [
@@ -36,19 +26,15 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3",
-        "n4",
-        "n5"
+        "s3",
+        "s2",
+        "s1"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant",
-        "n4": "participant",
-        "n5": "participant"
+        "s3": "participant",
+        "s2": "participant",
+        "s1": "participant"
       }
     }
   ],

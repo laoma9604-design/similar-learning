@@ -1,9 +1,9 @@
 group_scar_0294 —— SCAR id=294：hunt → research
 
 领域：Philosophy → Philosophy
-概念对数：7（节点数与之一致，未压缩）
-结构类型：one_to_many
-可核验检查项：node_bijection（SCAR 无类型/角色/方向标注）
+概念对：7    源域节点：6    目标域节点：7
+结构类型：many_to_one
+可核验检查项：node_bijection, node_type（类型为推断，原文未标注）
 结构模式：无响应函数，不执行响应检验（任务书 L957）
 
-封存材料：sealed/reference.json（参考映射）、sealed/adaptation.json（原始概念对/解释/背景逐字留存）
+参考映射与原始解释在 sealed/ 下，不进入方法输入。

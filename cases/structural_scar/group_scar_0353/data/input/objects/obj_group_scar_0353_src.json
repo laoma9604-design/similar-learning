@@ -3,46 +3,46 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "train",
-  "label": "源系统",
+  "label": "billiard balls",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
+      "node_id": "s4",
+      "label": "balls",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
+      "node_id": "s6",
+      "label": "billiards",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
+      "node_id": "s7",
+      "label": "speed",
+      "type": "property"
+    },
+    {
+      "node_id": "s8",
+      "label": "table",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n4",
-      "label": "概念",
+      "node_id": "s1",
+      "label": "bouncing",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n5",
-      "label": "概念",
+      "node_id": "s5",
+      "label": "moving",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n6",
-      "label": "概念",
+      "node_id": "s3",
+      "label": "slow",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n7",
-      "label": "概念",
-      "type": "abstract_concept"
-    },
-    {
-      "node_id": "n8",
-      "label": "概念",
+      "node_id": "s2",
+      "label": "fast",
       "type": "abstract_concept"
     }
   ],
@@ -51,25 +51,25 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3",
-        "n4",
-        "n5",
-        "n6",
-        "n7",
-        "n8"
+        "s4",
+        "s6",
+        "s7",
+        "s8",
+        "s1",
+        "s5",
+        "s3",
+        "s2"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant",
-        "n4": "participant",
-        "n5": "participant",
-        "n6": "participant",
-        "n7": "participant",
-        "n8": "participant"
+        "s4": "participant",
+        "s6": "participant",
+        "s7": "participant",
+        "s8": "participant",
+        "s1": "participant",
+        "s5": "participant",
+        "s3": "participant",
+        "s2": "participant"
       }
     }
   ],

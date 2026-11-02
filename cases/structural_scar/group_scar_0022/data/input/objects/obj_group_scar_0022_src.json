@@ -3,21 +3,21 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "val",
-  "label": "源系统",
+  "label": "Food Chain",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
+      "node_id": "s1",
+      "label": "species",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
+      "node_id": "s2",
+      "label": "predator",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
+      "node_id": "s3",
+      "label": "energy",
       "type": "abstract_concept"
     }
   ],
@@ -26,15 +26,15 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3"
+        "s1",
+        "s2",
+        "s3"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant"
+        "s1": "participant",
+        "s2": "participant",
+        "s3": "participant"
       }
     }
   ],

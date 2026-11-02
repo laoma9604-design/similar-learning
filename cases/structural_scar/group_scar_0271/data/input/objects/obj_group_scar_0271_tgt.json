@@ -3,46 +3,46 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "train",
-  "label": "目标系统",
+  "label": "understanding",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
+      "node_id": "t8",
+      "label": "understand",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
+      "node_id": "t2",
+      "label": "speaker",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
+      "node_id": "t6",
+      "label": "argument",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n4",
-      "label": "概念",
+      "node_id": "t5",
+      "label": "listener",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n5",
-      "label": "概念",
+      "node_id": "t1",
+      "label": "misunderstood",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n6",
-      "label": "概念",
+      "node_id": "t7",
+      "label": "digresses",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n7",
-      "label": "概念",
+      "node_id": "t4",
+      "label": "complicated",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n8",
-      "label": "概念",
+      "node_id": "t3",
+      "label": "simple",
       "type": "abstract_concept"
     }
   ],
@@ -51,25 +51,25 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3",
-        "n4",
-        "n5",
-        "n6",
-        "n7",
-        "n8"
+        "t8",
+        "t2",
+        "t6",
+        "t5",
+        "t1",
+        "t7",
+        "t4",
+        "t3"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant",
-        "n4": "participant",
-        "n5": "participant",
-        "n6": "participant",
-        "n7": "participant",
-        "n8": "participant"
+        "t8": "participant",
+        "t2": "participant",
+        "t6": "participant",
+        "t5": "participant",
+        "t1": "participant",
+        "t7": "participant",
+        "t4": "participant",
+        "t3": "participant"
       }
     }
   ],

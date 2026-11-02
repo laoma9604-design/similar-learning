@@ -3,31 +3,31 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "train",
-  "label": "源系统",
+  "label": "programming",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
+      "node_id": "s5",
+      "label": "program",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
+      "node_id": "s1",
+      "label": "instruction",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
+      "node_id": "s4",
+      "label": "Programming language",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n4",
-      "label": "概念",
+      "node_id": "s3",
+      "label": "translater",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n5",
-      "label": "概念",
+      "node_id": "s2",
+      "label": "computer",
       "type": "abstract_concept"
     }
   ],
@@ -36,19 +36,19 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3",
-        "n4",
-        "n5"
+        "s5",
+        "s1",
+        "s4",
+        "s3",
+        "s2"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant",
-        "n4": "participant",
-        "n5": "participant"
+        "s5": "participant",
+        "s1": "participant",
+        "s4": "participant",
+        "s3": "participant",
+        "s2": "participant"
       }
     }
   ],

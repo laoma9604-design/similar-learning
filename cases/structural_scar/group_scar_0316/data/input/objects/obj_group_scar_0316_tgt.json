@@ -3,52 +3,52 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "val",
-  "label": "目标系统",
+  "label": "politics",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
+      "node_id": "t1",
+      "label": "politics",
+      "type": "process"
+    },
+    {
+      "node_id": "t8",
+      "label": "politician",
+      "type": "entity"
+    },
+    {
+      "node_id": "t2",
+      "label": "law",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t5",
+      "label": "president",
+      "type": "entity"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t3",
+      "label": "press",
+      "type": "entity"
     },
     {
-      "node_id": "n4",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t7",
+      "label": "campaign",
+      "type": "process"
     },
     {
-      "node_id": "n5",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t4",
+      "label": "money",
+      "type": "substance"
     },
     {
-      "node_id": "n6",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t6",
+      "label": "crisis",
+      "type": "process"
     },
     {
-      "node_id": "n7",
-      "label": "概念",
-      "type": "abstract_concept"
-    },
-    {
-      "node_id": "n8",
-      "label": "概念",
-      "type": "abstract_concept"
-    },
-    {
-      "node_id": "n9",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t9",
+      "label": "corruption",
+      "type": "process"
     }
   ],
   "edges": [
@@ -56,27 +56,27 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3",
-        "n4",
-        "n5",
-        "n6",
-        "n7",
-        "n8",
-        "n9"
+        "t1",
+        "t8",
+        "t2",
+        "t5",
+        "t3",
+        "t7",
+        "t4",
+        "t6",
+        "t9"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant",
-        "n4": "participant",
-        "n5": "participant",
-        "n6": "participant",
-        "n7": "participant",
-        "n8": "participant",
-        "n9": "participant"
+        "t1": "participant",
+        "t8": "participant",
+        "t2": "participant",
+        "t5": "participant",
+        "t3": "participant",
+        "t7": "participant",
+        "t4": "participant",
+        "t6": "participant",
+        "t9": "participant"
       }
     }
   ],

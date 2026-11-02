@@ -3,27 +3,27 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "train",
-  "label": "目标系统",
+  "label": "the factory's production line",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t3",
+      "label": "Worker",
+      "type": "entity"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t1",
+      "label": "raw material",
+      "type": "substance"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t2",
+      "label": "mechanical equipment",
+      "type": "entity"
     },
     {
-      "node_id": "n4",
-      "label": "概念",
-      "type": "abstract_concept"
+      "node_id": "t4",
+      "label": "Material warehouse",
+      "type": "entity"
     }
   ],
   "edges": [
@@ -31,17 +31,17 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3",
-        "n4"
+        "t3",
+        "t1",
+        "t2",
+        "t4"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant",
-        "n4": "participant"
+        "t3": "participant",
+        "t1": "participant",
+        "t2": "participant",
+        "t4": "participant"
       }
     }
   ],

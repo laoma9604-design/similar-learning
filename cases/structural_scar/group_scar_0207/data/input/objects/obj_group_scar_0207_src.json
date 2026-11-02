@@ -3,21 +3,21 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "train",
-  "label": "源系统",
+  "label": "Reformation in Russia in 1861",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
+      "node_id": "s3",
+      "label": "Serfdom",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
+      "node_id": "s1",
+      "label": "Alexander II",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
+      "node_id": "s2",
+      "label": "bourgeois reform",
       "type": "abstract_concept"
     }
   ],
@@ -26,15 +26,15 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3"
+        "s3",
+        "s1",
+        "s2"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant"
+        "s3": "participant",
+        "s1": "participant",
+        "s2": "participant"
       }
     }
   ],

@@ -153,68 +153,75 @@ def main():
             # 同一名字出现在多个组是正常的（派生关系），只要都在同一 split 就合规
             sys_blocks[key + ":" + nm].add(man["split"])
 
-        # B1 节点数 = 映射对数（不压缩）
-        if len(tgt["nodes"]) != n_pairs or len(src["nodes"]) != n_pairs:
-            fail("B1", f"{gdir.name} 节点数 {len(src['nodes'])}/{len(tgt['nodes'])} "
-                       f"!= 映射对数 {n_pairs}")
-        # B2 两域节点数、超边数相等
-        if len(src["nodes"]) != len(tgt["nodes"]):
-            fail("B2", f"{gdir.name} 两域节点数不等")
+        # B1 节点数 = 各自去重后的概念数（共享端点只建一个节点，不压缩、不拆分）
+        n_src_want = len({a for a, _ in ad["faithful_mappings"]})
+        n_tgt_want = len({b for _, b in ad["faithful_mappings"]})
+        if len(src["nodes"]) != n_src_want:
+            fail("B1", f"{gdir.name} 源节点 {len(src['nodes'])} != 去重概念数 {n_src_want}")
+        if len(tgt["nodes"]) != n_tgt_want:
+            fail("B1", f"{gdir.name} 目标节点 {len(tgt['nodes'])} != 去重概念数 {n_tgt_want}")
+        # B2 两域超边数必须相等（L342）；节点数可以不等——多值对应是原文事实
         if len(src["edges"]) != len(tgt["edges"]):
             fail("B2", f"{gdir.name} 两域超边数不等")
 
         task_id, r = next(iter(ref.items()))
 
-        # B4/B5 available_checks 能算出清单且 SF 可计算
-        tr = metrics.build_checks(tgt, src, r["valid"][0]["node_map"],
-                                  r["valid"][0]["edge_map"],
-                                  available=r["available_checks"])
-        if not tr:
-            fail("B4", f"{gdir.name} 声明可用项后清单为空")
-        if any(metrics._group_of(k) not in r["available_checks"] for k in tr):
-            fail("B4", f"{gdir.name} 清单含未声明的类别")
-        res = metrics.score_prediction(tgt, src,
-                                       {"node_map": r["valid"][0]["node_map"],
-                                        "edge_map": r["valid"][0]["edge_map"]},
-                                       available=r["available_checks"])
-        if res["n_checks"] == 0 or res["sf"] != 1.0 or res["sipr"] != 1:
-            fail("B5", f"{gdir.name} 参考映射未满分 sf={res['sf']} n={res['n_checks']}")
+        # B4/B5 结构模式：参考映射必须满分（pair_consistency + type_pattern）
+        res = metrics.score_prediction(tgt, src, {"pair_map": r["pair_map"]},
+                                       ref_pairs=r["pair_map"])
+        if res.get("mode") != "structural":
+            fail("B4", f"{gdir.name} 未走结构模式")
+        if res["n_checks"] != len(metrics.STRUCTURAL_CHECKS):
+            fail("B4", f"{gdir.name} 清单项数 {res['n_checks']} != "
+                       f"{len(metrics.STRUCTURAL_CHECKS)}")
+        if res["sf"] != 1.0 or res["sipr"] != 1:
+            fail("B5", f"{gdir.name} 参考映射未满分 sf={res['sf']} {res['checks']}")
+
+        # B5b 区分力：错误映射不得满分
+        pm = r["pair_map"]
+        cyc = [[pm[i][0], pm[(i + 1) % len(pm)][1]] for i in range(len(pm))]
+        if metrics.score_prediction(tgt, src, {"pair_map": cyc},
+                                    ref_pairs=pm)["sipr"] == 1:
+            fail("B5b", f"{gdir.name} 循环置换仍拿满分")
 
         # B6 多值映射
         if r["multiple_mapping_type"] != "none":
             if not r.get("valid_mappings"):
                 fail("B6", f"{gdir.name} 多值映射无 valid_mappings")
-            la = [a.lower() for a, _ in ad["faithful_mappings"]]
-            lb = [b.lower() for _, b in ad["faithful_mappings"]]
-            dup_a = any(c > 1 for c in Counter(la).values())
-            dup_b = any(c > 1 for c in Counter(lb).values())
-            want = "both" if (dup_a and dup_b) else (
-                "one_to_many" if dup_a else ("many_to_one" if dup_b else "none"))
+            pairs = ad["faithful_mappings"]
+            src_dup = len(pairs) > len({a for a, _ in pairs})
+            tgt_dup = len(pairs) > len({b for _, b in pairs})
+            want = ("both" if (src_dup and tgt_dup) else
+                    "many_to_one" if src_dup else
+                    "one_to_many" if tgt_dup else "none")
             if r["multiple_mapping_type"] != want:
                 fail("B6", f"{gdir.name} multiple_mapping_type={r['multiple_mapping_type']} "
                            f"与数据实际 {want} 不符")
 
-        # B8 公开输入不含答案：逐字段检查对象与 manifest，
-        # 不靠"字符串里出现系统名"这种粗糙匹配（'car'、'object' 这类常见词会误报）
-        pub_j = json.dumps({"src": src, "tgt": tgt, "manifest": man},
-                           ensure_ascii=False)
-        for leak in ("faithful_mappings", "Explanation", "background"):
-            if leak in pub_j:
-                fail("B8", f"{gdir.name} 公开输入含 {leak}")
-        # 节点 label 必须是中立占位，不能是 SCAR 的原词
+        # B8 公开输入含概念词（任务输入），但不含对应关系（答案）。
+        # 评审 2026-11-02：抹掉原词会让任务无法完成，原词必须公开。
+        def keys_of(v):
+            if isinstance(v, dict):
+                for k, x in v.items():
+                    yield k
+                    yield from keys_of(x)
+            elif isinstance(v, list):
+                for x in v:
+                    yield from keys_of(x)
+
+        present = set(keys_of([src, tgt, man]))
+        for leak in ("faithful_mappings", "Explanation", "system_a_background",
+                     "system_b_background", "valid_mappings", "node_map", "pair_map"):
+            if leak in present:
+                fail("B8", f"{gdir.name} 公开输入含答案字段 {leak}")
+        # 概念词必须公开且与原文一致
+        pub = {n["label"] for o in (src, tgt) for n in o["nodes"]}
         words = {w for pair in ad["faithful_mappings"] for w in pair}
-        for o in (src, tgt):
-            for n in o["nodes"]:
-                if n["label"] in words:
-                    fail("B8", f"{gdir.name} 节点 label {n['label']!r} 是 SCAR 原词")
-                    break
-        # 系统名不得出现在任何公开字段值里（按完整短语匹配，不是子串）
-        sysn = {(" ".join(str(ad["system"][k]).lower().split())) for k in ("source", "target")}
-        vals = " ".join(str(v).lower() for o in (src, tgt) for v in
-                        ([o.get("label", "")] + [n["label"] for n in o["nodes"]])).lower()
-        for s in sysn:
-            if s and s in vals:
-                fail("B8", f"{gdir.name} 公开对象含系统名 {s!r}")
+        if pub != words:
+            fail("B8", f"{gdir.name} 公开概念集与原文不一致")
+        # 编号顺序不得泄露答案
+        if all(a == b for a, b in pm):
+            fail("B8", f"{gdir.name} 参考映射为恒等，编号顺序泄露答案")
 
     # B7 划分
     total = sum(split_cnt.values())

@@ -3,16 +3,16 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "test",
-  "label": "目标系统",
+  "label": "Ancient Greece",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
+      "node_id": "t2",
+      "label": "aegean sea",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
+      "node_id": "t1",
+      "label": "Greek alphabet",
       "type": "abstract_concept"
     }
   ],
@@ -21,13 +21,13 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2"
+        "t2",
+        "t1"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant"
+        "t2": "participant",
+        "t1": "participant"
       }
     }
   ],

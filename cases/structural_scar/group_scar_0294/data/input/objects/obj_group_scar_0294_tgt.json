@@ -3,41 +3,41 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "val",
-  "label": "目标系统",
+  "label": "research",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
+      "node_id": "t5",
+      "label": "research",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
+      "node_id": "t2",
+      "label": "idea",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
+      "node_id": "t6",
+      "label": "information",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n4",
-      "label": "概念",
+      "node_id": "t1",
+      "label": "find",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n5",
-      "label": "概念",
+      "node_id": "t7",
+      "label": "laboratory",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n6",
-      "label": "概念",
+      "node_id": "t4",
+      "label": "researcher",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n7",
-      "label": "概念",
+      "node_id": "t3",
+      "label": "instrument",
       "type": "abstract_concept"
     }
   ],
@@ -46,23 +46,23 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3",
-        "n4",
-        "n5",
-        "n6",
-        "n7"
+        "t5",
+        "t2",
+        "t6",
+        "t1",
+        "t7",
+        "t4",
+        "t3"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant",
-        "n4": "participant",
-        "n5": "participant",
-        "n6": "participant",
-        "n7": "participant"
+        "t5": "participant",
+        "t2": "participant",
+        "t6": "participant",
+        "t1": "participant",
+        "t7": "participant",
+        "t4": "participant",
+        "t3": "participant"
       }
     }
   ],

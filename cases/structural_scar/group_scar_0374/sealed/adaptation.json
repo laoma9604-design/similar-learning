@@ -57,13 +57,14 @@
     ]
   },
   "structure_source": "provided",
+  "node_type_source": "inferred",
   "annotation_status": "confirmed",
   "valid_mappings": [
     {
       "node_map": {
-        "n1": "n1",
-        "n2": "n2",
-        "n3": "n3"
+        "s3": "t3",
+        "s1": "t1",
+        "s2": "t2"
       },
       "edge_map": {
         "e1": "e1"
@@ -71,7 +72,8 @@
     }
   ],
   "available_checks": [
-    "node_bijection"
+    "node_bijection",
+    "node_type"
   ],
   "multiple_mapping_type": "none",
   "system": {
@@ -82,5 +84,5 @@
     "source": "Physics",
     "target": "Geography"
   },
-  "note": "节点/超边/映射全部来自 SCAR 原文 mappings，未做语义推断；SCAR 未标注节点类型、角色与方向，故 available_checks 仅含节点双射。原文未划分关系，全部概念置于同一条超边（数据事实，非简化）。"
+  "note": "节点/超边/映射来自原文 mappings；节点类型是按词表判别式推断（node_type_source=inferred），原文未标注。概念原词作为节点 label 公开——那是任务输入；哪对哪的对应关系才是答案，只存 sealed。共享端点只建一个节点，多对一在 node_map 中真实体现。"
 }

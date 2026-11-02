@@ -6,37 +6,80 @@
       {
         "source_id": "obj_group_scar_0098_src",
         "node_map": {
-          "n1": "n1",
-          "n2": "n2",
-          "n3": "n3",
-          "n4": "n4"
+          "s4": "t2",
+          "s2": "t3",
+          "s1": "t4",
+          "s3": "t1"
         },
         "edge_map": {
           "e1": "e1"
         }
       }
+    ],
+    "pair_map": [
+      [
+        "s4",
+        "t2"
+      ],
+      [
+        "s2",
+        "t3"
+      ],
+      [
+        "s1",
+        "t4"
+      ],
+      [
+        "s3",
+        "t1"
+      ]
     ],
     "valid_mappings": [
       {
         "node_map": {
-          "n1": "n1",
-          "n2": "n2",
-          "n3": "n3",
-          "n4": "n4"
+          "s4": "t2",
+          "s2": "t3",
+          "s1": "t4",
+          "s3": "t1"
         },
         "edge_map": {
           "e1": "e1"
-        }
+        },
+        "pair_map": [
+          [
+            "s4",
+            "t2"
+          ],
+          [
+            "s2",
+            "t3"
+          ],
+          [
+            "s1",
+            "t4"
+          ],
+          [
+            "s3",
+            "t1"
+          ]
+        ]
       }
     ],
+    "mapping_forms": {
+      "multi_valued_in_one": false,
+      "alt_complete_mappings": [],
+      "note": "multi_valued_in_one：同一条原始记录内概念共享端点或多目标对应；alt_complete_mappings：因置换对称等产生的多个等价完整映射。SCAR 未提供后者，故为空。"
+    },
     "exclusions": [],
     "reference_tolerance": null,
     "allowed_mappings_total": null,
     "status": "structural_only",
     "multiple_mapping_type": "none",
     "available_checks": [
-      "node_bijection"
+      "node_bijection",
+      "node_type"
     ],
+    "node_type_source": "inferred",
     "full_library_verified": true
   }
 }

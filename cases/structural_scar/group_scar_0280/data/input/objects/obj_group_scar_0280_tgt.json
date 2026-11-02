@@ -3,36 +3,36 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "test",
-  "label": "目标系统",
+  "label": "society",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
+      "node_id": "t4",
+      "label": "society",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
+      "node_id": "t6",
+      "label": "person",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
+      "node_id": "t1",
+      "label": "citizen",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n4",
-      "label": "概念",
+      "node_id": "t2",
+      "label": "organisation",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n5",
-      "label": "概念",
+      "node_id": "t5",
+      "label": "people",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n6",
-      "label": "概念",
+      "node_id": "t3",
+      "label": "communication",
       "type": "abstract_concept"
     }
   ],
@@ -41,21 +41,21 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3",
-        "n4",
-        "n5",
-        "n6"
+        "t4",
+        "t6",
+        "t1",
+        "t2",
+        "t5",
+        "t3"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant",
-        "n4": "participant",
-        "n5": "participant",
-        "n6": "participant"
+        "t4": "participant",
+        "t6": "participant",
+        "t1": "participant",
+        "t2": "participant",
+        "t5": "participant",
+        "t3": "participant"
       }
     }
   ],

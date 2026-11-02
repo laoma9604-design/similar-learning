@@ -3,36 +3,36 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "train",
-  "label": "目标系统",
+  "label": "nation",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
+      "node_id": "t3",
+      "label": "nation",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
+      "node_id": "t5",
+      "label": "president",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
+      "node_id": "t2",
+      "label": "congress",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n4",
-      "label": "概念",
+      "node_id": "t6",
+      "label": "citizen",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n5",
-      "label": "概念",
+      "node_id": "t1",
+      "label": "problem",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n6",
-      "label": "概念",
+      "node_id": "t4",
+      "label": "outlook",
       "type": "abstract_concept"
     }
   ],
@@ -41,21 +41,21 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3",
-        "n4",
-        "n5",
-        "n6"
+        "t3",
+        "t5",
+        "t2",
+        "t6",
+        "t1",
+        "t4"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant",
-        "n4": "participant",
-        "n5": "participant",
-        "n6": "participant"
+        "t3": "participant",
+        "t5": "participant",
+        "t2": "participant",
+        "t6": "participant",
+        "t1": "participant",
+        "t4": "participant"
       }
     }
   ],

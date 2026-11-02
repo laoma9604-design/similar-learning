@@ -3,31 +3,31 @@
   "object_kind": "structural",
   "relation_type": "scar_analogy",
   "split": "test",
-  "label": "源系统",
+  "label": "movie",
   "nodes": [
     {
-      "node_id": "n1",
-      "label": "概念",
+      "node_id": "s3",
+      "label": "story plot",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n2",
-      "label": "概念",
+      "node_id": "s2",
+      "label": "Role",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n3",
-      "label": "概念",
+      "node_id": "s4",
+      "label": "Scenes",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n4",
-      "label": "概念",
+      "node_id": "s5",
+      "label": "director",
       "type": "abstract_concept"
     },
     {
-      "node_id": "n5",
-      "label": "概念",
+      "node_id": "s1",
+      "label": "music",
       "type": "abstract_concept"
     }
   ],
@@ -36,19 +36,19 @@
       "edge_id": "e1",
       "edge_type": "scar_analogy",
       "input_nodes": [
-        "n1",
-        "n2",
-        "n3",
-        "n4",
-        "n5"
+        "s3",
+        "s2",
+        "s4",
+        "s5",
+        "s1"
       ],
       "output_nodes": [],
       "roles": {
-        "n1": "participant",
-        "n2": "participant",
-        "n3": "participant",
-        "n4": "participant",
-        "n5": "participant"
+        "s3": "participant",
+        "s2": "participant",
+        "s4": "participant",
+        "s5": "participant",
+        "s1": "participant"
       }
     }
   ],
