@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0029_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "camera",
   "nodes": [
@@ -34,7 +34,7 @@
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t2",
         "t5",
@@ -44,11 +44,11 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t2": "participant",
-        "t5": "participant",
-        "t3": "participant",
-        "t4": "participant",
-        "t1": "participant"
+        "t2": "correlate",
+        "t5": "correlate",
+        "t3": "correlate",
+        "t4": "correlate",
+        "t1": "correlate"
       }
     }
   ],

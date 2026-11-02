@@ -1,35 +1,35 @@
 {
   "object_id": "obj_group_scar_0038_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "Land System",
   "nodes": [
     {
       "node_id": "s3",
       "label": "desertification",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s4",
       "label": "Irrigation system",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s1",
       "label": "plant",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s2",
       "label": "skin aging",
-      "type": "abstract_concept"
+      "type": "process"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s3",
         "s4",
@@ -38,10 +38,10 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s3": "participant",
-        "s4": "participant",
-        "s1": "participant",
-        "s2": "participant"
+        "s3": "correlate",
+        "s4": "correlate",
+        "s1": "correlate",
+        "s2": "correlate"
       }
     }
   ],

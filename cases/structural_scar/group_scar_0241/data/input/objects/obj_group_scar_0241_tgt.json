@@ -1,19 +1,19 @@
 {
   "object_id": "obj_group_scar_0241_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "German Constitutional Monarchy",
   "nodes": [
     {
       "node_id": "t1",
       "label": "emperor",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t2",
       "label": "hereditary",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "t3",
@@ -24,7 +24,7 @@
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t1",
         "t2",
@@ -32,9 +32,9 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t1": "participant",
-        "t2": "participant",
-        "t3": "participant"
+        "t1": "correlate",
+        "t2": "correlate",
+        "t3": "correlate"
       }
     }
   ],

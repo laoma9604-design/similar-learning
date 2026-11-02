@@ -1,45 +1,45 @@
 {
   "object_id": "obj_group_scar_0315_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "val",
   "label": "theatre",
   "nodes": [
     {
       "node_id": "s1",
       "label": "theatre",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s6",
       "label": "actor",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s3",
       "label": "performance",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "s5",
       "label": "stage",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s2",
       "label": "critic",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s4",
       "label": "audience",
-      "type": "abstract_concept"
+      "type": "entity"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s1",
         "s6",
@@ -50,12 +50,12 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s1": "participant",
-        "s6": "participant",
-        "s3": "participant",
-        "s5": "participant",
-        "s2": "participant",
-        "s4": "participant"
+        "s1": "correlate",
+        "s6": "correlate",
+        "s3": "correlate",
+        "s5": "correlate",
+        "s2": "correlate",
+        "s4": "hub"
       }
     }
   ],

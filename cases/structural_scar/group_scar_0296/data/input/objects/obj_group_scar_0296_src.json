@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0296_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "val",
   "label": "boat",
   "nodes": [
@@ -44,7 +44,7 @@
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s1",
         "s6",
@@ -56,13 +56,13 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s1": "participant",
-        "s6": "participant",
-        "s2": "participant",
-        "s7": "participant",
-        "s4": "participant",
-        "s5": "participant",
-        "s3": "participant"
+        "s1": "correlate",
+        "s6": "correlate",
+        "s2": "correlate",
+        "s7": "hub",
+        "s4": "hub",
+        "s5": "hub",
+        "s3": "correlate"
       }
     }
   ],

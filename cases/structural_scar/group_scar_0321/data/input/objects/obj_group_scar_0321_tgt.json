@@ -1,14 +1,14 @@
 {
   "object_id": "obj_group_scar_0321_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "val",
   "label": "mind",
   "nodes": [
     {
       "node_id": "t2",
       "label": "amnesia",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "t1",
@@ -24,7 +24,7 @@
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t2",
         "t1",
@@ -32,9 +32,9 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t2": "participant",
-        "t1": "participant",
-        "t3": "participant"
+        "t2": "correlate",
+        "t1": "correlate",
+        "t3": "correlate"
       }
     }
   ],

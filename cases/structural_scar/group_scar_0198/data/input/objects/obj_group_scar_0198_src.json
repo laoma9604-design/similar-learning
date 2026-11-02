@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0198_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "English Bourgeois Revolution",
   "nodes": [
@@ -29,7 +29,7 @@
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s4",
         "s2",
@@ -38,10 +38,10 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s4": "participant",
-        "s2": "participant",
-        "s1": "participant",
-        "s3": "participant"
+        "s4": "correlate",
+        "s2": "correlate",
+        "s1": "correlate",
+        "s3": "correlate"
       }
     }
   ],

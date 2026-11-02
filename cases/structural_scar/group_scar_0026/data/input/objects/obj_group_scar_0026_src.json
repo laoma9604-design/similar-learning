@@ -1,35 +1,35 @@
 {
   "object_id": "obj_group_scar_0026_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "Genetic Mutation",
   "nodes": [
     {
       "node_id": "s4",
       "label": "gene sequence",
-      "type": "abstract_concept"
+      "type": "substance"
     },
     {
       "node_id": "s3",
       "label": "genetic mutation",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s1",
       "label": "Gene",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s2",
       "label": "repair",
-      "type": "abstract_concept"
+      "type": "process"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s4",
         "s3",
@@ -38,10 +38,10 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s4": "participant",
-        "s3": "participant",
-        "s1": "participant",
-        "s2": "participant"
+        "s4": "correlate",
+        "s3": "correlate",
+        "s1": "correlate",
+        "s2": "correlate"
       }
     }
   ],

@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0165_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "Mail",
   "nodes": [
@@ -18,18 +18,18 @@
     {
       "node_id": "t1",
       "label": "destination",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t2",
       "label": "transfer station",
-      "type": "abstract_concept"
+      "type": "entity"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t4",
         "t3",
@@ -38,10 +38,10 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t4": "participant",
-        "t3": "participant",
-        "t1": "participant",
-        "t2": "participant"
+        "t4": "correlate",
+        "t3": "correlate",
+        "t1": "correlate",
+        "t2": "correlate"
       }
     }
   ],

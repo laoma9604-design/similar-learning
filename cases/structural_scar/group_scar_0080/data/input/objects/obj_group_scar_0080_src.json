@@ -1,35 +1,35 @@
 {
   "object_id": "obj_group_scar_0080_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "val",
   "label": "Immunity and Immunity",
   "nodes": [
     {
       "node_id": "s3",
       "label": "antigen",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s4",
       "label": "attack",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s2",
       "label": "Lymphocytes",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s1",
       "label": "inhibit contact",
-      "type": "abstract_concept"
+      "type": "process"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s3",
         "s4",
@@ -38,10 +38,10 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s3": "participant",
-        "s4": "participant",
-        "s2": "participant",
-        "s1": "participant"
+        "s3": "correlate",
+        "s4": "correlate",
+        "s2": "correlate",
+        "s1": "correlate"
       }
     }
   ],

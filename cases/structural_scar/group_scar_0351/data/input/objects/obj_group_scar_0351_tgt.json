@@ -1,50 +1,50 @@
 {
   "object_id": "obj_group_scar_0351_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "light",
   "nodes": [
     {
       "node_id": "t2",
       "label": "light",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "t5",
       "label": "red",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "t1",
       "label": "violet",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "t7",
       "label": "reflects",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "t6",
       "label": "bright",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "t4",
       "label": "dim",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "t3",
       "label": "lens",
-      "type": "abstract_concept"
+      "type": "entity"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t2",
         "t5",
@@ -56,13 +56,13 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t2": "participant",
-        "t5": "participant",
-        "t1": "participant",
-        "t7": "participant",
-        "t6": "participant",
-        "t4": "participant",
-        "t3": "participant"
+        "t2": "correlate",
+        "t5": "correlate",
+        "t1": "correlate",
+        "t7": "correlate",
+        "t6": "correlate",
+        "t4": "correlate",
+        "t3": "correlate"
       }
     }
   ],

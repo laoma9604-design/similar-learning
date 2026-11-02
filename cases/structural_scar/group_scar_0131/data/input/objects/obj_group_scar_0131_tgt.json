@@ -1,24 +1,24 @@
 {
   "object_id": "obj_group_scar_0131_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "val",
   "label": "Factory",
   "nodes": [
     {
       "node_id": "t2",
       "label": "director",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t1",
       "label": "Raw material warehouse",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t4",
       "label": "transportation line",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t3",
@@ -29,7 +29,7 @@
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t2",
         "t1",
@@ -38,10 +38,10 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t2": "participant",
-        "t1": "participant",
-        "t4": "participant",
-        "t3": "participant"
+        "t2": "correlate",
+        "t1": "correlate",
+        "t4": "correlate",
+        "t3": "correlate"
       }
     }
   ],

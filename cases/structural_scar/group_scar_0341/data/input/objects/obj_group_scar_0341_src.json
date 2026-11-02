@@ -1,14 +1,14 @@
 {
   "object_id": "obj_group_scar_0341_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "Self Development",
   "nodes": [
     {
       "node_id": "s1",
       "label": "bud",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s4",
@@ -18,33 +18,33 @@
     {
       "node_id": "s2",
       "label": "Knowledge",
-      "type": "abstract_concept"
+      "type": "substance"
     },
     {
       "node_id": "s3",
       "label": "develop",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s5",
       "label": "emotional basis",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "s6",
       "label": "Achievement",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "s7",
       "label": "achievement",
-      "type": "abstract_concept"
+      "type": "property"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s1",
         "s4",
@@ -56,13 +56,13 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s1": "participant",
-        "s4": "participant",
-        "s2": "participant",
-        "s3": "participant",
-        "s5": "participant",
-        "s6": "participant",
-        "s7": "participant"
+        "s1": "correlate",
+        "s4": "correlate",
+        "s2": "correlate",
+        "s3": "correlate",
+        "s5": "correlate",
+        "s6": "correlate",
+        "s7": "correlate"
       }
     }
   ],

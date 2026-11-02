@@ -1,14 +1,14 @@
 {
   "object_id": "obj_group_scar_0080_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "val",
   "label": "Immunity",
   "nodes": [
     {
       "node_id": "t4",
       "label": "individual",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t2",
@@ -23,13 +23,13 @@
     {
       "node_id": "t1",
       "label": "to escape",
-      "type": "abstract_concept"
+      "type": "process"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t4",
         "t2",
@@ -38,10 +38,10 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t4": "participant",
-        "t2": "participant",
-        "t3": "participant",
-        "t1": "participant"
+        "t4": "correlate",
+        "t2": "correlate",
+        "t3": "correlate",
+        "t1": "correlate"
       }
     }
   ],

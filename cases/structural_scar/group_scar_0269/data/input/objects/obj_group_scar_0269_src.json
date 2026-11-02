@@ -1,34 +1,34 @@
 {
   "object_id": "obj_group_scar_0269_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "val",
   "label": "machine",
   "nodes": [
     {
       "node_id": "s6",
       "label": "machine",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s5",
       "label": "working",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s7",
       "label": "turned on",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "s3",
       "label": "turned off",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "s2",
       "label": "broken",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "s1",
@@ -38,13 +38,13 @@
     {
       "node_id": "s4",
       "label": "repair",
-      "type": "abstract_concept"
+      "type": "process"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s6",
         "s5",
@@ -56,13 +56,13 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s6": "participant",
-        "s5": "participant",
-        "s7": "participant",
-        "s3": "participant",
-        "s2": "participant",
-        "s1": "participant",
-        "s4": "participant"
+        "s6": "correlate",
+        "s5": "correlate",
+        "s7": "correlate",
+        "s3": "correlate",
+        "s2": "correlate",
+        "s1": "correlate",
+        "s4": "correlate"
       }
     }
   ],

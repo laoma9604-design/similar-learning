@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0173_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "Economics",
   "nodes": [
@@ -13,12 +13,12 @@
     {
       "node_id": "s1",
       "label": "market",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s3",
       "label": "currency",
-      "type": "abstract_concept"
+      "type": "substance"
     },
     {
       "node_id": "s4",
@@ -29,7 +29,7 @@
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s2",
         "s1",
@@ -38,10 +38,10 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s2": "participant",
-        "s1": "participant",
-        "s3": "participant",
-        "s4": "participant"
+        "s2": "correlate",
+        "s1": "correlate",
+        "s3": "correlate",
+        "s4": "correlate"
       }
     }
   ],

@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0263_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "argument",
   "nodes": [
@@ -13,27 +13,27 @@
     {
       "node_id": "t2",
       "label": "debater",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t3",
       "label": "refute",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "t7",
       "label": "arguing",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "t6",
       "label": "acceptance",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "t1",
       "label": "criticizes",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "t4",
@@ -44,7 +44,7 @@
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t5",
         "t2",
@@ -56,13 +56,13 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t5": "participant",
-        "t2": "participant",
-        "t3": "participant",
-        "t7": "participant",
-        "t6": "participant",
-        "t1": "participant",
-        "t4": "participant"
+        "t5": "correlate",
+        "t2": "correlate",
+        "t3": "correlate",
+        "t7": "correlate",
+        "t6": "correlate",
+        "t1": "correlate",
+        "t4": "correlate"
       }
     }
   ],

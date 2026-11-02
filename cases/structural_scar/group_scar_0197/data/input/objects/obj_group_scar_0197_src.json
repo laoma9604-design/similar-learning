@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0197_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "test",
   "label": "The British Bourgeois Revolution",
   "nodes": [
@@ -28,7 +28,7 @@
     {
       "node_id": "s2",
       "label": "Cromwell",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s3",
@@ -39,7 +39,7 @@
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s6",
         "s4",
@@ -50,12 +50,12 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s6": "participant",
-        "s4": "participant",
-        "s1": "participant",
-        "s5": "participant",
-        "s2": "participant",
-        "s3": "participant"
+        "s6": "correlate",
+        "s4": "correlate",
+        "s1": "correlate",
+        "s5": "correlate",
+        "s2": "correlate",
+        "s3": "correlate"
       }
     }
   ],

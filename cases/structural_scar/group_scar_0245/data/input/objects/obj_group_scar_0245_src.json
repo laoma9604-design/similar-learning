@@ -1,40 +1,40 @@
 {
   "object_id": "obj_group_scar_0245_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "Pride and Prejudice",
   "nodes": [
     {
       "node_id": "s3",
       "label": "Jane Austin",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s1",
       "label": "Elizabeth Bennett",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s4",
       "label": "Frances Bennett",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s2",
       "label": "Mr Darcy",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s5",
       "label": "human arrogance",
-      "type": "abstract_concept"
+      "type": "property"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s3",
         "s1",
@@ -44,11 +44,11 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s3": "participant",
-        "s1": "participant",
-        "s4": "participant",
-        "s2": "participant",
-        "s5": "participant"
+        "s3": "correlate",
+        "s1": "correlate",
+        "s4": "correlate",
+        "s2": "correlate",
+        "s5": "correlate"
       }
     }
   ],

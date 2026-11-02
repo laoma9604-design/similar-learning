@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0302_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "crime",
   "nodes": [
@@ -13,33 +13,33 @@
     {
       "node_id": "t4",
       "label": "spree",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "t2",
       "label": "spread",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "t3",
       "label": "information",
-      "type": "abstract_concept"
+      "type": "substance"
     },
     {
       "node_id": "t5",
       "label": "education",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "t1",
       "label": "poverty",
-      "type": "abstract_concept"
+      "type": "process"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t6",
         "t4",
@@ -50,12 +50,12 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t6": "participant",
-        "t4": "participant",
-        "t2": "participant",
-        "t3": "participant",
-        "t5": "participant",
-        "t1": "participant"
+        "t6": "correlate",
+        "t4": "correlate",
+        "t2": "correlate",
+        "t3": "correlate",
+        "t5": "correlate",
+        "t1": "correlate"
       }
     }
   ],

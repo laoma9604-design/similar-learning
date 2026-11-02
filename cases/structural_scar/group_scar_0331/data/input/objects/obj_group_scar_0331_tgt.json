@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0331_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "val",
   "label": "Houses",
   "nodes": [
@@ -18,7 +18,7 @@
     {
       "node_id": "t2",
       "label": "occupant",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t5",
@@ -28,13 +28,13 @@
     {
       "node_id": "t3",
       "label": "atmosphere",
-      "type": "abstract_concept"
+      "type": "entity"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t1",
         "t4",
@@ -44,11 +44,11 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t1": "participant",
-        "t4": "participant",
-        "t2": "participant",
-        "t5": "participant",
-        "t3": "participant"
+        "t1": "correlate",
+        "t4": "correlate",
+        "t2": "correlate",
+        "t5": "correlate",
+        "t3": "correlate"
       }
     }
   ],

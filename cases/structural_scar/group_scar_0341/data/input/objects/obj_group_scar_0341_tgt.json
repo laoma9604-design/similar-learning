@@ -1,50 +1,50 @@
 {
   "object_id": "obj_group_scar_0341_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "Plants",
   "nodes": [
     {
       "node_id": "t6",
       "label": "seed",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t4",
       "label": "Sunlight",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "t7",
       "label": "moisture",
-      "type": "abstract_concept"
+      "type": "substance"
     },
     {
       "node_id": "t1",
       "label": "stem",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t2",
       "label": "root system",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t3",
       "label": "the flowers",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t5",
       "label": "fruit",
-      "type": "abstract_concept"
+      "type": "substance"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t6",
         "t4",
@@ -56,13 +56,13 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t6": "participant",
-        "t4": "participant",
-        "t7": "participant",
-        "t1": "participant",
-        "t2": "participant",
-        "t3": "participant",
-        "t5": "participant"
+        "t6": "correlate",
+        "t4": "correlate",
+        "t7": "correlate",
+        "t1": "correlate",
+        "t2": "correlate",
+        "t3": "correlate",
+        "t5": "correlate"
       }
     }
   ],

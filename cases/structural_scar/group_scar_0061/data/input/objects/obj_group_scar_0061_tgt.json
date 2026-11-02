@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0061_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "code",
   "nodes": [
@@ -39,7 +39,7 @@
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t4",
         "t6",
@@ -50,12 +50,12 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t4": "participant",
-        "t6": "participant",
-        "t2": "participant",
-        "t1": "participant",
-        "t5": "participant",
-        "t3": "participant"
+        "t4": "correlate",
+        "t6": "correlate",
+        "t2": "correlate",
+        "t1": "correlate",
+        "t5": "correlate",
+        "t3": "correlate"
       }
     }
   ],

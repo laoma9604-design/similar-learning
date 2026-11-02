@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0307_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "food",
   "nodes": [
@@ -13,43 +13,43 @@
     {
       "node_id": "s1",
       "label": "appetite",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "s8",
       "label": "flavor",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "s6",
       "label": "cooking",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s2",
       "label": "freshness",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "s4",
       "label": "staleness",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "s3",
       "label": "seasoning",
-      "type": "abstract_concept"
+      "type": "substance"
     },
     {
       "node_id": "s7",
       "label": "nutrition",
-      "type": "abstract_concept"
+      "type": "property"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s5",
         "s1",
@@ -62,14 +62,14 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s5": "participant",
-        "s1": "participant",
-        "s8": "participant",
-        "s6": "participant",
-        "s2": "participant",
-        "s4": "participant",
-        "s3": "participant",
-        "s7": "participant"
+        "s5": "correlate",
+        "s1": "correlate",
+        "s8": "correlate",
+        "s6": "correlate",
+        "s2": "correlate",
+        "s4": "correlate",
+        "s3": "correlate",
+        "s7": "correlate"
       }
     }
   ],

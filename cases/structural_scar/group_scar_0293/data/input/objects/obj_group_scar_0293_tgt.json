@@ -1,14 +1,14 @@
 {
   "object_id": "obj_group_scar_0293_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "val",
   "label": "knowledge",
   "nodes": [
     {
       "node_id": "t3",
       "label": "knowledge",
-      "type": "abstract_concept"
+      "type": "substance"
     },
     {
       "node_id": "t1",
@@ -23,28 +23,28 @@
     {
       "node_id": "t6",
       "label": "conversation",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "t4",
       "label": "forgetting",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "t7",
       "label": "repository",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t2",
       "label": "book",
-      "type": "abstract_concept"
+      "type": "entity"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t3",
         "t1",
@@ -56,13 +56,13 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t3": "participant",
-        "t1": "participant",
-        "t5": "participant",
-        "t6": "participant",
-        "t4": "participant",
-        "t7": "participant",
-        "t2": "participant"
+        "t3": "correlate",
+        "t1": "correlate",
+        "t5": "correlate",
+        "t6": "correlate",
+        "t4": "correlate",
+        "t7": "correlate",
+        "t2": "correlate"
       }
     }
   ],

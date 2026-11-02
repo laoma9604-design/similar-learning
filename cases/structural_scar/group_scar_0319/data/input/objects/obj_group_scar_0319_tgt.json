@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0319_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "crime",
   "nodes": [
@@ -13,12 +13,12 @@
     {
       "node_id": "t2",
       "label": "criminal",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t5",
       "label": "trial",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "t3",
@@ -28,18 +28,18 @@
     {
       "node_id": "t1",
       "label": "sentence",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t4",
       "label": "punishment",
-      "type": "abstract_concept"
+      "type": "process"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t6",
         "t2",
@@ -50,12 +50,12 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t6": "participant",
-        "t2": "participant",
-        "t5": "participant",
-        "t3": "participant",
-        "t1": "participant",
-        "t4": "participant"
+        "t6": "correlate",
+        "t2": "hub",
+        "t5": "correlate",
+        "t3": "correlate",
+        "t1": "correlate",
+        "t4": "correlate"
       }
     }
   ],

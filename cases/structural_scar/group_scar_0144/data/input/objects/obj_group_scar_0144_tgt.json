@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0144_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "val",
   "label": "mind",
   "nodes": [
@@ -13,22 +13,22 @@
     {
       "node_id": "t5",
       "label": "thinking",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "t2",
       "label": "forgetting",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "t7",
       "label": "memorize",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "t4",
       "label": "remember",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "t6",
@@ -38,23 +38,23 @@
     {
       "node_id": "t3",
       "label": "muscles",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t8",
       "label": "senses",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t9",
       "label": "mistake",
-      "type": "abstract_concept"
+      "type": "property"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t1",
         "t5",
@@ -68,15 +68,15 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t1": "participant",
-        "t5": "participant",
-        "t2": "participant",
-        "t7": "participant",
-        "t4": "participant",
-        "t6": "participant",
-        "t3": "participant",
-        "t8": "participant",
-        "t9": "participant"
+        "t1": "correlate",
+        "t5": "correlate",
+        "t2": "correlate",
+        "t7": "correlate",
+        "t4": "correlate",
+        "t6": "correlate",
+        "t3": "correlate",
+        "t8": "correlate",
+        "t9": "correlate"
       }
     }
   ],

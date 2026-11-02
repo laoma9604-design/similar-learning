@@ -1,108 +1,170 @@
 {
-  "vocab_version": "topoadv-vocab-0.1.0-draft",
-  "status": "draft-v2，待 B/C 复核冻结（structural 节点类型 6 类已补全，3 边界已拍板）",
-  "source": "research-principles-experiment-taskbook.pdf sec:representation（六元组 τ_V/τ_E/ρ）、sec:data（MRED 三类关系）",
-  "direction": {
-    "-": "输入端 input end",
-    "+": "输出端 output end",
-    "note": "正负号只表示数据流向，不表示变量数值的正负；与角色分开记录"
+ "vocab_version": "topoadv-vocab-0.1.1",
+ "status": "draft-v3（v3：新增结构类 edge_type analogy_correspondence 及其角色 correlate/hub，供 SCAR/SCAN 结构模式使用；node_types 六类仍为 pending_bc_review，结构模式用 type_pattern 比对类型对应模式，不要求两端同类型）",
+ "source": "research-principles-experiment-taskbook.pdf sec:representation（六元组 τ_V/τ_E/ρ）、sec:data（MRED 三类关系）",
+ "direction": {
+  "-": "输入端 input end",
+  "+": "输出端 output end",
+  "note": "正负号只表示数据流向，不表示变量数值的正负；与角色分开记录"
+ },
+ "type_vs_role": "类型 τ 说明变量属于哪一类（跨关系不变，如 positive_scalar）；角色 ρ 说明变量在具体某条关系里做什么（随关系而定，写成 ρ(v,e)，键为 node_id@edge_id）。同一条边的同一节点在不同边可有不同角色。",
+ "node_types": [
+  {
+   "type_id": "positive_scalar",
+   "label": "正值标量",
+   "status": "confirmed",
+   "note": "mechanistic 对象的节点类型；任务书确认：本金、利率、细菌数量、下一步量同属此粗类型，单位与角色另行记录"
   },
-  "type_vs_role": "类型 τ 说明变量属于哪一类（跨关系不变，如 positive_scalar）；角色 ρ 说明变量在具体某条关系里做什么（随关系而定，写成 ρ(v,e)，键为 node_id@edge_id）。同一条边的同一节点在不同边可有不同角色。",
-  "node_types": [
-    {
-      "type_id": "positive_scalar",
-      "label": "正值标量",
-      "status": "confirmed",
-      "note": "mechanistic 对象的节点类型；任务书确认：本金、利率、细菌数量、下一步量同属此粗类型，单位与角色另行记录"
-    },
-    {
-      "type_id": "entity",
-      "label": "实体",
-      "status": "pending_bc_review",
-      "discriminator": "能指到/摸到的具体对象吗？",
-      "examples": "president / soldier / cell / computer / virus / atom / parliament / river / machine / fence",
-      "note": "专有名词、人名、地名一律归 entity"
-    },
-    {
-      "type_id": "substance",
-      "label": "物质",
-      "status": "pending_bc_review",
-      "discriminator": "是被消耗/转化的材料（原材料/产物/燃料/养料）吗？",
-      "examples": "reactant / product / fuel / raw material / ingredient / food / medicine / nutrient"
-    },
-    {
-      "type_id": "process",
-      "label": "过程",
-      "status": "pending_bc_review",
-      "discriminator": "是动作或正在发生的事吗？",
-      "examples": "reaction process / water flow / war / election / digestion / transportation"
-    },
-    {
-      "type_id": "property",
-      "label": "属性",
-      "status": "pending_bc_review",
-      "discriminator": "是特征/数值/状态吗？",
-      "examples": "temperature / mass / charge / speed / frequency / success / failure / anger / fate"
-    },
-    {
-      "type_id": "force",
-      "label": "力·机制",
-      "status": "pending_bc_review",
-      "discriminator": "是力或连接机制吗？",
-      "examples": "gravity / electromagnetism / attraction / electricity"
-    },
-    {
-      "type_id": "abstract_concept",
-      "label": "抽象概念",
-      "status": "pending_bc_review",
-      "discriminator": "不占空间、承载意义吗？",
-      "examples": "law / memory / knowledge / idea / word / data / policy / code / caste system / feudalism"
-    }
-  ],
-  "node_type_rules": {
-    "scope": "structural 对象（SCAR/SCAN）的节点分类规则；mechanistic 只用 positive_scalar",
-    "discriminator_first": "按各类判别问句先判；专有名词/人名/地名一律归 entity",
-    "water_food_rule": "既实体又可消耗的词（water/food/fuel）按类比语境判：被消耗/转化→substance，作固定对象→entity",
-    "force_rule": "force 单列一类，不与 process 合并（真实词太少时再并回）",
-    "ambiguous_words": "war→process、life tenure→abstract_concept；disease 状态义与过程义两可，建议标 to_review。拿不准一律标 to_review，不硬塞"
+  {
+   "type_id": "entity",
+   "label": "实体",
+   "status": "pending_bc_review",
+   "discriminator": "能指到/摸到的具体对象吗？",
+   "examples": "president / soldier / cell / computer / virus / atom / parliament / river / machine / fence",
+   "note": "专有名词、人名、地名一律归 entity"
   },
-  "edge_types": [
+  {
+   "type_id": "substance",
+   "label": "物质",
+   "status": "pending_bc_review",
+   "discriminator": "是被消耗/转化的材料（原材料/产物/燃料/养料）吗？",
+   "examples": "reactant / product / fuel / raw material / ingredient / food / medicine / nutrient"
+  },
+  {
+   "type_id": "process",
+   "label": "过程",
+   "status": "pending_bc_review",
+   "discriminator": "是动作或正在发生的事吗？",
+   "examples": "reaction process / water flow / war / election / digestion / transportation"
+  },
+  {
+   "type_id": "property",
+   "label": "属性",
+   "status": "pending_bc_review",
+   "discriminator": "是特征/数值/状态吗？",
+   "examples": "temperature / mass / charge / speed / frequency / success / failure / anger / fate"
+  },
+  {
+   "type_id": "force",
+   "label": "力·机制",
+   "status": "pending_bc_review",
+   "discriminator": "是力或连接机制吗？",
+   "examples": "gravity / electromagnetism / attraction / electricity"
+  },
+  {
+   "type_id": "abstract_concept",
+   "label": "抽象概念",
+   "status": "pending_bc_review",
+   "discriminator": "不占空间、承载意义吗？",
+   "examples": "law / memory / knowledge / idea / word / data / policy / code / caste system / feudalism"
+  }
+ ],
+ "node_type_rules": {
+  "scope": "structural 对象（SCAR/SCAN）的节点分类规则；mechanistic 只用 positive_scalar",
+  "discriminator_first": "按各类判别问句先判；专有名词/人名/地名一律归 entity",
+  "water_food_rule": "既实体又可消耗的词（water/food/fuel）按类比语境判：被消耗/转化→substance，作固定对象→entity",
+  "force_rule": "force 单列一类，不与 process 合并（真实词太少时再并回）",
+  "ambiguous_words": "war→process、life tenure→abstract_concept；disease 状态义与过程义两可，建议标 to_review。拿不准一律标 to_review，不硬塞"
+ },
+ "edge_types": [
+  {
+   "edge_type_id": "multiplicative_growth",
+   "label": "乘性增长（单步比例更新）",
+   "status": "confirmed",
+   "equation_template": "next = current * (1 + ratio)",
+   "roles": [
     {
-      "edge_type_id": "multiplicative_growth",
-      "label": "乘性增长（单步比例更新）",
-      "status": "confirmed",
-      "equation_template": "next = current * (1 + ratio)",
-      "roles": [
-        {"role_id": "current", "label": "当前量", "direction": "-", "status": "confirmed"},
-        {"role_id": "ratio", "label": "变化比例", "direction": "-", "status": "confirmed"},
-        {"role_id": "next", "label": "下一步量", "direction": "+", "status": "confirmed"}
-      ]
+     "role_id": "current",
+     "label": "当前量",
+     "direction": "-",
+     "status": "confirmed"
     },
     {
-      "edge_type_id": "linear_drive_resistance",
-      "label": "线性驱动-阻力",
-      "status": "pending_bc_review",
-      "equation_template": "response = driver / resistance",
-      "roles": [
-        {"role_id": "driver", "label": "驱动量", "direction": "-", "status": "confirmed"},
-        {"role_id": "resistance", "label": "阻力量", "direction": "-", "status": "confirmed"},
-        {"role_id": "response", "label": "响应量", "direction": "+", "status": "confirmed"}
-      ]
+     "role_id": "ratio",
+     "label": "变化比例",
+     "direction": "-",
+     "status": "confirmed"
     },
     {
-      "edge_type_id": "saturation_response",
-      "label": "饱和响应",
-      "status": "pending_bc_review",
-      "equation_template": "response = R_max * input / (K + input)  （R_max、K 为内联常量，非节点）",
-      "roles": [
-        {"role_id": "input", "label": "输入量", "direction": "-", "status": "confirmed"},
-        {"role_id": "response", "label": "响应量", "direction": "+", "status": "confirmed"}
-      ]
+     "role_id": "next",
+     "label": "下一步量",
+     "direction": "+",
+     "status": "confirmed"
     }
-  ],
-  "pending_questions": [
-    "linear_drive_resistance 与 saturation_response 的方程形式已由 A 定稿（线性 response=driver/resistance、饱和 response=R_max*input/(K+input)），角色名已确认，仍待 B/C 复核冻结",
-    "角色建议每条边类型独立命名，避免 rate 既是类型又是角色的冲突",
-    "structural 节点类型 6 类已由 A 归纳、3 边界已拍板（见 node_type_rules），待 B/C 复核冻结"
-  ]
+   ]
+  },
+  {
+   "edge_type_id": "linear_drive_resistance",
+   "label": "线性驱动-阻力",
+   "status": "pending_bc_review",
+   "equation_template": "response = driver / resistance",
+   "roles": [
+    {
+     "role_id": "driver",
+     "label": "驱动量",
+     "direction": "-",
+     "status": "confirmed"
+    },
+    {
+     "role_id": "resistance",
+     "label": "阻力量",
+     "direction": "-",
+     "status": "confirmed"
+    },
+    {
+     "role_id": "response",
+     "label": "响应量",
+     "direction": "+",
+     "status": "confirmed"
+    }
+   ]
+  },
+  {
+   "edge_type_id": "saturation_response",
+   "label": "饱和响应",
+   "status": "pending_bc_review",
+   "equation_template": "response = R_max * input / (K + input)  （R_max、K 为内联常量，非节点）",
+   "roles": [
+    {
+     "role_id": "input",
+     "label": "输入量",
+     "direction": "-",
+     "status": "confirmed"
+    },
+    {
+     "role_id": "response",
+     "label": "响应量",
+     "direction": "+",
+     "status": "confirmed"
+    }
+   ]
+  },
+  {
+   "edge_type_id": "analogy_correspondence",
+   "label": "类比对应（结构模式，无响应函数）",
+   "status": "pending_bc_review",
+   "equation_template": "无（结构模式，任务书 L957：不执行响应搜索）",
+   "note": "SCAR/SCAN 的类比关系。原文只给概念对应，没有方向（input/output），因此 roles 描述的是节点在对应关系中的位置，不是计算输入输出。对应关系本身是答案，存于 sealed/reference.json 的 pair_map，不进 method 输入。",
+   "roles": [
+    {
+     "role_id": "correlate",
+     "label": "参与对应的概念",
+     "direction": "none",
+     "status": "pending_bc_review"
+    },
+    {
+     "role_id": "hub",
+     "label": "共享端点（被多个另一域概念对应）",
+     "direction": "none",
+     "status": "pending_bc_review",
+     "note": "SCAR 存在真实的多值对应：sperm 与 egg 都对应 product；virus 同时对应 code 与 malware。这类端点在任一方向的对应数 >1，标 hub。与 correlate 互斥：一个节点只能有一个角色，若同时满足则记 hub。"
+    }
+   ]
+  }
+ ],
+ "pending_questions": [
+  "linear_drive_resistance 与 saturation_response 的方程形式已由 A 定稿（线性 response=driver/resistance、饱和 response=R_max*input/(K+input)），角色名已确认，仍待 B/C 复核冻结",
+  "角色建议每条边类型独立命名，避免 rate 既是类型又是角色的冲突",
+  "structural 节点类型 6 类已由 A 归纳、3 边界已拍板（见 node_type_rules），待 B/C 复核冻结"
+ ]
 }

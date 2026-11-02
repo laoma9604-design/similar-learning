@@ -1,40 +1,40 @@
 {
   "object_id": "obj_group_scar_0285_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "building",
   "nodes": [
     {
       "node_id": "s4",
       "label": "building",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s5",
       "label": "construction",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s1",
       "label": "foundation",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s2",
       "label": "cement",
-      "type": "abstract_concept"
+      "type": "substance"
     },
     {
       "node_id": "s3",
       "label": "block",
-      "type": "abstract_concept"
+      "type": "entity"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s4",
         "s5",
@@ -44,11 +44,11 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s4": "participant",
-        "s5": "participant",
-        "s1": "participant",
-        "s2": "participant",
-        "s3": "participant"
+        "s4": "correlate",
+        "s5": "hub",
+        "s1": "hub",
+        "s2": "correlate",
+        "s3": "correlate"
       }
     }
   ],

@@ -1,19 +1,19 @@
 {
   "object_id": "obj_group_scar_0124_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "The Swarm",
   "nodes": [
     {
       "node_id": "s2",
       "label": "bee",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s3",
       "label": "honeycomb",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s1",
@@ -24,7 +24,7 @@
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s2",
         "s3",
@@ -32,9 +32,9 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s2": "participant",
-        "s3": "participant",
-        "s1": "participant"
+        "s2": "correlate",
+        "s3": "correlate",
+        "s1": "correlate"
       }
     }
   ],

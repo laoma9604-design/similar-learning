@@ -1,30 +1,30 @@
 {
   "object_id": "obj_group_scar_0400_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "Particle Accelerator",
   "nodes": [
     {
       "node_id": "s1",
       "label": "particle",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s3",
       "label": "accelerator",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s2",
       "label": "detector",
-      "type": "abstract_concept"
+      "type": "entity"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s1",
         "s3",
@@ -32,9 +32,9 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s1": "participant",
-        "s3": "participant",
-        "s2": "participant"
+        "s1": "correlate",
+        "s3": "correlate",
+        "s2": "correlate"
       }
     }
   ],

@@ -1,19 +1,19 @@
 {
   "object_id": "obj_group_scar_0353_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "billiard balls",
   "nodes": [
     {
       "node_id": "s4",
       "label": "balls",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s6",
       "label": "billiards",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s7",
@@ -23,33 +23,33 @@
     {
       "node_id": "s8",
       "label": "table",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s1",
       "label": "bouncing",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s5",
       "label": "moving",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s3",
       "label": "slow",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "s2",
       "label": "fast",
-      "type": "abstract_concept"
+      "type": "property"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s4",
         "s6",
@@ -62,14 +62,14 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s4": "participant",
-        "s6": "participant",
-        "s7": "participant",
-        "s8": "participant",
-        "s1": "participant",
-        "s5": "participant",
-        "s3": "participant",
-        "s2": "participant"
+        "s4": "correlate",
+        "s6": "correlate",
+        "s7": "correlate",
+        "s8": "correlate",
+        "s1": "correlate",
+        "s5": "correlate",
+        "s3": "correlate",
+        "s2": "correlate"
       }
     }
   ],

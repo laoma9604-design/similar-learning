@@ -1,35 +1,35 @@
 {
   "object_id": "obj_group_scar_0330_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "Article",
   "nodes": [
     {
       "node_id": "s2",
       "label": "article",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s4",
       "label": "Word",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s3",
       "label": "beginning",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s1",
       "label": "end",
-      "type": "abstract_concept"
+      "type": "process"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s2",
         "s4",
@@ -38,10 +38,10 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s2": "participant",
-        "s4": "participant",
-        "s3": "participant",
-        "s1": "participant"
+        "s2": "correlate",
+        "s4": "correlate",
+        "s3": "correlate",
+        "s1": "correlate"
       }
     }
   ],

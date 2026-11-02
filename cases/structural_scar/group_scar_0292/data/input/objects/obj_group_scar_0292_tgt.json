@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0292_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "val",
   "label": "money",
   "nodes": [
@@ -69,7 +69,7 @@
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t1",
         "t3",
@@ -86,18 +86,18 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t1": "participant",
-        "t3": "participant",
-        "t10": "participant",
-        "t11": "participant",
-        "t12": "participant",
-        "t4": "participant",
-        "t5": "participant",
-        "t7": "participant",
-        "t2": "participant",
-        "t6": "participant",
-        "t9": "participant",
-        "t8": "participant"
+        "t1": "correlate",
+        "t3": "correlate",
+        "t10": "correlate",
+        "t11": "correlate",
+        "t12": "correlate",
+        "t4": "correlate",
+        "t5": "correlate",
+        "t7": "correlate",
+        "t2": "correlate",
+        "t6": "correlate",
+        "t9": "correlate",
+        "t8": "correlate"
       }
     }
   ],

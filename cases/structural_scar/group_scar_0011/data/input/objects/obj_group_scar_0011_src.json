@@ -1,35 +1,35 @@
 {
   "object_id": "obj_group_scar_0011_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "Nervous System",
   "nodes": [
     {
       "node_id": "s4",
       "label": "Neurons",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s1",
       "label": "nerve fiber",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s2",
       "label": "Ganglion",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s3",
       "label": "information",
-      "type": "abstract_concept"
+      "type": "substance"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s4",
         "s1",
@@ -38,10 +38,10 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s4": "participant",
-        "s1": "participant",
-        "s2": "participant",
-        "s3": "participant"
+        "s4": "correlate",
+        "s1": "correlate",
+        "s2": "correlate",
+        "s3": "correlate"
       }
     }
   ],

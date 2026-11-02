@@ -1,0 +1,381 @@
+GEM	entity
+greek alphabet	abstract_concept
+greenhouse	entity
+game	process
+gas	substance
+goal	abstract_concept
+goods	substance
+gravity	force
+gautama siddhartha	entity
+government	entity
+group	entity
+ganglion	entity
+garcia marquez	entity
+gauze	entity
+gender	property
+gene sequence	substance
+general	entity
+generator	entity
+genes	entity
+genetic information	substance
+genetic mutation	process
+genetic variation	process
+geographical area	entity
+george orwell	entity
+germs	entity
+glass plate	entity
+glucose	substance
+glucose regulating hormone	substance
+glucose transporter	entity
+golgi apparatus	entity
+goods circulation rate	property
+goods sold frequency	property
+governance	process
+government center	entity
+governor	entity
+grass	entity
+gravitational field	force
+great wall	entity
+ground	entity
+grow	process
+growing up	process
+heat	property
+hereditary	property
+heart	entity
+hieroglyphs	abstract_concept
+home	entity
+house of representatives	entity
+hunt	process
+hunter	entity
+happiness	property
+harmony	abstract_concept
+headquarters	entity
+high tide	property
+historical events	process
+hot	property
+house of commons	entity
+humanity	abstract_concept
+habitats	entity
+hacker	entity
+half life	property
+halfway break	entity
+handcraft	process
+hands	entity
+hardwood	substance
+head	entity
+headache	property
+health	property
+healthy lifestyle	abstract_concept
+heart muscle	entity
+heart valve	entity
+heart wall	entity
+heat production	process
+heat transfer	process
+heating	process
+heavy	property
+hemingway	entity
+herd	entity
+herder	entity
+hidden	property
+high	property
+high dimensional data	substance
+high priest	entity
+high temperature and pressure	property
+historical data	substance
+historical period	property
+history	abstract_concept
+hold	process
+holden caulfield	entity
+honeycomb	entity
+hong kong businessman	entity
+hormone	substance
+horn	entity
+horse	entity
+hospital	entity
+house	entity
+house items	entity
+house of lords	entity
+household	entity
+housekeeper	entity
+human arrogance	property
+human body	entity
+human contact	process
+human learning	process
+human metabolism regulation	process
+humanism	abstract_concept
+hunger	property
+hunting ground	entity
+husbandry	process
+hydrodynamics	abstract_concept
+hydrogen	substance
+hydrophilic	property
+idea	abstract_concept
+information	substance
+indian river	entity
+individual	entity
+indus script	abstract_concept
+ingredients	substance
+ideological liberation movement	process
+immune system	entity
+impurities	substance
+income	substance
+innovation	process
+interaction	process
+invest	process
+italy	entity
+ideas	abstract_concept
+immune cells	entity
+immunity	property
+index	abstract_concept
+india	entity
+indian ocean	entity
+instruction	abstract_concept
+insulin	substance
+iteration	process
+i/o device	entity
+ice	substance
+ice cream	substance
+icing	process
+identifier	abstract_concept
+identify	process
+ideology	abstract_concept
+illness	process
+illuminating	process
+immune response	process
+import	process
+important	property
+imprecise	property
+imprisonment	process
+improvement	process
+infection	process
+inflation	process
+information flow	process
+information transfer	process
+inhibit contact	process
+ink cartridge	entity
+inoculation	process
+input	entity
+inputs	entity
+insert operation	process
+inspired	property
+installation	process
+instrument	entity
+insulation	substance
+intelligence	property
+intense	property
+interaction between people	process
+interest rate	property
+interestingness	property
+interface	entity
+intermediate	property
+internet	entity
+interpretation	abstract_concept
+intersection	entity
+intestine	entity
+into the account	process
+invariant axis	entity
+invariant subset	abstract_concept
+investigation	process
+investing	process
+investment decision	process
+investment risk	property
+iris	entity
+iron	substance
+irrelevance	property
+irreversible process	process
+irrigation system	entity
+isolate	process
+isotope	entity
+joint	entity
+judaism	abstract_concept
+jane austin	entity
+jesus	entity
+jia baoyu	entity
+j	abstract_concept
+j.d. salinger	entity
+jacket	entity
+jail	entity
+japan	entity
+japanese army	entity
+jigsaw puzzle	entity
+jon clark	entity
+journey	process
+judgment	abstract_concept
+julian sorrell	entity
+junction	entity
+kang youwei	entity
+king	entity
+kettle	entity
+key	entity
+knowledge	substance
+keigo higashino	entity
+keyan	entity
+killing	process
+kinship	abstract_concept
+kitchen utensils	entity
+knowledge points	abstract_concept
+kyoichiro kaga	entity
+law	abstract_concept
+lens	entity
+laboratory	entity
+latin alphabet	abstract_concept
+life tenure	abstract_concept
+love	property
+landlord class westernization school	entity
+letter	entity
+li hongzhang	entity
+light	property
+limit kingship	process
+language	abstract_concept
+lattice point	entity
+leader	entity
+learning	process
+lin daiyu	entity
+liquid	substance
+location	property
+loss	property
+loud	property
+lung	entity
+lymphocytes	entity
+language use	process
+lattice vector	property
+layout	abstract_concept
+lend	process
+length	property
+lenovo	entity
+level	property
+library room	entity
+life	process
+life events	process
+light energy	property
+light path	entity
+light propagation	process
+light source	entity
+light wave	property
+lighter	entity
+likelihood	property
+lincoln	entity
+line	entity
+line draft	entity
+linear combination	abstract_concept
+lipophilic	property
+listener	entity
+living	process
+local optimum	property
+locked object	entity
+locker	entity
+logic	abstract_concept
+losing	process
+lost	property
+loudhailer	entity
+lover	entity
+low	property
+low dimensional data	substance
+lubricating oil	substance
+lubricator	entity
+lymphoid tissue	entity
+molecular	property
+money	substance
+memory	abstract_concept
+mesopotamia	entity
+market	entity
+mind	abstract_concept
+machine	entity
+magma	substance
+material	substance
+monomer	substance
+magical realism	abstract_concept
+magnetic field	force
+maintain	process
+margaret	entity
+marriage	process
+match	process
+mayor	entity
+medicine	substance
+microscopic	property
+mirror symmetry	abstract_concept
+mistake	property
+move	process
+mr darcy	entity
+muhammad	entity
+muscle	entity
+music	abstract_concept
+musical instrument	entity
+macondo	entity
+magic square	abstract_concept
+magnetic	property
+main road	entity
+maintenance	process
+makeup effect	property
+malware	entity
+management system	abstract_concept
+management tool	entity
+maneuver	process
+manolo	entity
+manufactures	process
+manuscript	entity
+map	entity
+marble density	property
+marbles	entity
+marcos	entity
+market competition	process
+market line	entity
+marquez	entity
+marrow	substance
+mass	property
+mastery	property
+material warehouse	entity
+math	abstract_concept
+math problem	abstract_concept
+mathematical formula	abstract_concept
+mathilde	entity
+mating	process
+matrix	abstract_concept
+maximum	property
+meaning	abstract_concept
+measure	process
+measurement	process
+mechanical equipment	entity
+media manipulation and the big data era	abstract_concept
+meet	process
+melody	property
+member combination	abstract_concept
+membership	abstract_concept
+memorize	process
+merchandise	substance
+metabolites	substance
+metal minerals	substance
+metal signal	property
+metamorphic rock	substance
+microorganism	entity
+migrate	process
+milestone	entity
+mineral	substance
+minister aubrey	entity
+misunderstood	property
+mitochondria	entity
+mixed substance	substance
+mode of transport	abstract_concept
+model	abstract_concept
+modernist literature	abstract_concept
+modification function	abstract_concept
+modifier	entity
+moisture	substance
+moisture cream	substance
+molecular crosslinking	process
+molecules	substance
+molt	process
+money supply	property
+moon	entity
+moral nothingness	abstract_concept
+morning	property
+mouth	entity
+moving	process
+mri signal	property
+multiple stocks	substance
+municipal facilities	entity
+muscles	entity
+musician	entity
+mutating	process
+mutation	process
+mutations	process

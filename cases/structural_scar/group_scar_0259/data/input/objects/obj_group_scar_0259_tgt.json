@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0259_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "Molecular Symmetry",
   "nodes": [
@@ -29,7 +29,7 @@
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t3",
         "t4",
@@ -38,10 +38,10 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t3": "participant",
-        "t4": "participant",
-        "t2": "participant",
-        "t1": "participant"
+        "t3": "correlate",
+        "t4": "correlate",
+        "t2": "correlate",
+        "t1": "correlate"
       }
     }
   ],

@@ -1,35 +1,35 @@
 {
   "object_id": "obj_group_scar_0084_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "test",
   "label": "Great Wall",
   "nodes": [
     {
       "node_id": "t2",
       "label": "nation",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t4",
       "label": "outside world",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t3",
       "label": "wall",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t1",
       "label": "enemy",
-      "type": "abstract_concept"
+      "type": "entity"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t2",
         "t4",
@@ -38,10 +38,10 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t2": "participant",
-        "t4": "participant",
-        "t3": "participant",
-        "t1": "participant"
+        "t2": "correlate",
+        "t4": "correlate",
+        "t3": "correlate",
+        "t1": "correlate"
       }
     }
   ],

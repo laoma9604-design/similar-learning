@@ -1,35 +1,35 @@
 {
   "object_id": "obj_group_scar_0009_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "The Genetic Code",
   "nodes": [
     {
       "node_id": "s1",
       "label": "dna sequence",
-      "type": "abstract_concept"
+      "type": "substance"
     },
     {
       "node_id": "s2",
       "label": "RNA",
-      "type": "abstract_concept"
+      "type": "substance"
     },
     {
       "node_id": "s4",
       "label": "Ribosome",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s3",
       "label": "protein",
-      "type": "abstract_concept"
+      "type": "substance"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s1",
         "s2",
@@ -38,10 +38,10 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s1": "participant",
-        "s2": "participant",
-        "s4": "participant",
-        "s3": "participant"
+        "s1": "correlate",
+        "s2": "correlate",
+        "s4": "correlate",
+        "s3": "correlate"
       }
     }
   ],

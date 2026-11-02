@@ -1,24 +1,24 @@
 {
   "object_id": "obj_group_scar_0249_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "One Hundred Years of Solitude",
   "nodes": [
     {
       "node_id": "s1",
       "label": "Marquez",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s4",
       "label": "the buendias",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s3",
       "label": "Macondo",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s5",
@@ -34,7 +34,7 @@
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s1",
         "s4",
@@ -44,11 +44,11 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s1": "participant",
-        "s4": "participant",
-        "s3": "participant",
-        "s5": "participant",
-        "s2": "participant"
+        "s1": "correlate",
+        "s4": "correlate",
+        "s3": "correlate",
+        "s5": "correlate",
+        "s2": "correlate"
       }
     }
   ],

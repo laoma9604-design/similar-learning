@@ -1,24 +1,24 @@
 {
   "object_id": "obj_group_scar_0349_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "waves",
   "nodes": [
     {
       "node_id": "s3",
       "label": "waves",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "s7",
       "label": "shore",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s8",
       "label": "reflects",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s1",
@@ -28,28 +28,28 @@
     {
       "node_id": "s5",
       "label": "breakwater",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s2",
       "label": "rough",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "s4",
       "label": "calm",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "s6",
       "label": "crashing",
-      "type": "abstract_concept"
+      "type": "process"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s3",
         "s7",
@@ -62,14 +62,14 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s3": "participant",
-        "s7": "participant",
-        "s8": "participant",
-        "s1": "participant",
-        "s5": "participant",
-        "s2": "participant",
-        "s4": "participant",
-        "s6": "participant"
+        "s3": "correlate",
+        "s7": "correlate",
+        "s8": "correlate",
+        "s1": "correlate",
+        "s5": "correlate",
+        "s2": "correlate",
+        "s4": "correlate",
+        "s6": "correlate"
       }
     }
   ],

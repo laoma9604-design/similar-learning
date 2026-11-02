@@ -1,29 +1,29 @@
 {
   "object_id": "obj_group_scar_0248_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "test",
   "label": "Dream of Red Mansions",
   "nodes": [
     {
       "node_id": "s3",
       "label": "Cao Xueqin",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s1",
       "label": "Jia Baoyu",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s4",
       "label": "Lin Daiyu",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s2",
       "label": "Shi Xiangyun",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s6",
@@ -33,13 +33,13 @@
     {
       "node_id": "s5",
       "label": "Official power",
-      "type": "property"
+      "type": "abstract_concept"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s3",
         "s1",
@@ -50,12 +50,12 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s3": "participant",
-        "s1": "participant",
-        "s4": "participant",
-        "s2": "participant",
-        "s6": "participant",
-        "s5": "participant"
+        "s3": "correlate",
+        "s1": "correlate",
+        "s4": "correlate",
+        "s2": "correlate",
+        "s6": "correlate",
+        "s5": "correlate"
       }
     }
   ],

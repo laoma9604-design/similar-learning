@@ -1,0 +1,824 @@
+neurons	entity
+note	abstract_concept
+nation	entity
+neural signal	property
+national liberation movement	process
+no reaction	property
+node	entity
+nucleus	entity
+national people's representative meeting	entity
+natural selection	process
+noble	entity
+napoleon	entity
+natural	property
+nature	abstract_concept
+nearby electronics	entity
+negative emotions	property
+nerve fiber	entity
+network	entity
+network data	substance
+network line	entity
+neural activity	process
+neural circuit	entity
+neural networks	entity
+neuroevolution	process
+neurotransmission	process
+neutron	entity
+neutron control system	entity
+new car model	entity
+new dna strand	entity
+new varieties	entity
+nick carraway	entity
+night	property
+nose hair	entity
+nourishment	substance
+nuclear fuel	substance
+nuclear spin	property
+number	property
+nurture	process
+nutrients	substance
+nutrition	property
+oracle	entity
+obstacle	entity
+operating system	abstract_concept
+organism	entity
+output	entity
+oxygen	substance
+ocean	entity
+operate	process
+operator	entity
+organ	entity
+object	entity
+obstructions	entity
+occupant	entity
+official power	abstract_concept
+oil	substance
+omniscience	property
+online chat	process
+open	property
+operation process	process
+optic nerve	entity
+orbit	entity
+order	abstract_concept
+ore deposit	entity
+organisation	entity
+original	property
+original dna strand	entity
+original language	abstract_concept
+originality	property
+outbreak	process
+outflow	process
+outlook	property
+outputs	entity
+outside world	entity
+ovaries	entity
+oven	entity
+overcome ego	process
+overfitting	process
+overlapping	process
+overpass	entity
+oviduct	entity
+owner	entity
+oxygen and glucose	substance
+product	substance
+president	entity
+politics	abstract_concept
+people	entity
+particle	entity
+person	entity
+politician	entity
+parliament	entity
+player	entity
+patient	entity
+plot	abstract_concept
+prey	entity
+puzzle pieces	entity
+passenger	entity
+pathogen	entity
+persian empire	entity
+pharaoh	entity
+planting	process
+portugal	entity
+press	entity
+pressure	property
+process	process
+profit	substance
+pyramid	entity
+palestine	entity
+physics	abstract_concept
+pipeline	entity
+pitch	property
+plan	abstract_concept
+planet	entity
+plant	entity
+playground	entity
+poet	entity
+pool	entity
+poverty	process
+power	property
+problem	abstract_concept
+public	entity
+punishment	process
+paddle	entity
+pain	property
+pain nerve	entity
+pain tolerance	property
+painful	property
+painter	entity
+palace	entity
+paper	entity
+paper-cut works	entity
+parabolic	property
+paragraph	entity
+parent	entity
+part	entity
+participant	entity
+partner	entity
+password	abstract_concept
+password box	entity
+patch	entity
+path	entity
+pattern	abstract_concept
+payment	substance
+pedestrian	entity
+pen	entity
+pencil	entity
+pendulum period	property
+people around	entity
+people's commune	entity
+performance	property
+perish	process
+personality traits	property
+persuading	process
+ph value	property
+photo	entity
+photo effects	property
+photosensitive device	entity
+photosensitive equipment	entity
+physical examination	process
+pipe	entity
+pipe width	property
+pipeline system	entity
+piston	entity
+planetary cycle	process
+planning adjustment	process
+planted	property
+plate	entity
+platelets	entity
+platform	entity
+player characteristics	property
+playing field	entity
+plumbing system	entity
+poetry	abstract_concept
+point	entity
+point of failure	entity
+pointer	entity
+policy	abstract_concept
+political propaganda	abstract_concept
+pollutants	substance
+pollution source	entity
+polymer	substance
+polymer chain	entity
+polymerization	process
+pope	entity
+popularity	property
+population	entity
+population density	property
+position	property
+positive emotions	property
+possession	abstract_concept
+post office	entity
+pouring	process
+power station	entity
+practice	process
+precursor	entity
+predator	entity
+predict	process
+prelude	entity
+preparation process	process
+prepare	process
+prepare materials	process
+pressing	process
+pressure pump	entity
+prevention	process
+prevention and control measures	abstract_concept
+previous antigen	entity
+prime minister	entity
+print	process
+printer	entity
+printer paper	entity
+pro-american	property
+pro-russian faction	entity
+probability information	property
+probability of occurrence	property
+problem solving	process
+process creator	entity
+processing	process
+processing facility	entity
+processing power	property
+product separation	process
+production	process
+production line	entity
+production process control system	abstract_concept
+productive	property
+profession	property
+program	abstract_concept
+program data	substance
+programming language	abstract_concept
+progress	property
+projectile	entity
+proofread	process
+proposition	abstract_concept
+prostate	entity
+prostatic fluid	substance
+prostitute	entity
+protect	process
+protect earth life	process
+protect environment	process
+protect plants	process
+protein	substance
+proto-rock	entity
+proton	entity
+provocation	process
+psychological description and narrative	process
+pupil	entity
+purchase goods	process
+pursuit of happiness	process
+push dominoes	process
+put one's oar in	process
+puzzle	entity
+quiet	property
+quran	abstract_concept
+quarantine	process
+quarrel	process
+queen of england	entity
+quick	property
+reactant	substance
+raw material	substance
+reaction process	process
+reaction speed	property
+research	process
+repair	process
+route	entity
+reaction conditions	abstract_concept
+recipe	abstract_concept
+reform	process
+resistance	property
+result	property
+retina	entity
+role	abstract_concept
+router	entity
+race	process
+radiation	process
+raw data	substance
+receptor	entity
+referee	entity
+reflects	process
+relation	abstract_concept
+rhythm	property
+ribosome	entity
+river	entity
+roman empire	entity
+root system	entity
+run	process
+racer	entity
+rain	process
+random sample	entity
+ranking	property
+rational	property
+raw material warehouse	entity
+reactant concentration	property
+reactant properties	property
+reaction equation	abstract_concept
+reactive surface area	property
+reactor	entity
+read	process
+read/write head	entity
+reader	entity
+reasoning and puzzle solving	process
+reasoning process	process
+reasons	abstract_concept
+rebar	entity
+rebirth	process
+recession	process
+recognition	process
+recovery period	property
+recycle and re-use	process
+red	property
+reels	entity
+reflection	process
+reflection law	abstract_concept
+refute	process
+regulator	entity
+regulatory organs	entity
+reinforcement learning	process
+rejecting	process
+relationship	abstract_concept
+relationship between prior probability and observed data	abstract_concept
+remember	process
+remote electronics	entity
+removal	process
+renew	process
+repel	process
+replication	process
+repository	entity
+representative	entity
+representative opinion	abstract_concept
+reproduce	process
+reproducing	process
+reproduction	process
+requirements	abstract_concept
+rescue	process
+researcher	entity
+resident	entity
+resonance	process
+resonant frequency	property
+resource	substance
+resource manager	entity
+respiration	process
+response ratio	property
+retraction	process
+retreat	process
+return	property
+returning	process
+review exercises	process
+revise	process
+revolves	process
+rhetoric	abstract_concept
+rhyme	property
+rise	process
+risk	property
+rival	entity
+rna	substance
+road	entity
+road worker	entity
+robot	entity
+rock	entity
+rock formation	entity
+role	abstract_concept
+roles in different contexts	abstract_concept
+rough	property
+route planning	process
+royal palace	entity
+rub	process
+rubbish	substance
+rule	abstract_concept
+rules	abstract_concept
+rust	process
+seasoning	substance
+sound	property
+stage	entity
+stem	entity
+structure	abstract_concept
+success	property
+safeguard human rights	process
+second continental congress	entity
+self-improvement	process
+senate	entity
+separation of powers	abstract_concept
+seven years	property
+soil	substance
+speaker	entity
+species	entity
+sperm	entity
+state	property
+stitching	process
+study	process
+sun	entity
+sun yat-sen	entity
+supporting structure	abstract_concept
+symbiosis	process
+scientist	entity
+score	property
+script	abstract_concept
+seeds	entity
+sensor	entity
+sentence	entity
+sequence	abstract_concept
+shape	property
+sheet music	entity
+shore	entity
+signal transduction pathway	entity
+skeleton	entity
+skin	entity
+slow	property
+society	entity
+soldier	entity
+sounds	property
+source	entity
+space	entity
+speed	property
+sports	process
+spouse	entity
+spread	process
+standing committee of the national people's congress	entity
+stimulate	process
+stock	substance
+storm	process
+substances	substance
+surrender	process
+synapse	entity
+sacrificial place	entity
+sail	process
+saint	entity
+salary	substance
+sale	process
+sample point	entity
+sampling	process
+san diego	entity
+sanctions	abstract_concept
+satiation	property
+scarcity	property
+scenes	entity
+schedule	abstract_concept
+scissors	entity
+sea	entity
+secret	abstract_concept
+secretary	entity
+security measures	abstract_concept
+seed	entity
+seeing	process
+seek	process
+segment	entity
+seismic wave	property
+selection	process
+self-destruct program	abstract_concept
+sell goods	process
+selling	process
+senescence	process
+senses	entity
+sentence pattern	abstract_concept
+sentiment index	property
+sequencing technology	entity
+serfdom	abstract_concept
+servant	entity
+server	entity
+service	process
+service area	entity
+setback	process
+sharpe ratio	property
+sheep	entity
+shelf capacity	property
+sherlock holmes	entity
+shi xiangyun	entity
+shield	entity
+ship	entity
+shipwreck	process
+shortest path	entity
+shutter	entity
+signal	property
+signal light	entity
+signal molecule	entity
+similarity	property
+simple	property
+simplify	process
+singular point	entity
+skill	property
+skin aging	process
+skin care products	substance
+skin sensitivity	property
+slaughter	process
+slay	process
+sliding speed	property
+slope	entity
+slope top	entity
+slot machines	entity
+smith:john	entity
+snake	entity
+soccer	process
+social criticism	abstract_concept
+social function	abstract_concept
+social morality	abstract_concept
+social system	abstract_concept
+soft drink	substance
+software	abstract_concept
+software design	abstract_concept
+soil erosion	process
+solar energy	property
+solar gravity	force
+solar panels	entity
+solar system	entity
+soldier	entity
+solid	substance
+song	entity
+sound source	entity
+sound wave	property
+sound wave propagation	process
+source file	entity
+source ip	entity
+species adaptation	process
+species evolution	process
+spending	process
+sperm head	entity
+sperm tail	entity
+sphere	entity
+spine	entity
+spinning	process
+sponge	entity
+spontaneous direction	property
+sport	process
+sports equipment	entity
+sportsman	entity
+spree	process
+stadium situation	property
+staleness	property
+stars	entity
+start	process
+starvation	process
+state duma	entity
+statistics	abstract_concept
+steam engine	entity
+steampunk era	abstract_concept
+steel	substance
+steel rope	entity
+stendhal	entity
+step	process
+steps	abstract_concept
+stick	entity
+stock price	property
+stoichiometry	abstract_concept
+stomach	entity
+storage	process
+storing data	process
+story plot	abstract_concept
+straight	property
+stranger	entity
+strokes	entity
+structural support	abstract_concept
+student	entity
+subsidies	substance
+subsidy	substance
+substance	substance
+substituent	entity
+succeed	process
+succeeding	process
+suitor	entity
+sun rays	property
+sunlight	property
+sunscreen	substance
+supply chain	entity
+supporting	process
+surface	entity
+surface group	entity
+surgery	process
+surroundings	entity
+survival philosophy	abstract_concept
+survive	process
+suture	entity
+swirl center	entity
+switch	entity
+symmetry group	abstract_concept
+synergy	property
+system	abstract_concept
+temperature	property
+the mediterranean	entity
+track	entity
+train	entity
+technology	abstract_concept
+the french revolution	process
+the nile	entity
+theory	abstract_concept
+thinking	process
+thought and culture	abstract_concept
+table	entity
+target	entity
+the light	property
+the macro	abstract_concept
+theatre	entity
+time	property
+to play	process
+trade	process
+transcription	process
+transfer	process
+translate	process
+traveler	entity
+tree	entity
+table of contents	abstract_concept
+take an exam	process
+tang monk	entity
+taper	property
+target	entity
+taste score	property
+tcp protocol	abstract_concept
+teacher	entity
+teaching	process
+team	entity
+team member	entity
+tear marks	entity
+technology and humanity	abstract_concept
+telecommunication	process
+temple	entity
+tendon	entity
+terms	abstract_concept
+territory	entity
+testis	entity
+text	entity
+the buendias	entity
+the code	abstract_concept
+the emperor	entity
+the flowers	entity
+the hands	entity
+the lungs	entity
+the medical	abstract_concept
+the mountains	entity
+the nearest route to the current target	entity
+the paper	entity
+the role of different substances	abstract_concept
+the urbinos	entity
+the wall	entity
+the way	entity
+theme	abstract_concept
+theoretical framework	abstract_concept
+theories	abstract_concept
+therapy	process
+thermodynamics	abstract_concept
+thief	entity
+thing	entity
+thoughts	abstract_concept
+three-dimensional object	entity
+throat	entity
+thrombus	entity
+thymus	entity
+timbre	property
+time and history	abstract_concept
+time consuming	property
+time event	process
+timeline	abstract_concept
+tinkerer	entity
+tissue	entity
+title	abstract_concept
+to color	process
+to decipher	process
+to escape	process
+to rotate	process
+to stretch	process
+tone	property
+tools	entity
+topic	abstract_concept
+toxic chemicals	substance
+toy	entity
+trachea	entity
+trading platform	entity
+traffic flow	process
+trajectory	entity
+transcription factor	entity
+transfer station	entity
+transfers	process
+transform	process
+transistor	entity
+translater	entity
+translation process	process
+translation results	property
+translation tools	entity
+transmission line	entity
+transmission speed	property
+transparent glass	substance
+transport efficiency	property
+transport process	process
+transportation	process
+transportation hub	entity
+transportation line	entity
+traveller	entity
+travelling	process
+treat	process
+trial	process
+trivial	property
+true	property
+turbine blade	entity
+turbine disk	entity
+turn	process
+turned off	property
+turned on	property
+twisted	property
+two dimensional	property
+two-dimensional plane	entity
+type	abstract_concept
+typo	property
+understanding	process
+understand	process
+u.k.	entity
+u.s.	entity
+ultraviolet light	property
+uncertainty principle	abstract_concept
+underfitting	process
+unlock	process
+unpredictable fate	abstract_concept
+unstable	property
+urban population	entity
+user	entity
+virus	entity
+vehicle	entity
+victory	property
+vaccine	substance
+valuable	property
+valve	entity
+variance	property
+vas deferens	entity
+vascular wall	entity
+vein	entity
+verification	process
+verify	process
+verse	entity
+vibrating	process
+victim	entity
+view	property
+viewfinder	entity
+vigorous	property
+violet	property
+vitality	property
+vocal cord	entity
+volcanic activity	process
+volcano eruption	process
+voltage	property
+voltaire	entity
+water	substance
+weapon	entity
+word	entity
+wall	entity
+war	process
+water flow	process
+wrinkle	entity
+warrior	entity
+washington	entity
+water pipe	entity
+wavelength	property
+waves	property
+worker	entity
+wanders	process
+warder	entity
+warehouse manager	entity
+waste	substance
+water source	entity
+water tower	entity
+water turbine	entity
+water wave	property
+water waves	property
+waterway	entity
+wave function	abstract_concept
+weak	property
+wealth	substance
+weaponry	entity
+weigh	process
+weighing objects	process
+western invasion	process
+wild	property
+win	property
+wind	process
+wind mill	entity
+wine	substance
+winning	process
+winston	entity
+winston smith	entity
+wire	entity
+wither	process
+withered	property
+woman	entity
+women's destiny	abstract_concept
+wooing	process
+word meaning	abstract_concept
+word relationship	abstract_concept
+work	process
+working	process
+world	entity
+world controller	entity
+worship	process
+worthless	property
+wrinkle height	property
+write	process
+wu chengen	entity
+yellow river yangtze river	entity
+yan ling	entity
+zhao feiyan	entity
+zipper	entity
+gene	entity
+book	entity
+fluctuations	property
+flux	process
+focal length	property
+fold	process
+follow	process
+food size	property
+footballer	entity
+forecast	process
+forest	entity
+forklift	entity
+form	abstract_concept
+foundations	entity
+frame	entity
+france	entity
+frances bennett	entity
+free	property
+free love	abstract_concept
+freedom and democracy	abstract_concept
+french empire	entity
+freshness	property
+friction	force
+frictional heat	property
+from	abstract_concept
+frontline	entity
+fruitful	property
+fuel burning	process
+full pattern	abstract_concept
+fusion reaction	process
+no response	property
+parts	entity

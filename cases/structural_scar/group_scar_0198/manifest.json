@@ -1,7 +1,7 @@
 {
   "group_id": "group_scar_0198",
   "dataset": "scar",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "schema_version": "topoadv-schema-0.3.1",
   "vocab_version": "topoadv-vocab-0.1.0-draft",
   "split": "train",

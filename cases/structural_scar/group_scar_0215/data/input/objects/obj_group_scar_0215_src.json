@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0215_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "Revolution of 1911",
   "nodes": [
@@ -18,23 +18,23 @@
     {
       "node_id": "s4",
       "label": "Sun Yat-sen",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s2",
       "label": "bourgeois revolutionaries",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s3",
       "label": "bourgeois revolutionary movement",
-      "type": "abstract_concept"
+      "type": "process"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s1",
         "s5",
@@ -44,11 +44,11 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s1": "participant",
-        "s5": "participant",
-        "s4": "participant",
-        "s2": "participant",
-        "s3": "participant"
+        "s1": "correlate",
+        "s5": "correlate",
+        "s4": "correlate",
+        "s2": "correlate",
+        "s3": "correlate"
       }
     }
   ],

@@ -1,33 +1,33 @@
 {
   "object_id": "obj_group_scar_0156_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "test",
   "label": "EM Algorithm",
   "nodes": [
     {
       "node_id": "s2",
       "label": "adjust parameters",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s1",
       "label": "likelihood",
-      "type": "abstract_concept"
+      "type": "property"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s2",
         "s1"
       ],
       "output_nodes": [],
       "roles": {
-        "s2": "participant",
-        "s1": "participant"
+        "s2": "correlate",
+        "s1": "correlate"
       }
     }
   ],

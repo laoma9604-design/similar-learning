@@ -1,24 +1,24 @@
 {
   "object_id": "obj_group_scar_0349_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "sounds",
   "nodes": [
     {
       "node_id": "t2",
       "label": "sounds",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "t6",
       "label": "wall",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t3",
       "label": "echoes",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "t4",
@@ -28,28 +28,28 @@
     {
       "node_id": "t1",
       "label": "insulation",
-      "type": "abstract_concept"
+      "type": "substance"
     },
     {
       "node_id": "t8",
       "label": "loud",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "t5",
       "label": "quiet",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "t7",
       "label": "vibrating",
-      "type": "abstract_concept"
+      "type": "process"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t2",
         "t6",
@@ -62,14 +62,14 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t2": "participant",
-        "t6": "participant",
-        "t3": "participant",
-        "t4": "participant",
-        "t1": "participant",
-        "t8": "participant",
-        "t5": "participant",
-        "t7": "participant"
+        "t2": "correlate",
+        "t6": "correlate",
+        "t3": "correlate",
+        "t4": "correlate",
+        "t1": "correlate",
+        "t8": "correlate",
+        "t5": "correlate",
+        "t7": "correlate"
       }
     }
   ],

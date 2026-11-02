@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0291_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "sport",
   "nodes": [
@@ -64,7 +64,7 @@
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t6",
         "t8",
@@ -80,17 +80,17 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t6": "participant",
-        "t8": "participant",
-        "t2": "participant",
-        "t10": "participant",
-        "t1": "participant",
-        "t9": "participant",
-        "t7": "participant",
-        "t4": "participant",
-        "t5": "participant",
-        "t11": "participant",
-        "t3": "participant"
+        "t6": "correlate",
+        "t8": "correlate",
+        "t2": "correlate",
+        "t10": "correlate",
+        "t1": "correlate",
+        "t9": "correlate",
+        "t7": "correlate",
+        "t4": "correlate",
+        "t5": "correlate",
+        "t11": "correlate",
+        "t3": "correlate"
       }
     }
   ],

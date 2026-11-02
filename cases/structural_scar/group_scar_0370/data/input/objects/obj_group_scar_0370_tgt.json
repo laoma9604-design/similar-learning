@@ -1,40 +1,40 @@
 {
   "object_id": "obj_group_scar_0370_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "camera",
   "nodes": [
     {
       "node_id": "t2",
       "label": "lens",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t3",
       "label": "Photosensitive device",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t1",
       "label": "Viewfinder",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t4",
       "label": "shutter",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t5",
       "label": "photo",
-      "type": "abstract_concept"
+      "type": "entity"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t2",
         "t3",
@@ -44,11 +44,11 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t2": "participant",
-        "t3": "participant",
-        "t1": "participant",
-        "t4": "participant",
-        "t5": "participant"
+        "t2": "correlate",
+        "t3": "correlate",
+        "t1": "correlate",
+        "t4": "correlate",
+        "t5": "correlate"
       }
     }
   ],

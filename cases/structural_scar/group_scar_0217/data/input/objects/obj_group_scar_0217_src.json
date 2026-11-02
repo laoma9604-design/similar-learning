@@ -1,19 +1,19 @@
 {
   "object_id": "obj_group_scar_0217_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "test",
   "label": "Egypt",
   "nodes": [
     {
       "node_id": "s2",
       "label": "the nile",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s3",
       "label": "pyramid",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s4",
@@ -23,13 +23,13 @@
     {
       "node_id": "s1",
       "label": "pharaoh",
-      "type": "abstract_concept"
+      "type": "entity"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s2",
         "s3",
@@ -38,10 +38,10 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s2": "participant",
-        "s3": "participant",
-        "s4": "participant",
-        "s1": "participant"
+        "s2": "correlate",
+        "s3": "correlate",
+        "s4": "correlate",
+        "s1": "correlate"
       }
     }
   ],

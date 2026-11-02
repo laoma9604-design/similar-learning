@@ -1,33 +1,33 @@
 {
   "object_id": "obj_group_scar_0360_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "Prospecting",
   "nodes": [
     {
       "node_id": "t2",
       "label": "metal minerals",
-      "type": "abstract_concept"
+      "type": "substance"
     },
     {
       "node_id": "t1",
       "label": "metal signal",
-      "type": "abstract_concept"
+      "type": "property"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t2",
         "t1"
       ],
       "output_nodes": [],
       "roles": {
-        "t2": "participant",
-        "t1": "participant"
+        "t2": "correlate",
+        "t1": "correlate"
       }
     }
   ],

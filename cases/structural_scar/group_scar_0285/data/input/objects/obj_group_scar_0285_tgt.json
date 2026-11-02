@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0285_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "theory",
   "nodes": [
@@ -23,7 +23,7 @@
     {
       "node_id": "t4",
       "label": "data",
-      "type": "abstract_concept"
+      "type": "substance"
     },
     {
       "node_id": "t7",
@@ -44,7 +44,7 @@
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t1",
         "t3",
@@ -56,13 +56,13 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t1": "participant",
-        "t3": "participant",
-        "t6": "participant",
-        "t4": "participant",
-        "t7": "participant",
-        "t2": "participant",
-        "t5": "participant"
+        "t1": "correlate",
+        "t3": "correlate",
+        "t6": "correlate",
+        "t4": "correlate",
+        "t7": "correlate",
+        "t2": "correlate",
+        "t5": "correlate"
       }
     }
   ],

@@ -1,35 +1,35 @@
 {
   "object_id": "obj_group_scar_0078_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "cocoon",
   "nodes": [
     {
       "node_id": "t3",
       "label": "pain nerve",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "t4",
       "label": "skin sensitivity",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "t1",
       "label": "pain",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "t2",
       "label": "pain tolerance",
-      "type": "abstract_concept"
+      "type": "property"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t3",
         "t4",
@@ -38,10 +38,10 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t3": "participant",
-        "t4": "participant",
-        "t1": "participant",
-        "t2": "participant"
+        "t3": "correlate",
+        "t4": "correlate",
+        "t1": "correlate",
+        "t2": "correlate"
       }
     }
   ],

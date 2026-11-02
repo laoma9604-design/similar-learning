@@ -1,14 +1,14 @@
 {
   "object_id": "obj_group_scar_0230_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "test",
   "label": "Ancient Greece",
   "nodes": [
     {
       "node_id": "s4",
       "label": "aegean sea",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s3",
@@ -18,7 +18,7 @@
     {
       "node_id": "s1",
       "label": "alexander empire",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s2",
@@ -29,7 +29,7 @@
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s4",
         "s3",
@@ -38,10 +38,10 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s4": "participant",
-        "s3": "participant",
-        "s1": "participant",
-        "s2": "participant"
+        "s4": "correlate",
+        "s3": "correlate",
+        "s1": "correlate",
+        "s2": "correlate"
       }
     }
   ],

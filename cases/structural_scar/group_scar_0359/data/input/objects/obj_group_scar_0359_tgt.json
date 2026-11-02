@@ -1,14 +1,14 @@
 {
   "object_id": "obj_group_scar_0359_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "Musical Notes",
   "nodes": [
     {
       "node_id": "t1",
       "label": "tone",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "t2",
@@ -19,15 +19,15 @@
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t1",
         "t2"
       ],
       "output_nodes": [],
       "roles": {
-        "t1": "participant",
-        "t2": "participant"
+        "t1": "correlate",
+        "t2": "correlate"
       }
     }
   ],

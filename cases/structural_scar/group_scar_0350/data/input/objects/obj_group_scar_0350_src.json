@@ -1,19 +1,19 @@
 {
   "object_id": "obj_group_scar_0350_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "val",
   "label": "combustion",
   "nodes": [
     {
       "node_id": "s7",
       "label": "combustion",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s5",
       "label": "fire",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s8",
@@ -23,33 +23,33 @@
     {
       "node_id": "s3",
       "label": "burning",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s6",
       "label": "hot",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "s1",
       "label": "intense",
-      "type": "abstract_concept"
+      "type": "property"
     },
     {
       "node_id": "s2",
       "label": "oxygen",
-      "type": "abstract_concept"
+      "type": "substance"
     },
     {
       "node_id": "s4",
       "label": "carbon dioxide",
-      "type": "abstract_concept"
+      "type": "substance"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s7",
         "s5",
@@ -62,14 +62,14 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s7": "participant",
-        "s5": "participant",
-        "s8": "participant",
-        "s3": "participant",
-        "s6": "participant",
-        "s1": "participant",
-        "s2": "participant",
-        "s4": "participant"
+        "s7": "correlate",
+        "s5": "correlate",
+        "s8": "correlate",
+        "s3": "correlate",
+        "s6": "correlate",
+        "s1": "correlate",
+        "s2": "correlate",
+        "s4": "correlate"
       }
     }
   ],

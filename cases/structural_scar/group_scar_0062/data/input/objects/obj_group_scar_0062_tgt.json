@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0062_tgt",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "natural selection",
   "nodes": [
@@ -44,7 +44,7 @@
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "t3",
         "t2",
@@ -56,13 +56,13 @@
       ],
       "output_nodes": [],
       "roles": {
-        "t3": "participant",
-        "t2": "participant",
-        "t6": "participant",
-        "t1": "participant",
-        "t7": "participant",
-        "t4": "participant",
-        "t5": "participant"
+        "t3": "correlate",
+        "t2": "correlate",
+        "t6": "correlate",
+        "t1": "correlate",
+        "t7": "correlate",
+        "t4": "correlate",
+        "t5": "correlate"
       }
     }
   ],

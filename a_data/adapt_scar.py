@@ -29,6 +29,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 import scar_annotations_pilot as ANN
+from scar_type_lexicon import LEXICON as TYPE_LEXICON
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "raw" / "scar" / "release" / "system_analogy_en.json"
@@ -110,24 +111,24 @@ FORCE_HINT = re.compile(
 
 
 def infer_node_type(word):
-    """概念词的**占位**类型。
+    """概念词类型：查人工判定词典（全量 1946 词，逐词标注）。
 
-    注意：这不是可用的类型标注。实测 1946 个概念词中 92% 会落到兜底类，
-    且 SCAR 正确映射有 32.5% 两端类型不同（跨范畴正是类比机制）。
-    因此结构模式用 type_pattern（与参考的类型对应模式比较），
-    不要求两端同类型。真正的类型标注见 a_data/scar_annotations_pilot.py
-    的 20 组试点（人工标注，待 B/C 复核）。
+    词典在 a_data/scar_type_lexicon.py + 两个 TSV，
+    按 T01-vocabulary.json 的 τ_V discriminator 逐词判定。
+    试点 20 组另有更细的按组标注（问题陈述与语境不同时可覆盖）。
+
+    查不到的词一律按 abstract_concept 兜底并 **记录到日志**，
+    不允许静默通过——覆盖缺失必须能被发现。
     """
-    w = " ".join(str(word).lower().split())
-    if FORCE_HINT.search(w):
-        return "force"
-    if PROCESS_HINT.search(w):
-        return "process"
-    if PROPERTY_HINT.search(w):
-        return "property"
-    if SUBSTANCE_HINT.search(w):
-        return "substance"
+    key = " ".join(str(word).strip().lower().split())
+    t = TYPE_LEXICON.get(key)
+    if t:
+        return t
+    _MISSING_TYPES.add(key)
     return "abstract_concept"
+
+
+_MISSING_TYPES: set[str] = set()
 
 
 def stable_hash(*parts):
@@ -204,33 +205,59 @@ def build_group(rec, pair_index, raw_original=None):
     else:
         mtype = "none"
 
-    def make_obj(oid, words, id_of, label):
-        # 试点 20 组有 A 的人工标注（类型逐词判定），其余用占位类型。
-        # 占位类型只保证 ∈ τ_V，不参与 SF 判定（结构模式用 type_pattern 比对）。
+    def make_obj(oid, words, id_of, label, side):
+        """构造结构对象。
+
+        edge_type / roles 必须取自 T01-vocabulary.json：
+          edge_type = analogy_correspondence（vocab 0.1.1 新增的结构类）
+          roles     = correlate / hub（hub = 被多个另一域概念对应的共享端点）
+
+        节点 type 用试点人工标注（若有），否则用占位推断。
+        占位类型只保证 ∈ τ_V；结构模式用 type_pattern 比对类型对应模式，
+        不要求两端同类型（实测 32.5% 正确映射是跨类型）。
+        """
         ann = ANN.ANNOTATIONS.get(rec["id"], {})
         ann_types = ann.get("node_types") or {}
+        ann_roles = ann.get("roles") or {}
+        # 无语义推断：未标注的词，角色按共享端点规则客观判定
+        other_words = set(tgt_words) if side == "src" else set(src_words)
+        nodes_roles = {}
+        pairs_this_side = {}
+        for a, b in pairs:
+            if side == "src":
+                pairs_this_side.setdefault(a, []).append(b)
+            else:
+                pairs_this_side.setdefault(b, []).append(a)
+        for w in words:
+            if w in ann_roles:
+                nodes_roles[id_of[w]] = ann_roles[w]
+            elif len(pairs_this_side.get(w, [])) > 1:
+                nodes_roles[id_of[w]] = "hub"
+            else:
+                nodes_roles[id_of[w]] = "correlate"
+
         return {
             "object_id": oid,
             "object_kind": "structural",
-            "relation_type": "scar_analogy",
+            "relation_type": "analogy_correspondence",
             "split": None,
             "label": label,
             "nodes": [dict(node_id=id_of[w],
                            label=w,
                            type=ann_types.get(w) or infer_node_type(w))
                       for w in words],
-            "edges": [dict(edge_id="e1", edge_type="scar_analogy",
+            "edges": [dict(edge_id="e1", edge_type="analogy_correspondence",
                            input_nodes=[id_of[w] for w in words],
                            output_nodes=[],
-                           roles={id_of[w]: "participant" for w in words})],
+                           roles=nodes_roles)],
             "provenance": {"dataset": "scar", "original_id": str(rec["id"]),
                            "structure_source": "provided"},
         }
 
     src_obj = make_obj(f"obj_{gid}_src", src_words, src_id_of,
-                       rec.get("system_a") or "源系统")
+                       rec.get("system_a") or "源系统", "src")
     tgt_obj = make_obj(f"obj_{gid}_tgt", tgt_words, tgt_id_of,
-                       rec.get("system_b") or "目标系统")
+                       rec.get("system_b") or "目标系统", "tgt")
 
     return dict(
         group_id=gid, rec=rec,
@@ -270,7 +297,7 @@ def write_group(g):
                     "方法输入含概念词与结构，不含哪对哪的答案"))
 
     dump(gdir / "manifest.json", dict(
-        group_id=gid, dataset="scar", relation_type="scar_analogy",
+        group_id=gid, dataset="scar", relation_type="analogy_correspondence",
         schema_version=SCHEMA_VERSION, vocab_version=VOCAB_VERSION,
         split=g["split"], object_ids=[tgt_id, src_id], task_ids=[task_id],
         task_counts=dict(positive=1, negative=0, total=1),

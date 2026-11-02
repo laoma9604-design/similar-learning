@@ -1,45 +1,45 @@
 {
   "object_id": "obj_group_scar_0294_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "val",
   "label": "hunt",
   "nodes": [
     {
       "node_id": "s3",
       "label": "hunt",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s5",
       "label": "prey",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s4",
       "label": "slay",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s6",
       "label": "field",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s1",
       "label": "hunter",
-      "type": "abstract_concept"
+      "type": "entity"
     },
     {
       "node_id": "s2",
       "label": "weapon",
-      "type": "abstract_concept"
+      "type": "entity"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s3",
         "s5",
@@ -50,12 +50,12 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s3": "participant",
-        "s5": "participant",
-        "s4": "participant",
-        "s6": "participant",
-        "s1": "participant",
-        "s2": "participant"
+        "s3": "correlate",
+        "s5": "hub",
+        "s4": "correlate",
+        "s6": "correlate",
+        "s1": "correlate",
+        "s2": "correlate"
       }
     }
   ],

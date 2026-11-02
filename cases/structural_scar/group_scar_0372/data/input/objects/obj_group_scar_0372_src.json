@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0372_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "Spectral Lines",
   "nodes": [
@@ -13,21 +13,21 @@
     {
       "node_id": "s1",
       "label": "molecular",
-      "type": "abstract_concept"
+      "type": "property"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s2",
         "s1"
       ],
       "output_nodes": [],
       "roles": {
-        "s2": "participant",
-        "s1": "participant"
+        "s2": "correlate",
+        "s1": "correlate"
       }
     }
   ],

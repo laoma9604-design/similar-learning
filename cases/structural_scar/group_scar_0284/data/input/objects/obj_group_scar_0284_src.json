@@ -1,7 +1,7 @@
 {
   "object_id": "obj_group_scar_0284_src",
   "object_kind": "structural",
-  "relation_type": "scar_analogy",
+  "relation_type": "analogy_correspondence",
   "split": "train",
   "label": "food",
   "nodes": [
@@ -13,28 +13,28 @@
     {
       "node_id": "s4",
       "label": "eating",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s2",
       "label": "digestion",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s1",
       "label": "feeding",
-      "type": "abstract_concept"
+      "type": "process"
     },
     {
       "node_id": "s3",
       "label": "cooking",
-      "type": "abstract_concept"
+      "type": "process"
     }
   ],
   "edges": [
     {
       "edge_id": "e1",
-      "edge_type": "scar_analogy",
+      "edge_type": "analogy_correspondence",
       "input_nodes": [
         "s5",
         "s4",
@@ -44,11 +44,11 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s5": "participant",
-        "s4": "participant",
-        "s2": "participant",
-        "s1": "participant",
-        "s3": "participant"
+        "s5": "hub",
+        "s4": "correlate",
+        "s2": "correlate",
+        "s1": "hub",
+        "s3": "correlate"
       }
     }
   ],
