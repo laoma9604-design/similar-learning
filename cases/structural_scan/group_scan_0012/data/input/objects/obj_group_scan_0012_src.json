@@ -1,0 +1,74 @@
+{
+  "object_id": "obj_group_scan_0012_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "test",
+  "label": "buying an item",
+  "nodes": [
+    {
+      "node_id": "s6",
+      "label": "buyer",
+      "type": "entity"
+    },
+    {
+      "node_id": "s3",
+      "label": "merchandise",
+      "type": "substance"
+    },
+    {
+      "node_id": "s5",
+      "label": "buying",
+      "type": "process"
+    },
+    {
+      "node_id": "s1",
+      "label": "selling",
+      "type": "process"
+    },
+    {
+      "node_id": "s2",
+      "label": "returning",
+      "type": "process"
+    },
+    {
+      "node_id": "s4",
+      "label": "valuable",
+      "type": "property"
+    },
+    {
+      "node_id": "s7",
+      "label": "worthless",
+      "type": "property"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s6",
+        "s3",
+        "s5",
+        "s1",
+        "s2",
+        "s4",
+        "s7"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s6": "correlate",
+        "s3": "correlate",
+        "s5": "correlate",
+        "s1": "correlate",
+        "s2": "correlate",
+        "s4": "correlate",
+        "s7": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0012",
+    "structure_source": "provided"
+  }
+}

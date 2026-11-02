@@ -1,0 +1,95 @@
+{
+  "object_id": "obj_group_scan_0035_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "debate",
+  "nodes": [
+    {
+      "node_id": "t6",
+      "label": "opponent",
+      "type": "entity"
+    },
+    {
+      "node_id": "t8",
+      "label": "opinion",
+      "type": "entity"
+    },
+    {
+      "node_id": "t9",
+      "label": "stance",
+      "type": "property"
+    },
+    {
+      "node_id": "t2",
+      "label": "argument",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t1",
+      "label": "knowledge",
+      "type": "substance"
+    },
+    {
+      "node_id": "t7",
+      "label": "intellect",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t10",
+      "label": "topic",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t3",
+      "label": "issue",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t4",
+      "label": "convincing",
+      "type": "process"
+    },
+    {
+      "node_id": "t5",
+      "label": "argumentation",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t6",
+        "t8",
+        "t9",
+        "t2",
+        "t1",
+        "t7",
+        "t10",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t6": "correlate",
+        "t8": "correlate",
+        "t9": "correlate",
+        "t2": "correlate",
+        "t1": "correlate",
+        "t7": "correlate",
+        "t10": "correlate",
+        "t3": "correlate",
+        "t4": "correlate",
+        "t5": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0035",
+    "structure_source": "provided"
+  }
+}

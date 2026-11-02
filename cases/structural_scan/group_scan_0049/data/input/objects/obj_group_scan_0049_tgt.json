@@ -1,0 +1,60 @@
+{
+  "object_id": "obj_group_scan_0049_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "crime",
+  "nodes": [
+    {
+      "node_id": "t2",
+      "label": "spree",
+      "type": "process"
+    },
+    {
+      "node_id": "t5",
+      "label": "spread",
+      "type": "process"
+    },
+    {
+      "node_id": "t1",
+      "label": "information",
+      "type": "substance"
+    },
+    {
+      "node_id": "t3",
+      "label": "education",
+      "type": "process"
+    },
+    {
+      "node_id": "t4",
+      "label": "poverty",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t2",
+        "t5",
+        "t1",
+        "t3",
+        "t4"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t2": "correlate",
+        "t5": "correlate",
+        "t1": "correlate",
+        "t3": "correlate",
+        "t4": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0049",
+    "structure_source": "provided"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "object_id": "obj_group_scan_0059_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "state",
+  "nodes": [
+    {
+      "node_id": "t6",
+      "label": "president",
+      "type": "entity"
+    },
+    {
+      "node_id": "t4",
+      "label": "governor",
+      "type": "entity"
+    },
+    {
+      "node_id": "t1",
+      "label": "citizen",
+      "type": "entity"
+    },
+    {
+      "node_id": "t7",
+      "label": "law",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t5",
+      "label": "government",
+      "type": "entity"
+    },
+    {
+      "node_id": "t3",
+      "label": "subsidies",
+      "type": "substance"
+    },
+    {
+      "node_id": "t2",
+      "label": "nation",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t6",
+        "t4",
+        "t1",
+        "t7",
+        "t5",
+        "t3",
+        "t2"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t6": "correlate",
+        "t4": "correlate",
+        "t1": "correlate",
+        "t7": "correlate",
+        "t5": "correlate",
+        "t3": "correlate",
+        "t2": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0059",
+    "structure_source": "provided"
+  }
+}

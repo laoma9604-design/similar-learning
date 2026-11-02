@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_scan_0059_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "family",
+  "nodes": [
+    {
+      "node_id": "s5",
+      "label": "father",
+      "type": "entity"
+    },
+    {
+      "node_id": "s2",
+      "label": "child",
+      "type": "entity"
+    },
+    {
+      "node_id": "s4",
+      "label": "rule",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "s3",
+      "label": "parent",
+      "type": "entity"
+    },
+    {
+      "node_id": "s6",
+      "label": "food",
+      "type": "substance"
+    },
+    {
+      "node_id": "s1",
+      "label": "home",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s5",
+        "s2",
+        "s4",
+        "s3",
+        "s6",
+        "s1"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s5": "hub",
+        "s2": "correlate",
+        "s4": "correlate",
+        "s3": "correlate",
+        "s6": "correlate",
+        "s1": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0059",
+    "structure_source": "provided"
+  }
+}

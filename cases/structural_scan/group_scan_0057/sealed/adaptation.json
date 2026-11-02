@@ -1,0 +1,193 @@
+{
+  "adaptation_id": "adapt_scan_0056",
+  "dataset": "scan",
+  "original_id": "group_scan_0057",
+  "mapping_group_id": "group_scan_0057",
+  "source_object_id": "obj_group_scan_0057_src",
+  "target_object_id": "obj_group_scan_0057_tgt",
+  "faithful_mappings": [
+    [
+      "citizen",
+      "passenger"
+    ],
+    [
+      "people",
+      "passengers"
+    ],
+    [
+      "law",
+      "tracks"
+    ],
+    [
+      "constitution",
+      "tracks"
+    ],
+    [
+      "history",
+      "route"
+    ],
+    [
+      "class",
+      "coach"
+    ],
+    [
+      "leader",
+      "driver"
+    ],
+    [
+      "passport",
+      "ticket"
+    ],
+    [
+      "future",
+      "destination"
+    ],
+    [
+      "budget",
+      "fuel"
+    ]
+  ],
+  "explanation": [],
+  "background": {
+    "source": "",
+    "target": ""
+  },
+  "raw": {
+    "target": "society",
+    "source": "train",
+    "row_indices": [
+      382,
+      383,
+      384,
+      385,
+      386,
+      387,
+      388,
+      389,
+      390,
+      391
+    ],
+    "rows": [
+      {
+        "target": "society",
+        "source": "train",
+        "targ_word": "citizen",
+        "src_word": "passenger",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "society",
+        "source": "train",
+        "targ_word": "people",
+        "src_word": "passengers",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "society",
+        "source": "train",
+        "targ_word": "law",
+        "src_word": "tracks",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "society",
+        "source": "train",
+        "targ_word": "constitution",
+        "src_word": "tracks",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "society",
+        "source": "train",
+        "targ_word": "history",
+        "src_word": "route",
+        "alternatives": "itinerary",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "society",
+        "source": "train",
+        "targ_word": "class",
+        "src_word": "coach",
+        "alternatives": "car",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "society",
+        "source": "train",
+        "targ_word": "leader",
+        "src_word": "driver",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "society",
+        "source": "train",
+        "targ_word": "passport",
+        "src_word": "ticket",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "society",
+        "source": "train",
+        "targ_word": "future",
+        "src_word": "destination",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "society",
+        "source": "train",
+        "targ_word": "budget",
+        "src_word": "fuel",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      }
+    ]
+  },
+  "structure_source": "provided",
+  "node_type_source": "inferred",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "s9": "t9",
+        "s6": "t3",
+        "s3": "t6",
+        "s5": "t4",
+        "s2": "t7",
+        "s4": "t1",
+        "s1": "t2",
+        "s7": "t8",
+        "s8": "t5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "structural_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "multiple_mapping_type": "many_to_one",
+  "analogue_type": "metaphor",
+  "alternatives": [
+    "itinerary",
+    "car"
+  ],
+  "system": {
+    "source": "train",
+    "target": "society"
+  },
+  "note": "映射来自原文 (target,source,targ_word,src_word) 四列；SCAN 无 Explanation/background/domain/role 表述，对应字段留空且 ref_roles 为空（不启用 role_consistency）。节点类型按词表 discriminator 推断（node_type_source=inferred）。alternatives 是额外候选词，不是关系依据，仅存封存供复核。"
+}

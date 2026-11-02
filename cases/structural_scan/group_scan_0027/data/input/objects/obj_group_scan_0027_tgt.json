@@ -1,0 +1,53 @@
+{
+  "object_id": "obj_group_scan_0027_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "career",
+  "nodes": [
+    {
+      "node_id": "t2",
+      "label": "success",
+      "type": "property"
+    },
+    {
+      "node_id": "t4",
+      "label": "failure",
+      "type": "property"
+    },
+    {
+      "node_id": "t3",
+      "label": "work",
+      "type": "process"
+    },
+    {
+      "node_id": "t1",
+      "label": "worker",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t2",
+        "t4",
+        "t3",
+        "t1"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t2": "correlate",
+        "t4": "correlate",
+        "t3": "correlate",
+        "t1": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0027",
+    "structure_source": "provided"
+  }
+}

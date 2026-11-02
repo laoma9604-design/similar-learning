@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_scan_0041_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "knowledge",
+  "nodes": [
+    {
+      "node_id": "t5",
+      "label": "mind",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t2",
+      "label": "memory",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t3",
+      "label": "conversation",
+      "type": "process"
+    },
+    {
+      "node_id": "t4",
+      "label": "forgetting",
+      "type": "process"
+    },
+    {
+      "node_id": "t1",
+      "label": "repository",
+      "type": "entity"
+    },
+    {
+      "node_id": "t6",
+      "label": "book",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t5",
+        "t2",
+        "t3",
+        "t4",
+        "t1",
+        "t6"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t5": "correlate",
+        "t2": "correlate",
+        "t3": "correlate",
+        "t4": "correlate",
+        "t1": "correlate",
+        "t6": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0041",
+    "structure_source": "provided"
+  }
+}

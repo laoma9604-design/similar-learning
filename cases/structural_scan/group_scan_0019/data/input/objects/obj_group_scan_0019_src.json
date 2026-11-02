@@ -1,0 +1,81 @@
+{
+  "object_id": "obj_group_scan_0019_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "following",
+  "nodes": [
+    {
+      "node_id": "s8",
+      "label": "follow",
+      "type": "process"
+    },
+    {
+      "node_id": "s3",
+      "label": "leader",
+      "type": "entity"
+    },
+    {
+      "node_id": "s1",
+      "label": "path",
+      "type": "entity"
+    },
+    {
+      "node_id": "s2",
+      "label": "follower",
+      "type": "entity"
+    },
+    {
+      "node_id": "s6",
+      "label": "lost",
+      "type": "property"
+    },
+    {
+      "node_id": "s4",
+      "label": "wanders",
+      "type": "process"
+    },
+    {
+      "node_id": "s7",
+      "label": "twisted",
+      "type": "property"
+    },
+    {
+      "node_id": "s5",
+      "label": "straight",
+      "type": "property"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s8",
+        "s3",
+        "s1",
+        "s2",
+        "s6",
+        "s4",
+        "s7",
+        "s5"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s8": "correlate",
+        "s3": "correlate",
+        "s1": "correlate",
+        "s2": "correlate",
+        "s6": "correlate",
+        "s4": "correlate",
+        "s7": "correlate",
+        "s5": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0019",
+    "structure_source": "provided"
+  }
+}

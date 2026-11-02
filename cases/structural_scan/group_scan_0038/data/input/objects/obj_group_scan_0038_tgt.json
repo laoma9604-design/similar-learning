@@ -1,0 +1,60 @@
+{
+  "object_id": "obj_group_scan_0038_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "competition",
+  "nodes": [
+    {
+      "node_id": "t1",
+      "label": "competitor",
+      "type": "entity"
+    },
+    {
+      "node_id": "t5",
+      "label": "business",
+      "type": "process"
+    },
+    {
+      "node_id": "t3",
+      "label": "market",
+      "type": "entity"
+    },
+    {
+      "node_id": "t2",
+      "label": "success",
+      "type": "property"
+    },
+    {
+      "node_id": "t4",
+      "label": "failure",
+      "type": "property"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t1",
+        "t5",
+        "t3",
+        "t2",
+        "t4"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t1": "correlate",
+        "t5": "correlate",
+        "t3": "correlate",
+        "t2": "correlate",
+        "t4": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0038",
+    "structure_source": "provided"
+  }
+}

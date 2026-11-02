@@ -1,0 +1,60 @@
+{
+  "object_id": "obj_group_scan_0047_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "husbandry",
+  "nodes": [
+    {
+      "node_id": "s1",
+      "label": "herder",
+      "type": "entity"
+    },
+    {
+      "node_id": "s4",
+      "label": "sheep",
+      "type": "entity"
+    },
+    {
+      "node_id": "s3",
+      "label": "mastery",
+      "type": "property"
+    },
+    {
+      "node_id": "s5",
+      "label": "slaughter",
+      "type": "process"
+    },
+    {
+      "node_id": "s2",
+      "label": "herd",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s1",
+        "s4",
+        "s3",
+        "s5",
+        "s2"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s1": "correlate",
+        "s4": "correlate",
+        "s3": "correlate",
+        "s5": "correlate",
+        "s2": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0047",
+    "structure_source": "provided"
+  }
+}

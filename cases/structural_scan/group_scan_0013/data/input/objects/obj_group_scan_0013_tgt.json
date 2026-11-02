@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_scan_0013_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "reasons for a theory",
+  "nodes": [
+    {
+      "node_id": "t4",
+      "label": "reasons",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t3",
+      "label": "theories",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t6",
+      "label": "confirming",
+      "type": "process"
+    },
+    {
+      "node_id": "t2",
+      "label": "rational",
+      "type": "property"
+    },
+    {
+      "node_id": "t5",
+      "label": "dubious",
+      "type": "property"
+    },
+    {
+      "node_id": "t1",
+      "label": "flaw",
+      "type": "property"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t4",
+        "t3",
+        "t6",
+        "t2",
+        "t5",
+        "t1"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t4": "correlate",
+        "t3": "correlate",
+        "t6": "correlate",
+        "t2": "correlate",
+        "t5": "correlate",
+        "t1": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0013",
+    "structure_source": "provided"
+  }
+}

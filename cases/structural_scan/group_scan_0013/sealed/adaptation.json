@@ -1,0 +1,135 @@
+{
+  "adaptation_id": "adapt_scan_0012",
+  "dataset": "scan",
+  "original_id": "group_scan_0013",
+  "mapping_group_id": "group_scan_0013",
+  "source_object_id": "obj_group_scan_0013_src",
+  "target_object_id": "obj_group_scan_0013_tgt",
+  "faithful_mappings": [
+    [
+      "reasons",
+      "foundations"
+    ],
+    [
+      "theories",
+      "buildings"
+    ],
+    [
+      "confirming",
+      "supporting"
+    ],
+    [
+      "rational",
+      "solid"
+    ],
+    [
+      "dubious",
+      "weak"
+    ],
+    [
+      "flaw",
+      "crack"
+    ]
+  ],
+  "explanation": [],
+  "background": {
+    "source": "",
+    "target": ""
+  },
+  "raw": {
+    "target": "reasons for a theory",
+    "source": "grounds for a building",
+    "row_indices": [
+      80,
+      81,
+      82,
+      83,
+      84,
+      85
+    ],
+    "rows": [
+      {
+        "target": "reasons for a theory",
+        "source": "grounds for a building",
+        "targ_word": "reasons",
+        "src_word": "foundations",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "reasons for a theory",
+        "source": "grounds for a building",
+        "targ_word": "theories",
+        "src_word": "buildings",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "reasons for a theory",
+        "source": "grounds for a building",
+        "targ_word": "confirming",
+        "src_word": "supporting",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "reasons for a theory",
+        "source": "grounds for a building",
+        "targ_word": "rational",
+        "src_word": "solid",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "reasons for a theory",
+        "source": "grounds for a building",
+        "targ_word": "dubious",
+        "src_word": "weak",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "reasons for a theory",
+        "source": "grounds for a building",
+        "targ_word": "flaw",
+        "src_word": "crack",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      }
+    ]
+  },
+  "structure_source": "provided",
+  "node_type_source": "inferred",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "s2": "t4",
+        "s3": "t3",
+        "s1": "t6",
+        "s5": "t2",
+        "s4": "t5",
+        "s6": "t1"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "structural_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "multiple_mapping_type": "none",
+  "analogue_type": "metaphor",
+  "alternatives": [],
+  "system": {
+    "source": "grounds for a building",
+    "target": "reasons for a theory"
+  },
+  "note": "映射来自原文 (target,source,targ_word,src_word) 四列；SCAN 无 Explanation/background/domain/role 表述，对应字段留空且 ref_roles 为空（不启用 role_consistency）。节点类型按词表 discriminator 推断（node_type_source=inferred）。alternatives 是额外候选词，不是关系依据，仅存封存供复核。"
+}

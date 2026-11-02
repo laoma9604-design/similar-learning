@@ -1,0 +1,60 @@
+{
+  "object_id": "obj_group_scan_0015_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "money",
+  "nodes": [
+    {
+      "node_id": "s2",
+      "label": "allocate",
+      "type": "process"
+    },
+    {
+      "node_id": "s5",
+      "label": "budget",
+      "type": "property"
+    },
+    {
+      "node_id": "s3",
+      "label": "effective",
+      "type": "property"
+    },
+    {
+      "node_id": "s4",
+      "label": "cheap",
+      "type": "property"
+    },
+    {
+      "node_id": "s1",
+      "label": "expensive",
+      "type": "property"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s2",
+        "s5",
+        "s3",
+        "s4",
+        "s1"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s2": "correlate",
+        "s5": "correlate",
+        "s3": "correlate",
+        "s4": "correlate",
+        "s1": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0015",
+    "structure_source": "provided"
+  }
+}

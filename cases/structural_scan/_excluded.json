@@ -1,0 +1,9 @@
+{
+  "dataset": "scan",
+  "source": "data/raw/scan/data/SCAN_dataset.csv",
+  "raw_count": 65,
+  "included": 65,
+  "excluded_count": 0,
+  "rule": "C1 结构不足（空端点 / 映射对<2 / 缺 analogy_type）。",
+  "records": []
+}

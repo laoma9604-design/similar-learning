@@ -1,0 +1,135 @@
+{
+  "adaptation_id": "adapt_scan_0015",
+  "dataset": "scan",
+  "original_id": "group_scan_0016",
+  "mapping_group_id": "group_scan_0016",
+  "source_object_id": "obj_group_scan_0016_src",
+  "target_object_id": "obj_group_scan_0016_tgt",
+  "faithful_mappings": [
+    [
+      "inspired",
+      "planted"
+    ],
+    [
+      "productive",
+      "fruitful"
+    ],
+    [
+      "product",
+      "fruit"
+    ],
+    [
+      "develop",
+      "grow"
+    ],
+    [
+      "fail",
+      "wither"
+    ],
+    [
+      "succeed",
+      "blossom"
+    ]
+  ],
+  "explanation": [],
+  "background": {
+    "source": "",
+    "target": ""
+  },
+  "raw": {
+    "target": "ideas",
+    "source": "seeds",
+    "row_indices": [
+      98,
+      99,
+      100,
+      101,
+      102,
+      103
+    ],
+    "rows": [
+      {
+        "target": "ideas",
+        "source": "seeds",
+        "targ_word": "inspired",
+        "src_word": "planted",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "ideas",
+        "source": "seeds",
+        "targ_word": "productive",
+        "src_word": "fruitful",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "ideas",
+        "source": "seeds",
+        "targ_word": "product",
+        "src_word": "fruit",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "ideas",
+        "source": "seeds",
+        "targ_word": "develop",
+        "src_word": "grow",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "ideas",
+        "source": "seeds",
+        "targ_word": "fail",
+        "src_word": "wither",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "ideas",
+        "source": "seeds",
+        "targ_word": "succeed",
+        "src_word": "blossom",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      }
+    ]
+  },
+  "structure_source": "provided",
+  "node_type_source": "inferred",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "s6": "t4",
+        "s1": "t2",
+        "s3": "t5",
+        "s2": "t6",
+        "s5": "t1",
+        "s4": "t3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "structural_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "multiple_mapping_type": "none",
+  "analogue_type": "metaphor",
+  "alternatives": [],
+  "system": {
+    "source": "seeds",
+    "target": "ideas"
+  },
+  "note": "映射来自原文 (target,source,targ_word,src_word) 四列；SCAN 无 Explanation/background/domain/role 表述，对应字段留空且 ref_roles 为空（不启用 role_consistency）。节点类型按词表 discriminator 推断（node_type_source=inferred）。alternatives 是额外候选词，不是关系依据，仅存封存供复核。"
+}

@@ -1,0 +1,102 @@
+{
+  "object_id": "obj_group_scan_0032_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "food",
+  "nodes": [
+    {
+      "node_id": "s2",
+      "label": "eating",
+      "type": "process"
+    },
+    {
+      "node_id": "s5",
+      "label": "digestion",
+      "type": "process"
+    },
+    {
+      "node_id": "s7",
+      "label": "feeding",
+      "type": "process"
+    },
+    {
+      "node_id": "s8",
+      "label": "food",
+      "type": "substance"
+    },
+    {
+      "node_id": "s10",
+      "label": "cooking",
+      "type": "process"
+    },
+    {
+      "node_id": "s11",
+      "label": "appetite",
+      "type": "property"
+    },
+    {
+      "node_id": "s6",
+      "label": "flavor",
+      "type": "property"
+    },
+    {
+      "node_id": "s3",
+      "label": "freshness",
+      "type": "property"
+    },
+    {
+      "node_id": "s4",
+      "label": "staleness",
+      "type": "property"
+    },
+    {
+      "node_id": "s9",
+      "label": "seasoning",
+      "type": "substance"
+    },
+    {
+      "node_id": "s1",
+      "label": "nutrition",
+      "type": "property"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s2",
+        "s5",
+        "s7",
+        "s8",
+        "s10",
+        "s11",
+        "s6",
+        "s3",
+        "s4",
+        "s9",
+        "s1"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s2": "correlate",
+        "s5": "correlate",
+        "s7": "hub",
+        "s8": "correlate",
+        "s10": "hub",
+        "s11": "correlate",
+        "s6": "correlate",
+        "s3": "correlate",
+        "s4": "correlate",
+        "s9": "correlate",
+        "s1": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0032",
+    "structure_source": "provided"
+  }
+}

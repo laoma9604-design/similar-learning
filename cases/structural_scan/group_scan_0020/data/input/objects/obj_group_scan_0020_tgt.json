@@ -1,0 +1,60 @@
+{
+  "object_id": "obj_group_scan_0020_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "understanding",
+  "nodes": [
+    {
+      "node_id": "t4",
+      "label": "knowledge",
+      "type": "substance"
+    },
+    {
+      "node_id": "t2",
+      "label": "explaining",
+      "type": "process"
+    },
+    {
+      "node_id": "t3",
+      "label": "confusion",
+      "type": "property"
+    },
+    {
+      "node_id": "t5",
+      "label": "interpretation",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t1",
+      "label": "secret",
+      "type": "abstract_concept"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t4",
+        "t2",
+        "t3",
+        "t5",
+        "t1"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t4": "correlate",
+        "t2": "correlate",
+        "t3": "correlate",
+        "t5": "correlate",
+        "t1": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0020",
+    "structure_source": "provided"
+  }
+}

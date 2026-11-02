@@ -1,0 +1,123 @@
+{
+  "adaptation_id": "adapt_scan_0045",
+  "dataset": "scan",
+  "original_id": "group_scan_0046",
+  "mapping_group_id": "group_scan_0046",
+  "source_object_id": "obj_group_scan_0046_src",
+  "target_object_id": "obj_group_scan_0046_tgt",
+  "faithful_mappings": [
+    [
+      "law",
+      "father"
+    ],
+    [
+      "public",
+      "children"
+    ],
+    [
+      "crime",
+      "disobedience"
+    ],
+    [
+      "imprisonment",
+      "punishment"
+    ],
+    [
+      "aid",
+      "nurture"
+    ]
+  ],
+  "explanation": [],
+  "background": {
+    "source": "",
+    "target": ""
+  },
+  "raw": {
+    "target": "nation",
+    "source": "family",
+    "row_indices": [
+      303,
+      304,
+      305,
+      306,
+      307
+    ],
+    "rows": [
+      {
+        "target": "nation",
+        "source": "family",
+        "targ_word": "law",
+        "src_word": "father",
+        "alternatives": "rule",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "nation",
+        "source": "family",
+        "targ_word": "public ",
+        "src_word": "children",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "nation",
+        "source": "family",
+        "targ_word": "crime",
+        "src_word": "disobedience",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "nation",
+        "source": "family",
+        "targ_word": "imprisonment",
+        "src_word": "punishment",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "nation",
+        "source": "family",
+        "targ_word": "aid",
+        "src_word": "nurture",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      }
+    ]
+  },
+  "structure_source": "provided",
+  "node_type_source": "inferred",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "s2": "t3",
+        "s3": "t4",
+        "s4": "t5",
+        "s5": "t1",
+        "s1": "t2"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "structural_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "multiple_mapping_type": "none",
+  "analogue_type": "metaphor",
+  "alternatives": [
+    "rule"
+  ],
+  "system": {
+    "source": "family",
+    "target": "nation"
+  },
+  "note": "映射来自原文 (target,source,targ_word,src_word) 四列；SCAN 无 Explanation/background/domain/role 表述，对应字段留空且 ref_roles 为空（不启用 role_consistency）。节点类型按词表 discriminator 推断（node_type_source=inferred）。alternatives 是额外候选词，不是关系依据，仅存封存供复核。"
+}

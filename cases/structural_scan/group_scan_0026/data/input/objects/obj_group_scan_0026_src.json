@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_scan_0026_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "hill",
+  "nodes": [
+    {
+      "node_id": "s5",
+      "label": "ascent",
+      "type": "process"
+    },
+    {
+      "node_id": "s1",
+      "label": "descent",
+      "type": "process"
+    },
+    {
+      "node_id": "s4",
+      "label": "climb",
+      "type": "process"
+    },
+    {
+      "node_id": "s3",
+      "label": "lift",
+      "type": "entity"
+    },
+    {
+      "node_id": "s2",
+      "label": "guide",
+      "type": "entity"
+    },
+    {
+      "node_id": "s6",
+      "label": "climber",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s5",
+        "s1",
+        "s4",
+        "s3",
+        "s2",
+        "s6"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s5": "correlate",
+        "s1": "correlate",
+        "s4": "correlate",
+        "s3": "correlate",
+        "s2": "correlate",
+        "s6": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0026",
+    "structure_source": "provided"
+  }
+}

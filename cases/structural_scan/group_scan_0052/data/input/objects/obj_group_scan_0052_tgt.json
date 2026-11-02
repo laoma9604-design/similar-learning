@@ -1,0 +1,74 @@
+{
+  "object_id": "obj_group_scan_0052_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "love",
+  "nodes": [
+    {
+      "node_id": "t3",
+      "label": "lover",
+      "type": "entity"
+    },
+    {
+      "node_id": "t4",
+      "label": "relationship",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t2",
+      "label": "happiness",
+      "type": "property"
+    },
+    {
+      "node_id": "t5",
+      "label": "separation",
+      "type": "process"
+    },
+    {
+      "node_id": "t6",
+      "label": "improvement",
+      "type": "process"
+    },
+    {
+      "node_id": "t7",
+      "label": "stage",
+      "type": "entity"
+    },
+    {
+      "node_id": "t1",
+      "label": "difficulty",
+      "type": "property"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t3",
+        "t4",
+        "t2",
+        "t5",
+        "t6",
+        "t7",
+        "t1"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t3": "correlate",
+        "t4": "correlate",
+        "t2": "correlate",
+        "t5": "correlate",
+        "t6": "correlate",
+        "t7": "correlate",
+        "t1": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0052",
+    "structure_source": "provided"
+  }
+}

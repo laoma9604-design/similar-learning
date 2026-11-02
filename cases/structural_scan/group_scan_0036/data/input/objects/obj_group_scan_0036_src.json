@@ -1,0 +1,39 @@
+{
+  "object_id": "obj_group_scan_0036_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "weapon",
+  "nodes": [
+    {
+      "node_id": "s1",
+      "label": "fighter",
+      "type": "entity"
+    },
+    {
+      "node_id": "s2",
+      "label": "war",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s1",
+        "s2"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s1": "hub",
+        "s2": "hub"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0036",
+    "structure_source": "provided"
+  }
+}

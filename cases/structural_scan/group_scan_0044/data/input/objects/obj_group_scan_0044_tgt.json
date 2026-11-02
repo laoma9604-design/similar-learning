@@ -1,0 +1,88 @@
+{
+  "object_id": "obj_group_scan_0044_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "val",
+  "label": "marriage",
+  "nodes": [
+    {
+      "node_id": "t2",
+      "label": "spouse",
+      "type": "entity"
+    },
+    {
+      "node_id": "t5",
+      "label": "divorce",
+      "type": "process"
+    },
+    {
+      "node_id": "t1",
+      "label": "quarrel",
+      "type": "process"
+    },
+    {
+      "node_id": "t8",
+      "label": "anger",
+      "type": "property"
+    },
+    {
+      "node_id": "t3",
+      "label": "happiness",
+      "type": "property"
+    },
+    {
+      "node_id": "t9",
+      "label": "love",
+      "type": "property"
+    },
+    {
+      "node_id": "t4",
+      "label": "affair",
+      "type": "process"
+    },
+    {
+      "node_id": "t7",
+      "label": "problem",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t6",
+      "label": "home",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t2",
+        "t5",
+        "t1",
+        "t8",
+        "t3",
+        "t9",
+        "t4",
+        "t7",
+        "t6"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t2": "correlate",
+        "t5": "correlate",
+        "t1": "correlate",
+        "t8": "correlate",
+        "t3": "correlate",
+        "t9": "correlate",
+        "t4": "correlate",
+        "t7": "correlate",
+        "t6": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0044",
+    "structure_source": "provided"
+  }
+}

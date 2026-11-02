@@ -1,0 +1,60 @@
+{
+  "object_id": "obj_group_scan_0020_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "seeing",
+  "nodes": [
+    {
+      "node_id": "s1",
+      "label": "light",
+      "type": "property"
+    },
+    {
+      "node_id": "s4",
+      "label": "illuminating",
+      "type": "process"
+    },
+    {
+      "node_id": "s2",
+      "label": "darkness",
+      "type": "property"
+    },
+    {
+      "node_id": "s3",
+      "label": "view",
+      "type": "property"
+    },
+    {
+      "node_id": "s5",
+      "label": "hidden",
+      "type": "property"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s1",
+        "s4",
+        "s2",
+        "s3",
+        "s5"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s1": "correlate",
+        "s4": "correlate",
+        "s2": "correlate",
+        "s3": "correlate",
+        "s5": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0020",
+    "structure_source": "provided"
+  }
+}

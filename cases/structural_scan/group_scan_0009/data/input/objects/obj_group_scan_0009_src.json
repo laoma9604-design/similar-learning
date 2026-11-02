@@ -1,0 +1,116 @@
+{
+  "object_id": "obj_group_scan_0009_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "val",
+  "label": "computer",
+  "nodes": [
+    {
+      "node_id": "s10",
+      "label": "processing",
+      "type": "process"
+    },
+    {
+      "node_id": "s9",
+      "label": "erasing",
+      "type": "process"
+    },
+    {
+      "node_id": "s8",
+      "label": "write",
+      "type": "process"
+    },
+    {
+      "node_id": "s12",
+      "label": "read",
+      "type": "process"
+    },
+    {
+      "node_id": "s11",
+      "label": "memory",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "s13",
+      "label": "outputs",
+      "type": "entity"
+    },
+    {
+      "node_id": "s7",
+      "label": "inputs",
+      "type": "entity"
+    },
+    {
+      "node_id": "s4",
+      "label": "bug",
+      "type": "entity"
+    },
+    {
+      "node_id": "s3",
+      "label": "hardware",
+      "type": "entity"
+    },
+    {
+      "node_id": "s1",
+      "label": "software",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "s6",
+      "label": "CPU",
+      "type": "entity"
+    },
+    {
+      "node_id": "s2",
+      "label": "RAM",
+      "type": "entity"
+    },
+    {
+      "node_id": "s5",
+      "label": "data",
+      "type": "substance"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s10",
+        "s9",
+        "s8",
+        "s12",
+        "s11",
+        "s13",
+        "s7",
+        "s4",
+        "s3",
+        "s1",
+        "s6",
+        "s2",
+        "s5"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s10": "correlate",
+        "s9": "correlate",
+        "s8": "correlate",
+        "s12": "correlate",
+        "s11": "correlate",
+        "s13": "correlate",
+        "s7": "correlate",
+        "s4": "correlate",
+        "s3": "hub",
+        "s1": "correlate",
+        "s6": "correlate",
+        "s2": "correlate",
+        "s5": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0009",
+    "structure_source": "provided"
+  }
+}

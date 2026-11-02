@@ -1,0 +1,53 @@
+{
+  "object_id": "obj_group_scan_0018_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "object",
+  "nodes": [
+    {
+      "node_id": "s2",
+      "label": "hold",
+      "type": "process"
+    },
+    {
+      "node_id": "s1",
+      "label": "weigh",
+      "type": "process"
+    },
+    {
+      "node_id": "s4",
+      "label": "heavy",
+      "type": "property"
+    },
+    {
+      "node_id": "s3",
+      "label": "light",
+      "type": "property"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s2",
+        "s1",
+        "s4",
+        "s3"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s2": "correlate",
+        "s1": "correlate",
+        "s4": "correlate",
+        "s3": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0018",
+    "structure_source": "provided"
+  }
+}

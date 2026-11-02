@@ -1,0 +1,123 @@
+{
+  "adaptation_id": "adapt_scan_0037",
+  "dataset": "scan",
+  "original_id": "group_scan_0038",
+  "mapping_group_id": "group_scan_0038",
+  "source_object_id": "obj_group_scan_0038_src",
+  "target_object_id": "obj_group_scan_0038_tgt",
+  "faithful_mappings": [
+    [
+      "competitor",
+      "racer"
+    ],
+    [
+      "business",
+      "racer"
+    ],
+    [
+      "market",
+      "track"
+    ],
+    [
+      "success",
+      "speed"
+    ],
+    [
+      "failure",
+      "setback"
+    ]
+  ],
+  "explanation": [],
+  "background": {
+    "source": "",
+    "target": ""
+  },
+  "raw": {
+    "target": "competition",
+    "source": "race",
+    "row_indices": [
+      236,
+      237,
+      238,
+      239,
+      240
+    ],
+    "rows": [
+      {
+        "target": "competition",
+        "source": "race",
+        "targ_word": "competitor",
+        "src_word": "racer",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "competition",
+        "source": "race",
+        "targ_word": "business",
+        "src_word": "racer",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "competition",
+        "source": "race",
+        "targ_word": "market",
+        "src_word": "track",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "competition",
+        "source": "race",
+        "targ_word": "success",
+        "src_word": "speed",
+        "alternatives": "finish",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "competition",
+        "source": "race",
+        "targ_word": "failure",
+        "src_word": "setback",
+        "alternatives": "lag",
+        "analogy_type": "metaphor"
+      }
+    ]
+  },
+  "structure_source": "provided",
+  "node_type_source": "inferred",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "s1": "t1",
+        "s4": "t3",
+        "s3": "t2",
+        "s2": "t4"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "structural_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "multiple_mapping_type": "many_to_one",
+  "analogue_type": "metaphor",
+  "alternatives": [
+    "finish",
+    "lag"
+  ],
+  "system": {
+    "source": "race",
+    "target": "competition"
+  },
+  "note": "映射来自原文 (target,source,targ_word,src_word) 四列；SCAN 无 Explanation/background/domain/role 表述，对应字段留空且 ref_roles 为空（不启用 role_consistency）。节点类型按词表 discriminator 推断（node_type_source=inferred）。alternatives 是额外候选词，不是关系依据，仅存封存供复核。"
+}

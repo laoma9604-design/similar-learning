@@ -1,0 +1,95 @@
+{
+  "object_id": "obj_group_scan_0033_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "test",
+  "label": "theory",
+  "nodes": [
+    {
+      "node_id": "t9",
+      "label": "conjecture",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t10",
+      "label": "idea",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t8",
+      "label": "data",
+      "type": "substance"
+    },
+    {
+      "node_id": "t5",
+      "label": "evidence",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t4",
+      "label": "relation",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t2",
+      "label": "concept",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t6",
+      "label": "axiom",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t3",
+      "label": "proposition",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t1",
+      "label": "logic",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t7",
+      "label": "scientist",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t9",
+        "t10",
+        "t8",
+        "t5",
+        "t4",
+        "t2",
+        "t6",
+        "t3",
+        "t1",
+        "t7"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t9": "correlate",
+        "t10": "correlate",
+        "t8": "correlate",
+        "t5": "correlate",
+        "t4": "correlate",
+        "t2": "correlate",
+        "t6": "correlate",
+        "t3": "correlate",
+        "t1": "correlate",
+        "t7": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0033",
+    "structure_source": "provided"
+  }
+}

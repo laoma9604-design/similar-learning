@@ -1,0 +1,39 @@
+{
+  "object_id": "obj_group_scan_0034_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "test",
+  "label": "family",
+  "nodes": [
+    {
+      "node_id": "t2",
+      "label": "love",
+      "type": "property"
+    },
+    {
+      "node_id": "t1",
+      "label": "understanding",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t2",
+        "t1"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t2": "correlate",
+        "t1": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0034",
+    "structure_source": "provided"
+  }
+}

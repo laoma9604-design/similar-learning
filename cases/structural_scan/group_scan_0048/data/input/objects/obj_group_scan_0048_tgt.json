@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_scan_0048_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "crime",
+  "nodes": [
+    {
+      "node_id": "t6",
+      "label": "criminal",
+      "type": "entity"
+    },
+    {
+      "node_id": "t4",
+      "label": "victim",
+      "type": "entity"
+    },
+    {
+      "node_id": "t3",
+      "label": "arrest",
+      "type": "process"
+    },
+    {
+      "node_id": "t5",
+      "label": "jail",
+      "type": "entity"
+    },
+    {
+      "node_id": "t2",
+      "label": "investigation",
+      "type": "process"
+    },
+    {
+      "node_id": "t1",
+      "label": "execution",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t6",
+        "t4",
+        "t3",
+        "t5",
+        "t2",
+        "t1"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t6": "correlate",
+        "t4": "correlate",
+        "t3": "correlate",
+        "t5": "correlate",
+        "t2": "correlate",
+        "t1": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0048",
+    "structure_source": "provided"
+  }
+}

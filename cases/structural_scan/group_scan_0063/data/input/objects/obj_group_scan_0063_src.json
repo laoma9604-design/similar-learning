@@ -1,0 +1,53 @@
+{
+  "object_id": "obj_group_scan_0063_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "val",
+  "label": "game",
+  "nodes": [
+    {
+      "node_id": "s4",
+      "label": "player",
+      "type": "entity"
+    },
+    {
+      "node_id": "s1",
+      "label": "playground",
+      "type": "entity"
+    },
+    {
+      "node_id": "s3",
+      "label": "match",
+      "type": "process"
+    },
+    {
+      "node_id": "s2",
+      "label": "defeat",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s4",
+        "s1",
+        "s3",
+        "s2"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s4": "correlate",
+        "s1": "correlate",
+        "s3": "correlate",
+        "s2": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0063",
+    "structure_source": "provided"
+  }
+}

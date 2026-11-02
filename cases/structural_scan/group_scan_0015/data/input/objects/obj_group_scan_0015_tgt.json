@@ -1,0 +1,60 @@
+{
+  "object_id": "obj_group_scan_0015_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "time",
+  "nodes": [
+    {
+      "node_id": "t3",
+      "label": "invest",
+      "type": "process"
+    },
+    {
+      "node_id": "t1",
+      "label": "schedule",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t5",
+      "label": "efficient",
+      "type": "property"
+    },
+    {
+      "node_id": "t2",
+      "label": "quick",
+      "type": "property"
+    },
+    {
+      "node_id": "t4",
+      "label": "slow",
+      "type": "property"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t3",
+        "t1",
+        "t5",
+        "t2",
+        "t4"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t3": "correlate",
+        "t1": "correlate",
+        "t5": "correlate",
+        "t2": "correlate",
+        "t4": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0015",
+    "structure_source": "provided"
+  }
+}

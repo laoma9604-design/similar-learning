@@ -1,0 +1,60 @@
+{
+  "object_id": "obj_group_scan_0030_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "disease",
+  "nodes": [
+    {
+      "node_id": "s3",
+      "label": "doctor",
+      "type": "entity"
+    },
+    {
+      "node_id": "s2",
+      "label": "patient",
+      "type": "entity"
+    },
+    {
+      "node_id": "s1",
+      "label": "hospital",
+      "type": "entity"
+    },
+    {
+      "node_id": "s5",
+      "label": "medicine",
+      "type": "substance"
+    },
+    {
+      "node_id": "s4",
+      "label": "cure",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s3",
+        "s2",
+        "s1",
+        "s5",
+        "s4"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s3": "hub",
+        "s2": "correlate",
+        "s1": "correlate",
+        "s5": "hub",
+        "s4": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0030",
+    "structure_source": "provided"
+  }
+}

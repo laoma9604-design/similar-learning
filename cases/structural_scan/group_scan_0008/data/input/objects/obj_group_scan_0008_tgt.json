@@ -1,0 +1,81 @@
+{
+  "object_id": "obj_group_scan_0008_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "gas molecules",
+  "nodes": [
+    {
+      "node_id": "t3",
+      "label": "molecules",
+      "type": "substance"
+    },
+    {
+      "node_id": "t6",
+      "label": "gas",
+      "type": "substance"
+    },
+    {
+      "node_id": "t8",
+      "label": "temperature",
+      "type": "property"
+    },
+    {
+      "node_id": "t5",
+      "label": "container",
+      "type": "entity"
+    },
+    {
+      "node_id": "t4",
+      "label": "pressing",
+      "type": "process"
+    },
+    {
+      "node_id": "t2",
+      "label": "moving",
+      "type": "process"
+    },
+    {
+      "node_id": "t1",
+      "label": "cold",
+      "type": "property"
+    },
+    {
+      "node_id": "t7",
+      "label": "hot",
+      "type": "property"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t3",
+        "t6",
+        "t8",
+        "t5",
+        "t4",
+        "t2",
+        "t1",
+        "t7"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t3": "correlate",
+        "t6": "correlate",
+        "t8": "correlate",
+        "t5": "correlate",
+        "t4": "correlate",
+        "t2": "correlate",
+        "t1": "correlate",
+        "t7": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0008",
+    "structure_source": "provided"
+  }
+}

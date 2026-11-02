@@ -1,0 +1,60 @@
+{
+  "object_id": "obj_group_scan_0042_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "test",
+  "label": "hunt",
+  "nodes": [
+    {
+      "node_id": "s5",
+      "label": "prey",
+      "type": "entity"
+    },
+    {
+      "node_id": "s4",
+      "label": "slay",
+      "type": "process"
+    },
+    {
+      "node_id": "s3",
+      "label": "field",
+      "type": "entity"
+    },
+    {
+      "node_id": "s2",
+      "label": "hunter",
+      "type": "entity"
+    },
+    {
+      "node_id": "s1",
+      "label": "weapon",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s5",
+        "s4",
+        "s3",
+        "s2",
+        "s1"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s5": "hub",
+        "s4": "correlate",
+        "s3": "correlate",
+        "s2": "correlate",
+        "s1": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0042",
+    "structure_source": "provided"
+  }
+}

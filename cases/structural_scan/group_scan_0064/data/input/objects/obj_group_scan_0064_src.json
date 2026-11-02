@@ -1,0 +1,74 @@
+{
+  "object_id": "obj_group_scan_0064_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "test",
+  "label": "war",
+  "nodes": [
+    {
+      "node_id": "s3",
+      "label": "enemy",
+      "type": "entity"
+    },
+    {
+      "node_id": "s2",
+      "label": "battlefield",
+      "type": "entity"
+    },
+    {
+      "node_id": "s7",
+      "label": "weapon",
+      "type": "entity"
+    },
+    {
+      "node_id": "s4",
+      "label": "soldier",
+      "type": "entity"
+    },
+    {
+      "node_id": "s6",
+      "label": "trophy",
+      "type": "entity"
+    },
+    {
+      "node_id": "s1",
+      "label": "general",
+      "type": "entity"
+    },
+    {
+      "node_id": "s5",
+      "label": "army",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s3",
+        "s2",
+        "s7",
+        "s4",
+        "s6",
+        "s1",
+        "s5"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s3": "correlate",
+        "s2": "correlate",
+        "s7": "hub",
+        "s4": "correlate",
+        "s6": "hub",
+        "s1": "correlate",
+        "s5": "hub"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0064",
+    "structure_source": "provided"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_scan_0062_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "val",
+  "label": "machine",
+  "nodes": [
+    {
+      "node_id": "s5",
+      "label": "politician",
+      "type": "entity"
+    },
+    {
+      "node_id": "s4",
+      "label": "algorithm",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "s3",
+      "label": "operator",
+      "type": "entity"
+    },
+    {
+      "node_id": "s1",
+      "label": "oil",
+      "type": "substance"
+    },
+    {
+      "node_id": "s2",
+      "label": "breakdown",
+      "type": "process"
+    },
+    {
+      "node_id": "s6",
+      "label": "rust",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s5",
+        "s4",
+        "s3",
+        "s1",
+        "s2",
+        "s6"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s5": "correlate",
+        "s4": "correlate",
+        "s3": "correlate",
+        "s1": "hub",
+        "s2": "correlate",
+        "s6": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0062",
+    "structure_source": "provided"
+  }
+}

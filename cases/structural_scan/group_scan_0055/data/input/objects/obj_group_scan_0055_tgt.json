@@ -1,0 +1,60 @@
+{
+  "object_id": "obj_group_scan_0055_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "code",
+  "nodes": [
+    {
+      "node_id": "t3",
+      "label": "malware",
+      "type": "entity"
+    },
+    {
+      "node_id": "t5",
+      "label": "replication",
+      "type": "process"
+    },
+    {
+      "node_id": "t2",
+      "label": "installation",
+      "type": "process"
+    },
+    {
+      "node_id": "t4",
+      "label": "removal",
+      "type": "process"
+    },
+    {
+      "node_id": "t1",
+      "label": "antivirus",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t3",
+        "t5",
+        "t2",
+        "t4",
+        "t1"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t3": "correlate",
+        "t5": "correlate",
+        "t2": "correlate",
+        "t4": "correlate",
+        "t1": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0055",
+    "structure_source": "provided"
+  }
+}

@@ -1,0 +1,236 @@
+{
+  "adaptation_id": "adapt_scan_0031",
+  "dataset": "scan",
+  "original_id": "group_scan_0032",
+  "mapping_group_id": "group_scan_0032",
+  "source_object_id": "obj_group_scan_0032_src",
+  "target_object_id": "obj_group_scan_0032_tgt",
+  "faithful_mappings": [
+    [
+      "understanding",
+      "eating"
+    ],
+    [
+      "comprehension",
+      "digestion"
+    ],
+    [
+      "teaching",
+      "feeding"
+    ],
+    [
+      "persuading",
+      "feeding"
+    ],
+    [
+      "theory",
+      "food"
+    ],
+    [
+      "creativity",
+      "cooking"
+    ],
+    [
+      "curiosity",
+      "appetite"
+    ],
+    [
+      "interestingness",
+      "flavor"
+    ],
+    [
+      "thinking",
+      "cooking"
+    ],
+    [
+      "originality",
+      "freshness"
+    ],
+    [
+      "irrelevance",
+      "staleness"
+    ],
+    [
+      "provocation",
+      "seasoning"
+    ],
+    [
+      "learning",
+      "nutrition"
+    ]
+  ],
+  "explanation": [],
+  "background": {
+    "source": "",
+    "target": ""
+  },
+  "raw": {
+    "target": "idea",
+    "source": "food",
+    "row_indices": [
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      356,
+      357,
+      358,
+      359,
+      360,
+      361,
+      362
+    ],
+    "rows": [
+      {
+        "target": "idea",
+        "source": "food",
+        "targ_word": "understanding",
+        "src_word": "eating",
+        "alternatives": "consumption, digestion",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "idea",
+        "source": "food",
+        "targ_word": "comprehension",
+        "src_word": "digestion",
+        "alternatives": "ingestion",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "idea",
+        "source": "food",
+        "targ_word": "teaching",
+        "src_word": "feeding",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "idea",
+        "source": "food",
+        "targ_word": "persuading",
+        "src_word": "feeding",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "idea",
+        "source": "food",
+        "targ_word": "theory",
+        "src_word": "food",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "idea",
+        "source": "food",
+        "targ_word": "creativity",
+        "src_word": "cooking",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "idea",
+        "source": "food",
+        "targ_word": "curiosity",
+        "src_word": "appetite",
+        "alternatives": "hunger",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "idea",
+        "source": "food",
+        "targ_word": "interestingness",
+        "src_word": "flavor",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "idea",
+        "source": "food",
+        "targ_word": "thinking",
+        "src_word": "cooking",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "idea",
+        "source": "food",
+        "targ_word": "originality",
+        "src_word": "freshness",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "idea",
+        "source": "food",
+        "targ_word": "irrelevance",
+        "src_word": "staleness",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "idea",
+        "source": "food",
+        "targ_word": "provocation",
+        "src_word": "seasoning",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "idea",
+        "source": "food",
+        "targ_word": "learning",
+        "src_word": "nutrition",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      }
+    ]
+  },
+  "structure_source": "provided",
+  "node_type_source": "inferred",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "s2": "t12",
+        "s5": "t3",
+        "s7": "t5",
+        "s8": "t1",
+        "s10": "t10",
+        "s11": "t4",
+        "s6": "t7",
+        "s3": "t11",
+        "s4": "t2",
+        "s9": "t13",
+        "s1": "t6"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "structural_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "multiple_mapping_type": "many_to_one",
+  "analogue_type": "metaphor",
+  "alternatives": [
+    "consumption",
+    "digestion",
+    "ingestion",
+    "hunger"
+  ],
+  "system": {
+    "source": "food",
+    "target": "idea"
+  },
+  "note": "映射来自原文 (target,source,targ_word,src_word) 四列；SCAN 无 Explanation/background/domain/role 表述，对应字段留空且 ref_roles 为空（不启用 role_consistency）。节点类型按词表 discriminator 推断（node_type_source=inferred）。alternatives 是额外候选词，不是关系依据，仅存封存供复核。"
+}

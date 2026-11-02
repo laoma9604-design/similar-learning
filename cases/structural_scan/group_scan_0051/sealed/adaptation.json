@@ -1,0 +1,190 @@
+{
+  "adaptation_id": "adapt_scan_0050",
+  "dataset": "scan",
+  "original_id": "group_scan_0051",
+  "mapping_group_id": "group_scan_0051",
+  "source_object_id": "obj_group_scan_0051_src",
+  "target_object_id": "obj_group_scan_0051_tgt",
+  "faithful_mappings": [
+    [
+      "patient",
+      "traveler"
+    ],
+    [
+      "virus",
+      "vehicle"
+    ],
+    [
+      "disease",
+      "vehicle"
+    ],
+    [
+      "diagnosis",
+      "station"
+    ],
+    [
+      "remission",
+      "station"
+    ],
+    [
+      "course",
+      "path"
+    ],
+    [
+      "stage",
+      "milestone"
+    ],
+    [
+      "death",
+      "destination"
+    ],
+    [
+      "health",
+      "destination"
+    ],
+    [
+      "infection",
+      "fuel"
+    ]
+  ],
+  "explanation": [],
+  "background": {
+    "source": "",
+    "target": ""
+  },
+  "raw": {
+    "target": "illness",
+    "source": "journey",
+    "row_indices": [
+      329,
+      330,
+      331,
+      332,
+      333,
+      334,
+      335,
+      336,
+      337,
+      338
+    ],
+    "rows": [
+      {
+        "target": "illness",
+        "source": "journey",
+        "targ_word": "patient",
+        "src_word": "traveler",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "illness",
+        "source": "journey",
+        "targ_word": "virus",
+        "src_word": "vehicle",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "illness",
+        "source": "journey",
+        "targ_word": "disease",
+        "src_word": "vehicle",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "illness",
+        "source": "journey",
+        "targ_word": "diagnosis",
+        "src_word": "station",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "illness",
+        "source": "journey",
+        "targ_word": "remission",
+        "src_word": "station",
+        "alternatives": "stop",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "illness",
+        "source": "journey",
+        "targ_word": "course",
+        "src_word": "path",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "illness",
+        "source": "journey",
+        "targ_word": "stage",
+        "src_word": "milestone",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "illness",
+        "source": "journey",
+        "targ_word": "death",
+        "src_word": "destination",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "illness",
+        "source": "journey",
+        "targ_word": "health",
+        "src_word": "destination",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "illness",
+        "source": "journey",
+        "targ_word": "infection",
+        "src_word": "fuel",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      }
+    ]
+  },
+  "structure_source": "provided",
+  "node_type_source": "inferred",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "s2": "t4",
+        "s3": "t7",
+        "s7": "t10",
+        "s5": "t8",
+        "s6": "t1",
+        "s1": "t2",
+        "s4": "t5"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "structural_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "multiple_mapping_type": "many_to_one",
+  "analogue_type": "metaphor",
+  "alternatives": [
+    "stop"
+  ],
+  "system": {
+    "source": "journey",
+    "target": "illness"
+  },
+  "note": "映射来自原文 (target,source,targ_word,src_word) 四列；SCAN 无 Explanation/background/domain/role 表述，对应字段留空且 ref_roles 为空（不启用 role_consistency）。节点类型按词表 discriminator 推断（node_type_source=inferred）。alternatives 是额外候选词，不是关系依据，仅存封存供复核。"
+}

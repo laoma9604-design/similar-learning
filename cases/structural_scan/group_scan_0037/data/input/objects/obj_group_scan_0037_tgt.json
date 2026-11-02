@@ -1,0 +1,53 @@
+{
+  "object_id": "obj_group_scan_0037_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "skill",
+  "nodes": [
+    {
+      "node_id": "t2",
+      "label": "person",
+      "type": "entity"
+    },
+    {
+      "node_id": "t3",
+      "label": "learning",
+      "type": "process"
+    },
+    {
+      "node_id": "t4",
+      "label": "education",
+      "type": "process"
+    },
+    {
+      "node_id": "t1",
+      "label": "practice",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t2",
+        "t3",
+        "t4",
+        "t1"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t2": "correlate",
+        "t3": "correlate",
+        "t4": "correlate",
+        "t1": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0037",
+    "structure_source": "provided"
+  }
+}

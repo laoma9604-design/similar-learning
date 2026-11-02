@@ -1,0 +1,46 @@
+{
+  "object_id": "obj_group_scan_0056_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "commerce",
+  "nodes": [
+    {
+      "node_id": "s1",
+      "label": "buyer",
+      "type": "entity"
+    },
+    {
+      "node_id": "s3",
+      "label": "goods",
+      "type": "substance"
+    },
+    {
+      "node_id": "s2",
+      "label": "terms",
+      "type": "abstract_concept"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s1",
+        "s3",
+        "s2"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s1": "correlate",
+        "s3": "correlate",
+        "s2": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0056",
+    "structure_source": "provided"
+  }
+}

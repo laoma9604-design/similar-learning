@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_scan_0043_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "test",
+  "label": "business",
+  "nodes": [
+    {
+      "node_id": "t3",
+      "label": "client",
+      "type": "entity"
+    },
+    {
+      "node_id": "t2",
+      "label": "money",
+      "type": "substance"
+    },
+    {
+      "node_id": "t5",
+      "label": "profit",
+      "type": "substance"
+    },
+    {
+      "node_id": "t1",
+      "label": "market",
+      "type": "entity"
+    },
+    {
+      "node_id": "t6",
+      "label": "businessman",
+      "type": "entity"
+    },
+    {
+      "node_id": "t4",
+      "label": "product",
+      "type": "substance"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t3",
+        "t2",
+        "t5",
+        "t1",
+        "t6",
+        "t4"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t3": "correlate",
+        "t2": "correlate",
+        "t5": "correlate",
+        "t1": "correlate",
+        "t6": "correlate",
+        "t4": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0043",
+    "structure_source": "provided"
+  }
+}

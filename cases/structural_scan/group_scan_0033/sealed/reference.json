@@ -1,0 +1,186 @@
+{
+  "task_group_scan_0033_t01": {
+    "task_id": "task_group_scan_0033_t01",
+    "label": "positive",
+    "valid": [
+      {
+        "source_id": "obj_group_scan_0033_src",
+        "node_map": {
+          "s5": "t9",
+          "s4": "t8",
+          "s6": "t4",
+          "s1": "t2",
+          "s3": "t3",
+          "s2": "t7"
+        },
+        "edge_map": {
+          "e1": "e1"
+        }
+      }
+    ],
+    "pair_map": [
+      [
+        "s5",
+        "t9"
+      ],
+      [
+        "s5",
+        "t10"
+      ],
+      [
+        "s4",
+        "t8"
+      ],
+      [
+        "s4",
+        "t5"
+      ],
+      [
+        "s6",
+        "t4"
+      ],
+      [
+        "s1",
+        "t2"
+      ],
+      [
+        "s4",
+        "t6"
+      ],
+      [
+        "s3",
+        "t3"
+      ],
+      [
+        "s3",
+        "t1"
+      ],
+      [
+        "s2",
+        "t7"
+      ]
+    ],
+    "valid_mappings": [
+      {
+        "node_map": {
+          "s5": "t9",
+          "s4": "t8",
+          "s6": "t4",
+          "s1": "t2",
+          "s3": "t3",
+          "s2": "t7"
+        },
+        "edge_map": {
+          "e1": "e1"
+        },
+        "pair_map": [
+          [
+            "s5",
+            "t9"
+          ],
+          [
+            "s5",
+            "t10"
+          ],
+          [
+            "s4",
+            "t8"
+          ],
+          [
+            "s4",
+            "t5"
+          ],
+          [
+            "s6",
+            "t4"
+          ],
+          [
+            "s1",
+            "t2"
+          ],
+          [
+            "s4",
+            "t6"
+          ],
+          [
+            "s3",
+            "t3"
+          ],
+          [
+            "s3",
+            "t1"
+          ],
+          [
+            "s2",
+            "t7"
+          ]
+        ]
+      }
+    ],
+    "mapping_forms": {
+      "multi_valued_in_one": true,
+      "alt_complete_mappings": [],
+      "note": "multi_valued_in_one：同一原始对内的共享端点/多目标对应；alt_complete_mappings：置换对称等产生的等价完整映射。SCAN 原文字段 alternatives 是「另一个候选词」，它不构成等价完整映射（原文未给该词的对应关系），故此处为空，另存 alternatives_provided 供复核。"
+    },
+    "alternatives_provided": [
+      "pillar",
+      "foundation",
+      "support",
+      "buttress"
+    ],
+    "exclusions": [],
+    "reference_tolerance": null,
+    "allowed_mappings_total": null,
+    "status": "structural_only",
+    "multiple_mapping_type": "many_to_one",
+    "structural_checks": [
+      "pair_consistency",
+      "type_pattern"
+    ],
+    "node_type_source": "inferred",
+    "ref_type_pattern": [
+      [
+        "abstract_concept",
+        "abstract_concept"
+      ],
+      [
+        "abstract_concept",
+        "abstract_concept"
+      ],
+      [
+        "entity",
+        "abstract_concept"
+      ],
+      [
+        "entity",
+        "abstract_concept"
+      ],
+      [
+        "entity",
+        "abstract_concept"
+      ],
+      [
+        "entity",
+        "entity"
+      ],
+      [
+        "entity",
+        "substance"
+      ],
+      [
+        "process",
+        "abstract_concept"
+      ],
+      [
+        "process",
+        "abstract_concept"
+      ],
+      [
+        "substance",
+        "abstract_concept"
+      ]
+    ],
+    "ref_roles": {},
+    "full_library_verified": true
+  }
+}

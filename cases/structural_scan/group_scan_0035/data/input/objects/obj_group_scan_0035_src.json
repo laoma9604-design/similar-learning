@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_scan_0035_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "battle",
+  "nodes": [
+    {
+      "node_id": "s2",
+      "label": "soldier",
+      "type": "entity"
+    },
+    {
+      "node_id": "s3",
+      "label": "ground",
+      "type": "entity"
+    },
+    {
+      "node_id": "s1",
+      "label": "weapon",
+      "type": "entity"
+    },
+    {
+      "node_id": "s5",
+      "label": "battlefield",
+      "type": "entity"
+    },
+    {
+      "node_id": "s4",
+      "label": "victorious",
+      "type": "process"
+    },
+    {
+      "node_id": "s6",
+      "label": "tactic",
+      "type": "property"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s2",
+        "s3",
+        "s1",
+        "s5",
+        "s4",
+        "s6"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s2": "correlate",
+        "s3": "hub",
+        "s1": "hub",
+        "s5": "hub",
+        "s4": "correlate",
+        "s6": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0035",
+    "structure_source": "provided"
+  }
+}

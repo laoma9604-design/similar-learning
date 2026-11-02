@@ -1,0 +1,74 @@
+{
+  "object_id": "obj_group_scan_0003_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "sounds",
+  "nodes": [
+    {
+      "node_id": "t4",
+      "label": "wall",
+      "type": "entity"
+    },
+    {
+      "node_id": "t5",
+      "label": "echoes",
+      "type": "property"
+    },
+    {
+      "node_id": "t3",
+      "label": "air",
+      "type": "substance"
+    },
+    {
+      "node_id": "t1",
+      "label": "insulation",
+      "type": "substance"
+    },
+    {
+      "node_id": "t6",
+      "label": "loud",
+      "type": "property"
+    },
+    {
+      "node_id": "t7",
+      "label": "quiet",
+      "type": "property"
+    },
+    {
+      "node_id": "t2",
+      "label": "vibrating",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t4",
+        "t5",
+        "t3",
+        "t1",
+        "t6",
+        "t7",
+        "t2"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t4": "correlate",
+        "t5": "correlate",
+        "t3": "correlate",
+        "t1": "correlate",
+        "t6": "correlate",
+        "t7": "correlate",
+        "t2": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0003",
+    "structure_source": "provided"
+  }
+}

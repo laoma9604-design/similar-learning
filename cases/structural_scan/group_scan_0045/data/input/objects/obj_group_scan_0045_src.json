@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_scan_0045_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "ship",
+  "nodes": [
+    {
+      "node_id": "s2",
+      "label": "ship",
+      "type": "entity"
+    },
+    {
+      "node_id": "s4",
+      "label": "captain",
+      "type": "entity"
+    },
+    {
+      "node_id": "s5",
+      "label": "crew",
+      "type": "entity"
+    },
+    {
+      "node_id": "s1",
+      "label": "passenger",
+      "type": "entity"
+    },
+    {
+      "node_id": "s3",
+      "label": "storm",
+      "type": "process"
+    },
+    {
+      "node_id": "s6",
+      "label": "forecast",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s2",
+        "s4",
+        "s5",
+        "s1",
+        "s3",
+        "s6"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s2": "correlate",
+        "s4": "correlate",
+        "s5": "correlate",
+        "s1": "correlate",
+        "s3": "correlate",
+        "s6": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0045",
+    "structure_source": "provided"
+  }
+}

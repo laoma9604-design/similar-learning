@@ -1,0 +1,121 @@
+{
+  "adaptation_id": "adapt_scan_0049",
+  "dataset": "scan",
+  "original_id": "group_scan_0050",
+  "mapping_group_id": "group_scan_0050",
+  "source_object_id": "obj_group_scan_0050_src",
+  "target_object_id": "obj_group_scan_0050_tgt",
+  "faithful_mappings": [
+    [
+      "patient",
+      "warrior"
+    ],
+    [
+      "disease",
+      "enemy"
+    ],
+    [
+      "medicine",
+      "weapon"
+    ],
+    [
+      "health",
+      "victory"
+    ],
+    [
+      "death",
+      "surrender"
+    ]
+  ],
+  "explanation": [],
+  "background": {
+    "source": "",
+    "target": ""
+  },
+  "raw": {
+    "target": "illness",
+    "source": "battle",
+    "row_indices": [
+      324,
+      325,
+      326,
+      327,
+      328
+    ],
+    "rows": [
+      {
+        "target": "illness",
+        "source": "battle",
+        "targ_word": "patient",
+        "src_word": "warrior",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "illness",
+        "source": "battle",
+        "targ_word": "disease",
+        "src_word": "enemy",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "illness",
+        "source": "battle",
+        "targ_word": "medicine",
+        "src_word": "weapon",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "illness",
+        "source": "battle",
+        "targ_word": "health",
+        "src_word": "victory",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "illness",
+        "source": "battle",
+        "targ_word": "death",
+        "src_word": "surrender",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      }
+    ]
+  },
+  "structure_source": "provided",
+  "node_type_source": "inferred",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "s4": "t5",
+        "s5": "t2",
+        "s1": "t4",
+        "s2": "t3",
+        "s3": "t1"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "structural_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "multiple_mapping_type": "none",
+  "analogue_type": "metaphor",
+  "alternatives": [],
+  "system": {
+    "source": "battle",
+    "target": "illness"
+  },
+  "note": "映射来自原文 (target,source,targ_word,src_word) 四列；SCAN 无 Explanation/background/domain/role 表述，对应字段留空且 ref_roles 为空（不启用 role_consistency）。节点类型按词表 discriminator 推断（node_type_source=inferred）。alternatives 是额外候选词，不是关系依据，仅存封存供复核。"
+}

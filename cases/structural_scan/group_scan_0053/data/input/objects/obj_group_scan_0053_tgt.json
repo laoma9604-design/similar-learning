@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_scan_0053_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "ambition",
+  "nodes": [
+    {
+      "node_id": "t3",
+      "label": "recognition",
+      "type": "process"
+    },
+    {
+      "node_id": "t6",
+      "label": "nourishment",
+      "type": "substance"
+    },
+    {
+      "node_id": "t4",
+      "label": "achievement",
+      "type": "property"
+    },
+    {
+      "node_id": "t1",
+      "label": "complacency",
+      "type": "property"
+    },
+    {
+      "node_id": "t5",
+      "label": "competition",
+      "type": "process"
+    },
+    {
+      "node_id": "t2",
+      "label": "failure",
+      "type": "property"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t3",
+        "t6",
+        "t4",
+        "t1",
+        "t5",
+        "t2"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t3": "correlate",
+        "t6": "correlate",
+        "t4": "correlate",
+        "t1": "correlate",
+        "t5": "correlate",
+        "t2": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0053",
+    "structure_source": "provided"
+  }
+}

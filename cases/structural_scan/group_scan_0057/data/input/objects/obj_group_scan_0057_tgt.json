@@ -1,0 +1,95 @@
+{
+  "object_id": "obj_group_scan_0057_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "society",
+  "nodes": [
+    {
+      "node_id": "t9",
+      "label": "citizen",
+      "type": "entity"
+    },
+    {
+      "node_id": "t3",
+      "label": "people",
+      "type": "entity"
+    },
+    {
+      "node_id": "t6",
+      "label": "law",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t10",
+      "label": "constitution",
+      "type": "entity"
+    },
+    {
+      "node_id": "t4",
+      "label": "history",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t7",
+      "label": "class",
+      "type": "entity"
+    },
+    {
+      "node_id": "t1",
+      "label": "leader",
+      "type": "entity"
+    },
+    {
+      "node_id": "t2",
+      "label": "passport",
+      "type": "entity"
+    },
+    {
+      "node_id": "t8",
+      "label": "future",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t5",
+      "label": "budget",
+      "type": "property"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t9",
+        "t3",
+        "t6",
+        "t10",
+        "t4",
+        "t7",
+        "t1",
+        "t2",
+        "t8",
+        "t5"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t9": "correlate",
+        "t3": "correlate",
+        "t6": "correlate",
+        "t10": "correlate",
+        "t4": "correlate",
+        "t7": "correlate",
+        "t1": "correlate",
+        "t2": "correlate",
+        "t8": "correlate",
+        "t5": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0057",
+    "structure_source": "provided"
+  }
+}

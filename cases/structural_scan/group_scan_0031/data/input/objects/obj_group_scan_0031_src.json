@@ -1,0 +1,95 @@
+{
+  "object_id": "obj_group_scan_0031_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "journey",
+  "nodes": [
+    {
+      "node_id": "s1",
+      "label": "stop",
+      "type": "entity"
+    },
+    {
+      "node_id": "s9",
+      "label": "station",
+      "type": "entity"
+    },
+    {
+      "node_id": "s5",
+      "label": "vehicle",
+      "type": "entity"
+    },
+    {
+      "node_id": "s7",
+      "label": "landscape",
+      "type": "entity"
+    },
+    {
+      "node_id": "s8",
+      "label": "destination",
+      "type": "entity"
+    },
+    {
+      "node_id": "s2",
+      "label": "traveller",
+      "type": "entity"
+    },
+    {
+      "node_id": "s6",
+      "label": "guide",
+      "type": "entity"
+    },
+    {
+      "node_id": "s10",
+      "label": "driver",
+      "type": "entity"
+    },
+    {
+      "node_id": "s4",
+      "label": "fuel",
+      "type": "substance"
+    },
+    {
+      "node_id": "s3",
+      "label": "conductor",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s1",
+        "s9",
+        "s5",
+        "s7",
+        "s8",
+        "s2",
+        "s6",
+        "s10",
+        "s4",
+        "s3"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s1": "correlate",
+        "s9": "correlate",
+        "s5": "hub",
+        "s7": "correlate",
+        "s8": "correlate",
+        "s2": "correlate",
+        "s6": "correlate",
+        "s10": "correlate",
+        "s4": "correlate",
+        "s3": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0031",
+    "structure_source": "provided"
+  }
+}

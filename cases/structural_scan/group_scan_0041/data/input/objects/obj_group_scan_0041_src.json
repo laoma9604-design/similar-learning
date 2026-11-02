@@ -1,0 +1,53 @@
+{
+  "object_id": "obj_group_scan_0041_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "liquid",
+  "nodes": [
+    {
+      "node_id": "s1",
+      "label": "container",
+      "type": "entity"
+    },
+    {
+      "node_id": "s2",
+      "label": "river",
+      "type": "entity"
+    },
+    {
+      "node_id": "s3",
+      "label": "emptiness",
+      "type": "property"
+    },
+    {
+      "node_id": "s4",
+      "label": "pool",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s1": "hub",
+        "s2": "correlate",
+        "s3": "correlate",
+        "s4": "hub"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0041",
+    "structure_source": "provided"
+  }
+}

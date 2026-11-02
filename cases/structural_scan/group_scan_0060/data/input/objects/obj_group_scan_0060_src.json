@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_scan_0060_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "val",
+  "label": "game",
+  "nodes": [
+    {
+      "node_id": "s6",
+      "label": "player",
+      "type": "entity"
+    },
+    {
+      "node_id": "s2",
+      "label": "bet",
+      "type": "process"
+    },
+    {
+      "node_id": "s1",
+      "label": "rules",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "s4",
+      "label": "playground",
+      "type": "entity"
+    },
+    {
+      "node_id": "s5",
+      "label": "ball",
+      "type": "entity"
+    },
+    {
+      "node_id": "s3",
+      "label": "toy",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s6",
+        "s2",
+        "s1",
+        "s4",
+        "s5",
+        "s3"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s6": "correlate",
+        "s2": "correlate",
+        "s1": "correlate",
+        "s4": "correlate",
+        "s5": "correlate",
+        "s3": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0060",
+    "structure_source": "provided"
+  }
+}

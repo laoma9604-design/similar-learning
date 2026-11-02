@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_scan_0016_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "ideas",
+  "nodes": [
+    {
+      "node_id": "t4",
+      "label": "inspired",
+      "type": "property"
+    },
+    {
+      "node_id": "t2",
+      "label": "productive",
+      "type": "property"
+    },
+    {
+      "node_id": "t5",
+      "label": "product",
+      "type": "substance"
+    },
+    {
+      "node_id": "t6",
+      "label": "develop",
+      "type": "process"
+    },
+    {
+      "node_id": "t1",
+      "label": "fail",
+      "type": "process"
+    },
+    {
+      "node_id": "t3",
+      "label": "succeed",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t4",
+        "t2",
+        "t5",
+        "t6",
+        "t1",
+        "t3"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t4": "correlate",
+        "t2": "correlate",
+        "t5": "correlate",
+        "t6": "correlate",
+        "t1": "correlate",
+        "t3": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0016",
+    "structure_source": "provided"
+  }
+}

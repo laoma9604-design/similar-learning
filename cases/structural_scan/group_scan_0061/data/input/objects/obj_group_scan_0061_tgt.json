@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_scan_0061_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "val",
+  "label": "politics",
+  "nodes": [
+    {
+      "node_id": "t2",
+      "label": "politician",
+      "type": "entity"
+    },
+    {
+      "node_id": "t5",
+      "label": "campaign",
+      "type": "process"
+    },
+    {
+      "node_id": "t4",
+      "label": "parliament",
+      "type": "entity"
+    },
+    {
+      "node_id": "t6",
+      "label": "press",
+      "type": "entity"
+    },
+    {
+      "node_id": "t3",
+      "label": "people",
+      "type": "entity"
+    },
+    {
+      "node_id": "t1",
+      "label": "citizens",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t2",
+        "t5",
+        "t4",
+        "t6",
+        "t3",
+        "t1"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t2": "correlate",
+        "t5": "correlate",
+        "t4": "correlate",
+        "t6": "correlate",
+        "t3": "correlate",
+        "t1": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0061",
+    "structure_source": "provided"
+  }
+}

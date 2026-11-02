@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_scan_0065_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "disease",
+  "nodes": [
+    {
+      "node_id": "s6",
+      "label": "virus",
+      "type": "entity"
+    },
+    {
+      "node_id": "s4",
+      "label": "assessment",
+      "type": "process"
+    },
+    {
+      "node_id": "s3",
+      "label": "quarantine",
+      "type": "process"
+    },
+    {
+      "node_id": "s5",
+      "label": "diagnosis",
+      "type": "process"
+    },
+    {
+      "node_id": "s1",
+      "label": "surgery",
+      "type": "process"
+    },
+    {
+      "node_id": "s2",
+      "label": "patient",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s6",
+        "s4",
+        "s3",
+        "s5",
+        "s1",
+        "s2"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s6": "correlate",
+        "s4": "correlate",
+        "s3": "correlate",
+        "s5": "correlate",
+        "s1": "correlate",
+        "s2": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0065",
+    "structure_source": "provided"
+  }
+}

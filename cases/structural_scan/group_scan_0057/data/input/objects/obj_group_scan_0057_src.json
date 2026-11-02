@@ -1,0 +1,88 @@
+{
+  "object_id": "obj_group_scan_0057_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "train",
+  "nodes": [
+    {
+      "node_id": "s9",
+      "label": "passenger",
+      "type": "entity"
+    },
+    {
+      "node_id": "s6",
+      "label": "passengers",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "s3",
+      "label": "tracks",
+      "type": "entity"
+    },
+    {
+      "node_id": "s5",
+      "label": "route",
+      "type": "entity"
+    },
+    {
+      "node_id": "s2",
+      "label": "coach",
+      "type": "entity"
+    },
+    {
+      "node_id": "s4",
+      "label": "driver",
+      "type": "entity"
+    },
+    {
+      "node_id": "s1",
+      "label": "ticket",
+      "type": "entity"
+    },
+    {
+      "node_id": "s7",
+      "label": "destination",
+      "type": "entity"
+    },
+    {
+      "node_id": "s8",
+      "label": "fuel",
+      "type": "substance"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s9",
+        "s6",
+        "s3",
+        "s5",
+        "s2",
+        "s4",
+        "s1",
+        "s7",
+        "s8"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s9": "correlate",
+        "s6": "correlate",
+        "s3": "hub",
+        "s5": "correlate",
+        "s2": "correlate",
+        "s4": "correlate",
+        "s1": "correlate",
+        "s7": "correlate",
+        "s8": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0057",
+    "structure_source": "provided"
+  }
+}

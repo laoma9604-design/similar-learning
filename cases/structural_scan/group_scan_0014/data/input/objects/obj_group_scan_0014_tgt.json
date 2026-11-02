@@ -1,0 +1,74 @@
+{
+  "object_id": "obj_group_scan_0014_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "difficulties",
+  "nodes": [
+    {
+      "node_id": "t4",
+      "label": "difficulties",
+      "type": "property"
+    },
+    {
+      "node_id": "t5",
+      "label": "goal",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t6",
+      "label": "plan",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t1",
+      "label": "person",
+      "type": "entity"
+    },
+    {
+      "node_id": "t3",
+      "label": "problem solving",
+      "type": "process"
+    },
+    {
+      "node_id": "t7",
+      "label": "partner",
+      "type": "entity"
+    },
+    {
+      "node_id": "t2",
+      "label": "succeeding",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t4",
+        "t5",
+        "t6",
+        "t1",
+        "t3",
+        "t7",
+        "t2"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t4": "correlate",
+        "t5": "correlate",
+        "t6": "correlate",
+        "t1": "correlate",
+        "t3": "correlate",
+        "t7": "correlate",
+        "t2": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0014",
+    "structure_source": "provided"
+  }
+}

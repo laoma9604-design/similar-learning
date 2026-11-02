@@ -1,0 +1,116 @@
+{
+  "object_id": "obj_group_scan_0011_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "test",
+  "label": "argument",
+  "nodes": [
+    {
+      "node_id": "t10",
+      "label": "debater",
+      "type": "entity"
+    },
+    {
+      "node_id": "t11",
+      "label": "refute",
+      "type": "process"
+    },
+    {
+      "node_id": "t6",
+      "label": "arguing",
+      "type": "process"
+    },
+    {
+      "node_id": "t5",
+      "label": "acceptance",
+      "type": "process"
+    },
+    {
+      "node_id": "t9",
+      "label": "criticizes",
+      "type": "process"
+    },
+    {
+      "node_id": "t4",
+      "label": "logic",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t13",
+      "label": "topic",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t12",
+      "label": "claim",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t2",
+      "label": "criticize",
+      "type": "process"
+    },
+    {
+      "node_id": "t1",
+      "label": "rhetoric",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t3",
+      "label": "retraction",
+      "type": "process"
+    },
+    {
+      "node_id": "t7",
+      "label": "loss",
+      "type": "property"
+    },
+    {
+      "node_id": "t8",
+      "label": "win",
+      "type": "property"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t10",
+        "t11",
+        "t6",
+        "t5",
+        "t9",
+        "t4",
+        "t13",
+        "t12",
+        "t2",
+        "t1",
+        "t3",
+        "t7",
+        "t8"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t10": "hub",
+        "t11": "correlate",
+        "t6": "correlate",
+        "t5": "correlate",
+        "t9": "correlate",
+        "t4": "correlate",
+        "t13": "correlate",
+        "t12": "correlate",
+        "t2": "correlate",
+        "t1": "correlate",
+        "t3": "correlate",
+        "t7": "correlate",
+        "t8": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0011",
+    "structure_source": "provided"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "object_id": "obj_group_scan_0014_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "impediments to travel",
+  "nodes": [
+    {
+      "node_id": "s2",
+      "label": "obstructions",
+      "type": "entity"
+    },
+    {
+      "node_id": "s4",
+      "label": "destination",
+      "type": "entity"
+    },
+    {
+      "node_id": "s6",
+      "label": "route",
+      "type": "entity"
+    },
+    {
+      "node_id": "s5",
+      "label": "traveller",
+      "type": "entity"
+    },
+    {
+      "node_id": "s3",
+      "label": "travelling",
+      "type": "process"
+    },
+    {
+      "node_id": "s7",
+      "label": "companion",
+      "type": "entity"
+    },
+    {
+      "node_id": "s1",
+      "label": "arriving",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s2",
+        "s4",
+        "s6",
+        "s5",
+        "s3",
+        "s7",
+        "s1"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s2": "correlate",
+        "s4": "correlate",
+        "s6": "correlate",
+        "s5": "correlate",
+        "s3": "correlate",
+        "s7": "correlate",
+        "s1": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0014",
+    "structure_source": "provided"
+  }
+}

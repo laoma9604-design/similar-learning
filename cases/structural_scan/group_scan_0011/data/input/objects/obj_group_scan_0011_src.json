@@ -1,0 +1,123 @@
+{
+  "object_id": "obj_group_scan_0011_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "test",
+  "label": "war",
+  "nodes": [
+    {
+      "node_id": "s10",
+      "label": "soldier",
+      "type": "entity"
+    },
+    {
+      "node_id": "s1",
+      "label": "destroy",
+      "type": "process"
+    },
+    {
+      "node_id": "s14",
+      "label": "fighting",
+      "type": "process"
+    },
+    {
+      "node_id": "s13",
+      "label": "defeat",
+      "type": "process"
+    },
+    {
+      "node_id": "s2",
+      "label": "attacks",
+      "type": "process"
+    },
+    {
+      "node_id": "s11",
+      "label": "weapon",
+      "type": "entity"
+    },
+    {
+      "node_id": "s7",
+      "label": "battleground",
+      "type": "entity"
+    },
+    {
+      "node_id": "s4",
+      "label": "combatant",
+      "type": "entity"
+    },
+    {
+      "node_id": "s3",
+      "label": "position",
+      "type": "property"
+    },
+    {
+      "node_id": "s6",
+      "label": "attack",
+      "type": "process"
+    },
+    {
+      "node_id": "s12",
+      "label": "maneuver",
+      "type": "process"
+    },
+    {
+      "node_id": "s9",
+      "label": "retreat",
+      "type": "process"
+    },
+    {
+      "node_id": "s5",
+      "label": "surrender",
+      "type": "process"
+    },
+    {
+      "node_id": "s8",
+      "label": "victory",
+      "type": "property"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s10",
+        "s1",
+        "s14",
+        "s13",
+        "s2",
+        "s11",
+        "s7",
+        "s4",
+        "s3",
+        "s6",
+        "s12",
+        "s9",
+        "s5",
+        "s8"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s10": "correlate",
+        "s1": "correlate",
+        "s14": "correlate",
+        "s13": "correlate",
+        "s2": "correlate",
+        "s11": "correlate",
+        "s7": "correlate",
+        "s4": "correlate",
+        "s3": "correlate",
+        "s6": "correlate",
+        "s12": "correlate",
+        "s9": "correlate",
+        "s5": "correlate",
+        "s8": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0011",
+    "structure_source": "provided"
+  }
+}

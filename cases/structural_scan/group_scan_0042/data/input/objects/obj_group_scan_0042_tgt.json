@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_scan_0042_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "test",
+  "label": "research",
+  "nodes": [
+    {
+      "node_id": "t2",
+      "label": "idea",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t4",
+      "label": "information",
+      "type": "substance"
+    },
+    {
+      "node_id": "t6",
+      "label": "find",
+      "type": "process"
+    },
+    {
+      "node_id": "t1",
+      "label": "laboratory",
+      "type": "entity"
+    },
+    {
+      "node_id": "t5",
+      "label": "researcher",
+      "type": "entity"
+    },
+    {
+      "node_id": "t3",
+      "label": "instrument",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t2",
+        "t4",
+        "t6",
+        "t1",
+        "t5",
+        "t3"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t2": "correlate",
+        "t4": "correlate",
+        "t6": "correlate",
+        "t1": "correlate",
+        "t5": "correlate",
+        "t3": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0042",
+    "structure_source": "provided"
+  }
+}

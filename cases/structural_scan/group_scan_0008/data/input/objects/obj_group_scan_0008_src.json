@@ -1,0 +1,81 @@
+{
+  "object_id": "obj_group_scan_0008_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "billiard balls",
+  "nodes": [
+    {
+      "node_id": "s5",
+      "label": "balls",
+      "type": "entity"
+    },
+    {
+      "node_id": "s3",
+      "label": "billiards",
+      "type": "entity"
+    },
+    {
+      "node_id": "s4",
+      "label": "speed",
+      "type": "property"
+    },
+    {
+      "node_id": "s2",
+      "label": "table",
+      "type": "entity"
+    },
+    {
+      "node_id": "s6",
+      "label": "bouncing",
+      "type": "process"
+    },
+    {
+      "node_id": "s8",
+      "label": "moving",
+      "type": "process"
+    },
+    {
+      "node_id": "s7",
+      "label": "slow",
+      "type": "property"
+    },
+    {
+      "node_id": "s1",
+      "label": "fast",
+      "type": "property"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s5",
+        "s3",
+        "s4",
+        "s2",
+        "s6",
+        "s8",
+        "s7",
+        "s1"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s5": "correlate",
+        "s3": "correlate",
+        "s4": "correlate",
+        "s2": "correlate",
+        "s6": "correlate",
+        "s8": "correlate",
+        "s7": "correlate",
+        "s1": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0008",
+    "structure_source": "provided"
+  }
+}

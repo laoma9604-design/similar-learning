@@ -1,0 +1,12 @@
+{
+  "objects": [
+    {
+      "object_id": "obj_group_scan_0041_tgt",
+      "file": "obj_group_scan_0041_tgt.json"
+    },
+    {
+      "object_id": "obj_group_scan_0041_src",
+      "file": "obj_group_scan_0041_src.json"
+    }
+  ]
+}

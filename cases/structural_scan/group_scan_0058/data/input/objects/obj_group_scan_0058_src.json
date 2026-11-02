@@ -1,0 +1,81 @@
+{
+  "object_id": "obj_group_scan_0058_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "journey",
+  "nodes": [
+    {
+      "node_id": "s8",
+      "label": "fuel",
+      "type": "substance"
+    },
+    {
+      "node_id": "s6",
+      "label": "transport",
+      "type": "entity"
+    },
+    {
+      "node_id": "s2",
+      "label": "baggage",
+      "type": "entity"
+    },
+    {
+      "node_id": "s7",
+      "label": "traveller",
+      "type": "entity"
+    },
+    {
+      "node_id": "s4",
+      "label": "destination",
+      "type": "entity"
+    },
+    {
+      "node_id": "s1",
+      "label": "car",
+      "type": "entity"
+    },
+    {
+      "node_id": "s5",
+      "label": "guide",
+      "type": "entity"
+    },
+    {
+      "node_id": "s3",
+      "label": "ticket",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s8",
+        "s6",
+        "s2",
+        "s7",
+        "s4",
+        "s1",
+        "s5",
+        "s3"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s8": "hub",
+        "s6": "correlate",
+        "s2": "correlate",
+        "s7": "hub",
+        "s4": "correlate",
+        "s1": "correlate",
+        "s5": "correlate",
+        "s3": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0058",
+    "structure_source": "provided"
+  }
+}

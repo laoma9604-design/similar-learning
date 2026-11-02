@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_scan_0013_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "grounds for a building",
+  "nodes": [
+    {
+      "node_id": "s2",
+      "label": "foundations",
+      "type": "entity"
+    },
+    {
+      "node_id": "s3",
+      "label": "buildings",
+      "type": "entity"
+    },
+    {
+      "node_id": "s1",
+      "label": "supporting",
+      "type": "process"
+    },
+    {
+      "node_id": "s5",
+      "label": "solid",
+      "type": "substance"
+    },
+    {
+      "node_id": "s4",
+      "label": "weak",
+      "type": "property"
+    },
+    {
+      "node_id": "s6",
+      "label": "crack",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s2",
+        "s3",
+        "s1",
+        "s5",
+        "s4",
+        "s6"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s2": "correlate",
+        "s3": "correlate",
+        "s1": "correlate",
+        "s5": "correlate",
+        "s4": "correlate",
+        "s6": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0013",
+    "structure_source": "provided"
+  }
+}

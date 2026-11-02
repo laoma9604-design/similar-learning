@@ -1,0 +1,60 @@
+{
+  "object_id": "obj_group_scan_0010_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "val",
+  "label": "bacterial mutation",
+  "nodes": [
+    {
+      "node_id": "t4",
+      "label": "bacteria",
+      "type": "entity"
+    },
+    {
+      "node_id": "t5",
+      "label": "genes",
+      "type": "entity"
+    },
+    {
+      "node_id": "t1",
+      "label": "mutating",
+      "type": "process"
+    },
+    {
+      "node_id": "t2",
+      "label": "reproducing",
+      "type": "process"
+    },
+    {
+      "node_id": "t3",
+      "label": "dying",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t4",
+        "t5",
+        "t1",
+        "t2",
+        "t3"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t4": "correlate",
+        "t5": "correlate",
+        "t1": "correlate",
+        "t2": "correlate",
+        "t3": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0010",
+    "structure_source": "provided"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "object_id": "obj_group_scan_0002_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "water flow",
+  "nodes": [
+    {
+      "node_id": "s2",
+      "label": "flows",
+      "type": "process"
+    },
+    {
+      "node_id": "s1",
+      "label": "pressure",
+      "type": "property"
+    },
+    {
+      "node_id": "s4",
+      "label": "water tower",
+      "type": "entity"
+    },
+    {
+      "node_id": "s6",
+      "label": "bucket",
+      "type": "entity"
+    },
+    {
+      "node_id": "s5",
+      "label": "filling",
+      "type": "process"
+    },
+    {
+      "node_id": "s7",
+      "label": "emptying",
+      "type": "process"
+    },
+    {
+      "node_id": "s3",
+      "label": "hydrodynamics",
+      "type": "abstract_concept"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s2",
+        "s1",
+        "s4",
+        "s6",
+        "s5",
+        "s7",
+        "s3"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s2": "correlate",
+        "s1": "correlate",
+        "s4": "correlate",
+        "s6": "correlate",
+        "s5": "correlate",
+        "s7": "correlate",
+        "s3": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0002",
+    "structure_source": "provided"
+  }
+}

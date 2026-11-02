@@ -1,0 +1,60 @@
+{
+  "object_id": "obj_group_scan_0028_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "society",
+  "nodes": [
+    {
+      "node_id": "t3",
+      "label": "person",
+      "type": "entity"
+    },
+    {
+      "node_id": "t4",
+      "label": "citizen",
+      "type": "entity"
+    },
+    {
+      "node_id": "t5",
+      "label": "organisation",
+      "type": "entity"
+    },
+    {
+      "node_id": "t1",
+      "label": "people",
+      "type": "entity"
+    },
+    {
+      "node_id": "t2",
+      "label": "communication",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t3",
+        "t4",
+        "t5",
+        "t1",
+        "t2"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t3": "correlate",
+        "t4": "correlate",
+        "t5": "correlate",
+        "t1": "correlate",
+        "t2": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0028",
+    "structure_source": "provided"
+  }
+}

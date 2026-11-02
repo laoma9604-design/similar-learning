@@ -1,0 +1,137 @@
+{
+  "adaptation_id": "adapt_scan_0060",
+  "dataset": "scan",
+  "original_id": "group_scan_0061",
+  "mapping_group_id": "group_scan_0061",
+  "source_object_id": "obj_group_scan_0061_src",
+  "target_object_id": "obj_group_scan_0061_tgt",
+  "faithful_mappings": [
+    [
+      "politician",
+      "actor"
+    ],
+    [
+      "campaign",
+      "performance"
+    ],
+    [
+      "parliament",
+      "stage"
+    ],
+    [
+      "press",
+      "critic"
+    ],
+    [
+      "people",
+      "audience"
+    ],
+    [
+      "citizens",
+      "audience"
+    ]
+  ],
+  "explanation": [],
+  "background": {
+    "source": "",
+    "target": ""
+  },
+  "raw": {
+    "target": "politics",
+    "source": "theatre",
+    "row_indices": [
+      415,
+      416,
+      417,
+      418,
+      419,
+      420
+    ],
+    "rows": [
+      {
+        "target": "politics",
+        "source": "theatre",
+        "targ_word": "politician",
+        "src_word": "actor",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "politics",
+        "source": "theatre",
+        "targ_word": "campaign",
+        "src_word": "performance",
+        "alternatives": "show",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "politics",
+        "source": "theatre",
+        "targ_word": "parliament",
+        "src_word": "stage",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "politics",
+        "source": "theatre",
+        "targ_word": "press",
+        "src_word": "critic",
+        "alternatives": "playbill",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "politics",
+        "source": "theatre",
+        "targ_word": "people",
+        "src_word": "audience",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "politics",
+        "source": "theatre",
+        "targ_word": "citizens",
+        "src_word": "audience",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      }
+    ]
+  },
+  "structure_source": "provided",
+  "node_type_source": "inferred",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "s3": "t2",
+        "s4": "t5",
+        "s1": "t4",
+        "s2": "t6",
+        "s5": "t3"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "structural_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "multiple_mapping_type": "many_to_one",
+  "analogue_type": "metaphor",
+  "alternatives": [
+    "show",
+    "playbill"
+  ],
+  "system": {
+    "source": "theatre",
+    "target": "politics"
+  },
+  "note": "映射来自原文 (target,source,targ_word,src_word) 四列；SCAN 无 Explanation/background/domain/role 表述，对应字段留空且 ref_roles 为空（不启用 role_consistency）。节点类型按词表 discriminator 推断（node_type_source=inferred）。alternatives 是额外候选词，不是关系依据，仅存封存供复核。"
+}

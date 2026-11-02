@@ -1,0 +1,53 @@
+{
+  "object_id": "obj_group_scan_0053_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "hunger",
+  "nodes": [
+    {
+      "node_id": "s3",
+      "label": "food",
+      "type": "substance"
+    },
+    {
+      "node_id": "s4",
+      "label": "satiation",
+      "type": "property"
+    },
+    {
+      "node_id": "s1",
+      "label": "scarcity",
+      "type": "property"
+    },
+    {
+      "node_id": "s2",
+      "label": "starvation",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s3",
+        "s4",
+        "s1",
+        "s2"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s3": "hub",
+        "s4": "hub",
+        "s1": "correlate",
+        "s2": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0053",
+    "structure_source": "provided"
+  }
+}

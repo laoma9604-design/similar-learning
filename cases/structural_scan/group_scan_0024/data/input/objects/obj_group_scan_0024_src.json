@@ -1,0 +1,74 @@
+{
+  "object_id": "obj_group_scan_0024_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "flower",
+  "nodes": [
+    {
+      "node_id": "s5",
+      "label": "water",
+      "type": "substance"
+    },
+    {
+      "node_id": "s7",
+      "label": "stem",
+      "type": "entity"
+    },
+    {
+      "node_id": "s6",
+      "label": "soil",
+      "type": "substance"
+    },
+    {
+      "node_id": "s4",
+      "label": "planting",
+      "type": "process"
+    },
+    {
+      "node_id": "s1",
+      "label": "blossom",
+      "type": "process"
+    },
+    {
+      "node_id": "s2",
+      "label": "greenhouse",
+      "type": "entity"
+    },
+    {
+      "node_id": "s3",
+      "label": "symbiosis",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s5",
+        "s7",
+        "s6",
+        "s4",
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s5": "correlate",
+        "s7": "correlate",
+        "s6": "correlate",
+        "s4": "correlate",
+        "s1": "correlate",
+        "s2": "correlate",
+        "s3": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0024",
+    "structure_source": "provided"
+  }
+}

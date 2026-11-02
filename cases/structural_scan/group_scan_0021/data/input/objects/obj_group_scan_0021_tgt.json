@@ -1,0 +1,88 @@
+{
+  "object_id": "obj_group_scan_0021_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "val",
+  "label": "life",
+  "nodes": [
+    {
+      "node_id": "t6",
+      "label": "world",
+      "type": "entity"
+    },
+    {
+      "node_id": "t8",
+      "label": "people",
+      "type": "entity"
+    },
+    {
+      "node_id": "t9",
+      "label": "person",
+      "type": "entity"
+    },
+    {
+      "node_id": "t4",
+      "label": "history",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t2",
+      "label": "event",
+      "type": "process"
+    },
+    {
+      "node_id": "t3",
+      "label": "age",
+      "type": "property"
+    },
+    {
+      "node_id": "t1",
+      "label": "fate",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t5",
+      "label": "surroundings",
+      "type": "entity"
+    },
+    {
+      "node_id": "t7",
+      "label": "society",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t6",
+        "t8",
+        "t9",
+        "t4",
+        "t2",
+        "t3",
+        "t1",
+        "t5",
+        "t7"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t6": "correlate",
+        "t8": "correlate",
+        "t9": "correlate",
+        "t4": "correlate",
+        "t2": "correlate",
+        "t3": "correlate",
+        "t1": "correlate",
+        "t5": "correlate",
+        "t7": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0021",
+    "structure_source": "provided"
+  }
+}

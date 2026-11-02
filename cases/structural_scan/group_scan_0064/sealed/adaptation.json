@@ -1,0 +1,216 @@
+{
+  "adaptation_id": "adapt_scan_0063",
+  "dataset": "scan",
+  "original_id": "group_scan_0064",
+  "mapping_group_id": "group_scan_0064",
+  "source_object_id": "obj_group_scan_0064_src",
+  "target_object_id": "obj_group_scan_0064_tgt",
+  "faithful_mappings": [
+    [
+      "competitor",
+      "enemy"
+    ],
+    [
+      "market",
+      "battlefield"
+    ],
+    [
+      "money",
+      "weapon"
+    ],
+    [
+      "product",
+      "weapon"
+    ],
+    [
+      "lawyer",
+      "weapon"
+    ],
+    [
+      "employee",
+      "soldier"
+    ],
+    [
+      "income",
+      "trophy"
+    ],
+    [
+      "profit",
+      "trophy"
+    ],
+    [
+      "client",
+      "trophy"
+    ],
+    [
+      "ceo",
+      "general"
+    ],
+    [
+      "company",
+      "army"
+    ],
+    [
+      "workers",
+      "army"
+    ]
+  ],
+  "explanation": [],
+  "background": {
+    "source": "",
+    "target": ""
+  },
+  "raw": {
+    "target": "business",
+    "source": "war",
+    "row_indices": [
+      433,
+      434,
+      435,
+      436,
+      437,
+      438,
+      439,
+      440,
+      441,
+      442,
+      443,
+      444
+    ],
+    "rows": [
+      {
+        "target": "business",
+        "source": "war",
+        "targ_word": "competitor",
+        "src_word": "enemy",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "business",
+        "source": "war",
+        "targ_word": "market",
+        "src_word": "battlefield",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "business",
+        "source": "war",
+        "targ_word": "money",
+        "src_word": "weapon",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "business",
+        "source": "war",
+        "targ_word": "product",
+        "src_word": "weapon",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "business",
+        "source": "war",
+        "targ_word": "lawyer",
+        "src_word": "weapon",
+        "alternatives": "soldier",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "business",
+        "source": "war",
+        "targ_word": "employee",
+        "src_word": "soldier",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "business",
+        "source": "war",
+        "targ_word": "income",
+        "src_word": "trophy",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "business",
+        "source": "war",
+        "targ_word": "profit",
+        "src_word": "trophy",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "business",
+        "source": "war",
+        "targ_word": "client",
+        "src_word": "trophy",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "business",
+        "source": "war",
+        "targ_word": "ceo",
+        "src_word": "general",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "business",
+        "source": "war",
+        "targ_word": "company",
+        "src_word": "army",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "business",
+        "source": "war",
+        "targ_word": "workers",
+        "src_word": "army",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      }
+    ]
+  },
+  "structure_source": "provided",
+  "node_type_source": "inferred",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "s3": "t11",
+        "s2": "t1",
+        "s7": "t3",
+        "s4": "t6",
+        "s6": "t10",
+        "s1": "t7",
+        "s5": "t8"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "structural_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "multiple_mapping_type": "many_to_one",
+  "analogue_type": "metaphor",
+  "alternatives": [
+    "soldier"
+  ],
+  "system": {
+    "source": "war",
+    "target": "business"
+  },
+  "note": "映射来自原文 (target,source,targ_word,src_word) 四列；SCAN 无 Explanation/background/domain/role 表述，对应字段留空且 ref_roles 为空（不启用 role_consistency）。节点类型按词表 discriminator 推断（node_type_source=inferred）。alternatives 是额外候选词，不是关系依据，仅存封存供复核。"
+}

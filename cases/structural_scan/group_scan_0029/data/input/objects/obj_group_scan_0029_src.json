@@ -1,0 +1,53 @@
+{
+  "object_id": "obj_group_scan_0029_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "test",
+  "label": "household",
+  "nodes": [
+    {
+      "node_id": "s2",
+      "label": "house",
+      "type": "entity"
+    },
+    {
+      "node_id": "s1",
+      "label": "father",
+      "type": "entity"
+    },
+    {
+      "node_id": "s3",
+      "label": "servant",
+      "type": "entity"
+    },
+    {
+      "node_id": "s4",
+      "label": "housekeeper",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s2",
+        "s1",
+        "s3",
+        "s4"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s2": "correlate",
+        "s1": "hub",
+        "s3": "correlate",
+        "s4": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0029",
+    "structure_source": "provided"
+  }
+}

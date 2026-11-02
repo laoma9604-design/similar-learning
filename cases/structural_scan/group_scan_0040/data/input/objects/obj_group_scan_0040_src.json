@@ -1,0 +1,81 @@
+{
+  "object_id": "obj_group_scan_0040_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "liquid",
+  "nodes": [
+    {
+      "node_id": "s1",
+      "label": "pouring",
+      "type": "process"
+    },
+    {
+      "node_id": "s8",
+      "label": "flow",
+      "type": "process"
+    },
+    {
+      "node_id": "s6",
+      "label": "flux",
+      "type": "process"
+    },
+    {
+      "node_id": "s5",
+      "label": "outflow",
+      "type": "process"
+    },
+    {
+      "node_id": "s2",
+      "label": "container",
+      "type": "entity"
+    },
+    {
+      "node_id": "s4",
+      "label": "sea",
+      "type": "entity"
+    },
+    {
+      "node_id": "s7",
+      "label": "source",
+      "type": "entity"
+    },
+    {
+      "node_id": "s3",
+      "label": "pool",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s1",
+        "s8",
+        "s6",
+        "s5",
+        "s2",
+        "s4",
+        "s7",
+        "s3"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s1": "correlate",
+        "s8": "correlate",
+        "s6": "hub",
+        "s5": "hub",
+        "s2": "hub",
+        "s4": "correlate",
+        "s7": "correlate",
+        "s3": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0040",
+    "structure_source": "provided"
+  }
+}

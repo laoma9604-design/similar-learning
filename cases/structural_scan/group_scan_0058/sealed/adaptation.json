@@ -1,0 +1,193 @@
+{
+  "adaptation_id": "adapt_scan_0057",
+  "dataset": "scan",
+  "original_id": "group_scan_0058",
+  "mapping_group_id": "group_scan_0058",
+  "source_object_id": "obj_group_scan_0058_src",
+  "target_object_id": "obj_group_scan_0058_tgt",
+  "faithful_mappings": [
+    [
+      "education",
+      "fuel"
+    ],
+    [
+      "skill",
+      "fuel"
+    ],
+    [
+      "job",
+      "transport"
+    ],
+    [
+      "experience",
+      "baggage"
+    ],
+    [
+      "colleague",
+      "traveller"
+    ],
+    [
+      "worker",
+      "traveller"
+    ],
+    [
+      "retirement",
+      "destination"
+    ],
+    [
+      "office",
+      "car"
+    ],
+    [
+      "boss",
+      "guide"
+    ],
+    [
+      "funding",
+      "ticket"
+    ]
+  ],
+  "explanation": [],
+  "background": {
+    "source": "",
+    "target": ""
+  },
+  "raw": {
+    "target": "career",
+    "source": "journey",
+    "row_indices": [
+      392,
+      393,
+      394,
+      395,
+      396,
+      397,
+      398,
+      399,
+      400,
+      401
+    ],
+    "rows": [
+      {
+        "target": "career",
+        "source": "journey",
+        "targ_word": "education",
+        "src_word": "fuel",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "career",
+        "source": "journey",
+        "targ_word": "skill",
+        "src_word": "fuel",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "career",
+        "source": "journey",
+        "targ_word": "job",
+        "src_word": "transport",
+        "alternatives": "station",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "career",
+        "source": "journey",
+        "targ_word": "experience",
+        "src_word": "baggage",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "career",
+        "source": "journey",
+        "targ_word": "colleague",
+        "src_word": "traveller",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "career",
+        "source": "journey",
+        "targ_word": "worker",
+        "src_word": "traveller",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "career",
+        "source": "journey",
+        "targ_word": "retirement",
+        "src_word": "destination",
+        "alternatives": "arrival",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "career",
+        "source": "journey",
+        "targ_word": "office",
+        "src_word": "car",
+        "alternatives": "coach",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "career",
+        "source": "journey",
+        "targ_word": "boss",
+        "src_word": "guide ",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "career",
+        "source": "journey",
+        "targ_word": "funding",
+        "src_word": "ticket",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      }
+    ]
+  },
+  "structure_source": "provided",
+  "node_type_source": "inferred",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "s8": "t1",
+        "s6": "t10",
+        "s2": "t2",
+        "s7": "t3",
+        "s4": "t6",
+        "s1": "t7",
+        "s5": "t4",
+        "s3": "t8"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "structural_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "multiple_mapping_type": "many_to_one",
+  "analogue_type": "metaphor",
+  "alternatives": [
+    "station",
+    "arrival",
+    "coach"
+  ],
+  "system": {
+    "source": "journey",
+    "target": "career"
+  },
+  "note": "映射来自原文 (target,source,targ_word,src_word) 四列；SCAN 无 Explanation/background/domain/role 表述，对应字段留空且 ref_roles 为空（不启用 role_consistency）。节点类型按词表 discriminator 推断（node_type_source=inferred）。alternatives 是额外候选词，不是关系依据，仅存封存供复核。"
+}

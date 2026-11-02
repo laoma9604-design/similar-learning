@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_scan_0052_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "journey",
+  "nodes": [
+    {
+      "node_id": "s3",
+      "label": "traveler",
+      "type": "entity"
+    },
+    {
+      "node_id": "s4",
+      "label": "road",
+      "type": "entity"
+    },
+    {
+      "node_id": "s6",
+      "label": "destination",
+      "type": "entity"
+    },
+    {
+      "node_id": "s1",
+      "label": "progress",
+      "type": "property"
+    },
+    {
+      "node_id": "s5",
+      "label": "milestone",
+      "type": "entity"
+    },
+    {
+      "node_id": "s2",
+      "label": "obstacle",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s3",
+        "s4",
+        "s6",
+        "s1",
+        "s5",
+        "s2"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s3": "correlate",
+        "s4": "correlate",
+        "s6": "hub",
+        "s1": "correlate",
+        "s5": "correlate",
+        "s2": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0052",
+    "structure_source": "provided"
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "adaptation_id": "adapt_scan_0010",
+  "dataset": "scan",
+  "original_id": "group_scan_0011",
+  "mapping_group_id": "group_scan_0011",
+  "source_object_id": "obj_group_scan_0011_src",
+  "target_object_id": "obj_group_scan_0011_tgt",
+  "faithful_mappings": [
+    [
+      "debater",
+      "soldier"
+    ],
+    [
+      "refute",
+      "destroy"
+    ],
+    [
+      "arguing",
+      "fighting"
+    ],
+    [
+      "acceptance",
+      "defeat"
+    ],
+    [
+      "criticizes",
+      "attacks"
+    ],
+    [
+      "logic",
+      "weapon"
+    ],
+    [
+      "topic",
+      "battleground"
+    ],
+    [
+      "debater",
+      "combatant"
+    ],
+    [
+      "claim",
+      "position"
+    ],
+    [
+      "criticize",
+      "attack"
+    ],
+    [
+      "rhetoric",
+      "maneuver"
+    ],
+    [
+      "retraction",
+      "retreat"
+    ],
+    [
+      "loss",
+      "surrender"
+    ],
+    [
+      "win",
+      "victory"
+    ]
+  ],
+  "explanation": [],
+  "background": {
+    "source": "",
+    "target": ""
+  },
+  "raw": {
+    "target": "argument",
+    "source": "war",
+    "row_indices": [
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      289,
+      290,
+      291,
+      292,
+      293,
+      294,
+      295,
+      296
+    ],
+    "rows": [
+      {
+        "target": "argument",
+        "source": "war",
+        "targ_word": "debater",
+        "src_word": "soldier",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "argument",
+        "source": "war",
+        "targ_word": "refute",
+        "src_word": "destroy",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "argument",
+        "source": "war",
+        "targ_word": "arguing",
+        "src_word": "fighting",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "argument",
+        "source": "war",
+        "targ_word": "acceptance",
+        "src_word": "defeat",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "argument",
+        "source": "war",
+        "targ_word": "criticizes",
+        "src_word": "attacks",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "argument",
+        "source": "war",
+        "targ_word": "logic",
+        "src_word": "weapon",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "argument",
+        "source": "war",
+        "targ_word": "topic",
+        "src_word": "battleground",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "argument",
+        "source": "war",
+        "targ_word": "debater",
+        "src_word": "combatant",
+        "alternatives": "warrior",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "argument",
+        "source": "war",
+        "targ_word": "claim",
+        "src_word": "position",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "argument",
+        "source": "war",
+        "targ_word": "criticize",
+        "src_word": "attack",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "argument",
+        "source": "war",
+        "targ_word": "rhetoric",
+        "src_word": "maneuver",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "argument",
+        "source": "war",
+        "targ_word": "retraction",
+        "src_word": "retreat",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "argument",
+        "source": "war",
+        "targ_word": "loss",
+        "src_word": "surrender",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "argument",
+        "source": "war",
+        "targ_word": "win",
+        "src_word": "victory",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      }
+    ]
+  },
+  "structure_source": "provided",
+  "node_type_source": "inferred",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "s10": "t10",
+        "s1": "t11",
+        "s14": "t6",
+        "s13": "t5",
+        "s2": "t9",
+        "s11": "t4",
+        "s7": "t13",
+        "s4": "t10",
+        "s3": "t12",
+        "s6": "t2",
+        "s12": "t1",
+        "s9": "t3",
+        "s5": "t7",
+        "s8": "t8"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "structural_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "multiple_mapping_type": "one_to_many",
+  "analogue_type": "metaphor",
+  "alternatives": [
+    "warrior"
+  ],
+  "system": {
+    "source": "war",
+    "target": "argument"
+  },
+  "note": "映射来自原文 (target,source,targ_word,src_word) 四列；SCAN 无 Explanation/background/domain/role 表述，对应字段留空且 ref_roles 为空（不启用 role_consistency）。节点类型按词表 discriminator 推断（node_type_source=inferred）。alternatives 是额外候选词，不是关系依据，仅存封存供复核。"
+}

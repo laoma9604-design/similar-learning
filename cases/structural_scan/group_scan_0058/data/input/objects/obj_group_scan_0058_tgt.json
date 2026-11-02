@@ -1,0 +1,95 @@
+{
+  "object_id": "obj_group_scan_0058_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "career",
+  "nodes": [
+    {
+      "node_id": "t1",
+      "label": "education",
+      "type": "process"
+    },
+    {
+      "node_id": "t5",
+      "label": "skill",
+      "type": "property"
+    },
+    {
+      "node_id": "t10",
+      "label": "job",
+      "type": "entity"
+    },
+    {
+      "node_id": "t2",
+      "label": "experience",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t3",
+      "label": "colleague",
+      "type": "entity"
+    },
+    {
+      "node_id": "t9",
+      "label": "worker",
+      "type": "entity"
+    },
+    {
+      "node_id": "t6",
+      "label": "retirement",
+      "type": "process"
+    },
+    {
+      "node_id": "t7",
+      "label": "office",
+      "type": "entity"
+    },
+    {
+      "node_id": "t4",
+      "label": "boss",
+      "type": "entity"
+    },
+    {
+      "node_id": "t8",
+      "label": "funding",
+      "type": "substance"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t1",
+        "t5",
+        "t10",
+        "t2",
+        "t3",
+        "t9",
+        "t6",
+        "t7",
+        "t4",
+        "t8"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t1": "correlate",
+        "t5": "correlate",
+        "t10": "correlate",
+        "t2": "correlate",
+        "t3": "correlate",
+        "t9": "correlate",
+        "t6": "correlate",
+        "t7": "correlate",
+        "t4": "correlate",
+        "t8": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0058",
+    "structure_source": "provided"
+  }
+}

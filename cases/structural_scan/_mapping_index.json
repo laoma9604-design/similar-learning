@@ -1,0 +1,980 @@
+{
+  "dataset": "scan",
+  "source": "data/raw/scan/data/SCAN_dataset.csv",
+  "raw_rows": 451,
+  "mapping_groups": 65,
+  "note": "N03 原始映射索引：一个 (target, source) 对 = 一个原始映射组，组内多行为同义词拆分，同一组不得跨划分。",
+  "groups": [
+    {
+      "mapping_group_id": "group_scan_0001",
+      "target": "atom",
+      "source": "solar system",
+      "row_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "n_rows": 6
+    },
+    {
+      "mapping_group_id": "group_scan_0002",
+      "target": "heat transfer",
+      "source": "water flow",
+      "row_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "n_rows": 7
+    },
+    {
+      "mapping_group_id": "group_scan_0003",
+      "target": "sounds",
+      "source": "waves",
+      "row_indices": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "n_rows": 7
+    },
+    {
+      "mapping_group_id": "group_scan_0004",
+      "target": "respiration",
+      "source": "combustion",
+      "row_indices": [
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "n_rows": 7
+    },
+    {
+      "mapping_group_id": "group_scan_0005",
+      "target": "light",
+      "source": "sound",
+      "row_indices": [
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "n_rows": 6
+    },
+    {
+      "mapping_group_id": "group_scan_0006",
+      "target": "planet",
+      "source": "projectile",
+      "row_indices": [
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "n_rows": 6
+    },
+    {
+      "mapping_group_id": "group_scan_0007",
+      "target": "natural selection",
+      "source": "artificial selection",
+      "row_indices": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "n_rows": 7
+    },
+    {
+      "mapping_group_id": "group_scan_0008",
+      "target": "gas molecules",
+      "source": "billiard balls",
+      "row_indices": [
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ],
+      "n_rows": 8
+    },
+    {
+      "mapping_group_id": "group_scan_0009",
+      "target": "mind",
+      "source": "computer",
+      "row_indices": [
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        350,
+        351,
+        352,
+        353,
+        354,
+        355
+      ],
+      "n_rows": 14
+    },
+    {
+      "mapping_group_id": "group_scan_0010",
+      "target": "bacterial mutation",
+      "source": "slot machine",
+      "row_indices": [
+        62,
+        63,
+        64,
+        65,
+        66
+      ],
+      "n_rows": 5
+    },
+    {
+      "mapping_group_id": "group_scan_0011",
+      "target": "argument",
+      "source": "war",
+      "row_indices": [
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        289,
+        290,
+        291,
+        292,
+        293,
+        294,
+        295,
+        296
+      ],
+      "n_rows": 14
+    },
+    {
+      "mapping_group_id": "group_scan_0012",
+      "target": "accepting a belief",
+      "source": "buying an item",
+      "row_indices": [
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79
+      ],
+      "n_rows": 7
+    },
+    {
+      "mapping_group_id": "group_scan_0013",
+      "target": "reasons for a theory",
+      "source": "grounds for a building",
+      "row_indices": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85
+      ],
+      "n_rows": 6
+    },
+    {
+      "mapping_group_id": "group_scan_0014",
+      "target": "difficulties",
+      "source": "impediments to travel",
+      "row_indices": [
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92
+      ],
+      "n_rows": 7
+    },
+    {
+      "mapping_group_id": "group_scan_0015",
+      "target": "time",
+      "source": "money",
+      "row_indices": [
+        93,
+        94,
+        95,
+        96,
+        97
+      ],
+      "n_rows": 5
+    },
+    {
+      "mapping_group_id": "group_scan_0016",
+      "target": "ideas",
+      "source": "seeds",
+      "row_indices": [
+        98,
+        99,
+        100,
+        101,
+        102,
+        103
+      ],
+      "n_rows": 6
+    },
+    {
+      "mapping_group_id": "group_scan_0017",
+      "target": "mind",
+      "source": "machine",
+      "row_indices": [
+        104,
+        105,
+        106,
+        107,
+        108,
+        109
+      ],
+      "n_rows": 6
+    },
+    {
+      "mapping_group_id": "group_scan_0018",
+      "target": "idea",
+      "source": "object",
+      "row_indices": [
+        110,
+        111,
+        112,
+        113
+      ],
+      "n_rows": 4
+    },
+    {
+      "mapping_group_id": "group_scan_0019",
+      "target": "understanding",
+      "source": "following",
+      "row_indices": [
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121
+      ],
+      "n_rows": 8
+    },
+    {
+      "mapping_group_id": "group_scan_0020",
+      "target": "understanding",
+      "source": "seeing",
+      "row_indices": [
+        122,
+        123,
+        124,
+        125,
+        126
+      ],
+      "n_rows": 5
+    },
+    {
+      "mapping_group_id": "group_scan_0021",
+      "target": "life",
+      "source": "theatre",
+      "row_indices": [
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135
+      ],
+      "n_rows": 9
+    },
+    {
+      "mapping_group_id": "group_scan_0022",
+      "target": "innovation",
+      "source": "bloom",
+      "row_indices": [
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142
+      ],
+      "n_rows": 7
+    },
+    {
+      "mapping_group_id": "group_scan_0023",
+      "target": "innovation",
+      "source": "blossom",
+      "row_indices": [
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149
+      ],
+      "n_rows": 7
+    },
+    {
+      "mapping_group_id": "group_scan_0024",
+      "target": "innovation",
+      "source": "flower",
+      "row_indices": [
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156
+      ],
+      "n_rows": 7
+    },
+    {
+      "mapping_group_id": "group_scan_0025",
+      "target": "career",
+      "source": "mountain",
+      "row_indices": [
+        157,
+        158,
+        159,
+        160,
+        161,
+        162
+      ],
+      "n_rows": 6
+    },
+    {
+      "mapping_group_id": "group_scan_0026",
+      "target": "career",
+      "source": "hill",
+      "row_indices": [
+        163,
+        164,
+        165,
+        166,
+        167,
+        168
+      ],
+      "n_rows": 6
+    },
+    {
+      "mapping_group_id": "group_scan_0027",
+      "target": "career",
+      "source": "slope",
+      "row_indices": [
+        169,
+        170,
+        171,
+        172
+      ],
+      "n_rows": 4
+    },
+    {
+      "mapping_group_id": "group_scan_0028",
+      "target": "society",
+      "source": "organism",
+      "row_indices": [
+        173,
+        174,
+        175,
+        176,
+        177
+      ],
+      "n_rows": 5
+    },
+    {
+      "mapping_group_id": "group_scan_0029",
+      "target": "government",
+      "source": "household",
+      "row_indices": [
+        178,
+        179,
+        180,
+        181,
+        182,
+        183
+      ],
+      "n_rows": 6
+    },
+    {
+      "mapping_group_id": "group_scan_0030",
+      "target": "poverty",
+      "source": "disease",
+      "row_indices": [
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190
+      ],
+      "n_rows": 7
+    },
+    {
+      "mapping_group_id": "group_scan_0031",
+      "target": "education",
+      "source": "journey",
+      "row_indices": [
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203
+      ],
+      "n_rows": 13
+    },
+    {
+      "mapping_group_id": "group_scan_0032",
+      "target": "idea",
+      "source": "food",
+      "row_indices": [
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        356,
+        357,
+        358,
+        359,
+        360,
+        361,
+        362
+      ],
+      "n_rows": 13
+    },
+    {
+      "mapping_group_id": "group_scan_0033",
+      "target": "theory",
+      "source": "building",
+      "row_indices": [
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        339,
+        340,
+        341,
+        342
+      ],
+      "n_rows": 10
+    },
+    {
+      "mapping_group_id": "group_scan_0034",
+      "target": "family",
+      "source": "building",
+      "row_indices": [
+        216,
+        217
+      ],
+      "n_rows": 2
+    },
+    {
+      "mapping_group_id": "group_scan_0035",
+      "target": "debate",
+      "source": "battle",
+      "row_indices": [
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227
+      ],
+      "n_rows": 10
+    },
+    {
+      "mapping_group_id": "group_scan_0036",
+      "target": "money",
+      "source": "weapon",
+      "row_indices": [
+        228,
+        229,
+        230,
+        231
+      ],
+      "n_rows": 4
+    },
+    {
+      "mapping_group_id": "group_scan_0037",
+      "target": "skill",
+      "source": "possession",
+      "row_indices": [
+        232,
+        233,
+        234,
+        235
+      ],
+      "n_rows": 4
+    },
+    {
+      "mapping_group_id": "group_scan_0038",
+      "target": "competition",
+      "source": "race",
+      "row_indices": [
+        236,
+        237,
+        238,
+        239,
+        240
+      ],
+      "n_rows": 5
+    },
+    {
+      "mapping_group_id": "group_scan_0039",
+      "target": "sport",
+      "source": "war",
+      "row_indices": [
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248,
+        249,
+        250
+      ],
+      "n_rows": 10
+    },
+    {
+      "mapping_group_id": "group_scan_0040",
+      "target": "money",
+      "source": "liquid",
+      "row_indices": [
+        251,
+        252,
+        253,
+        254,
+        255,
+        256,
+        257,
+        258,
+        259,
+        260,
+        261
+      ],
+      "n_rows": 11
+    },
+    {
+      "mapping_group_id": "group_scan_0041",
+      "target": "knowledge",
+      "source": "liquid",
+      "row_indices": [
+        262,
+        263,
+        264,
+        265,
+        266,
+        267
+      ],
+      "n_rows": 6
+    },
+    {
+      "mapping_group_id": "group_scan_0042",
+      "target": "research",
+      "source": "hunt",
+      "row_indices": [
+        268,
+        269,
+        270,
+        271,
+        272,
+        273
+      ],
+      "n_rows": 6
+    },
+    {
+      "mapping_group_id": "group_scan_0043",
+      "target": "business",
+      "source": "hunt",
+      "row_indices": [
+        274,
+        275,
+        276,
+        277,
+        278,
+        279
+      ],
+      "n_rows": 6
+    },
+    {
+      "mapping_group_id": "group_scan_0044",
+      "target": "marriage",
+      "source": "boat",
+      "row_indices": [
+        280,
+        281,
+        282,
+        283,
+        284,
+        285,
+        286,
+        287,
+        288
+      ],
+      "n_rows": 9
+    },
+    {
+      "mapping_group_id": "group_scan_0045",
+      "target": "nation",
+      "source": "ship",
+      "row_indices": [
+        297,
+        298,
+        299,
+        300,
+        301,
+        302
+      ],
+      "n_rows": 6
+    },
+    {
+      "mapping_group_id": "group_scan_0046",
+      "target": "nation",
+      "source": "family",
+      "row_indices": [
+        303,
+        304,
+        305,
+        306,
+        307
+      ],
+      "n_rows": 5
+    },
+    {
+      "mapping_group_id": "group_scan_0047",
+      "target": "faith",
+      "source": "husbandry",
+      "row_indices": [
+        308,
+        309,
+        310,
+        311,
+        312
+      ],
+      "n_rows": 5
+    },
+    {
+      "mapping_group_id": "group_scan_0048",
+      "target": "crime",
+      "source": "beast",
+      "row_indices": [
+        313,
+        314,
+        315,
+        316,
+        317,
+        318
+      ],
+      "n_rows": 6
+    },
+    {
+      "mapping_group_id": "group_scan_0049",
+      "target": "crime",
+      "source": "virus",
+      "row_indices": [
+        319,
+        320,
+        321,
+        322,
+        323
+      ],
+      "n_rows": 5
+    },
+    {
+      "mapping_group_id": "group_scan_0050",
+      "target": "illness",
+      "source": "battle",
+      "row_indices": [
+        324,
+        325,
+        326,
+        327,
+        328
+      ],
+      "n_rows": 5
+    },
+    {
+      "mapping_group_id": "group_scan_0051",
+      "target": "illness",
+      "source": "journey",
+      "row_indices": [
+        329,
+        330,
+        331,
+        332,
+        333,
+        334,
+        335,
+        336,
+        337,
+        338
+      ],
+      "n_rows": 10
+    },
+    {
+      "mapping_group_id": "group_scan_0052",
+      "target": "love",
+      "source": "journey",
+      "row_indices": [
+        343,
+        344,
+        345,
+        346,
+        347,
+        348,
+        349
+      ],
+      "n_rows": 7
+    },
+    {
+      "mapping_group_id": "group_scan_0053",
+      "target": "ambition",
+      "source": "hunger",
+      "row_indices": [
+        363,
+        364,
+        365,
+        366,
+        367,
+        368
+      ],
+      "n_rows": 6
+    },
+    {
+      "mapping_group_id": "group_scan_0054",
+      "target": "politics",
+      "source": "courtship",
+      "row_indices": [
+        369,
+        370,
+        371,
+        372,
+        373
+      ],
+      "n_rows": 5
+    },
+    {
+      "mapping_group_id": "group_scan_0055",
+      "target": "code",
+      "source": "virus",
+      "row_indices": [
+        374,
+        375,
+        376,
+        377,
+        378
+      ],
+      "n_rows": 5
+    },
+    {
+      "mapping_group_id": "group_scan_0056",
+      "target": "love",
+      "source": "commerce",
+      "row_indices": [
+        379,
+        380,
+        381
+      ],
+      "n_rows": 3
+    },
+    {
+      "mapping_group_id": "group_scan_0057",
+      "target": "society",
+      "source": "train",
+      "row_indices": [
+        382,
+        383,
+        384,
+        385,
+        386,
+        387,
+        388,
+        389,
+        390,
+        391
+      ],
+      "n_rows": 10
+    },
+    {
+      "mapping_group_id": "group_scan_0058",
+      "target": "career",
+      "source": "journey",
+      "row_indices": [
+        392,
+        393,
+        394,
+        395,
+        396,
+        397,
+        398,
+        399,
+        400,
+        401
+      ],
+      "n_rows": 10
+    },
+    {
+      "mapping_group_id": "group_scan_0059",
+      "target": "state",
+      "source": "family",
+      "row_indices": [
+        402,
+        403,
+        404,
+        405,
+        406,
+        407,
+        408
+      ],
+      "n_rows": 7
+    },
+    {
+      "mapping_group_id": "group_scan_0060",
+      "target": "politics",
+      "source": "game",
+      "row_indices": [
+        409,
+        410,
+        411,
+        412,
+        413,
+        414
+      ],
+      "n_rows": 6
+    },
+    {
+      "mapping_group_id": "group_scan_0061",
+      "target": "politics",
+      "source": "theatre",
+      "row_indices": [
+        415,
+        416,
+        417,
+        418,
+        419,
+        420
+      ],
+      "n_rows": 6
+    },
+    {
+      "mapping_group_id": "group_scan_0062",
+      "target": "politics",
+      "source": "machine",
+      "row_indices": [
+        421,
+        422,
+        423,
+        424,
+        425,
+        426,
+        427,
+        428
+      ],
+      "n_rows": 8
+    },
+    {
+      "mapping_group_id": "group_scan_0063",
+      "target": "marriage",
+      "source": "game",
+      "row_indices": [
+        429,
+        430,
+        431,
+        432
+      ],
+      "n_rows": 4
+    },
+    {
+      "mapping_group_id": "group_scan_0064",
+      "target": "business",
+      "source": "war",
+      "row_indices": [
+        433,
+        434,
+        435,
+        436,
+        437,
+        438,
+        439,
+        440,
+        441,
+        442,
+        443,
+        444
+      ],
+      "n_rows": 12
+    },
+    {
+      "mapping_group_id": "group_scan_0065",
+      "target": "crime",
+      "source": "disease",
+      "row_indices": [
+        445,
+        446,
+        447,
+        448,
+        449,
+        450
+      ],
+      "n_rows": 6
+    }
+  ]
+}

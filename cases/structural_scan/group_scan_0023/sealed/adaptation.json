@@ -1,0 +1,152 @@
+{
+  "adaptation_id": "adapt_scan_0022",
+  "dataset": "scan",
+  "original_id": "group_scan_0023",
+  "mapping_group_id": "group_scan_0023",
+  "source_object_id": "obj_group_scan_0023_src",
+  "target_object_id": "obj_group_scan_0023_tgt",
+  "faithful_mappings": [
+    [
+      "funding",
+      "water"
+    ],
+    [
+      "research",
+      "stem"
+    ],
+    [
+      "laboratory",
+      "soil"
+    ],
+    [
+      "experiment",
+      "planting"
+    ],
+    [
+      "idea",
+      "blossom"
+    ],
+    [
+      "conference",
+      "greenhouse"
+    ],
+    [
+      "collaboration",
+      "symbiosis"
+    ]
+  ],
+  "explanation": [],
+  "background": {
+    "source": "",
+    "target": ""
+  },
+  "raw": {
+    "target": "innovation",
+    "source": "blossom",
+    "row_indices": [
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149
+    ],
+    "rows": [
+      {
+        "target": "innovation",
+        "source": "blossom",
+        "targ_word": "funding",
+        "src_word": "water",
+        "alternatives": "fertiliser",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "innovation",
+        "source": "blossom",
+        "targ_word": "research",
+        "src_word": "stem",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "innovation",
+        "source": "blossom",
+        "targ_word": "laboratory",
+        "src_word": "soil",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "innovation",
+        "source": "blossom",
+        "targ_word": "experiment",
+        "src_word": "planting",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "innovation",
+        "source": "blossom",
+        "targ_word": "idea",
+        "src_word": "blossom",
+        "alternatives": "flower",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "innovation",
+        "source": "blossom",
+        "targ_word": "conference",
+        "src_word": "greenhouse",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      },
+      {
+        "target": "innovation",
+        "source": "blossom",
+        "targ_word": "collaboration",
+        "src_word": "symbiosis",
+        "alternatives": "",
+        "analogy_type": "metaphor"
+      }
+    ]
+  },
+  "structure_source": "provided",
+  "node_type_source": "inferred",
+  "annotation_status": "confirmed",
+  "valid_mappings": [
+    {
+      "node_map": {
+        "s2": "t2",
+        "s6": "t4",
+        "s7": "t7",
+        "s5": "t6",
+        "s3": "t3",
+        "s1": "t5",
+        "s4": "t1"
+      },
+      "edge_map": {
+        "e1": "e1"
+      }
+    }
+  ],
+  "available_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "structural_checks": [
+    "pair_consistency",
+    "type_pattern"
+  ],
+  "multiple_mapping_type": "none",
+  "analogue_type": "metaphor",
+  "alternatives": [
+    "fertiliser",
+    "flower"
+  ],
+  "system": {
+    "source": "blossom",
+    "target": "innovation"
+  },
+  "note": "映射来自原文 (target,source,targ_word,src_word) 四列；SCAN 无 Explanation/background/domain/role 表述，对应字段留空且 ref_roles 为空（不启用 role_consistency）。节点类型按词表 discriminator 推断（node_type_source=inferred）。alternatives 是额外候选词，不是关系依据，仅存封存供复核。"
+}

@@ -1,0 +1,116 @@
+{
+  "object_id": "obj_group_scan_0032_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "idea",
+  "nodes": [
+    {
+      "node_id": "t12",
+      "label": "understanding",
+      "type": "process"
+    },
+    {
+      "node_id": "t3",
+      "label": "comprehension",
+      "type": "process"
+    },
+    {
+      "node_id": "t5",
+      "label": "teaching",
+      "type": "process"
+    },
+    {
+      "node_id": "t9",
+      "label": "persuading",
+      "type": "process"
+    },
+    {
+      "node_id": "t1",
+      "label": "theory",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t10",
+      "label": "creativity",
+      "type": "property"
+    },
+    {
+      "node_id": "t4",
+      "label": "curiosity",
+      "type": "property"
+    },
+    {
+      "node_id": "t7",
+      "label": "interestingness",
+      "type": "property"
+    },
+    {
+      "node_id": "t8",
+      "label": "thinking",
+      "type": "process"
+    },
+    {
+      "node_id": "t11",
+      "label": "originality",
+      "type": "property"
+    },
+    {
+      "node_id": "t2",
+      "label": "irrelevance",
+      "type": "property"
+    },
+    {
+      "node_id": "t13",
+      "label": "provocation",
+      "type": "process"
+    },
+    {
+      "node_id": "t6",
+      "label": "learning",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t12",
+        "t3",
+        "t5",
+        "t9",
+        "t1",
+        "t10",
+        "t4",
+        "t7",
+        "t8",
+        "t11",
+        "t2",
+        "t13",
+        "t6"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t12": "correlate",
+        "t3": "correlate",
+        "t5": "correlate",
+        "t9": "correlate",
+        "t1": "correlate",
+        "t10": "correlate",
+        "t4": "correlate",
+        "t7": "correlate",
+        "t8": "correlate",
+        "t11": "correlate",
+        "t2": "correlate",
+        "t13": "correlate",
+        "t6": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0032",
+    "structure_source": "provided"
+  }
+}

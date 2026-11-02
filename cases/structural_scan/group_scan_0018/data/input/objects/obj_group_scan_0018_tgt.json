@@ -1,0 +1,53 @@
+{
+  "object_id": "obj_group_scan_0018_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "idea",
+  "nodes": [
+    {
+      "node_id": "t3",
+      "label": "understand",
+      "type": "process"
+    },
+    {
+      "node_id": "t2",
+      "label": "analyze",
+      "type": "process"
+    },
+    {
+      "node_id": "t4",
+      "label": "important",
+      "type": "property"
+    },
+    {
+      "node_id": "t1",
+      "label": "trivial",
+      "type": "property"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t3",
+        "t2",
+        "t4",
+        "t1"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t3": "correlate",
+        "t2": "correlate",
+        "t4": "correlate",
+        "t1": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0018",
+    "structure_source": "provided"
+  }
+}

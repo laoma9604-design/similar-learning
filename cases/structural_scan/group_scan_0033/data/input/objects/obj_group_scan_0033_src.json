@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_scan_0033_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "test",
+  "label": "building",
+  "nodes": [
+    {
+      "node_id": "s5",
+      "label": "construction",
+      "type": "process"
+    },
+    {
+      "node_id": "s4",
+      "label": "foundation",
+      "type": "entity"
+    },
+    {
+      "node_id": "s6",
+      "label": "cement",
+      "type": "substance"
+    },
+    {
+      "node_id": "s1",
+      "label": "block",
+      "type": "entity"
+    },
+    {
+      "node_id": "s3",
+      "label": "framework",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "s2",
+      "label": "architect",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s5",
+        "s4",
+        "s6",
+        "s1",
+        "s3",
+        "s2"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s5": "hub",
+        "s4": "hub",
+        "s6": "correlate",
+        "s1": "correlate",
+        "s3": "hub",
+        "s2": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0033",
+    "structure_source": "provided"
+  }
+}

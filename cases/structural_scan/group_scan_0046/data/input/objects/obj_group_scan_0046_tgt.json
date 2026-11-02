@@ -1,0 +1,60 @@
+{
+  "object_id": "obj_group_scan_0046_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "nation",
+  "nodes": [
+    {
+      "node_id": "t3",
+      "label": "law",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t4",
+      "label": "public",
+      "type": "entity"
+    },
+    {
+      "node_id": "t5",
+      "label": "crime",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t1",
+      "label": "imprisonment",
+      "type": "process"
+    },
+    {
+      "node_id": "t2",
+      "label": "aid",
+      "type": "substance"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t3",
+        "t4",
+        "t5",
+        "t1",
+        "t2"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t3": "correlate",
+        "t4": "correlate",
+        "t5": "correlate",
+        "t1": "correlate",
+        "t2": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0046",
+    "structure_source": "provided"
+  }
+}

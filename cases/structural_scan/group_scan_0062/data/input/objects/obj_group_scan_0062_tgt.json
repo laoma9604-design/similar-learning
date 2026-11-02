@@ -1,0 +1,81 @@
+{
+  "object_id": "obj_group_scan_0062_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "val",
+  "label": "politics",
+  "nodes": [
+    {
+      "node_id": "t8",
+      "label": "politician",
+      "type": "entity"
+    },
+    {
+      "node_id": "t5",
+      "label": "law",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t6",
+      "label": "president",
+      "type": "entity"
+    },
+    {
+      "node_id": "t2",
+      "label": "press",
+      "type": "entity"
+    },
+    {
+      "node_id": "t3",
+      "label": "campaign",
+      "type": "process"
+    },
+    {
+      "node_id": "t7",
+      "label": "money",
+      "type": "substance"
+    },
+    {
+      "node_id": "t4",
+      "label": "crisis",
+      "type": "process"
+    },
+    {
+      "node_id": "t1",
+      "label": "corruption",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t8",
+        "t5",
+        "t6",
+        "t2",
+        "t3",
+        "t7",
+        "t4",
+        "t1"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t8": "correlate",
+        "t5": "correlate",
+        "t6": "correlate",
+        "t2": "correlate",
+        "t3": "correlate",
+        "t7": "correlate",
+        "t4": "correlate",
+        "t1": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0062",
+    "structure_source": "provided"
+  }
+}

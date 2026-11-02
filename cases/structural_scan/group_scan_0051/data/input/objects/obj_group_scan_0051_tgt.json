@@ -1,0 +1,95 @@
+{
+  "object_id": "obj_group_scan_0051_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "illness",
+  "nodes": [
+    {
+      "node_id": "t4",
+      "label": "patient",
+      "type": "entity"
+    },
+    {
+      "node_id": "t7",
+      "label": "virus",
+      "type": "entity"
+    },
+    {
+      "node_id": "t9",
+      "label": "disease",
+      "type": "process"
+    },
+    {
+      "node_id": "t10",
+      "label": "diagnosis",
+      "type": "process"
+    },
+    {
+      "node_id": "t6",
+      "label": "remission",
+      "type": "process"
+    },
+    {
+      "node_id": "t8",
+      "label": "course",
+      "type": "entity"
+    },
+    {
+      "node_id": "t1",
+      "label": "stage",
+      "type": "entity"
+    },
+    {
+      "node_id": "t2",
+      "label": "death",
+      "type": "process"
+    },
+    {
+      "node_id": "t3",
+      "label": "health",
+      "type": "property"
+    },
+    {
+      "node_id": "t5",
+      "label": "infection",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t4",
+        "t7",
+        "t9",
+        "t10",
+        "t6",
+        "t8",
+        "t1",
+        "t2",
+        "t3",
+        "t5"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t4": "correlate",
+        "t7": "correlate",
+        "t9": "correlate",
+        "t10": "correlate",
+        "t6": "correlate",
+        "t8": "correlate",
+        "t1": "correlate",
+        "t2": "correlate",
+        "t3": "correlate",
+        "t5": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0051",
+    "structure_source": "provided"
+  }
+}

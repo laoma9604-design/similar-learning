@@ -1,0 +1,39 @@
+{
+  "object_id": "obj_group_scan_0037_src",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "train",
+  "label": "possession",
+  "nodes": [
+    {
+      "node_id": "s1",
+      "label": "owner",
+      "type": "entity"
+    },
+    {
+      "node_id": "s2",
+      "label": "acquisition",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "s1",
+        "s2"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "s1": "correlate",
+        "s2": "hub"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0037",
+    "structure_source": "provided"
+  }
+}

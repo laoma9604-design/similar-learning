@@ -1,0 +1,53 @@
+{
+  "object_id": "obj_group_scan_0063_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "val",
+  "label": "marriage",
+  "nodes": [
+    {
+      "node_id": "t2",
+      "label": "spouse",
+      "type": "entity"
+    },
+    {
+      "node_id": "t3",
+      "label": "home",
+      "type": "entity"
+    },
+    {
+      "node_id": "t1",
+      "label": "argument",
+      "type": "abstract_concept"
+    },
+    {
+      "node_id": "t4",
+      "label": "divorce",
+      "type": "process"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t2",
+        "t3",
+        "t1",
+        "t4"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t2": "correlate",
+        "t3": "correlate",
+        "t1": "correlate",
+        "t4": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0063",
+    "structure_source": "provided"
+  }
+}

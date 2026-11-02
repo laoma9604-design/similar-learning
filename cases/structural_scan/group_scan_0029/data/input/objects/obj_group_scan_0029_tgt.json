@@ -1,0 +1,67 @@
+{
+  "object_id": "obj_group_scan_0029_tgt",
+  "object_kind": "structural",
+  "relation_type": "analogy_correspondence",
+  "split": "test",
+  "label": "government",
+  "nodes": [
+    {
+      "node_id": "t1",
+      "label": "parliament",
+      "type": "entity"
+    },
+    {
+      "node_id": "t3",
+      "label": "president",
+      "type": "entity"
+    },
+    {
+      "node_id": "t5",
+      "label": "politician",
+      "type": "entity"
+    },
+    {
+      "node_id": "t6",
+      "label": "governor",
+      "type": "entity"
+    },
+    {
+      "node_id": "t2",
+      "label": "mayor",
+      "type": "entity"
+    },
+    {
+      "node_id": "t4",
+      "label": "secretary",
+      "type": "entity"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e1",
+      "edge_type": "analogy_correspondence",
+      "input_nodes": [
+        "t1",
+        "t3",
+        "t5",
+        "t6",
+        "t2",
+        "t4"
+      ],
+      "output_nodes": [],
+      "roles": {
+        "t1": "correlate",
+        "t3": "correlate",
+        "t5": "correlate",
+        "t6": "correlate",
+        "t2": "correlate",
+        "t4": "correlate"
+      }
+    }
+  ],
+  "provenance": {
+    "dataset": "scan",
+    "original_id": "group_scan_0029",
+    "structure_source": "provided"
+  }
+}
