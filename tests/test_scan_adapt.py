@@ -490,3 +490,35 @@ def test_no_undeclared_custom_fields(scan):
     for g in scan:
         extra = set(g["ad"]) - declared - allowed_extra
         assert not extra, (g["dir"].name, sorted(extra))
+
+
+def test_check_count_matches_declared_not_more(scan):
+    """evaluate_self 算出的检查项数必须等于声明项数，不得凭空多出一项。
+
+    锁定的 bug（2026-11-02 实跑抓出）：evaluate_self 里写
+    `ref.get("ref_roles") or {从候选对象读角色}`，空 dict 是假值 ⇒ 回退到读候选，
+    等于拿候选给自己打分。SCAN 的 ref_roles 全为空，65 组因此都多算了
+    role_consistency 一项（声明 2 项、实算 3 项）。与 type_pattern 的自比 bug 同类。
+    """
+    import sys
+    sys.path.insert(0, str(ROOT / "a_data"))
+    import metrics
+    for g in scan:
+        assert g["task"]["ref_roles"] == {}
+        assert len(g["task"]["structural_checks"]) == 2
+        idx = json.loads((g["dir"] / "data/input/objects/index.json")
+                         .read_text(encoding="utf-8"))
+        objs = {}
+        for o in idx["objects"]:
+            raw = json.loads((g["dir"] / "data/input/objects" / o["file"])
+                             .read_text(encoding="utf-8"))
+            objs[o["object_id"]] = raw
+        tgt = objs[g["man"]["object_ids"][0]]
+        src = objs[g["man"]["object_ids"][1]]
+        pm = g["task"]["pair_map"]
+        # ref_roles 为空时必须传 None，而不是回退去读候选
+        res = metrics.score_prediction(
+            tgt, src, {"pair_map": pm}, ref_pairs=pm,
+            ref_type_pattern=g["task"]["ref_type_pattern"], ref_roles=None)
+        assert res["n_checks"] == 2, (g["dir"].name, res["n_checks"])
+        assert "role_consistency" not in res["checks"]

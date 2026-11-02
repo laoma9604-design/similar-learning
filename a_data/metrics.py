@@ -653,12 +653,15 @@ def evaluate_self(group: dict[str, Any]) -> dict[str, Any]:
         kwargs = {}
         if ref.get("pair_map") is not None:
             pred["pair_map"] = ref["pair_map"]
+            # ref_roles **必须**直接取参考侧的值，空 dict 就传 None（不启用该项）。
+            # 曾经写成 `ref.get("ref_roles") or {读候选的角色}` —— 空 dict 是假值，
+            # 于是回退到从候选对象读角色，等于拿候选给自己打分：
+            # SCAN 的 ref_roles 全为空，65 组因此凭空多出第 3 项 role_consistency
+            # （文档与参考标注都写 2 项）。与 type_pattern 的自比 bug 同一类错误。
+            ref_roles = ref.get("ref_roles")
             kwargs = dict(ref_pairs=ref["pair_map"],
                           ref_type_pattern=ref.get("ref_type_pattern"),
-                          ref_roles=(ref.get("ref_roles") or
-                                     {k: v for e in (src.get("_edges") or {}).values()
-                                      for k, v in (e.get("roles") or {}).items()}
-                                     ) or None)
+                          ref_roles=(ref_roles if ref_roles else None))
         res = score_prediction(tgt, src, pred, **kwargs)
         res["task_id"] = task_id
         results.append(res)
@@ -670,6 +673,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--selftest", action="store_true", help="跑任务书已知答案自检")
     ap.add_argument("--dataset", default=None, help="只跑某数据集（如 mred）")
     ap.add_argument("--json-out", default=None, help="逐任务结果写到此路径")
+    ap.add_argument("--csv-out", default=None,
+                    help="逐任务结果写为 CSV（任务书 T06 约定的 metrics_per_task.csv）")
     args = ap.parse_args(argv)
 
     if args.selftest:
@@ -706,6 +711,28 @@ def main(argv: list[str] | None = None) -> int:
         Path(args.json_out).write_text(
             json.dumps(all_tasks, ensure_ascii=False, indent=1), encoding="utf-8")
         print("逐任务结果 ->", args.json_out)
+
+    # T06 交付约定：metrics_per_task.csv（逐任务一行，供汇总与复核）
+    if args.csv_out:
+        import csv as _csv
+        cols = ["group_id", "task_id", "mode", "has_candidate", "sf", "sipr",
+                "n_checks", "n_passed",
+                "type_error", "endpoint_error", "role_error"]
+        with open(args.csv_out, "w", encoding="utf-8-sig", newline="") as f:
+            w = _csv.DictWriter(f, fieldnames=cols)
+            w.writeheader()
+            for t in all_tasks:
+                eb = t.get("error_breakdown") or {}
+                w.writerow(dict(
+                    group_id=t["group_id"], task_id=t["task_id"],
+                    mode=t.get("mode", "mechanistic"),
+                    has_candidate=int(bool(t.get("has_candidate"))),
+                    sf=f"{t['sf']:.6f}", sipr=t["sipr"],
+                    n_checks=t["n_checks"], n_passed=t["n_passed"],
+                    type_error=eb.get("type_error", 0),
+                    endpoint_error=eb.get("endpoint_error", 0),
+                    role_error=eb.get("role_error", 0)))
+        print("逐任务 CSV ->", args.csv_out)
     return 0 if not bad_groups else 2
 
 
