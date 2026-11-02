@@ -21,7 +21,7 @@ TopoAdv 项目的统一格式（三件套）：字段约定 + 取值约定 + 填
 文件二：T01-vocabulary.json —— 定"字段里只能填哪些词"
 
 · 方向只有两个：- 是输入端、+ 是输出端（不是正负号）。
-· 节点类型：现在确认的只有"正值标量"（positive_scalar），另放了个"概念"占位——SCAR/SCAN 那些概念型该归哪类，得后面从数据里归纳。
+· 节点类型：六类已定稿（draft-v2）——entity 实体 / substance 物质 / process 过程 / property 属性 / force 力·机制 / abstract_concept 抽象概念，外加机制类专用的 positive_scalar 正值标量。判别问句写在 `node_type_rules` 里。
 · 关系类型三类（还要讨论），每类挂着自己的角色：
   - 乘性增长（复利、细菌增长这类）：当前量、变化比例、下一步量——任务书确认过的。
   - 线性驱动-阻力：驱动、阻力、响应——角色名是我取的，要按实际方程定。
@@ -36,7 +36,7 @@ TopoAdv 项目的统一格式（三件套）：字段约定 + 取值约定 + 填
   - 合成平方反例（mechanistic）：结构和细菌增长一样，但公式改成"当前²÷1000×（1+增长率）"，故意让响应不对，专门当负例。
   - 原子、太阳系、细胞、工厂（structural，无函数）：来自真实数据，节点就是那些概念词（原子核/电子/电荷…，细胞膜/细胞核/细胞器…）。
 · mechanistic 和 structural 的区别：前者有能算的公式，能跑"干预—响应"校验；后者没有公式，只能做结构评价（SCAR/SCAN 就属于这种）。
-· 2 份适配材料：SCAR 的细胞→工厂（5 对概念映射 + 5 条解释 + 两段背景全文）、SCAN 的原子→太阳系（6 对词对），原始数据原封不动封在里面当证据。
+· 2 份适配材料（早期样例，保留作格式示例）：SCAR 的细胞→工厂（5 对概念映射 + 5 条解释 + 两段背景全文）、SCAN 的原子→太阳系（6 对词对），原始数据原封不动封在里面当证据。**正式数据已是 SCAR 378 组 / SCAN 65 组，见 `cases/structural_scar/` 与 `cases/structural_scan/`。**
 · 1 个任务：以银行为目标、两个候选源（细菌=对的、平方反例=错的），但任务里不标哪个对。
 · 1 份正任务答案 + 1 份负任务答案：正任务标了"细菌是对的"、给了正确映射；负任务给了平方反例的排除依据——某个输入下误差 0.0576，超过容差 0.05，证明它不成立。
 
@@ -58,12 +58,20 @@ cases/
 
 命名规矩：文件夹只用稳定 ID——概念层用 relation_type，类比对层用 group_id；人类可读名字（细菌增长/银行复利）只放 manifest / analogy 的 label 字段，不拿数据名当文件夹名。这样改名字不动文件夹，加数据只加编号文件夹。
 
-现在有 5 个类比对：
+现在有 5 个开发样例（都带 dev 前缀，不进正式评测）：
 - multiplicative_growth / group_dev_0001：细菌增长 → 银行复利（机制类·乘性增长）
 - linear_drive_resistance / group_dev_0004：电路 → 水流（机制类·线性驱动-阻力）
 - saturation_response / group_dev_0005：酶反应 → 吸附（机制类·饱和响应）
-- structural / group_dev_0002：太阳系 → 原子（SCAN）
-- structural / group_dev_0003：细胞 → 工厂（SCAR 55）
+- structural / group_dev_0002：太阳系 → 原子（SCAN 早期样例，已被下列正式适配取代）
+- structural / group_dev_0003：细胞 → 工厂（SCAR 早期样例，已被下列正式适配取代）
+
+**正式结构数据（2026-11-02，E01 的 SCAR/SCAN 两列用这两份）**：
+- `cases/structural_scar/` —— SCAR 378 组（排除 22），划分 265/57/56
+- `cases/structural_scan/` —— SCAN 65 组（排除 0），划分 46/10/9
+- 两者的判据都是结构模式两项（`pair_consistency` + `type_pattern`），
+  口径见 `data/SCAR适配规范.md` / `data/SCAN适配规范.md`。
+- `cases/structural/group_dev_0002`、`group_dev_0003` 是旧格式遗留（缺 edge_map/roles），
+  **待删**，不要再往里加数据。
 
 详细规则看 cases/README.md。
 
