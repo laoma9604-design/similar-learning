@@ -70,6 +70,9 @@ def test_s03_counts_reconcile(scar, raw):
         elif rule == "S3":
             assert any(SELFNEG.search(e or "") for e in expl), \
                 f"排除项 {r['original_id']} 声明 S3 但无自我否定"
+        elif rule == "R-manual":
+            assert len(r.get("reason", "")) >= 20, \
+                f"排除项 {r['original_id']} 人工判定理由过于笼统"
         else:
             pytest.fail(f"排除项 {r['original_id']} 规则未知 {rule!r}")
 

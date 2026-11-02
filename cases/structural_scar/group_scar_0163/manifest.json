@@ -4,7 +4,7 @@
   "relation_type": "scar_analogy",
   "schema_version": "topoadv-schema-0.3.1",
   "vocab_version": "topoadv-vocab-0.1.1",
-  "split": "val",
+  "split": "test",
   "object_ids": [
     "obj_group_scar_0163_tgt",
     "obj_group_scar_0163_src"

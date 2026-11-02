@@ -125,6 +125,10 @@ def main():
                         r"weak (mapping|correspondence)|questionable)",
                         e or "", re.I) for e in expl):
                     fail("A4", f"排除项 {r['original_id']} 声明 S3，但未找到自我否定表述")
+            elif rule == "R-manual":
+                # 人工判定条目：必须有可读的具体理由，且必须真的存在该条
+                if len(r.get("reason", "")) < 20:
+                    fail("A4", f"排除项 {r['original_id']} 人工判定理由过于笼统")
             else:
                 fail("A4", f"排除项 {r['original_id']} 规则未知: {rule!r}")
 

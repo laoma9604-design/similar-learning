@@ -84,9 +84,72 @@ SELF_NEGATIVE_RE = re.compile(
     r"does not (really )?(correspond|match|fit)|"
     r"weak (mapping|correspondence)|questionable)", re.I)
 
+# S6 用：解释开头的 "X corresponds to Y:" 句式
+CORRESPONDS_RE = re.compile(
+    r"^(?:the\s+)?([A-Za-z0-9' \-]+?)\s+(?:corresponds?|corresponding)\s+to\s+"
+    r"(?:the\s+)?([A-Za-z0-9' \-]+?)\s*(?:[:：]|$)", re.I)
+
+_STOP = {'a', 'an', 'the', 'of', 'to', 'in', 'on', 'and', 'or', 'for', 'with', 'by', 's'}
+
+
+def _tokens(s):
+    """取比较用词干，容忍单复数与派生词形（只用于判断"讲的是不是同一个概念"）。"""
+    out = set()
+    for w in re.findall(r"[a-z0-9\-']+", str(s).lower()):
+        if w in _STOP:
+            continue
+        for suf in ('ments', 'ment', 'ings', 'ing', 'ations', 'ation',
+                    'ances', 'ance', 'ences', 'ence', 'ities', 'ity',
+                    'ives', 'ive', 'als', 'al', 'es', 's'):
+            if len(w) > len(suf) + 3 and w.endswith(suf):
+                w = w[:-len(suf)]
+                break
+        out.add(w[:6])
+    return out
+
+
+def _token_overlap(said, real):
+    """解释里说的概念与该条映射的概念是否指向同一个（任一词干相交即算）。"""
+    ts, tr = _tokens(said), _tokens(real)
+    if not ts or not tr:
+        return True          # 取不到词就不判，避免误伤
+    return bool(ts & tr)
+
+
+def _pair_matches(said_a, said_b, real_a, real_b):
+    """解释说的概念对是否就是该条映射的概念对。
+
+    实测 SCAR 的解释常有三种正常写法，都不能算错位：
+      ① 词形变化：adjust ↔ maintain      解释 "Adjustment ↔ maintenance"
+      ② 顺序反写：retina ↔ film          解释 "film ↔ retina"
+      ③ 扩大表述：sequence ↔ parts       解释 "Amino acid sequence ↔ puzzle pieces"
+    因此判据是「两端都能对上（顺序不限）」，而不是字面相等。
+    """
+    fwd = _token_overlap(said_a, real_a) and _token_overlap(said_b, real_b)
+    rev = _token_overlap(said_a, real_b) and _token_overlap(said_b, real_a)
+    return fwd or rev
+
+
+# 人工复核后确定排除的条目（试点阶段逐条读过原文判定），
+# 不作为通用规则：S4b/S6 这类"同义重复""解释错位"的自动判定在 SCAR 上误伤率过高
+# （实测 S6 自动判定误伤 76 条，把 Adjustment↔adjust 这类正常词形变化也判成错位），
+# 因此只记录经人工确认的条目，规则本身不入库。
+MANUAL_EXCLUDED = {
+    42: dict(rule="R-manual",
+             reason="Respiratory organs 重复出现并映射到 filter/Cleaner 两个同义目标，"
+                    "属同义重复而非真实对称结构"),
+    283: dict(rule="R-manual",
+              reason="vehicle 重复出现 4 次且目标含 textbook/book 同义对；"
+                     "第 14 对解释写 Guide 而映射为 conductor，解释与映射错位"),
+}
+
 
 def classify(rec):
     """返回 (status, detail)。status ∈ {confirmed, non_bijective, excluded}"""
+    # 先查人工确认的排除清单（试点阶段逐条读原文判定）
+    if rec["id"] in MANUAL_EXCLUDED:
+        return "excluded", MANUAL_EXCLUDED[rec["id"]]
+
     maps = rec.get("mappings") or []
     expl = rec.get("Explanation") or []
     norm = [(str(a).strip(), str(b).strip()) for a, b in maps]
@@ -121,11 +184,15 @@ def classify(rec):
                 rule="S3",
                 reason=f"第 {i+1} 条解释自述该映射不成立（{m.group(0)!r}），作者自认无效")
 
+    # S6 解释与映射错位（已停用自动判定，见 MANUAL_EXCLUDED 的说明）
+    # 保留代码位置以便将来有可靠判据时恢复，当前不生效。
+
     # S4/S5 结构类型（重复端一律保留为映射集合）
     la = [a.lower() for a, _ in norm]
     lb = [b.lower() for _, b in norm]
     dup_a = sorted({x for x, c in Counter(la).items() if c > 1})
     dup_b = sorted({x for x, c in Counter(lb).items() if c > 1})
+
     if dup_a and dup_b:
         return "non_bijective", dict(rule="S5", mtype="both", dup_a=dup_a, dup_b=dup_b)
     if dup_a:
