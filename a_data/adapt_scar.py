@@ -405,7 +405,11 @@ def write_group(g):
         node_type_source="inferred",
         annotation_status=g["status"],
         valid_mappings=[dict(node_map=g["node_map"], edge_map=g["edge_map"])],
-        structural_checks=["pair_consistency", "type_pattern"],
+        # schema 必填字段（2026-11-02 复核补）：该组**有原始依据**可核验的检查项类别，
+        # 取值 ∈ metrics.CHECK_GROUPS。SCAR 原文只给概念对与逐对解释：
+        # 不含 node_bijection（多值对应必然违反双射）、不含 role（仅解释里偶有表述时
+        # 另有 ref_roles 单独处理）、不含输入输出集合（原文无方向）。
+        available_checks=["pair_consistency", "type_pattern"],
         multiple_mapping_type=g["multiple_mapping_type"],
         system={"source": rec.get("system_a"), "target": rec.get("system_b")},
         domains={"source": rec.get("system_a_domain"),

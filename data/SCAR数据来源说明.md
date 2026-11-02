@@ -146,12 +146,38 @@ S3 新增的 7 条（作者在解释里明确写了该映射不成立）：
 |---|---|
 | 适配组 | 378 |
 | 节点规模 | 2~14，与映射对数一致（未压缩） |
-| 双射（唯一参考映射） | 356 |
-| 一对多（one_to_many） | 20 |
-| 多对一（many_to_one） | 2 |
+| 双射（唯一参考映射） | 357 |
+| 一对多（one_to_many） | 2 |
+| 多对一（many_to_one） | 19 |
 | 划分 | train 265（70.11%）/ val 57（15.08%）/ test 56（14.81%） |
 | 结构模式 | 是（L957：无可靠响应函数，不执行响应检验） |
-| 可核验检查项 | `node_bijection`（其余五类无原始标注，不虚构） |
+| 可核验检查项 | `pair_consistency` + `type_pattern`（`available_checks` 同值） |
+
+> **口径更新（2026-11-02）**：此前这里写的是 `node_bijection`，那是结构重建前的
+> 占位口径；同一段上方「356 双射 + 20 一对多 + 2 多对一」也是旧数字，
+> 实际按 `faithful_mappings` 独立复算为 **21 组非双射（19 many_to_one + 2 one_to_many）**，
+> 与 `reference.multiple_mapping_type` 逐组一致。实际判据已改为结构模式的两项——
+> `node_bijection` 在这 21 组上必然失败，`node_type` 会误伤 32.5% 的跨范畴正确映射。
+> 详见 `data/SCAR适配规范.md` 第 9.0.2 节。
+
+## 八、尺度与合法域：结构模式下不适用（L1555 必填项）
+
+L1555 的数据说明要求写「尺度、合法域」。这两项属于 MRED 的响应求值契约
+（`input_scales` / `output_scale` / `legal_domain`），SCAR 走**结构模式**：
+
+- L957 原文：SCAR、SCAN 中没有可靠响应函数的样本，「采用明确标注的结构模式：
+  只训练结构损失，从结构通过者中选映射，**不执行响应搜索**」
+- 因此对象记录里 `function` / `baseline` / `input_scales` / `output_scale` /
+  `legal_domain` / `intervention_bounds` 全部不填
+  （schema 中这些字段对 `object_kind = structural` 非必填）
+- 任务记录里 `intervenable_inputs: []`、`specified_outputs: []`、
+  `intervention_range: {}`
+- `reference.reference_tolerance = null`、`allowed_mappings_total = null`
+
+**不是漏写，是这两项在结构模式下没有定义。** 在 E01 结果表里 SCAR 的尺度/合法域
+一栏记为 N/A，并注明 L957 依据。
+
+## 九、适配产物
 
 适配脚本：`a_data/adapt_scar.py`
 独立验收：`a_data/verify_scar.py`

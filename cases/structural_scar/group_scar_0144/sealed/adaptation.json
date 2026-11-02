@@ -137,7 +137,7 @@
       }
     }
   ],
-  "structural_checks": [
+  "available_checks": [
     "pair_consistency",
     "type_pattern"
   ],
