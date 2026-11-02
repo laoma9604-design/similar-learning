@@ -2,8 +2,11 @@
 
 尽量简洁：12 页，每页只讲一件事，数字全部来自实测。
 运行：.venv/Scripts/python.exe scripts/make_report_ppt.py
+文件被 Office 打开时无法覆盖，可先输出到别处验证：
+  PPT_OUT='C:\\Users\\ASUS\\AppData\\Local\\Temp\\_x.pptx' .venv/Scripts/python.exe scripts/make_report_ppt.py
 """
 import json
+import os
 from pathlib import Path
 
 from pptx import Presentation
@@ -12,7 +15,9 @@ from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "docs" / "TopoAdv-A角色工作汇报.pptx"
+DEFAULT_OUT = ROOT / "docs" / "TopoAdv-A角色工作汇报.pptx"
+# 支持环境变量指定输出路径：文件被 Office 打开时无法覆盖，可先输出到别处验证
+OUT = Path(os.environ.get("PPT_OUT") or DEFAULT_OUT)
 
 DARK = RGBColor(0x1F, 0x2A, 0x37)
 GREY = RGBColor(0x5B, 0x66, 0x72)
