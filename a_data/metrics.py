@@ -645,7 +645,21 @@ def evaluate_self(group: dict[str, Any]) -> dict[str, Any]:
         if src is None or tgt is None:
             continue
         pred = {"node_map": truth["node_map"], "edge_map": truth["edge_map"]}
-        res = score_prediction(tgt, src, pred)
+        # ---- 结构模式（SCAR/SCAN）必须走 pair_map ----
+        # 只传 node_map 会掉进机械模式：node_node_map 是 dict，装不下多值对应，
+        # 且双射/两端同类型这两类检查在跨范畴类比上必然误伤正确答案。
+        # 实测（2026-11-02）：不传 pair_map 时 SCAR 291/378、SCAN 57/65 的正确映射
+        # 都拿不到满分 —— 是**调用方式**的缺陷，不是数据或判据的问题。
+        kwargs = {}
+        if ref.get("pair_map") is not None:
+            pred["pair_map"] = ref["pair_map"]
+            kwargs = dict(ref_pairs=ref["pair_map"],
+                          ref_type_pattern=ref.get("ref_type_pattern"),
+                          ref_roles=(ref.get("ref_roles") or
+                                     {k: v for e in (src.get("_edges") or {}).values()
+                                      for k, v in (e.get("roles") or {}).items()}
+                                     ) or None)
+        res = score_prediction(tgt, src, pred, **kwargs)
         res["task_id"] = task_id
         results.append(res)
     return {"group_id": group["group_id"], "tasks": results}
