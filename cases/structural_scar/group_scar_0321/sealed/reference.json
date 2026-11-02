@@ -84,6 +84,9 @@
         "property"
       ]
     ],
+    "ref_roles": {
+      "s3": "carrier"
+    },
     "full_library_verified": true
   }
 }

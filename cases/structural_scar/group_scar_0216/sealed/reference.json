@@ -98,6 +98,9 @@
         "entity"
       ]
     ],
+    "ref_roles": {
+      "s2": "source"
+    },
     "full_library_verified": true
   }
 }

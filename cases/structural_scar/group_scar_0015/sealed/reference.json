@@ -84,6 +84,9 @@
         "property"
       ]
     ],
+    "ref_roles": {
+      "s1": "source"
+    },
     "full_library_verified": true
   }
 }

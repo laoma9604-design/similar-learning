@@ -64,7 +64,7 @@
       "roles": {
         "s7": "correlate",
         "s5": "correlate",
-        "s8": "correlate",
+        "s8": "source",
         "s3": "correlate",
         "s6": "correlate",
         "s1": "correlate",

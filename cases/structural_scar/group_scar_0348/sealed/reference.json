@@ -154,6 +154,9 @@
         "property"
       ]
     ],
+    "ref_roles": {
+      "s3": "medium"
+    },
     "full_library_verified": true
   }
 }

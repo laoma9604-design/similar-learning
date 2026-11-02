@@ -365,3 +365,53 @@ def test_type_pattern_catches_type_only_errors(scar):
         f"type_pattern 一个都没抓到（{caught}/{applicable}）："
         "说明它与类型标注脱节或检查项失效")
     print(f"\ntype_pattern 抓到纯类型错误: {caught}/{applicable}")
+
+
+def test_role_consistency_catches_role_errors(scar):
+    """role_consistency 的区分力：有角色依据的节点被改角色时能否抓到。
+
+    只对 reference 提供 ref_roles 的组启用（Explanation 明确写了
+    "X is the source/channel/..."）。其余组该项不出现，不得凭空检查。
+    """
+    import sys
+    sys.path.insert(0, str(ROOT / "a_data"))
+    import metrics
+
+    with_roles = tested = caught = 0
+    for G in scar:
+        r = G["ref"][list(G["ref"])[0]]
+        if not r.get("ref_roles"):
+            continue
+        with_roles += 1
+        idx = json.loads((G["dir"] / "data/input/objects/index.json").read_text(encoding="utf-8"))
+        objs = {o["object_id"]: metrics.load_object(G["dir"] / "data/input/objects" / o["file"])
+                for o in idx["objects"]}
+        tgt = objs[G["man"]["object_ids"][0]]
+        src = objs[[o for o in G["man"]["object_ids"] if o != tgt["object_id"]][0]]
+        pm, rtp, rroles = r["pair_map"], r["ref_type_pattern"], r["ref_roles"]
+
+        base = metrics.score_prediction(tgt, src, {"pair_map": pm}, ref_pairs=pm,
+                                        ref_type_pattern=rtp, ref_roles=rroles)
+        assert base["sipr"] == 1, f"{G['dir'].name} 参考映射未满分"
+        assert "role_consistency" in base["checks"]
+
+        # 改掉一个有依据节点的角色
+        nid = next(iter(rroles))
+        want = rroles[nid]
+        target_obj = src if any(n["node_id"] == nid for n in src["nodes"]) else tgt
+        e = target_obj["edges"][0]
+        orig = e["roles"][nid]
+        e["roles"][nid] = "hub" if want != "hub" else "correlate"
+        res = metrics.score_prediction(tgt, src, {"pair_map": pm}, ref_pairs=pm,
+                                       ref_type_pattern=rtp, ref_roles=rroles)
+        e["roles"][nid] = orig
+
+        tested += 1
+        assert res["checks"]["pair_consistency"]["passed"]  # 配对没错
+        if not res["checks"]["role_consistency"]["passed"]:
+            caught += 1
+
+    assert with_roles > 0, "没有任何组提供 ref_roles"
+    assert caught == tested, (
+        f"role_consistency 只抓到 {caught}/{tested}，角色检查项失效")
+    print(f"\nrole_consistency 抓到角色错误: {caught}/{tested}（共 {with_roles} 组有角色依据）")

@@ -30,10 +30,21 @@ from pathlib import Path
 
 import scar_annotations_pilot as ANN
 from scar_type_lexicon import LEXICON as TYPE_LEXICON
+from scar_role_annotation import ROLES as SCAR_ROLES
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "data" / "raw" / "scar" / "release" / "system_analogy_en.json"
 OUT = ROOT / "cases" / "structural_scar"
+VOCAB = ROOT / "T01-vocabulary.json"
+
+# 角色取值必须来自词表，不写死（写死会与 T01-vocabulary.json 脱节）
+_VOCAB = json.loads(VOCAB.read_text(encoding="utf-8"))
+VOCAB_ROLE_IDS = {
+    r["role_id"]
+    for e in _VOCAB["edge_types"]
+    if e["edge_type_id"] == "analogy_correspondence"
+    for r in e.get("roles", [])
+}
 
 SCHEMA_VERSION = "topoadv-schema-0.3.1"
 VOCAB_VERSION = "topoadv-vocab-0.1.0-draft"
@@ -147,6 +158,24 @@ def dump(path, value):
                                allow_nan=False) + "\n", encoding="utf-8")
 
 
+def _ref_roles_of(g):
+    """把原文角色标注映射到节点 ID。无声明的组返回 {}。
+
+    角色可能挂在源域或目标域任一侧（Explanation 说 "X is the channel"
+    时 X 可能在 system_b）。两域都扫，避免漏掉目标端的角色依据。
+    """
+    ext = SCAR_ROLES.get(g["rec"]["id"]) or {}
+    if not ext:
+        return {}
+    want = {}
+    for obj in (g["src_obj"], g["tgt_obj"]):
+        for n in obj["nodes"]:
+            r = ext.get(n["label"])
+            if r in VOCAB_ROLE_IDS:
+                want[n["node_id"]] = r
+    return want
+
+
 def _type_pattern_of(src_obj, tgt_obj, pair_map):
     """按 pair_map 取两域类型，构成参考类型对应模式（已排序、可 JSON 存）。
 
@@ -239,9 +268,12 @@ def build_group(rec, pair_index, raw_original=None):
                 pairs_this_side.setdefault(a, []).append(b)
             else:
                 pairs_this_side.setdefault(b, []).append(a)
+        ext_roles = SCAR_ROLES.get(rec["id"]) or {}
         for w in words:
             if w in ann_roles:
                 nodes_roles[id_of[w]] = ann_roles[w]
+            elif w in ext_roles and ext_roles[w] in VOCAB_ROLE_IDS:
+                nodes_roles[id_of[w]] = ext_roles[w]
             elif len(pairs_this_side.get(w, [])) > 1:
                 nodes_roles[id_of[w]] = "hub"
             else:
@@ -354,6 +386,9 @@ def write_group(g):
         # 必须存在这里，否则检查时只能读候选对象自身的类型，基准跟着候选变，永远相等。
         ref_type_pattern=_type_pattern_of(g["src_obj"], g["tgt_obj"],
                                           g["pair_map"]),
+        # 角色依据：只收 Explanation 明确给出具体角色的节点（17 组），
+        # 其余为空 dict → role_consistency 该项不启用
+        ref_roles=_ref_roles_of(g),
         full_library_verified=True,
     )})
 

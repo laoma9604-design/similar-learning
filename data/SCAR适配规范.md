@@ -241,23 +241,52 @@ SCAR 的 SF/SIPR 与 MRED **口径不同，数值不可直接比较**：
 | Explanation、背景 | **封存** | 含答案与论证 |
 | 节点类型（试点 20 组） | 公开 | 属于结构信息，非答案 |
 
-### 9.0.2 为什么不用机械模式的六类检查
+### 9.0.2 为什么不用机械模式的六类检查（逐项证据）
 
-实测依据（`a_data/scar_annotations_pilot.py` 20 组人工标注）：
+按原始材料**实际有什么**逐项判定，不按参考数据集有什么来定：
 
-- **node_bijection 不适用**：SCAR 有真实多值对应（`virus→code,malware`、`sperm,egg→product`），双射必然失败
-- **node_type（两端同类型）不适用**：正确映射中 **32.5%（41/126）** 两端类型不同
-  - `virus(实体) ↔ code(抽象)`、`vaccine(物质) ↔ antivirus(实体)`、`choroid(实体) ↔ black paint(物质)`
-  - **跨范畴对应正是类比的核心机制**，要求同类型会系统性地误伤正确答案
+| L1034 检查项 | 判定 | 依据（实测） | 本适配的处理 |
+|---|---|---|---|
+| 节点双射 | **做不到** | 25 条记录存在多值映射（`sperm/egg→product`、`virus→code,malware`），要求双射等于否认原文 | 改用 `pair_consistency`（对应集合一致，含多值） |
+| 超边双射 | **做不到** | 原文无关系划分字段；仅 37/400 组解释含 `part of` 类表述，且是描述概念不是划分超边 | 不启用 |
+| 每节点类型 | **已做** | 原文无 type 字段，但词义范畴可判定 | 1946 词逐词人工标注 → `type_pattern` |
+| 每超边类型 | **做不到** | 同超边划分，原文无关系类型字段 | 不启用 |
+| 输入输出集合 | **做不到** | 严格模式（produces/outputs/enters）仅 63/400 组命中，且动词主语多不是概念本身（实测 `id=3` 主语是 "the places where gas exchange..."、`id=13` 是 "has gates that allow..."），无法可靠抽取 | 不启用 |
+| 节点–超边角色 | **部分可做，已补** | 74/400 组解释含角色表述；其中 **17 组主语明确指向概念本身**（`light energy is the source`、`trachea is the channel`），2 组已排除，**15 组有效** | 补做 → `role_consistency` |
 
-因此结构模式改用两条在 SCAR 上真正成立的检查：
+**两项判定标准的区别**（这是上一版文档含糊的地方）：
 
-| 检查 | 内容 | 实测 |
-|---|---|---|
-| `pair_consistency` | 候选的概念对应集合与参考一致（顺序无关，含多值端点） | 参考映射 378/378 满分 |
-| `type_pattern` | 类型**对应模式**与参考一致（如参考是 entity→concept，候选也必须是），不要求两端同类型 | 恒等/循环置换误判 0/378 |
+- 「做不到」= 原始材料**没有**该信息，或该信息与原文事实冲突（双射 vs 多值）
+- 「简化」= 原始材料**有**该信息，但本适配没用上（角色、端点曾属此类，现已补做）
 
-清单项数为 2，与 MRED 的 11 项口径不同，跨数据集比较须注明。
+**端点为什么最终仍不启用**：不是没看过，而是抽出来的主语不是概念本身。举例：
+
+```
+id=3  lungs↔combustion chamber
+      解释："Lungs ... the places where gas exchange and energy release ..."
+      正则抓到主语 "the places where gas exchange and energy" —— 不是 lungs
+id=13 substances↔people
+      解释："the cell membrane allows certain ...... has gates that allow people and goods to enter"
+      抓到主语 "has gates that allow people and goods to" —— 不是 substances
+```
+
+要在 63 组里确认「哪一对是输入、哪一对是输出」，只能人工逐条读并人工判断关系方向，这已经超出"原文明确陈述"的边界，属于我们的推断（规范 1 禁止）。
+
+### 9.0.3 三项检查及其区分力（实测）
+
+| 检查 | 内容 | 正确答案通过率 | 识破率（只错本维） |
+|---|---|---|---|
+| `pair_consistency` | 概念对应集合与参考一致（顺序无关，含多值端点） | 378/378 | 排列类 100%（identity/cycle 各 0 漏判） |
+| `type_pattern` | 类型对应**模式**与参考一致，不要求两端同类型 | 378/378 | 378/378（改一个节点类型即被抓） |
+| `role_consistency` | 有角色依据的节点，候选须保持同一角色（15 组启用） | 378/378 | 15/15 |
+
+**各任务检查项数不同**：1 项（`pair_consistency`）是基线，`type_pattern` 全部启用，`role_consistency` 仅 15 组启用。SF 分母因此不完全一致，聚合时应报告分布。
+
+**适用限制**（必须写进 E01）：
+
+- `type_pattern` 仅在方法输出带类型标注时有效；方法只给 `pair_map` 时类型从对象读，该项不提供额外区分力
+- `role_consistency` 仅在 15 组启用，SCAR 整体角色覆盖率低，不能据此认为 SCAR 能测角色
+- SCAR 清单 1–3 项，MRED 11 项，**SF 不可直接比较**
 
 ### 9.1 已合规（对照 T01-schema.json 与 T01-vocabulary.json）
 

@@ -98,6 +98,9 @@
         "abstract_concept"
       ]
     ],
+    "ref_roles": {
+      "s4": "carrier"
+    },
     "full_library_verified": true
   }
 }

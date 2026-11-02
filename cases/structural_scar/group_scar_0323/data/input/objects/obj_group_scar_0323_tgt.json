@@ -33,7 +33,7 @@
       "output_nodes": [],
       "roles": {
         "t2": "correlate",
-        "t3": "correlate",
+        "t3": "channel",
         "t1": "correlate"
       }
     }

@@ -84,6 +84,9 @@
         "entity"
       ]
     ],
+    "ref_roles": {
+      "s2": "carrier"
+    },
     "full_library_verified": true
   }
 }

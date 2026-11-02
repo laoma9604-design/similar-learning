@@ -84,6 +84,9 @@
         "substance"
       ]
     ],
+    "ref_roles": {
+      "t1": "container"
+    },
     "full_library_verified": true
   }
 }

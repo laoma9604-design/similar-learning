@@ -154,6 +154,9 @@
         "substance"
       ]
     ],
+    "ref_roles": {
+      "s1": "medium"
+    },
     "full_library_verified": true
   }
 }

@@ -34,7 +34,7 @@
       "roles": {
         "t2": "correlate",
         "t3": "correlate",
-        "t1": "correlate"
+        "t1": "source"
       }
     }
   ],

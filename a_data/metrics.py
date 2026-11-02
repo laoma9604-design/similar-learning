@@ -100,7 +100,8 @@ STRUCTURAL_CHECKS = ("pair_consistency", "type_pattern")
 
 def build_structural_checks(tgt, src, cand_pairs, ref_pairs,
                             type_pattern_required=True,
-                            ref_type_pattern=None):
+                            ref_type_pattern=None,
+                            ref_roles=None):
     """结构模式（SCAR/SCAN）的检查清单。
 
     为什么不用机械模式的六类（实测依据，2026-11-02）：
@@ -110,17 +111,11 @@ def build_structural_checks(tgt, src, cand_pairs, ref_pairs,
         （virus(实体)↔code(抽象)、vaccine(物质)↔antivirus(实体)），
         跨范畴正是类比的核心机制，要求同类型会误伤正确答案
 
-    两条检查：
+    三项检查：
       pair_consistency 候选的概念对应集合必须与参考一致（顺序无关，含多值端点）
       type_pattern     候选的类型对应模式必须与参考一致
-                       （例如参考是 entity→abstract_concept，候选也必须是，
-                         但不要求候选两端同类型）
-
-    ref_type_pattern: **参考侧保存的类型快照**，形如
-        [["entity","abstract_concept"], ["asset",...], ...]（已排序）。
-        不给时退回用当前 src/tgt 的类型——但那样基准会随候选对象变化，
-        等于自己和自己比（实测：改一个节点类型，参考模式跟着变，永远相等，
-        这类错误一个都抓不到）。production 路径必须传快照。
+      role_consistency 有角色依据的节点，候选必须保持同一角色
+                       （仅当 reference 提供 ref_roles 时才启用）
     """
     checks = {}
 
@@ -145,6 +140,28 @@ def build_structural_checks(tgt, src, cand_pairs, ref_pairs,
         checks["type_pattern"] = {
             "kind": "type_error", "passed": cpat == rpat,
             "detail": f"候选 {cpat[:3]} / 参考 {rpat[:3]}",
+        }
+
+    # ---- 角色一致性：只有原文明确给出角色的节点才检查 ----
+    # ref_roles: {节点ID: 角色}，只含 Explanation 有依据的节点。
+    # 无依据的节点不在其中，不参与本项 —— 不能用词义推测补。
+    if ref_roles:
+        # roles 挂在超边上（edge.roles）。角色依据可能落在源域或目标域，
+        # 两域的角色表都要查，否则目标端标注全部失效（实测漏掉 3 组）。
+        role_by_node = {}
+        for obj in (src, tgt):
+            for e in obj.get("_edges", {}).values():
+                role_by_node.update(e.get("roles") or {})
+        mismatch = []
+        for nid, want in ref_roles.items():
+            got = role_by_node.get(nid)
+            if got != want:
+                mismatch.append(f"{nid}: 候选{got} != 参考{want}")
+        checks["role_consistency"] = {
+            "kind": "role_error", "passed": not mismatch,
+            "detail": (f"{len(ref_roles)} 个有依据节点，"
+                       f"{len(mismatch)} 个角色不符: {mismatch[:3]}")
+            if mismatch else f"{len(ref_roles)} 个有依据节点角色全部一致",
         }
 
     return checks
@@ -322,7 +339,8 @@ def score_prediction(target: dict[str, Any], src: dict[str, Any],
                      available: list[str] | None = None,
                      valid_set: list[dict[str, Any]] | None = None,
                      ref_pairs: list | None = None,
-                     ref_type_pattern: list | None = None) -> dict[str, Any]:
+                     ref_type_pattern: list | None = None,
+                     ref_roles: dict | None = None) -> dict[str, Any]:
     """对单个任务的候选映射打分。prediction=None 表示方法无候选（两项记零）。
 
     available: 该对象有原始依据可核验的检查项类别；None 时与 MRED 口径一致。
@@ -349,7 +367,8 @@ def score_prediction(target: dict[str, Any], src: dict[str, Any],
             # 回退：从 node_map 还原（丢掉多值信息，但至少能量化）
             cand_pairs = [[s, t] for s, t in (prediction.get("node_map") or {}).items()]
         checks = build_structural_checks(target, src, cand_pairs, ref_pairs,
-                                         ref_type_pattern=ref_type_pattern)
+                                         ref_type_pattern=ref_type_pattern,
+                                         ref_roles=ref_roles)
         n_total = len(checks)
         n_pass = sum(1 for c in checks.values() if c["passed"])
         breakdown = {"type_error": 0, "endpoint_error": 0, "role_error": 0}

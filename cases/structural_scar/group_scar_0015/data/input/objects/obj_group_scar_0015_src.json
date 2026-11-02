@@ -32,7 +32,7 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s1": "correlate",
+        "s1": "source",
         "s2": "correlate",
         "s3": "correlate"
       }

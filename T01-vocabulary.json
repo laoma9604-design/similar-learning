@@ -158,6 +158,69 @@
      "direction": "none",
      "status": "pending_bc_review",
      "note": "SCAR 存在真实的多值对应：sperm 与 egg 都对应 product；virus 同时对应 code 与 malware。这类端点在任一方向的对应数 >1，标 hub。与 correlate 互斥：一个节点只能有一个角色，若同时满足则记 hub。"
+    },
+    {
+     "role_id": "source",
+     "label": "来源/供给端",
+     "direction": "none",
+     "status": "pending_bc_review",
+     "evidence": "Explanation 明写 'X is the source of ...'"
+    },
+    {
+     "role_id": "sink",
+     "label": "汇/接受端",
+     "direction": "none",
+     "status": "pending_bc_review",
+     "evidence": "Explanation 明写接受/汇入"
+    },
+    {
+     "role_id": "carrier",
+     "label": "载体",
+     "direction": "none",
+     "status": "pending_bc_review",
+     "evidence": "Explanation 明写 'X is the carrier of ...'"
+    },
+    {
+     "role_id": "channel",
+     "label": "通道",
+     "direction": "none",
+     "status": "pending_bc_review",
+     "evidence": "Explanation 明写 'X is the channel for ...'"
+    },
+    {
+     "role_id": "medium",
+     "label": "介质",
+     "direction": "none",
+     "status": "pending_bc_review",
+     "evidence": "Explanation 明写 'X is the medium of ...'"
+    },
+    {
+     "role_id": "container",
+     "label": "容器/承载空间",
+     "direction": "none",
+     "status": "pending_bc_review",
+     "evidence": "Explanation 明写 'X is the container of ...'"
+    },
+    {
+     "role_id": "resistance",
+     "label": "阻力端",
+     "direction": "none",
+     "status": "pending_bc_review",
+     "evidence": "Explanation 明写阻碍/阻力"
+    },
+    {
+     "role_id": "controller",
+     "label": "控制/负责端",
+     "direction": "none",
+     "status": "pending_bc_review",
+     "evidence": "Explanation 明写 'is responsible for'"
+    },
+    {
+     "role_id": "regulator",
+     "label": "调节端",
+     "direction": "none",
+     "status": "pending_bc_review",
+     "evidence": "Explanation 明写调节功能"
     }
    ]
   }

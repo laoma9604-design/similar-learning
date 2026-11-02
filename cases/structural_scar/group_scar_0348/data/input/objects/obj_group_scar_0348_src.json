@@ -62,7 +62,7 @@
       ],
       "output_nodes": [],
       "roles": {
-        "s3": "correlate",
+        "s3": "medium",
         "s8": "correlate",
         "s2": "correlate",
         "s5": "correlate",

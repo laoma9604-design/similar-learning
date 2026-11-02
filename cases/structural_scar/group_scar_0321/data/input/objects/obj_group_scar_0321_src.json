@@ -34,7 +34,7 @@
       "roles": {
         "s2": "correlate",
         "s1": "correlate",
-        "s3": "correlate"
+        "s3": "carrier"
       }
     }
   ],

@@ -98,6 +98,9 @@
         "substance"
       ]
     ],
+    "ref_roles": {
+      "s1": "carrier"
+    },
     "full_library_verified": true
   }
 }

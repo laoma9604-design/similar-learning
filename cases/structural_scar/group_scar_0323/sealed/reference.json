@@ -84,6 +84,9 @@
         "substance"
       ]
     ],
+    "ref_roles": {
+      "t3": "channel"
+    },
     "full_library_verified": true
   }
 }
