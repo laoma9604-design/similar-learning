@@ -100,6 +100,32 @@
       "node_type"
     ],
     "node_type_source": "inferred",
+    "ref_type_pattern": [
+      [
+        "entity",
+        "abstract_concept"
+      ],
+      [
+        "entity",
+        "entity"
+      ],
+      [
+        "entity",
+        "entity"
+      ],
+      [
+        "process",
+        "abstract_concept"
+      ],
+      [
+        "process",
+        "process"
+      ],
+      [
+        "process",
+        "substance"
+      ]
+    ],
     "full_library_verified": true
   }
 }

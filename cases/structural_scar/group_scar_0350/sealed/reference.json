@@ -120,6 +120,40 @@
       "node_type"
     ],
     "node_type_source": "inferred",
+    "ref_type_pattern": [
+      [
+        "process",
+        "entity"
+      ],
+      [
+        "process",
+        "process"
+      ],
+      [
+        "process",
+        "process"
+      ],
+      [
+        "property",
+        "process"
+      ],
+      [
+        "property",
+        "property"
+      ],
+      [
+        "substance",
+        "substance"
+      ],
+      [
+        "substance",
+        "substance"
+      ],
+      [
+        "substance",
+        "substance"
+      ]
+    ],
     "full_library_verified": true
   }
 }

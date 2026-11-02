@@ -147,6 +147,17 @@ def dump(path, value):
                                allow_nan=False) + "\n", encoding="utf-8")
 
 
+def _type_pattern_of(src_obj, tgt_obj, pair_map):
+    """按 pair_map 取两域类型，构成参考类型对应模式（已排序、可 JSON 存）。
+
+    存成快照是为了让 type_pattern 有独立基准：检查时不能再从候选对象读类型，
+    否则基准随候选变化，永远相等（实测该 bug 使 378/378 的纯类型错误全部漏判）。
+    """
+    smap = {n["node_id"]: n["type"] for n in src_obj["nodes"]}
+    tmap = {n["node_id"]: n["type"] for n in tgt_obj["nodes"]}
+    return sorted([smap[a], tmap[b]] for a, b in pair_map)
+
+
 # ============================================================
 # S05 结构构建
 # ============================================================
@@ -335,6 +346,10 @@ def write_group(g):
         multiple_mapping_type=g["multiple_mapping_type"],
         available_checks=["node_bijection", "node_type"],
         node_type_source="inferred",
+        # 参考类型快照：type_pattern 的判定基准。
+        # 必须存在这里，否则检查时只能读候选对象自身的类型，基准跟着候选变，永远相等。
+        ref_type_pattern=_type_pattern_of(g["src_obj"], g["tgt_obj"],
+                                          g["pair_map"]),
         full_library_verified=True,
     )})
 

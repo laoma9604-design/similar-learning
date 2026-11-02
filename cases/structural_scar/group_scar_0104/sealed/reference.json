@@ -90,6 +90,28 @@
       "node_type"
     ],
     "node_type_source": "inferred",
+    "ref_type_pattern": [
+      [
+        "property",
+        "property"
+      ],
+      [
+        "property",
+        "property"
+      ],
+      [
+        "property",
+        "property"
+      ],
+      [
+        "substance",
+        "entity"
+      ],
+      [
+        "substance",
+        "entity"
+      ]
+    ],
     "full_library_verified": true
   }
 }

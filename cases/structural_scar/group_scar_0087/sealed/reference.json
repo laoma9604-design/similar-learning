@@ -70,6 +70,20 @@
       "node_type"
     ],
     "node_type_source": "inferred",
+    "ref_type_pattern": [
+      [
+        "entity",
+        "entity"
+      ],
+      [
+        "process",
+        "property"
+      ],
+      [
+        "substance",
+        "substance"
+      ]
+    ],
     "full_library_verified": true
   }
 }

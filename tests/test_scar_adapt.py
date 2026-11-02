@@ -319,3 +319,49 @@ def test_object_fields_match_schema(scar):
                 assert set(n) == {"node_id", "label", "type"}, \
                     f"{G['dir'].name} node 含多余字段 {set(n)}"
                 assert n["type"] in node_types, f"{G['dir'].name} node.type 不在词表"
+
+
+def test_type_pattern_catches_type_only_errors(scar):
+    """type_pattern 的独立价值：配对完全正确、只有类型标注错时能否抓到。
+
+    背景：实测 pair_consistency 一项就能识破全部排列类错误
+    （adjacent_swap 99.5%、cycle 100%），type_pattern 在那类测试里从未起作用。
+    必须单独证明它在「配对对、类型错」这类错误上有效，否则就是冗余检查项。
+    """
+    import sys
+    sys.path.insert(0, str(ROOT / "a_data"))
+    import metrics
+
+    caught = applicable = 0
+    for G in scar:
+        r = G["ref"][list(G["ref"])[0]]
+        idx = json.loads((G["dir"] / "data/input/objects/index.json").read_text(encoding="utf-8"))
+        objs = {o["object_id"]: metrics.load_object(G["dir"] / "data/input/objects" / o["file"])
+                for o in idx["objects"]}
+        tgt = objs[G["man"]["object_ids"][0]]
+        src = objs[[o for o in G["man"]["object_ids"] if o != tgt["object_id"]][0]]
+        pm = r["pair_map"]
+
+        rtp = r["ref_type_pattern"]
+        assert metrics.score_prediction(tgt, src, {"pair_map": pm}, ref_pairs=pm,
+                                        ref_type_pattern=rtp)["sipr"] == 1
+
+        # 只改一个源节点的类型，pair_map 原样不动
+        n0 = src["nodes"][0]
+        orig = n0["type"]
+        n0["type"] = "force" if orig != "force" else "entity"
+        res = metrics.score_prediction(tgt, src, {"pair_map": pm}, ref_pairs=pm,
+                                       ref_type_pattern=rtp)
+        n0["type"] = orig
+
+        applicable += 1
+        # 必须由 type_pattern 抓到，且 pair_consistency 仍通过（证明是纯类型错误）
+        if (res["checks"]["pair_consistency"]["passed"]
+                and not res["checks"]["type_pattern"]["passed"]):
+            caught += 1
+
+    assert applicable > 0
+    assert caught > 0, (
+        f"type_pattern 一个都没抓到（{caught}/{applicable}）："
+        "说明它与类型标注脱节或检查项失效")
+    print(f"\ntype_pattern 抓到纯类型错误: {caught}/{applicable}")

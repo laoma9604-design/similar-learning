@@ -99,7 +99,8 @@ STRUCTURAL_CHECKS = ("pair_consistency", "type_pattern")
 
 
 def build_structural_checks(tgt, src, cand_pairs, ref_pairs,
-                            type_pattern_required=True):
+                            type_pattern_required=True,
+                            ref_type_pattern=None):
     """结构模式（SCAR/SCAN）的检查清单。
 
     为什么不用机械模式的六类（实测依据，2026-11-02）：
@@ -109,13 +110,17 @@ def build_structural_checks(tgt, src, cand_pairs, ref_pairs,
         （virus(实体)↔code(抽象)、vaccine(物质)↔antivirus(实体)），
         跨范畴正是类比的核心机制，要求同类型会误伤正确答案
 
-    改用两条在 SCAR 上真正成立的检查：
+    两条检查：
       pair_consistency 候选的概念对应集合必须与参考一致（顺序无关，含多值端点）
       type_pattern     候选的类型对应模式必须与参考一致
                        （例如参考是 entity→abstract_concept，候选也必须是，
                          但不要求候选两端同类型）
 
-    cand_pairs / ref_pairs: [[源节点ID, 目标节点ID], ...]
+    ref_type_pattern: **参考侧保存的类型快照**，形如
+        [["entity","abstract_concept"], ["asset",...], ...]（已排序）。
+        不给时退回用当前 src/tgt 的类型——但那样基准会随候选对象变化，
+        等于自己和自己比（实测：改一个节点类型，参考模式跟着变，永远相等，
+        这类错误一个都抓不到）。production 路径必须传快照。
     """
     checks = {}
 
@@ -132,11 +137,11 @@ def build_structural_checks(tgt, src, cand_pairs, ref_pairs,
     if type_pattern_required:
         tmap = {n["node_id"]: n.get("type") for n in tgt["nodes"]}
         smap = {n["node_id"]: n.get("type") for n in src["nodes"]}
-
-        def pattern(pairs):
-            return sorted((smap.get(a), tmap.get(b)) for a, b in pairs)
-
-        cpat, rpat = pattern(cand_pairs), pattern(ref_pairs)
+        cpat = sorted([smap.get(a), tmap.get(b)] for a, b in cand_pairs)
+        if ref_type_pattern is not None:
+            rpat = [list(x) for x in ref_type_pattern]
+        else:
+            rpat = sorted([smap.get(a), tmap.get(b)] for a, b in ref_pairs)
         checks["type_pattern"] = {
             "kind": "type_error", "passed": cpat == rpat,
             "detail": f"候选 {cpat[:3]} / 参考 {rpat[:3]}",
@@ -316,13 +321,16 @@ def score_prediction(target: dict[str, Any], src: dict[str, Any],
                      prediction: dict[str, Any] | None,
                      available: list[str] | None = None,
                      valid_set: list[dict[str, Any]] | None = None,
-                     ref_pairs: list | None = None) -> dict[str, Any]:
+                     ref_pairs: list | None = None,
+                     ref_type_pattern: list | None = None) -> dict[str, Any]:
     """对单个任务的候选映射打分。prediction=None 表示方法无候选（两项记零）。
 
     available: 该对象有原始依据可核验的检查项类别；None 时与 MRED 口径一致。
     ref_pairs: **结构模式专用**。给出时改用 build_structural_checks，
         候选须提供 pair_map（[[源,目标],...]），按 pair 集合与类型模式判定。
         这是 SCAR/SCAN 的正确口径——机械模式的六类检查在跨范畴类比上会误伤。
+    ref_type_pattern: 参考类型快照（reference.json 的 ref_type_pattern）。
+        不传则 type_pattern 退化为基准随候选变化，形同自比，必须传。
     valid_set: **评价侧**提供的有效映射集合（来自 reference），不是模型提交的内容。
     """
     if prediction is None:
@@ -340,7 +348,8 @@ def score_prediction(target: dict[str, Any], src: dict[str, Any],
         if cand_pairs is None:
             # 回退：从 node_map 还原（丢掉多值信息，但至少能量化）
             cand_pairs = [[s, t] for s, t in (prediction.get("node_map") or {}).items()]
-        checks = build_structural_checks(target, src, cand_pairs, ref_pairs)
+        checks = build_structural_checks(target, src, cand_pairs, ref_pairs,
+                                         ref_type_pattern=ref_type_pattern)
         n_total = len(checks)
         n_pass = sum(1 for c in checks.values() if c["passed"])
         breakdown = {"type_error": 0, "endpoint_error": 0, "role_error": 0}
