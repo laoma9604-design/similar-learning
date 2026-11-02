@@ -208,3 +208,39 @@ def test_public_input_has_no_answer(scar):
         for o in objs:
             for n in o.get("nodes") or []:
                 assert n["label"] == "概念", f"{G['dir'].name} 节点 label 非中性占位"
+
+
+# ---------------------------------------------------------------------------
+# 格式合规（对照 T01-schema.json 与 T01-vocabulary.json）
+# ---------------------------------------------------------------------------
+def test_object_fields_match_schema(scar):
+    """object 字段必须严格符合 schema：必填齐全、无多余字段、枚举值合法。"""
+    schema = json.loads((ROOT / "T01-schema.json").read_text(encoding="utf-8"))
+    vocab = json.loads((ROOT / "T01-vocabulary.json").read_text(encoding="utf-8"))
+    od = schema["records"]["object"]["fields"]
+    node_types = {t["type_id"] for t in vocab["node_types"]}
+    allowed_split = {"dev", "train", "val", "test"}
+
+    for G in scar:
+        obj_dir = G["dir"] / "data/input/objects"
+        idx = json.loads((obj_dir / "index.json").read_text(encoding="utf-8"))
+        for o in idx["objects"]:
+            obj = json.loads((obj_dir / o["file"]).read_text(encoding="utf-8"))
+            # 必填齐全
+            for k, spec in od.items():
+                if isinstance(spec, dict) and spec.get("required") is True:
+                    assert k in obj, f"{G['dir'].name} 缺必填字段 {k}"
+            # split 必须是枚举值（曾写成 None）
+            assert obj["split"] in allowed_split, \
+                f"{G['dir'].name} split={obj['split']!r} 不是合法枚举"
+            assert obj["split"] == G["man"]["split"], f"{G['dir'].name} split 与组不一致"
+            # object_kind 枚举
+            assert obj["object_kind"] in ("mechanistic", "structural")
+            # provenance 只允许 schema 规定的三项（license 等不逐对象重复）
+            assert set(obj["provenance"]) == {"dataset", "original_id", "structure_source"}, \
+                f"{G['dir'].name} provenance 含多余字段 {set(obj['provenance'])}"
+            # node 每项只允许 {node_id,label,type}，type ∈ τ_V
+            for n in obj["nodes"]:
+                assert set(n) == {"node_id", "label", "type"}, \
+                    f"{G['dir'].name} node 含多余字段 {set(n)}"
+                assert n["type"] in node_types, f"{G['dir'].name} node.type 不在词表"

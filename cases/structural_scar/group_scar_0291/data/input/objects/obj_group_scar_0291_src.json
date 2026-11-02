@@ -2,74 +2,63 @@
   "object_id": "obj_group_scar_0291_src",
   "object_kind": "structural",
   "relation_type": "scar_analogy",
-  "split": null,
+  "split": "train",
   "label": "源系统",
   "nodes": [
     {
       "node_id": "n1",
       "label": "概念",
-      "type": "abstract_concept",
-      "slot": 1
+      "type": "abstract_concept"
     },
     {
       "node_id": "n2",
       "label": "概念",
-      "type": "abstract_concept",
-      "slot": 2
+      "type": "abstract_concept"
     },
     {
       "node_id": "n3",
       "label": "概念",
-      "type": "abstract_concept",
-      "slot": 3
+      "type": "abstract_concept"
     },
     {
       "node_id": "n4",
       "label": "概念",
-      "type": "abstract_concept",
-      "slot": 4
+      "type": "abstract_concept"
     },
     {
       "node_id": "n5",
       "label": "概念",
-      "type": "abstract_concept",
-      "slot": 5
+      "type": "abstract_concept"
     },
     {
       "node_id": "n6",
       "label": "概念",
-      "type": "abstract_concept",
-      "slot": 6
+      "type": "abstract_concept"
     },
     {
       "node_id": "n7",
       "label": "概念",
-      "type": "abstract_concept",
-      "slot": 7
+      "type": "abstract_concept"
     },
     {
       "node_id": "n8",
       "label": "概念",
-      "type": "abstract_concept",
-      "slot": 8
+      "type": "abstract_concept"
     },
     {
       "node_id": "n9",
       "label": "概念",
-      "type": "abstract_concept",
-      "slot": 9
+      "type": "abstract_concept"
     },
     {
       "node_id": "n10",
       "label": "概念",
-      "type": "abstract_concept",
-      "slot": 10
+      "type": "abstract_concept"
     },
     {
       "node_id": "n11",
       "label": "概念",
-      "type": "abstract_concept",
-      "slot": 11
+      "type": "abstract_concept"
     }
   ],
   "edges": [
@@ -108,7 +97,6 @@
   "provenance": {
     "dataset": "scar",
     "original_id": "291",
-    "structure_source": "provided",
-    "license": "未声明（README 仅要求引用）"
+    "structure_source": "provided"
   }
 }

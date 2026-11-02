@@ -233,18 +233,21 @@ def build_group(rec, pair_index, raw_original=None):
             "object_id": oid,
             "object_kind": "structural",
             "relation_type": "scar_analogy",
-            "split": None,
+            "split": None,          # 落盘前由 g["split"] 填入（schema 要求枚举值）
             "label": label,
-            "nodes": [dict(node_id=i, label="概念", type=SCAR_NODE_TYPE,
-                           slot=k + 1) for k, i in enumerate(ids)],
+            "nodes": [dict(node_id=i, label="概念", type=SCAR_NODE_TYPE)
+                      for i in ids],
+            # edge_type / roles 暂用占位值：结构类词表尚未由 T02 归纳，
+            # 词表里只有三个机械关系。此事记录在 SCAR适配规范.md 第九节。
             "edges": [dict(edge_id="e1", edge_type="scar_analogy",
                            input_nodes=list(ids),      # 原文无方向：全部概念在同一超边内
                            output_nodes=[],
                            roles={i: "participant" for i in ids},
                            )],
+            # provenance 只含 schema 规定的三项；license/version/commit
+            # 统一记在 data/SCAR数据来源说明.md，不逐对象重复
             "provenance": {"dataset": "scar", "original_id": str(rec["id"]),
-                           "structure_source": "provided",
-                           "license": "未声明（README 仅要求引用）"},
+                           "structure_source": "provided"},
         }
 
     src_obj = make_obj(f"obj_{gid}_src", src_words, src_ids,
@@ -275,6 +278,10 @@ def write_group(g):
     task_id = f"task_{gid}_t01"
     src_id = g["src_obj"]["object_id"]
     tgt_id = g["tgt_obj"]["object_id"]
+
+    # schema 要求 object.split 为枚举值（dev/train/val/test），由组的划分决定
+    g["src_obj"]["split"] = g["split"]
+    g["tgt_obj"]["split"] = g["split"]
 
     # ---- 公开对象 / 任务 ----
     dump(gdir / "data/input/objects" / f"{src_id}.json", g["src_obj"])

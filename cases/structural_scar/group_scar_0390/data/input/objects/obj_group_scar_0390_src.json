@@ -2,20 +2,18 @@
   "object_id": "obj_group_scar_0390_src",
   "object_kind": "structural",
   "relation_type": "scar_analogy",
-  "split": null,
+  "split": "test",
   "label": "源系统",
   "nodes": [
     {
       "node_id": "n1",
       "label": "概念",
-      "type": "abstract_concept",
-      "slot": 1
+      "type": "abstract_concept"
     },
     {
       "node_id": "n2",
       "label": "概念",
-      "type": "abstract_concept",
-      "slot": 2
+      "type": "abstract_concept"
     }
   ],
   "edges": [
@@ -36,7 +34,6 @@
   "provenance": {
     "dataset": "scar",
     "original_id": "390",
-    "structure_source": "provided",
-    "license": "未声明（README 仅要求引用）"
+    "structure_source": "provided"
   }
 }

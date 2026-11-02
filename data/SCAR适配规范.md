@@ -219,7 +219,44 @@ SCAR 的 SF/SIPR 与 MRED **口径不同，数值不可直接比较**：
 
 ---
 
-## 九、已知限制
+## 九、格式合规状况
+
+### 9.1 已合规（对照 T01-schema.json 与 T01-vocabulary.json）
+
+| 项目 | 规定 | 状态 |
+|---|---|---|
+| object 必填 8 项 | object_id / object_kind / relation_type / split / label / nodes / edges / provenance | 全齐 |
+| `object_kind` | enum[mechanistic, structural] | `structural` |
+| `split` | enum[dev,train,val,test] | 由组划分填入（曾误写为 `None`，已修） |
+| `provenance` | 只含 `{dataset, original_id, structure_source}`；license/version/commit 统一记在数据来源说明，不逐对象重复 | 已修（曾多带 `license`） |
+| `node` 字段 | 只允许 `{node_id, label, type}` | 已修（曾多带 `slot`） |
+| `node.type` | ∈ τ_V | `abstract_concept` |
+| adaptation 必填 11 项 | 含 `available_checks` / `multiple_mapping_type` | 全齐 |
+
+`tests/test_scar_adapt.py::test_object_fields_match_schema` 逐对象锁定上述各项，防止回退。
+
+### 9.2 尚未合规：结构类词表缺失（阻塞项）
+
+| 项目 | 规定 | 实际 | 阻塞原因 |
+|---|---|---|---|
+| `relation_type`（结构类） | 「结构类=类比概念（中心-环绕 / 系统-子系统等，**T02 归纳定**）」 | `scar_analogy` | 词表里只有三个机械关系，结构类值至今未归纳 |
+| `edge_type` | 必须 ∈ τ_E | `scar_analogy` | 同上，τ_E 无结构类值 |
+| `edge.roles` | ρ(v,e)，值需在角色体系内 | `participant` | 同上，无结构类角色词表 |
+
+**这不是适配可以做主的**：`T01-vocabulary.json` 的 `edge_types` 只有 `multiplicative_growth` / `linear_drive_resistance` / `saturation_response` 三项，都是带函数模板的机械关系。SCAR 是无函数的类比关系，需要 T02 归纳出结构类条目后，本适配的这三个字段才有合法取值。
+
+**已尝试但失败的自动归纳**（记录在此，避免重复尝试）：
+
+| 方法 | 结果 |
+|---|---|
+| 按系统名关键词分类 | 302/325 落到「其他」，分类器不可用 |
+| 按解释句式信号归纳 | 13.8% 组出现主导信号与次强信号接近，判据不明确 |
+| 解释覆盖检查（P2） | 60 条误报 |
+| 解释错位判定（S6） | 97 条排除中 76 条误伤（`Adjustment↔maintenance` 对 `adjust↔maintain` 被判错位） |
+
+四次尝试都指向同一结论：**SCAR 的解释是自由文本改写，无法用字符串规则可靠映射到结构标签**。因此这三个字段的处理只能等 T02 词表，不能用推断值填充（规范1）。
+
+**临时约定**：在词表补齐前，`scar_analogy` / `participant` 作为占位值使用，已在代码注释与本文档标明。B/C 复核时须注意这三个字段尚非最终值。
 
 | 限制 | 影响 | 处理 |
 |---|---|---|
