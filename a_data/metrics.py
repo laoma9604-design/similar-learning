@@ -66,6 +66,7 @@ def load_group(group_dir: Path) -> dict[str, Any]:
         reference = json.loads(ref_path.read_text(encoding="utf-8"))
     return {
         "group_id": group_dir.name,
+        "group_dir": group_dir,          # 响应指标要读 sealed/intervention_points.json
         "objects": objects,
         "reference": reference,
         "manifest": json.loads((group_dir / "manifest.json").read_text(encoding="utf-8"))
@@ -453,20 +454,124 @@ def score_prediction(target: dict[str, Any], src: dict[str, Any],
     }
 
 
+# --------------------------------------------------------------------------
+# 响应指标（CTC / Ebar）与返回指标（VRR / FAR / Coverage）
+# 任务书 L731-748（CTC/E）、L772-790（Rhat/阈值）、L1039-1047（三类指标定义）
+# --------------------------------------------------------------------------
+
+def _import_runtime():
+    """按需导入求值器。
+
+    metrics 平时只做结构评价（不需要函数），导入 runtime 会拉起表达式解析；
+    放到函数里按需导入，保证只跑结构指标时行为不变。
+    """
+    import importlib
+    if str(ROOT / "a_data") not in sys.path:
+        sys.path.insert(0, str(ROOT / "a_data"))
+    return importlib.import_module("runtime")
+
+
+def sgn_eta(r: float, eta: float) -> int:
+    """把响应分成 +1 / 0 / -1 三类（L731）。容差 η 在验证阶段固定。"""
+    if r > eta:
+        return 1
+    if r < -eta:
+        return -1
+    return 0
+
+
+def response_error(r_src: float, r_tgt: float) -> float:
+    """E(f,I) 单输出形式：min{1, (r_s - r_t)^2}（L748 公式，先平方后截断）。"""
+    d = r_src - r_tgt
+    return min(1.0, d * d)
+
+
+def evaluate_response(src_obj, tgt_obj, points, eta=0.001):
+    """在一个任务的全部留出干预点上算 CTC 与 Ebar（任务内平均）。
+
+    points: [{输入ID: 无量纲 u}, ...]，与 task.intervention_range 同构。
+    两域用**同一组** u（映射决定了源域哪个输入被改变，L725）。
+
+    返回：
+      ctc       方向一致率 = 一致组合数 / (干预数 × 输出数)
+      ebar      逐干预 E 的任务内平均
+      rhat      已检查干预中的最大 E（L772）
+      n_points  完成的干预数；0 表示检验未完成，CTC/Ebar 不得按 0 误差通过
+    """
+    rt = _import_runtime()
+    outs = tgt_obj["designated_outputs"]
+    n_pairs = n_agree = 0
+    errs = []
+    for u in points:
+        r_t = rt.normalized_response(tgt_obj, u)
+        r_s = rt.normalized_response(src_obj, u)
+        e_out = 0.0
+        for y in outs:
+            a, b = r_s[y], r_t[y]
+            if sgn_eta(a, eta) == sgn_eta(b, eta):
+                n_agree += 1
+            n_pairs += 1
+            e_out += response_error(a, b)
+        errs.append(e_out / len(outs))          # 先对输出取平均
+    if not errs:
+        return {"ctc": None, "ebar": None, "rhat": None, "n_points": 0,
+                "status": "未完成（无干预点）"}
+    return {
+        "ctc": n_agree / n_pairs if n_pairs else None,
+        "ebar": sum(errs) / len(errs),
+        "rhat": max(errs),                       # 再对不同干预取最大
+        "n_points": len(errs),
+        "status": "ok",
+    }
+
+
+def score_return_behavior(per_task: list[dict[str, Any]],
+                          labels: dict[str, str] | None = None) -> dict[str, Any]:
+    """VRR / FAR / Coverage（L1043-1047）。
+
+    a_i: 方法是否返回映射；v_i: 返回是否通过独立有效性检查（未返回记 0）。
+    正任务返回错误映射只降低 VRR，不计入 FAR 分子。
+    任一分母为空记 None（报 N/A），不写 0——0 会被读成"表现完美"。
+    """
+    pos = [t for t in per_task if t.get("label") == "positive"]
+    neg = [t for t in per_task if t.get("label") == "negative"]
+    vrr = (sum(1 for t in pos if t.get("has_candidate") and t.get("valid"))
+           / len(pos)) if pos else None
+    far = (sum(1 for t in neg if t.get("has_candidate")) / len(neg)) if neg else None
+    cov = (sum(1 for t in per_task if t.get("has_candidate")) / len(per_task)
+           if per_task else None)
+    return {"VRR": vrr, "FAR": far, "Coverage": cov,
+            "n_pos": len(pos), "n_neg": len(neg)}
+
+
 def aggregate(per_task: list[dict[str, Any]]) -> dict[str, Any]:
     """SF 是检查项通过比例的任务平均；SIPR 是全部检查同时通过的任务比例（L1034）。
 
     无候选任务两项记零（L1034 原文），因此分母是全部任务数 N。
+    响应指标（CTC/Ebar）先在任务内平均、再对**有响应的任务**平均（L1039：
+    "没有可执行返回时记 N/A"），并报出实际任务数。
     """
     n = len(per_task)
     if n == 0:
         return {"n_tasks": 0, "SF": None, "SIPR": None}
-    return {
+    resp = [t for t in per_task if t.get("response")
+            and t["response"].get("ctc") is not None]
+    out = {
         "n_tasks": n,
         "SF": sum(t["sf"] for t in per_task) / n,
         "SIPR": sum(t["sipr"] for t in per_task) / n,
         "no_candidate": sum(0 if t["has_candidate"] else 1 for t in per_task),
     }
+    if resp:
+        out["CTC"] = sum(t["response"]["ctc"] for t in resp) / len(resp)
+        out["Ebar"] = sum(t["response"]["ebar"] for t in resp) / len(resp)
+        out["Rhat"] = sum(t["response"]["rhat"] for t in resp) / len(resp)
+        out["n_response_tasks"] = len(resp)
+    else:
+        out["CTC"] = out["Ebar"] = out["Rhat"] = None
+        out["n_response_tasks"] = 0
+    out.update(score_return_behavior(per_task))
+    return out
 
 
 # --------------------------------------------------------------------------
@@ -597,13 +702,111 @@ def selftest() -> int:
     if r8["checks"]["node_type:A_t"]["passed"]:
         failures.append("被重复占用的目标节点不得判通过")
 
+    # 9) 响应误差公式：任务书 L748 三行数值表逐位复现
+    #    (r_s, r_t, E) = (0.20,0.20,0) / (0.44,0.20,0.0576) / (-0.01,0.01,0.0004)
+    for rs, rt, want in ((0.20, 0.20, 0.0), (0.44, 0.20, 0.0576),
+                         (-0.01, 0.01, 0.0004)):
+        got = response_error(rs, rt)
+        if abs(got - want) > 1e-9:
+            failures.append(f"响应误差 E({rs},{rt}) 应为 {want}，实际 {got}")
+
+    # 10) 方向分类：带容差的三分类（L731）
+    if (sgn_eta(0.44, 0.001), sgn_eta(0.20, 0.001)) != (1, 1):
+        failures.append("0.44 与 0.20 应同判为增大")
+    if sgn_eta(-0.01, 0.001) == sgn_eta(0.01, 0.001):
+        failures.append("-0.01 与 0.01 方向应相反")
+    if sgn_eta(0.003, 0.01) != 0:
+        failures.append("容差 0.01 时 0.003 应判为近似不变")
+
+    # 10b) Rhat 必须是"最大"而不是"平均"（L772）。
+    #      用假求值器喂三组误差 0.001 / 0.002 / 0.08：
+    #      均值 0.02767、最大 0.08。单点用例区分不了两者（均值=最大），必须多点。
+    import types as _types
+    src_seq = {0: 0.0316228, 1: 0.0447214, 2: 0.2828427}   # 平方后 ≈ .001/.002/.08
+    tgt_f, src_f = {"designated_outputs": ["y"]}, {"designated_outputs": ["y"]}
+    fake = _types.ModuleType("runtime")
+
+    def _nr(obj, u):
+        return {"y": 0.0 if obj is tgt_f else src_seq[u["i"]]}
+    fake.normalized_response = _nr
+    _orig_import = evaluate_response.__globals__["_import_runtime"]
+    evaluate_response.__globals__["_import_runtime"] = lambda: fake
+    try:
+        rr = evaluate_response(src_f, tgt_f, [{"i": 0}, {"i": 1}, {"i": 2}])
+    finally:
+        evaluate_response.__globals__["_import_runtime"] = _orig_import
+    if abs(rr["rhat"] - 0.08) > 1e-3:
+        failures.append(f"Rhat 应取最大 0.08（均值 0.0277），实际 {rr['rhat']:.6f}")
+    if abs(rr["ebar"] - 0.027666) > 1e-3:
+        failures.append(f"Ebar 应为均值 0.0277，实际 {rr['ebar']:.6f}")
+
+    # 10c) 没有完成任何干预时，CTC/Ebar 不得算出来，也不得报 ok（L788）
+    rr0 = evaluate_response(src_f, tgt_f, [])
+    if rr0["ctc"] is not None or rr0["ebar"] is not None:
+        failures.append("无干预点时 CTC/Ebar 应为 None（检验未完成），"
+                        f"实际 ctc={rr0['ctc']} ebar={rr0['ebar']}")
+    if rr0["status"] == "ok":
+        failures.append("无干预点不得标记为 ok")
+
+    # 11) CTC/Ebar 在真实 dev 组上：平方反例方向一致但幅度不对
+    #     CTC=1（方向全对）、Rhat=0.0576（幅度超容差 0.05）
+    #     这正是任务书要说明"只看方向会漏掉平方反例"的依据
+    dev = CASES / "multiplicative_growth" / "group_dev_0001"
+    if dev.is_dir():
+        g = load_group(dev)
+        ref = next(iter(g["reference"].values()))
+        tgt_d = g["objects"][g["manifest"]["object_ids"][0]]
+        sq = g["objects"].get("obj_group_dev_0001_i08")
+        pts = [{"v7": 0.2, "v4": 0.0}]
+        if sq is not None:
+            rr = evaluate_response(sq, tgt_d, pts)
+            if abs(rr["rhat"] - 0.0576) > 1e-9:
+                failures.append(f"平方反例 Rhat 应为 0.0576，实际 {rr['rhat']}")
+            if rr["ctc"] != 1.0:
+                failures.append(f"平方反例 CTC 应为 1，实际 {rr['ctc']}")
+            rr2 = evaluate_response(g["objects"][ref["valid"][0]["source_id"]],
+                                    tgt_d, pts)
+            if abs(rr2["ebar"]) > 1e-12:
+                failures.append(f"正确源域 Ebar 应为 0，实际 {rr2['ebar']}")
+
+    # 12) 返回行为：VRR / FAR / Coverage 与空分母记 N/A（L1043-1047）
+    agg = aggregate([
+        dict(task_id="p1", label="positive", has_candidate=True, valid=True,
+             sf=1.0, sipr=1, response=None),
+        dict(task_id="p2", label="positive", has_candidate=False, valid=False,
+             sf=0.0, sipr=0, response=None),
+        dict(task_id="n1", label="negative", has_candidate=False, valid=False,
+             sf=0.0, sipr=0, response=None),
+    ])
+    if abs(agg["VRR"] - 0.5) > 1e-12:
+        failures.append(f"VRR 应为 0.5（1/2 正任务返回有效），实际 {agg['VRR']}")
+    if abs(agg["FAR"] - 0.0) > 1e-12:
+        failures.append(f"FAR 应为 0（负任务未返回），实际 {agg['FAR']}")
+    if abs(agg["Coverage"] - 1 / 3) > 1e-12:
+        failures.append(f"Coverage 应为 1/3，实际 {agg['Coverage']}")
+    # 正任务返回错误映射只降 VRR，不计入 FAR
+    agg2 = aggregate([dict(task_id="p1", label="positive", has_candidate=True,
+                           valid=False, sf=0.5, sipr=0, response=None),
+                      dict(task_id="n1", label="negative", has_candidate=True,
+                           valid=False, sf=0.0, sipr=0, response=None)])
+    if agg2["VRR"] != 0.0 or agg2["FAR"] != 1.0:
+        failures.append(f"VRR/FAR 应为 0/1，实际 {agg2['VRR']}/{agg2['FAR']}")
+    # 分母为空记 None，不写 0
+    agg3 = aggregate([dict(task_id="p1", label="positive", has_candidate=True,
+                           valid=True, sf=1.0, sipr=1, response=None)])
+    if agg3["FAR"] is not None:
+        failures.append("无负任务时 FAR 应为 N/A(None)，不应写 0")
+    if agg3["CTC"] is not None:
+        failures.append("无响应任务时 CTC 应为 N/A(None)，不应写 0")
+
     if failures:
         print("SELFTEST FAILED")
         for f in failures:
             print("  -", f)
         return 1
-    print("SELFTEST PASSED  (8 组断言：11/9 项清单、正确映射 SF=1、角色交换 9/11、"
-          "缺/空/重复映射均不满分)")
+    print("SELFTEST PASSED  (12 组断言：11/9 项清单、正确映射 SF=1、角色交换 9/11、"
+          "缺/空/重复映射均不满分、响应误差三行表、CTC/Ebar 平方反例、"
+          "VRR/FAR/Coverage 与空分母记 N/A)")
     return 0
 
 
@@ -632,16 +835,25 @@ def evaluate_self(group: dict[str, Any]) -> dict[str, Any]:
     """
     results = []
     for task_id, ref in group["reference"].items():
-        if ref.get("label") != "positive":
-            continue
-        if not ref.get("valid"):
-            continue
-        truth = ref["valid"][0]
-        src = group["objects"].get(truth["source_id"])
-        tgt_ids = set()
-        # 目标域对象：manifest 里第一个对象 id 约定为 tgt
+        label = ref.get("label")
+        truth = (ref.get("valid") or [None])[0]
         tgt_id = group["manifest"].get("object_ids", [None])[0]
         tgt = group["objects"].get(tgt_id)
+
+        # 负任务（valid 为空）：正确行为是"拒绝"，不进 E01 结构评分，
+        # 但**必须进返回行为统计**（FAR 的分母是负任务，L1043）。
+        if label == "negative" or not truth:
+            results.append({
+                "task_id": task_id, "label": label or "negative",
+                "has_candidate": False, "sf": 0.0, "sipr": 0,
+                "n_checks": 0, "n_passed": 0, "checks": {},
+                "error_breakdown": {"type_error": 0, "endpoint_error": 0,
+                                    "role_error": 0},
+                "response": None,
+            })
+            continue
+
+        src = group["objects"].get(truth["source_id"])
         if src is None or tgt is None:
             continue
         pred = {"node_map": truth["node_map"], "edge_map": truth["edge_map"]}
@@ -664,6 +876,22 @@ def evaluate_self(group: dict[str, Any]) -> dict[str, Any]:
                           ref_roles=(ref_roles if ref_roles else None))
         res = score_prediction(tgt, src, pred, **kwargs)
         res["task_id"] = task_id
+        res["label"] = label
+        # 用封存正确映射当预测 ⇒ 视为"已返回且有效"，
+        # 由此 VRR/Coverage 在自评价下应为 1（链路连通性检查）
+        res["valid"] = bool(res["sipr"] == 1)
+
+        # ---- 响应指标：只在有封存干预点的任务上算（L1024/L1039）----
+        res["response"] = None
+        pts_file = group["group_dir"] / "sealed/intervention_points.json"
+        if pts_file.is_file() and src.get("function") and tgt.get("function"):
+            pts = json.loads(pts_file.read_text(encoding="utf-8")).get("tasks", {})
+            if task_id in pts:
+                try:
+                    res["response"] = evaluate_response(src, tgt, pts[task_id])
+                except ValueError as e:          # 干预越界/合法域冲突：记未完成
+                    res["response"] = {"ctc": None, "ebar": None, "rhat": None,
+                                       "n_points": 0, "status": f"求值失败: {e}"}
         results.append(res)
     return {"group_id": group["group_id"], "tasks": results}
 
@@ -692,14 +920,24 @@ def main(argv: list[str] | None = None) -> int:
         for t in out["tasks"]:
             t["group_id"] = grp["group_id"]
             all_tasks.append(t)
-        # 正确映射必须满分，否则是评价器或数据有问题
+        # 正任务的正确映射必须满分，否则是评价器或数据有问题。
+        # 负任务跳过 —— 它的正确行为是"拒绝"，SF/SIPR 本就不适用（L1034）。
         for t in out["tasks"]:
-            if abs(t["sf"] - 1.0) > 1e-12 or t["sipr"] != 1:
+            if t.get("label") == "positive" and (
+                    abs(t["sf"] - 1.0) > 1e-12 or t["sipr"] != 1):
                 bad_groups.append(f"{grp['group_id']}/{t['task_id']} SF={t['sf']:.4f}")
 
     agg = aggregate(all_tasks)
-    print(f"组数: {n_groups}   正任务数: {agg['n_tasks']}")
+    print(f"组数: {n_groups}   任务数: {agg['n_tasks']}"
+          f"（正 {agg['n_pos']} / 负 {agg['n_neg']}）")
     print(f"自评价（用封存正确映射当预测）: SF={agg['SF']:.6f}  SIPR={agg['SIPR']:.6f}")
+    # 响应与返回指标（L1039-1047）：任何分母为空记 N/A，不写 0
+    def _f(v):
+        return "N/A" if v is None else f"{v:.6f}"
+    print(f"  返回行为: VRR={_f(agg['VRR'])}  FAR={_f(agg['FAR'])}  "
+          f"Coverage={_f(agg['Coverage'])}")
+    print(f"  响应指标: CTC={_f(agg['CTC'])}  Ebar={_f(agg['Ebar'])}  "
+          f"Rhat={_f(agg['Rhat'])}  （有响应的任务 {agg['n_response_tasks']}）")
     if bad_groups:
         print(f"\n未满分任务 {len(bad_groups)} 个（前 10）:")
         for b in bad_groups[:10]:
@@ -715,23 +953,33 @@ def main(argv: list[str] | None = None) -> int:
     # T06 交付约定：metrics_per_task.csv（逐任务一行，供汇总与复核）
     if args.csv_out:
         import csv as _csv
-        cols = ["group_id", "task_id", "mode", "has_candidate", "sf", "sipr",
-                "n_checks", "n_passed",
-                "type_error", "endpoint_error", "role_error"]
+        cols = ["group_id", "task_id", "label", "mode", "has_candidate", "valid",
+                "sf", "sipr", "n_checks", "n_passed",
+                "type_error", "endpoint_error", "role_error",
+                "n_points", "CTC", "Ebar", "Rhat"]
         with open(args.csv_out, "w", encoding="utf-8-sig", newline="") as f:
             w = _csv.DictWriter(f, fieldnames=cols)
             w.writeheader()
             for t in all_tasks:
                 eb = t.get("error_breakdown") or {}
+                rp = t.get("response") or {}
                 w.writerow(dict(
                     group_id=t["group_id"], task_id=t["task_id"],
+                    label=t.get("label", "positive"),
                     mode=t.get("mode", "mechanistic"),
                     has_candidate=int(bool(t.get("has_candidate"))),
+                    valid=int(bool(t.get("valid"))),
                     sf=f"{t['sf']:.6f}", sipr=t["sipr"],
                     n_checks=t["n_checks"], n_passed=t["n_passed"],
                     type_error=eb.get("type_error", 0),
                     endpoint_error=eb.get("endpoint_error", 0),
-                    role_error=eb.get("role_error", 0)))
+                    role_error=eb.get("role_error", 0),
+                    # 响应指标为空表示"该任务没有留出干预点/无函数"，
+                    # 写成空串而不是 0（0 会被读成"误差极小"）
+                    n_points=rp.get("n_points", ""),
+                    CTC="" if rp.get("ctc") is None else f"{rp['ctc']:.6f}",
+                    Ebar="" if rp.get("ebar") is None else f"{rp['ebar']:.6f}",
+                    Rhat="" if rp.get("rhat") is None else f"{rp['rhat']:.6f}"))
         print("逐任务 CSV ->", args.csv_out)
     return 0 if not bad_groups else 2
 
