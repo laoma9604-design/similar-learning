@@ -1,0 +1,58 @@
+==============================================================================
+MRED 难度实测（相对目标域）
+==============================================================================
+参评对象（不含目标域）: 3630
+
+【结构难度】拓扑形态
+  乘性增长:
+      local_perturbation   single                     483
+      response_error       single                     644
+      structure_error      single                     483
+      valid_source         single                     161
+  线性驱动-阻力:
+      local_perturbation   single                     429
+      response_error       single                     572
+      structure_error      single                     429
+      valid_source         single                     143
+  饱和响应:
+      local_perturbation   single                      78
+      response_error       single                     104
+      structure_error      single                      78
+      valid_source         single                      26
+
+  （目标域自身）
+      乘性增长: {'single': 1771}
+      线性驱动-阻力: {'single': 1573}
+      饱和响应: {'single': 286}
+
+【响应难度】相对目标域的偏离形态
+  乘性增长:
+      local_perturbation   局部差异                         483
+      response_error       局部差异                         374
+      response_error       幅度差异                         270
+      structure_error      无差异(容差内等价)                   483
+      valid_source         无差异(容差内等价)                   161
+  线性驱动-阻力:
+      local_perturbation   局部差异                         429
+      response_error       局部差异                         143
+      response_error       幅度差异                         429
+      structure_error      局部差异                         429
+      valid_source         无差异(容差内等价)                   143
+  饱和响应:
+      local_perturbation   局部差异                          78
+      response_error       局部差异                          26
+      response_error       幅度差异                          78
+      structure_error      幅度差异                          78
+      valid_source         无差异(容差内等价)                    26
+
+【关键交叉表】有效源被判成什么（应全部是「无差异」）
+  乘性增长: {'无差异(容差内等价)': 161}
+  线性驱动-阻力: {'无差异(容差内等价)': 143}
+  饱和响应: {'无差异(容差内等价)': 26}
+
+【关键交叉表】干扰源里有没有「容差内等价」（不该有，有就是假干扰）
+  乘性增长: 483/1610 = 30.0%
+  线性驱动-阻力: 0/1430 = 0.0%
+  饱和响应: 0/260 = 0.0%
+
+明细已写入: results/mred_difficulty.csv

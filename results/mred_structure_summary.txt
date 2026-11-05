@@ -1,0 +1,51 @@
+==============================================================================
+MRED 结构难度统计表
+==============================================================================
+统计对象总数: 3960（正式组 3600，开发组 360）
+
+【优先项 1】每个对象的超边数量 m
+  乘性增长         n= 1932  m 分布: {1: 1932}
+  线性驱动-阻力      n= 1716  m 分布: {1: 1716}
+  饱和响应         n=  312  m 分布: {1: 312}
+
+【优先项 2】每条超边的输入/输出元数
+  乘性增长         输入元数: {(2,): 1932}   输出元数: {(1,): 1932}
+  线性驱动-阻力      输入元数: {(2,): 1716}   输出元数: {(1,): 1716}
+  饱和响应         输入元数: {(1,): 312}   输出元数: {(1,): 312}
+
+【优先项 3】超图最大依赖深度
+  乘性增长         深度分布: {1: 1932}
+  线性驱动-阻力      深度分布: {1: 1716}
+  饱和响应         深度分布: {1: 312}
+
+【超图规模】节点数
+  乘性增长         {3: 1932}
+  线性驱动-阻力      {3: 1716}
+  饱和响应         {2: 312}
+
+【节点复用】是否有节点参与多条关系 / 既是输入又是输出
+  乘性增长         有复用     0 / 无复用  1932
+  线性驱动-阻力      有复用     0 / 无复用  1716
+  饱和响应         有复用     0 / 无复用   312
+
+【函数类型】按函数字符串实际算子判定
+  乘性增长        
+       仅四则(线性)                          805
+       幂次+除式                            483
+       幂次+指数+除式                         483
+       除式                               161
+  线性驱动-阻力     
+       除式                               715
+       幂次+除式                            572
+       幂次+指数+除式                         429
+  饱和响应        
+       除式                               130
+       幂次+除式                            104
+       幂次+指数+除式                          78
+
+【数据来源】provenance.structure_source
+  乘性增长         {('local_perturbation', 'controlled_synthetic'): 483, ('response_error', 'controlled_synthetic'): 644, ('structure_error', 'controlled_synthetic'): 483, ('target', 'provided'): 161, ('valid_source', 'provided'): 161}
+  线性驱动-阻力      {('local_perturbation', 'controlled_synthetic'): 429, ('response_error', 'controlled_synthetic'): 572, ('structure_error', 'controlled_synthetic'): 429, ('target', 'provided'): 143, ('valid_source', 'provided'): 143}
+  饱和响应         {('local_perturbation', 'controlled_synthetic'): 78, ('response_error', 'controlled_synthetic'): 104, ('structure_error', 'controlled_synthetic'): 78, ('target', 'provided'): 26, ('valid_source', 'provided'): 26}
+
+逐对象明细已写入: results/mred_structure.csv（3960 行）
