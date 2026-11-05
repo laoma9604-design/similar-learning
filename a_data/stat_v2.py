@@ -60,10 +60,12 @@ def main():
     args = ap.parse_args()
 
     rows = []
-    for ds, pat, unit in (
-        ("v2", "cases/structural_v2/group_v2_*", "group"),
-        ("v1.1", "cases/structural_enhanced/group_enh_*", "group"),
-        ("v1", "cases/multiplicative_growth/group_*/", "group"),
+    for ds, pat in (
+        ("v2", "cases/structural_v2/group_v2_*"),
+        ("v1.1", "cases/structural_enhanced/group_enh_*"),
+        ("v1", "cases/multiplicative_growth/group_*"),
+        ("v1", "cases/linear_drive_resistance/group_*"),
+        ("v1", "cases/saturation_response/group_*"),
     ):
         for gd in sorted(glob.glob(str(ROOT / pat))):
             gdir = Path(gd)
