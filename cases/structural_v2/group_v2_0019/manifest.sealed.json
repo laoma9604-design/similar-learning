@@ -1,0 +1,18 @@
+{
+ "group_id": "group_v2_0019",
+ "proto": "P5_three_way_merge",
+ "family_combo": "L-L-M",
+ "edge_families": [
+  "linear_drive_resistance",
+  "linear_drive_resistance",
+  "multiplicative_growth",
+  "linear_drive_resistance",
+  "linear_drive_resistance"
+ ],
+ "seed": 20261007,
+ "reference_tolerance": {
+  "min_ctc": 0.95,
+  "max_error": 0.05,
+  "err_threshold": 0.22360679774997896
+ }
+}

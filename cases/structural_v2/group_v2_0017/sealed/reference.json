@@ -1,0 +1,351 @@
+{
+ "task_group_v2_0017_t01": {
+  "task_id": "task_group_v2_0017_t01",
+  "label": "positive",
+  "valid": [
+   {
+    "source_id": "obj_group_v2_0017_src",
+    "node_map": {
+     "v10": "v10",
+     "v2": "v2",
+     "v7": "v7",
+     "v4": "v4",
+     "v5": "v5",
+     "v12": "v12",
+     "v3": "v3",
+     "v9": "v9",
+     "v8": "v8"
+    },
+    "edge_map": {
+     "e1": "e1",
+     "e2": "e2",
+     "e4": "e4",
+     "e5": "e5",
+     "e3": "e3"
+    },
+    "max_abs_diff": 8.881784197001252e-16
+   }
+  ],
+  "exclusions": [
+   {
+    "source_id": "obj_group_v2_0017_s00",
+    "kind": "structure_error",
+    "reason": "结构不成立：标注与算式不符，或图连接与目标不同（eq:structure 不成立）",
+    "witness": {
+     "u": {
+      "v2": -0.170039,
+      "v7": -0.064144,
+      "v5": 0.15202,
+      "v3": -0.181842
+     },
+     "max_abs_diff": 8.881784197001252e-16,
+     "exceeds_tolerance": false
+    }
+   },
+   {
+    "source_id": "obj_group_v2_0017_s01",
+    "kind": "structure_error",
+    "reason": "结构不成立：标注与算式不符，或图连接与目标不同（eq:structure 不成立）",
+    "witness": {
+     "u": {
+      "v2": -0.2,
+      "v7": -0.2,
+      "v5": 0.2,
+      "v3": -0.2
+     },
+     "max_abs_diff": 0.954861111111111,
+     "exceeds_tolerance": true
+    }
+   },
+   {
+    "source_id": "obj_group_v2_0017_s02",
+    "kind": "structure_error",
+    "reason": "结构不成立：标注与算式不符，或图连接与目标不同（eq:structure 不成立）",
+    "witness": {
+     "u": {
+      "v2": 0.2,
+      "v7": -0.2,
+      "v5": 0.2,
+      "v3": -0.2
+     },
+     "max_abs_diff": 0.6365740740740742,
+     "exceeds_tolerance": true
+    }
+   },
+   {
+    "source_id": "obj_group_v2_0017_r00",
+    "kind": "response_error",
+    "reason": "结构成立但归一化响应超出参考容差",
+    "witness": {
+     "u": {
+      "v2": -0.2,
+      "v7": -0.2,
+      "v5": 0.2,
+      "v3": -0.2
+     },
+     "max_abs_diff": 0.38194444444444453,
+     "exceeds_tolerance": true
+    }
+   },
+   {
+    "source_id": "obj_group_v2_0017_r01",
+    "kind": "response_error",
+    "reason": "结构成立但归一化响应超出参考容差",
+    "witness": {
+     "u": {
+      "v2": -0.2,
+      "v7": -0.2,
+      "v5": 0.2,
+      "v3": -0.2
+     },
+     "max_abs_diff": 1.0742187500000018,
+     "exceeds_tolerance": true
+    }
+   },
+   {
+    "source_id": "obj_group_v2_0017_r02",
+    "kind": "response_error",
+    "reason": "结构成立但归一化响应超出参考容差",
+    "witness": {
+     "u": {
+      "v2": -0.2,
+      "v7": -0.2,
+      "v5": 0.2,
+      "v3": -0.2
+     },
+     "max_abs_diff": 1.8202039930555554,
+     "exceeds_tolerance": true
+    }
+   },
+   {
+    "source_id": "obj_group_v2_0017_l00",
+    "kind": "local_perturbation",
+    "reason": "结构成立，仅在输入域某子区间超出参考容差",
+    "witness": {
+     "u": {
+      "v2": -0.181236,
+      "v7": -0.158325,
+      "v5": 0.109689,
+      "v3": -0.13917
+     },
+     "max_abs_diff": 0.35700812077378236,
+     "exceeds_tolerance": true
+    }
+   },
+   {
+    "source_id": "obj_group_v2_0017_l01",
+    "kind": "local_perturbation",
+    "reason": "结构成立，仅在输入域某子区间超出参考容差",
+    "witness": {
+     "u": {
+      "v2": -0.2,
+      "v7": -0.2,
+      "v5": 0.2,
+      "v3": -0.2
+     },
+     "max_abs_diff": 0.5052170916285411,
+     "exceeds_tolerance": true
+    }
+   },
+   {
+    "source_id": "obj_group_v2_0017_l02",
+    "kind": "local_perturbation",
+    "reason": "结构成立，仅在输入域某子区间超出参考容差",
+    "witness": {
+     "u": {
+      "v2": -0.196489,
+      "v7": -0.199881,
+      "v5": 0.131487,
+      "v3": 0.01266
+     },
+     "max_abs_diff": 0.4453708243935905,
+     "exceeds_tolerance": true
+    }
+   }
+  ],
+  "candidate_ids": [
+   "obj_group_v2_0017_src",
+   "obj_group_v2_0017_s00",
+   "obj_group_v2_0017_s01",
+   "obj_group_v2_0017_s02",
+   "obj_group_v2_0017_r00",
+   "obj_group_v2_0017_r01",
+   "obj_group_v2_0017_r02",
+   "obj_group_v2_0017_l00",
+   "obj_group_v2_0017_l01",
+   "obj_group_v2_0017_l02"
+  ],
+  "full_library_verified": true
+ },
+ "task_group_v2_0017_t02": {
+  "task_id": "task_group_v2_0017_t02",
+  "label": "negative",
+  "valid": [],
+  "exclusions": [
+   {
+    "source_id": "obj_group_v2_0017_s00",
+    "kind": "structure_error",
+    "reason": "结构不成立：标注与算式不符，或图连接与目标不同（eq:structure 不成立）",
+    "witness": {
+     "u": {
+      "v2": -0.170039,
+      "v7": -0.064144,
+      "v5": 0.15202,
+      "v3": -0.181842
+     },
+     "max_abs_diff": 8.881784197001252e-16,
+     "exceeds_tolerance": false
+    }
+   },
+   {
+    "source_id": "obj_group_v2_0017_s01",
+    "kind": "structure_error",
+    "reason": "结构不成立：标注与算式不符，或图连接与目标不同（eq:structure 不成立）",
+    "witness": {
+     "u": {
+      "v2": -0.2,
+      "v7": -0.2,
+      "v5": 0.2,
+      "v3": -0.2
+     },
+     "max_abs_diff": 0.954861111111111,
+     "exceeds_tolerance": true
+    }
+   },
+   {
+    "source_id": "obj_group_v2_0017_s02",
+    "kind": "structure_error",
+    "reason": "结构不成立：标注与算式不符，或图连接与目标不同（eq:structure 不成立）",
+    "witness": {
+     "u": {
+      "v2": 0.2,
+      "v7": -0.2,
+      "v5": 0.2,
+      "v3": -0.2
+     },
+     "max_abs_diff": 0.6365740740740742,
+     "exceeds_tolerance": true
+    }
+   },
+   {
+    "source_id": "obj_group_v2_0017_r00",
+    "kind": "response_error",
+    "reason": "结构成立但归一化响应超出参考容差",
+    "witness": {
+     "u": {
+      "v2": -0.2,
+      "v7": -0.2,
+      "v5": 0.2,
+      "v3": -0.2
+     },
+     "max_abs_diff": 0.38194444444444453,
+     "exceeds_tolerance": true
+    }
+   },
+   {
+    "source_id": "obj_group_v2_0017_r01",
+    "kind": "response_error",
+    "reason": "结构成立但归一化响应超出参考容差",
+    "witness": {
+     "u": {
+      "v2": -0.2,
+      "v7": -0.2,
+      "v5": 0.2,
+      "v3": -0.2
+     },
+     "max_abs_diff": 1.0742187500000018,
+     "exceeds_tolerance": true
+    }
+   },
+   {
+    "source_id": "obj_group_v2_0017_r02",
+    "kind": "response_error",
+    "reason": "结构成立但归一化响应超出参考容差",
+    "witness": {
+     "u": {
+      "v2": -0.2,
+      "v7": -0.2,
+      "v5": 0.2,
+      "v3": -0.2
+     },
+     "max_abs_diff": 1.8202039930555554,
+     "exceeds_tolerance": true
+    }
+   },
+   {
+    "source_id": "obj_group_v2_0017_l00",
+    "kind": "local_perturbation",
+    "reason": "结构成立，仅在输入域某子区间超出参考容差",
+    "witness": {
+     "u": {
+      "v2": -0.181236,
+      "v7": -0.158325,
+      "v5": 0.109689,
+      "v3": -0.13917
+     },
+     "max_abs_diff": 0.35700812077378236,
+     "exceeds_tolerance": true
+    }
+   },
+   {
+    "source_id": "obj_group_v2_0017_l01",
+    "kind": "local_perturbation",
+    "reason": "结构成立，仅在输入域某子区间超出参考容差",
+    "witness": {
+     "u": {
+      "v2": -0.2,
+      "v7": -0.2,
+      "v5": 0.2,
+      "v3": -0.2
+     },
+     "max_abs_diff": 0.5052170916285411,
+     "exceeds_tolerance": true
+    }
+   },
+   {
+    "source_id": "obj_group_v2_0017_l02",
+    "kind": "local_perturbation",
+    "reason": "结构成立，仅在输入域某子区间超出参考容差",
+    "witness": {
+     "u": {
+      "v2": -0.196489,
+      "v7": -0.199881,
+      "v5": 0.131487,
+      "v3": 0.01266
+     },
+     "max_abs_diff": 0.4453708243935905,
+     "exceeds_tolerance": true
+    }
+   },
+   {
+    "source_id": "obj_group_v2_0017_x00",
+    "kind": "response_error",
+    "reason": "结构成立但归一化响应超出参考容差",
+    "witness": {
+     "u": {
+      "v2": 0.2,
+      "v7": -0.2,
+      "v5": 0.2,
+      "v3": -0.2
+     },
+     "max_abs_diff": 0.6365740740740742,
+     "exceeds_tolerance": true
+    }
+   }
+  ],
+  "candidate_ids": [
+   "obj_group_v2_0017_s00",
+   "obj_group_v2_0017_s01",
+   "obj_group_v2_0017_s02",
+   "obj_group_v2_0017_r00",
+   "obj_group_v2_0017_r01",
+   "obj_group_v2_0017_r02",
+   "obj_group_v2_0017_l00",
+   "obj_group_v2_0017_l01",
+   "obj_group_v2_0017_l02",
+   "obj_group_v2_0017_x00"
+  ],
+  "full_library_verified": true,
+  "enum_basis": "节点双射 x 超边双射全空间枚举 + 固定采样协议响应验证"
+ }
+}

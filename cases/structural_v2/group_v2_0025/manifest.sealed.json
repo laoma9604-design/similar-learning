@@ -1,0 +1,18 @@
+{
+ "group_id": "group_v2_0025",
+ "proto": "P6_sat_tail_chain",
+ "family_combo": "S0",
+ "edge_families": [
+  "multiplicative_growth",
+  "linear_drive_resistance",
+  "multiplicative_growth",
+  "linear_drive_resistance",
+  "saturation_response"
+ ],
+ "seed": 20261007,
+ "reference_tolerance": {
+  "min_ctc": 0.95,
+  "max_error": 0.05,
+  "err_threshold": 0.22360679774997896
+ }
+}

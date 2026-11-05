@@ -1,0 +1,144 @@
+{
+ "object_id": "obj_group_v2_0020_s02",
+ "object_kind": "mechanistic",
+ "relation_type": "multi_edge_dag",
+ "split": "train",
+ "label": "候选源域",
+ "nodes": [
+  {
+   "node_id": "v3",
+   "label": "量 A",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v10",
+   "label": "量 B",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v9",
+   "label": "量 C",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v12",
+   "label": "量 D",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v4",
+   "label": "量 E",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v6",
+   "label": "量 F",
+   "type": "positive_scalar"
+  }
+ ],
+ "edges": [
+  {
+   "edge_id": "e1",
+   "edge_type": "multiplicative_growth",
+   "input_nodes": [
+    "v3",
+    "v10"
+   ],
+   "output_nodes": [
+    "v9"
+   ],
+   "roles": {
+    "v3": "current",
+    "v10": "ratio",
+    "v9": "next"
+   },
+   "function": "v3 * (1 + v10)"
+  },
+  {
+   "edge_id": "e2",
+   "edge_type": "linear_drive_resistance",
+   "input_nodes": [
+    "v3",
+    "v12"
+   ],
+   "output_nodes": [
+    "v4"
+   ],
+   "roles": {
+    "v12": "resistance",
+    "v4": "response",
+    "v3": "driver"
+   },
+   "function": "v3 / v12"
+  },
+  {
+   "edge_id": "e3",
+   "edge_type": "saturation_response",
+   "input_nodes": [
+    "v4"
+   ],
+   "output_nodes": [
+    "v6"
+   ],
+   "roles": {
+    "v4": "input",
+    "v6": "response"
+   },
+   "function": "20.0 * v4 / (55.31133230767166 + v4)"
+  }
+ ],
+ "function": "20.0 * (v3 / v12) / (55.31133230767166 + (v3 / v12))",
+ "controllable_inputs": [
+  "v3",
+  "v10",
+  "v12"
+ ],
+ "designated_outputs": [
+  "v6"
+ ],
+ "baseline": [
+  2011.321174824424,
+  0.1,
+  40.0
+ ],
+ "input_scales": [
+  2011.321174824424,
+  0.1,
+  40.0
+ ],
+ "legal_domain": {
+  "v3": [
+   1e-06,
+   null
+  ],
+  "v10": [
+   1e-06,
+   null
+  ],
+  "v12": [
+   1e-06,
+   null
+  ]
+ },
+ "intervention_bounds": {
+  "v3": [
+   -0.8,
+   1.0
+  ],
+  "v10": [
+   -0.8,
+   1.0
+  ],
+  "v12": [
+   -0.8,
+   1.0
+  ]
+ },
+ "provenance": {
+  "dataset": "mred_v2",
+  "original_id": null,
+  "structure_source": "controlled_synthetic"
+ },
+ "baseline_output": 9.523809523809522,
+ "output_scale": 9.523809523809522
+}

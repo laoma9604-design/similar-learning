@@ -1,0 +1,204 @@
+{
+ "object_id": "obj_group_v2_0026_src",
+ "object_kind": "mechanistic",
+ "relation_type": "multi_edge_dag",
+ "split": "test",
+ "label": "候选源域",
+ "nodes": [
+  {
+   "node_id": "v11",
+   "label": "量 A",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v7",
+   "label": "量 B",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v9",
+   "label": "量 C",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v8",
+   "label": "量 D",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v6",
+   "label": "量 E",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v12",
+   "label": "量 F",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v4",
+   "label": "量 G",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v1",
+   "label": "量 H",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v5",
+   "label": "量 I",
+   "type": "positive_scalar"
+  }
+ ],
+ "edges": [
+  {
+   "edge_id": "e1",
+   "edge_type": "linear_drive_resistance",
+   "input_nodes": [
+    "v11",
+    "v7"
+   ],
+   "output_nodes": [
+    "v9"
+   ],
+   "roles": {
+    "v11": "driver",
+    "v7": "resistance",
+    "v9": "response"
+   },
+   "function": "v11 / v7"
+  },
+  {
+   "edge_id": "e2",
+   "edge_type": "multiplicative_growth",
+   "input_nodes": [
+    "v9",
+    "v8"
+   ],
+   "output_nodes": [
+    "v6"
+   ],
+   "roles": {
+    "v9": "current",
+    "v8": "ratio",
+    "v6": "next"
+   },
+   "function": "v9 * (1 + v8)"
+  },
+  {
+   "edge_id": "e3",
+   "edge_type": "linear_drive_resistance",
+   "input_nodes": [
+    "v6",
+    "v12"
+   ],
+   "output_nodes": [
+    "v4"
+   ],
+   "roles": {
+    "v6": "driver",
+    "v12": "resistance",
+    "v4": "response"
+   },
+   "function": "v6 / v12"
+  },
+  {
+   "edge_id": "e4",
+   "edge_type": "multiplicative_growth",
+   "input_nodes": [
+    "v4",
+    "v9"
+   ],
+   "output_nodes": [
+    "v1"
+   ],
+   "roles": {
+    "v4": "current",
+    "v9": "ratio",
+    "v1": "next"
+   },
+   "function": "v4 * (1 + v9)"
+  },
+  {
+   "edge_id": "e5",
+   "edge_type": "saturation_response",
+   "input_nodes": [
+    "v1"
+   ],
+   "output_nodes": [
+    "v5"
+   ],
+   "roles": {
+    "v1": "input",
+    "v5": "response"
+   },
+   "function": "8.0 * v1 / (1.8789420582804521 + v1)"
+  }
+ ],
+ "function": "8.0 * ((((v11 / v7) * (1 + v8)) / v12) * (1 + (v11 / v7))) / (1.8789420582804521 + ((((v11 / v7) * (1 + v8)) / v12) * (1 + (v11 / v7))))",
+ "controllable_inputs": [
+  "v11",
+  "v7",
+  "v8",
+  "v12"
+ ],
+ "designated_outputs": [
+  "v5"
+ ],
+ "baseline": [
+  76.0267634351035,
+  16.0,
+  0.1,
+  16.0
+ ],
+ "input_scales": [
+  76.0267634351035,
+  16.0,
+  0.1,
+  16.0
+ ],
+ "legal_domain": {
+  "v11": [
+   1e-06,
+   null
+  ],
+  "v7": [
+   1e-06,
+   null
+  ],
+  "v8": [
+   1e-06,
+   null
+  ],
+  "v12": [
+   1e-06,
+   null
+  ]
+ },
+ "intervention_bounds": {
+  "v11": [
+   -0.8,
+   1.0
+  ],
+  "v7": [
+   -0.8,
+   1.0
+  ],
+  "v8": [
+   -0.8,
+   1.0
+  ],
+  "v12": [
+   -0.8,
+   1.0
+  ]
+ },
+ "provenance": {
+  "dataset": "mred_v2",
+  "original_id": null,
+  "structure_source": "controlled_synthetic"
+ },
+ "baseline_output": 4.0,
+ "output_scale": 4.0
+}

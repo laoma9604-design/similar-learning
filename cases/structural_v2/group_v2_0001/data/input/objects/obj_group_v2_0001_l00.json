@@ -1,0 +1,200 @@
+{
+ "object_id": "obj_group_v2_0001_l00",
+ "object_kind": "mechanistic",
+ "relation_type": "multi_edge_dag",
+ "split": "train",
+ "label": "候选源域",
+ "nodes": [
+  {
+   "node_id": "v12",
+   "label": "量 A",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v9",
+   "label": "量 B",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v11",
+   "label": "量 C",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v3",
+   "label": "量 D",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v8",
+   "label": "量 E",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v1",
+   "label": "量 F",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v10",
+   "label": "量 G",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v6",
+   "label": "量 H",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v2",
+   "label": "量 I",
+   "type": "positive_scalar"
+  }
+ ],
+ "edges": [
+  {
+   "edge_id": "e1",
+   "edge_type": "multiplicative_growth",
+   "input_nodes": [
+    "v12",
+    "v9"
+   ],
+   "output_nodes": [
+    "v11"
+   ],
+   "roles": {
+    "v12": "current",
+    "v9": "ratio",
+    "v11": "next"
+   },
+   "function": "(v12 * (1 + v9)) * (1 + 0.45 * (exp(-((((v12 - 2551.545684589912) / 2551.545684589912) - 0.1) / 0.1) ** 2) - exp(-((0.1) / 0.1) ** 2)))"
+  },
+  {
+   "edge_id": "e2",
+   "edge_type": "linear_drive_resistance",
+   "input_nodes": [
+    "v11",
+    "v3"
+   ],
+   "output_nodes": [
+    "v8"
+   ],
+   "roles": {
+    "v11": "driver",
+    "v3": "resistance",
+    "v8": "response"
+   },
+   "function": "v11 / v3"
+  },
+  {
+   "edge_id": "e3",
+   "edge_type": "multiplicative_growth",
+   "input_nodes": [
+    "v1",
+    "v10"
+   ],
+   "output_nodes": [
+    "v6"
+   ],
+   "roles": {
+    "v1": "current",
+    "v10": "ratio",
+    "v6": "next"
+   },
+   "function": "v1 * (1 + v10)"
+  },
+  {
+   "edge_id": "e4",
+   "edge_type": "multiplicative_growth",
+   "input_nodes": [
+    "v8",
+    "v6"
+   ],
+   "output_nodes": [
+    "v2"
+   ],
+   "roles": {
+    "v8": "current",
+    "v6": "ratio",
+    "v2": "next"
+   },
+   "function": "v8 * (1 + v6)"
+  }
+ ],
+ "function": "(((v12 * (1 + v9)) * (1 + 0.45 * (exp(-((((v12 - 2551.545684589912) / 2551.545684589912) - 0.1) / 0.1) ** 2) - exp(-((0.1) / 0.1) ** 2)))) / v3) * (1 + (v1 * (1 + v10)))",
+ "controllable_inputs": [
+  "v12",
+  "v9",
+  "v3",
+  "v1",
+  "v10"
+ ],
+ "designated_outputs": [
+  "v2"
+ ],
+ "baseline": [
+  2551.545684589912,
+  0.1,
+  50.0,
+  2480.5967310056644,
+  0.1
+ ],
+ "input_scales": [
+  2551.545684589912,
+  0.1,
+  50.0,
+  2480.5967310056644,
+  0.1
+ ],
+ "legal_domain": {
+  "v12": [
+   1e-06,
+   null
+  ],
+  "v9": [
+   1e-06,
+   null
+  ],
+  "v3": [
+   1e-06,
+   null
+  ],
+  "v1": [
+   1e-06,
+   null
+  ],
+  "v10": [
+   1e-06,
+   null
+  ]
+ },
+ "intervention_bounds": {
+  "v12": [
+   -0.2,
+   0.2
+  ],
+  "v9": [
+   -0.2,
+   0.2
+  ],
+  "v3": [
+   -0.2,
+   0.2
+  ],
+  "v1": [
+   -0.2,
+   0.2
+  ],
+  "v10": [
+   -0.2,
+   0.2
+  ]
+ },
+ "provenance": {
+  "dataset": "mred_v2",
+  "original_id": null,
+  "structure_source": "controlled_synthetic"
+ },
+ "baseline_output": 153226.54640283037,
+ "output_scale": 153226.54640283037
+}

@@ -1,0 +1,16 @@
+{
+ "group_id": "group_v2_0000",
+ "proto": "P1_deep_chain3",
+ "family_combo": "M-L-M",
+ "edge_families": [
+  "multiplicative_growth",
+  "linear_drive_resistance",
+  "multiplicative_growth"
+ ],
+ "seed": 20261007,
+ "reference_tolerance": {
+  "min_ctc": 0.95,
+  "max_error": 0.05,
+  "err_threshold": 0.22360679774997896
+ }
+}

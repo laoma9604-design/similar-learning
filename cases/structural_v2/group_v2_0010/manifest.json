@@ -1,0 +1,31 @@
+{
+ "group_id": "group_v2_0010",
+ "dataset": "mred_v2",
+ "schema_version": "topoadv-schema-0.3.2",
+ "vocab_version": "topoadv-vocab-0.1.1",
+ "split": "train",
+ "target_id": "obj_group_v2_0010_tgt",
+ "object_ids": [
+  "obj_group_v2_0010_tgt",
+  "obj_group_v2_0010_src",
+  "obj_group_v2_0010_s00",
+  "obj_group_v2_0010_s01",
+  "obj_group_v2_0010_s02",
+  "obj_group_v2_0010_r00",
+  "obj_group_v2_0010_r01",
+  "obj_group_v2_0010_r02",
+  "obj_group_v2_0010_l00",
+  "obj_group_v2_0010_l01",
+  "obj_group_v2_0010_l02",
+  "obj_group_v2_0010_x00"
+ ],
+ "task_ids": [
+  "task_group_v2_0010_t01",
+  "task_group_v2_0010_t02"
+ ],
+ "n_nodes": 7,
+ "n_edges": 3,
+ "max_depth": 3,
+ "n_inputs": 4,
+ "has_shared_node": false
+}

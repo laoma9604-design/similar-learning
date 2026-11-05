@@ -1,0 +1,17 @@
+{
+ "group_id": "group_v2_0021",
+ "proto": "P2_chain_merge",
+ "family_combo": "M-...-S",
+ "edge_families": [
+  "multiplicative_growth",
+  "linear_drive_resistance",
+  "multiplicative_growth",
+  "saturation_response"
+ ],
+ "seed": 20261007,
+ "reference_tolerance": {
+  "min_ctc": 0.95,
+  "max_error": 0.05,
+  "err_threshold": 0.22360679774997896
+ }
+}

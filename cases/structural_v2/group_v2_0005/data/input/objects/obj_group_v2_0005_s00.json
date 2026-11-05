@@ -1,0 +1,162 @@
+{
+ "object_id": "obj_group_v2_0005_s00",
+ "object_kind": "mechanistic",
+ "relation_type": "multi_edge_dag",
+ "split": "train",
+ "label": "候选源域",
+ "nodes": [
+  {
+   "node_id": "v3",
+   "label": "量 A",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v6",
+   "label": "量 B",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v11",
+   "label": "量 C",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v4",
+   "label": "量 D",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v9",
+   "label": "量 E",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v2",
+   "label": "量 F",
+   "type": "positive_scalar"
+  },
+  {
+   "node_id": "v12",
+   "label": "量 G",
+   "type": "positive_scalar"
+  }
+ ],
+ "edges": [
+  {
+   "edge_id": "e1",
+   "edge_type": "linear_drive_resistance",
+   "input_nodes": [
+    "v3",
+    "v6"
+   ],
+   "output_nodes": [
+    "v11"
+   ],
+   "roles": {
+    "v3": "resistance",
+    "v6": "driver",
+    "v11": "response"
+   },
+   "function": "v3 / v6"
+  },
+  {
+   "edge_id": "e2",
+   "edge_type": "multiplicative_growth",
+   "input_nodes": [
+    "v11",
+    "v4"
+   ],
+   "output_nodes": [
+    "v9"
+   ],
+   "roles": {
+    "v11": "current",
+    "v4": "ratio",
+    "v9": "next"
+   },
+   "function": "v11 * (1 + v4)"
+  },
+  {
+   "edge_id": "e3",
+   "edge_type": "linear_drive_resistance",
+   "input_nodes": [
+    "v9",
+    "v2"
+   ],
+   "output_nodes": [
+    "v12"
+   ],
+   "roles": {
+    "v9": "driver",
+    "v2": "resistance",
+    "v12": "response"
+   },
+   "function": "v9 / v2"
+  }
+ ],
+ "function": "((v3 / v6) * (1 + v4)) / v2",
+ "controllable_inputs": [
+  "v3",
+  "v6",
+  "v4",
+  "v2"
+ ],
+ "designated_outputs": [
+  "v12"
+ ],
+ "baseline": [
+  76.59071452071731,
+  16.0,
+  0.1,
+  16.0
+ ],
+ "input_scales": [
+  76.59071452071731,
+  16.0,
+  0.1,
+  16.0
+ ],
+ "legal_domain": {
+  "v3": [
+   1e-06,
+   null
+  ],
+  "v6": [
+   1e-06,
+   null
+  ],
+  "v4": [
+   1e-06,
+   null
+  ],
+  "v2": [
+   1e-06,
+   null
+  ]
+ },
+ "intervention_bounds": {
+  "v3": [
+   -0.2,
+   0.2
+  ],
+  "v6": [
+   -0.2,
+   0.2
+  ],
+  "v4": [
+   -0.2,
+   0.2
+  ],
+  "v2": [
+   -0.2,
+   0.2
+  ]
+ },
+ "provenance": {
+  "dataset": "mred_v2",
+  "original_id": null,
+  "structure_source": "controlled_synthetic"
+ },
+ "baseline_output": 0.32910072645620725,
+ "output_scale": 0.32910072645620725
+}

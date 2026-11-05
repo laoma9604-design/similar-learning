@@ -1,0 +1,46 @@
+{
+ "task_id": "task_group_v2_0027_t02",
+ "group_id": "group_v2_0027",
+ "target_id": "obj_group_v2_0027_tgt",
+ "source_ids": [
+  "obj_group_v2_0027_s00",
+  "obj_group_v2_0027_x00",
+  "obj_group_v2_0027_s02",
+  "obj_group_v2_0027_l00",
+  "obj_group_v2_0027_r01",
+  "obj_group_v2_0027_s01",
+  "obj_group_v2_0027_l01",
+  "obj_group_v2_0027_l02",
+  "obj_group_v2_0027_r00",
+  "obj_group_v2_0027_r02"
+ ],
+ "schema_version": "topoadv-schema-0.3.2",
+ "vocab_version": "topoadv-vocab-0.1.1",
+ "intervenable_inputs": [
+  "v6",
+  "v7",
+  "v5",
+  "v2"
+ ],
+ "specified_outputs": [
+  "v3"
+ ],
+ "intervention_range": {
+  "v6": [
+   -0.8,
+   1.0
+  ],
+  "v7": [
+   -0.8,
+   1.0
+  ],
+  "v5": [
+   -0.8,
+   1.0
+  ],
+  "v2": [
+   -0.8,
+   1.0
+  ]
+ }
+}
