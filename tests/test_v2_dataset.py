@@ -287,15 +287,28 @@ def _sig_topo(o):
 
 
 def test_topology_not_reused_from_v11(groups):
-    """v2 的拓扑签名不能与 v1.1 的完全相同（否则只算重排，不算新结构）。"""
+    """v2 的拓扑签名不能与历史库（v1 单超边 / v1.1 增强组）完全相同。
+
+    v1.1 已于 2026-11-04 清理（用户决定：v2 验收通过后一次性删除），
+    所以这里对**存在的**历史库做检查；目录不在时自动跳过该项，
+    避免测试因为「历史数据已删」而假红。
+    """
+    hist = []
+    v11 = ROOT / "cases" / "structural_enhanced"
+    if v11.is_dir():
+        hist += list(v11.glob("group_enh_*/data/input/objects/*_tgt.json"))
+    for ds in ("multiplicative_growth", "linear_drive_resistance", "saturation_response"):
+        hist += list((ROOT / "cases" / ds).glob("group_*/data/input/objects/*_tgt.json"))
     old = set()
-    for f in (ROOT / "cases" / "structural_enhanced").glob(
-            "group_enh_*/data/input/objects/*_tgt.json"):
-        o = json.load(open(f, encoding="utf-8"))
+    for f in hist:
+        try:
+            o = json.load(open(f, encoding="utf-8"))
+        except Exception:
+            continue
         if "edges" in o:
             old.add(_sig_topo(o))
     new = {_sig_topo(g["objs"][g["man"]["target_id"]]) for g in groups}
-    assert not (new & old), f"与 v1.1 拓扑重合：{new & old}"
+    assert not (new & old), f"与历史库拓扑重合：{new & old}"
 
 
 def test_schema_fields_match(groups):

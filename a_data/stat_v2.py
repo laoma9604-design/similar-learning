@@ -60,6 +60,7 @@ def main():
     args = ap.parse_args()
 
     rows = []
+    # v1.1 已于 2026-11-04 清理；目录不存在时该行自动不出现，不报错
     for ds, pat in (
         ("v2", "cases/structural_v2/group_v2_*"),
         ("v1.1", "cases/structural_enhanced/group_enh_*"),
