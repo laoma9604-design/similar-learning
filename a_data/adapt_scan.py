@@ -51,8 +51,10 @@ VOCAB_ROLE_IDS = {
 }
 VOCAB_TYPE_IDS = {t["type_id"] for t in _VOCAB["node_types"]}
 
-SCHEMA_VERSION = "topoadv-schema-0.3.1"
-VOCAB_VERSION = "topoadv-vocab-0.1.0-draft"
+# 版本号一律从源文件读，不硬编码（同类前科：VOCAB_VERSION 曾写死 0.1.0-draft）
+_SCHEMA = json.load(open(ROOT / "T01-schema.json", encoding="utf-8"))
+SCHEMA_VERSION = _SCHEMA["schema_version"]
+VOCAB_VERSION = _VOCAB["vocab_version"]
 STRUCTURAL_CHECKS = ["pair_consistency", "type_pattern"]
 
 # 类型标注：与 SCAR 共用同一份全量词典（1946 词，人工逐词判定）。

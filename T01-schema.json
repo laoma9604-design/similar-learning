@@ -1,5 +1,5 @@
 {
-  "schema_version": "topoadv-schema-0.3.1",
+  "schema_version": "topoadv-schema-0.3.2",
   "status": "draft-v5，待 B/C 复核冻结（v5：adaptation 新增 available_checks / multiple_mapping_type，用于声明该对象有原始依据可核验哪些结构检查项、以及多值映射的结构类型；metrics.build_checks 据此决定检查清单，SCAR/SCAN 的结构模式不再被 MRED 的 11 项清单判失败。v4：object 新增 relation_type / split；function/baseline/scales 对齐 case-fixtures.json；audit 记录按 C 反馈拆分两域调用/缓存、加 status、Ebar 移交 A 独立评价）",
   "source": "research-principles-experiment-taskbook.pdf sec:representation / sec:case-handoff / sec:data / tab:records；case-fixtures.json（verify_cases.py 生成）作为字段写法的基准",
   "conventions": {
@@ -57,7 +57,7 @@
         "function": {
           "type": "string",
           "required": "mechanistic 时必填",
-          "desc": "响应函数表达式，用节点 ID 直接书写（如 \"A_t * (1 + rate_t)\"，常量内联如 \"N_t**2 / 1000 * (1 + rate_s)\"）。单个函数、单输出；多关系求值顺序留待扩展（首批无环单关系）。与 a_data/runtime.py 的 expression_value 对齐"
+          "desc": "响应函数表达式，用节点 ID 直接书写（如 \"A_t * (1 + rate_t)\"，常量内联如 \"N_t**2 / 1000 * (1 + rate_s)\"）。单关系对象填该关系的计算式（与 edges[0].function 相同）；多关系对象填整图的数学等价单式展开（如 S2 串联 z1=x1/x2; y=z1/x3 展开为 \"(x1 / x2) / x3\"），逐边函数见 edges[i].function，两者必须数学等价。单输出；无环。与 a_data/runtime.py 的 expression_value 对齐"
         },
         "controllable_inputs": {
           "type": "array",

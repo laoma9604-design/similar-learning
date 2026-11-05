@@ -46,8 +46,10 @@ VOCAB_ROLE_IDS = {
     for r in e.get("roles", [])
 }
 
-SCHEMA_VERSION = "topoadv-schema-0.3.1"
-VOCAB_VERSION = "topoadv-vocab-0.1.0-draft"
+# 版本号一律从源文件读，不硬编码（同类前科：VOCAB_VERSION 曾写死 0.1.0-draft）
+_SCHEMA = json.load(open(ROOT / "T01-schema.json", encoding="utf-8"))
+SCHEMA_VERSION = _SCHEMA["schema_version"]
+VOCAB_VERSION = _VOCAB["vocab_version"]
 
 # ---------------- S04 五条规则（同前） ----------------
 RESIDUE_LABEL_RE = re.compile(
