@@ -1,10 +1,8 @@
 {
  "group_id": "group_v2_0003",
- "proto": "P4_shared_deep",
- "family_combo": "M-L-M",
+ "proto": "SK03",
+ "family_combo": "星形复用 深2",
  "edge_families": [
-  "multiplicative_growth",
-  "linear_drive_resistance",
   "multiplicative_growth",
   "multiplicative_growth",
   "linear_drive_resistance"

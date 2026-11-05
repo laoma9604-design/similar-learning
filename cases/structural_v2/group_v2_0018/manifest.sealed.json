@@ -1,12 +1,10 @@
 {
  "group_id": "group_v2_0018",
- "proto": "P4_shared_deep",
- "family_combo": "L-L-M",
+ "proto": "SK18",
+ "family_combo": "3边 x2三次复用 深3",
  "edge_families": [
   "linear_drive_resistance",
-  "linear_drive_resistance",
   "multiplicative_growth",
-  "linear_drive_resistance",
   "linear_drive_resistance"
  ],
  "seed": 20261007,

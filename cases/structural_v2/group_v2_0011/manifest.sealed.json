@@ -1,9 +1,10 @@
 {
  "group_id": "group_v2_0011",
- "proto": "P2_chain_merge",
- "family_combo": "M-M-L",
+ "proto": "SK11",
+ "family_combo": "深链双跨级 5层",
  "edge_families": [
   "multiplicative_growth",
+  "linear_drive_resistance",
   "multiplicative_growth",
   "linear_drive_resistance",
   "multiplicative_growth"

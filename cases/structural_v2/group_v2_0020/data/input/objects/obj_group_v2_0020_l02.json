@@ -34,6 +34,11 @@
    "node_id": "v6",
    "label": "量 F",
    "type": "positive_scalar"
+  },
+  {
+   "node_id": "v1",
+   "label": "量 G",
+   "type": "positive_scalar"
   }
  ],
  "edges": [
@@ -58,45 +63,62 @@
    "edge_id": "e2",
    "edge_type": "linear_drive_resistance",
    "input_nodes": [
-    "v9",
+    "v3",
     "v12"
    ],
    "output_nodes": [
     "v4"
    ],
    "roles": {
-    "v9": "driver",
+    "v3": "driver",
     "v12": "resistance",
     "v4": "response"
    },
-   "function": "v9 / v12"
+   "function": "(v3 / v12) * (1 + 0.5 * (exp(-((((v12 - 40.0) / 40.0) - 0.128) / 0.12) ** 2) - exp(-((0.128) / 0.12) ** 2)))"
   },
   {
    "edge_id": "e3",
-   "edge_type": "saturation_response",
+   "edge_type": "multiplicative_growth",
    "input_nodes": [
-    "v4",
-    "v12"
+    "v3",
+    "v4"
    ],
    "output_nodes": [
     "v6"
    ],
    "roles": {
-    "v4": "input",
-    "v6": "response",
-    "v12": "input"
+    "v3": "current",
+    "v4": "ratio",
+    "v6": "next"
    },
-   "function": "(20.0 * v4 / (55.31133230767166 + v4)) * (1 + 0.5 * (exp(-((((v12 - 40.0) / 40.0) - 0.16) / 0.12) ** 2) - exp(-((0.16) / 0.12) ** 2)))"
+   "function": "v3 * (1 + v4)"
+  },
+  {
+   "edge_id": "e4",
+   "edge_type": "linear_drive_resistance",
+   "input_nodes": [
+    "v9",
+    "v6"
+   ],
+   "output_nodes": [
+    "v1"
+   ],
+   "roles": {
+    "v9": "driver",
+    "v6": "resistance",
+    "v1": "response"
+   },
+   "function": "v9 / v6"
   }
  ],
- "function": "(20.0 * ((v3 * (1 + v10)) / v12) / (55.31133230767166 + ((v3 * (1 + v10)) / v12))) * (1 + 0.5 * (exp(-((((v12 - 40.0) / 40.0) - 0.16) / 0.12) ** 2) - exp(-((0.16) / 0.12) ** 2)))",
+ "function": "(v3 * (1 + v10)) / (v3 * (1 + ((v3 / v12) * (1 + 0.5 * (exp(-((((v12 - 40.0) / 40.0) - 0.128) / 0.12) ** 2) - exp(-((0.128) / 0.12) ** 2))))))",
  "controllable_inputs": [
   "v3",
   "v10",
   "v12"
  ],
  "designated_outputs": [
-  "v6"
+  "v1"
  ],
  "baseline": [
   2011.321174824424,
@@ -124,16 +146,16 @@
  },
  "intervention_bounds": {
   "v3": [
-   -0.8,
-   1.0
+   -0.2,
+   0.2
   ],
   "v10": [
-   -0.8,
-   1.0
+   -0.2,
+   0.2
   ],
   "v12": [
-   -0.8,
-   1.0
+   -0.2,
+   0.2
   ]
  },
  "provenance": {
@@ -141,6 +163,6 @@
   "original_id": null,
   "structure_source": "controlled_synthetic"
  },
- "baseline_output": 10.0,
- "output_scale": 10.0
+ "baseline_output": 0.021449590897810546,
+ "output_scale": 0.021449590897810546
 }

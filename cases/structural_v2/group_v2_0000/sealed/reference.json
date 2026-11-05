@@ -94,7 +94,7 @@
       "v1": -0.2,
       "v11": 0.2
      },
-     "max_abs_diff": 0.7663860512260084,
+     "max_abs_diff": 0.3449364387678431,
      "exceeds_tolerance": true
     }
    },
@@ -109,7 +109,7 @@
       "v1": -0.2,
       "v11": 0.2
      },
-     "max_abs_diff": 3.984728546361089,
+     "max_abs_diff": 0.8199308790383165,
      "exceeds_tolerance": true
     }
    },
@@ -249,7 +249,7 @@
       "v1": -0.2,
       "v11": 0.2
      },
-     "max_abs_diff": 0.7663860512260084,
+     "max_abs_diff": 0.3449364387678431,
      "exceeds_tolerance": true
     }
    },
@@ -264,7 +264,7 @@
       "v1": -0.2,
       "v11": 0.2
      },
-     "max_abs_diff": 3.984728546361089,
+     "max_abs_diff": 0.8199308790383165,
      "exceeds_tolerance": true
     }
    },
@@ -324,7 +324,7 @@
       "v1": -0.2,
       "v11": 0.2
      },
-     "max_abs_diff": 0.3110082644628096,
+     "max_abs_diff": 0.6842181818181817,
      "exceeds_tolerance": true
     }
    }

@@ -34,21 +34,6 @@
    "node_id": "v1",
    "label": "量 F",
    "type": "positive_scalar"
-  },
-  {
-   "node_id": "v10",
-   "label": "量 G",
-   "type": "positive_scalar"
-  },
-  {
-   "node_id": "v6",
-   "label": "量 H",
-   "type": "positive_scalar"
-  },
-  {
-   "node_id": "v2",
-   "label": "量 I",
-   "type": "positive_scalar"
   }
  ],
  "edges": [
@@ -73,78 +58,55 @@
    "edge_id": "e2",
    "edge_type": "linear_drive_resistance",
    "input_nodes": [
-    "v11",
+    "v12",
     "v3"
    ],
    "output_nodes": [
     "v8"
    ],
    "roles": {
-    "v11": "driver",
+    "v12": "driver",
     "v3": "resistance",
     "v8": "response"
    },
-   "function": "v11 / v3"
+   "function": "v12 / v3"
   },
   {
    "edge_id": "e3",
    "edge_type": "multiplicative_growth",
    "input_nodes": [
-    "v1",
-    "v10"
+    "v11",
+    "v8"
    ],
    "output_nodes": [
-    "v6"
+    "v1"
    ],
    "roles": {
-    "v1": "current",
-    "v10": "ratio",
-    "v6": "next"
+    "v11": "current",
+    "v8": "ratio",
+    "v1": "next"
    },
-   "function": "v1 * (1 + v10)"
-  },
-  {
-   "edge_id": "e4",
-   "edge_type": "multiplicative_growth",
-   "input_nodes": [
-    "v8",
-    "v6"
-   ],
-   "output_nodes": [
-    "v2"
-   ],
-   "roles": {
-    "v8": "current",
-    "v6": "ratio",
-    "v2": "next"
-   },
-   "function": "v8 * (1 + v6)"
+   "function": "v11 * (1 + v8)"
   }
  ],
- "function": "((v12 * (1 + v9)) / v3) * (1 + (v1 * (1 + v10)))",
+ "function": "(v12 * (1 + v9)) * (1 + (v12 / v3))",
  "controllable_inputs": [
   "v12",
   "v9",
-  "v3",
-  "v1",
-  "v10"
+  "v3"
  ],
  "designated_outputs": [
-  "v2"
+  "v1"
  ],
  "baseline": [
   1000.0,
   0.1,
-  20.0,
-  1000.0,
-  0.1
+  20.0
  ],
  "input_scales": [
   1000.0,
   0.1,
-  20.0,
-  1000.0,
-  0.1
+  20.0
  ],
  "legal_domain": {
   "v12": [
@@ -156,14 +118,6 @@
    null
   ],
   "v3": [
-   1e-06,
-   null
-  ],
-  "v1": [
-   1e-06,
-   null
-  ],
-  "v10": [
    1e-06,
    null
   ]
@@ -180,14 +134,6 @@
   "v3": [
    -0.2,
    0.2
-  ],
-  "v1": [
-   -0.2,
-   0.2
-  ],
-  "v10": [
-   -0.2,
-   0.2
   ]
  },
  "provenance": {
@@ -195,6 +141,6 @@
   "original_id": null,
   "structure_source": "provided"
  },
- "baseline_output": 60555.0,
- "output_scale": 60555.0
+ "baseline_output": 56100.0,
+ "output_scale": 56100.0
 }

@@ -1,11 +1,10 @@
 {
  "group_id": "group_v2_0001",
- "proto": "P2_chain_merge",
- "family_combo": "M-L-M",
+ "proto": "SK01",
+ "family_combo": "分叉汇合 深2 共享x1",
  "edge_families": [
   "multiplicative_growth",
   "linear_drive_resistance",
-  "multiplicative_growth",
   "multiplicative_growth"
  ],
  "seed": 20261007,

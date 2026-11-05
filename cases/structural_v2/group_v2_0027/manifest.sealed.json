@@ -1,11 +1,11 @@
 {
  "group_id": "group_v2_0027",
- "proto": "P6_sat_tail_chain",
- "family_combo": "S2",
+ "proto": "SK27",
+ "family_combo": "5边 分叉+饱和 深4",
  "edge_families": [
+  "linear_drive_resistance",
   "multiplicative_growth",
-  "multiplicative_growth",
-  "multiplicative_growth",
+  "linear_drive_resistance",
   "multiplicative_growth",
   "saturation_response"
  ],

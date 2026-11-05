@@ -109,117 +109,192 @@ def defuse_saturation_bound_choice(fams):
 #   P5 wide_merge     四路汇合（宽）      | 5 边 / 9 节点 / 深度 2
 #   P6 sat_tail_chain 深链 + 饱和末端      | 4 边 / 7 节点 / 深度 3
 
-def P1_deep_chain3(f=( "multiplicative_growth",) * 3):
-    """x1,x2 -> z1 -> z2 -> y，三层串联。"""
-    return dict(
-        proto_id="P1_deep_chain3",
-        edges=[(["x1", "x2"], "z1"), (["z1", "x3"], "z2"), (["z2", "x4"], "y")],
-        inputs=["x1", "x2", "x3", "x4"], output="y",
-        families=list(f),
-    )
-
-
-def P2_chain_merge(fa="multiplicative_growth", fb="linear_drive_resistance",
-                   fc="multiplicative_growth"):
-    """两路并行（一深一浅）后汇合：z1=f(x1,x2); z2=g(z1,x3); w=g2(x4,x5); y=h(z2,w)。"""
-    return dict(
-        proto_id="P2_chain_merge",
-        edges=[(["x1", "x2"], "z1"), (["z1", "x3"], "z2"),
-               (["x4", "x5"], "w"), (["z2", "w"], "y")],
-        inputs=["x1", "x2", "x3", "x4", "x5"], output="y",
-        families=[fa, fb, fa, fc],
-    )
-
-
-def P3_shared_fan(fa="multiplicative_growth", fb="linear_drive_resistance",
-                  fc="multiplicative_growth", fd="linear_drive_resistance"):
-    """共享输入三路分支：x1 同时喂 e1/e2/e3，三路再两两合并到 y。
-
-    z1=f1(x1,x2); z2=f2(x1,x3); z3=f3(x1,x4); w=f4(z1,z2); y=? -> 需要 5 边
-    为守住 5 边上限，末级只合并两路，第三路进入第二个中间量后再合并：
-    z1=f1(x1,x2); z2=f2(x1,x3); z3=f3(x1,x4); w=f4(z1,z2); y=f5(w,z3)
-    """
-    return dict(
-        proto_id="P3_shared_fan",
-        edges=[(["x1", "x2"], "z1"), (["x1", "x3"], "z2"), (["x1", "x4"], "z3"),
-               (["z1", "z2"], "w"), (["w", "z3"], "y")],
-        inputs=["x1", "x2", "x3", "x4"], output="y",
-        families=[fa, fb, fc, fd, fa],
-    )
-
-
-def P4_shared_deep(fa="multiplicative_growth", fb="linear_drive_resistance"):
-    """共享输入 + 两侧深度不等 + 双重复用（9 节点 5 边 / 深度 4）：
-
-    e1: a1 = f(x1, x2)
-    e2: b1 = g(x1, x3)      <- x1 同时喂 e1/e2（外部输入共享）
-    e3: c1 = f2(a1, x4)
-    e4: w  = g2(b1, c1)     <- 两路汇合
-    e5: y  = f3(w, a1)      <- a1 同时喂 e3/e5（中间量共享，第二种复用）
-
-    这是 v1.1 完全没有的形状：同一对象里既有「外部输入共享」又有「中间量共享」，
-    且链路长度不等（x1→a1→c1→w→y 与 x1→b1→w→y）。
-    """
-    return dict(
-        proto_id="P4_shared_deep",
-        edges=[(["x1", "x2"], "a1"), (["x1", "x3"], "b1"), (["a1", "x4"], "c1"),
-               (["b1", "c1"], "w"), (["w", "a1"], "y")],
-        inputs=["x1", "x2", "x3", "x4"], output="y",
-        families=[fa, fb, fa, fb, fa],
-    )
-
-
-def P5_three_way_merge(fa="linear_drive_resistance", fb="multiplicative_growth",
-                       fc="multiplicative_growth"):
-    """三路汇合 + 中间量二次消费（9 节点 5 边 / 深度 3）：
-
-    e1: z1 = f(x1, x2)
-    e2: z2 = g(x3, x4)
-    e3: w  = f2(z1, z2)     <- 两路汇合
-    e4: u  = g2(w, z1)      <- z1 二次消费（中间量共享）
-    e5: y  = h(u, z2)       <- z2 二次消费 + 与 u 汇合
-
-    **不能**让比例量（乘性 ratio）去吃绝对量：e4 若写 w*(1+z1) 而 z1 是
-    driver/resistance 量级（100/20），(1+z1) 会爆到 6 倍，归一化响应越界到 1.9
-    （实测 group_v2_0004 基准输出 4.2e-4、max|r|=1.91）。所以 e4/e5 的
-    "current/driver" 侧必须接中间量、"ratio/resistance" 侧接同量级量，
-    并由 build_object 校验 |r| <= MAX_ABS_RESP。
-    """
-    return dict(
-        proto_id="P5_three_way_merge",
-        edges=[(["x1", "x2"], "z1"), (["x3", "x4"], "z2"),
-               (["z1", "z2"], "w"), (["w", "x2"], "u"), (["u", "z2"], "y")],
-        inputs=["x1", "x2", "x3", "x4"], output="y",
-        families=[fa, fb, fc, fb, fa],
-    )
-
-
-def P6_sat_tail_chain(fa="multiplicative_growth", fb="linear_drive_resistance",
-                      fsat="saturation_response"):
-    """深链 + 饱和末端（9 节点 5 边 / 深度 4）：
-
-    e1: z1 = f(x1, x2)
-    e2: z2 = g(z1, x3)      <- 线性边，resistanc 接外部输入
-    e3: w  = f2(z2, x4)
-    e4: z3 = g2(w, x5)
-    e5: y  = sat(z3)        <- 饱和**只能作末端**：单输入关系；
-                               K 取 z3 在本域的基准值（半饱和点 input0=K）
-
-    饱和不能出现在中间位置：它的输出永远落在 (0, R_max)，而下游若按
-    current/driver 角色使用会被量级约束卡死；作为汇合点更不行（需要两路输入）。
-    """
-    return dict(
-        proto_id="P6_sat_tail_chain",
-        edges=[(["x1", "x2"], "z1"), (["z1", "x3"], "z2"),
-               (["z2", "x4"], "w"), (["w", "z1"], "z3"), (["z3"], "y")],
-        inputs=["x1", "x2", "x3", "x4"], output="y",
-        families=[fa, fb, fa, fb, fsat],
-    )
-
+M = "multiplicative_growth"
+L = "linear_drive_resistance"
+S = "saturation_response"
 
 # ==================================================================
-# 对象构造：从原型直接实例化成完整对象
+# 30 个基础组骨架：两两结构不同（修「纯结构只有 10-11 种」的缺陷）
+#
+# 依据 T01/T02：
+#   L682  无环，可按拓扑序求值
+#   L993  只用三类关系（乘性/线性/饱和）
+#   L1008 负任务须能核验全候选库 ⇒ 规模控制在 |V|<=9 |E|<=5 才能全枚举
+#   L1022 基础实例及其派生数据不能重复 ⇒ 30 组必须是 30 个**不同骨架**，
+#         不能靠"同骨架换家族组合"凑数（首版就是这个错：只有 10-11 种结构）
+#
+# 饱和是单输入关系 ⇒ 只能做末端边；其余边一律二元。
 # ==================================================================
+
+def sk(edges, inputs, out, families, note=""):
+    return dict(edges=edges, inputs=inputs, output=out, families=families, note=note)
+
+
+# ---------------------------------------------------------------
+# 3 边 / 7 节点（3 个中间量位置里用 2 个）
+# ---------------------------------------------------------------
+def _3edge():
+    out = []
+    # A 纯链：x1,x2->z1 ; z1,x3->z2 ; z2,x4->y     深度 3
+    out.append(sk([(["x1", "x2"], "z1"), (["z1", "x3"], "z2"), (["z2", "x4"], "y")],
+                  ["x1", "x2", "x3", "x4"], "y", [M, L, M], "纯链 深3"))
+    # B 分叉后汇合：z1=f(x1,x2) ; z2=g(x1,x3) ; y=h(z1,z2)   深度 2，x1 共享
+    out.append(sk([(["x1", "x2"], "z1"), (["x1", "x3"], "z2"), (["z1", "z2"], "y")],
+                  ["x1", "x2", "x3"], "y", [M, L, M], "分叉汇合 深2 共享x1"))
+    # C 尾端复用：z1=f(x1,x2) ; z2=g(z1,x3) ; y=h(z2,x3)     x3 二次消费
+    out.append(sk([(["x1", "x2"], "z1"), (["z1", "x3"], "z2"), (["z2", "x3"], "y")],
+                  ["x1", "x2", "x3"], "y", [L, M, L], "链+尾复用 深3"))
+    # D x2 被三条边消费（星形复用）：z1=f(x1,x2) ; z2=g(x2,x1) ; y=h(x2,z2)
+    out.append(sk([(["x1", "x2"], "z1"), (["x2", "x1"], "z2"), (["x2", "z2"], "y")],
+                  ["x1", "x2"], "y", [M, M, L], "星形复用 深2"))
+
+    # E 中段复用：z1=f(x1,x2) ; z2=g(z1,x1) ; y=h(x2,z2)
+    out.append(sk([(["x1", "x2"], "z1"), (["z1", "x1"], "z2"), (["x2", "z2"], "y")],
+                  ["x1", "x2"], "y", [L, L, M], "中段复用 深3"))
+    return out
+
+
+# ---------------------------------------------------------------
+# 4 边 / 9 节点
+# ---------------------------------------------------------------
+def _4edge():
+    out = []
+    # A 双链汇合：z1=f(x1,x2) ; z2=g(z1,x3) ; w=h(x4,x5) ; y=k(z2,w)   深度3
+    out.append(sk([(["x1", "x2"], "z1"), (["z1", "x3"], "z2"),
+                   (["x4", "x5"], "w"), (["z2", "w"], "y")],
+                  ["x1", "x2", "x3", "x4", "x5"], "y", [M, L, M, L], "双链汇合 深3"))
+    # B 四层链：x1,x2->a ; a,x3->b ; b,x4->c ; c,x5->y   深度4
+    out.append(sk([(["x1", "x2"], "a"), (["a", "x3"], "b"),
+                   (["b", "x4"], "c"), (["c", "x5"], "y")],
+                  ["x1", "x2", "x3", "x4", "x5"], "y", [L, M, L, M], "四层链 深4"))
+    # C 分叉两汇：a=f(x1,x2) b=g(x1,x3) c=h(a,b) y=k(c,x3)
+    out.append(sk([(["x1", "x2"], "a"), (["x1", "x3"], "b"),
+                   (["a", "b"], "c"), (["c", "x3"], "y")],
+                  ["x1", "x2", "x3"], "y", [M, M, L, M], "分叉+二级汇合 深3"))
+    # D 菱形：a=f(x1,x2) b=g(x1,x2) c=h(a,b) y=k(c,x1)   两输入各自分叉
+    out.append(sk([(["x1", "x2"], "a"), (["x2", "x1"], "b"),
+                   (["a", "b"], "c"), (["c", "x1"], "y")],
+                  ["x1", "x2"], "y", [L, L, M, L], "菱形双向 深3"))
+    # E 三汇一链：a=f(x1,x2) b=g(a,x3) c=h(b,x4) y=k(c,a)  末级复用 a
+    out.append(sk([(["x1", "x2"], "a"), (["a", "x3"], "b"),
+                   (["b", "x4"], "c"), (["c", "a"], "y")],
+                  ["x1", "x2", "x3", "x4"], "y", [M, L, M, M], "链末跨级复用 深4"))
+    return out
+
+
+# ---------------------------------------------------------------
+# 5 边 / 9 节点（二元 4 组 + 饱和末端若干）
+# ---------------------------------------------------------------
+def _5edge():
+    out = []
+    # A 共享输入三路：z1=f(x1,x2) z2=g(x1,x3) w=h(z1,z2) u=k(w,x1) y=m(u,z2)
+    out.append(sk([(["x1", "x2"], "z1"), (["x1", "x3"], "z2"), (["z1", "z2"], "w"),
+                   (["w", "x1"], "u"), (["u", "z2"], "y")],
+                  ["x1", "x2", "x3"], "y", [L, M, L, M, L], "共享+双跨级 深4"))
+    # B 深链带跨级：a=f(x1,x2) b=g(a,x3) c=h(b,x4) d=k(c,a) y=m(d,b)
+    out.append(sk([(["x1", "x2"], "a"), (["a", "x3"], "b"), (["b", "x4"], "c"),
+                   (["c", "a"], "d"), (["d", "b"], "y")],
+                  ["x1", "x2", "x3", "x4"], "y", [M, L, M, L, M], "深链双跨级 5层"))
+    # C 五层链（复用 x3 省一个外部输入，控到 9 节点）：x1,x2->a a,x3->b b,x3->c c,x2->d d,x3->y
+    out.append(sk([(["x1", "x2"], "a"), (["a", "x3"], "b"), (["b", "x3"], "c"),
+                   (["c", "x2"], "d"), (["d", "x3"], "y")],
+                  ["x1", "x2", "x3"], "y", [L, M, L, M, L], "五层链 深5"))
+    # D 双汇合：a=f(x1,x2) b=g(x1,x3) c=h(a,b) d=k(c,x2) y=m(d,a)
+    out.append(sk([(["x1", "x2"], "a"), (["x1", "x3"], "b"), (["a", "b"], "c"),
+                   (["c", "x2"], "d"), (["d", "a"], "y")],
+                  ["x1", "x2", "x3"], "y", [M, M, L, M, L], "双汇合+复用 深4"))
+    return out
+
+
+def _5edge_sat():
+    """饱和末端：末端边单输入，其余 4 条二元。9 节点 5 边。"""
+    out = []
+    # A 深链末端饱和：x1,x2->a a,x3->b b,x4->c c,a->d d->sat->y
+    out.append(sk([(["x1", "x2"], "a"), (["a", "x3"], "b"), (["b", "x4"], "c"),
+                   (["c", "a"], "d"), (["d"], "y")],
+                  ["x1", "x2", "x3", "x4"], "y", [M, L, M, L, S], "深链+饱和末端 深5"))
+    # B 三段链末端饱和：a=f(x1,x2) b=g(a,x3) c=h(b,a) d=k(c,x3) d->sat->y
+    out.append(sk([(["x1", "x2"], "a"), (["a", "x3"], "b"), (["b", "a"], "c"),
+                   (["c", "x3"], "d"), (["d"], "y")],
+                  ["x1", "x2", "x3"], "y", [L, M, L, M, S], "三段链+饱和 深5"))
+    # C 链尾复用末端饱和：a=f(x1,x2) b=g(a,x3) c=h(b,x2) d=k(c,b) d->sat->y
+    out.append(sk([(["x1", "x2"], "a"), (["a", "x3"], "b"), (["b", "x2"], "c"),
+                   (["c", "b"], "d"), (["d"], "y")],
+                  ["x1", "x2", "x3"], "y", [M, L, M, L, S], "链尾双复用+饱和 深5"))
+    # D 短链宽汇合末端饱和：a=f(x1,x2) b=g(x3,x2) c=h(a,b) d=k(c,x2) d->sat->y
+    out.append(sk([(["x1", "x2"], "a"), (["x3", "x2"], "b"), (["a", "b"], "c"),
+                   (["c", "x2"], "d"), (["d"], "y")],
+                  ["x1", "x2", "x3"], "y", [L, L, M, L, S], "宽汇合+饱和 深4"))
+    return out
+
+
+SKELETONS = _3edge() + _4edge() + _5edge() + _5edge_sat()
+assert len(SKELETONS) == 18, len(SKELETONS)
+
+# ---------------------------------------------------------------
+# 追加 12 个骨架（补到 30）：全部 |V|<=9 |E|<=5，无环，无死端
+# ---------------------------------------------------------------
+def _more():
+    out = []
+    # --- 3 边 ---
+    # x2 三次复用 + 链：a=f(x1,x2) b=g(a,x2) y=h(b,x2)
+    out.append(sk([(["x1", "x2"], "a"), (["a", "x2"], "b"), (["b", "x2"], "y")],
+                  ["x1", "x2"], "y", [L, M, L], "3边 x2三次复用 深3"))
+    # 两中间量互相引用：a=f(x1,x2) b=g(a,x1) y=h(b,a)
+    out.append(sk([(["x1", "x2"], "a"), (["a", "x1"], "b"), (["b", "a"], "y")],
+                  ["x1", "x2"], "y", [M, L, M], "3边 双中间量互引 深3"))
+    # --- 4 边 ---
+    # 三路分叉后两段汇合：a=f(x1,x2) b=g(x1,x3) c=h(x1,b) y=k(a,c)
+    out.append(sk([(["x1", "x2"], "a"), (["x1", "x3"], "b"), (["x1", "b"], "c"),
+                   (["a", "c"], "y")],
+                  ["x1", "x2", "x3"], "y", [M, L, M, L], "4边 x1三路 深3"))
+    # 链+并行支路：a=f(x1,x2) b=g(a,x3) c=h(x1,x3) y=k(b,c)
+    out.append(sk([(["x1", "x2"], "a"), (["a", "x3"], "b"), (["x1", "x3"], "c"),
+                   (["b", "c"], "y")],
+                  ["x1", "x2", "x3"], "y", [L, M, L, M], "4边 链+并行 深3"))
+    # 四级链带末级复用：a=f(x1,x2) b=g(a,x3) c=h(b,x1) y=k(c,x2)
+    out.append(sk([(["x1", "x2"], "a"), (["a", "x3"], "b"), (["b", "x1"], "c"),
+                   (["c", "x2"], "y")],
+                  ["x1", "x2", "x3"], "y", [M, M, L, L], "4边 四级链跨级 深4"))
+    # 双汇合：a=f(x1,x2) b=g(x3,x4) c=h(a,b) y=k(c,a)
+    out.append(sk([(["x1", "x2"], "a"), (["x3", "x4"], "b"), (["a", "b"], "c"),
+                   (["c", "a"], "y")],
+                  ["x1", "x2", "x3", "x4"], "y", [M, L, L, L], "4边 汇合后复用 深3"))
+    # --- 5 边 ---
+    # 五次链：a,b->c  c,x1->d  d,x2->e  e,c->f  f->?
+    # 改用：a=f(x1,x2) b=g(a,x3) c=h(b,x1) d=k(c,b) y=m(d,x3)
+    out.append(sk([(["x1", "x2"], "a"), (["a", "x3"], "b"), (["b", "x1"], "c"),
+                   (["c", "b"], "d"), (["d", "x3"], "y")],
+                  ["x1", "x2", "x3"], "y", [L, M, L, M, L], "5边 深链双跨级 深5"))
+    # 汇合后接深链（扰动可透传，不出现"同一中间量既在分子又在分母"）：
+    # a=f(x1,x2) b=g(x1,x3) c=h(a,b) d=k(c,x2) y=m(d,x3)
+    out.append(sk([(["x1", "x2"], "a"), (["x1", "x3"], "b"), (["a", "b"], "c"),
+                   (["c", "x2"], "d"), (["d", "x3"], "y")],
+                  ["x1", "x2", "x3"], "y", [M, L, M, L, M], "5边 汇合后深链 深5"))
+    # 长链末端饱和：a=f(x1,x2) b=g(a,x3) c=h(b,x2) d=k(c,x3) y=sat(d)
+    out.append(sk([(["x1", "x2"], "a"), (["a", "x3"], "b"), (["b", "x2"], "c"),
+                   (["c", "x3"], "d"), (["d"], "y")],
+                  ["x1", "x2", "x3"], "y", [M, L, M, L, S], "5边 长链+饱和 深5"))
+    # 分叉后末端饱和：a=f(x1,x2) b=g(x1,x3) c=h(a,x2) d=k(b,c) y=sat(d)
+    out.append(sk([(["x1", "x2"], "a"), (["x1", "x3"], "b"), (["a", "x2"], "c"),
+                   (["b", "c"], "d"), (["d"], "y")],
+                  ["x1", "x2", "x3"], "y", [L, M, L, M, S], "5边 分叉+饱和 深4"))
+    # 末端饱和带前级复用：a=f(x1,x2) b=g(a,x3) c=h(b,a) d=k(c,x1) y=sat(d)
+    out.append(sk([(["x1", "x2"], "a"), (["a", "x3"], "b"), (["b", "a"], "c"),
+                   (["c", "x1"], "d"), (["d"], "y")],
+                  ["x1", "x2", "x3"], "y", [M, M, L, M, S], "5边 饱和+前级复用 深5"))
+    # 三路分支末端饱和：a=f(x1,x2) b=g(x1,x3) c=h(a,b) d=k(c,a) y=sat(d)
+    out.append(sk([(["x1", "x2"], "a"), (["x1", "x3"], "b"), (["a", "b"], "c"),
+                   (["c", "a"], "d"), (["d"], "y")],
+                  ["x1", "x2", "x3"], "y", [L, L, M, L, S], "5边 分支+饱和 深4"))
+    return out
+
+
+SKELETONS = SKELETONS + _more()
+assert len(SKELETONS) == 30, len(SKELETONS)
+
+
+
 def assign_ids(proto, group_id):
     """把原型里的角色名（x1.., z1.., y）换成无语义节点 ID。
 
@@ -802,7 +877,10 @@ def resp_mutate(src, k):
     真正的 ratio 被丢掉 => 违反端点保持。这里一律按 roles 定位。
     """
     o = json.loads(json.dumps(src))
+    # k 拆成 (边序, 变形档)：同一条边可以有多档变形，避免"边数少 ⇒ 凑不够 3 个"。
+    # 档号越小变形越弱、越大越强（幂次 2→5），保证端点不变、角色不变。
     e = o["edges"][k % len(o["edges"])]
+    grade = k // len(o["edges"])
     roles = e["roles"]
     by_role = {}
     for n, r in roles.items():
@@ -822,7 +900,8 @@ def resp_mutate(src, k):
         first = cur[0]
         rest = [n for n in cur if n != first]
         # 幂次变形：函数形式变了，端点全部保留
-        core = f"{first} ** {2 + k % 3} / ({b0(first)} ** {1 + k % 3})"
+        pw = 2 + grade % 4
+        core = f"{first} ** {pw} / ({b0(first)} ** {pw - 1})"
         if rest:
             core += " * " + " * ".join(rest)
         e["function"] = f"{core} * (1 + {rat})"
@@ -830,7 +909,8 @@ def resp_mutate(src, k):
         drv = by_role.get("driver", [ins[0]])
         res = by_role.get("resistance", ins[1:])
         first = drv[0]
-        num = f"{first} ** {2 + k % 3} / ({b0(first)} ** {1 + k % 3})"
+        pw = 2 + grade % 4
+        num = f"{first} ** {pw} / ({b0(first)} ** {pw - 1})"
         if len(drv) > 1:
             num += " * " + " * ".join(drv[1:])
         e["function"] = f"{num} / ({' * '.join(res)})"
@@ -841,26 +921,49 @@ def resp_mutate(src, k):
         m = _re.search(r"\(\s*([-0-9.eE+]+)\s*\+\s*" + _re.escape(x) + r"\s*\)", e["function"])
         K = float(m.group(1)) if m else 1.0
         R = 2.0 * b0(x)
-        n = [2, 3, 0.5][k % 3]
+        n = [2, 3, 0.5, 4][grade % 4]
         e["function"] = f"{R} * {x} ** {n} / ({K} ** {n} + {x} ** {n})"
     return _rebench(o)
 
 
 def _amp_gain(o, host_id, x):
-    """实测「鼓包挂在 host_id 上」时，x 的相对扰动传到最终输出的增益。
+    """实测「把鼓包挂在 host_id 上」时，最终输出能被推到多大（直接量 Δr）。
 
-    做法：在 x 的一个 δ 相对扰动下，比较有/无鼓包两版输出的相对变化，
-    即 gain = d(normalized_response)/d(delta)。用它挑承载边，而不是猜拓扑。
+    首版只做了单点线性化（扰动 x 看输出变化），没考虑**拓扑抵消**：
+    候选边 e2 的输出若在下游被另一条边的分母除掉，增益会被完全抹平
+    （g25 实测 Δr 只有 0.0058）。所以这里不估计增益，直接**装着鼓包实测**
+    最终输出与原始输出的最大差，代价是多跑几次局部扫描，换来承载边一定有效。
     """
-    base = dict(zip(o["controllable_inputs"], o["baseline"]))
-    x0 = base[x]
-    eps = 0.03
-    u = dict(zip(o["controllable_inputs"], [0.0] * len(o["controllable_inputs"])))
-    u[x] = eps
-    r0 = runtime_dag.normalized_response(o, dict(zip(o["controllable_inputs"],
-                                                     [0.0] * len(o["controllable_inputs"]))))[o["designated_outputs"][0]]
-    r1 = runtime_dag.normalized_response(o, u)[o["designated_outputs"][0]]
-    return abs(r1 - r0) / eps
+    import copy
+    o2 = copy.deepcopy(o)
+    e = next(x2 for x2 in o2["edges"] if x2["edge_id"] == host_id)
+    x0 = o2["baseline"][o2["controllable_inputs"].index(x)] if x in o2["controllable_inputs"] else 1.0
+    if abs(x0) < 1e-12:
+        x0 = 1.0
+    lo, hi = o2["intervention_bounds"][x]
+    cen = min(max(0.10, lo + 0.06), hi - 0.06)
+    amp, wid = 0.45, 0.10
+    scale = o2["output_scale"]
+    bump = (f"{amp} * (exp(-(((({x} - {x0}) / {x0}) - {cen}) / {wid}) ** 2) "
+            f"- exp(-({cen} / {wid}) ** 2))")
+    e["function"] = f"({e['function']}) * (1 + {bump})"
+    if x not in e["input_nodes"]:
+        e["input_nodes"].append(x)
+        e["roles"][x] = "input" if e["edge_type"] == "saturation_response" else "ratio"
+    try:
+        _rebench(o2)
+    except Exception:
+        return 0.0
+    pts = scan_points(o2, n=600)
+    mx = 0.0
+    for u in pts:
+        d = abs(runtime_dag.normalized_response(o2, u)[o2["designated_outputs"][0]] -
+                runtime_dag.normalized_response(o, u)[o["designated_outputs"][0]])
+        if d > mx:
+            mx = d
+            if mx > ERR_THRESHOLD:
+                break
+    return mx
 
 
 def local_mutate(src, k):
@@ -914,8 +1017,11 @@ def local_mutate(src, k):
     # 按实测增益排序（增益大的才是好承载边）
     gains = {p: _amp_gain(src, p[0], p[1]) for p in cands}
     scored = sorted(cands, key=lambda p: -gains[p])
-    gmax = gains[scored[0]]
-    good = [p for p in scored if gains[p] >= 0.5 * gmax] if gmax > 0 else scored
+    # 只保留「装着鼓包后 Δr 真能超容差」的承载边；一个都不行就报错
+    good = [p for p in scored if gains[p] > ERR_THRESHOLD]
+    if not good:
+        raise ValueError(f"{src['object_id']}: 没有任何外部输入能把响应推出容差 "
+                         f"（最大 Δr={gains[scored[0]]:.4f}）")
     # 只在 good 里轮换会重复：P4 的 e1/e2 增益相近但 e1 的鼓包被 e5=v3/v5 抵消，
     # 实际 Δr 只有 0.0002。⇒ good 里要靠**实测 Δr** 二次筛选，而不是靠增益排序。
     # k 解释成 (承载边, 预设) 的联合序号：保证不同 k 产出不同的组合，
@@ -978,95 +1084,22 @@ FAM_COMBOS = [
 ]
 
 
-def proto_families(proto, combo_name, combo, ups=None):
-    """把家族组合按原型边数展开；饱和组合强制放在末端。"""
-    n = len(proto["edges"])
-    if combo is None:      # 饱和末端
-        base = ups or ["multiplicative_growth", "linear_drive_resistance"]
-        fams = [base[i % len(base)] for i in range(n - 1)] + ["saturation_response"]
-        return fams
-    return [combo[i % len(combo)] for i in range(n)]
+# 兼容旧接口
+PROTOS = [(s["note"], None) for s in SKELETONS]
 
 
-def make_proto(idx, proto_fn, combo_name, combo, ups=None):
-    """按 (原型, 家族组合) 实例化一个 proto 定义。
-
-    P6 的骨架末端是饱和边（单输入）。若本组家族组合不含饱和，
-    把末端边改成两输入的线性边并补一个外部输入 x5，保持 5 边 / 9 节点不变：
-      e5: y = linear(z3, x5)   -> 节点 z3, y, x5 已在图内，V 不变
-    """
-    p = proto_fn()
-    p["families"] = proto_families(p, combo_name, combo, ups)
-    # 末端边与家族必须「阶数一致」：
-    #   饱和是单输入 ⇒ 末端边只能接 1 个节点
-    #   乘性/线性是两输入 ⇒ 末端边必须接 2 个节点
-    # 两种方向都要修，且修完重算外部输入清单（被移出的输入不再被任何边消费）。
-    last_ins, last_out = p["edges"][-1]
-    if p["families"][-1] == "saturation_response" and len(last_ins) != 1:
-        p["edges"] = p["edges"][:-1] + [([last_ins[0]], last_out)]
-    elif (p["families"][-1] != "saturation_response" and len(last_ins) != 2):
-        # P6 骨架末端是 sat(z3)；改成二元边时补一个尚未使用的 x5
-        pool = ["x5", "x6", "x7"]
-        used = {n for ins, o in p["edges"][:-1] for n in ins}
-        extra = next(x for x in pool if x not in used and x not in p["inputs"])
-        p["edges"] = p["edges"][:-1] + [([last_ins[0], extra], last_out)]
-    used = {n for ins, o in p["edges"] for n in ins}
-    p["inputs"] = [n for n in (p["inputs"] + ["x5", "x6", "x7"]) if n in used]
-    # 保持原输入顺序：按 x1..xN 排序
-    p["inputs"] = sorted(set(p["inputs"]), key=lambda t: int(t[1:]))
-    return p
-
-
-PROTOS = [
-    ("P1_deep_chain3", P1_deep_chain3),
-    ("P2_chain_merge", P2_chain_merge),
-    ("P3_shared_fan", P3_shared_fan),
-    ("P4_shared_deep", P4_shared_deep),
-    ("P5_three_way_merge", P5_three_way_merge),
-    ("P6_sat_tail_chain", P6_sat_tail_chain),
-]
+def make_proto(idx, proto_fn=None, combo_name="", combo=None, ups=None):
+    """取第 idx 个骨架（不再需要 make_proto 的阶数修补：骨架表本身已合法）。"""
+    s = SKELETONS[idx]
+    return dict(proto_id=f"SK{idx:02d}", edges=list(s["edges"]),
+                inputs=list(s["inputs"]), output=s["output"],
+                families=list(s["families"]), note=s["note"])
 
 
 def group_plan():
-    """30 组 = 6 原型 × 5 家族组合，但**按原型结构能力分配**，不是硬凑方阵：
-
-    P6_sat_tail_chain 的骨架就是「深链 + 饱和末端」，它的末端边天然是单输入；
-    若把非饱和组合塞进去，末端要补成两输入 3 节点，节点数涨到 10，超出 9 上限。
-    ⇒ P6 只承担饱和末端组合（它是 6 个原型里深度最大的，饱和末端只在这里试）。
-
-    配额：
-      P1_deep_chain3     5 组（4 个二元组合 + 1 个饱和末端；末端降级为单输入、V=6）
-      P2_chain_merge     5 组（4 + 1 饱和末端）
-      P3_shared_fan      5 组（4 + 1）
-      P4_shared_deep     5 组（4 + 1）
-      P5_three_way_merge 5 组（4 + 1）
-      P6_sat_tail_chain  5 组（饱和末端 × 5 种混合，用不同家族搭配末端上游）
-    合计 30，其中饱和末端 6 组（每个原型各有 1 组），其余 24 组为二元组合。
-    """
-    combos = [d for d in FAM_COMBOS]
-    out = []
-    for pname, pfn in PROTOS:
-        if pname == "P6_sat_tail_chain":
-            # 5 组都用饱和末端，但上游家族交替，产生不同机制组合
-            ups = [
-                ["multiplicative_growth", "linear_drive_resistance"],
-                ["linear_drive_resistance", "multiplicative_growth"],
-                ["multiplicative_growth", "multiplicative_growth"],
-                ["linear_drive_resistance", "linear_drive_resistance"],
-                ["multiplicative_growth", "linear_drive_resistance"],
-            ]
-            for ui, up in enumerate(ups):
-                out.append(dict(proto_name=pname, proto_fn=pfn,
-                                combo_name=f"S{ui}", combo=None, ups=up))
-            continue
-        for cname, combo in combos:
-            out.append(dict(proto_name=pname, proto_fn=pfn,
-                            combo_name=cname, combo=combo, ups=None))
-    # 交错：按 (组合序, 原型序) 排，避免同原型连号
-    order_c = [c[0] for c in FAM_COMBOS]
-    out.sort(key=lambda d: (order_c.index(d["combo_name"]) if d["combo_name"] in order_c else 4,
-                            [p[0] for p in PROTOS].index(d["proto_name"])))
-    return out
+    """30 组 = 30 个不同骨架，一一对应，不做"同骨架换家族"的派生凑数。"""
+    return [dict(proto_name=f"SK{i:02d}", proto_fn=None, combo_name=SKELETONS[i]["note"],
+                 combo=None, ups=None) for i in range(len(SKELETONS))]
 
 
 def scale_pool(i):
@@ -1147,7 +1180,17 @@ def build_candidates(g, points=None, verbose=False):
 
     struct3 = take_unique(lambda k: structural_mutate(src, k, g["id_map"]),
                           "structure_error", "s")
-    resp3 = take_unique(lambda k: iter([resp_mutate(src, k)]), "response_error", "r")
+    def _resp_gen(k):
+        """逐个产出响应错误候选；该 k 的变异若不改变响应（对称结构被吸收），跳过。"""
+        c = resp_mutate(src, k)
+        mx, _, _ = max_gap_for_map(c, tgt, {n: n for n in tgt["controllable_inputs"]},
+                                   points=pts, limit=1e9)
+        if mx <= ERR_THRESHOLD:
+            # 静默跳过（不 raise），交给 take_unique 换下一个 k
+            return iter([])
+        return iter([c])
+
+    resp3 = take_unique(_resp_gen, "response_error", "r")
     loc3 = take_unique(lambda k: iter([local_mutate(src, k)]), "local_perturbation", "l")
 
     # 第 10 个：负任务专用，再一个响应错误（与 resp3 不同的边/族）

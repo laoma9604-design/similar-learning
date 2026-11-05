@@ -1,13 +1,12 @@
 {
  "group_id": "group_v2_0022",
- "proto": "P3_shared_fan",
- "family_combo": "M-...-S",
+ "proto": "SK22",
+ "family_combo": "4边 四级链跨级 深4",
  "edge_families": [
   "multiplicative_growth",
-  "linear_drive_resistance",
   "multiplicative_growth",
   "linear_drive_resistance",
-  "saturation_response"
+  "linear_drive_resistance"
  ],
  "seed": 20261007,
  "reference_tolerance": {

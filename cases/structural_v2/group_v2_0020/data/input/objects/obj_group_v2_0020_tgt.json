@@ -34,6 +34,11 @@
    "node_id": "v6",
    "label": "量 F",
    "type": "positive_scalar"
+  },
+  {
+   "node_id": "v1",
+   "label": "量 G",
+   "type": "positive_scalar"
   }
  ],
  "edges": [
@@ -58,43 +63,62 @@
    "edge_id": "e2",
    "edge_type": "linear_drive_resistance",
    "input_nodes": [
-    "v9",
+    "v3",
     "v12"
    ],
    "output_nodes": [
     "v4"
    ],
    "roles": {
-    "v9": "driver",
+    "v3": "driver",
     "v12": "resistance",
     "v4": "response"
    },
-   "function": "v9 / v12"
+   "function": "v3 / v12"
   },
   {
    "edge_id": "e3",
-   "edge_type": "saturation_response",
+   "edge_type": "multiplicative_growth",
    "input_nodes": [
+    "v3",
     "v4"
    ],
    "output_nodes": [
     "v6"
    ],
    "roles": {
-    "v4": "input",
-    "v6": "response"
+    "v3": "current",
+    "v4": "ratio",
+    "v6": "next"
    },
-   "function": "10.0 * v4 / (55.0 + v4)"
+   "function": "v3 * (1 + v4)"
+  },
+  {
+   "edge_id": "e4",
+   "edge_type": "linear_drive_resistance",
+   "input_nodes": [
+    "v9",
+    "v6"
+   ],
+   "output_nodes": [
+    "v1"
+   ],
+   "roles": {
+    "v9": "driver",
+    "v6": "resistance",
+    "v1": "response"
+   },
+   "function": "v9 / v6"
   }
  ],
- "function": "10.0 * ((v3 * (1 + v10)) / v12) / (55.0 + ((v3 * (1 + v10)) / v12))",
+ "function": "(v3 * (1 + v10)) / (v3 * (1 + (v3 / v12)))",
  "controllable_inputs": [
   "v3",
   "v10",
   "v12"
  ],
  "designated_outputs": [
-  "v6"
+  "v1"
  ],
  "baseline": [
   1000.0,
@@ -122,16 +146,16 @@
  },
  "intervention_bounds": {
   "v3": [
-   -0.8,
-   1.0
+   -0.2,
+   0.2
   ],
   "v10": [
-   -0.8,
-   1.0
+   -0.2,
+   0.2
   ],
   "v12": [
-   -0.8,
-   1.0
+   -0.2,
+   0.2
   ]
  },
  "provenance": {
@@ -139,6 +163,6 @@
   "original_id": null,
   "structure_source": "provided"
  },
- "baseline_output": 5.0,
- "output_scale": 5.0
+ "baseline_output": 0.021568627450980392,
+ "output_scale": 0.021568627450980392
 }

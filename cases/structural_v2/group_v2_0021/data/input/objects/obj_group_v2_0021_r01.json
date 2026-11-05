@@ -39,22 +39,12 @@
    "node_id": "v7",
    "label": "量 G",
    "type": "positive_scalar"
-  },
-  {
-   "node_id": "v1",
-   "label": "量 H",
-   "type": "positive_scalar"
-  },
-  {
-   "node_id": "v3",
-   "label": "量 I",
-   "type": "positive_scalar"
   }
  ],
  "edges": [
   {
    "edge_id": "e1",
-   "edge_type": "multiplicative_growth",
+   "edge_type": "linear_drive_resistance",
    "input_nodes": [
     "v2",
     "v4"
@@ -63,15 +53,15 @@
     "v6"
    ],
    "roles": {
-    "v2": "current",
-    "v4": "ratio",
-    "v6": "next"
+    "v2": "driver",
+    "v4": "resistance",
+    "v6": "response"
    },
-   "function": "v2 * (1 + v4)"
+   "function": "v2 / v4"
   },
   {
    "edge_id": "e2",
-   "edge_type": "linear_drive_resistance",
+   "edge_type": "multiplicative_growth",
    "input_nodes": [
     "v6",
     "v5"
@@ -80,68 +70,64 @@
     "v12"
    ],
    "roles": {
-    "v6": "driver",
-    "v5": "resistance",
-    "v12": "response"
+    "v6": "current",
+    "v5": "ratio",
+    "v12": "next"
    },
-   "function": "v6 ** 3 / (1908.1242530204465 ** 2) / (v5)"
+   "function": "v6 ** 2 / (5.1019365054022625 ** 1) * (1 + v5)"
   },
   {
    "edge_id": "e3",
-   "edge_type": "multiplicative_growth",
+   "edge_type": "linear_drive_resistance",
    "input_nodes": [
-    "v8",
-    "v7"
+    "v2",
+    "v5"
    ],
    "output_nodes": [
-    "v1"
+    "v8"
    ],
    "roles": {
-    "v8": "current",
-    "v7": "ratio",
-    "v1": "next"
+    "v2": "driver",
+    "v5": "resistance",
+    "v8": "response"
    },
-   "function": "v8 * (1 + v7)"
+   "function": "v2 / v5"
   },
   {
    "edge_id": "e4",
-   "edge_type": "saturation_response",
+   "edge_type": "multiplicative_growth",
    "input_nodes": [
-    "v12"
+    "v12",
+    "v8"
    ],
    "output_nodes": [
-    "v3"
+    "v7"
    ],
    "roles": {
-    "v12": "input",
-    "v3": "response"
+    "v12": "current",
+    "v8": "ratio",
+    "v7": "next"
    },
-   "function": "17.0 * v12 / (56.1213015594249 + v12)"
+   "function": "v12 * (1 + v8)"
   }
  ],
- "function": "17.0 * ((v2 * (1 + v4)) ** 3 / (1908.1242530204465 ** 2) / (v5)) / (56.1213015594249 + ((v2 * (1 + v4)) ** 3 / (1908.1242530204465 ** 2) / (v5)))",
+ "function": "((v2 / v4) ** 2 / (5.1019365054022625 ** 1) * (1 + v5)) * (1 + (v2 / v5))",
  "controllable_inputs": [
   "v2",
   "v4",
-  "v5",
-  "v8",
-  "v7"
+  "v5"
  ],
  "designated_outputs": [
-  "v3"
+  "v7"
  ],
  "baseline": [
-  1734.6584118367693,
-  0.1,
+  173.46584118367693,
   34.0,
-  1707.06984938104,
   0.1
  ],
  "input_scales": [
-  1734.6584118367693,
-  0.1,
+  173.46584118367693,
   34.0,
-  1707.06984938104,
   0.1
  ],
  "legal_domain": {
@@ -156,36 +142,20 @@
   "v5": [
    1e-06,
    null
-  ],
-  "v8": [
-   1e-06,
-   null
-  ],
-  "v7": [
-   1e-06,
-   null
   ]
  },
  "intervention_bounds": {
   "v2": [
-   -0.8,
-   1.0
+   -0.2,
+   0.2
   ],
   "v4": [
-   -0.8,
-   1.0
+   -0.2,
+   0.2
   ],
   "v5": [
-   -0.8,
-   1.0
-  ],
-  "v8": [
-   -0.8,
-   1.0
-  ],
-  "v7": [
-   -0.8,
-   1.0
+   -0.2,
+   0.2
   ]
  },
  "provenance": {
@@ -193,6 +163,6 @@
   "original_id": null,
   "structure_source": "controlled_synthetic"
  },
- "baseline_output": 8.5,
- "output_scale": 8.5
+ "baseline_output": 9740.74091348438,
+ "output_scale": 9740.74091348438
 }

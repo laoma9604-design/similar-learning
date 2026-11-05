@@ -1,11 +1,9 @@
 {
  "group_id": "group_v2_0002",
- "proto": "P3_shared_fan",
- "family_combo": "M-L-M",
+ "proto": "SK02",
+ "family_combo": "链+尾复用 深3",
  "edge_families": [
-  "multiplicative_growth",
   "linear_drive_resistance",
-  "multiplicative_growth",
   "multiplicative_growth",
   "linear_drive_resistance"
  ],

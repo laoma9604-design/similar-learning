@@ -44,17 +44,12 @@
    "node_id": "v4",
    "label": "量 H",
    "type": "positive_scalar"
-  },
-  {
-   "node_id": "v3",
-   "label": "量 I",
-   "type": "positive_scalar"
   }
  ],
  "edges": [
   {
    "edge_id": "e1",
-   "edge_type": "multiplicative_growth",
+   "edge_type": "linear_drive_resistance",
    "input_nodes": [
     "v5",
     "v7"
@@ -63,31 +58,48 @@
     "v1"
    ],
    "roles": {
-    "v7": "ratio",
-    "v1": "next",
-    "v5": "current"
+    "v7": "resistance",
+    "v1": "response",
+    "v5": "driver"
    },
-   "function": "v5 * (1 + v7)"
+   "function": "v5 / v7"
   },
   {
    "edge_id": "e2",
    "edge_type": "multiplicative_growth",
    "input_nodes": [
-    "v1",
+    "v6",
     "v5"
    ],
    "output_nodes": [
     "v8"
    ],
    "roles": {
-    "v1": "current",
+    "v6": "current",
     "v5": "ratio",
     "v8": "next"
    },
-   "function": "v1 * (1 + v5)"
+   "function": "v6 * (1 + v5)"
   },
   {
    "edge_id": "e3",
+   "edge_type": "linear_drive_resistance",
+   "input_nodes": [
+    "v1",
+    "v7"
+   ],
+   "output_nodes": [
+    "v2"
+   ],
+   "roles": {
+    "v1": "driver",
+    "v7": "resistance",
+    "v2": "response"
+   },
+   "function": "v1 / v7"
+  },
+  {
+   "edge_id": "e4",
    "edge_type": "multiplicative_growth",
    "input_nodes": [
     "v8",
@@ -104,58 +116,38 @@
    "function": "v8 * (1 + v2)"
   },
   {
-   "edge_id": "e4",
-   "edge_type": "multiplicative_growth",
-   "input_nodes": [
-    "v11",
-    "v1"
-   ],
-   "output_nodes": [
-    "v4"
-   ],
-   "roles": {
-    "v11": "current",
-    "v1": "ratio",
-    "v4": "next"
-   },
-   "function": "v11 * (1 + v1)"
-  },
-  {
    "edge_id": "e5",
    "edge_type": "saturation_response",
    "input_nodes": [
-    "v4"
+    "v11"
    ],
    "output_nodes": [
-    "v3"
+    "v4"
    ],
    "roles": {
-    "v4": "input",
-    "v3": "response"
+    "v11": "input",
+    "v4": "response"
    },
-   "function": "20.0 * v4 / (6535068.777682819 + v4)"
+   "function": "20.0 * v11 / (263.0216459599736 + v11)"
   }
  ],
- "function": "20.0 * ((((v5 * (1 + v7)) * (1 + v5)) * (1 + v2)) * (1 + (v5 * (1 + v7)))) / (6535068.777682819 + ((((v5 * (1 + v7)) * (1 + v5)) * (1 + v2)) * (1 + (v5 * (1 + v7)))))",
+ "function": "20.0 * ((v6 * (1 + v5)) * (1 + ((v5 / v7) / v7))) / (263.0216459599736 + ((v6 * (1 + v5)) * (1 + ((v5 / v7) / v7))))",
  "controllable_inputs": [
   "v6",
   "v7",
-  "v5",
-  "v2"
+  "v5"
  ],
  "designated_outputs": [
-  "v3"
+  "v4"
  ],
  "baseline": [
-  2112.2546426508834,
-  0.1,
-  0.1,
+  211.22546426508833,
+  40.0,
   0.1
  ],
  "input_scales": [
-  2112.2546426508834,
-  0.1,
-  0.1,
+  211.22546426508833,
+  40.0,
   0.1
  ],
  "legal_domain": {
@@ -168,10 +160,6 @@
    null
   ],
   "v5": [
-   1e-06,
-   null
-  ],
-  "v2": [
    1e-06,
    null
   ]
@@ -188,10 +176,6 @@
   "v5": [
    -0.8,
    1.0
-  ],
-  "v2": [
-   -0.8,
-   1.0
   ]
  },
  "provenance": {
@@ -199,6 +183,6 @@
   "original_id": null,
   "structure_source": "controlled_synthetic"
  },
- "baseline_output": 4.5214825332670405e-07,
- "output_scale": 4.5214825332670405e-07
+ "baseline_output": 9.381104305418214,
+ "output_scale": 9.381104305418214
 }

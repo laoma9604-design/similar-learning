@@ -1,11 +1,13 @@
 {
  "group_id": "group_v2_0015",
- "proto": "P1_deep_chain3",
- "family_combo": "L-L-M",
+ "proto": "SK15",
+ "family_combo": "三段链+饱和 深5",
  "edge_families": [
   "linear_drive_resistance",
+  "multiplicative_growth",
   "linear_drive_resistance",
-  "multiplicative_growth"
+  "multiplicative_growth",
+  "saturation_response"
  ],
  "seed": 20261007,
  "reference_tolerance": {

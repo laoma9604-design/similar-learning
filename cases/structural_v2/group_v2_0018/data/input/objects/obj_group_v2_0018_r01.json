@@ -29,26 +29,6 @@
    "node_id": "v5",
    "label": "量 E",
    "type": "positive_scalar"
-  },
-  {
-   "node_id": "v6",
-   "label": "量 F",
-   "type": "positive_scalar"
-  },
-  {
-   "node_id": "v2",
-   "label": "量 G",
-   "type": "positive_scalar"
-  },
-  {
-   "node_id": "v9",
-   "label": "量 H",
-   "type": "positive_scalar"
-  },
-  {
-   "node_id": "v7",
-   "label": "量 I",
-   "type": "positive_scalar"
   }
  ],
  "edges": [
@@ -71,94 +51,54 @@
   },
   {
    "edge_id": "e2",
+   "edge_type": "multiplicative_growth",
+   "input_nodes": [
+    "v8",
+    "v10"
+   ],
+   "output_nodes": [
+    "v1"
+   ],
+   "roles": {
+    "v8": "current",
+    "v10": "ratio",
+    "v1": "next"
+   },
+   "function": "v8 ** 2 / (4.760437282273472 ** 1) * (1 + v10)"
+  },
+  {
+   "edge_id": "e3",
    "edge_type": "linear_drive_resistance",
    "input_nodes": [
-    "v12",
-    "v1"
+    "v1",
+    "v10"
    ],
    "output_nodes": [
     "v5"
    ],
    "roles": {
-    "v12": "driver",
-    "v1": "resistance",
+    "v1": "driver",
+    "v10": "resistance",
     "v5": "response"
    },
-   "function": "v12 ** 3 / (119.0109320568368 ** 2) / (v1)"
-  },
-  {
-   "edge_id": "e3",
-   "edge_type": "multiplicative_growth",
-   "input_nodes": [
-    "v8",
-    "v6"
-   ],
-   "output_nodes": [
-    "v2"
-   ],
-   "roles": {
-    "v8": "current",
-    "v6": "ratio",
-    "v2": "next"
-   },
-   "function": "v8 * (1 + v6)"
-  },
-  {
-   "edge_id": "e4",
-   "edge_type": "linear_drive_resistance",
-   "input_nodes": [
-    "v5",
-    "v2"
-   ],
-   "output_nodes": [
-    "v9"
-   ],
-   "roles": {
-    "v5": "driver",
-    "v2": "resistance",
-    "v9": "response"
-   },
-   "function": "v5 / v2"
-  },
-  {
-   "edge_id": "e5",
-   "edge_type": "linear_drive_resistance",
-   "input_nodes": [
-    "v9",
-    "v8"
-   ],
-   "output_nodes": [
-    "v7"
-   ],
-   "roles": {
-    "v9": "driver",
-    "v8": "resistance",
-    "v7": "response"
-   },
-   "function": "v9 / v8"
+   "function": "v1 / v10"
   }
  ],
- "function": "((v12 ** 3 / (119.0109320568368 ** 2) / (v1)) / ((v12 / v10) * (1 + v6))) / (v12 / v10)",
+ "function": "((v12 / v10) ** 2 / (4.760437282273472 ** 1) * (1 + v10)) / v10",
  "controllable_inputs": [
   "v12",
-  "v10",
-  "v1",
-  "v6"
+  "v10"
  ],
  "designated_outputs": [
-  "v7"
+  "v5"
  ],
  "baseline": [
   119.0109320568368,
-  25.0,
-  25.0,
-  0.1
+  25.0
  ],
  "input_scales": [
   119.0109320568368,
-  25.0,
-  25.0,
-  0.1
+  25.0
  ],
  "legal_domain": {
   "v12": [
@@ -166,14 +106,6 @@
    null
   ],
   "v10": [
-   1e-06,
-   null
-  ],
-  "v1": [
-   1e-06,
-   null
-  ],
-  "v6": [
    1e-06,
    null
   ]
@@ -186,14 +118,6 @@
   "v10": [
    -0.2,
    0.2
-  ],
-  "v1": [
-   -0.2,
-   0.2
-  ],
-  "v6": [
-   -0.2,
-   0.2
   ]
  },
  "provenance": {
@@ -201,6 +125,6 @@
   "original_id": null,
   "structure_source": "controlled_synthetic"
  },
- "baseline_output": 0.19096794163765327,
- "output_scale": 0.19096794163765327
+ "baseline_output": 4.95085477356441,
+ "output_scale": 4.95085477356441
 }

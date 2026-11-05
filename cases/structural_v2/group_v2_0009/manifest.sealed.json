@@ -1,12 +1,11 @@
 {
  "group_id": "group_v2_0009",
- "proto": "P5_three_way_merge",
- "family_combo": "L-M-L",
+ "proto": "SK09",
+ "family_combo": "链末跨级复用 深4",
  "edge_families": [
-  "linear_drive_resistance",
   "multiplicative_growth",
   "linear_drive_resistance",
-  "linear_drive_resistance",
+  "multiplicative_growth",
   "multiplicative_growth"
  ],
  "seed": 20261007,

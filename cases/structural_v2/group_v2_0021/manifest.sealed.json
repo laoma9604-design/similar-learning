@@ -1,12 +1,12 @@
 {
  "group_id": "group_v2_0021",
- "proto": "P2_chain_merge",
- "family_combo": "M-...-S",
+ "proto": "SK21",
+ "family_combo": "4边 链+并行 深3",
  "edge_families": [
-  "multiplicative_growth",
   "linear_drive_resistance",
   "multiplicative_growth",
-  "saturation_response"
+  "linear_drive_resistance",
+  "multiplicative_growth"
  ],
  "seed": 20261007,
  "reference_tolerance": {

@@ -39,12 +39,17 @@
    "node_id": "v10",
    "label": "量 G",
    "type": "positive_scalar"
+  },
+  {
+   "node_id": "v4",
+   "label": "量 H",
+   "type": "positive_scalar"
   }
  ],
  "edges": [
   {
    "edge_id": "e1",
-   "edge_type": "multiplicative_growth",
+   "edge_type": "linear_drive_resistance",
    "input_nodes": [
     "v6",
     "v3"
@@ -53,68 +58,99 @@
     "v1"
    ],
    "roles": {
-    "v6": "current",
-    "v3": "ratio",
-    "v1": "next"
+    "v6": "driver",
+    "v3": "resistance",
+    "v1": "response"
    },
-   "function": "v6 * (1 + v3)"
+   "function": "v6 / v3"
   },
   {
    "edge_id": "e2",
    "edge_type": "multiplicative_growth",
    "input_nodes": [
-    "v1",
+    "v6",
     "v11"
    ],
    "output_nodes": [
     "v9"
    ],
    "roles": {
-    "v1": "current",
+    "v6": "current",
     "v11": "ratio",
     "v9": "next"
    },
-   "function": "v1 * (1 + v11)"
+   "function": "v6 * (1 + v11)"
   },
   {
    "edge_id": "e3",
    "edge_type": "linear_drive_resistance",
    "input_nodes": [
-    "v9",
+    "v1",
+    "v9"
+   ],
+   "output_nodes": [
     "v2"
+   ],
+   "roles": {
+    "v1": "driver",
+    "v9": "resistance",
+    "v2": "response"
+   },
+   "function": "v1 / v9"
+  },
+  {
+   "edge_id": "e4",
+   "edge_type": "multiplicative_growth",
+   "input_nodes": [
+    "v2",
+    "v6"
    ],
    "output_nodes": [
     "v10"
    ],
    "roles": {
-    "v9": "driver",
-    "v2": "resistance",
-    "v10": "response"
+    "v2": "current",
+    "v6": "ratio",
+    "v10": "next"
    },
-   "function": "v9 / v2"
+   "function": "v2 * (1 + v6)"
+  },
+  {
+   "edge_id": "e5",
+   "edge_type": "linear_drive_resistance",
+   "input_nodes": [
+    "v10",
+    "v9"
+   ],
+   "output_nodes": [
+    "v4"
+   ],
+   "roles": {
+    "v10": "driver",
+    "v9": "resistance",
+    "v4": "response"
+   },
+   "function": "v10 / v9"
   }
  ],
- "function": "((v6 * (1 + v3)) * (1 + v11)) / v2",
+ "function": "(((v6 / v3) / (v6 * (1 + v11))) * (1 + v6)) / (v6 * (1 + v11))",
  "controllable_inputs": [
   "v6",
   "v3",
-  "v11",
-  "v2"
+  "v11"
  ],
  "designated_outputs": [
-  "v10"
+  "v4"
  ],
  "baseline": [
-  3284.8042632852193,
-  0.1,
-  0.1,
-  68.0
+  328.48042632852196,
+  68.0,
+  0.1
  ],
  "input_scales": [
-  3284.8042632852193,
-  0.1,
-  0.1,
-  68.0
+  328.48042632852196,
+  68.0,
+  0.1
  ],
  "legal_domain": {
   "v6": [
@@ -126,10 +162,6 @@
    null
   ],
   "v11": [
-   1e-06,
-   null
-  ],
-  "v2": [
    1e-06,
    null
   ]
@@ -146,10 +178,6 @@
   "v11": [
    -0.2,
    0.2
-  ],
-  "v2": [
-   -0.2,
-   0.2
   ]
  },
  "provenance": {
@@ -157,6 +185,6 @@
   "original_id": null,
   "structure_source": "controlled_synthetic"
  },
- "baseline_output": 58.450193508457595,
- "output_scale": 58.450193508457595
+ "baseline_output": 0.012190621310480357,
+ "output_scale": 0.012190621310480357
 }

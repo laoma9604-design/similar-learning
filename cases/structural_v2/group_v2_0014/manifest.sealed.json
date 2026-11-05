@@ -1,13 +1,13 @@
 {
  "group_id": "group_v2_0014",
- "proto": "P5_three_way_merge",
- "family_combo": "M-M-L",
+ "proto": "SK14",
+ "family_combo": "深链+饱和末端 深5",
  "edge_families": [
-  "multiplicative_growth",
   "multiplicative_growth",
   "linear_drive_resistance",
   "multiplicative_growth",
-  "multiplicative_growth"
+  "linear_drive_resistance",
+  "saturation_response"
  ],
  "seed": 20261007,
  "reference_tolerance": {

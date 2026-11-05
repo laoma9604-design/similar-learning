@@ -19,11 +19,10 @@
  "intervenable_inputs": [
   "v6",
   "v3",
-  "v11",
-  "v2"
+  "v11"
  ],
  "specified_outputs": [
-  "v10"
+  "v4"
  ],
  "intervention_range": {
   "v6": [
@@ -35,10 +34,6 @@
    0.2
   ],
   "v11": [
-   -0.2,
-   0.2
-  ],
-  "v2": [
    -0.2,
    0.2
   ]

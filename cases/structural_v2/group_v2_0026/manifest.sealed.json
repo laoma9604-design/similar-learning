@@ -1,12 +1,12 @@
 {
  "group_id": "group_v2_0026",
- "proto": "P6_sat_tail_chain",
- "family_combo": "S1",
+ "proto": "SK26",
+ "family_combo": "5边 长链+饱和 深5",
  "edge_families": [
-  "linear_drive_resistance",
   "multiplicative_growth",
   "linear_drive_resistance",
   "multiplicative_growth",
+  "linear_drive_resistance",
   "saturation_response"
  ],
  "seed": 20261007,

@@ -25,7 +25,7 @@
  ],
  "n_nodes": 9,
  "n_edges": 4,
- "max_depth": 3,
+ "max_depth": 4,
  "n_inputs": 5,
  "has_shared_node": false
 }

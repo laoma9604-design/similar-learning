@@ -1,13 +1,12 @@
 {
  "group_id": "group_v2_0023",
- "proto": "P4_shared_deep",
- "family_combo": "M-...-S",
+ "proto": "SK23",
+ "family_combo": "4边 汇合后复用 深3",
  "edge_families": [
   "multiplicative_growth",
   "linear_drive_resistance",
-  "multiplicative_growth",
   "linear_drive_resistance",
-  "saturation_response"
+  "linear_drive_resistance"
  ],
  "seed": 20261007,
  "reference_tolerance": {

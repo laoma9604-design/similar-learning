@@ -1,13 +1,13 @@
 {
  "group_id": "group_v2_0017",
- "proto": "P3_shared_fan",
- "family_combo": "L-L-M",
+ "proto": "SK17",
+ "family_combo": "宽汇合+饱和 深4",
  "edge_families": [
   "linear_drive_resistance",
   "linear_drive_resistance",
   "multiplicative_growth",
   "linear_drive_resistance",
-  "linear_drive_resistance"
+  "saturation_response"
  ],
  "seed": 20261007,
  "reference_tolerance": {

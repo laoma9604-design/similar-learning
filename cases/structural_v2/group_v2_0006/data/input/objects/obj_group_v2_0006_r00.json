@@ -90,44 +90,44 @@
    "edge_id": "e3",
    "edge_type": "linear_drive_resistance",
    "input_nodes": [
-    "v10",
-    "v9"
+    "v3",
+    "v10"
    ],
    "output_nodes": [
-    "v2"
+    "v9"
    ],
    "roles": {
-    "v10": "driver",
-    "v9": "resistance",
-    "v2": "response"
+    "v3": "driver",
+    "v10": "resistance",
+    "v9": "response"
    },
-   "function": "v10 / v9"
+   "function": "v3 / v10"
   },
   {
    "edge_id": "e4",
-   "edge_type": "linear_drive_resistance",
+   "edge_type": "multiplicative_growth",
    "input_nodes": [
-    "v3",
+    "v9",
     "v2"
    ],
    "output_nodes": [
     "v6"
    ],
    "roles": {
-    "v3": "driver",
-    "v2": "resistance",
-    "v6": "response"
+    "v9": "current",
+    "v2": "ratio",
+    "v6": "next"
    },
-   "function": "v3 / v2"
+   "function": "v9 * (1 + v2)"
   }
  ],
- "function": "((v8 ** 2 / (208.40574764727168 ** 1) / (v5)) * (1 + v4)) / (v10 / v9)",
+ "function": "(((v8 ** 2 / (208.40574764727168 ** 1) / (v5)) * (1 + v4)) / v10) * (1 + v2)",
  "controllable_inputs": [
   "v8",
   "v5",
   "v4",
   "v10",
-  "v9"
+  "v2"
  ],
  "designated_outputs": [
   "v6"
@@ -136,15 +136,15 @@
   208.40574764727168,
   40.0,
   0.1,
-  208.59062113986363,
-  40.0
+  40.0,
+  0.1
  ],
  "input_scales": [
   208.40574764727168,
   40.0,
   0.1,
-  208.59062113986363,
-  40.0
+  40.0,
+  0.1
  ],
  "legal_domain": {
   "v8": [
@@ -163,7 +163,7 @@
    1e-06,
    null
   ],
-  "v9": [
+  "v2": [
    1e-06,
    null
   ]
@@ -185,7 +185,7 @@
    -0.2,
    0.2
   ],
-  "v9": [
+  "v2": [
    -0.2,
    0.2
   ]
@@ -195,6 +195,6 @@
   "original_id": null,
   "structure_source": "controlled_synthetic"
  },
- "baseline_output": 1.0990250719771588,
- "output_scale": 1.0990250719771588
+ "baseline_output": 0.15760684665824926,
+ "output_scale": 0.15760684665824926
 }

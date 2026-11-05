@@ -18,12 +18,10 @@
  "vocab_version": "topoadv-vocab-0.1.1",
  "intervenable_inputs": [
   "v9",
-  "v11",
-  "v4",
-  "v6"
+  "v11"
  ],
  "specified_outputs": [
-  "v10"
+  "v6"
  ],
  "intervention_range": {
   "v9": [
@@ -31,14 +29,6 @@
    0.2
   ],
   "v11": [
-   -0.2,
-   0.2
-  ],
-  "v4": [
-   -0.2,
-   0.2
-  ],
-  "v6": [
    -0.2,
    0.2
   ]

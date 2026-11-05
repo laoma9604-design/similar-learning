@@ -1,8 +1,9 @@
 {
  "group_id": "group_v2_0005",
- "proto": "P1_deep_chain3",
- "family_combo": "L-M-L",
+ "proto": "SK05",
+ "family_combo": "双链汇合 深3",
  "edge_families": [
+  "multiplicative_growth",
   "linear_drive_resistance",
   "multiplicative_growth",
   "linear_drive_resistance"

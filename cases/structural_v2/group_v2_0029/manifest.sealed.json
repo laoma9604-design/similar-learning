@@ -1,9 +1,9 @@
 {
  "group_id": "group_v2_0029",
- "proto": "P6_sat_tail_chain",
- "family_combo": "S4",
+ "proto": "SK29",
+ "family_combo": "5边 分支+饱和 深4",
  "edge_families": [
-  "multiplicative_growth",
+  "linear_drive_resistance",
   "linear_drive_resistance",
   "multiplicative_growth",
   "linear_drive_resistance",

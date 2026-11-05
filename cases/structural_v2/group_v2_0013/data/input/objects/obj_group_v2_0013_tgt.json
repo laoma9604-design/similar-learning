@@ -44,11 +44,6 @@
    "node_id": "v5",
    "label": "量 H",
    "type": "positive_scalar"
-  },
-  {
-   "node_id": "v2",
-   "label": "量 I",
-   "type": "positive_scalar"
   }
  ],
  "edges": [
@@ -91,74 +86,71 @@
    "edge_type": "linear_drive_resistance",
    "input_nodes": [
     "v8",
-    "v1"
+    "v4"
    ],
    "output_nodes": [
-    "v3"
+    "v1"
    ],
    "roles": {
     "v8": "driver",
-    "v1": "resistance",
-    "v3": "response"
+    "v4": "resistance",
+    "v1": "response"
    },
-   "function": "v8 / v1"
+   "function": "v8 / v4"
   },
   {
    "edge_id": "e4",
    "edge_type": "multiplicative_growth",
    "input_nodes": [
-    "v4",
+    "v1",
+    "v11"
+   ],
+   "output_nodes": [
     "v3"
+   ],
+   "roles": {
+    "v1": "current",
+    "v11": "ratio",
+    "v3": "next"
+   },
+   "function": "v1 * (1 + v11)"
+  },
+  {
+   "edge_id": "e5",
+   "edge_type": "linear_drive_resistance",
+   "input_nodes": [
+    "v3",
+    "v8"
    ],
    "output_nodes": [
     "v5"
    ],
    "roles": {
-    "v4": "current",
-    "v3": "ratio",
-    "v5": "next"
+    "v3": "driver",
+    "v8": "resistance",
+    "v5": "response"
    },
-   "function": "v4 * (1 + v3)"
-  },
-  {
-   "edge_id": "e5",
-   "edge_type": "multiplicative_growth",
-   "input_nodes": [
-    "v5",
-    "v8"
-   ],
-   "output_nodes": [
-    "v2"
-   ],
-   "roles": {
-    "v5": "current",
-    "v8": "ratio",
-    "v2": "next"
-   },
-   "function": "v5 * (1 + v8)"
+   "function": "v3 / v8"
   }
  ],
- "function": "((v9 * (1 + v7)) * (1 + ((v9 * (1 + v11)) / v1))) * (1 + (v9 * (1 + v11)))",
+ "function": "(((v9 * (1 + v11)) / (v9 * (1 + v7))) * (1 + v11)) / (v9 * (1 + v11))",
  "controllable_inputs": [
   "v9",
   "v11",
-  "v7",
-  "v1"
+  "v7"
  ],
  "designated_outputs": [
-  "v2"
+  "v5"
  ],
  "baseline": [
   1000.0,
   0.1,
-  0.1,
-  20.0
+  0.1
  ],
  "input_scales": [
   1000.0,
   0.1,
-  0.1,
-  20.0
+  0.1
  ],
  "legal_domain": {
   "v9": [
@@ -170,10 +162,6 @@
    null
   ],
   "v7": [
-   1e-06,
-   null
-  ],
-  "v1": [
    1e-06,
    null
   ]
@@ -190,10 +178,6 @@
   "v7": [
    -0.2,
    0.2
-  ],
-  "v1": [
-   -0.2,
-   0.2
   ]
  },
  "provenance": {
@@ -201,6 +185,6 @@
   "original_id": null,
   "structure_source": "provided"
  },
- "baseline_output": 67821600.0,
- "output_scale": 67821600.0
+ "baseline_output": 0.001,
+ "output_scale": 0.001
 }

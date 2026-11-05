@@ -23,8 +23,8 @@
   "task_group_v2_0009_t01",
   "task_group_v2_0009_t02"
  ],
- "n_nodes": 9,
- "n_edges": 5,
+ "n_nodes": 8,
+ "n_edges": 4,
  "max_depth": 4,
  "n_inputs": 4,
  "has_shared_node": true
