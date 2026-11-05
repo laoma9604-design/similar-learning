@@ -3,7 +3,7 @@
   "dataset": "scar",
   "relation_type": "analogy_correspondence",
   "schema_version": "topoadv-schema-0.3.1",
-  "vocab_version": "topoadv-vocab-0.1.0-draft",
+  "vocab_version": "topoadv-vocab-0.1.1",
   "split": "test",
   "object_ids": [
     "obj_group_scar_0175_tgt",

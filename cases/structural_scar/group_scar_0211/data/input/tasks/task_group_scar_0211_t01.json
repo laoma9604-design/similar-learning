@@ -6,7 +6,7 @@
     "obj_group_scar_0211_src"
   ],
   "schema_version": "topoadv-schema-0.3.1",
-  "vocab_version": "topoadv-vocab-0.1.0-draft",
+  "vocab_version": "topoadv-vocab-0.1.1",
   "intervenable_inputs": [],
   "specified_outputs": [],
   "intervention_range": {},
